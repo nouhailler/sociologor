@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-2e02886b-1e44-4a41-b221-80854cfe6292/styles.css">
+<script src="_ds/nocturne-2e02886b-1e44-4a41-b221-80854cfe6292/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;background:#0f1119;-webkit-font-smoothing:antialiased}
+a{color:var(--color-accent);text-decoration:none}
+a:hover{color:var(--color-accent-400)}
+@keyframes soc-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.soc-scroll::-webkit-scrollbar{width:8px;height:8px}
+.soc-scroll::-webkit-scrollbar-thumb{background:#3f424d;border-radius:8px}
+.soc-scroll::-webkit-scrollbar-track{background:transparent}
+</style>
+</helmet>
+<div style="min-height:100dvh;display:flex;flex-direction:column;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+
+<div style="flex:1;display:flex;min-height:0">
+
+<nav style="{{ railStyle }}">
+<div style="display:flex;align-items:center;gap:9px;padding:4px 8px 22px">
+<span style="width:9px;height:9px;border-radius:50%;background:var(--color-accent);box-shadow:0 0 10px var(--color-accent)"></span>
+<span style="font:500 17px/1 var(--font-heading);letter-spacing:-.02em">Sociologor</span>
+</div>
+<sc-for list="{{ railItems }}" as="it" hint-placeholder-count="5">
+<button onClick="{{ it.go }}" style="{{ it.style }}">
+<span style="font:500 13.5px var(--font-heading)">{{ it.label }}</span>
+<span style="font-size:11px;color:color-mix(in srgb, var(--color-text) 42%, transparent)">{{ it.hint }}</span>
+</button>
+</sc-for>
+<div style="margin-top:auto;display:flex;align-items:center;gap:7px;padding:12px 8px;font-size:10.5px;color:color-mix(in srgb, var(--color-text) 42%, transparent);letter-spacing:.03em">
+<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14"></path></svg>
+{{ offlineCount }}
+</div>
+</nav>
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+
+<header style="flex:none;display:flex;align-items:center;gap:10px;padding:13px 18px 11px;border-bottom:1px solid color-mix(in srgb, var(--color-text) 7%, transparent)">
+<sc-if value="{{ canBack }}">
+<button class="btn btn-secondary" onClick="{{ back }}" aria-label="Retour" style="flex:none;width:32px;height:32px;padding:0">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+</sc-if>
+<div style="flex:1;min-width:0">
+<div style="font:500 14.5px/1.25 var(--font-heading);letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ headerTitle }}</div>
+<div style="font-size:10.5px;color:color-mix(in srgb, var(--color-text) 45%, transparent);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ headerSub }}</div>
+</div>
+<button class="btn btn-secondary" onClick="{{ openSearch }}" aria-label="Rechercher" style="flex:none;width:32px;height:32px;padding:0">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="6"></circle><path d="M16 16l4 4"></path></svg>
+</button>
+<sc-if value="{{ onAuthor }}">
+<button class="btn btn-secondary" onClick="{{ toggleFav }}" aria-label="Favori" style="{{ favBtnStyle }}">
+<svg width="15" height="15" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="{{ favFill }}"><path d="M12 4.5l2.4 5 5.3.8-3.85 3.75.95 5.3-4.8-2.7-4.8 2.7.95-5.3L4.3 10.3l5.3-.8z"></path></svg>
+</button>
+<button class="btn btn-secondary" onClick="{{ share }}" aria-label="Partager" style="flex:none;width:32px;height:32px;padding:0">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 15V4m0 0L8.6 7.4M12 4l3.4 3.4"></path><path d="M5.5 13v6h13v-6"></path></svg>
+</button>
+</sc-if>
+</header>
+
+<main class="soc-scroll" style="flex:1;overflow-y:auto;overflow-x:hidden">
+<div style="{{ padStyle }}">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="animation:soc-in .3s ease both">
+<div style="font:500 clamp(30px,5vw,46px)/1.02 var(--font-heading);letter-spacing:-.033em;margin:8px 0 6px">La sociologie,<br><span style="color:var(--color-accent)">reliée.</span></div>
+<p style="font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 58%, transparent);margin:0 0 22px;max-width:52ch;text-wrap:pretty">Quinze fiches — quatorze auteurs et une école — leurs concepts et leur filiation. Entrez par un domaine, ou suivez les fils du graphe : chaque fiche pointe vers les suivantes.</p>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px">
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent)">Notion du jour</div>
+<span class="tag tag-neutral" style="font-size:10px">expliquée simplement</span>
+</div>
+<div style="padding:16px 18px;border-radius:14px;background:linear-gradient(150deg,#262a60 0%,#20233f 55%,var(--color-surface) 100%);box-shadow:var(--shadow-sm);margin-bottom:26px;max-width:760px">
+<div style="font:500 26px/1.08 var(--font-heading);letter-spacing:-.025em">{{ dailyTitle }}</div>
+<div style="font-size:11px;color:color-mix(in srgb, var(--color-text) 55%, transparent);margin:3px 0 11px;letter-spacing:.03em">{{ dailySub }}</div>
+<p style="font-size:14px;line-height:1.55;margin:0 0 8px;max-width:56ch;text-wrap:pretty">{{ dailySimple }}</p>
+<p style="font-size:12.5px;line-height:1.5;margin:0 0 14px;max-width:56ch;color:color-mix(in srgb, var(--color-text) 62%, transparent);text-wrap:pretty"><span style="color:var(--color-accent-300)">Concrètement — </span>{{ dailyExample }}</p>
+<button class="btn btn-primary" onClick="{{ openDaily }}" style="font-size:12.5px">Ouvrir la fiche de {{ dailyAuthor }}</button>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px">
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent)">Les domaines</div>
+<button class="btn btn-ghost" onClick="{{ openGraph }}" style="font-size:12px">Voir le graphe →</button>
+</div>
+<div style="{{ gridStyle }}">
+<sc-for list="{{ domains }}" as="d" hint-placeholder-count="12">
+<button onClick="{{ d.go }}" style="{{ d.style }}">
+<span style="font:500 14px/1.2 var(--font-heading);letter-spacing:-.01em">{{ d.title }}</span>
+<span style="font-size:11.5px;line-height:1.4;color:color-mix(in srgb, var(--color-text) 45%, transparent)">{{ d.hint }}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isDomain }}">
+<div style="animation:soc-in .25s ease both">
+<div style="font:500 clamp(26px,4vw,36px)/1.06 var(--font-heading);letter-spacing:-.028em;margin:4px 0 6px">{{ domainTitle }}</div>
+<p style="font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 58%, transparent);margin:0 0 20px;max-width:56ch;text-wrap:pretty">{{ domainDesc }}</p>
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 10px">{{ domainCount }}</div>
+<div style="{{ listGridStyle }}">
+<sc-for list="{{ domainAuthors }}" as="a" hint-placeholder-count="4">
+<button onClick="{{ a.go }}" style="display:flex;align-items:flex-start;gap:12px;padding:13px 14px;background:var(--color-surface);border:1px solid transparent;border-radius:12px;cursor:pointer;text-align:left;color:var(--color-text)" style-hover="border-color:var(--color-accent-700)">
+<span style="flex:none;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:var(--color-accent-900);color:var(--color-accent-300);font:500 14px var(--font-heading);letter-spacing:.02em">{{ a.initials }}</span>
+<span style="flex:1;min-width:0">
+<span style="display:block;font:500 15px/1.2 var(--font-heading)">{{ a.name }}</span>
+<span style="display:block;font-size:11.5px;color:color-mix(in srgb, var(--color-text) 48%, transparent);margin:2px 0 5px">{{ a.dates }} · {{ a.courant }}</span>
+<span style="display:block;font-size:12.5px;line-height:1.45;color:color-mix(in srgb, var(--color-text) 70%, transparent);text-wrap:pretty">{{ a.hook }}</span>
+</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAuthor }}">
+<div style="animation:soc-in .25s ease both;max-width:780px">
+<div style="display:flex;align-items:flex-start;gap:16px;margin:4px 0 18px">
+<div style="flex:none;width:92px;height:112px;border-radius:14px;overflow:hidden;background:var(--color-accent-900);box-shadow:var(--shadow-sm)">
+<image-slot id="{{ a.slotId }}" shape="rounded" radius="14" placeholder="Portrait" style="width:92px;height:112px"></image-slot>
+</div>
+<div style="flex:1;min-width:0">
+<div style="font:500 clamp(26px,4vw,38px)/1.04 var(--font-heading);letter-spacing:-.03em">{{ a.name }}</div>
+<div style="font-size:12.5px;color:color-mix(in srgb, var(--color-text) 50%, transparent);margin:4px 0 8px">{{ a.dates }} · {{ a.nat }} · {{ a.periode }}</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<span class="tag tag-accent" style="font-size:10.5px">{{ a.courant }}</span>
+<sc-for list="{{ a.domainTags }}" as="t" hint-placeholder-count="2">
+<span class="tag tag-neutral" style="font-size:10.5px">{{ t }}</span>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="padding:14px 16px;border-radius:12px;border:1px solid var(--color-accent-800);background:linear-gradient(180deg,color-mix(in srgb, var(--color-accent) 9%, transparent),transparent);margin-bottom:24px">
+<div style="font:500 10.5px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin-bottom:8px">En une phrase</div>
+<p style="font-size:15.5px;line-height:1.5;margin:0;text-wrap:pretty">{{ a.resume }}</p>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 10px">Repères</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;margin-bottom:28px">
+<sc-for list="{{ a.reperes }}" as="r" hint-placeholder-count="6">
+<div style="padding:9px 12px;background:var(--color-surface);border-radius:8px">
+<div style="font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 42%, transparent)">{{ r.k }}</div>
+<div style="font:500 13.5px var(--font-heading);margin-top:2px">{{ r.v }}</div>
+</div>
+</sc-for>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 12px">Concepts majeurs</div>
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+<sc-for list="{{ a.concepts }}" as="c" hint-placeholder-count="3">
+<div style="padding:14px 16px;border-radius:12px;background:var(--color-surface);box-shadow:var(--shadow-sm)">
+<div style="display:flex;align-items:baseline;gap:9px;margin-bottom:7px">
+<span style="font:500 17px/1.15 var(--font-heading);letter-spacing:-.015em">{{ c.t }}</span>
+<span style="font-size:10.5px;color:color-mix(in srgb, var(--color-text) 40%, transparent);letter-spacing:.04em">{{ c.year }}</span>
+</div>
+<p style="font-size:13.5px;line-height:1.55;margin:0 0 9px;text-wrap:pretty">{{ c.simple }}</p>
+<p style="font-size:12.5px;line-height:1.5;margin:0;padding-left:11px;border-left:2px solid var(--color-accent-700);color:color-mix(in srgb, var(--color-text) 66%, transparent);text-wrap:pretty"><span style="color:var(--color-accent-300)">Exemple — </span>{{ c.ex }}</p>
+</div>
+</sc-for>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 10px">Filiation</div>
+<div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
+<div>
+<div style="font-size:11px;color:color-mix(in srgb, var(--color-text) 45%, transparent);margin-bottom:6px">Hérite de</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ a.upLinks }}" as="l" hint-placeholder-count="2">
+<button onClick="{{ l.go }}" style="{{ l.style }}">{{ l.label }}</button>
+</sc-for>
+</div>
+</div>
+<div>
+<div style="font-size:11px;color:color-mix(in srgb, var(--color-text) 45%, transparent);margin-bottom:6px">A influencé</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{ a.downLinks }}" as="l" hint-placeholder-count="2">
+<button onClick="{{ l.go }}" style="{{ l.style }}">{{ l.label }}</button>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 8px">Œuvres principales</div>
+<table class="table" style="margin-bottom:28px">
+<tbody>
+<sc-for list="{{ a.oeuvres }}" as="o" hint-placeholder-count="3">
+<tr>
+<td style="width:56px;color:color-mix(in srgb, var(--color-text) 45%, transparent);font-size:12.5px;font-variant-numeric:tabular-nums">{{ o.y }}</td>
+<td style="font-size:13.5px">{{ o.t }}</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+
+<sc-if value="{{ showCitations }}" hint-placeholder-val="{{ true }}">
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 10px">Citations</div>
+<div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
+<sc-for list="{{ a.citations }}" as="q" hint-placeholder-count="2">
+<figure>
+<blockquote style="margin:0;font:400 16px/1.45 var(--font-heading);letter-spacing:-.01em;padding-left:14px;border-left:2px solid var(--color-accent);text-wrap:pretty">{{ q.t }}</blockquote>
+<figcaption style="padding-left:16px;margin-top:5px">{{ q.src }}</figcaption>
+</figure>
+</sc-for>
+</div>
+</sc-if>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 8px">Critiques</div>
+<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:28px">
+<sc-for list="{{ a.critiques }}" as="c" hint-placeholder-count="2">
+<div style="display:flex;gap:9px;font-size:13px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 74%, transparent)">
+<span style="flex:none;color:var(--color-accent-600);margin-top:1px">—</span><span style="text-wrap:pretty">{{ c }}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 10px">Liens avec d'autres disciplines</div>
+<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:28px">
+<sc-for list="{{ a.disc }}" as="d" hint-placeholder-count="3">
+<div style="font-size:13px;line-height:1.5;padding-left:11px;border-left:2px solid var(--color-neutral-700);color:color-mix(in srgb, var(--color-text) 76%, transparent);text-wrap:pretty">{{ d }}</div>
+</sc-for>
+</div>
+
+<div style="font:500 11px/1 var(--font-heading);letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin:0 0 8px">Bibliographie critique</div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:28px">
+<sc-for list="{{ a.biblio }}" as="b" hint-placeholder-count="2">
+<div style="font-size:13px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 70%, transparent);text-wrap:pretty">{{ b }}</div>
+</sc-for>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:4px">
+<button class="btn btn-secondary" onClick="{{ exportMd }}" style="font-size:12.5px">Exporter en Markdown</button>
+<button class="btn btn-secondary" onClick="{{ openGraph }}" style="font-size:12.5px">Situer dans le graphe</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isGraph }}">
+<div style="animation:soc-in .25s ease both">
+<div style="font:500 clamp(26px,4vw,36px)/1.06 var(--font-heading);letter-spacing:-.028em;margin:4px 0 6px">Graphe des filiations</div>
+<p style="font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 58%, transparent);margin:0 0 18px;max-width:56ch;text-wrap:pretty">De Comte à Becker : qui lit qui, et qui s'en écarte. Touchez un nom pour ouvrir sa fiche.</p>
+<div class="soc-scroll" style="overflow:auto;border-radius:14px;background:linear-gradient(160deg,#1b1e2e,#141622);box-shadow:var(--shadow-sm);padding:18px">
+<div style="position:relative;width:880px;height:790px">
+<svg width="880" height="790" style="position:absolute;inset:0;overflow:visible">
+<sc-for list="{{ edges }}" as="e" hint-placeholder-count="12">
+<path d="{{ e.d }}" fill="none" stroke="{{ e.stroke }}" stroke-width="{{ e.w }}"></path>
+</sc-for>
+</svg>
+<sc-for list="{{ nodes }}" as="n" hint-placeholder-count="12">
+<button onClick="{{ n.go }}" style="{{ n.style }}">
+<span style="display:block;font:500 13.5px/1.15 var(--font-heading);letter-spacing:-.01em">{{ n.name }}</span>
+<span style="display:block;font-size:10px;color:color-mix(in srgb, var(--color-text) 45%, transparent);margin-top:3px">{{ n.sub }}</span>
+</button>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:11px;color:color-mix(in srgb, var(--color-text) 45%, transparent)">
+<span style="display:flex;align-items:center;gap:6px"><span style="width:16px;height:2px;background:var(--color-accent)"></span>filiation directe</span>
+<span style="display:flex;align-items:center;gap:6px"><span style="width:16px;height:2px;background:var(--color-neutral-700)"></span>influence indirecte ou critique</span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isSearch }}">
+<div style="max-width:720px">
+<input class="input" value="{{ q }}" onChange="{{ onQuery }}" placeholder="habitus, Weber, stigmate, anomie…" style="margin:4px 0 12px;font-size:15px;min-height:42px">
+<div style="display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="3">
+<button onClick="{{ f.go }}" style="{{ f.style }}">{{ f.label }}</button>
+</sc-for>
+</div>
+<div style="font-size:11px;color:color-mix(in srgb, var(--color-text) 42%, transparent);margin-bottom:6px;letter-spacing:.03em">{{ resultsLabel }}</div>
+<sc-for list="{{ results }}" as="r" hint-placeholder-count="5">
+<button onClick="{{ r.go }}" style="width:100%;display:flex;align-items:flex-start;gap:12px;padding:11px 2px;background:transparent;border:0;border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);cursor:pointer;text-align:left;color:var(--color-text)" style-hover="background:color-mix(in srgb, var(--color-text) 4%, transparent)">
+<span style="flex:none;margin-top:3px;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--color-accent-400);width:64px">{{ r.kind }}</span>
+<span style="flex:1;min-width:0">
+<span style="display:block;font:500 14.5px var(--font-heading)">{{ r.title }}</span>
+<span style="display:block;font-size:12px;line-height:1.4;color:color-mix(in srgb, var(--color-text) 50%, transparent);text-wrap:pretty">{{ r.sub }}</span>
+</span>
+</button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFavs }}">
+<div style="max-width:720px">
+<div style="font:500 clamp(26px,4vw,36px)/1.06 var(--font-heading);letter-spacing:-.028em;margin:4px 0 16px">Mes fiches</div>
+<sc-if value="{{ favEmpty }}">
+<p style="font-size:14px;line-height:1.55;color:color-mix(in srgb, var(--color-text) 50%, transparent);max-width:48ch;text-wrap:pretty">Rien encore. L'étoile en haut d'une fiche l'épingle ici et la garde disponible hors connexion.</p>
+</sc-if>
+<div style="{{ listGridStyle }}">
+<sc-for list="{{ favList }}" as="a" hint-placeholder-count="2">
+<button onClick="{{ a.go }}" style="display:flex;align-items:center;gap:12px;padding:13px 14px;background:var(--color-surface);border:1px solid transparent;border-radius:12px;cursor:pointer;text-align:left;color:var(--color-text)" style-hover="border-color:var(--color-accent-700)">
+<span style="flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--color-accent-900);color:var(--color-accent-300);font:500 13px var(--font-heading)">{{ a.initials }}</span>
+<span style="flex:1;min-width:0">
+<span style="display:block;font:500 14.5px var(--font-heading)">{{ a.name }}</span>
+<span style="display:block;font-size:11.5px;color:color-mix(in srgb, var(--color-text) 48%, transparent)">{{ a.dates }} · {{ a.courant }}</span>
+</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+</div>
+</main>
+
+<sc-if value="{{ narrow }}">
+<nav style="flex:none;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding:6px 6px 10px;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);background:var(--color-bg)">
+<sc-for list="{{ tabItems }}" as="t" hint-placeholder-count="4">
+<button onClick="{{ t.go }}" style="{{ t.style }}">
+<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="{{ t.icon }}"></path></svg>
+<span style="font-size:10px;letter-spacing:.02em">{{ t.label }}</span>
+</button>
+</sc-for>
+</nav>
+</sc-if>
+
+</div>
+</div>
+
+<sc-if value="{{ toast }}">
+<div style="position:fixed;left:50%;bottom:78px;transform:translateX(-50%);z-index:40;padding:9px 16px;border-radius:999px;background:var(--color-surface);box-shadow:var(--shadow-md);font-size:12.5px;white-space:nowrap;animation:soc-in .2s ease both">{{ toast }}</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCitations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Fiche auteur&quot;},&quot;startView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;graph&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home' | 'graph'&quot;,&quot;section&quot;:&quot;Navigation&quot;}}">
+const DOMAINS = [
+  { id: 'classes', t: 'Classes sociales', d: "Comment une société se hiérarchise, et pourquoi la position héritée pèse encore si lourd.", a: ['marx', 'bourdieu', 'weber'] },
+  { id: 'education', t: 'Éducation', d: "L'école promet l'égalité des chances et distribue pourtant des destins très prévisibles.", a: ['bourdieu', 'durkheim', 'boudon'] },
+  { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker'] },
+  { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber'] },
+  { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
+  { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel'] },
+  { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
+  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons'] },
+  { id: 'urbaine', t: 'Sociologie urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
+  { id: 'corps', t: 'Corps et mœurs', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu'] },
+  { id: 'politique', t: 'Sociologie politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville'] },
+  { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte'] },
+  { id: 'inegalites', t: 'Mobilité sociale', d: "Monter, descendre, rester : la circulation entre positions et ses illusions.", a: ['boudon', 'bourdieu', 'merton'] },
+  { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville'] },
+];
+
+const A = {
+  comte: {
+    id: 'comte', name: 'Auguste Comte', initials: 'AC', dates: '1798–1857', nat: 'France', periode: 'XIXᵉ siècle',
+    courant: 'Positivisme',
+    hook: "Il baptise la discipline et lui promet la rigueur des sciences de la nature.",
+    resume: "Comte invente le mot « sociologie » et un pari : la société peut s'étudier avec la même rigueur qu'un phénomène physique.",
+    concepts: [
+      { t: 'Physique sociale', year: '1830', simple: "L'idée que la vie collective obéit à des régularités observables, pas au hasard des volontés individuelles.", ex: "Les taux de mariage d'un pays varient peu d'une année sur l'autre, alors que chaque mariage semble une décision intime." },
+      { t: 'Loi des trois états', year: '1842', simple: "L'humanité expliquerait le monde d'abord par les dieux, puis par des principes abstraits, enfin par l'observation.", ex: "Une épidémie lue successivement comme punition divine, comme déséquilibre des humeurs, puis comme chaîne de contaminations." },
+    ],
+    oeuvres: [{ y: '1830', t: 'Cours de philosophie positive (1830–1842)' }, { y: '1851', t: 'Système de politique positive' }],
+    citations: [{ t: "Savoir pour prévoir, afin de pouvoir.", src: 'Cours de philosophie positive' }],
+    critiques: ["Sa foi dans le progrès linéaire a mal vieilli.", "Un programme plus philosophique qu'empirique : presque aucune enquête."],
+    up: [], down: ['durkheim'], x: 30, y: 40,
+  },
+  marx: {
+    id: 'marx', name: 'Karl Marx', initials: 'KM', dates: '1818–1883', nat: 'Allemagne', periode: 'XIXᵉ siècle',
+    courant: 'Matérialisme historique',
+    hook: "Il lit l'histoire comme un conflit d'intérêts matériels, pas comme un débat d'idées.",
+    resume: "Pour Marx, ce qui structure une société n'est pas ce qu'elle pense d'elle-même, mais qui possède les moyens de produire.",
+    concepts: [
+      { t: 'Classe sociale', year: '1848', simple: "Un groupe défini par sa place dans la production — posséder l'outil, ou vendre son temps pour l'utiliser.", ex: "Deux personnes au même salaire n'ont pas la même position si l'une détient l'entreprise et l'autre un contrat de travail." },
+      { t: 'Aliénation', year: '1844', simple: "Quand le travail, censé être l'expression de soi, devient une activité étrangère qu'on subit.", ex: "Un opérateur qui répète un geste sur un produit qu'il ne verra jamais fini, ni ne pourra s'offrir." },
+      { t: 'Idéologie', year: '1846', simple: "Les idées qui font passer un ordre social particulier pour l'ordre naturel des choses.", ex: "« Chacun réussit à la mesure de son mérite » — une phrase qui rend invisible ce que le point de départ a apporté." },
+    ],
+    oeuvres: [{ y: '1848', t: 'Manifeste du parti communiste' }, { y: '1867', t: 'Le Capital, livre I' }, { y: '1846', t: "L'Idéologie allemande" }],
+    citations: [{ t: "Les hommes font leur propre histoire, mais dans des conditions qu'ils n'ont pas choisies.", src: 'Le 18 Brumaire de Louis Bonaparte, 1852' }],
+    critiques: ["La prédiction d'une polarisation en deux classes ne s'est pas vérifiée : les classes moyennes ont grossi.", "Weber lui reproche de sous-estimer le rôle propre des croyances et du prestige."],
+    up: [], down: ['bourdieu', 'francfort'], x: 30, y: 205,
+  },
+  weber: {
+    id: 'weber', name: 'Max Weber', initials: 'MW', dates: '1864–1920', nat: 'Allemagne', periode: 'Tournant du XXᵉ',
+    courant: 'Sociologie compréhensive',
+    hook: "Comprendre le sens que les acteurs donnent à leurs actes, avant d'en chercher les causes.",
+    resume: "Weber refuse de choisir entre les idées et l'économie : il montre comment une croyance religieuse a pu produire une machine économique.",
+    concepts: [
+      { t: 'Idéal-type', year: '1904', simple: "Une caricature volontaire, construite par le chercheur, pour rendre un phénomène comparable.", ex: "« La bureaucratie » n'existe nulle part à l'état pur, mais le modèle permet de mesurer l'écart d'une administration réelle." },
+      { t: 'Rationalisation', year: '1920', simple: "La tendance moderne à tout soumettre au calcul, à la règle et à l'efficacité mesurable.", ex: "Un hôpital où le temps par patient devient un indicateur, au risque d'évincer ce qui ne se compte pas." },
+      { t: 'Domination légitime', year: '1922', simple: "On obéit rarement par peur seule : on obéit à la tradition, au charisme, ou à la règle écrite.", ex: "Un salarié suit une consigne parce qu'elle vient du poste, pas de la personne qui l'occupe." },
+    ],
+    oeuvres: [{ y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" }, { y: '1922', t: 'Économie et société' }, { y: '1919', t: 'Le Savant et le politique' }],
+    citations: [{ t: "L'homme est un animal suspendu dans les toiles de signification qu'il a lui-même tissées.", src: "d'après L'Éthique protestante, 1904" }],
+    critiques: ["Le lien protestantisme–capitalisme a été contesté par les historiens économistes.", "Sa neutralité axiologique est jugée intenable par les sociologies critiques."],
+    up: [], down: ['goffman', 'parsons', 'bourdieu'], x: 30, y: 375,
+  },
+  simmel: {
+    id: 'simmel', name: 'Georg Simmel', initials: 'GS', dates: '1858–1918', nat: 'Allemagne', periode: 'Tournant du XXᵉ',
+    courant: 'Sociologie des formes',
+    hook: "La société n'est pas une chose : c'est ce qui se passe entre les gens.",
+    resume: "Simmel regarde les petites formes — la dispute, le secret, la mode, le passage en ville — et y trouve la structure du social.",
+    concepts: [
+      { t: 'Formes de socialisation', year: '1908', simple: "Ce qui compte n'est pas le contenu d'une relation mais sa forme : à deux, à trois, en foule, on n'agit pas pareil.", ex: "L'arrivée d'un troisième dans un duo crée aussitôt un arbitre, un allié possible, un exclu." },
+      { t: 'Blasement urbain', year: '1903', simple: "La grande ville sature les sens, et l'indifférence devient une technique de survie.", ex: "Dans un métro bondé, on partage un corps à corps total en évitant soigneusement tous les regards." },
+    ],
+    oeuvres: [{ y: '1900', t: 'Philosophie de l\'argent' }, { y: '1903', t: 'Les Grandes villes et la vie de l\'esprit' }, { y: '1908', t: 'Sociologie' }],
+    citations: [{ t: "La société n'est qu'une somme d'interactions.", src: 'Sociologie, 1908' }],
+    critiques: ["Une œuvre en éclats, sans système, longtemps jugée trop essayiste.", "Peu d'outils pour penser les inégalités durables."],
+    up: [], down: ['goffman', 'elias'], x: 30, y: 530,
+  },
+  durkheim: {
+    id: 'durkheim', name: 'Émile Durkheim', initials: 'ED', dates: '1858–1917', nat: 'France', periode: 'IIIᵉ République',
+    courant: 'Fonctionnalisme, holisme',
+    hook: "Il fait entrer la sociologie à l'université en lui donnant des règles et des statistiques.",
+    resume: "Durkheim démontre que les actes les plus intimes — jusqu'au suicide — se distribuent selon des régularités qui dépassent les individus.",
+    concepts: [
+      { t: 'Fait social', year: '1895', simple: "Une manière de faire extérieure aux individus, qui s'impose à eux et se traite comme un objet.", ex: "Personne ne choisit sa langue maternelle, et pourtant elle contraint chaque phrase que l'on prononce." },
+      { t: 'Anomie', year: '1897', simple: "Ce qui arrive quand les règles se brouillent : plus rien ne borne les attentes, et le vertige s'installe.", ex: "Un secteur en pleine dérégulation où les repères de carrière disparaissent, et où l'usure psychique grimpe." },
+      { t: 'Solidarité organique', year: '1893', simple: "Dans les sociétés modernes, on tient ensemble parce qu'on est différents et dépendants les uns des autres.", ex: "Une ville tient debout parce que personne n'y produit son pain, son électricité et ses soins." },
+    ],
+    oeuvres: [{ y: '1893', t: 'De la division du travail social' }, { y: '1895', t: 'Les Règles de la méthode sociologique' }, { y: '1897', t: 'Le Suicide' }, { y: '1912', t: 'Les Formes élémentaires de la vie religieuse' }],
+    citations: [{ t: "Il faut traiter les faits sociaux comme des choses.", src: 'Les Règles de la méthode sociologique, 1895' }, { t: "Chaque société a un penchant défini au suicide.", src: 'Le Suicide, 1897' }],
+    critiques: ["Un holisme qui laisse peu de place à l'action individuelle.", "La lecture fonctionnaliste tend à justifier l'ordre existant."],
+    up: ['comte'], down: ['parsons', 'bourdieu', 'merton'], x: 250, y: 60,
+  },
+  francfort: {
+    id: 'francfort', name: 'École de Francfort', initials: 'ÉF', dates: '1923–1970', nat: 'Allemagne', periode: 'XXᵉ siècle',
+    courant: 'Théorie critique',
+    hook: "Marx relu à l'âge des mass media et de la catastrophe.",
+    resume: "Adorno, Horkheimer et Marcuse déplacent la critique du travail vers la culture : la domination passe désormais par le divertissement.",
+    concepts: [
+      { t: 'Industrie culturelle', year: '1944', simple: "Quand la culture est produite en série, elle vend surtout du consentement.", ex: "Des formats de divertissement calibrés pour ne jamais heurter, qui laissent le spectateur exactement là où il était." },
+      { t: 'Raison instrumentale', year: '1947', simple: "Une rationalité qui sait parfaitement comment faire, et ne se demande plus pourquoi.", ex: "Une organisation qui optimise chaque indicateur sans jamais interroger sa finalité." },
+    ],
+    oeuvres: [{ y: '1944', t: 'La Dialectique de la raison — Adorno & Horkheimer' }, { y: '1964', t: "L'Homme unidimensionnel — Marcuse" }],
+    citations: [{ t: "Le divertissement est la prolongation du travail sous le capitalisme tardif.", src: 'La Dialectique de la raison, 1944' }],
+    critiques: ["Un mépris marqué pour la culture populaire et ses publics.", "Peu d'enquêtes empiriques au regard de l'ampleur du diagnostic."],
+    up: ['marx'], down: ['bourdieu'], x: 250, y: 205,
+  },
+  parsons: {
+    id: 'parsons', name: 'Talcott Parsons', initials: 'TP', dates: '1902–1979', nat: 'États-Unis', periode: 'Après-guerre',
+    courant: 'Fonctionnalisme systémique',
+    hook: "Il tente la grande théorie : un seul schéma pour toute société.",
+    resume: "Parsons voit la société comme un système dont chaque partie remplit une fonction et se tient en équilibre.",
+    concepts: [
+      { t: 'Système social', year: '1951', simple: "Un ensemble de rôles articulés, où chaque pièce contribue au maintien de l'ensemble.", ex: "L'école lue comme le sas qui transforme un enfant de famille en futur travailleur évalué au mérite." },
+      { t: 'Rôle et attentes', year: '1951', simple: "Agir socialement, c'est occuper une position et répondre à ce que les autres en attendent.", ex: "Un médecin autorisé à poser des questions très intimes, uniquement dans le cadre du cabinet." },
+    ],
+    oeuvres: [{ y: '1937', t: 'La Structure de l\'action sociale' }, { y: '1951', t: 'Le Système social' }],
+    citations: [{ t: "Aucune société ne survit sans intégrer ses membres à un système commun de valeurs.", src: 'Le Système social, 1951' }],
+    critiques: ["Un modèle qui explique mal le conflit et le changement.", "Une abstraction si haute qu'elle devient difficile à tester."],
+    up: ['durkheim', 'weber'], down: ['merton'], x: 250, y: 375,
+  },
+  elias: {
+    id: 'elias', name: 'Norbert Elias', initials: 'NE', dates: '1897–1990', nat: 'Allemagne', periode: 'XXᵉ siècle',
+    courant: 'Sociologie historique',
+    hook: "Il suit sur cinq siècles la manière dont on apprend à se retenir.",
+    resume: "Elias montre que la maîtrise de soi n'est pas une vertu naturelle mais le produit d'une longue histoire de l'État et des mœurs.",
+    concepts: [
+      { t: 'Processus de civilisation', year: '1939', simple: "Les contraintes venues de l'extérieur deviennent peu à peu des contraintes qu'on s'impose soi-même.", ex: "Personne ne surveille plus votre manière de manger : c'est vous qui ne supporteriez pas de le faire autrement." },
+      { t: 'Configuration', year: '1970', simple: "Ni individu ni société d'abord : un tissu de relations d'interdépendance où chacun tient les autres.", ex: "Une équipe où le retard d'une seule personne réorganise la journée de dix autres." },
+    ],
+    oeuvres: [{ y: '1939', t: 'La Civilisation des mœurs' }, { y: '1939', t: 'La Dynamique de l\'Occident' }, { y: '1970', t: "Qu'est-ce que la sociologie ?" }],
+    citations: [{ t: "La société n'est ni un amas d'individus ni une entité au-dessus d'eux.", src: "Qu'est-ce que la sociologie ?, 1970" }],
+    critiques: ["Un récit occidental, accusé de laisser entendre un progrès moral.", "Les sources — traités de savoir-vivre — reflètent l'élite plus que le peuple."],
+    up: ['simmel'], down: ['bourdieu'], x: 250, y: 530,
+  },
+  merton: {
+    id: 'merton', name: 'Robert K. Merton', initials: 'RM', dates: '1910–2003', nat: 'États-Unis', periode: 'Après-guerre',
+    courant: 'Fonctionnalisme critique',
+    hook: "Il préfère les théories de portée moyenne aux grands systèmes.",
+    resume: "Merton corrige son maître Parsons : les institutions ont aussi des effets non voulus, et parfois contraires à leur but.",
+    concepts: [
+      { t: 'Fonction latente', year: '1949', simple: "L'effet réel d'une pratique, distinct de la raison affichée pour la faire.", ex: "Une réunion hebdomadaire dont la fonction déclarée est d'informer, et la fonction réelle de rappeler qui décide." },
+      { t: 'Prophétie autoréalisatrice', year: '1948', simple: "Une croyance fausse peut devenir vraie, simplement parce qu'on agit comme si elle l'était.", ex: "Un élève étiqueté faible, moins sollicité, qui finit par produire les résultats attendus de lui." },
+      { t: 'Tension anomique', year: '1938', simple: "Quand une société promet à tous un but qu'elle ne donne pas à tous les moyens d'atteindre.", ex: "La réussite matérielle érigée en norme là où les voies légitimes d'y accéder sont fermées." },
+    ],
+    oeuvres: [{ y: '1949', t: 'Éléments de théorie et de méthode sociologiques' }, { y: '1938', t: 'Social Structure and Anomie' }],
+    citations: [{ t: "Une définition fausse d'une situation en engendre les conséquences qui la rendent vraie.", src: 'The Self-Fulfilling Prophecy, 1948' }],
+    critiques: ["Reste dans le cadre fonctionnaliste qu'il critique.", "La notion de fonction latente est difficile à prouver empiriquement."],
+    up: ['parsons', 'durkheim'], down: ['becker'], x: 470, y: 60,
+  },
+  bourdieu: {
+    id: 'bourdieu', name: 'Pierre Bourdieu', initials: 'PB', dates: '1930–2002', nat: 'France', periode: 'XXᵉ siècle',
+    courant: 'Structuralisme génétique',
+    hook: "Il montre comment les goûts, l'école et le corps reconduisent l'ordre social.",
+    resume: "Bourdieu explique la reproduction sociale sans complot : elle passe par des dispositions incorporées si tôt qu'elles semblent naturelles.",
+    concepts: [
+      { t: 'Habitus', year: '1972', simple: "Des manières de penser, de percevoir et d'agir incorporées par le milieu, qui agissent sans qu'on y pense.", ex: "Deux enfants de milieux différents n'ont ni le même rapport à la prise de parole en classe, ni le même sentiment d'y avoir droit." },
+      { t: 'Capital culturel', year: '1979', simple: "Un patrimoine non financier — diplômes, aisance verbale, familiarité avec la culture légitime — qui se transmet et rapporte.", ex: "Un dossier scolaire soutenu à la maison par des références que l'école valorise sans jamais les enseigner." },
+      { t: 'Champ', year: '1976', simple: "Un espace de jeu autonome, avec ses enjeux et sa monnaie de prestige propres.", ex: "Dans le champ artistique, le succès commercial peut coûter de la reconnaissance entre pairs." },
+      { t: 'Violence symbolique', year: '1970', simple: "Une domination acceptée par ceux qui la subissent, parce qu'ils en partagent les critères.", ex: "Un élève qui explique son échec par son manque de capacités plutôt que par l'écart entre l'école et son milieu." },
+    ],
+    oeuvres: [{ y: '1970', t: 'La Reproduction (avec J.-C. Passeron)' }, { y: '1979', t: 'La Distinction' }, { y: '1980', t: 'Le Sens pratique' }, { y: '1993', t: 'La Misère du monde' }],
+    citations: [{ t: "Le goût classe, et classe celui qui classe.", src: 'La Distinction, 1979' }, { t: "Le plus clair de notre action nous échappe, et pourtant elle a un sens.", src: "d'après Le Sens pratique, 1980" }],
+    critiques: ["Un déterminisme jugé trop lourd : où reste la marge de manœuvre ?", "Boudon lui oppose des acteurs qui calculent leurs chances au lieu de subir leur habitus.", "Un vocabulaire dense, souvent reproché à l'entrée."],
+    up: ['marx', 'weber', 'durkheim', 'francfort', 'elias'], down: ['boltanski'], x: 470, y: 210,
+  },
+  goffman: {
+    id: 'goffman', name: 'Erving Goffman', initials: 'EG', dates: '1922–1982', nat: 'Canada / É.-U.', periode: 'XXᵉ siècle',
+    courant: 'Interactionnisme',
+    hook: "Il traite la vie quotidienne comme une scène de théâtre très sérieuse.",
+    resume: "Goffman démontre qu'un simple échange de politesses est un travail minutieux pour sauver la face de chacun.",
+    concepts: [
+      { t: 'Mise en scène de soi', year: '1959', simple: "En public, on joue un rôle sur une scène, avec des coulisses où l'on relâche la tenue.", ex: "Le ton d'un serveur en salle, puis en cuisine : deux personnes, un seul individu." },
+      { t: 'Stigmate', year: '1963', simple: "Un attribut qui déclasse celui qui le porte et le contraint à gérer l'information sur lui-même.", ex: "Un trou dans un CV que l'on apprend à raconter, contourner ou taire selon l'interlocuteur." },
+      { t: 'Cadre de l\'expérience', year: '1974', simple: "Chaque situation vient avec une clé de lecture implicite qui indique ce qui s'y passe vraiment.", ex: "La même bourrade est un jeu entre amis et une agression à l'arrêt de bus." },
+    ],
+    oeuvres: [{ y: '1959', t: 'La Mise en scène de la vie quotidienne' }, { y: '1961', t: 'Asiles' }, { y: '1963', t: 'Stigmate' }, { y: '1974', t: 'Les Cadres de l\'expérience' }],
+    citations: [{ t: "Le monde est un mariage.", src: 'La Mise en scène de la vie quotidienne, 1959' }],
+    critiques: ["Une focale micro qui laisse les inégalités structurelles hors champ.", "Des matériaux hétéroclites, difficiles à répliquer."],
+    up: ['simmel', 'weber'], down: ['becker'], x: 470, y: 375,
+  },
+  becker: {
+    id: 'becker', name: 'Howard S. Becker', initials: 'HB', dates: '1928–2023', nat: 'États-Unis', periode: 'XXᵉ–XXIᵉ',
+    courant: 'École de Chicago, étiquetage',
+    hook: "Il renverse la question : ce n'est pas l'acte qui fait le déviant, c'est la réaction.",
+    resume: "Becker suit des musiciens de jazz et des fumeurs de cannabis pour montrer que la déviance est une carrière, apprise et étiquetée.",
+    concepts: [
+      { t: 'Étiquetage', year: '1963', simple: "Un comportement ne devient déviant que lorsqu'un groupe le désigne comme tel et sanctionne son auteur.", ex: "Le même geste toléré dans un milieu et poursuivi dans un autre, selon qui l'observe." },
+      { t: 'Carrière déviante', year: '1963', simple: "On ne devient pas marginal d'un coup : par étapes, apprentissages et portes qui se ferment.", ex: "Une première sanction qui restreint les fréquentations, et rapproche de ceux qui sont déjà sanctionnés." },
+      { t: 'Entrepreneur de morale', year: '1963', simple: "Il faut des militants du bien pour qu'une règle nouvelle existe — et des agents pour l'appliquer.", ex: "Une campagne qui transforme une pratique banale en problème public, puis en infraction." },
+    ],
+    oeuvres: [{ y: '1963', t: 'Outsiders' }, { y: '1982', t: 'Les Mondes de l\'art' }, { y: '1998', t: 'Les Ficelles du métier' }],
+    citations: [{ t: "La déviance n'est pas une qualité de l'acte, mais la conséquence de la réaction des autres.", src: 'Outsiders, 1963' }],
+    critiques: ["L'étiquetage explique la réaction, moins le passage à l'acte initial.", "Une sympathie pour les étiquetés qui a valu à Becker le reproche de parti pris."],
+    up: ['goffman', 'merton'], down: [], x: 700, y: 375,
+  },
+  boudon: {
+    id: 'boudon', name: 'Raymond Boudon', initials: 'RB', dates: '1934–2013', nat: 'France', periode: 'XXᵉ siècle',
+    courant: 'Individualisme méthodologique',
+    hook: "Le contre-modèle français de Bourdieu : des acteurs qui calculent, pas des habitus.",
+    resume: "Boudon explique les inégalités scolaires par une succession de paris rationnels, faits sous des contraintes très inégales.",
+    concepts: [
+      { t: 'Individualisme méthodologique', year: '1979', simple: "Expliquer un phénomène collectif en repartant des raisons que les individus avaient d'agir ainsi.", ex: "Une file d'attente qui s'allonge parce que chacun, rationnellement, préfère attendre plutôt que changer de guichet." },
+      { t: 'Effets pervers', year: '1977', simple: "Des décisions individuellement sensées qui produisent un résultat collectif que personne ne voulait.", ex: "Tous les élèves visant le même diplôme : sa valeur sur le marché du travail baisse pour tout le monde." },
+    ],
+    oeuvres: [{ y: '1973', t: "L'Inégalité des chances" }, { y: '1977', t: 'Effets pervers et ordre social' }, { y: '1979', t: 'La Logique du social' }],
+    citations: [{ t: "Les inégalités scolaires résultent moins d'un héritage culturel que d'une suite de décisions sous contrainte.", src: "d'après L'Inégalité des chances, 1973" }],
+    critiques: ["Suppose une information et un calcul dont les acteurs disposent rarement.", "Laisse peu de place à l'incorporation précoce des dispositions."],
+    up: ['weber'], down: [], x: 700, y: 210,
+  },
+  boltanski: {
+    id: 'boltanski', name: 'Luc Boltanski', initials: 'LB', dates: '1940–', nat: 'France', periode: 'Contemporain',
+    courant: 'Sociologie pragmatique',
+    hook: "Après Bourdieu : rendre aux acteurs leur capacité de critique.",
+    resume: "Boltanski déplace l'attention vers les disputes ordinaires, où les gens argumentent, justifient et dénoncent l'injustice.",
+    concepts: [
+      { t: 'Régimes de justification', year: '1991', simple: "Dans un désaccord, on mobilise des principes de grandeur concurrents pour avoir raison.", ex: "Un conflit au travail où l'un invoque l'ancienneté, l'autre la performance mesurée : deux mondes, un seul bureau." },
+      { t: 'Nouvel esprit du capitalisme', year: '1999', simple: "Le capitalisme absorbe les critiques qu'on lui adresse et s'en fait une nouvelle légitimité.", ex: "L'autonomie réclamée contre la hiérarchie, revenue en management par projet et en responsabilisation individuelle." },
+    ],
+    oeuvres: [{ y: '1991', t: 'De la justification (avec L. Thévenot)' }, { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' }],
+    citations: [{ t: "Les acteurs sont capables de critique : la sociologie n'en a pas le monopole.", src: "d'après De la justification, 1991" }],
+    critiques: ["En suivant les justifications, on risque de perdre de vue les rapports de force.", "Un appareil conceptuel jugé difficile à opérationnaliser."],
+    up: ['bourdieu'], down: [], x: 700, y: 60,
+  },
+  tocqueville: {
+    id: 'tocqueville', name: 'Alexis de Tocqueville', initials: 'AT', dates: '1805–1859', nat: 'France', periode: 'XIXᵉ siècle',
+    courant: 'Sociologie politique comparée',
+    hook: "Il va voir l'Amérique pour comprendre ce que l'égalité fait aux mœurs.",
+    resume: "Tocqueville découvre que l'égalité des conditions transforme la famille, la religion et le rapport à l'autorité avant de toucher aux lois.",
+    concepts: [
+      { t: 'Égalisation des conditions', year: '1835', simple: "Un mouvement de fond qui rapproche les statuts et rend toute différence plus insupportable.", ex: "Des écarts objectivement réduits vécus comme plus injustes qu'auparavant, parce que rien ne les justifie plus." },
+      { t: 'Tyrannie de la majorité', year: '1840', simple: "En démocratie, la pression du plus grand nombre peut étouffer la voix minoritaire sans aucune violence.", ex: "Une opinion majoritaire si évidente localement que la contredire coûte socialement plus que légalement." },
+    ],
+    oeuvres: [{ y: '1835', t: 'De la démocratie en Amérique, I' }, { y: '1840', t: 'De la démocratie en Amérique, II' }, { y: '1856', t: "L'Ancien Régime et la Révolution" }],
+    citations: [{ t: "Le despotisme qui menace les démocraties serait plus étendu et plus doux.", src: "d'après De la démocratie en Amérique, 1840" }],
+    critiques: ["Une aristocratie nostalgique perce sous l'analyse.", "L'Amérique observée est celle des hommes blancs libres."],
+    up: [], down: ['durkheim'], x: 30, y: 690,
+  },
+};
+
+// Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie secondaire.
+const EXTRA = {
+  comte: { prenom: 'Auguste', nom: 'Comte', disc: ['Philosophie des sciences — la sociologie naît comme couronnement de la hiérarchie des savoirs', 'Histoire — la loi des trois états est une périodisation avant d\'être une théorie'], biblio: ["A. Petit, Le Système d'Auguste Comte, Vrin, 2016", 'M. Bourdeau, Les Trois États, Cerf, 2006'] },
+  marx: { prenom: 'Karl', nom: 'Marx', disc: ['Économie politique — critique de Smith et Ricardo', 'Philosophie — héritage et renversement de Hegel', 'Histoire — le mode de production comme clé de périodisation'], biblio: ['G. Duménil & M. Löwy, Lire Marx, PUF, 2009', 'J. Bidet, Que faire du Capital ?, PUF, 2000'] },
+  weber: { prenom: 'Max', nom: 'Weber', disc: ['Droit — sa formation initiale nourrit l\'analyse de la légalité', 'Histoire économique comparée', 'Sciences des religions — comparaison des éthiques économiques'], biblio: ['C. Colliot-Thélène, Max Weber et l\'histoire, PUF, 1990', 'P. Raynaud, Max Weber et les dilemmes de la raison moderne, PUF, 1987'] },
+  simmel: { prenom: 'Georg', nom: 'Simmel', disc: ['Philosophie — une esthétique de la modernité', 'Économie — la monnaie comme forme sociale', 'Géographie urbaine'], biblio: ['P. Watier, Georg Simmel sociologue, Circé, 2003', 'F. Léger, La Pensée de Georg Simmel, Kimé, 1989'] },
+  durkheim: { prenom: 'Émile', nom: 'Durkheim', disc: ['Statistique — l\'usage démographique fonde la preuve sociologique', 'Anthropologie — les formes religieuses australiennes', 'Droit — la solidarité lue dans les types de sanction'], biblio: ['P. Steiner, La Sociologie de Durkheim, La Découverte, 2011', 'S. Lukes, Émile Durkheim, sa vie, son œuvre, PUF, 1985'] },
+  francfort: { prenom: '—', nom: 'Institut für Sozialforschung', disc: ['Philosophie — dialectique hégélienne relue par Marx', 'Psychanalyse — Freud mobilisé contre la personnalité autoritaire', 'Esthétique et musicologie (Adorno)'], biblio: ['M. Jay, L\'Imagination dialectique, Payot, 1977', 'Y. Cusset & S. Haber, Habermas / Honneth, Ellipses, 2008'] },
+  parsons: { prenom: 'Talcott', nom: 'Parsons', disc: ['Biologie — le vocabulaire systémique et fonctionnel', 'Économie — reprise de Marshall et Pareto', 'Psychanalyse — l\'intériorisation des normes'], biblio: ['F. Bourricaud, L\'Individualisme institutionnel, PUF, 1977', 'B. Valade, Introduction aux sciences sociales, PUF, 1996'] },
+  elias: { prenom: 'Norbert', nom: 'Elias', disc: ['Histoire — cinq siècles de traités de civilité', 'Psychologie — la formation de l\'économie psychique', 'Science politique — monopole fiscal et monopole de la violence'], biblio: ['R. Chartier, préface à La Civilisation des mœurs, Pocket, 1973', 'N. Heinich, La Sociologie de Norbert Elias, La Découverte, 1997'] },
+  merton: { prenom: 'Robert King', nom: 'Merton', disc: ['Histoire des sciences — le fondateur de la sociologie des sciences', 'Statistique — méthodes d\'enquête avec Lazarsfeld', 'Criminologie'], biblio: ['P. Sztompka, Robert K. Merton, Macmillan, 1986', 'M. Cherkaoui, Naissance d\'une science sociale, Droz, 1998'] },
+  bourdieu: { prenom: 'Pierre', nom: 'Bourdieu', disc: ['Anthropologie — le terrain kabyle est sa matrice', 'Linguistique — critique de Saussure et Austin', 'Histoire de l\'art et esthétique', 'Statistique — analyse des correspondances'], biblio: ['P. Mounier, Pierre Bourdieu, une introduction, Pocket, 2001', 'L. Pinto, Pierre Bourdieu et la théorie du monde social, Albin Michel, 1998', 'B. Lahire (dir.), Le Travail sociologique de Pierre Bourdieu, La Découverte, 1999'] },
+  goffman: { prenom: 'Erving', nom: 'Goffman', disc: ['Théâtre et dramaturgie — la métaphore centrale', 'Ethnologie — observation directe à Shetland', 'Linguistique — analyse de conversation'], biblio: ['Y. Winkin, Erving Goffman : les moments et leurs hommes, Seuil, 1988', 'D. Cefaï & L. Perreau (dir.), Erving Goffman et l\'ordre de l\'interaction, CURAPP, 2012'] },
+  becker: { prenom: 'Howard Saul', nom: 'Becker', disc: ['Musique — musicien de jazz avant d\'être sociologue', 'Criminologie — refondation par l\'étiquetage', 'Histoire de l\'art — les mondes de l\'art comme travail collectif'], biblio: ['A. Blanc & A. Pessin (dir.), L\'Art du terrain, L\'Harmattan, 2004', 'H. Peretz, Les Méthodes en sociologie : l\'observation, La Découverte, 2004'] },
+  boudon: { prenom: 'Raymond', nom: 'Boudon', disc: ['Économie — théorie du choix rationnel', 'Mathématiques — modélisation formelle des effets d\'agrégation', 'Philosophie morale — les raisons ordinaires du juste'], biblio: ['M. Cherkaoui, Le Désenchantement du monde social, Bord de l\'eau, 2010', 'A. Bouvier, Raymond Boudon, La Découverte, 2011'] },
+  boltanski: { prenom: 'Luc', nom: 'Boltanski', disc: ['Philosophie morale — les grammaires du juste', 'Sciences de gestion — la littérature managériale comme corpus', 'Sciences politiques — critique et institutions'], biblio: ['B. Frère, Le Tournant de la théorie critique, Desclée de Brouwer, 2015', 'M. Nachi, Introduction à la sociologie pragmatique, Armand Colin, 2006'] },
+  tocqueville: { prenom: 'Alexis', nom: 'de Tocqueville', disc: ['Science politique — le comparatisme institutionnel', 'Histoire — la Révolution relue par les continuités', 'Droit constitutionnel'], biblio: ['R. Aron, Les Étapes de la pensée sociologique, Gallimard, 1967', 'F. Furet, Penser la Révolution française, Gallimard, 1978'] },
+};
+
+const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0]];
+
+class Component extends DCLogic {
+  state = {
+    view: 'home', authorId: null, domainId: null,
+    stack: [], favs: ['bourdieu'], q: '', filter: 'Tout',
+    wide: typeof window !== 'undefined' ? window.innerWidth >= 900 : true,
+    toast: null,
+  };
+
+  componentDidMount() {
+    this._r = () => this.setState({ wide: window.innerWidth >= 900 });
+    window.addEventListener('resize', this._r);
+    if (this.props.startView === 'graph') this.setState({ view: 'graph' });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); }
+
+  flash(t) {
+    clearTimeout(this._t);
+    this.setState({ toast: t });
+    this._t = setTimeout(() => this.setState({ toast: null }), 1900);
+  }
+
+  push(patch) {
+    this.setState(s => ({ ...patch, stack: [...s.stack, { view: s.view, authorId: s.authorId, domainId: s.domainId }] }));
+  }
+  back = () => this.setState(s => {
+    const st = s.stack.slice();
+    const prev = st.pop();
+    return prev ? { ...prev, stack: st } : { view: 'home', stack: [] };
+  });
+
+  goAuthor = id => () => this.push({ view: 'author', authorId: id });
+  goDomain = id => () => this.push({ view: 'domain', domainId: id });
+  tab = v => () => this.setState({ view: v, stack: [], q: '' });
+
+  renderVals() {
+    const s = this.state, wide = s.wide, narrow = !wide;
+    const a = A[s.authorId];
+    const dom = DOMAINS.find(d => d.id === s.domainId);
+    const daily = A.bourdieu.concepts[0];
+
+    const chip = (on) => `padding:6px 12px;border-radius:999px;cursor:pointer;font:400 12.5px var(--font-body);white-space:nowrap;background:${on ? 'color-mix(in srgb, var(--color-accent) 16%, transparent)' : 'transparent'};border:1px solid ${on ? 'var(--color-accent)' : 'var(--color-neutral-800)'};color:${on ? 'var(--color-accent-200)' : 'var(--color-neutral-300)'}`;
+
+    const railItem = (v, label, hint) => ({
+      label, hint, go: this.tab(v),
+      style: `display:flex;flex-direction:column;gap:2px;align-items:flex-start;width:100%;padding:9px 10px;margin-bottom:2px;border:0;border-radius:9px;cursor:pointer;text-align:left;color:var(--color-text);background:${s.view === v ? 'color-mix(in srgb, var(--color-accent) 14%, transparent)' : 'transparent'};box-shadow:${s.view === v ? 'inset 0 0 0 1px var(--color-accent-700)' : 'none'}`,
+    });
+
+    const ICONS = {
+      home: 'M4 11l8-6 8 6v8H4z',
+      graph: 'M12 4v5m0 0l-6 4m6-4l6 4M6 13v0m12 0v0M4 17h4v3H4zm12 0h4v3h-4z',
+      search: 'M16 16l4 4M5 11a6 6 0 1112 0 6 6 0 01-12 0z',
+      favs: 'M12 4.5l2.4 5 5.3.8-3.85 3.75.95 5.3-4.8-2.7-4.8 2.7.95-5.3L4.3 10.3l5.3-.8z',
+    };
+    const tabStyle = on => `display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 0 5px;border:0;border-radius:10px;background:transparent;cursor:pointer;color:${on ? 'var(--color-accent)' : 'color-mix(in srgb, var(--color-text) 45%, transparent)'}`;
+
+    const titles = {
+      home: ['Sociologor', Object.keys(A).length + ' fiches · ' + DOMAINS.length + ' domaines · hors ligne'],
+      graph: ['Graphe des filiations', 'De Comte à Becker'],
+      search: ['Recherche', 'Auteurs, concepts, œuvres'],
+      favs: ['Mes fiches', s.favs.length + ' épinglée(s)'],
+      author: a ? [a.name, a.dates + ' · ' + a.courant] : ['', ''],
+      domain: dom ? [dom.t, dom.a.length + ' auteurs'] : ['', ''],
+    };
+    const [headerTitle, headerSub] = titles[s.view] || ['Sociologor', ''];
+
+    // search
+    const items = [];
+    Object.values(A).forEach(x => {
+      items.push({ kind: 'Auteur', title: x.name, sub: x.dates + ' · ' + x.courant, id: x.id });
+      x.concepts.forEach(c => items.push({ kind: 'Concept', title: c.t, sub: c.simple, id: x.id }));
+      x.oeuvres.forEach(o => items.push({ kind: 'Œuvre', title: o.t, sub: x.name + ', ' + o.y, id: x.id }));
+    });
+    const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const qq = norm(s.q.trim());
+    const kindMap = { Auteurs: 'Auteur', Concepts: 'Concept', Œuvres: 'Œuvre' };
+    const results = items
+      .filter(i => (s.filter === 'Tout' || i.kind === kindMap[s.filter]))
+      .filter(i => !qq || norm(i.title).includes(qq) || norm(i.sub).includes(qq))
+      .slice(0, 24)
+      .map(i => ({ ...i, go: this.goAuthor(i.id) }));
+
+    const linkStyle = 'padding:6px 11px;border-radius:999px;cursor:pointer;font:400 12.5px var(--font-body);background:var(--color-accent-900);border:1px solid var(--color-accent-800);color:var(--color-accent-200)';
+    const mkLinks = ids => (ids || []).map(id => ({ label: A[id] ? A[id].name : id, go: this.goAuthor(id), style: linkStyle }));
+
+    // graph
+    const nodeIds = Object.keys(A);
+    const nodes = nodeIds.map(id => {
+      const n = A[id];
+      const on = s.authorId === id;
+      return {
+        name: n.name, sub: n.courant, go: this.goAuthor(id),
+        style: `position:absolute;left:${n.x}px;top:${n.y}px;width:158px;height:78px;display:flex;flex-direction:column;justify-content:center;padding:10px 12px;text-align:left;border-radius:11px;cursor:pointer;color:var(--color-text);background:${on ? 'var(--color-accent-900)' : 'var(--color-surface)'};border:1px solid ${on ? 'var(--color-accent)' : 'color-mix(in srgb, var(--color-text) 10%, transparent)'};box-shadow:var(--shadow-sm)`,
+      };
+    });
+    const seen = {};
+    const edges = [];
+    nodeIds.forEach(id => {
+      (A[id].down || []).forEach(to => {
+        if (!A[to]) return;
+        const k = id + '>' + to;
+        if (seen[k]) return; seen[k] = 1;
+        const f = A[id], t = A[to];
+        const x1 = f.x + 158, y1 = f.y + 39, x2 = t.x, y2 = t.y + 39;
+        const mx = (x1 + x2) / 2;
+        const soft = EXTRA_EDGES.some(e => e[0] === id && e[1] === to && e[2] === 0);
+        edges.push({ d: `M${x1} ${y1} C${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`, stroke: soft ? '#595d6c' : '#9184d9', w: soft ? 1 : 1.6 });
+      });
+    });
+
+    const pad = wide ? 'padding:26px 34px 60px' : 'padding:18px 18px 40px';
+
+    return {
+      wide, narrow,
+      railStyle: wide
+        ? 'flex:none;width:216px;display:flex;flex-direction:column;padding:16px 10px 8px;border-right:1px solid color-mix(in srgb, var(--color-text) 7%, transparent);background:#13151f'
+        : 'display:none',
+      railItems: [railItem('home', 'Accueil', 'Domaines et notion du jour'), railItem('graph', 'Graphe', 'Filiations intellectuelles'), railItem('search', 'Recherche', 'Auteurs, concepts, œuvres'), railItem('favs', 'Mes fiches', s.favs.length + ' épinglée(s)')],
+      tabItems: [
+        { label: 'Accueil', icon: ICONS.home, go: this.tab('home'), style: tabStyle(s.view === 'home' || s.view === 'domain' || s.view === 'author') },
+        { label: 'Graphe', icon: ICONS.graph, go: this.tab('graph'), style: tabStyle(s.view === 'graph') },
+        { label: 'Chercher', icon: ICONS.search, go: this.tab('search'), style: tabStyle(s.view === 'search') },
+        { label: 'Fiches', icon: ICONS.favs, go: this.tab('favs'), style: tabStyle(s.view === 'favs') },
+      ],
+      padStyle: pad,
+      offlineCount: Object.keys(A).length + ' fiches hors connexion',
+      gridStyle: `display:grid;grid-template-columns:repeat(auto-fill,minmax(${wide ? '210px' : '150px'},1fr));gap:8px`,
+      listGridStyle: `display:grid;grid-template-columns:repeat(auto-fill,minmax(${wide ? '320px' : '260px'},1fr));gap:9px`,
+
+      canBack: s.stack.length > 0,
+      back: this.back,
+      headerTitle, headerSub,
+      onAuthor: s.view === 'author',
+      favFill: a && s.favs.includes(a.id) ? 'var(--color-accent)' : 'none',
+      favBtnStyle: `flex:none;width:32px;height:32px;padding:0;color:${a && s.favs.includes(a.id) ? 'var(--color-accent)' : 'var(--color-text)'}`,
+      toggleFav: () => this.setState(st => {
+        const on = st.favs.includes(st.authorId);
+        this.flash(on ? 'Retirée de vos fiches' : 'Épinglée et disponible hors ligne');
+        return { favs: on ? st.favs.filter(x => x !== st.authorId) : [...st.favs, st.authorId] };
+      }),
+      share: () => this.flash('Lien copié — sociologor.app/a/' + s.authorId),
+      exportMd: () => this.flash('Fiche exportée en Markdown'),
+      openSearch: this.tab('search'),
+      openGraph: this.tab('graph'),
+
+      isHome: s.view === 'home', isDomain: s.view === 'domain', isAuthor: s.view === 'author',
+      isGraph: s.view === 'graph', isSearch: s.view === 'search', isFavs: s.view === 'favs',
+      toast: s.toast,
+      showCitations: this.props.showCitations !== false,
+
+      dailyTitle: daily.t, dailySub: 'Pierre Bourdieu · 1972 · Structuralisme génétique',
+      dailySimple: daily.simple, dailyExample: daily.ex, dailyAuthor: 'Bourdieu',
+      openDaily: this.goAuthor('bourdieu'),
+
+      domains: DOMAINS.map(d => ({
+        title: d.t, hint: d.a.length + ' auteurs', go: this.goDomain(d.id),
+        style: 'display:flex;flex-direction:column;gap:5px;align-items:flex-start;padding:12px 13px;background:var(--color-surface);border:1px solid transparent;border-radius:11px;cursor:pointer;text-align:left;color:var(--color-text)',
+      })),
+
+      domainTitle: dom ? dom.t : '', domainDesc: dom ? dom.d : '',
+      domainCount: dom ? dom.a.filter(id => A[id]).length + ' auteurs de référence' : '',
+      domainAuthors: dom ? dom.a.filter(id => A[id]).map(id => ({ ...A[id], go: this.goAuthor(id) })) : [],
+
+      a: a ? {
+        ...a, ...(EXTRA[a.id] || {}),
+        slotId: 'portrait-' + a.id,
+        reperes: [
+          { k: 'Nom', v: (EXTRA[a.id] || {}).nom || a.name },
+          { k: 'Prénom', v: (EXTRA[a.id] || {}).prenom || '—' },
+          { k: 'Dates', v: a.dates },
+          { k: 'Nationalité', v: a.nat },
+          { k: 'Période', v: a.periode },
+          { k: 'Courant', v: a.courant },
+        ],
+        domainTags: DOMAINS.filter(d => d.a.includes(a.id)).slice(0, 3).map(d => d.t),
+        upLinks: mkLinks(a.up), downLinks: mkLinks(a.down),
+      } : null,
+
+      nodes, edges,
+
+      q: s.q,
+      onQuery: e => this.setState({ q: e.target.value }),
+      filters: ['Tout', 'Auteurs', 'Concepts', 'Œuvres'].map(f => ({
+        label: f, go: () => this.setState({ filter: f }), style: chip(s.filter === f),
+      })),
+      resultsLabel: results.length + (results.length === 1 ? ' résultat' : ' résultats'),
+      results,
+
+      favEmpty: s.favs.length === 0,
+      favList: s.favs.filter(id => A[id]).map(id => ({ ...A[id], go: this.goAuthor(id) })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

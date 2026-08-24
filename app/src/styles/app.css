@@ -1,0 +1,674 @@
+/* Sociologor — couche applicative posée sur le design system Nocturne.
+   Toutes les valeurs viennent des tokens de nocturne.css : aucun hex, aucune
+   police et aucune taille codés en dur qui existent déjà comme variable. */
+
+html,
+body,
+#root {
+  min-height: 100dvh;
+}
+
+html {
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-400);
+}
+
+@keyframes soc-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.soc-enter {
+  animation: soc-in 0.25s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soc-enter {
+    animation: none;
+  }
+}
+
+/* — barre de défilement discrète, accordée au ground sombre — */
+.soc-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.soc-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-800);
+  border-radius: var(--radius-md);
+}
+.soc-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.soc-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neutral-800) transparent;
+}
+
+/* — squelette — */
+.soc-app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.soc-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.soc-main-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.soc-main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.soc-pad {
+  padding: 18px 18px 40px;
+}
+
+/* — rail latéral (≥ 900px) — */
+.soc-rail {
+  display: none;
+}
+
+.soc-rail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 9px 10px;
+  margin-bottom: 2px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  background: transparent;
+  font-family: var(--font-body);
+}
+
+.soc-rail-item:hover {
+  background: color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
+.soc-rail-item[aria-current='page'] {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  box-shadow: inset 0 0 0 1px var(--color-accent-700);
+}
+
+.soc-rail-label {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 13.5px;
+}
+
+.soc-rail-hint {
+  font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 42%, transparent);
+}
+
+/* — en-tête — */
+.soc-header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px 11px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 7%, transparent);
+}
+
+.soc-header-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 14.5px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soc-header-sub {
+  font-size: 10.5px;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soc-icon-btn {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+/* — barre d'onglets (< 900px) — cible tactile ≥ 44px, safe-area iOS — */
+.soc-tabbar {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  padding: 6px 6px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  background: var(--color-bg);
+}
+
+.soc-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 46px;
+  padding: 7px 0 5px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+}
+
+.soc-tab[aria-current='page'] {
+  color: var(--color-accent);
+}
+
+/* — titres de section — */
+.soc-kicker {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.soc-h1 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.02;
+  letter-spacing: -0.033em;
+  margin: 8px 0 6px;
+}
+
+.soc-h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: clamp(26px, 4vw, 36px);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+  margin: 4px 0 6px;
+}
+
+.soc-lede {
+  font-size: 14px;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--color-text) 58%, transparent);
+  margin: 0 0 22px;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+/* — cartes cliquables (domaines, auteurs, favoris) — */
+.soc-card-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  padding: 12px 13px;
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  border-radius: 11px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.soc-card-btn:hover {
+  border-color: var(--color-accent-700);
+  background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+}
+
+.soc-card-btn:active {
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface));
+}
+
+.soc-row-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 14px;
+  background: var(--color-surface);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  width: 100%;
+}
+
+.soc-row-btn:hover {
+  border-color: var(--color-accent-700);
+}
+
+.soc-initials {
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--color-accent-900);
+  color: var(--color-accent-300);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: 0.02em;
+}
+
+.soc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.soc-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 9px;
+}
+
+/* — pastilles de filiation et filtres — */
+.soc-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  white-space: nowrap;
+  background: transparent;
+  border: 1px solid var(--color-neutral-800);
+  color: var(--color-neutral-300);
+}
+
+.soc-chip:hover {
+  border-color: var(--color-accent-700);
+}
+
+.soc-chip[aria-pressed='true'] {
+  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-200);
+}
+
+.soc-link-chip {
+  padding: 6px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  background: var(--color-accent-900);
+  border: 1px solid var(--color-accent-800);
+  color: var(--color-accent-200);
+}
+
+.soc-link-chip:hover {
+  border-color: var(--color-accent);
+}
+
+/* — toast — */
+.soc-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(78px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 40;
+  max-width: min(92vw, 420px);
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+/* — bandeau (hors ligne, mise à jour disponible) — */
+.soc-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 18px;
+  font-size: 12px;
+  background: var(--color-accent-900);
+  color: var(--color-accent-200);
+  border-bottom: 1px solid var(--color-accent-800);
+}
+
+/* — graphe — */
+.soc-graph-frame {
+  overflow: auto;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--color-neutral-900), var(--color-bg));
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+}
+
+.soc-node {
+  position: absolute;
+  width: 158px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 12px;
+  text-align: left;
+  border-radius: 11px;
+  cursor: pointer;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-body);
+}
+
+.soc-node:hover {
+  border-color: var(--color-accent-700);
+}
+
+.soc-node[data-active='true'] {
+  background: var(--color-accent-900);
+  border-color: var(--color-accent);
+}
+
+/* — documentation intégrée — */
+.soc-doc {
+  max-width: 72ch;
+}
+
+.soc-doc h1 {
+  font-size: clamp(26px, 4vw, 34px);
+  margin-bottom: var(--space-4);
+}
+
+.soc-doc h2 {
+  font-size: 22px;
+  margin-top: var(--space-8);
+}
+
+.soc-doc h3 {
+  font-size: 17px;
+  margin-top: var(--space-6);
+}
+
+.soc-doc p,
+.soc-doc li {
+  font-size: 14px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.soc-doc ul,
+.soc-doc ol {
+  padding-left: 1.2em;
+  margin: 0 0 var(--space-3);
+}
+
+.soc-doc li {
+  margin-bottom: var(--space-1);
+}
+
+.soc-doc code {
+  font-size: 12.5px;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  background: var(--color-neutral-900);
+}
+
+.soc-doc blockquote {
+  margin: 0 0 var(--space-3);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-accent-700);
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+
+.soc-doc-table-wrap {
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+}
+
+.soc-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.soc-doc th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.soc-doc td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  vertical-align: top;
+}
+
+/* — accordéon du sommaire documentaire (DOCUMENTATION_SPEC §5) — */
+.soc-acc-chapter {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+
+.soc-acc-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 4px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 15px;
+  text-align: left;
+}
+
+.soc-acc-head:hover {
+  background: color-mix(in srgb, var(--color-text) 4%, transparent);
+}
+
+.soc-acc-count {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+}
+
+.soc-acc-chevron {
+  transition: transform 0.18s ease;
+}
+
+.soc-acc-head[aria-expanded='true'] .soc-acc-chevron {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soc-acc-chevron {
+    transition: none;
+  }
+}
+
+.soc-acc-panel {
+  margin: 0 0 var(--space-3) 12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--color-accent-800);
+  display: flex;
+  flex-direction: column;
+}
+
+.soc-acc-link {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.soc-acc-link:hover {
+  background: color-mix(in srgb, var(--color-text) 5%, transparent);
+  color: var(--color-accent);
+}
+
+.soc-acc-link[aria-current='page'] {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+/* — champ de recherche documentaire — */
+.soc-doc-hit {
+  display: block;
+  padding: 10px 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  color: var(--color-text);
+}
+
+.soc-doc-hit:hover {
+  background: color-mix(in srgb, var(--color-text) 4%, transparent);
+  color: var(--color-text);
+}
+
+/* — écran large : le rail remplace la barre d'onglets — */
+@media (min-width: 900px) {
+  .soc-rail {
+    flex: none;
+    width: 216px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 10px 8px;
+    border-right: 1px solid color-mix(in srgb, var(--color-text) 7%, transparent);
+    background: var(--color-neutral-900);
+  }
+
+  .soc-tabbar {
+    display: none;
+  }
+
+  .soc-pad {
+    padding: 26px 34px 60px;
+  }
+
+  .soc-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+
+  .soc-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .soc-toast {
+    bottom: 28px;
+  }
+}
+
+/* — avertissement légal du premier lancement — */
+.soc-legal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: max(12px, env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--color-neutral-900) 78%, transparent);
+}
+
+.soc-legal-card {
+  width: min(560px, 100%);
+  /* colonne flex plafonnée : le texte défile, les boutons restent posés en bas */
+  max-height: min(100%, 720px);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.soc-legal-title {
+  flex: none;
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 19px;
+  line-height: 1.2;
+  margin: 0 0 var(--space-4);
+}
+
+.soc-legal-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: var(--space-2);
+}
+
+.soc-legal-actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-top: var(--space-4);
+  margin-top: var(--space-2);
+  border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+
+.soc-legal-actions .btn {
+  min-height: 44px;
+}

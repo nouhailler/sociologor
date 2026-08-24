@@ -1,0 +1,35 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Home from './routes/Home.jsx';
+import Domain from './routes/Domain.jsx';
+import Author from './routes/Author.jsx';
+import Graph from './routes/Graph.jsx';
+import Search from './routes/Search.jsx';
+import Favs from './routes/Favs.jsx';
+import Settings from './routes/Settings.jsx';
+import NotFound from './routes/NotFound.jsx';
+import { DocsIndex, DocsPage } from './routes/Docs.jsx';
+import { useStore } from './state/store.jsx';
+
+/** Redirige le lancement vers l'écran choisi dans les paramètres. */
+function StartView() {
+  const { settings } = useStore();
+  return settings.startView === 'graph' ? <Navigate to="/graphe" replace /> : <Home />;
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<StartView />} />
+      <Route path="/accueil" element={<Home />} />
+      <Route path="/d/:id" element={<Domain />} />
+      <Route path="/a/:id" element={<Author />} />
+      <Route path="/graphe" element={<Graph />} />
+      <Route path="/recherche" element={<Search />} />
+      <Route path="/mes-fiches" element={<Favs />} />
+      <Route path="/parametres" element={<Settings />} />
+      <Route path="/documentation" element={<DocsIndex />} />
+      <Route path="/documentation/:chapter/:page" element={<DocsPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
