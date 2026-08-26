@@ -16,16 +16,35 @@ Le rail est remplacé par une **barre d'onglets** en bas de l'écran :
 Accueil · Graphe · Chercher · Fiches · Aide. Les Paramètres s'ouvrent depuis
 l'icône ⚙️ de l'en-tête de l'accueil.
 
+## Le menu ☰
+
+Rail et barre d'onglets restent à cinq entrées, pour tenir sur un téléphone —
+mais l'application en compte davantage. Le bouton ☰, dans l'en-tête, ouvre un
+menu classé en trois catégories avec tout le reste :
+
+| Catégorie | Contenu |
+|---|---|
+| **Explorer le corpus** | Accueil, Graphe, Carte des courants, Phénomènes sociaux |
+| **Retrouver** | Recherche, Mes fiches |
+| **Aide et réglages** | Documentation, Paramètres |
+
+L'entrée de l'écran courant, s'il y en a une, est mise en évidence. Toucher
+une entrée y navigue et referme le menu ; toucher le fond, la croix, ou la
+touche **Échap** referme le menu sans naviguer. C'est le seul endroit d'où
+partent la carte des courants et les phénomènes sociaux sans passer par un
+autre écran.
+
 ## L'en-tête
 
 | Élément | Rôle |
 |---|---|
+| ☰ | Ouvre le menu des fonctionnalités, classées par catégorie |
 | Flèche **←** | Revient à l'écran précédent (affichée sur les écrans de détail) |
 | Titre et sous-titre | Situent l'écran courant |
 | 🔍 | Ouvre la recherche (accueil) |
 | ⚙️ | Ouvre les paramètres (accueil) |
 | ★ | Épingle ou retire la fiche (écran Fiche auteur) |
-| Partage | Partage le lien de la fiche (écran Fiche auteur) |
+| Partage | Partage le lien de la fiche (écran Fiche auteur, Fiche concept, Fiche phénomène) |
 
 ## Adresses des écrans
 
@@ -41,6 +60,8 @@ Chaque écran a sa propre adresse : elle peut être mise en favori ou partagée.
 | Graphe centré sur un auteur | `/graphe?focus=<identifiant>` |
 | Carte des courants | `/courants` |
 | Carte centrée sur un courant | `/courants?focus=<identifiant>` |
+| Phénomènes sociaux | `/phenomenes` |
+| Fiche phénomène | `/p/<identifiant>` |
 | Recherche | `/recherche?q=<texte>&type=<filtre>` |
 | Mes fiches | `/mes-fiches` |
 | Paramètres | `/parametres` |

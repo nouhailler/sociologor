@@ -4,6 +4,65 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.8.0
+
+Date : 2026-08-26
+
+Un menu ☰, pour atteindre tout le reste sans que la navigation principale ne
+grossisse.
+
+## Nouveautés
+
+- **Menu des fonctionnalités**, ouvert depuis un bouton ☰ dans l'en-tête,
+  présent sur tous les écrans. Trois catégories : **Explorer le corpus**
+  (Accueil, Graphe, Carte des courants, Phénomènes sociaux), **Retrouver**
+  (Recherche, Mes fiches), **Aide et réglages** (Documentation, Paramètres).
+  L'entrée de l'écran courant, s'il y en a une, est mise en évidence.
+- C'est le premier accès direct à la **carte des courants** et aux
+  **phénomènes sociaux** qui ne passe pas par un autre écran — jusqu'ici,
+  chacun n'avait qu'un bouton enfoui (respectivement sur l'écran Graphe et
+  sur l'écran Accueil).
+- Le menu se ferme au choix d'une entrée, au clic sur le fond, sur la croix,
+  ou à la touche **Échap** — avec un piège de focus et un retour du focus au
+  bouton ☰ à la fermeture, sur le modèle déjà éprouvé de l'avertissement
+  légal du premier lancement.
+
+## Changements
+
+- La navigation principale — rail et barre d'onglets — ne change pas : elle
+  reste à cinq entrées. Le menu s'y ajoute plutôt que de la remplacer.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Navigation générale](/documentation/guide/navigation), avec la table des
+adresses complétée des deux adresses des phénomènes sociaux, omises par
+inadvertance lors de leur introduction.
+
+## Limites connues à cette version
+
+Le menu n'est pas une seconde recherche : il ne classe que les écrans, pas
+les fiches. Une adresse de fiche (auteur, concept, domaine, phénomène) ne
+figure jamais dans le menu, qui reste volontairement limité aux points
+d'entrée.
+
+---
+
 # Version 1.7.0
 
 Date : 2026-08-26

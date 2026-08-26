@@ -209,6 +209,106 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* — menu des fonctionnalités, classées par catégorie — */
+.soc-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  background: color-mix(in srgb, var(--color-neutral-900) 70%, transparent);
+}
+
+.soc-menu-panel {
+  width: min(320px, 88vw);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: max(14px, env(safe-area-inset-top)) 0 calc(14px + env(safe-area-inset-bottom));
+  background: var(--color-neutral-900);
+  border-right: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  box-shadow: var(--shadow-lg);
+  animation: soc-menu-in 0.2s ease both;
+}
+
+@keyframes soc-menu-in {
+  from {
+    transform: translateX(-12px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .soc-menu-panel {
+    animation: none;
+  }
+}
+
+.soc-menu-head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 14px 14px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+
+.soc-menu-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 4px 10px 10px;
+}
+
+.soc-menu-category {
+  margin-bottom: 18px;
+}
+
+.soc-menu-category-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+  margin: 0 0 4px;
+  padding: 0 6px;
+}
+
+.soc-menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 10px 10px;
+  border-radius: 9px;
+  color: var(--color-text);
+}
+
+.soc-menu-item:hover {
+  background: color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+
+.soc-menu-item[aria-current='page'] {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  box-shadow: inset 0 0 0 1px var(--color-accent-700);
+}
+
+.soc-menu-item-label {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 14px;
+}
+
+.soc-menu-item-hint {
+  font-size: 11.5px;
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+}
+
 /* — titres de section — */
 .soc-kicker {
   font-family: var(--font-heading);

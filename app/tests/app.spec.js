@@ -22,6 +22,39 @@ test.describe('Parcours principal', () => {
     await expect(page.getByRole('heading', { name: 'Territoires et environnement' })).toBeVisible();
   });
 
+  test('menu des fonctionnalités : catégories, navigation et fermeture', async ({ page }) => {
+    await enter(page);
+    const menuButton = page.getByRole('button', { name: 'Ouvrir le menu des fonctionnalités' });
+    await menuButton.click();
+    const dialog = page.getByRole('dialog', { name: 'Fonctionnalités de Sociologor' });
+    await expect(dialog).toBeVisible();
+
+    for (const cat of ['Explorer le corpus', 'Retrouver', 'Aide et réglages']) {
+      await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
+    }
+    await expect(dialog.getByRole('link')).toHaveCount(8);
+
+    // Un item mène à l'écran attendu, et referme le menu.
+    await dialog.getByRole('link', { name: /Carte des courants/ }).click();
+    await expect(page).toHaveURL(/\/courants$/);
+    await expect(page.getByRole('dialog', { name: 'Fonctionnalités de Sociologor' })).toHaveCount(0);
+
+    // Rouvert sur /courants, l'entrée correspondante est mise en évidence.
+    await menuButton.click();
+    await expect(dialog.getByRole('link', { name: /Carte des courants/ })).toHaveAttribute('aria-current', 'page');
+
+    // Échap ferme le menu et rend le focus au bouton qui l'a ouvert.
+    await page.keyboard.press('Escape');
+    await expect(dialog).toHaveCount(0);
+    await expect(menuButton).toBeFocused();
+
+    // Un clic sur le fond — hors du panneau, ancré à gauche — ferme aussi le menu.
+    await menuButton.click();
+    const { width } = page.viewportSize();
+    await page.mouse.click(width - 10, 10);
+    await expect(dialog).toHaveCount(0);
+  });
+
   test('domaine → fiche auteur', async ({ page }) => {
     await enter(page);
     await page.getByRole('link', { name: /Déviance/ }).click();

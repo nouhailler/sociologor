@@ -1,6 +1,6 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.7.0).
+Inventaire du corpus livré avec l'application (version 1.8.0).
 
 ## Chiffres
 

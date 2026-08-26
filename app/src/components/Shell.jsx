@@ -1,6 +1,8 @@
+import { useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AUTHOR_COUNT } from '../data/index.js';
 import { useStore } from '../state/store.jsx';
+import MenuDrawer from './MenuDrawer.jsx';
 import {
   IconBack,
   IconBook,
@@ -8,6 +10,7 @@ import {
   IconGear,
   IconGraph,
   IconHome,
+  IconMenu,
   IconOffline,
   IconSearch,
   IconStar,
@@ -45,6 +48,8 @@ export default function Shell({ title, subtitle, actions, canBack = false, child
   const navigate = useNavigate();
   const location = useLocation();
   const { favs, toast, online, updateReady, applyUpdate } = useStore();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuTriggerRef = useRef(null);
 
   const favHint = `${favs.length} épinglée${favs.length > 1 ? 's' : ''}`;
   const section = sectionOf(location.pathname);
@@ -134,6 +139,15 @@ export default function Shell({ title, subtitle, actions, canBack = false, child
 
         <div className="soc-main-col">
           <header className="soc-header">
+            <button
+              type="button"
+              className="btn btn-secondary soc-icon-btn"
+              aria-label="Ouvrir le menu des fonctionnalités"
+              ref={menuTriggerRef}
+              onClick={() => setMenuOpen(true)}
+            >
+              <IconMenu />
+            </button>
             {canBack && (
               <button
                 type="button"
@@ -171,6 +185,8 @@ export default function Shell({ title, subtitle, actions, canBack = false, child
           {toast.message}
         </div>
       )}
+
+      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} triggerRef={menuTriggerRef} />
     </div>
   );
 }

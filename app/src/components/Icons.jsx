@@ -82,6 +82,18 @@ export const IconChevron = (p) => (
   </svg>
 );
 
+export const IconMenu = (p) => (
+  <svg {...base} width={p.size ?? 18} height={p.size ?? 18} strokeWidth={p.weight ?? 1.8}>
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </svg>
+);
+
+export const IconClose = (p) => (
+  <svg {...base} width={p.size ?? 16} height={p.size ?? 16} strokeWidth={p.weight ?? 1.8}>
+    <path d="M6 6l12 12M18 6L6 18" />
+  </svg>
+);
+
 export const IconOffline = (p) => (
   <svg {...base} width={p.size ?? 14} height={p.size ?? 14} strokeWidth={p.weight ?? 1.8}>
     <path d="M3 3l18 18" />
