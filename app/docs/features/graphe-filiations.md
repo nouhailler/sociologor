@@ -5,6 +5,10 @@
 Une carte des 15 fiches reliées par leurs influences : 19 liens, distingués en
 filiation directe et influence indirecte ou critique.
 
+Ce graphe relie des **personnes**. Pour la filiation des **courants** — d'où
+vient le fonctionnalisme, ce que la théorie critique doit à Marx et à Weber —
+voir la [carte des courants](/documentation/features/carte-courants).
+
 ## Objectif
 
 Rendre visible ce qu'une liste d'auteurs ne montre pas : les lignées, les

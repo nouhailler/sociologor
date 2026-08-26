@@ -4,6 +4,87 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.4.0
+
+Date : 2026-08-26
+
+Une seconde carte : celle des courants, à côté de celle des personnes.
+
+## Nouveautés
+
+- **Carte des courants**, à l'adresse `/courants` : 15 courants — positivisme,
+  matérialisme historique, sociologie compréhensive, holisme durkheimien,
+  sociologie des formes, sociologie politique comparée, École de Chicago,
+  théorie critique, sociologie historique des processus, fonctionnalisme,
+  interactionnisme symbolique, théorie de l'étiquetage, structuralisme
+  génétique, individualisme méthodologique, sociologie pragmatique — rangés en
+  quatre périodes et reliés par 18 filiations.
+- **Filiation entre courants**, distincte de la filiation entre personnes. Le
+  graphe dit qui a lu qui ; la carte dit de quoi procède une manière de faire
+  de la sociologie. Weber n'a pas lu les interactionnistes, sa sociologie
+  compréhensive leur a pourtant donné leur point de départ.
+- Chaque courant nomme **les fiches du corpus qui l'incarnent** et **les
+  auteurs marquants qui n'en ont pas** — Mead et Blumer pour l'interactionnisme,
+  Park et Hughes pour Chicago, Lemert pour l'étiquetage.
+- **Renvois croisés** : `↑ Vient de` et `↓ A donné` sautent d'un courant à
+  l'autre, `?focus=` met un courant en évidence.
+
+## Changements
+
+- Sur une **fiche auteur**, l'étiquette du courant devient un lien vers la
+  carte, et un bouton *Situer dans les courants* rejoint *Situer dans le
+  graphe*.
+- L'écran **Graphe** porte un bouton *Carte des courants →*.
+- La carte des courants garde l'onglet **Graphe** surligné : c'est la seconde
+  carte de l'application, pas une sixième section. La barre d'onglets mobile
+  reste à cinq entrées.
+- L'**audit documentaire** gagne un onzième contrôle : période connue,
+  rubriques remplies, parents existants, et surtout — chaque fiche du corpus
+  appartient à un courant et un seul, sans quoi le renvoi de son en-tête
+  n'aurait pas de destination.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. Un fichier `courants.js` porte les
+15 courants, leurs périodes et leurs filiations. Comme pour les filiations
+d'auteurs, seule la remontée vers l'amont est déclarée : la descendance est
+déduite.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+Deux pages créées :
+[Carte des courants](/documentation/features/carte-courants) et
+[Écran Carte des courants](/documentation/guide/courants).
+Mises à jour :
+[Navigation générale](/documentation/guide/navigation),
+[Écran Graphe](/documentation/guide/graphe),
+[Écran Fiche auteur](/documentation/guide/fiche-auteur),
+[Graphe des filiations](/documentation/features/graphe-filiations),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites),
+[Hors connexion](/documentation/offline/index).
+
+## Limites connues à cette version
+
+Un courant n'a pas d'écran propre, et les courants ne sont pas indexés par la
+recherche. La carte ne montre que les courants que les quinze fiches
+permettent de porter : ni ethnométhodologie, ni sociologie des sciences, ni
+études de genre.
+
+---
+
 # Version 1.3.0
 
 Date : 2026-08-26

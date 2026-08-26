@@ -1,7 +1,7 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.3.0.
+la version 1.4.0.
 
 ## Contenu
 
@@ -13,6 +13,10 @@ la version 1.3.0.
   ne porte que sur les auteurs.
 - Les concepts n'apparaissent pas dans le graphe, qui reste celui des
   filiations entre auteurs.
+- Un courant n'a pas d'écran propre ni d'adresse à lui : la carte les présente
+  tous, l'un sous l'autre.
+- La carte des courants ne prétend pas à l'exhaustivité : elle ne montre que
+  les courants que les quinze fiches permettent de porter.
 - Portraits : 6 fiches sur 15 seulement. Les 9 autres portent un monogramme
   d'initiales, faute d'image libre de droits.
 - Les influences hors corpus sont indicatives, non exhaustives, et sans lien

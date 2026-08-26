@@ -278,6 +278,48 @@ test.describe('Parcours principal', () => {
     await expect(bloc('Concepts associés').getByRole('link', { name: /Solidarité organique/ })).toHaveCount(0);
   });
 
+  test('carte des courants : périodes, filiation et renvoi vers une fiche', async ({ page }) => {
+    await enter(page, '/courants');
+    await expect(content(page).getByRole('heading', { name: 'Carte des courants' })).toBeVisible();
+    for (const p of ['XIXᵉ siècle — les fondations', 'Tournant contemporain']) {
+      await expect(page.getByRole('heading', { name: p })).toBeVisible();
+    }
+    // Le fonctionnalisme porte deux fiches, et descend de deux courants.
+    const fonc = page.locator('#courant-fonctionnalisme');
+    await expect(fonc.getByRole('link', { name: /Talcott Parsons/ })).toBeVisible();
+    await expect(fonc.getByRole('link', { name: /Robert K\. Merton/ })).toBeVisible();
+    await expect(fonc.getByRole('link', { name: /Holisme durkheimien/ })).toBeVisible();
+    await fonc.getByRole('link', { name: /Talcott Parsons/ }).click();
+    await expect(content(page).getByRole('heading', { name: 'Talcott Parsons', exact: true })).toBeVisible();
+  });
+
+  test('carte des courants : la descendance est déduite de l’amont', async ({ page }) => {
+    // Seul `vientDe` est déclaré : « A donné » n'existe que si la réciproque
+    // est calculée. Le fonctionnalisme déclare venir du holisme ; le holisme
+    // doit donc l'annoncer en descendance sans que rien ne le déclare.
+    await enter(page, '/courants');
+    const holisme = page.locator('#courant-holisme');
+    await expect(holisme.getByText('A donné')).toBeVisible();
+    await expect(holisme.getByRole('link', { name: /Fonctionnalisme/ })).toBeVisible();
+    await expect(holisme.getByRole('link', { name: /Structuralisme génétique/ })).toBeVisible();
+  });
+
+  test('courant sans fiche du corpus : le dit au lieu de paraître vide', async ({ page }) => {
+    await enter(page, '/courants');
+    const chicago = page.locator('#courant-ecole-de-chicago');
+    await expect(chicago.getByText("Aucune fiche n'incarne ce courant dans le corpus")).toBeVisible();
+    await expect(chicago.getByText(/Robert Park — /)).toBeVisible();
+    await expect(chicago.getByText(/Robert Park — /).locator('a')).toHaveCount(0);
+  });
+
+  test('fiche → carte des courants, centrée sur son courant', async ({ page }) => {
+    await enter(page, '/a/goffman');
+    await page.getByRole('link', { name: 'Situer dans les courants' }).click();
+    await expect(page).toHaveURL(/courants\?focus=interactionnisme/);
+    await expect(page.locator('[data-active="true"]')).toHaveCount(1);
+    await expect(page.locator('#courant-interactionnisme[data-active="true"]')).toBeVisible();
+  });
+
   test('export Markdown : téléchargement d\'un fichier nommé', async ({ page }) => {
     await enter(page, '/a/durkheim');
     const [download] = await Promise.all([

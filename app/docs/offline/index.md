@@ -27,6 +27,7 @@ retour du réseau        →  vérification de mise à jour → bandeau
 |---|:--:|:--:|:--:|
 | Consulter une fiche | Oui | Oui | Sans objet |
 | Parcourir les domaines | Oui | Oui | Sans objet |
+| Consulter la carte des courants | Oui | Oui | Sans objet |
 | Notion du jour | Oui | Oui | Sans objet |
 | Graphe des filiations | Oui | Oui | Sans objet |
 | Recherche | Oui | Oui | Sans objet |

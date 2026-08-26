@@ -1,5 +1,6 @@
 import { DOMAINS as DOMAINS_BASE, AUTHORS, EXTRA, EXTRA_EDGES } from './authors.js';
 import { DOMAINS_ADDED, DOMAIN_EXTRA, FAMILIES } from './domains.js';
+import { COURANTS as COURANTS_BASE, PERIODES } from './courants.js';
 import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 
@@ -99,6 +100,48 @@ export function getDomain(id) {
     inspirateurs: d.inspirateurs || [],
   };
 }
+
+/* — Courants — */
+
+export { PERIODES };
+
+/**
+ * Carte des courants. `vientDe` est déclaré vers l'amont seulement ; la
+ * descendance est déduite ici, comme les filiations entre auteurs — un courant
+ * déclaré héritier apparaît toujours dans les héritiers de son parent.
+ */
+export const COURANTS = (() => {
+  const byId = new Map(COURANTS_BASE.map((c) => [c.id, c]));
+  const enfants = new Map(COURANTS_BASE.map((c) => [c.id, []]));
+  COURANTS_BASE.forEach((c) => {
+    (c.vientDe || []).forEach((parent) => {
+      if (enfants.has(parent)) enfants.get(parent).push(c.id);
+    });
+  });
+
+  const label = (id) => ({ id, t: byId.get(id).t });
+
+  return COURANTS_BASE.map((c) => ({
+    ...c,
+    periodeT: PERIODES.find((p) => p.id === c.periode)?.t || '',
+    auteursLinks: (c.auteurs || [])
+      .filter((a) => AUTHORS[a])
+      .map((a) => ({ id: a, name: AUTHORS[a].name, initials: AUTHORS[a].initials, dates: AUTHORS[a].dates })),
+    parentsLinks: (c.vientDe || []).filter((p) => byId.has(p)).map(label),
+    enfantsLinks: enfants.get(c.id).map(label),
+  }));
+})();
+
+export const COURANT_COUNT = COURANTS.length;
+
+/** Les courants groupés par période, dans l'ordre de la carte. */
+export const COURANT_PERIODES = PERIODES.map((p) => ({
+  ...p,
+  courants: COURANTS.filter((c) => c.periode === p.id),
+}));
+
+/** Le courant d'une fiche auteur, pour renvoyer de la fiche vers la carte. */
+export const courantOf = (authorId) => COURANTS.find((c) => (c.auteurs || []).includes(authorId)) || null;
 
 /* — Concepts — */
 

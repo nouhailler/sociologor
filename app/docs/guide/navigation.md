@@ -39,6 +39,8 @@ Chaque écran a sa propre adresse : elle peut être mise en favori ou partagée.
 | Fiche concept | `/c/<identifiant>` |
 | Graphe | `/graphe` |
 | Graphe centré sur un auteur | `/graphe?focus=<identifiant>` |
+| Carte des courants | `/courants` |
+| Carte centrée sur un courant | `/courants?focus=<identifiant>` |
 | Recherche | `/recherche?q=<texte>&type=<filtre>` |
 | Mes fiches | `/mes-fiches` |
 | Paramètres | `/parametres` |

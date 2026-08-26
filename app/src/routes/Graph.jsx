@@ -25,8 +25,13 @@ export default function Graph() {
     <Shell title="Graphe des filiations" subtitle="De Comte à Becker">
       <div className="soc-enter">
         <h2 className="soc-h2">Graphe des filiations</h2>
-        <p className="soc-lede" style={{ marginBottom: 18 }}>
+        <p className="soc-lede" style={{ marginBottom: 10 }}>
           De Comte à Becker : qui lit qui, et qui s&apos;en écarte. Touchez un nom pour ouvrir sa fiche.
+        </p>
+        <p style={{ margin: '0 0 18px' }}>
+          <Link to="/courants" className="btn btn-ghost" style={{ fontSize: 12 }}>
+            Carte des courants →
+          </Link>
         </p>
 
         <div className="soc-graph-frame soc-scroll" ref={frameRef} tabIndex={0} aria-label="Graphe des filiations, défilement horizontal et vertical">

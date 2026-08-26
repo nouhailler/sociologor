@@ -13,7 +13,7 @@ un auteur.
 
 | Section | Contenu |
 |---|---|
-| En-tête | Portrait (photographie ou monogramme), nom, dates, nationalité, période, courant, domaines rattachés |
+| En-tête | Portrait (photographie ou monogramme), nom, dates, nationalité, période, courant — cliquable, il mène à la [carte des courants](/documentation/guide/courants) —, domaines rattachés |
 | **En une phrase** | Le résumé de l'apport de l'auteur |
 | **Repères** | Nom, prénom, dates, nationalité, période, courant |
 | **Concepts majeurs** | Pour chaque concept : titre cliquable, année, explication simple, exemple concret, et un lien « Fiche complète du concept » |
@@ -23,7 +23,7 @@ un auteur.
 | **Critiques** | Les objections adressées à l'auteur |
 | **Liens avec d'autres disciplines** | Ce que l'auteur doit aux autres savoirs |
 | **Bibliographie critique** | Ouvrages secondaires sur l'auteur |
-| Boutons de fin | *Exporter en Markdown*, *Situer dans le graphe* |
+| Boutons de fin | *Exporter en Markdown*, *Situer dans le graphe*, *Situer dans les courants* |
 
 ## Actions de l'en-tête
 

@@ -26,6 +26,7 @@ Montrer d'un seul coup d'œil qui a influencé qui, de Comte à Becker.
 | Action | Résultat |
 |---|---|
 | Toucher un nœud | Ouvre la fiche de l'auteur |
+| Bouton « Carte des courants → » | Ouvre la [carte des courants](/documentation/guide/courants), qui relie les courants et non les personnes |
 | Faire défiler le cadre | Déplace la vue dans le graphe |
 | Arriver depuis « Situer dans le graphe » | Le nœud visé est amené au centre et encadré en accent |
 

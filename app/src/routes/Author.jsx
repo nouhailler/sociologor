@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import Shell from '../components/Shell.jsx';
 import NotFound from './NotFound.jsx';
 import { IconShare, IconStar } from '../components/Icons.jsx';
-import { getAuthor } from '../data/index.js';
+import { courantOf, getAuthor } from '../data/index.js';
 import { useStore } from '../state/store.jsx';
 import { authorToMarkdown, downloadText, slugify } from '../lib/markdown-export.js';
 import { shareUrl } from '../lib/share.js';
@@ -18,6 +18,7 @@ export default function Author() {
     return <NotFound what="Cette fiche n'existe pas." />;
   }
 
+  const courant = courantOf(a.id);
   const isFav = favs.includes(a.id);
   const showCitations = settings.showCitations && a.citations?.length > 0;
 
@@ -94,9 +95,20 @@ export default function Author() {
               {a.dates} · {a.nat} · {a.periode}
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-              <span className="tag tag-accent" style={{ fontSize: 10.5 }}>
-                {a.courant}
-              </span>
+              {courant ? (
+                <Link
+                  to={`/courants?focus=${courant.id}`}
+                  className="tag tag-accent"
+                  style={{ fontSize: 10.5 }}
+                  title={`Situer ${courant.t} dans la carte des courants`}
+                >
+                  {a.courant}
+                </Link>
+              ) : (
+                <span className="tag tag-accent" style={{ fontSize: 10.5 }}>
+                  {a.courant}
+                </span>
+              )}
               {a.domainTags.map((t) => (
                 <span key={t} className="tag tag-neutral" style={{ fontSize: 10.5 }}>
                   {t}
@@ -388,6 +400,11 @@ export default function Author() {
           <Link className="btn btn-secondary" to={`/graphe?focus=${a.id}`} style={{ fontSize: 12.5 }}>
             Situer dans le graphe
           </Link>
+          {courant && (
+            <Link className="btn btn-secondary" to={`/courants?focus=${courant.id}`} style={{ fontSize: 12.5 }}>
+              Situer dans les courants
+            </Link>
+          )}
         </div>
       </article>
     </Shell>

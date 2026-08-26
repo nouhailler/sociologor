@@ -13,7 +13,8 @@
  *  7. aucun secret n'a été recopié dans la documentation ;
  *  8. les fiches concepts sont complètes et leurs renvois pointent quelque part ;
  *  9. aucun voisinage de concepts ne se contredit ;
- * 10. chaque domaine a une famille, un nom et de quoi remplir son écran.
+ * 10. chaque domaine a une famille, un nom et de quoi remplir son écran ;
+ * 11. la carte des courants est complète, et chaque fiche a un courant.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -54,7 +55,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -247,6 +248,49 @@ for (const f of FAMILIES) {
   }
 }
 
+/* — 11. intégrité de la carte des courants — */
+// Chaque fiche renvoie à son courant depuis son en-tête : un auteur rattaché à
+// aucun courant, ou à deux, casse ce renvoi. Un parent inconnu casse la carte.
+const { COURANTS, PERIODES } = await import('../src/data/courants.js');
+
+const courantIds = new Set();
+const periodeIds = new Set(PERIODES.map((p) => p.id));
+const porteurs = new Map();
+
+for (const c of COURANTS) {
+  if (courantIds.has(c.id)) fail(`Courant en double : ${c.id}`);
+  courantIds.add(c.id);
+  if (!periodeIds.has(c.periode)) fail(`Courant ${c.id} : période inconnue « ${c.periode} ».`);
+  for (const f of ['t', 'd', 'detail']) {
+    if (!c[f]) fail(`Courant ${c.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  if ((c.auteurs || []).length === 0 && (c.inspirateurs || []).length === 0) {
+    fail(`Courant ${c.id} : ni fiche du corpus ni inspirateur — la carte l'afficherait vide.`);
+  }
+  for (const a of c.auteurs || []) {
+    if (!AUTHORS[a]) fail(`Courant ${c.id} : auteur inconnu « ${a} ».`);
+    if (porteurs.has(a)) fail(`Auteur dans deux courants, son en-tête ne saurait où renvoyer : ${a}`);
+    porteurs.set(a, c.id);
+  }
+  for (const i of c.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Courant ${c.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+}
+
+for (const c of COURANTS) {
+  for (const parent of c.vientDe || []) {
+    if (!courantIds.has(parent)) fail(`Courant ${c.id} : vientDe renvoie à un courant inconnu « ${parent} ».`);
+    if (parent === c.id) fail(`Courant ${c.id} : se déclare issu de lui-même.`);
+  }
+}
+
+for (const id of Object.keys(AUTHORS)) {
+  if (!porteurs.has(id)) fail(`Fiche sans courant, son en-tête n'aurait rien à pointer : ${id}`);
+}
+for (const p of PERIODES) {
+  if (!COURANTS.some((c) => c.periode === p.id)) fail(`Période vide dans la carte des courants : ${p.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -262,6 +306,13 @@ console.log(
   line(
     'Domaines',
     `${allDomains.length} en ${FAMILIES.length} familles, ${Object.values(DOMAIN_EXTRA).reduce((n, e) => n + (e.inspirateurs || []).length, 0)} inspirateurs hors corpus`,
+  ),
+);
+
+console.log(
+  line(
+    'Courants',
+    `${COURANTS.length} en ${PERIODES.length} périodes, ${COURANTS.reduce((n, c) => n + (c.vientDe || []).length, 0)} filiations`,
   ),
 );
 

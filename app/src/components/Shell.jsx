@@ -26,7 +26,9 @@ const NAV = [
  * depuis l'accueil : ils gardent l'accueil surligné, comme dans la maquette.
  */
 function sectionOf(pathname) {
-  if (pathname.startsWith('/graphe')) return '/graphe';
+  // La carte des courants est la seconde carte : elle garde l'onglet Graphe
+  // surligné plutôt que d'ajouter un sixième onglet à la barre mobile.
+  if (pathname.startsWith('/graphe') || pathname.startsWith('/courants')) return '/graphe';
   if (pathname.startsWith('/recherche')) return '/recherche';
   if (pathname.startsWith('/mes-fiches')) return '/mes-fiches';
   if (pathname.startsWith('/documentation')) return '/documentation';
