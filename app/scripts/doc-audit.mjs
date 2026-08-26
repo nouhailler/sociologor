@@ -14,7 +14,9 @@
  *  8. les fiches concepts sont complètes et leurs renvois pointent quelque part ;
  *  9. aucun voisinage de concepts ne se contredit ;
  * 10. chaque domaine a une famille, un nom et de quoi remplir son écran ;
- * 11. la carte des courants est complète, et chaque fiche a un courant.
+ * 11. la carte des courants est complète, et chaque fiche a un courant ;
+ * 12. chaque phénomène a une catégorie, des dimensions et des notions bien
+ *     formées, et concepts/notions ne sont jamais mélangés dans un même champ.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -55,7 +57,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/phenomenes$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -317,6 +319,52 @@ for (const p of PERIODES) {
   if (!COURANTS.some((c) => c.periode === p.id)) fail(`Période vide dans la carte des courants : ${p.id}`);
 }
 
+/* — 12. intégrité des phénomènes sociaux — */
+// Un phénomène ne doit jamais mélanger un concept du corpus (cliquable, dans
+// `concepts`) et une notion sans fiche (texte libre, dans `notions`) : chaque
+// id de `concepts` doit exister comme fiche concept, chaque notion doit
+// porter son apport après un tiret cadratin, comme un inspirateur de domaine.
+const { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } = await import('../src/data/phenomenes.js');
+
+const catIds = new Set(CATEGORIES_PHENOMENES.map((c) => c.id));
+const dimIds = new Set(DIMENSIONS_PHENOMENES.map((d) => d.id));
+const phenIds = new Set();
+const conceptTitles = new Set([...conceptBase.values()].map((c) => c.t));
+
+for (const p of PHENOMENES) {
+  if (phenIds.has(p.id)) fail(`Phénomène en double : ${p.id}`);
+  phenIds.add(p.id);
+  for (const f of ['t', 'd', 'detail']) {
+    if (!p[f]) fail(`Phénomène ${p.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  if (!catIds.has(p.categorie)) fail(`Phénomène ${p.id} : catégorie inconnue « ${p.categorie} ».`);
+  for (const d of p.dimensions || []) {
+    if (!dimIds.has(d)) fail(`Phénomène ${p.id} : dimension inconnue « ${d} ».`);
+  }
+  if ((p.dimensions || []).length === 0) fail(`Phénomène ${p.id} : aucune dimension déclarée.`);
+  for (const c of p.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Phénomène ${p.id} : concept inconnu « ${c} » — ce champ n'admet que des fiches du corpus.`);
+  }
+  if ((p.concepts || []).length === 0 && (p.notions || []).length === 0) {
+    fail(`Phénomène ${p.id} : ni concept ni notion — la fiche s'afficherait vide.`);
+  }
+  for (const n of p.notions || []) {
+    if (!n.includes(' — ')) fail(`Phénomène ${p.id} : notion sans apport « ${n.slice(0, 40)}… ».`);
+    const notionTitle = n.split(' — ')[0];
+    if (conceptTitles.has(notionTitle)) {
+      fail(`Phénomène ${p.id} : « ${notionTitle} » est une fiche concept, elle appartient à « concepts », pas à « notions ».`);
+    }
+  }
+}
+for (const cat of CATEGORIES_PHENOMENES) {
+  if (!PHENOMENES.some((p) => p.categorie === cat.id)) fail(`Catégorie de phénomènes vide : ${cat.id}`);
+}
+for (const dim of DIMENSIONS_PHENOMENES) {
+  if (!PHENOMENES.some((p) => (p.dimensions || []).includes(dim.id))) {
+    fail(`Dimension de phénomène jamais utilisée : ${dim.id}`);
+  }
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -339,6 +387,12 @@ console.log(
   line(
     'Courants',
     `${COURANTS.length} en ${PERIODES.length} périodes, ${COURANTS.reduce((n, c) => n + (c.vientDe || []).length, 0)} filiations, ${NIVEAUX.map((n) => `${COURANTS.filter((c) => c.niveau === n.id).length} ${n.t.toLowerCase()}(s)`).join(', ')}`,
+  ),
+);
+console.log(
+  line(
+    'Phénomènes',
+    `${PHENOMENES.length} en ${CATEGORIES_PHENOMENES.length} catégories, ${PHENOMENES.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PHENOMENES.reduce((n, p) => n + (p.notions || []).length, 0)} notions`,
   ),
 );
 

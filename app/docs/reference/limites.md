@@ -1,16 +1,23 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.6.0.
+la version 1.7.0.
 
 ## Contenu
 
 - Corpus **figé** : 15 fiches auteurs, 38 fiches concepts, 32 domaines,
-  43 œuvres. Ni ajout, ni annotation, ni édition par l'utilisateur.
+  28 phénomènes sociaux, 43 œuvres. Ni ajout, ni annotation, ni édition par
+  l'utilisateur.
 - Les inspirateurs hors corpus d'un domaine sont des noms, pas des fiches :
   aucun lien, aucune œuvre, aucune bibliographie ne leur est attachée.
-- Les concepts ne peuvent pas être épinglés dans « Mes fiches » : l'épinglage
-  ne porte que sur les auteurs.
+- Les concepts et les phénomènes ne peuvent pas être épinglés dans « Mes
+  fiches » : l'épinglage ne porte que sur les auteurs.
+- Les 28 phénomènes sont une sélection, pas un inventaire exhaustif de la
+  discipline. Trois d'entre eux — étalement urbain, éco-anxiété, migration
+  climatique — n'ont aucun concept du corpus qui les éclaire directement.
+  Théories, auteurs hors corpus, méthodes et données ne figurent pas sur leur
+  fiche : voir [Phénomènes
+  sociaux](/documentation/features/phenomenes-sociaux).
 - Le graphe des concepts n'a pas de fiche auteur ou concept qui y renvoie par
   un `focus` : contrairement au graphe des filiations et à la carte des
   courants, on n'y arrive que depuis l'écran Graphe lui-même.
@@ -34,7 +41,8 @@ la version 1.6.0.
   triée, ni classée.
 - Export Markdown **fiche par fiche** ; pas d'export global, pas de PDF.
 - Recherche par sous-chaîne, sans tolérance aux fautes de frappe, plafonnée à
-  24 résultats ; les domaines, critiques et bibliographies ne sont pas indexés.
+  24 résultats ; les domaines, phénomènes, critiques et bibliographies ne sont
+  pas indexés.
 - La notion du jour ne peut être ni choisie, ni rejouée.
 
 ## Graphe

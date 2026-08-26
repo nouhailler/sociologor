@@ -3,6 +3,7 @@ import { DOMAINS_ADDED, DOMAIN_EXTRA, FAMILIES } from './domains.js';
 import { COURANTS as COURANTS_BASE, PERIODES, NIVEAUX } from './courants.js';
 import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
+import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
 
 export { AUTHORS, EXTRA, EXTRA_EDGES, FAMILIES };
 
@@ -222,6 +223,35 @@ export function getConcept(id) {
 /** Concepts d'un auteur, dans l'ordre de sa fiche. */
 export const conceptsOf = (authorId) =>
   (AUTHORS[authorId]?.concepts || []).map((c) => ({ ...c, authorId }));
+
+/* — Phénomènes sociaux — */
+
+export { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES };
+export const PHENOMENE_COUNT = PHENOMENES.length;
+
+/** Les phénomènes groupés par catégorie, dans l'ordre de la liste. */
+export const PHENOMENE_CATEGORIES = CATEGORIES_PHENOMENES.map((cat) => ({
+  ...cat,
+  phenomenes: PHENOMENES.filter((p) => p.categorie === cat.id),
+}));
+
+/** Fiche phénomène complète : dimensions résolues, concepts cliquables, notions telles quelles. */
+export function getPhenomene(id) {
+  const p = PHENOMENES.find((x) => x.id === id);
+  if (!p) return null;
+  const categorie = CATEGORIES_PHENOMENES.find((c) => c.id === p.categorie);
+  return {
+    ...p,
+    categorieT: categorie?.t || '',
+    dimensionsT: (p.dimensions || [])
+      .map((d) => DIMENSIONS_PHENOMENES.find((x) => x.id === d)?.t)
+      .filter(Boolean),
+    conceptsLinks: (p.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    notions: p.notions || [],
+  };
+}
 
 /** Index de recherche : une entrée par auteur, par concept et par œuvre. */
 export const SEARCH_INDEX = (() => {

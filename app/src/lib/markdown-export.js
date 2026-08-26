@@ -98,6 +98,34 @@ export function conceptToMarkdown(c) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche phénomène en Markdown — les mêmes rubriques que l'écran. */
+export function phenomeneToMarkdown(p) {
+  const L = [];
+  L.push(`# ${p.t}`, '');
+  L.push(`*${p.categorieT} · ${p.dimensionsT.join(', ')}*`, '');
+  L.push(`> ${p.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(p.detail, '');
+
+  L.push('## Concepts du corpus', '');
+  L.push(
+    p.conceptsLinks.length
+      ? p.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', ')
+      : 'Aucun.',
+  );
+  L.push('');
+
+  if (p.notions.length) {
+    L.push('## Notions associées', '');
+    p.notions.forEach((n) => L.push(`- ${n}`));
+    L.push('');
+  }
+
+  L.push('---', '', `Phénomène exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Nom de fichier sûr : sans accent, sans espace, sans caractère interdit. */
 export function slugify(name) {
   return name

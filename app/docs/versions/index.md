@@ -4,6 +4,79 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.7.0
+
+Date : 2026-08-26
+
+Un nouvel écran : les phénomènes sociaux, distincts des concepts qui les
+éclairent.
+
+## Nouveautés
+
+- **Phénomènes sociaux** : nouvel écran à l'adresse `/phenomenes`, avec une
+  fiche par phénomène à `/p/<identifiant>`. 28 phénomènes — du chômage à la
+  gentrification, en passant par le cyberharcèlement et l'éco-anxiété —
+  rangés en 12 catégories.
+- **Concepts et notions, jamais mélangés** : chaque phénomène cite les
+  concepts du corpus qui l'éclairent (cliquables, 50 liens sur 25 des 38
+  concepts) et les notions qui n'en ont pas (texte libre, 144 au total) —
+  même convention que les domaines et la carte des courants, appliquée ici à
+  la distinction entre outil théorique et fait social concret.
+- **Dimensions** : chaque phénomène porte 2 à 6 étiquettes parmi 14 —
+  économique, sociale, urbaine, politique publique, culturelle,
+  démographique, genre, travail, famille, santé, numérique,
+  environnementale, éducative, juridique.
+- **Export Markdown** et **partage** d'une fiche phénomène, comme pour une
+  fiche auteur ou concept.
+- Bouton d'entrée sur l'écran **Accueil**, entre la notion du jour et les
+  domaines.
+
+## Changements
+
+- L'**audit documentaire** gagne un douzième contrôle : catégorie connue,
+  dimensions connues et non vides, concepts existants dans le corpus,
+  notions bien formées, et surtout — un terme qui a une fiche concept ne peut
+  pas apparaître comme notion, ce qui garantirait la confusion que cet écran
+  cherche justement à éviter.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. Un fichier `phenomenes.js` porte
+les 28 phénomènes, leurs 12 catégories et leurs 14 dimensions.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+Deux pages créées :
+[Phénomènes sociaux](/documentation/features/phenomenes-sociaux) et
+[Écran Phénomènes sociaux](/documentation/guide/phenomenes).
+Mises à jour :
+[Écran Accueil](/documentation/guide/accueil),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites).
+
+## Limites connues à cette version
+
+28 phénomènes, pas un inventaire exhaustif de la discipline. Trois d'entre
+eux n'ont aucun concept du corpus qui les éclaire directement. Théories,
+auteurs hors corpus, méthodes et données n'y figurent pas — un chantier à
+part entière, pas une extension de celui-ci. Les phénomènes ne sont pas
+indexés par la recherche, et ne peuvent pas être épinglés dans « Mes
+fiches ».
+
+---
+
 # Version 1.6.0
 
 Date : 2026-08-26

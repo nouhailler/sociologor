@@ -334,6 +334,51 @@ test.describe('Parcours principal', () => {
     await expect(page.locator('#courant-interactionnisme[data-active="true"]')).toBeVisible();
   });
 
+  test('phénomènes sociaux : accueil → liste → fiche → concept du corpus', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /phénomènes sociaux/ }).click();
+    await expect(page).toHaveURL(/\/phenomenes$/);
+    await expect(content(page).getByRole('heading', { name: 'Phénomènes sociaux' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Chômage/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Chômage/ }).click();
+    await expect(page).toHaveURL(/\/p\/chomage$/);
+    await expect(content(page).getByRole('heading', { name: 'Chômage', exact: true })).toBeVisible();
+    await expect(page.getByText('Précarité — ', { exact: false })).toBeVisible();
+
+    await page.getByRole('link', { name: /Classe sociale/ }).click();
+    await expect(page).toHaveURL(/\/c\/classe-sociale$/);
+    await expect(content(page).getByRole('heading', { name: 'Classe sociale', exact: true })).toBeVisible();
+  });
+
+  test('phénomène sans concept du corpus : le dit au lieu de paraître vide', async ({ page }) => {
+    await enter(page, '/p/etalement-urbain');
+    await expect(page.getByText(/Aucun concept des quinze fiches/)).toBeVisible();
+    await expect(page.getByText("l'installation en dehors des villes", { exact: false })).toBeVisible();
+  });
+
+  test('export Markdown d’un phénomène : concepts et notions dans le fichier', async ({ page }) => {
+    await enter(page, '/p/gentrification');
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      content(page).getByRole('button', { name: /Exporter en Markdown/ }).click(),
+    ]);
+    expect(download.suggestedFilename()).toBe('sociologor-phenomene-gentrification.md');
+    const stream = await download.createReadStream();
+    const chunks = [];
+    for await (const c of stream) chunks.push(c);
+    const md = Buffer.concat(chunks).toString('utf8');
+    expect(md).toContain('## Concepts du corpus');
+    expect(md).toContain('Capital culturel');
+    expect(md).toContain('## Notions associées');
+    expect(md).toContain('Ségrégation urbaine');
+  });
+
+  test('phénomène inconnu : écran Introuvable', async ({ page }) => {
+    await enter(page, '/p/inexistant');
+    await expect(page.getByText("Ce phénomène n'existe pas.")).toBeVisible();
+  });
+
   test('export Markdown : téléchargement d\'un fichier nommé', async ({ page }) => {
     await enter(page, '/a/durkheim');
     const [download] = await Promise.all([

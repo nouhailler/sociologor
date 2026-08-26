@@ -1,6 +1,6 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.6.0).
+Inventaire du corpus livré avec l'application (version 1.7.0).
 
 ## Chiffres
 
@@ -10,12 +10,15 @@ Inventaire du corpus livré avec l'application (version 1.6.0).
 | Domaines | 32, en 8 familles |
 | Courants | 15, en 4 périodes et 4 niveaux (paradigme, courant, école, variante), reliés par 18 filiations |
 | Concepts | 38, chacun avec sa fiche |
+| Phénomènes sociaux | 28, en 12 catégories et 14 dimensions |
 | Œuvres référencées | 43 |
 | Nœuds et liens du graphe des filiations | 15 auteurs, 19 liens |
 | Nœuds et liens du graphe des concepts | 38 concepts, 100 arêtes (64 associées, 36 opposées) |
 | Influences hors corpus citées | 52 sur les fiches auteurs, 96 sur les domaines |
 | Portraits photographiques embarqués | 6 (sur 15 fiches) |
 | Liens entre concepts | 100 paires (64 associées, 36 opposées), toutes réciproques |
+| Liens des phénomènes vers des concepts | 50, sur 25 des 38 concepts du corpus |
+| Notions de phénomènes sans fiche | 144 |
 | Entrées indexées par la recherche | 96 |
 
 ## Les 15 fiches
@@ -67,6 +70,31 @@ ligne ce qu'on leur doit. Sans eux, une douzaine de domaines — le genre, le
 numérique, l'environnement, la santé — paraîtraient sans fondateurs, faute
 d'être portés par les quinze fiches.
 
+## Les 28 phénomènes sociaux
+
+Rangés en douze catégories.
+
+| Catégorie | Phénomènes |
+|---|---|
+| Travail et emploi | Chômage · Précarité professionnelle · Burn-out |
+| Ville et logement | Gentrification · Ségrégation urbaine · Étalement urbain |
+| Famille et parcours de vie | Monoparentalité · Vieillissement démographique |
+| École et éducation | Décrochage scolaire · Inégalités scolaires |
+| Inégalités et classes sociales | Pauvreté · Déclassement social · Concentration des richesses |
+| Genre et sexualité | Écart salarial de genre · Violences conjugales |
+| Migration et altérité | Migration internationale · Discrimination à l'embauche |
+| Numérique et médias | Désinformation · Addiction aux réseaux sociaux · Cyberharcèlement |
+| Déviance et contrôle social | Délinquance juvénile · Incarcération de masse |
+| Santé et corps | Médicalisation · Grossophobie |
+| Politique et mobilisations | Abstention électorale · Mouvements sociaux contemporains |
+| Environnement | Éco-anxiété · Migration climatique |
+
+Chaque phénomène nomme les concepts du corpus qui l'éclairent (0 à 3 selon les
+cas, 25 des 38 concepts sont mobilisés au moins une fois) et 5 à 9 notions
+sans fiche, chacune avec en une ligne ce qui la relie au phénomène. Trois
+phénomènes — Étalement urbain, Éco-anxiété, Migration climatique — n'ont aucun
+concept lié : le corpus ne les couvre pas directement.
+
 ## Structure d'une fiche
 
 Portrait (photographie du domaine public, ou monogramme d'initiales) ·
@@ -90,6 +118,16 @@ Les concepts associés et opposés sont **symétriques** : une relation déclar�
 d'un côté s'affiche des deux. Voir
 [Fiches concepts](/documentation/features/fiches-concepts).
 
+## Structure d'une fiche phénomène
+
+Catégorie · dimensions (0 à 6 par phénomène, parmi 14) · définition courte ·
+paragraphe de contexte sociologique · concepts du corpus liés (cliquables) ·
+notions associées sans fiche (texte libre).
+
+Concepts et notions ne sont **jamais mélangés** : un concept cité doit avoir
+une fiche dans le corpus, une notion n'en a jamais. Voir [Phénomènes
+sociaux](/documentation/features/phenomenes-sociaux).
+
 ## Provenance
 
 Le contenu a été rédigé pour le prototype de l'application et est livré tel
@@ -104,4 +142,5 @@ l'application. Leurs sources détaillées figurent dans
 ## Voir aussi
 
 - [Fiches auteurs](/documentation/features/fiches-auteurs)
+- [Phénomènes sociaux](/documentation/features/phenomenes-sociaux)
 - [Licences et crédits](/documentation/legal/licences-credits)
