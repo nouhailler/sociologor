@@ -2,8 +2,8 @@
 
 ## Description
 
-Le bouton **Exporter en Markdown**, en bas d'une fiche, télécharge cette fiche
-sous forme de fichier texte `.md`.
+Le bouton **Exporter en Markdown**, en bas d'une fiche auteur ou d'une fiche
+concept, télécharge cette fiche sous forme de fichier texte `.md`.
 
 ## Objectif
 
@@ -18,9 +18,12 @@ Un navigateur autorisant le téléchargement de fichiers.
 
 1. Ouvrez une fiche et faites défiler jusqu'en bas.
 2. Touchez **Exporter en Markdown**.
-3. Le fichier `sociologor-<nom-de-l-auteur>.md` est téléchargé — par exemple
-   `sociologor-pierre-bourdieu.md`.
-4. Le message « Fiche exportée en Markdown » confirme l'action.
+3. Le fichier est téléchargé : `sociologor-<nom-de-l-auteur>.md` depuis une
+   fiche auteur (par exemple `sociologor-pierre-bourdieu.md`), ou
+   `sociologor-concept-<nom>.md` depuis une fiche concept (par exemple
+   `sociologor-concept-habitus.md`).
+4. Un message confirme l'action : « Fiche exportée en Markdown » ou « Concept
+   exporté en Markdown ».
 
 ## Options
 
@@ -40,8 +43,17 @@ navigateur ; rien ne transite par un serveur.
 ## Résultat
 
 Un fichier Markdown structuré : titre, état civil, résumé, repères, concepts
-(explication et exemple), filiation, œuvres, citations (optionnelles),
-critiques, disciplines, bibliographie, et une ligne de provenance datée.
+(explication et exemple), filiation — y compris les influences hors corpus —,
+œuvres, citations (optionnelles), critiques, disciplines, bibliographie, et une
+ligne de provenance datée.
+
+Le portrait n'est pas exporté : le fichier reste un document texte, sans image
+jointe.
+
+Depuis une fiche concept, le fichier contient les dix rubriques de l'écran :
+définition courte et détaillée, origine, exemples, œuvres, évolution
+historique, critiques, et le voisinage — auteur associé, concepts associés,
+concepts opposés.
 
 ## Fonctionnement hors connexion
 

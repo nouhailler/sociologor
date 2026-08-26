@@ -36,15 +36,19 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // Tout le contenu (fiches, documentation, styles) est statique et
-        // embarqué : le précache suffit à un fonctionnement hors ligne complet.
-        globPatterns: ['**/*.{js,css,html,svg,png,webmanifest,woff2}'],
+        // Tout le contenu (fiches, documentation, styles, portraits) est statique
+        // et embarqué : le précache suffit à un fonctionnement hors ligne complet.
+        // `webp` couvre les six portraits en domaine public (~60 Ko au total).
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,webmanifest,woff2}'],
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
             // Google Fonts (Inter) : l'app reste lisible sans, grâce au fallback system-ui.
-            urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\//,
+            // Les deux hôtes sont écrits en toutes lettres, sans alternation :
+            // `npm run doc:audit` relit ce fichier pour vérifier que tout hôte
+            // joint par le code est bien déclaré dans les textes légaux.
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/|^https:\/\/fonts\.gstatic\.com\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'sociologor-fonts',

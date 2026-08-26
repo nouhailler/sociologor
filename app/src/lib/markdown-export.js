@@ -21,6 +21,12 @@ export function authorToMarkdown(a, { includeCitations = true } = {}) {
   L.push(`- **A influencé** : ${a.downLinks.length ? a.downLinks.map((l) => l.label).join(', ') : '—'}`);
   L.push('');
 
+  if (a.horsCorpus?.length) {
+    L.push('### Influences hors corpus', '');
+    a.horsCorpus.forEach((h) => L.push(`- ${h}`));
+    L.push('');
+  }
+
   L.push('## Œuvres principales', '');
   a.oeuvres.forEach((o) => L.push(`- ${o.y} — ${o.t}`));
   L.push('');
@@ -47,6 +53,48 @@ export function authorToMarkdown(a, { includeCitations = true } = {}) {
   }
 
   L.push('---', '', `Fiche exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
+/** Sérialise une fiche concept en Markdown — les dix sections de l'écran, sans mise en forme d'interface. */
+export function conceptToMarkdown(c) {
+  const L = [];
+  L.push(`# ${c.t}`, '');
+  L.push(`*${c.year} · ${c.auteur.name} · ${c.auteur.courant}*`, '');
+  L.push(`> ${c.simple}`, '');
+
+  L.push('## Définition détaillée', '');
+  c.detaille.forEach((p) => L.push(p, ''));
+
+  L.push('## Origine', '');
+  L.push(`- **Œuvre** : ${c.origine.oeuvre} (${c.origine.annee})`);
+  L.push(`- **Contexte** : ${c.origine.contexte}`);
+  L.push('');
+
+  L.push('## Exemples concrets', '');
+  c.exemples.forEach((e) => L.push(`- ${e}`));
+  L.push('');
+
+  L.push('## Œuvres où il apparaît', '');
+  c.oeuvres.forEach((o) => L.push(`- ${o.y} — ${o.t}`));
+  L.push('');
+
+  L.push('## Évolution historique', '');
+  c.evolution.forEach((s) => L.push(`- **${s.p}** — ${s.f}`));
+  L.push('');
+
+  L.push('## Critiques', '');
+  c.critiques.forEach((k) => L.push(`- ${k}`));
+  L.push('');
+
+  L.push('## Voisinage', '');
+  const names = (links) => (links.length ? links.map((l) => l.label).join(', ') : '—');
+  L.push(`- **Auteur associé** : ${c.auteur.name}`);
+  L.push(`- **Concepts associés** : ${names(c.associesLinks)}`);
+  L.push(`- **Concepts opposés** : ${names(c.opposesLinks)}`);
+  L.push('');
+
+  L.push('---', '', `Concept exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
 

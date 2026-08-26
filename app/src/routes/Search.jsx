@@ -73,7 +73,7 @@ export default function Search() {
           {results.map((r) => (
             <li key={`${r.kind}-${r.title}-${r.id}`}>
               <Link
-                to={`/a/${r.id}`}
+                to={r.to}
                 style={{
                   width: '100%',
                   display: 'flex',

@@ -38,6 +38,156 @@ test.describe('Parcours principal', () => {
     await expect(content(page).getByRole('heading', { name: 'Max Weber', exact: true })).toBeVisible();
   });
 
+  test('fiche : portrait photographique chargé et crédité', async ({ page }) => {
+    await enter(page, '/a/weber');
+    const img = content(page).getByRole('img', { name: /Max Weber en 1894/ });
+    await expect(img).toBeVisible();
+    // Une image cassée se rend avec naturalWidth à 0 : on vérifie le décodage,
+    // pas seulement la présence de la balise.
+    await expect
+      .poll(() => img.evaluate((el) => el.naturalWidth), { timeout: 5000 })
+      .toBeGreaterThan(0);
+    await expect(content(page).getByText('Domaine public')).toBeVisible();
+  });
+
+  test('fiche : monogramme assumé quand aucune image libre n’existe', async ({ page }) => {
+    await enter(page, '/a/bourdieu');
+    await expect(content(page).getByRole('img', { name: /Bourdieu/ })).toHaveCount(0);
+    await expect(content(page).getByText('PB', { exact: true })).toBeVisible();
+  });
+
+  test('fiche : influences hors corpus, en texte et non cliquables', async ({ page }) => {
+    // Marx n'a aucun prédécesseur dans le corpus : sans cette section, la fiche
+    // laisserait croire qu'il n'hérite de personne.
+    await enter(page, '/a/marx');
+    await expect(content(page).getByText('Aucune fiche liée dans ce corpus')).toBeVisible();
+    await expect(content(page).getByText('Influences hors corpus')).toBeVisible();
+    const hegel = content(page).getByText(/^Hegel — /);
+    await expect(hegel).toBeVisible();
+    await expect(hegel.locator('a')).toHaveCount(0);
+  });
+
+  test('export Markdown : les influences hors corpus sont dans le fichier', async ({ page }) => {
+    await enter(page, '/a/tocqueville');
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      page.getByRole('button', { name: /Exporter en Markdown/ }).click(),
+    ]);
+    const stream = await download.createReadStream();
+    const chunks = [];
+    for await (const c of stream) chunks.push(c);
+    const md = Buffer.concat(chunks).toString('utf8');
+    expect(md).toContain('### Influences hors corpus');
+    expect(md).toContain('Montesquieu');
+  });
+
+  test('fiche concept : les dix rubriques sont présentes', async ({ page }) => {
+    await enter(page, '/c/habitus');
+    await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();
+    // « En une phrase » est un intertitre `soc-kicker`, pas un <h3> — comme sur
+    // la fiche auteur, dont cet écran reprend la mise en page.
+    await expect(content(page).getByText('En une phrase')).toBeVisible();
+    for (const t of [
+      'Définition détaillée',
+      'Origine',
+      'Exemples concrets',
+      'Œuvres où il apparaît',
+      'Évolution historique',
+      'Critiques',
+      'Voisinage',
+    ]) {
+      await expect(content(page).getByRole('heading', { name: t })).toBeVisible();
+    }
+    // Auteur associé et définition courte, les deux rubriques hors titre.
+    await expect(content(page).getByText('Concepts associés')).toBeVisible();
+    await expect(content(page).getByText('Concepts opposés')).toBeVisible();
+    await expect(content(page).getByText('Auteur associé')).toBeVisible();
+  });
+
+  test('fiche concept : exemples sans doublon', async ({ page }) => {
+    // getConcept place l'exemple de la fiche auteur en tête ; le recopier dans
+    // `exemples` l'afficherait deux fois — régression déjà survenue une fois.
+    await enter(page, '/c/habitus');
+    const items = content(page).locator('h3:has-text("Exemples concrets") + ul li');
+    const texts = await items.allInnerTexts();
+    expect(texts.length).toBeGreaterThan(1);
+    expect(new Set(texts).size).toBe(texts.length);
+  });
+
+  test('navigation entre concepts : associé, opposé, puis retour à l’auteur', async ({ page }) => {
+    await enter(page, '/c/habitus');
+    await content(page).getByRole('link', { name: /Capital culturel/ }).first().click();
+    await expect(content(page).getByRole('heading', { name: 'Capital culturel', exact: true })).toBeVisible();
+    await content(page)
+      .getByRole('link', { name: /Individualisme méthodologique/ })
+      .first()
+      .click();
+    await expect(
+      content(page).getByRole('heading', { name: 'Individualisme méthodologique', exact: true }),
+    ).toBeVisible();
+    await content(page).getByRole('link', { name: /Voir la fiche de Raymond Boudon/ }).click();
+    await expect(content(page).getByRole('heading', { name: 'Raymond Boudon', exact: true })).toBeVisible();
+  });
+
+  test('les oppositions se parcourent dans les deux sens', async ({ page }) => {
+    // La réciproque est calculée, pas recopiée : habitus déclare l'opposition,
+    // individualisme-methodologique doit la porter aussi.
+    await enter(page, '/c/individualisme-methodologique');
+    await expect(content(page).getByRole('link', { name: /Habitus/ }).first()).toBeVisible();
+  });
+
+  test('fiche auteur : un concept mène à sa fiche', async ({ page }) => {
+    await enter(page, '/a/bourdieu');
+    await content(page).getByRole('link', { name: 'Fiche complète du concept →' }).first().click();
+    await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();
+  });
+
+  test('recherche : un concept mène à sa fiche, une œuvre à celle de l’auteur', async ({ page }) => {
+    await enter(page, '/recherche?q=anomie');
+    await page.getByRole('link', { name: /Anomie/ }).first().click();
+    await expect(page).toHaveURL(/\/c\/anomie$/);
+    await expect(content(page).getByRole('heading', { name: 'Anomie', exact: true })).toBeVisible();
+  });
+
+  test('notion du jour : le bouton principal ouvre le concept', async ({ page }) => {
+    await enter(page);
+    await page.getByRole('link', { name: 'Ouvrir la fiche du concept' }).click();
+    await expect(page).toHaveURL(/\/c\//);
+    await expect(content(page).getByRole('heading', { name: 'Origine' })).toBeVisible();
+  });
+
+  test('concept inconnu : écran Introuvable', async ({ page }) => {
+    await enter(page, '/c/nawak');
+    await expect(content(page).getByText("Ce concept n'existe pas.")).toBeVisible();
+  });
+
+  test('export Markdown d’un concept : les dix rubriques sont dans le fichier', async ({ page }) => {
+    await enter(page, '/c/habitus');
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      content(page).getByRole('button', { name: /Exporter en Markdown/ }).click(),
+    ]);
+    expect(download.suggestedFilename()).toBe('sociologor-concept-habitus.md');
+    const stream = await download.createReadStream();
+    const chunks = [];
+    for await (const c of stream) chunks.push(c);
+    const md = Buffer.concat(chunks).toString('utf8');
+    for (const h of [
+      '## Définition détaillée',
+      '## Origine',
+      '## Exemples concrets',
+      '## Œuvres où il apparaît',
+      '## Évolution historique',
+      '## Critiques',
+      '## Voisinage',
+      '**Auteur associé**',
+      '**Concepts associés**',
+      '**Concepts opposés**',
+    ]) {
+      expect(md).toContain(h);
+    }
+  });
+
   test('paramètre « Afficher les citations » masque la section et persiste', async ({ page }) => {
     await enter(page, '/parametres');
     // L'input est visuellement masqué par le design system (le libellé le pilote).
@@ -161,6 +311,16 @@ test.describe('PWA', () => {
     await context.setOffline(true);
     await page.goto('/a/weber');
     await expect(content(page).getByRole('heading', { name: 'Max Weber', exact: true })).toBeVisible();
+    // Le portrait est précaché comme le reste : hors ligne, il se décode encore.
+    await expect
+      .poll(
+        () =>
+          content(page)
+            .getByRole('img', { name: /Max Weber en 1894/ })
+            .evaluate((el) => el.naturalWidth),
+        { timeout: 5000 },
+      )
+      .toBeGreaterThan(0);
     // La recherche et la documentation sont servies depuis le cache elles aussi.
     await page.goto('/recherche?q=anomie');
     await expect(page.getByText('Anomie').first()).toBeVisible();

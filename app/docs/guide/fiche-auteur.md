@@ -13,11 +13,11 @@ un auteur.
 
 | Section | Contenu |
 |---|---|
-| En-tête | Initiales, nom, dates, nationalité, période, courant, domaines rattachés |
+| En-tête | Portrait (photographie ou monogramme), nom, dates, nationalité, période, courant, domaines rattachés |
 | **En une phrase** | Le résumé de l'apport de l'auteur |
 | **Repères** | Nom, prénom, dates, nationalité, période, courant |
-| **Concepts majeurs** | Pour chaque concept : titre, année, explication simple, exemple concret |
-| **Filiation** | « Hérite de » et « A influencé » — pastilles cliquables |
+| **Concepts majeurs** | Pour chaque concept : titre cliquable, année, explication simple, exemple concret, et un lien « Fiche complète du concept » |
+| **Filiation** | « Hérite de » et « A influencé » — pastilles cliquables — puis « Influences hors corpus », en texte non cliquable |
 | **Œuvres principales** | Année et titre |
 | **Citations** | Citation et source — masquable dans les paramètres |
 | **Critiques** | Les objections adressées à l'auteur |
@@ -42,15 +42,24 @@ un auteur.
 
 ## Cas particuliers
 
-- **Portrait** : aucune photographie n'est fournie ; un bloc aux initiales de
-  l'auteur tient ce rôle.
+- **Portrait** : six fiches (Comte, Marx, Tocqueville, Simmel, Durkheim,
+  Weber) portent une photographie du domaine public, légendée « Domaine
+  public ». Les neuf autres portent un monogramme d'initiales, faute d'image
+  librement réutilisable. Voir
+  [Fiches auteurs](/documentation/features/fiches-auteurs).
 - **Filiation vide** : si un auteur n'a pas de prédécesseur dans le corpus
   (Comte, Marx, Weber, Simmel, Tocqueville) ou pas de successeur (Becker,
   Boudon, Boltanski), la mention « Aucune fiche liée dans ce corpus » s'affiche.
+  La liste « Influences hors corpus », juste en dessous, reste renseignée : elle
+  nomme les penseurs extérieurs aux 15 fiches.
 - **Citations masquées** : si le paramètre correspondant est désactivé, la
   section n'apparaît pas et l'export ne la contient pas.
 - **École de Francfort** : la fiche porte sur un collectif ; le champ Prénom
   vaut « — » et le champ Nom « Institut für Sozialforschung ».
+
+- **Concepts** : le titre de chaque concept et le lien « Fiche complète du
+  concept » mènent à sa fiche dédiée, qui développe dix rubriques. Voir
+  [Écran Fiche concept](/documentation/guide/fiche-concept).
 
 ## Erreurs possibles
 
@@ -58,4 +67,5 @@ Un identifiant inconnu affiche « Introuvable — Cette fiche n'existe pas ».
 
 ## Navigation
 
-Fiche → autre fiche par la filiation, ou graphe centré sur l'auteur.
+Fiche → autre fiche par la filiation, fiche → concept par les concepts
+majeurs, ou graphe centré sur l'auteur.

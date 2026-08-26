@@ -3,7 +3,8 @@
 ## Description
 
 L'accueil met en avant un concept du corpus : son titre, son auteur, son année,
-son explication simple, un exemple concret, et un bouton vers la fiche
+son explication simple, un exemple concret, et deux boutons — vers la fiche du
+concept, et vers la fiche
 complète.
 
 ## Objectif
@@ -16,7 +17,10 @@ Aucun.
 
 ## Comment l'utiliser
 
-Ouvrez l'accueil : la notion est déjà là. Le bouton « Ouvrir la fiche de… »
+Ouvrez l'accueil : la notion est déjà là. Le bouton principal « Ouvrir la
+fiche du concept » mène à la
+[fiche complète du concept](/documentation/features/fiches-concepts) ; le
+bouton secondaire « Fiche de… »
 mène à l'auteur du concept.
 
 ## Options

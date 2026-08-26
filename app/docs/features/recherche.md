@@ -49,6 +49,14 @@ Disponible sans connexion — la recherche n'interroge aucun serveur.
 
 Identique.
 
+## Où mène un résultat
+
+| Type de résultat | Destination |
+|---|---|
+| Auteur | La fiche de l'auteur |
+| Concept | La [fiche du concept](/documentation/features/fiches-concepts) |
+| Œuvre | La fiche de l'auteur qui l'a écrite |
+
 ## Limites
 
 - 24 résultats maximum.

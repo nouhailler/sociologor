@@ -10,7 +10,8 @@
  *  5. la section « Précision de la localisation » est présente si et seulement
  *     si le code lit vraiment la position de l'appareil ;
  *  6. aucune section légale n'est vide ;
- *  7. aucun secret n'a été recopié dans la documentation.
+ *  7. aucun secret n'a été recopié dans la documentation ;
+ *  8. les fiches concepts sont complètes et leurs renvois pointent quelque part.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -51,7 +52,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -65,8 +66,18 @@ for (const rel of mdFiles) {
 }
 
 /* — 3 & 4. la doc légale décrit-elle ce build ? — */
-const srcFiles = walk(SRC, (f) => /\.(jsx?|css)$/.test(f));
-const srcText = srcFiles.map((f) => readFileSync(f, 'utf8')).join('\n');
+// Le code de l'application, mais aussi ce qui part dans le bundle sans passer
+// par `src/` : la page hôte et la configuration du service worker, qui décide
+// quels domaines sont mis en cache.
+const srcFiles = [
+  ...walk(SRC, (f) => /\.(jsx?|css)$/.test(f)),
+  join(ROOT, 'index.html'),
+  join(ROOT, 'vite.config.js'),
+];
+// Un hôte s'y écrit parfois échappé, dans une expression régulière de cache
+// (`https:\/\/fonts\.gstatic\.com`) : on cherche sur une copie sans antislash,
+// sinon l'hôte passe pour absent du code alors qu'il est bel et bien joint.
+const srcText = srcFiles.map((f) => readFileSync(f, 'utf8')).join('\n').replace(/\\/g, '');
 
 const hosts = new Set(
   [...srcText.matchAll(/https:\/\/([a-z0-9.-]+\.[a-z]{2,})/gi)]
@@ -129,6 +140,48 @@ for (const rel of mdFiles) {
   if (SECRETS.test(body)) fail(`Chaîne ressemblant à un secret dans docs/${rel}`);
 }
 
+/* — 8. intégrité des fiches concepts — */
+// La fiche concept promet dix rubriques : si l'une manque, l'écran affiche un
+// trou. Et un renvoi vers un identifiant inexistant produit un lien mort.
+const { AUTHORS } = await import('../src/data/authors.js');
+const { CONCEPTS } = await import('../src/data/concepts.js');
+
+const conceptBase = new Map();
+Object.values(AUTHORS).forEach((a) =>
+  a.concepts.forEach((c) => conceptBase.set(c.id, { ...c, authorId: a.id })),
+);
+
+const CONCEPT_FIELDS = ['detaille', 'origine', 'exemples', 'oeuvres', 'associes', 'opposes', 'critiques', 'evolution'];
+
+for (const id of conceptBase.keys()) {
+  if (!CONCEPTS[id]) fail(`Concept sans fiche complète : ${id}`);
+}
+for (const id of Object.keys(CONCEPTS)) {
+  if (!conceptBase.has(id)) fail(`Fiche concept orpheline (aucun auteur ne porte ce concept) : ${id}`);
+}
+for (const [id, c] of Object.entries(CONCEPTS)) {
+  if (!conceptBase.has(id)) continue;
+  for (const f of CONCEPT_FIELDS) {
+    if (c[f] === undefined || (Array.isArray(c[f]) && c[f].length === 0)) {
+      fail(`Fiche concept ${id} : rubrique « ${f} » vide ou absente.`);
+    }
+  }
+  for (const k of ['oeuvre', 'annee', 'contexte']) {
+    if (!c.origine?.[k]) fail(`Fiche concept ${id} : origine.${k} manquant.`);
+  }
+  for (const k of ['associes', 'opposes']) {
+    for (const other of c[k] || []) {
+      if (!conceptBase.has(other)) fail(`Fiche concept ${id} : ${k} renvoie à un identifiant inconnu « ${other} ».`);
+      if (other === id) fail(`Fiche concept ${id} : ${k} se référence lui-même.`);
+    }
+  }
+  // L'exemple de la fiche auteur est ajouté en tête par getConcept : le
+  // recopier ici l'afficherait deux fois.
+  if ((c.exemples || []).includes(conceptBase.get(id).ex)) {
+    fail(`Fiche concept ${id} : l'exemple de la fiche auteur est recopié dans « exemples ».`);
+  }
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -138,6 +191,7 @@ console.log(line('Liens internes', `${linkCount} vérifiés`));
 console.log(line('Hôtes externes', `${hosts.size} dans le code, ${declaredHosts.size} déclarés`));
 console.log(line('Clés stockage', `${keys.size} détectées, ${legal.CLES_STOCKAGE.length} documentées`));
 console.log(line('Sections légales', legal.MENTIONS_LEGALES.sections.length + legal.CONFIDENTIALITE.sections.length));
+console.log(line('Fiches concepts', `${Object.keys(CONCEPTS).length} / ${conceptBase.size}, ${CONCEPT_FIELDS.length} rubriques chacune`));
 
 if (notes.length) {
   console.log('\nÀ vérifier :');

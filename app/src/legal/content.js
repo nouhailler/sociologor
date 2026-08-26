@@ -26,14 +26,18 @@ export const EDITEUR = {
   nom: 'Swinux',
   adresse: 'Canton de Vaud, Suisse',
   email: 'contact@swinux.ch',
-  directeurPublication: A_COMPLETER,
+  // Choix assumé : la responsabilité éditoriale est portée par la personne
+  // morale, sans nommer de personne physique.
+  directeurPublication: 'Swinux',
 };
 
 export const HEBERGEUR = {
   nom: 'Netlify, Inc.',
   role: "Hébergement des fichiers de l'application",
-  adresse: A_COMPLETER,
-  domaine: A_COMPLETER,
+  // Adresse publique du siège de Netlify. À revérifier sur netlify.com si
+  // l'entreprise déménage : rien dans le code ne le détectera.
+  adresse: '512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis',
+  domaine: 'sociologor.netlify.app',
 };
 
 /** Hôtes externes réellement joints par l'application — vérifiés par `npm run doc:audit`. */

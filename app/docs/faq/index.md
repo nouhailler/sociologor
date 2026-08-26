@@ -31,12 +31,31 @@ domaines, avec 38 concepts et 43 œuvres référencées.
 Le corpus est volontairement court : quinze entrées qui se répondent. Voir
 [Contenu embarqué](/documentation/reference/contenu).
 
+**Un concept a-t-il sa propre fiche ?**
+Oui. Les 38 concepts ont chacun une fiche à dix rubriques : définition courte
+et détaillée, origine, exemples, œuvres, évolution historique, critiques,
+concepts associés et opposés, auteur associé. On y accède par la notion du
+jour, la recherche, ou le titre d'un concept dans une fiche auteur. Voir
+[Fiches concepts](/documentation/features/fiches-concepts).
+
+**Puis-je épingler un concept dans « Mes fiches » ?**
+Non. L'épinglage ne porte que sur les fiches auteurs. Pour retrouver un
+concept, utilisez la recherche ou le lien de partage de sa fiche.
+
 **Puis-je ajouter mes propres fiches ou annoter les existantes ?**
 Non. Le contenu est livré avec l'application et n'est pas modifiable.
 
-**Pourquoi n'y a-t-il pas de portraits ?**
-Aucune photographie n'est fournie avec l'application ; un bloc aux initiales de
-l'auteur en tient lieu.
+**Pourquoi certaines fiches n'ont-elles pas de portrait ?**
+Six fiches — Comte, Marx, Tocqueville, Simmel, Durkheim et Weber — portent une
+image du domaine public. Les neuf autres portent un monogramme d'initiales : les
+photographies des sociologues du XXᵉ siècle sont encore protégées par le droit
+d'auteur, et l'application n'embarque que des images librement réutilisables.
+Voir [Licences et crédits](/documentation/legal/licences-credits).
+
+**Pourquoi certains noms de la section Filiation ne sont-ils pas cliquables ?**
+Les pastilles mènent à une autre fiche du corpus. La liste « Influences hors
+corpus », en dessous, nomme des penseurs qui n'ont pas de fiche — Hegel,
+Montesquieu, Freud, Lévi-Strauss — et reste donc en texte simple.
 
 **D'où vient la notion du jour ?**
 Elle est tirée des 38 concepts du corpus, choisie d'après la date de

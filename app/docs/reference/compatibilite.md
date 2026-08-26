@@ -24,8 +24,10 @@ récents : `color-mix()` en CSS, modules JavaScript, service workers.
 | Ordinateur — Safari | Oui | Via *Ajouter au Dock* (macOS Sonoma et suivants) | Oui |
 
 > **À vérifier** — ce tableau décrit les capacités connues de ces navigateurs,
-> pas des tests réalisés sur appareil. Aucune campagne de tests n'a encore été
-> menée pour cette version : les versions minimales exactes restent à établir.
+> pas des tests réalisés sur appareil. Les parcours automatisés tournent sur un
+> navigateur de bureau et un navigateur mobile émulé ; aucune campagne sur
+> appareils réels n'a encore été menée, et les versions minimales exactes
+> restent à établir.
 
 ## Comportements propres à iOS
 

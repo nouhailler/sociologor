@@ -39,9 +39,16 @@ test.describe('Avertissement légal du premier lancement', () => {
     await expect(dialog.getByRole('heading', { name: 'Mentions légales' })).toBeVisible();
     await expect(dialog.getByRole('heading', { name: 'Limitation de responsabilité' })).toBeVisible();
     await expect(dialog.getByRole('heading', { name: 'Politique de confidentialité' })).toBeVisible();
-    // l'éditeur connu est affiché, l'hébergeur aussi
-    await expect(dialog.getByText('Swinux', { exact: true })).toBeVisible();
-    await expect(dialog.getByText('Netlify, Inc.', { exact: true })).toBeVisible();
+    // Chaque champ est lu dans sa ligne de définition : « Swinux » apparaît
+    // deux fois — éditeur et directeur de la publication —, un texte nu ne
+    // suffirait plus à le désigner.
+    const champ = (label) => dialog.locator('dl > div').filter({ hasText: label }).locator('dd');
+    await expect(champ('Éditeur')).toHaveText('Swinux');
+    await expect(champ('Directeur de la publication')).toHaveText('Swinux');
+    await expect(champ('Hébergeur')).toHaveText('Netlify, Inc.');
+    await expect(champ('Domaine de publication')).toHaveText('sociologor.netlify.app');
+    // Plus aucun champ en attente : c'est la condition de publication.
+    await expect(dialog.getByText('[À COMPLÉTER]')).toHaveCount(0);
   });
 
   test('retour navigateur ferme les détails avant de quitter la page', async ({ page }) => {

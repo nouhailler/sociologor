@@ -1,4 +1,6 @@
 import { DOMAINS, AUTHORS, EXTRA, EXTRA_EDGES } from './authors.js';
+import { portraitUrl } from './portraits.js';
+import { CONCEPTS } from './concepts.js';
 
 export { DOMAINS, AUTHORS, EXTRA, EXTRA_EDGES };
 
@@ -14,6 +16,9 @@ export function getAuthor(id) {
   return {
     ...a,
     ...extra,
+    // Portrait résolu ici plutôt que dans les données : l'URL n'existe qu'après
+    // le passage de Vite. `portraitSrc` à null = la fiche assume son monogramme.
+    portraitSrc: portraitUrl(extra.portrait),
     reperes: [
       { k: 'Nom', v: extra.nom || a.name },
       { k: 'Prénom', v: extra.prenom || '—' },
@@ -34,13 +39,91 @@ export function getDomain(id) {
   return { ...d, authors: d.a.filter((x) => AUTHORS[x]).map((x) => AUTHORS[x]) };
 }
 
+/* — Concepts — */
+
+/**
+ * Table plate des concepts : `authors.js` porte le concept de base, l'auteur
+ * qui le signe se déduit de la fiche qui le contient.
+ */
+export const CONCEPT_BASE = (() => {
+  const out = {};
+  Object.values(AUTHORS).forEach((a) => {
+    a.concepts.forEach((c) => {
+      out[c.id] = { ...c, authorId: a.id, authorName: a.name, courant: a.courant };
+    });
+  });
+  return out;
+})();
+
+export const CONCEPT_IDS = Object.keys(CONCEPT_BASE);
+export const CONCEPT_COUNT = CONCEPT_IDS.length;
+
+/**
+ * Voisinages symétrisés. « A est opposé à B » implique « B est opposé à A » :
+ * la réciproque est calculée ici plutôt que recopiée dans `concepts.js`, pour
+ * qu'un lien déclaré d'un seul côté apparaisse toujours des deux.
+ */
+const NEIGHBOURS = (() => {
+  const out = {};
+  CONCEPT_IDS.forEach((id) => {
+    out[id] = { associes: new Set(), opposes: new Set() };
+  });
+  Object.entries(CONCEPTS).forEach(([id, c]) => {
+    ['associes', 'opposes'].forEach((k) => {
+      (c[k] || []).forEach((other) => {
+        if (!out[id] || !out[other]) return;
+        out[id][k].add(other);
+        out[other][k].add(id);
+      });
+    });
+  });
+  return out;
+})();
+
+/** Pastille de navigation vers un concept. */
+const conceptLink = (id) => ({
+  id,
+  label: CONCEPT_BASE[id].t,
+  authorName: CONCEPT_BASE[id].authorName,
+});
+
+/**
+ * Fiche concept complète : base extraite du prototype + couche éditoriale +
+ * auteur associé + voisinages résolus. `exemples` place l'exemple de la fiche
+ * auteur en tête, puis les exemples supplémentaires de `concepts.js`.
+ */
+export function getConcept(id) {
+  const base = CONCEPT_BASE[id];
+  if (!base) return null;
+  const extra = CONCEPTS[id] || {};
+  const author = AUTHORS[base.authorId];
+  return {
+    ...base,
+    ...extra,
+    auteur: { id: author.id, name: author.name, dates: author.dates, courant: author.courant },
+    exemples: [base.ex, ...(extra.exemples || [])],
+    associesLinks: [...NEIGHBOURS[id].associes].map(conceptLink),
+    opposesLinks: [...NEIGHBOURS[id].opposes].map(conceptLink),
+    domainTags: DOMAINS.filter((d) => d.a.includes(base.authorId)).slice(0, 3).map((d) => d.t),
+  };
+}
+
+/** Concepts d'un auteur, dans l'ordre de sa fiche. */
+export const conceptsOf = (authorId) =>
+  (AUTHORS[authorId]?.concepts || []).map((c) => ({ ...c, authorId }));
+
 /** Index de recherche : une entrée par auteur, par concept et par œuvre. */
 export const SEARCH_INDEX = (() => {
   const items = [];
   Object.values(AUTHORS).forEach((x) => {
-    items.push({ kind: 'Auteur', title: x.name, sub: `${x.dates} · ${x.courant}`, id: x.id });
-    x.concepts.forEach((c) => items.push({ kind: 'Concept', title: c.t, sub: c.simple, id: x.id }));
-    x.oeuvres.forEach((o) => items.push({ kind: 'Œuvre', title: o.t, sub: `${x.name}, ${o.y}`, id: x.id }));
+    items.push({ kind: 'Auteur', title: x.name, sub: `${x.dates} · ${x.courant}`, id: x.id, to: `/a/${x.id}` });
+    // `to` porte la destination : un concept a désormais sa propre fiche.
+    x.concepts.forEach((c) =>
+      items.push({ kind: 'Concept', title: c.t, sub: c.simple, id: c.id, to: `/c/${c.id}` }),
+    );
+    x.oeuvres.forEach((o) =>
+      items.push({ kind: 'Œuvre', title: o.t, sub: `${x.name}, ${o.y}`, id: x.id, to: `/a/${x.id}` }),
+    );
   });
   return items;
 })();

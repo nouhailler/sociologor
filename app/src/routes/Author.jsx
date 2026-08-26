@@ -70,13 +70,7 @@ export default function Author() {
     >
       <article className="soc-enter" style={{ maxWidth: 780 }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16, margin: '4px 0 18px' }}>
-          <span
-            className="soc-initials"
-            aria-hidden="true"
-            style={{ width: 92, height: 112, borderRadius: 'var(--radius-lg)', fontSize: 30 }}
-          >
-            {a.initials}
-          </span>
+          <Portrait author={a} />
           <div style={{ flex: 1, minWidth: 0 }}>
             <h2
               style={{
@@ -190,7 +184,10 @@ export default function Author() {
                     margin: 0,
                   }}
                 >
-                  {c.t}
+                  {/* Le concept a sa propre fiche : le titre y mène. */}
+                  <Link to={`/c/${c.id}`} style={{ color: 'inherit' }}>
+                    {c.t}
+                  </Link>
                 </h4>
                 <span
                   style={{
@@ -217,6 +214,12 @@ export default function Author() {
                 <span style={{ color: 'var(--color-accent-300)' }}>Exemple — </span>
                 {c.ex}
               </p>
+              <Link
+                to={`/c/${c.id}`}
+                style={{ display: 'inline-block', marginTop: 9, fontSize: 12, color: 'var(--color-accent-300)' }}
+              >
+                Fiche complète du concept →
+              </Link>
             </section>
           ))}
         </div>
@@ -227,6 +230,28 @@ export default function Author() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
           <Filiation label="Hérite de" links={a.upLinks} />
           <Filiation label="A influencé" links={a.downLinks} />
+          {a.horsCorpus?.length > 0 && (
+            <div>
+              <p style={FILIATION_LABEL}>Influences hors corpus</p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
+                {a.horsCorpus.map((h) => (
+                  <li
+                    key={h}
+                    style={{
+                      fontSize: 13,
+                      lineHeight: 1.5,
+                      paddingLeft: 11,
+                      borderLeft: '2px solid var(--color-neutral-700)',
+                      color: 'color-mix(in srgb, var(--color-text) 76%, transparent)',
+                      textWrap: 'pretty',
+                    }}
+                  >
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <h3 className="soc-kicker" style={{ margin: '0 0 8px' }}>
@@ -369,10 +394,64 @@ export default function Author() {
   );
 }
 
+const FILIATION_LABEL = {
+  fontSize: 11,
+  color: 'color-mix(in srgb, var(--color-text) 45%, transparent)',
+  margin: '0 0 6px',
+};
+
+const PORTRAIT_BOX = { width: 92, height: 112, borderRadius: 'var(--radius-lg)' };
+
+/**
+ * Portrait de la fiche. Photo libre de droits quand il en existe une, sinon le
+ * monogramme d'initiales — assumé comme tel, et non comme un placeholder en
+ * attente : les quatorze auteurs du XXᵉ siècle n'ont pas d'image réutilisable.
+ * Le crédit s'affiche sous la photo ; les sources complètes sont dans
+ * Documentation → Informations légales → Licences et crédits.
+ */
+function Portrait({ author }) {
+  if (!author.portraitSrc) {
+    return (
+      <span className="soc-initials" aria-hidden="true" style={{ ...PORTRAIT_BOX, fontSize: 30 }}>
+        {author.initials}
+      </span>
+    );
+  }
+  return (
+    <figure style={{ flex: 'none', margin: 0, width: 92 }}>
+      <img
+        src={author.portraitSrc}
+        alt={author.portrait.alt}
+        width={92}
+        height={112}
+        loading="eager"
+        decoding="async"
+        style={{
+          ...PORTRAIT_BOX,
+          display: 'block',
+          objectFit: 'cover',
+          border: '1px solid var(--color-neutral-700)',
+        }}
+      />
+      <figcaption
+        style={{
+          fontSize: 9.5,
+          lineHeight: 1.35,
+          marginTop: 5,
+          color: 'color-mix(in srgb, var(--color-text) 38%, transparent)',
+          textWrap: 'pretty',
+        }}
+      >
+        Domaine public
+      </figcaption>
+    </figure>
+  );
+}
+
 function Filiation({ label, links }) {
   return (
     <div>
-      <p style={{ fontSize: 11, color: 'color-mix(in srgb, var(--color-text) 45%, transparent)', margin: '0 0 6px' }}>
+      <p style={FILIATION_LABEL}>
         {label}
       </p>
       {links.length === 0 ? (

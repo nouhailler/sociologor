@@ -36,6 +36,7 @@ Chaque écran a sa propre adresse : elle peut être mise en favori ou partagée.
 | Accueil | `/` |
 | Domaine | `/d/<identifiant>` |
 | Fiche auteur | `/a/<identifiant>` |
+| Fiche concept | `/c/<identifiant>` |
 | Graphe | `/graphe` |
 | Graphe centré sur un auteur | `/graphe?focus=<identifiant>` |
 | Recherche | `/recherche?q=<texte>&type=<filtre>` |

@@ -26,6 +26,7 @@ export const CHAPTERS = [
       { slug: 'accueil', title: 'Écran Accueil' },
       { slug: 'domaine', title: 'Écran Domaine' },
       { slug: 'fiche-auteur', title: 'Écran Fiche auteur' },
+      { slug: 'fiche-concept', title: 'Écran Fiche concept' },
       { slug: 'graphe', title: 'Écran Graphe' },
       { slug: 'recherche', title: 'Écran Recherche' },
       { slug: 'mes-fiches', title: 'Écran Mes fiches' },
@@ -38,6 +39,7 @@ export const CHAPTERS = [
     icon: '🧩',
     pages: [
       { slug: 'fiches-auteurs', title: 'Fiches auteurs' },
+      { slug: 'fiches-concepts', title: 'Fiches concepts' },
       { slug: 'domaines', title: 'Entrée par domaines' },
       { slug: 'notion-du-jour', title: 'Notion du jour' },
       { slug: 'graphe-filiations', title: 'Graphe des filiations' },

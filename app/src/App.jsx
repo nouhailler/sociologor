@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './routes/Home.jsx';
 import Domain from './routes/Domain.jsx';
 import Author from './routes/Author.jsx';
+import Concept from './routes/Concept.jsx';
 import Graph from './routes/Graph.jsx';
 import Search from './routes/Search.jsx';
 import Favs from './routes/Favs.jsx';
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/accueil" element={<Home />} />
       <Route path="/d/:id" element={<Domain />} />
       <Route path="/a/:id" element={<Author />} />
+      <Route path="/c/:id" element={<Concept />} />
       <Route path="/graphe" element={<Graph />} />
       <Route path="/recherche" element={<Search />} />
       <Route path="/mes-fiches" element={<Favs />} />

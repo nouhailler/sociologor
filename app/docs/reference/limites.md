@@ -1,13 +1,20 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.0.0.
+la version 1.2.0.
 
 ## Contenu
 
-- Corpus **figé** : 15 fiches, 14 domaines, 38 concepts, 43 œuvres. Ni ajout,
-  ni annotation, ni édition par l'utilisateur.
-- Aucun portrait : un bloc aux initiales tient lieu d'illustration.
+- Corpus **figé** : 15 fiches auteurs, 38 fiches concepts, 14 domaines,
+  43 œuvres. Ni ajout, ni annotation, ni édition par l'utilisateur.
+- Les concepts ne peuvent pas être épinglés dans « Mes fiches » : l'épinglage
+  ne porte que sur les auteurs.
+- Les concepts n'apparaissent pas dans le graphe, qui reste celui des
+  filiations entre auteurs.
+- Portraits : 6 fiches sur 15 seulement. Les 9 autres portent un monogramme
+  d'initiales, faute d'image libre de droits.
+- Les influences hors corpus sont indicatives, non exhaustives, et sans lien
+  vers une fiche.
 - Français uniquement.
 - Les fiches sont des synthèses pédagogiques, sans appareil de notes ni
   références paginées.
@@ -40,9 +47,11 @@ la version 1.0.0.
   perdus à la fermeture.
 - La police Inter est chargée depuis Google Fonts à la première visite ; en
   cas d'échec, l'application s'affiche avec la police système.
-- Aucun test automatisé n'accompagne cette version. **À vérifier** : campagne
-  de tests sur appareils réels, et vérification d'accessibilité au lecteur
-  d'écran.
+- Les parcours principaux — navigation, fiches, recherche, graphe, export,
+  documentation, hors connexion, avertissement légal — sont couverts par des
+  tests navigateur automatisés, joués en desktop et en mobile avant chaque
+  livraison. **À vérifier** : campagne de tests sur appareils réels, et
+  vérification d'accessibilité au lecteur d'écran.
 
 ## Accessibilité
 

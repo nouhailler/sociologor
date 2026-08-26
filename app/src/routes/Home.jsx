@@ -107,9 +107,14 @@ export default function Home() {
             <span style={{ color: 'var(--color-accent-300)' }}>Concrètement — </span>
             {daily.ex}
           </p>
-          <Link className="btn btn-primary" to={`/a/${daily.authorId}`} style={{ fontSize: 12.5 }}>
-            Ouvrir la fiche de {dailyAuthor.name.split(' ').slice(-1)[0]}
-          </Link>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            <Link className="btn btn-primary" to={`/c/${daily.id}`} style={{ fontSize: 12.5 }}>
+              Ouvrir la fiche du concept
+            </Link>
+            <Link className="btn btn-secondary" to={`/a/${daily.authorId}`} style={{ fontSize: 12.5 }}>
+              Fiche de {dailyAuthor.name.split(' ').slice(-1)[0]}
+            </Link>
+          </div>
         </article>
 
         <div
