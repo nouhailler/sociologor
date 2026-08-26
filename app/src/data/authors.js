@@ -11,12 +11,12 @@ export const DOMAINS = [
   { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
   { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons'] },
-  { id: 'urbaine', t: 'Sociologie urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
-  { id: 'corps', t: 'Corps et mœurs', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu'] },
-  { id: 'politique', t: 'Sociologie politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville'] },
+  { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
+  { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski'] },
+  { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville'] },
   { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte'] },
   { id: 'inegalites', t: 'Mobilité sociale', d: "Monter, descendre, rester : la circulation entre positions et ses illusions.", a: ['boudon', 'bourdieu', 'merton'] },
-  { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville'] },
+  { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville', 'parsons'] },
 ];
 
 export const AUTHORS = {

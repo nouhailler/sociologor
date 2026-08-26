@@ -10,7 +10,7 @@ et aucune télémétrie.
 
 | Donnée | Origine | Stockage | Transmission | Finalité |
 |---|---|---|---|---|
-| Les 15 fiches, les 14 domaines | Livrées avec l'application | Cache du service worker | Aucune | Afficher le contenu |
+| Les 15 fiches, les 32 domaines | Livrées avec l'application | Cache du service worker | Aucune | Afficher le contenu |
 | Fiches épinglées | Vos appuis sur l'étoile ★ | `localStorage` | Aucune | Retrouver vos fiches |
 | Réglages d'affichage | Vos choix dans Paramètres | `localStorage` | Aucune | Appliquer vos préférences |
 | Lecture de l'avertissement légal | Votre appui sur « J'ai compris » | `localStorage` | Aucune | Ne pas réafficher l'avertissement |

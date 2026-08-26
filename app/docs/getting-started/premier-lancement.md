@@ -20,7 +20,7 @@ L'application est utilisable hors connexion
 | Étape | Ce qui est affiché | Ce que vous devez faire |
 |---|---|---|
 | 1 | La fenêtre **⚠️ Information importante** : l'application est fournie à titre informatif, son usage relève de votre responsabilité | Lire, puis toucher **J'ai compris** |
-| 2 | L'écran **Accueil** : titre, notion du jour, grille des 14 domaines | Rien — l'application est prête |
+| 2 | L'écran **Accueil** : titre, notion du jour, domaines groupés par famille | Rien — l'application est prête |
 | 3 | En arrière-plan, le service worker enregistre l'application | Rien, c'est automatique |
 | 4 | Navigation par le rail latéral (écran large) ou la barre d'onglets (mobile) | Choisir un domaine, le graphe ou la recherche |
 

@@ -13,20 +13,40 @@ async function enter(page, path = '/') {
 }
 
 test.describe('Parcours principal', () => {
-  test('accueil : notion du jour et 14 domaines', async ({ page }) => {
+  test('accueil : notion du jour et 32 domaines en 8 familles', async ({ page }) => {
     await enter(page);
     await expect(page.getByRole('heading', { name: 'Notion du jour' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Les domaines' })).toBeVisible();
-    await expect(page.getByRole('link', { name: /auteurs$/ })).toHaveCount(14);
+    // « 1 auteur » pour la sociologie rurale et les mobilités, « N auteurs » ailleurs.
+    await expect(page.getByRole('link', { name: /auteurs?$/ })).toHaveCount(32);
+    await expect(page.getByRole('heading', { name: 'Territoires et environnement' })).toBeVisible();
   });
 
   test('domaine → fiche auteur', async ({ page }) => {
     await enter(page);
     await page.getByRole('link', { name: /Déviance/ }).click();
-    await expect(content(page).getByRole('heading', { name: 'Déviance', exact: true })).toBeVisible();
+    await expect(content(page).getByRole('heading', { name: 'Sociologie de la déviance' })).toBeVisible();
     await page.getByRole('link', { name: /Howard S\. Becker/ }).click();
     await expect(content(page).getByRole('heading', { name: 'Howard S. Becker', exact: true })).toBeVisible();
     await expect(page.getByText('Étiquetage').first()).toBeVisible();
+  });
+
+  test('domaine : inspirateurs hors corpus, non cliquables', async ({ page }) => {
+    await enter(page, '/d/genre');
+    await expect(content(page).getByRole('heading', { name: 'Sociologie du genre' })).toBeVisible();
+    await expect(page.getByText('Inégalités et identités').first()).toBeVisible();
+    // Intertitre `soc-kicker`, comme « Influences hors corpus » sur une fiche auteur.
+    await expect(content(page).getByText('Inspirateurs hors corpus')).toBeVisible();
+    // Un inspirateur est du texte : il ne doit exister aucun lien à son nom.
+    await expect(page.getByText(/Judith Butler/)).toBeVisible();
+    await expect(page.getByRole('link', { name: /Judith Butler/ })).toHaveCount(0);
+  });
+
+  test('domaine à un seul auteur : compteur au singulier', async ({ page }) => {
+    await enter(page, '/d/rurale');
+    await expect(content(page).getByRole('heading', { name: 'Sociologie rurale' })).toBeVisible();
+    await expect(page.getByText('1 auteur de référence')).toBeVisible();
+    await expect(page.getByText(/Henri Mendras/)).toBeVisible();
   });
 
   test('fiche : sections attendues et filiation cliquable', async ({ page }) => {

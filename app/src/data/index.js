@@ -1,12 +1,39 @@
-import { DOMAINS, AUTHORS, EXTRA, EXTRA_EDGES } from './authors.js';
+import { DOMAINS as DOMAINS_BASE, AUTHORS, EXTRA, EXTRA_EDGES } from './authors.js';
+import { DOMAINS_ADDED, DOMAIN_EXTRA, FAMILIES } from './domains.js';
 import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 
-export { DOMAINS, AUTHORS, EXTRA, EXTRA_EDGES };
+export { AUTHORS, EXTRA, EXTRA_EDGES, FAMILIES };
 
 export const AUTHOR_IDS = Object.keys(AUTHORS);
 export const AUTHOR_COUNT = AUTHOR_IDS.length;
+
+/**
+ * Les trente-deux domaines, rangés par famille : les quatorze du prototype et
+ * les dix-huit ajoutés, chacun complété de sa famille et de ses inspirateurs
+ * hors corpus. L'ordre est celui de l'accueil — un domaine sans famille
+ * déclarée n'apparaîtrait nulle part, ce que l'audit refuse.
+ */
+const DOMAIN_ORDER = Object.keys(DOMAIN_EXTRA);
+
+export const DOMAINS = FAMILIES.flatMap((f) =>
+  [...DOMAINS_BASE, ...DOMAINS_ADDED]
+    .filter((d) => DOMAIN_EXTRA[d.id]?.famille === f.id)
+    // Dans une famille, l'ordre est celui de `DOMAIN_EXTRA`, pas celui des deux
+    // fichiers sources : sans quoi les quatorze domaines d'origine passeraient
+    // systématiquement devant les dix-huit ajoutés, et « Générale » se
+    // retrouverait en fin de famille Fondations.
+    .sort((a, b) => DOMAIN_ORDER.indexOf(a.id) - DOMAIN_ORDER.indexOf(b.id))
+    .map((d) => ({ ...d, ...DOMAIN_EXTRA[d.id], familleT: f.t })),
+);
+
 export const DOMAIN_COUNT = DOMAINS.length;
+
+/** Les mêmes domaines groupés, pour l'accueil. */
+export const DOMAIN_FAMILIES = FAMILIES.map((f) => ({
+  ...f,
+  domains: DOMAINS.filter((d) => d.famille === f.id),
+}));
 
 /**
  * Filiations réciproques. « A a influencé B » et « B descend de A » sont la
@@ -66,7 +93,11 @@ export function getAuthor(id) {
 export function getDomain(id) {
   const d = DOMAINS.find((x) => x.id === id);
   if (!d) return null;
-  return { ...d, authors: d.a.filter((x) => AUTHORS[x]).map((x) => AUTHORS[x]) };
+  return {
+    ...d,
+    authors: d.a.filter((x) => AUTHORS[x]).map((x) => AUTHORS[x]),
+    inspirateurs: d.inspirateurs || [],
+  };
 }
 
 /* — Concepts — */

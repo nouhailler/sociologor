@@ -1,12 +1,14 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.2.0.
+la version 1.3.0.
 
 ## Contenu
 
-- Corpus **figé** : 15 fiches auteurs, 38 fiches concepts, 14 domaines,
+- Corpus **figé** : 15 fiches auteurs, 38 fiches concepts, 32 domaines,
   43 œuvres. Ni ajout, ni annotation, ni édition par l'utilisateur.
+- Les inspirateurs hors corpus d'un domaine sont des noms, pas des fiches :
+  aucun lien, aucune œuvre, aucune bibliographie ne leur est attachée.
 - Les concepts ne peuvent pas être épinglés dans « Mes fiches » : l'épinglage
   ne porte que sur les auteurs.
 - Les concepts n'apparaissent pas dans le graphe, qui reste celui des

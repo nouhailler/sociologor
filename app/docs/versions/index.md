@@ -4,6 +4,83 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.3.0
+
+Date : 2026-08-26
+
+Les domaines passent de 14 à 32, et chacun nomme ses fondateurs.
+
+## Nouveautés
+
+- **Dix-huit domaines ajoutés** : sociologie générale, économique, des
+  professions, de la consommation, du genre, de la jeunesse, du vieillissement,
+  de l'immigration, du crime, des mouvements sociaux, des médias, du numérique,
+  des loisirs, de la santé, des émotions, rurale, des mobilités et de
+  l'environnement. Avec les quatorze d'origine, l'application en compte 32.
+- **Inspirateurs hors corpus** : chaque domaine nomme trois auteurs qui l'ont
+  fondé ou renouvelé sans avoir de fiche ici — 96 au total, de Le Play à
+  Zuboff, avec en une ligne ce qu'on leur doit. Ils s'affichent en bas de
+  l'écran du domaine, en texte non cliquable, comme les influences hors corpus
+  d'une fiche auteur. Sans eux, une douzaine de domaines paraîtraient sans
+  fondateurs : les quinze fiches ne portent pas la sociologie du genre, du
+  numérique ou de l'environnement.
+- **Huit familles** : Fondations, Institutions, Travail et économie, Inégalités
+  et identités, Normes et conflits, Cultures et médias, Corps santé et
+  émotions, Territoires et environnement. Elles donnent l'ordre de l'accueil et
+  le sous-titre de chaque écran de domaine.
+
+## Changements
+
+- L'**accueil** ne présente plus une grille unique mais une section par
+  famille, chacune avec sa phrase de présentation.
+- Un domaine porte désormais deux noms : un libellé court sur sa carte
+  (« Genre »), son nom complet en titre d'écran (« Sociologie du genre »).
+  « Sociologie urbaine » et « Sociologie politique » deviennent « Urbaine » et
+  « Politique » sur leur carte ; « Corps et mœurs » devient « Corps ».
+- Le compteur d'auteurs s'accorde : la sociologie rurale et les mobilités
+  n'ont qu'un auteur de référence dans le corpus.
+- **Famille** gagne Parsons, et **Corps** gagne Boltanski — deux rattachements
+  qui manquaient.
+- L'**audit documentaire** gagne un dixième contrôle : famille connue, nom
+  complet, phrase de présentation, auteurs existants, au moins un auteur ou un
+  inspirateur, inspirateurs correctement formés, et aucune famille vide.
+
+## Changements incompatibles
+
+Aucun. Les quatorze adresses de domaine existantes restent valides.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. Un fichier `domains.js` porte les
+dix-huit domaines ajoutés, les huit familles et les inspirateurs des 32.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Entrée par domaines](/documentation/features/domaines),
+[Écran Domaine](/documentation/guide/domaine),
+[Écran Accueil](/documentation/guide/accueil),
+[Contenu embarqué](/documentation/reference/contenu),
+[Premier lancement](/documentation/getting-started/premier-lancement),
+[Présentation](/documentation/getting-started/presentation),
+[Données affichées](/documentation/data/donnees),
+[Limites connues](/documentation/reference/limites),
+[FAQ](/documentation/faq/index).
+
+## Limites connues à cette version
+
+Les inspirateurs hors corpus sont des noms, pas des fiches : ni œuvre, ni
+bibliographie, ni lien. Les domaines restent absents de la recherche.
+
+---
+
 # Version 1.2.0
 
 Date : 2026-08-25

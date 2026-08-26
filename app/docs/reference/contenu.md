@@ -1,17 +1,17 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.2.0).
+Inventaire du corpus livré avec l'application (version 1.3.0).
 
 ## Chiffres
 
 | Élément | Nombre |
 |---|---|
 | Fiches | 15 (14 auteurs + 1 école) |
-| Domaines | 14 |
+| Domaines | 32, en 8 familles |
 | Concepts | 38, chacun avec sa fiche |
 | Œuvres référencées | 43 |
 | Liens de filiation dans le graphe | 19 |
-| Influences hors corpus citées | 52 |
+| Influences hors corpus citées | 52 sur les fiches auteurs, 96 sur les domaines |
 | Portraits photographiques embarqués | 6 (sur 15 fiches) |
 | Liens entre concepts | 100 paires (64 associées, 36 opposées), toutes réciproques |
 | Entrées indexées par la recherche | 96 |
@@ -36,14 +36,34 @@ Inventaire du corpus livré avec l'application (version 1.2.0).
 | Raymond Boudon | 1934–2013 | Individualisme méthodologique | `boudon` |
 | Luc Boltanski | 1940– | Sociologie pragmatique | `boltanski` |
 
-## Les 14 domaines
+## Les 32 domaines
 
-Classes sociales · Éducation · Travail · Religion · Déviance · Interactions ·
-Culture · Organisations · Sociologie urbaine · Corps et mœurs · Sociologie
-politique · Méthode · Mobilité sociale · Famille
+Ils sont rangés en huit familles, qui donnent aussi l'ordre de l'accueil.
 
-Chaque domaine rassemble 2 à 3 auteurs de référence ; un même auteur peut
-figurer dans plusieurs domaines.
+| Famille | Domaines |
+|---|---|
+| Fondations | Générale · Méthode · Interactions |
+| Institutions | Famille · Éducation · Religion · Politique · Organisations · Professions |
+| Travail et économie | Travail · Économique · Consommation |
+| Inégalités et identités | Classes sociales · Mobilité sociale · Genre · Jeunesse · Vieillissement · Immigration |
+| Normes et conflits | Déviance · Crime · Mouvements sociaux |
+| Cultures et médias | Culture · Médias · Numérique · Loisirs |
+| Corps, santé et émotions | Corps · Santé · Émotions |
+| Territoires et environnement | Urbaine · Rurale · Mobilités · Environnement |
+
+Chaque domaine rassemble 1 à 4 auteurs de référence parmi les 15 fiches ; un
+même auteur peut figurer dans plusieurs domaines. La carte porte un libellé
+court, l'écran du domaine son nom complet — « Genre » et « Sociologie du
+genre ».
+
+## Inspirateurs hors corpus
+
+Chacun des 32 domaines nomme trois auteurs qui l'ont fondé ou renouvelé sans
+avoir de fiche dans l'application : 96 noms au total, du Play à Zuboff. Ils
+s'affichent en bas de l'écran du domaine, en texte non cliquable, avec en une
+ligne ce qu'on leur doit. Sans eux, une douzaine de domaines — le genre, le
+numérique, l'environnement, la santé — paraîtraient sans fondateurs, faute
+d'être portés par les quinze fiches.
 
 ## Structure d'une fiche
 

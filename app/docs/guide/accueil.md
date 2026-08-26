@@ -3,7 +3,7 @@
 ## Objectif
 
 Point d'entrée de l'application : proposer une notion à lire tout de suite, et
-donner accès aux 14 domaines.
+donner accès aux 32 domaines, rangés en huit familles.
 
 ## Accès
 
@@ -17,7 +17,7 @@ donner accès aux 14 domaines.
 | Titre « La sociologie, reliée. » | Titre de l'application |
 | Texte de présentation | Rappelle le contenu : 15 fiches, leurs concepts, leur filiation |
 | Bloc **Notion du jour** | Un concept, son explication simple, un exemple concret, et un bouton vers la fiche de son auteur |
-| **Les domaines** | Grille des 14 domaines, chacun avec son nombre d'auteurs |
+| **Les domaines** | Huit familles titrées — Fondations, Institutions, Travail et économie, Inégalités et identités, Normes et conflits, Cultures et médias, Corps santé et émotions, Territoires et environnement — chacune suivie de ses cartes de domaine, avec le nombre d'auteurs du corpus |
 | Bouton **Voir le graphe →** | Ouvre le graphe des filiations |
 | Icône 🔍 | Ouvre la recherche |
 | Icône ⚙️ | Ouvre les paramètres |

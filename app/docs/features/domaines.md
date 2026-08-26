@@ -2,10 +2,11 @@
 
 ## Description
 
-14 domaines thématiques (Classes sociales, Éducation, Travail, Religion,
-Déviance, Interactions, Culture, Organisations, Sociologie urbaine, Corps et
-mœurs, Sociologie politique, Méthode, Mobilité sociale, Famille) donnent accès
-aux auteurs de référence du thème.
+32 domaines thématiques, rangés en huit familles, donnent accès aux auteurs de
+référence du thème — et, pour les domaines que le corpus ne couvre pas, aux
+auteurs qui les ont fondés sans avoir de fiche ici.
+
+La liste complète figure dans [Contenu embarqué](/documentation/reference/contenu).
 
 ## Objectif
 
@@ -18,9 +19,11 @@ Aucun.
 
 ## Comment l'utiliser
 
-1. Sur l'accueil, parcourez la grille **Les domaines**.
-2. Touchez un domaine : sa présentation et ses auteurs s'affichent.
-3. Touchez un auteur pour ouvrir sa fiche.
+1. Sur l'accueil, parcourez **Les domaines**, famille par famille.
+2. Touchez un domaine : sa présentation, ses auteurs de référence et ses
+   inspirateurs hors corpus s'affichent.
+3. Touchez un auteur pour ouvrir sa fiche. Les inspirateurs hors corpus ne sont
+   pas cliquables : ils n'ont pas de fiche.
 
 ## Options
 
@@ -32,7 +35,9 @@ Aucun.
 
 ## Données utilisées
 
-La liste des domaines et leurs auteurs sont livrés avec l'application.
+La liste des domaines, leur famille, leurs auteurs et leurs inspirateurs sont
+livrés avec l'application. Les auteurs de référence renvoient aux 15 fiches ;
+les inspirateurs sont du texte, sans destination.
 
 ## Résultat
 
@@ -48,7 +53,13 @@ Identique.
 
 ## Limites
 
-- Un domaine compte 2 à 3 auteurs : la sélection est volontairement courte.
+- Un domaine compte 1 à 4 auteurs de référence : la sélection est
+  volontairement courte.
+- Les inspirateurs hors corpus sont trois par domaine, indicatifs et non
+  exhaustifs. Ils n'ont ni fiche, ni œuvre listée, ni bibliographie.
+- Un domaine dont aucune des 15 fiches n'est fondatrice — le genre, le
+  numérique, l'environnement — s'appuie surtout sur ses inspirateurs : les
+  auteurs de référence y sont rattachés par un apport réel, mais partiel.
 - Les domaines ne sont pas recherchables depuis l'écran Recherche, qui porte
   sur les auteurs, les concepts et les œuvres.
 
@@ -64,5 +75,9 @@ Aucun cas connu.
 
 ## FAQ
 
-- *Pourquoi Bourdieu apparaît-il dans six domaines ?* Parce qu'il a écrit sur
-  chacun d'eux ; les rattachements sont cumulatifs.
+- *Pourquoi Bourdieu apparaît-il dans une dizaine de domaines ?* Parce qu'il a
+  écrit sur chacun d'eux ; les rattachements sont cumulatifs.
+- *Pourquoi tel fondateur n'a-t-il pas de fiche ?* Le corpus est fixé à quinze
+  entrées. Nommer Foucault, Hochschild ou Castells parmi les inspirateurs vaut
+  mieux que de laisser croire qu'un domaine se réduit à ce que les quinze en
+  ont dit.

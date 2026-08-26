@@ -12,12 +12,12 @@ export default function Domain() {
   }
 
   return (
-    <Shell title={domain.t} subtitle={`${domain.authors.length} auteurs`} canBack>
+    <Shell title={domain.t} subtitle={domain.familleT} canBack>
       <div className="soc-enter">
-        <h2 className="soc-h2">{domain.t}</h2>
+        <h2 className="soc-h2">{domain.nom}</h2>
         <p className="soc-lede">{domain.d}</p>
         <p className="soc-kicker" style={{ margin: '0 0 10px' }}>
-          {domain.authors.length} auteurs de référence
+          {domain.authors.length} auteur{domain.authors.length > 1 ? 's' : ''} de référence
         </p>
         <div className="soc-list-grid">
           {domain.authors.map((a) => (
@@ -63,6 +63,43 @@ export default function Domain() {
             </Link>
           ))}
         </div>
+
+        {domain.inspirateurs.length > 0 && (
+          <section style={{ marginTop: 26 }}>
+            <p className="soc-kicker" style={{ margin: '0 0 4px' }}>
+              Inspirateurs hors corpus
+            </p>
+            <p
+              style={{
+                fontSize: 12.5,
+                lineHeight: 1.5,
+                color: 'color-mix(in srgb, var(--color-text) 48%, transparent)',
+                margin: '0 0 12px',
+                maxWidth: '54ch',
+              }}
+            >
+              Ces auteurs ont fondé ou renouvelé le domaine sans avoir de fiche dans
+              l&apos;application : leur nom est ici, pas leur œuvre.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
+              {domain.inspirateurs.map((h) => (
+                <li
+                  key={h}
+                  style={{
+                    fontSize: 13,
+                    lineHeight: 1.5,
+                    paddingLeft: 11,
+                    borderLeft: '2px solid var(--color-neutral-700)',
+                    color: 'color-mix(in srgb, var(--color-text) 76%, transparent)',
+                    textWrap: 'pretty',
+                  }}
+                >
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </Shell>
   );

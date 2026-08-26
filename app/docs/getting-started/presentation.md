@@ -2,7 +2,7 @@
 
 Sociologor est une application web progressive (PWA) de consultation de fiches
 de sociologie. Elle contient **15 fiches** — 14 auteurs et une école de pensée —
-réparties en **14 domaines**, avec leurs concepts, leurs œuvres, leurs critiques
+réparties en **32 domaines**, avec leurs concepts, leurs œuvres, leurs critiques
 et le graphe de leurs filiations.
 
 ## À qui elle s'adresse

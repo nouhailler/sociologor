@@ -24,8 +24,15 @@ Oui, après une première visite en ligne. Voir
 ## Contenu
 
 **Combien de fiches contient l'application ?**
-15 : 14 auteurs et une école de pensée (l'École de Francfort), réparties en 14
+15 : 14 auteurs et une école de pensée (l'École de Francfort), réparties en 32
 domaines, avec 38 concepts et 43 œuvres référencées.
+
+**Pourquoi certains domaines n'ont-ils qu'un ou deux auteurs ?**
+Parce que le corpus compte quinze fiches et que tous les domaines ne sont pas
+fondés par elles. La sociologie du genre, du numérique ou de l'environnement
+doit l'essentiel à des auteurs qui n'ont pas de fiche ici : ils sont nommés en
+bas de l'écran du domaine, sous « Inspirateurs hors corpus », sans lien ni
+fiche.
 
 **Pourquoi tel auteur n'y est-il pas ?**
 Le corpus est volontairement court : quinze entrées qui se répondent. Voir

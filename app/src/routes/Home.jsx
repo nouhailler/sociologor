@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Shell from '../components/Shell.jsx';
 import { IconGear, IconSearch } from '../components/Icons.jsx';
-import { AUTHOR_COUNT, AUTHORS, DOMAINS, DOMAIN_COUNT, conceptOfTheDay } from '../data/index.js';
+import { AUTHOR_COUNT, AUTHORS, DOMAIN_COUNT, DOMAIN_FAMILIES, conceptOfTheDay } from '../data/index.js';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -131,33 +131,63 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="soc-grid">
-          {DOMAINS.map((d) => (
-            <Link key={d.id} to={`/d/${d.id}`} className="soc-card-btn">
-              <span
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontWeight: 'var(--font-heading-weight)',
-                  fontSize: 14,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.01em',
-                  color: 'var(--color-text)',
-                }}
-              >
-                {d.t}
-              </span>
-              <span
-                style={{
-                  fontSize: 11.5,
-                  lineHeight: 1.4,
-                  color: 'color-mix(in srgb, var(--color-text) 45%, transparent)',
-                }}
-              >
-                {d.a.filter((id) => AUTHORS[id]).length} auteurs
-              </span>
-            </Link>
-          ))}
-        </div>
+        {DOMAIN_FAMILIES.map((f) => (
+          <section key={f.id} style={{ marginBottom: 22 }}>
+            <h3
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontWeight: 'var(--font-heading-weight)',
+                fontSize: 13,
+                letterSpacing: '0.02em',
+                color: 'var(--color-accent-300)',
+                margin: '0 0 2px',
+              }}
+            >
+              {f.t}
+            </h3>
+            <p
+              style={{
+                fontSize: 12,
+                lineHeight: 1.45,
+                color: 'color-mix(in srgb, var(--color-text) 45%, transparent)',
+                margin: '0 0 10px',
+                maxWidth: '52ch',
+              }}
+            >
+              {f.d}
+            </p>
+            <div className="soc-grid">
+              {f.domains.map((d) => {
+                const n = d.a.filter((id) => AUTHORS[id]).length;
+                return (
+                  <Link key={d.id} to={`/d/${d.id}`} className="soc-card-btn">
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 'var(--font-heading-weight)',
+                        fontSize: 14,
+                        lineHeight: 1.2,
+                        letterSpacing: '-0.01em',
+                        color: 'var(--color-text)',
+                      }}
+                    >
+                      {d.t}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 11.5,
+                        lineHeight: 1.4,
+                        color: 'color-mix(in srgb, var(--color-text) 45%, transparent)',
+                      }}
+                    >
+                      {n} auteur{n > 1 ? 's' : ''}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        ))}
       </div>
     </Shell>
   );

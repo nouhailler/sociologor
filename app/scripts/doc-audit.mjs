@@ -11,7 +11,9 @@
  *     si le code lit vraiment la position de l'appareil ;
  *  6. aucune section légale n'est vide ;
  *  7. aucun secret n'a été recopié dans la documentation ;
- *  8. les fiches concepts sont complètes et leurs renvois pointent quelque part.
+ *  8. les fiches concepts sont complètes et leurs renvois pointent quelque part ;
+ *  9. aucun voisinage de concepts ne se contredit ;
+ * 10. chaque domaine a une famille, un nom et de quoi remplir son écran.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -200,6 +202,51 @@ for (const p of voisinage.associes) {
   if (voisinage.opposes.has(p)) fail(`Voisinage contradictoire, à la fois associé et opposé : ${p}`);
 }
 
+/* — 10. intégrité des domaines — */
+// Un domaine sans famille n'apparaît sur aucun écran : il existe à son adresse
+// et nulle part ailleurs. Un domaine sans auteur ni inspirateur est une page
+// vide, et un inspirateur mal formé se lit comme une liste de noms sans raison.
+const { DOMAINS: DOMAINS_BASE } = await import('../src/data/authors.js');
+const { DOMAINS_ADDED, DOMAIN_EXTRA, FAMILIES } = await import('../src/data/domains.js');
+
+const allDomains = [...DOMAINS_BASE, ...DOMAINS_ADDED];
+const familyIds = new Set(FAMILIES.map((f) => f.id));
+const seenDomain = new Set();
+
+for (const d of allDomains) {
+  if (seenDomain.has(d.id)) fail(`Domaine en double : ${d.id}`);
+  seenDomain.add(d.id);
+
+  const extra = DOMAIN_EXTRA[d.id];
+  if (!extra) {
+    fail(`Domaine ${d.id} : ni famille ni inspirateurs déclarés dans domains.js.`);
+    continue;
+  }
+  if (!familyIds.has(extra.famille)) fail(`Domaine ${d.id} : famille inconnue « ${extra.famille} ».`);
+  if (!(d.nom || extra.nom)) fail(`Domaine ${d.id} : nom complet manquant.`);
+  if (!d.d) fail(`Domaine ${d.id} : phrase de présentation manquante.`);
+
+  const corpus = (d.a || []).filter((x) => AUTHORS[x]);
+  (d.a || []).forEach((x) => {
+    if (!AUTHORS[x]) fail(`Domaine ${d.id} : auteur inconnu « ${x} ».`);
+  });
+  if (corpus.length === 0 && (extra.inspirateurs || []).length === 0) {
+    fail(`Domaine ${d.id} : aucun auteur du corpus ni inspirateur — l'écran serait vide.`);
+  }
+  for (const i of extra.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Domaine ${d.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+}
+
+for (const id of Object.keys(DOMAIN_EXTRA)) {
+  if (!seenDomain.has(id)) fail(`Complément de domaine orphelin (aucun domaine de ce nom) : ${id}`);
+}
+for (const f of FAMILIES) {
+  if (!allDomains.some((d) => DOMAIN_EXTRA[d.id]?.famille === f.id)) {
+    fail(`Famille vide, elle s'afficherait sans carte : ${f.id}`);
+  }
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -211,6 +258,12 @@ console.log(line('Clés stockage', `${keys.size} détectées, ${legal.CLES_STOCK
 console.log(line('Sections légales', legal.MENTIONS_LEGALES.sections.length + legal.CONFIDENTIALITE.sections.length));
 console.log(line('Fiches concepts', `${Object.keys(CONCEPTS).length} / ${conceptBase.size}, ${CONCEPT_FIELDS.length} rubriques chacune`));
 console.log(line('Voisinages', `${voisinage.associes.size} paires associées, ${voisinage.opposes.size} opposées`));
+console.log(
+  line(
+    'Domaines',
+    `${allDomains.length} en ${FAMILIES.length} familles, ${Object.values(DOMAIN_EXTRA).reduce((n, e) => n + (e.inspirateurs || []).length, 0)} inspirateurs hors corpus`,
+  ),
+);
 
 if (notes.length) {
   console.log('\nÀ vérifier :');
