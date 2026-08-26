@@ -4,6 +4,68 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.5.0
+
+Date : 2026-08-26
+
+La carte des courants gagne un niveau de lecture : à quelle échelle se situe
+chaque manière de faire de la sociologie.
+
+## Nouveautés
+
+- **Hiérarchie des courants**, quatre niveaux — paradigme, courant, école,
+  variante — affichés sur chaque carte par une étiquette et, sauf pour les
+  paradigmes, un renvoi **Fait partie de** vers le nœud dont il relève. Neuf
+  paradigmes (positivisme, matérialisme historique, sociologie des formes,
+  sociologie compréhensive, théorie critique, fonctionnalisme,
+  interactionnisme symbolique, structuralisme génétique, sociologie
+  pragmatique), quatre courants (sociologie politique comparée, holisme
+  durkheimien, sociologie historique des processus, individualisme
+  méthodologique), une école (École de Chicago) et une variante (théorie de
+  l'étiquetage).
+- Cette hiérarchie est un **axe de classement distinct de la filiation**
+  (`↑ Vient de` / `↓ A donné`), qui reste inchangée. Un paradigme peut devoir
+  beaucoup à un autre sans lui être subordonné : la théorie critique doit à
+  Marx et à Weber, elle reste un paradigme à part entière.
+
+## Changements
+
+- L'**audit documentaire** vérifie désormais que chaque courant porte un
+  niveau connu, qu'un paradigme n'a jamais de parent hiérarchique et que les
+  trois autres niveaux en ont toujours un, que ce parent existe, et que la
+  hiérarchie ne boucle pas.
+
+## Changements incompatibles
+
+Aucun. Les quinze courants existants et leurs adresses `?focus=` restent
+inchangés.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. `courants.js` gagne deux champs,
+`niveau` et `parent`, et l'export `NIVEAUX` qui les nomme.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Carte des courants](/documentation/features/carte-courants),
+[Écran Carte des courants](/documentation/guide/courants).
+
+## Limites connues à cette version
+
+Le classement en quatre niveaux reste un choix éditorial parmi d'autres
+découpages possibles de la discipline ; il ne prétend pas trancher les débats
+de classification de la sociologie elle-même.
+
+---
+
 # Version 1.4.0
 
 Date : 2026-08-26

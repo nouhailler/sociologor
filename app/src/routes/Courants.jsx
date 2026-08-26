@@ -99,17 +99,41 @@ export default function Courants() {
                         : 'var(--shadow-sm)',
                     }}
                   >
-                    <h4
-                      style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontWeight: 'var(--font-heading-weight)',
-                        fontSize: 16,
-                        margin: '0 0 4px',
-                        color: 'var(--color-text)',
-                      }}
-                    >
-                      {c.t}
-                    </h4>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', margin: '0 0 4px' }}>
+                      <h4
+                        style={{
+                          fontFamily: 'var(--font-heading)',
+                          fontWeight: 'var(--font-heading-weight)',
+                          fontSize: 16,
+                          margin: 0,
+                          color: 'var(--color-text)',
+                        }}
+                      >
+                        {c.t}
+                      </h4>
+                      <span
+                        style={{
+                          fontSize: 10.5,
+                          letterSpacing: '0.05em',
+                          textTransform: 'uppercase',
+                          padding: '2px 7px',
+                          borderRadius: 'var(--radius-full, 999px)',
+                          border: '1px solid var(--color-accent-300)',
+                          color: 'var(--color-accent-300)',
+                          fontFamily: 'var(--font-heading)',
+                        }}
+                      >
+                        {c.niveauT}
+                      </span>
+                    </div>
+                    {c.parentLink && (
+                      <p style={{ fontSize: 12, margin: '0 0 8px', color: 'color-mix(in srgb, var(--color-text) 50%, transparent)' }}>
+                        Fait partie de{' '}
+                        <Link to={`/courants?focus=${c.parentLink.id}`} style={{ color: 'var(--color-accent-300)' }}>
+                          {c.parentLink.t}
+                        </Link>
+                      </p>
+                    )}
                     <p style={{ fontSize: 13.5, lineHeight: 1.5, margin: '0 0 8px', textWrap: 'pretty' }}>{c.d}</p>
                     <p
                       style={{

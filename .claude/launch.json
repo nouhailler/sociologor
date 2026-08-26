@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sociologor-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "app", "run", "preview", "--", "--host", "--port", "4173"],
+      "port": 4173
+    }
+  ]
+}

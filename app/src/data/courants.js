@@ -15,7 +15,28 @@
  * - Une filiation entre courants n'est pas une filiation entre personnes.
  *   Weber n'a pas lu les interactionnistes ; sa sociologie compréhensive leur a
  *   pourtant donné leur point de départ.
+ * - `niveau` classe le courant sur l'échelle paradigme → courant → école →
+ *   variante (voir `NIVEAUX`). `parent` — optionnel — nomme le nœud dont il
+ *   relève sur cette échelle ; un paradigme n'en a pas. Cette échelle est un
+ *   axe de classement, distinct de `vientDe` : un paradigme peut devoir
+ *   beaucoup à un autre sans lui être subordonné dans la hiérarchie. La
+ *   théorie critique doit à Marx et à Weber (`vientDe`), elle reste un
+ *   paradigme à part entière (`niveau: 'paradigme'`, sans `parent`).
  */
+
+/**
+ * Les quatre niveaux de la hiérarchie, du plus général au plus spécifique.
+ * Un paradigme n'a jamais de `parent` ; les trois autres niveaux en portent
+ * un, qui peut être n'importe quel nœud de niveau supérieur — un courant peut
+ * relever directement d'un paradigme, une variante d'une école ou d'un
+ * paradigme, selon ce que les quinze fiches permettent réellement de motiver.
+ */
+export const NIVEAUX = [
+  { id: 'paradigme', t: 'Paradigme', d: "Une manière autonome de faire de la sociologie, qui ne relève d'aucune autre." },
+  { id: 'courant', t: 'Courant', d: "Une branche théorique reconnue à l'intérieur d'un paradigme." },
+  { id: 'ecole', t: 'École', d: "Un foyer institutionnel — chercheurs, revue, méthode partagée." },
+  { id: 'variante', t: 'Variante', d: "Une théorie précise, appliquée à un objet circonscrit." },
+];
 
 /** Périodes d'affichage, de la plus ancienne à la plus récente. */
 export const PERIODES = [
@@ -57,6 +78,7 @@ export const COURANTS = [
     auteurs: ['comte'],
     vientDe: [],
     inspirateurs: ["Henri de Saint-Simon — le projet de réorganisation sociale dont Comte fut le secrétaire"],
+    niveau: 'paradigme',
   },
   {
     id: 'materialisme-historique',
@@ -71,6 +93,7 @@ export const COURANTS = [
       "Hegel — la dialectique, remise « sur ses pieds »",
       "Adam Smith et David Ricardo — l'économie politique dont Marx retourne la valeur-travail",
     ],
+    niveau: 'paradigme',
   },
   {
     id: 'sociologie-politique-comparee',
@@ -82,6 +105,8 @@ export const COURANTS = [
     auteurs: ['tocqueville'],
     vientDe: [],
     inspirateurs: ["Montesquieu — la comparaison des régimes et l'esprit des lois"],
+    niveau: 'courant',
+    parent: 'sociologie-comprehensive',
   },
   {
     id: 'sociologie-des-formes',
@@ -93,6 +118,7 @@ export const COURANTS = [
     auteurs: ['simmel'],
     vientDe: [],
     inspirateurs: [],
+    niveau: 'paradigme',
   },
   {
     id: 'holisme',
@@ -104,6 +130,8 @@ export const COURANTS = [
     auteurs: ['durkheim'],
     vientDe: ['positivisme'],
     inspirateurs: [],
+    niveau: 'courant',
+    parent: 'positivisme',
   },
   {
     id: 'sociologie-comprehensive',
@@ -115,6 +143,7 @@ export const COURANTS = [
     auteurs: ['weber'],
     vientDe: [],
     inspirateurs: ["Wilhelm Dilthey — la distinction du comprendre et de l'expliquer"],
+    niveau: 'paradigme',
   },
 
   /* — Première moitié du XXᵉ siècle — */
@@ -132,6 +161,8 @@ export const COURANTS = [
       "William Thomas et Florian Znaniecki — « Le Paysan polonais », l'enquête par les documents personnels",
       "Everett Hughes — le métier saisi par son sale boulot, professeur de Becker et de Goffman",
     ],
+    niveau: 'ecole',
+    parent: 'interactionnisme',
   },
   {
     id: 'theorie-critique',
@@ -143,6 +174,7 @@ export const COURANTS = [
     auteurs: ['francfort'],
     vientDe: ['materialisme-historique', 'sociologie-comprehensive'],
     inspirateurs: ["Sigmund Freud — l'appareil psychique, pour comprendre l'adhésion volontaire à la domination"],
+    niveau: 'paradigme',
   },
   {
     id: 'sociologie-historique',
@@ -154,6 +186,8 @@ export const COURANTS = [
     auteurs: ['elias'],
     vientDe: ['sociologie-des-formes', 'sociologie-comprehensive'],
     inspirateurs: ["Sigmund Freud — le refoulement, relu comme un processus historique et non individuel"],
+    niveau: 'courant',
+    parent: 'sociologie-comprehensive',
   },
   {
     id: 'fonctionnalisme',
@@ -165,6 +199,7 @@ export const COURANTS = [
     auteurs: ['parsons', 'merton'],
     vientDe: ['holisme', 'sociologie-comprehensive'],
     inspirateurs: ["Bronisław Malinowski et Radcliffe-Brown — le fonctionnalisme anthropologique dont Parsons hérite"],
+    niveau: 'paradigme',
   },
 
   /* — Seconde moitié du XXᵉ siècle — */
@@ -181,6 +216,7 @@ export const COURANTS = [
       "George Herbert Mead — le soi comme produit du regard d'autrui",
       "Herbert Blumer — le nom du courant, et son programme méthodologique",
     ],
+    niveau: 'paradigme',
   },
   {
     id: 'etiquetage',
@@ -192,6 +228,8 @@ export const COURANTS = [
     auteurs: ['becker'],
     vientDe: ['ecole-de-chicago', 'interactionnisme'],
     inspirateurs: ["Edwin Lemert — la déviance secondaire, celle qui suit la réaction sociale"],
+    niveau: 'variante',
+    parent: 'interactionnisme',
   },
   {
     id: 'structuralisme-genetique',
@@ -203,6 +241,7 @@ export const COURANTS = [
     auteurs: ['bourdieu'],
     vientDe: ['holisme', 'materialisme-historique', 'sociologie-comprehensive'],
     inspirateurs: ["Claude Lévi-Strauss — la structure, dont Bourdieu garde le mot en refusant l'immobilité"],
+    niveau: 'paradigme',
   },
   {
     id: 'individualisme-methodologique',
@@ -214,6 +253,8 @@ export const COURANTS = [
     auteurs: ['boudon'],
     vientDe: ['sociologie-comprehensive'],
     inspirateurs: ["Alexis de Tocqueville — que Boudon revendique comme premier praticien de la méthode"],
+    niveau: 'courant',
+    parent: 'sociologie-comprehensive',
   },
 
   /* — Tournant contemporain — */
@@ -227,5 +268,6 @@ export const COURANTS = [
     auteurs: ['boltanski'],
     vientDe: ['structuralisme-genetique', 'theorie-critique'],
     inspirateurs: ["Laurent Thévenot — les économies de la grandeur, écrites avec lui"],
+    niveau: 'paradigme',
   },
 ];

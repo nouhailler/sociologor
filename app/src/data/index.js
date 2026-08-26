@@ -1,6 +1,6 @@
 import { DOMAINS as DOMAINS_BASE, AUTHORS, EXTRA, EXTRA_EDGES } from './authors.js';
 import { DOMAINS_ADDED, DOMAIN_EXTRA, FAMILIES } from './domains.js';
-import { COURANTS as COURANTS_BASE, PERIODES } from './courants.js';
+import { COURANTS as COURANTS_BASE, PERIODES, NIVEAUX } from './courants.js';
 import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 
@@ -103,12 +103,16 @@ export function getDomain(id) {
 
 /* — Courants — */
 
-export { PERIODES };
+export { PERIODES, NIVEAUX };
 
 /**
  * Carte des courants. `vientDe` est déclaré vers l'amont seulement ; la
  * descendance est déduite ici, comme les filiations entre auteurs — un courant
  * déclaré héritier apparaît toujours dans les héritiers de son parent.
+ *
+ * `parent` porte le même traitement pour la hiérarchie paradigme → courant →
+ * école → variante : c'est un axe de classement distinct de `vientDe`, résolu
+ * ici en `parentLink` pour le fil d'ariane.
  */
 export const COURANTS = (() => {
   const byId = new Map(COURANTS_BASE.map((c) => [c.id, c]));
@@ -120,15 +124,18 @@ export const COURANTS = (() => {
   });
 
   const label = (id) => ({ id, t: byId.get(id).t });
+  const niveauById = new Map(NIVEAUX.map((n) => [n.id, n]));
 
   return COURANTS_BASE.map((c) => ({
     ...c,
     periodeT: PERIODES.find((p) => p.id === c.periode)?.t || '',
+    niveauT: niveauById.get(c.niveau)?.t || '',
     auteursLinks: (c.auteurs || [])
       .filter((a) => AUTHORS[a])
       .map((a) => ({ id: a, name: AUTHORS[a].name, initials: AUTHORS[a].initials, dates: AUTHORS[a].dates })),
     parentsLinks: (c.vientDe || []).filter((p) => byId.has(p)).map(label),
     enfantsLinks: enfants.get(c.id).map(label),
+    parentLink: c.parent && byId.has(c.parent) ? label(c.parent) : null,
   }));
 })();
 

@@ -251,10 +251,11 @@ for (const f of FAMILIES) {
 /* — 11. intégrité de la carte des courants — */
 // Chaque fiche renvoie à son courant depuis son en-tête : un auteur rattaché à
 // aucun courant, ou à deux, casse ce renvoi. Un parent inconnu casse la carte.
-const { COURANTS, PERIODES } = await import('../src/data/courants.js');
+const { COURANTS, PERIODES, NIVEAUX } = await import('../src/data/courants.js');
 
 const courantIds = new Set();
 const periodeIds = new Set(PERIODES.map((p) => p.id));
+const niveauIds = new Set(NIVEAUX.map((n) => n.id));
 const porteurs = new Map();
 
 for (const c of COURANTS) {
@@ -275,12 +276,37 @@ for (const c of COURANTS) {
   for (const i of c.inspirateurs || []) {
     if (!i.includes(' — ')) fail(`Courant ${c.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
   }
+  if (!niveauIds.has(c.niveau)) fail(`Courant ${c.id} : niveau inconnu « ${c.niveau} ».`);
+  if (c.niveau === 'paradigme' && c.parent) fail(`Courant ${c.id} : un paradigme n'a pas de parent, « ${c.parent} » déclaré.`);
+  if (c.niveau !== 'paradigme' && !c.parent) fail(`Courant ${c.id} : niveau « ${c.niveau} » sans parent — la hiérarchie n'aurait rien au-dessus.`);
 }
 
 for (const c of COURANTS) {
   for (const parent of c.vientDe || []) {
     if (!courantIds.has(parent)) fail(`Courant ${c.id} : vientDe renvoie à un courant inconnu « ${parent} ».`);
     if (parent === c.id) fail(`Courant ${c.id} : se déclare issu de lui-même.`);
+  }
+  if (c.parent) {
+    if (!courantIds.has(c.parent)) fail(`Courant ${c.id} : parent renvoie à un courant inconnu « ${c.parent} ».`);
+    if (c.parent === c.id) fail(`Courant ${c.id} : se déclare hiérarchiquement issu de lui-même.`);
+  }
+}
+
+// La hiérarchie doit rester un arbre : en remontant les `parent` depuis
+// n'importe quel courant, on doit toujours atteindre un paradigme sans
+// boucler. Une boucle romprait le fil d'ariane de la carte.
+const byIdForNiveau = new Map(COURANTS.map((c) => [c.id, c]));
+for (const c of COURANTS) {
+  const seen = new Set([c.id]);
+  let cur = c;
+  while (cur.parent) {
+    if (seen.has(cur.parent)) {
+      fail(`Courant ${c.id} : boucle dans la hiérarchie des parents (« ${cur.parent} » déjà visité).`);
+      break;
+    }
+    seen.add(cur.parent);
+    cur = byIdForNiveau.get(cur.parent);
+    if (!cur) break;
   }
 }
 
@@ -312,7 +338,7 @@ console.log(
 console.log(
   line(
     'Courants',
-    `${COURANTS.length} en ${PERIODES.length} périodes, ${COURANTS.reduce((n, c) => n + (c.vientDe || []).length, 0)} filiations`,
+    `${COURANTS.length} en ${PERIODES.length} périodes, ${COURANTS.reduce((n, c) => n + (c.vientDe || []).length, 0)} filiations, ${NIVEAUX.map((n) => `${COURANTS.filter((c) => c.niveau === n.id).length} ${n.t.toLowerCase()}(s)`).join(', ')}`,
   ),
 );
 
