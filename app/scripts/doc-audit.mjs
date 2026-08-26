@@ -182,6 +182,24 @@ for (const [id, c] of Object.entries(CONCEPTS)) {
   }
 }
 
+/* — 9. un voisinage ne se contredit pas — */
+// Les voisinages sont symétrisés à l'affichage : une paire déclarée des deux
+// côtés, une fois comme associée et une fois comme opposée, place le même
+// concept dans les deux listes de la fiche. Le lecteur y lit une contradiction,
+// pas une nuance.
+const conceptPair = (a, b) => [a, b].sort().join(' ↔ ');
+const voisinage = { associes: new Set(), opposes: new Set() };
+for (const [id, c] of Object.entries(CONCEPTS)) {
+  for (const k of ['associes', 'opposes']) {
+    for (const other of c[k] || []) {
+      if (conceptBase.has(other) && other !== id) voisinage[k].add(conceptPair(id, other));
+    }
+  }
+}
+for (const p of voisinage.associes) {
+  if (voisinage.opposes.has(p)) fail(`Voisinage contradictoire, à la fois associé et opposé : ${p}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -192,6 +210,7 @@ console.log(line('Hôtes externes', `${hosts.size} dans le code, ${declaredHosts
 console.log(line('Clés stockage', `${keys.size} détectées, ${legal.CLES_STOCKAGE.length} documentées`));
 console.log(line('Sections légales', legal.MENTIONS_LEGALES.sections.length + legal.CONFIDENTIALITE.sections.length));
 console.log(line('Fiches concepts', `${Object.keys(CONCEPTS).length} / ${conceptBase.size}, ${CONCEPT_FIELDS.length} rubriques chacune`));
+console.log(line('Voisinages', `${voisinage.associes.size} paires associées, ${voisinage.opposes.size} opposées`));
 
 if (notes.length) {
   console.log('\nÀ vérifier :');

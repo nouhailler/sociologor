@@ -75,7 +75,7 @@ export const CONCEPTS = {
       { y: '1822', t: 'Plan des travaux scientifiques' },
       { y: '1842', t: 'Cours de philosophie positive, leçons 51 à 57' },
     ],
-    associes: ['physique-sociale', 'rationalisation'],
+    associes: ['physique-sociale'],
     opposes: ['rationalisation', 'processus-de-civilisation'],
     critiques: [
       "Les trois états coexistent au lieu de se succéder : le même individu prie, invoque la Nature et lit un graphique dans la même journée.",
@@ -422,7 +422,7 @@ export const CONCEPTS = {
       { y: '1893', t: 'De la division du travail social, livre III' },
       { y: '1897', t: 'Le Suicide, livre II' },
     ],
-    associes: ['solidarite-organique', 'fait-social', 'tension-anomique'],
+    associes: ['fait-social', 'tension-anomique'],
     opposes: ['solidarite-organique'],
     critiques: [
       "Le concept est trop large : il a servi à expliquer le suicide, le crime, le divorce, la grève et le désengagement politique.",
@@ -455,7 +455,7 @@ export const CONCEPTS = {
       { y: '1893', t: 'De la division du travail social' },
       { y: '1902', t: 'Préface à la deuxième édition, sur les groupements professionnels' },
     ],
-    associes: ['fait-social', 'anomie', 'systeme-social'],
+    associes: ['fait-social', 'systeme-social'],
     opposes: ['anomie', 'blasement-urbain'],
     critiques: [
       "L'histoire ne va pas du mécanique à l'organique : les deux formes coexistent dans toute société connue.",
@@ -595,7 +595,7 @@ export const CONCEPTS = {
       { y: '1951', t: 'Le Système social, chapitres III et X' },
       { y: '1955', t: 'Family, Socialization and Interaction Process' },
     ],
-    associes: ['systeme-social', 'domination-legitime', 'mise-en-scene-de-soi'],
+    associes: ['systeme-social', 'domination-legitime'],
     opposes: ['mise-en-scene-de-soi', 'alienation'],
     critiques: [
       "L'acteur y est un exécutant surdéterminé : Wrong parlera d'une « conception sursocialisée de l'homme ».",
@@ -700,7 +700,7 @@ export const CONCEPTS = {
       { y: '1957', t: 'Édition augmentée : Social Theory and Social Structure' },
     ],
     associes: ['effets-pervers', 'prophetie-autorealisatrice', 'systeme-social'],
-    opposes: ['systeme-social'],
+    opposes: ['individualisme-methodologique'],
     critiques: [
       "Une fonction latente n'est jamais réfutable : on peut en attribuer une à n'importe quelle pratique après coup.",
       "L'analyse reste fonctionnaliste : elle explique la persistance par l'utilité, ce que Merton reprochait pourtant à Parsons.",
@@ -946,7 +946,7 @@ export const CONCEPTS = {
       { y: '1959', t: 'La Mise en scène de la vie quotidienne' },
       { y: '1967', t: 'Les Rites d\'interaction' },
     ],
-    associes: ['stigmate', 'cadre-de-l-experience', 'role-et-attentes', 'formes-de-socialisation'],
+    associes: ['stigmate', 'cadre-de-l-experience', 'formes-de-socialisation'],
     opposes: ['role-et-attentes'],
     critiques: [
       "La métaphore suggère un acteur cynique et calculateur derrière le rôle, ce que Goffman nie mais que le vocabulaire impose.",
@@ -1267,7 +1267,7 @@ export const CONCEPTS = {
       { y: '1991', t: 'De la justification (avec L. Thévenot)' },
       { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' },
     ],
-    associes: ['regimes-de-justification', 'rationalisation', 'industrie-culturelle'],
+    associes: ['regimes-de-justification', 'industrie-culturelle'],
     opposes: ['rationalisation'],
     critiques: [
       "Le corpus est celui des manuels de management : il dit ce que le patronat se raconte, non ce que les salariés vivent.",

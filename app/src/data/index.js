@@ -8,6 +8,36 @@ export const AUTHOR_IDS = Object.keys(AUTHORS);
 export const AUTHOR_COUNT = AUTHOR_IDS.length;
 export const DOMAIN_COUNT = DOMAINS.length;
 
+/**
+ * Filiations réciproques. « A a influencé B » et « B descend de A » sont la
+ * même arête vue par ses deux bouts : elle est déduite ici plutôt que recopiée
+ * dans les deux fiches. Recopiée, il manquait un côté — Boudon déclarait Weber
+ * en amont sans que Weber le porte en aval, et le graphe ne traçait pas le
+ * lien que la fiche annonçait.
+ */
+const FILIATION = (() => {
+  const out = {};
+  AUTHOR_IDS.forEach((id) => {
+    out[id] = { up: new Set(), down: new Set() };
+  });
+  AUTHOR_IDS.forEach((id) => {
+    (AUTHORS[id].up || []).forEach((from) => {
+      if (!out[from]) return;
+      out[id].up.add(from);
+      out[from].down.add(id);
+    });
+    (AUTHORS[id].down || []).forEach((to) => {
+      if (!out[to]) return;
+      out[id].down.add(to);
+      out[to].up.add(id);
+    });
+  });
+  return out;
+})();
+
+/** Ordre du corpus, pour que deux fiches listent leurs filiations pareil. */
+const inCorpusOrder = (ids) => [...ids].sort((a, b) => AUTHOR_IDS.indexOf(a) - AUTHOR_IDS.indexOf(b));
+
 /** Fiche complète : auteur + champs complémentaires + repères + domaines rattachés. */
 export function getAuthor(id) {
   const a = AUTHORS[id];
@@ -28,8 +58,8 @@ export function getAuthor(id) {
       { k: 'Courant', v: a.courant },
     ],
     domainTags: DOMAINS.filter((d) => d.a.includes(id)).slice(0, 3).map((d) => d.t),
-    upLinks: (a.up || []).filter((x) => AUTHORS[x]).map((x) => ({ id: x, label: AUTHORS[x].name })),
-    downLinks: (a.down || []).filter((x) => AUTHORS[x]).map((x) => ({ id: x, label: AUTHORS[x].name })),
+    upLinks: inCorpusOrder(FILIATION[id].up).map((x) => ({ id: x, label: AUTHORS[x].name })),
+    downLinks: inCorpusOrder(FILIATION[id].down).map((x) => ({ id: x, label: AUTHORS[x].name })),
   };
 }
 
@@ -162,12 +192,16 @@ export const NODE_H = 78;
 export const GRAPH_W = 880;
 export const GRAPH_H = 790;
 
-/** Une arête par relation « a influencé », dédoublonnée. `soft` = influence indirecte. */
+/**
+ * Une arête par relation « a influencé », dédoublonnée. `soft` = influence
+ * indirecte. La source est `FILIATION`, donc l'union des deux déclarations :
+ * le graphe montre exactement ce que les sections Filiation annoncent.
+ */
 export const GRAPH_EDGES = (() => {
   const seen = new Set();
   const edges = [];
   AUTHOR_IDS.forEach((id) => {
-    (AUTHORS[id].down || []).forEach((to) => {
+    inCorpusOrder(FILIATION[id].down).forEach((to) => {
       if (!AUTHORS[to] || seen.has(`${id}>${to}`)) return;
       seen.add(`${id}>${to}`);
       const f = AUTHORS[id];

@@ -55,6 +55,10 @@ Les deux relations sont **symétriques**. Si l'habitus est déclaré opposé à
 l'individualisme méthodologique, la fiche de l'individualisme méthodologique
 affiche l'opposition elle aussi : on peut toujours revenir sur ses pas.
 
+Une paire est associée **ou** opposée, jamais les deux : un concept qui
+figurerait dans les deux listes d'une même fiche se lirait comme une
+contradiction, et l'audit documentaire refuse ce cas.
+
 Un concept a au minimum un associé et un opposé. « Fait social » en compte le
 plus — sept oppositions —, ce qui reflète sa place dans les querelles de
 méthode de la discipline.

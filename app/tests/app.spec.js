@@ -233,6 +233,31 @@ test.describe('Parcours principal', () => {
     await expect(page.locator('[data-active="true"]')).toHaveCount(1);
   });
 
+  test('filiation : la fiche et le graphe annoncent les mêmes liens', async ({ page }) => {
+    // Le bloc d'une filiation, désigné par son intitulé : « Max Weber » sous
+    // « Hérite de » et sous « A influencé » ne veut pas dire la même chose.
+    const bloc = (label) => page.getByText(label, { exact: true }).locator('xpath=following-sibling::div');
+
+    await enter(page, '/a/boudon');
+    await expect(bloc('Hérite de').getByRole('link', { name: 'Max Weber' })).toBeVisible();
+    await page.goto('/a/weber');
+    await expect(bloc('A influencé').getByRole('link', { name: 'Raymond Boudon' })).toBeVisible();
+    await page.goto('/a/durkheim');
+    await expect(bloc('Hérite de').getByRole('link', { name: 'Alexis de Tocqueville' })).toBeVisible();
+
+    // Une arête par relation, réciproques comprises.
+    await page.goto('/graphe');
+    await expect(page.locator('svg[width="880"] path')).toHaveCount(19);
+  });
+
+  test('voisinage : un concept n\'est pas à la fois associé et opposé', async ({ page }) => {
+    const bloc = (label) => page.getByText(label, { exact: true }).locator('xpath=following-sibling::div');
+
+    await enter(page, '/c/anomie');
+    await expect(bloc('Concepts opposés').getByRole('link', { name: /Solidarité organique/ })).toBeVisible();
+    await expect(bloc('Concepts associés').getByRole('link', { name: /Solidarité organique/ })).toHaveCount(0);
+  });
+
   test('export Markdown : téléchargement d\'un fichier nommé', async ({ page }) => {
     await enter(page, '/a/durkheim');
     const [download] = await Promise.all([

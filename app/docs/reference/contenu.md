@@ -10,10 +10,10 @@ Inventaire du corpus livré avec l'application (version 1.2.0).
 | Domaines | 14 |
 | Concepts | 38, chacun avec sa fiche |
 | Œuvres référencées | 43 |
-| Liens de filiation dans le graphe | 18 |
+| Liens de filiation dans le graphe | 19 |
 | Influences hors corpus citées | 52 |
 | Portraits photographiques embarqués | 6 (sur 15 fiches) |
-| Liens entre concepts | 104 paires (68 associés, 36 opposés), toutes réciproques |
+| Liens entre concepts | 100 paires (64 associées, 36 opposées), toutes réciproques |
 | Entrées indexées par la recherche | 96 |
 
 ## Les 15 fiches

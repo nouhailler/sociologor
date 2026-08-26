@@ -17,7 +17,7 @@ Les 38 concepts deviennent des fiches à part entière.
   (œuvre, année, contexte), exemples concrets, œuvres où le concept apparaît,
   évolution historique, critiques, concepts associés, concepts opposés.
 - **Navigation entre concepts** : la section *Voisinage* relie les 38 concepts
-  par 104 paires — 68 associations, 36 oppositions —, toutes réciproques. Un
+  par 100 paires — 64 associations, 36 oppositions —, toutes réciproques. Un
   concept n'est plus un bloc dans une fiche auteur, c'est une destination.
 - **Critiques au niveau du concept** : jusqu'ici les critiques ne visaient que
   l'auteur. Chaque concept porte désormais les objections qui lui sont propres.
@@ -33,9 +33,23 @@ Les 38 concepts deviennent des fiches à part entière.
   l'auteur reste accessible par un bouton secondaire.
 - Dans la **recherche**, un résultat de type Concept mène à la fiche du
   concept, et non plus à celle de son auteur. Auteurs et œuvres sont inchangés.
+- **Filiations réciproques** : le graphe se construisait sur les seules
+  influences déclarées « en aval », les fiches affichaient l'amont et l'aval
+  déclarés. Deux relations n'existaient donc que d'un côté — la fiche Boudon
+  annonçait Weber en amont sans que le graphe trace le lien, et le graphe
+  reliait Tocqueville à Durkheim sans que la fiche Durkheim le mentionne. La
+  réciproque est désormais déduite : le graphe passe à **19 liens** et dit
+  exactement ce que les sections Filiation annoncent.
+- **Voisinages de concepts sans contradiction** : cinq paires étaient déclarées
+  à la fois associées et opposées, et le même concept apparaissait dans les deux
+  listes d'une fiche. Chaque paire a été tranchée — anomie et solidarité
+  organique sont opposées, la mise en scène de soi et le rôle intériorisé aussi,
+  la fonction latente reste associée au système social et s'oppose désormais à
+  l'individualisme méthodologique. Le corpus compte 100 paires au lieu de 104.
 - L'**audit documentaire** gagne un huitième contrôle : complétude des dix
   rubriques, validité des renvois entre concepts, et absence de recopie de
-  l'exemple de la fiche auteur.
+  l'exemple de la fiche auteur. Un neuvième refuse une paire déclarée à la fois
+  associée et opposée.
 - L'audit relit désormais aussi la page hôte et la configuration du service
   worker, et non plus les seuls fichiers de `src/` : un hôte externe déclaré
   ailleurs que dans le code de l'application ne passe plus inaperçu.

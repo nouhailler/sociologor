@@ -2,7 +2,7 @@
 
 ## Description
 
-Une carte des 15 fiches reliées par leurs influences : 18 liens, distingués en
+Une carte des 15 fiches reliées par leurs influences : 19 liens, distingués en
 filiation directe et influence indirecte ou critique.
 
 ## Objectif
@@ -37,6 +37,11 @@ Voir [Tous les paramètres](/documentation/settings/index).
 Les relations « Hérite de » et « A influencé » de chaque fiche, plus la
 qualification directe / indirecte de six liens. Positions des nœuds fixées dans
 les données.
+
+Ces relations sont **réciproques** : déclarer que Boudon hérite de Weber revient
+à déclarer que Weber a influencé Boudon. Le graphe et les deux fiches
+concernées montrent donc toujours le même lien, quel que soit le côté où il a
+été saisi.
 
 ## Résultat
 

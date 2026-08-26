@@ -50,7 +50,11 @@ sinon, et le build avec lui.
 
 L'audit vérifie aussi : liens internes, hôtes externes joints par le code
 nommés dans les textes légaux, clés de stockage documentées, sections légales
-non vides, absence de secrets. Ces règles ont été validées en les cassant
+non vides, absence de secrets, intégrité des fiches concepts, et absence de
+voisinage contradictoire — une paire de concepts ne peut pas être à la fois
+associée et opposée. Le relevé des hôtes couvre `src/`, `index.html` et
+`vite.config.js`, antislashs neutralisés : un hôte caché dans une expression
+régulière de cache y est visible. Ces règles ont été validées en les cassant
 volontairement une fois chacune.
 
 ### Système légal
