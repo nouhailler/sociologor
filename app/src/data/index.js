@@ -306,3 +306,70 @@ export const GRAPH_NODES = AUTHOR_IDS.map((id) => ({
   x: AUTHORS[id].x,
   y: AUTHORS[id].y,
 }));
+
+/* — Graphe des concepts — */
+// Pas de coordonnées éditoriales pour 38 concepts : la position se calcule,
+// groupée par auteur (cinq colonnes, trois rangées — les quinze fiches du
+// corpus, dans l'ordre déjà utilisé partout ailleurs) plutôt que placée à la
+// main comme pour les quinze auteurs.
+export const CNODE_W = 168;
+export const CNODE_H = 56;
+const CCOLS = 5;
+const CCOL_W = 210;
+const CROW_H = 320;
+const CMARGIN_X = 40;
+const CMARGIN_Y = 40;
+const CHEADER_GAP = 30;
+const CSLOT_GAP = 66;
+
+export const CONCEPT_GRAPH_W = CMARGIN_X * 2 + (CCOLS - 1) * CCOL_W + CNODE_W;
+export const CONCEPT_GRAPH_H = CMARGIN_Y * 2 + 2 * CROW_H + CHEADER_GAP + 4 * CSLOT_GAP;
+
+/** Un groupe par auteur : position du libellé d'en-tête, au-dessus de ses concepts. */
+export const CONCEPT_CLUSTERS = AUTHOR_IDS.map((id, i) => ({
+  authorId: id,
+  name: AUTHORS[id].name,
+  x: CMARGIN_X + (i % CCOLS) * CCOL_W,
+  y: CMARGIN_Y + Math.floor(i / CCOLS) * CROW_H,
+}));
+
+export const CONCEPT_GRAPH_NODES = CONCEPT_CLUSTERS.flatMap((cl) =>
+  (AUTHORS[cl.authorId].concepts || []).map((c, i) => ({
+    id: c.id,
+    label: c.t,
+    authorId: cl.authorId,
+    authorName: cl.name,
+    x: cl.x,
+    y: cl.y + CHEADER_GAP + i * CSLOT_GAP,
+  })),
+);
+
+/**
+ * Une arête par paire associée ou opposée, dédoublonnée — `NEIGHBOURS` est déjà
+ * symétrisé, donc chaque paire n'apparaît ici qu'une fois quel que soit le
+ * sens dans lequel `concepts.js` l'a déclarée.
+ */
+export const CONCEPT_GRAPH_EDGES = (() => {
+  const byId = new Map(CONCEPT_GRAPH_NODES.map((n) => [n.id, n]));
+  const seen = new Set();
+  const edges = [];
+  CONCEPT_IDS.forEach((id) => {
+    ['associes', 'opposes'].forEach((kind) => {
+      NEIGHBOURS[id][kind].forEach((other) => {
+        const pair = [id, other].sort();
+        const key = `${pair[0]}~${pair[1]}~${kind}`;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const a = byId.get(id);
+        const b = byId.get(other);
+        if (!a || !b) return;
+        const x1 = a.x + CNODE_W / 2;
+        const y1 = a.y + CNODE_H / 2;
+        const x2 = b.x + CNODE_W / 2;
+        const y2 = b.y + CNODE_H / 2;
+        edges.push({ id: key, from: id, to: other, kind, d: `M${x1} ${y1} L${x2} ${y2}` });
+      });
+    });
+  });
+  return edges;
+})();

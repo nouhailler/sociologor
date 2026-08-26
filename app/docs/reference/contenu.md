@@ -1,6 +1,6 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.4.0).
+Inventaire du corpus livré avec l'application (version 1.6.0).
 
 ## Chiffres
 
@@ -8,10 +8,11 @@ Inventaire du corpus livré avec l'application (version 1.4.0).
 |---|---|
 | Fiches | 15 (14 auteurs + 1 école) |
 | Domaines | 32, en 8 familles |
-| Courants | 15, en 4 périodes, reliés par 18 filiations |
+| Courants | 15, en 4 périodes et 4 niveaux (paradigme, courant, école, variante), reliés par 18 filiations |
 | Concepts | 38, chacun avec sa fiche |
 | Œuvres référencées | 43 |
-| Liens de filiation dans le graphe | 19 |
+| Nœuds et liens du graphe des filiations | 15 auteurs, 19 liens |
+| Nœuds et liens du graphe des concepts | 38 concepts, 100 arêtes (64 associées, 36 opposées) |
 | Influences hors corpus citées | 52 sur les fiches auteurs, 96 sur les domaines |
 | Portraits photographiques embarqués | 6 (sur 15 fiches) |
 | Liens entre concepts | 100 paires (64 associées, 36 opposées), toutes réciproques |

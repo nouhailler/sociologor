@@ -44,6 +44,7 @@ export const CHAPTERS = [
       { slug: 'domaines', title: 'Entrée par domaines' },
       { slug: 'notion-du-jour', title: 'Notion du jour' },
       { slug: 'graphe-filiations', title: 'Graphe des filiations' },
+      { slug: 'graphe-concepts', title: 'Graphe des concepts' },
       { slug: 'carte-courants', title: 'Carte des courants' },
       { slug: 'recherche', title: 'Recherche' },
       { slug: 'favoris', title: 'Fiches épinglées' },

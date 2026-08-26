@@ -1,7 +1,7 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.4.0.
+la version 1.6.0.
 
 ## Contenu
 
@@ -11,8 +11,9 @@ la version 1.4.0.
   aucun lien, aucune œuvre, aucune bibliographie ne leur est attachée.
 - Les concepts ne peuvent pas être épinglés dans « Mes fiches » : l'épinglage
   ne porte que sur les auteurs.
-- Les concepts n'apparaissent pas dans le graphe, qui reste celui des
-  filiations entre auteurs.
+- Le graphe des concepts n'a pas de fiche auteur ou concept qui y renvoie par
+  un `focus` : contrairement au graphe des filiations et à la carte des
+  courants, on n'y arrive que depuis l'écran Graphe lui-même.
 - Un courant n'a pas d'écran propre ni d'adresse à lui : la carte les présente
   tous, l'un sous l'autre.
 - La carte des courants ne prétend pas à l'exhaustivité : elle ne montre que
@@ -38,11 +39,15 @@ la version 1.4.0.
 
 ## Graphe
 
-- Dimensions fixes (880 × 790 px), positions codées dans les données : pas de
-  zoom, pas de réorganisation, pas d'adaptation au petit écran autrement que
-  par le défilement du cadre.
+- Deux cadres à dimensions fixes — graphe des filiations (880 × 790 px),
+  positions éditoriales, et graphe des concepts (1088 × 1014 px), positions
+  calculées et groupées par auteur — sans zoom ni réorganisation, chacun
+  consulté par défilement sur petit écran.
+- Le graphe des concepts affiche ses 100 arêtes sans réduire la densité au
+  centre du cadre : c'est un choix assumé plutôt qu'un défaut à corriger.
 - Pas de parcours clavier nœud par nœud dédié ; l'équivalent textuel des liens
-  se trouve dans la section **Filiation** de chaque fiche.
+  se trouve dans la section **Filiation** de chaque fiche auteur et
+  **Voisinage** de chaque fiche concept.
 
 ## Technique
 

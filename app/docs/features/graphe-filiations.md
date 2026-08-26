@@ -7,7 +7,10 @@ filiation directe et influence indirecte ou critique.
 
 Ce graphe relie des **personnes**. Pour la filiation des **courants** — d'où
 vient le fonctionnalisme, ce que la théorie critique doit à Marx et à Weber —
-voir la [carte des courants](/documentation/features/carte-courants).
+voir la [carte des courants](/documentation/features/carte-courants). Pour le
+réseau des **concepts**, voir le [graphe des
+concepts](/documentation/features/graphe-concepts), sous celui-ci sur le même
+écran.
 
 ## Objectif
 

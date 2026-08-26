@@ -15,8 +15,8 @@ Français, hors connexion, sans compte ni collecte de données.
 | `sociologor-pwa-prototype/` | Le bundle de maquettes Claude Design d'origine — **référence historique, ne pas modifier** |
 | `DOCUMENTATION_SPEC.md` | Le standard documentaire appliqué au projet |
 
-> Documentation : suivre DOCUMENTATION_SPEC.md. Une tâche n'est « done » que si
-> la doc est à jour.
+> **Documentation : NE PAS documenter pendant l'implémentation.** La doc se
+> fait en fin de cycle, uniquement sur demande.
 
 ## Commandes
 

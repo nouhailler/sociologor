@@ -246,7 +246,10 @@ test.describe('Parcours principal', () => {
 
   test('graphe : nœuds cliquables et centrage depuis une fiche', async ({ page }) => {
     await enter(page, '/graphe');
-    await expect(page.getByRole('link', { name: /Pierre Bourdieu/ })).toBeVisible();
+    // Un nom d'auteur figure aussi comme sous-titre des nœuds de ses concepts,
+    // dans le graphe des concepts plus bas : on cible le graphe des filiations.
+    const filiation = page.locator('[aria-label="Graphe des filiations, défilement horizontal et vertical"]');
+    await expect(filiation.getByRole('link', { name: /Pierre Bourdieu/ })).toBeVisible();
     await page.goto('/a/elias');
     await page.getByRole('link', { name: 'Situer dans le graphe' }).click();
     await expect(page).toHaveURL(/focus=elias/);
@@ -268,6 +271,17 @@ test.describe('Parcours principal', () => {
     // Une arête par relation, réciproques comprises.
     await page.goto('/graphe');
     await expect(page.locator('svg[width="880"] path')).toHaveCount(19);
+  });
+
+  test('graphe des concepts : sous le graphe des filiations, un nœud par concept', async ({ page }) => {
+    await enter(page, '/graphe');
+    const concepts = page.locator('[aria-label="Graphe des concepts, défilement horizontal et vertical"]');
+    await expect(concepts.getByRole('link')).toHaveCount(38);
+    // Une arête par paire associée ou opposée, dédoublonnée : 64 + 36.
+    await expect(concepts.locator('svg path')).toHaveCount(100);
+    await concepts.getByRole('link', { name: /Habitus/ }).click();
+    await expect(page).toHaveURL(/\/c\/habitus/);
+    await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();
   });
 
   test('voisinage : un concept n\'est pas à la fois associé et opposé', async ({ page }) => {

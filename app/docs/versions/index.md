@@ -4,6 +4,65 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.6.0
+
+Date : 2026-08-26
+
+Une seconde carte sur l'écran Graphe : celle des concepts, sous celle des
+personnes.
+
+## Nouveautés
+
+- **Graphe des concepts**, sur l'écran `/graphe`, sous le graphe des
+  filiations : les 38 concepts, groupés par auteur, reliés par 100 arêtes —
+  64 associations, 36 oppositions — en trait plein ou pointillé. Touchez un
+  concept pour ouvrir sa fiche.
+- Les positions des 38 nœuds sont **calculées**, groupées par auteur, plutôt
+  que fixées à la main comme pour les quinze auteurs du graphe des filiations
+  — trente-huit positions éditoriales auraient été un travail disproportionné
+  pour un graphe qui se déduit entièrement des voisinages déjà déclarés dans
+  `concepts.js`.
+
+## Changements
+
+- Aucun changement sur le graphe des filiations lui-même : la nouveauté
+  s'ajoute en dessous, sur le même écran.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée, aucune nouvelle donnée éditoriale :
+le graphe des concepts se déduit entièrement des 38 concepts et de leurs
+voisinages, déjà livrés depuis la version 1.2.0.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+Une page créée : [Graphe des
+concepts](/documentation/features/graphe-concepts). Mises à jour :
+[Graphe des filiations](/documentation/features/graphe-filiations),
+[Écran Graphe](/documentation/guide/graphe),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites).
+
+## Limites connues à cette version
+
+Le graphe des concepts n'a pas de `?focus=` : aucune fiche n'y renvoie sur un
+concept précis. Sa densité au centre du cadre — 100 arêtes pour 38 nœuds —
+n'est pas atténuée.
+
+---
+
 # Version 1.5.0
 
 Date : 2026-08-26
