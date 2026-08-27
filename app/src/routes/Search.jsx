@@ -20,7 +20,7 @@ export default function Search() {
   }
 
   return (
-    <Shell title="Recherche" subtitle="Auteurs, concepts, œuvres">
+    <Shell title="Recherche" subtitle="Auteurs, concepts, œuvres, phénomènes">
       <div style={{ maxWidth: 720 }}>
         <label className="text-muted" htmlFor="soc-q" style={{ display: 'block', fontSize: 12, marginBottom: 5 }}>
           Rechercher dans les fiches
@@ -31,7 +31,7 @@ export default function Search() {
           type="search"
           value={q}
           onChange={(e) => update({ q: e.target.value })}
-          placeholder="habitus, Weber, stigmate, anomie…"
+          placeholder="habitus, Weber, chômage, anomie…"
           autoComplete="off"
           style={{ margin: '0 0 12px', fontSize: 15, minHeight: 42 }}
         />
@@ -64,8 +64,8 @@ export default function Search() {
 
         {results.length === 0 && (
           <p className="soc-lede" style={{ maxWidth: '48ch' }}>
-            Aucun résultat pour « {q} ». Essayez un nom d&apos;auteur, un concept (habitus, anomie, stigmate) ou
-            un titre d&apos;œuvre.
+            Aucun résultat pour « {q} ». Essayez un nom d&apos;auteur, un concept (habitus, anomie, stigmate), un
+            titre d&apos;œuvre ou un phénomène (chômage, gentrification).
           </p>
         )}
 

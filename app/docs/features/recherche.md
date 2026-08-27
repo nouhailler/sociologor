@@ -2,8 +2,8 @@
 
 ## Description
 
-Une recherche locale et instantanée sur les 96 entrées du corpus : 15 auteurs,
-38 concepts et 43 œuvres.
+Une recherche locale et instantanée sur les 124 entrées du corpus : 15
+auteurs, 38 concepts, 43 œuvres et 28 phénomènes sociaux.
 
 ## Objectif
 
@@ -17,14 +17,15 @@ Aucun.
 
 1. Ouvrez l'onglet **Chercher**.
 2. Tapez un mot : la liste se met à jour à chaque frappe.
-3. Restreignez au besoin par **Auteurs**, **Concepts** ou **Œuvres**.
-4. Touchez un résultat pour ouvrir la fiche de son auteur.
+3. Restreignez au besoin par **Auteurs**, **Concepts**, **Œuvres** ou
+   **Phénomènes**.
+4. Touchez un résultat pour ouvrir sa fiche.
 
 ## Options
 
 | Option | Valeurs |
 |---|---|
-| Filtre de type | Tout (défaut), Auteurs, Concepts, Œuvres |
+| Filtre de type | Tout (défaut), Auteurs, Concepts, Œuvres, Phénomènes |
 | Paramètres d'adresse | `q` (texte cherché), `type` (filtre) |
 
 ## Paramètres associés
@@ -56,13 +57,14 @@ Identique.
 | Auteur | La fiche de l'auteur |
 | Concept | La [fiche du concept](/documentation/features/fiches-concepts) |
 | Œuvre | La fiche de l'auteur qui l'a écrite |
+| Phénomène | La [fiche du phénomène](/documentation/features/phenomenes-sociaux) |
 
 ## Limites
 
 - 24 résultats maximum.
 - Recherche par sous-chaîne, sans tolérance aux fautes de frappe : « bourdieux »
   ne trouve rien.
-- Les domaines, critiques et bibliographies ne sont pas indexés.
+- Les domaines, courants, critiques et bibliographies ne sont pas indexés.
 
 ## Erreurs possibles
 

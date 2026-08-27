@@ -1,6 +1,6 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.9.0).
+Inventaire du corpus livré avec l'application (version 1.10.0).
 
 ## Chiffres
 
@@ -19,7 +19,7 @@ Inventaire du corpus livré avec l'application (version 1.9.0).
 | Liens entre concepts | 100 paires (64 associées, 36 opposées), toutes réciproques |
 | Liens des phénomènes vers des concepts | 50, sur 25 des 38 concepts du corpus |
 | Notions de phénomènes sans fiche | 144 |
-| Entrées indexées par la recherche | 96 |
+| Entrées indexées par la recherche | 124 (15 auteurs, 38 concepts, 43 œuvres, 28 phénomènes) |
 
 ## Les 15 fiches
 

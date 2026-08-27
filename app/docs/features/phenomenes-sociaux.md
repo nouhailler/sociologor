@@ -71,8 +71,10 @@ Identique.
   théories, auteurs hors corpus, méthodes et données restent hors du champ de
   cette première version, volontairement — les mélanger aux concepts et aux
   notions aurait rendu chaque fiche illisible.
-- Les phénomènes ne sont pas indexés par la recherche, et ne peuvent pas être
-  épinglés dans « Mes fiches » — comme les domaines et les courants.
+- Les phénomènes ne peuvent pas être épinglés dans « Mes fiches » — comme les
+  domaines et les courants. Ils sont en revanche indexés par la
+  [recherche](/documentation/features/recherche), avec les auteurs, les
+  concepts et les œuvres.
 
 ## Erreurs possibles
 

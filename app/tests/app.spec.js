@@ -211,6 +211,14 @@ test.describe('Parcours principal', () => {
     await expect(content(page).getByRole('heading', { name: 'Anomie', exact: true })).toBeVisible();
   });
 
+  test('recherche : un phénomène mène à sa fiche', async ({ page }) => {
+    await enter(page, '/recherche?q=gentrification');
+    await expect(page.getByText('Phénomène', { exact: true })).toBeVisible();
+    await page.getByRole('link', { name: /Gentrification/ }).click();
+    await expect(page).toHaveURL(/\/p\/gentrification$/);
+    await expect(content(page).getByRole('heading', { name: 'Gentrification', exact: true })).toBeVisible();
+  });
+
   test('notion du jour : le bouton principal ouvre le concept', async ({ page }) => {
     await enter(page);
     await page.getByRole('link', { name: 'Ouvrir la fiche du concept' }).click();
@@ -279,6 +287,10 @@ test.describe('Parcours principal', () => {
     await page.getByRole('button', { name: 'Concepts' }).click();
     await expect(page.getByText('Habitus').first()).toBeVisible();
     await expect(page).toHaveURL(/q=habitus/);
+    // Le filtre Phénomènes exclut un concept homonyme absent des phénomènes.
+    await page.getByLabel('Rechercher dans les fiches').fill('chomage');
+    await page.getByRole('button', { name: 'Phénomènes' }).click();
+    await expect(page.getByRole('link', { name: /Chômage/ })).toHaveCount(1);
   });
 
   test('recherche sans résultat : message d\'aide', async ({ page }) => {

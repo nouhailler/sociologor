@@ -4,6 +4,59 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.10.0
+
+Date : 2026-08-26
+
+La recherche s'étend aux phénomènes sociaux.
+
+## Nouveautés
+
+- **Filtre Phénomènes** dans la recherche : les 28 phénomènes sociaux
+  rejoignent les auteurs, concepts et œuvres dans l'index — 124 entrées au
+  total, contre 96 auparavant. Un résultat de type Phénomène ouvre sa fiche.
+
+## Changements
+
+- Le sous-titre de l'écran Recherche et les indications de la navigation
+  mentionnent désormais les phénomènes.
+- Corrigé en passant : le guide de la recherche affirmait qu'un résultat de
+  type Concept menait à la fiche de son auteur — c'était vrai avant la
+  version 1.2.0, plus depuis que le concept a sa propre fiche. Corrigé pour
+  Concept et Phénomène, qui ont chacun leur écran.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. Aucune donnée éditoriale
+nouvelle : le filtre se déduit des 28 phénomènes déjà livrés depuis la
+version 1.7.0.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Recherche](/documentation/features/recherche),
+[Écran Recherche](/documentation/guide/recherche),
+[Phénomènes sociaux](/documentation/features/phenomenes-sociaux),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites).
+
+## Limites connues à cette version
+
+Les domaines et les courants restent hors de l'index de recherche.
+
+---
+
 # Version 1.9.0
 
 Date : 2026-08-26

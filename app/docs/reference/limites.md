@@ -1,7 +1,7 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.9.0.
+la version 1.10.0.
 
 ## Contenu
 
@@ -41,7 +41,7 @@ la version 1.9.0.
   triée, ni classée.
 - Export Markdown **fiche par fiche** ; pas d'export global, pas de PDF.
 - Recherche par sous-chaîne, sans tolérance aux fautes de frappe, plafonnée à
-  24 résultats ; les domaines, phénomènes, critiques et bibliographies ne sont
+  24 résultats ; les domaines, courants, critiques et bibliographies ne sont
   pas indexés.
 - La notion du jour ne peut être ni choisie, ni rejouée.
 

@@ -24,7 +24,7 @@ const CATEGORIES = [
     id: 'retrouver',
     t: 'Retrouver',
     items: [
-      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres' },
+      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes' },
       { to: '/mes-fiches', label: 'Mes fiches', hint: 'Fiches épinglées' },
     ],
   },

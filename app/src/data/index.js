@@ -253,7 +253,7 @@ export function getPhenomene(id) {
   };
 }
 
-/** Index de recherche : une entrée par auteur, par concept et par œuvre. */
+/** Index de recherche : une entrée par auteur, par concept, par œuvre et par phénomène. */
 export const SEARCH_INDEX = (() => {
   const items = [];
   Object.values(AUTHORS).forEach((x) => {
@@ -266,11 +266,14 @@ export const SEARCH_INDEX = (() => {
       items.push({ kind: 'Œuvre', title: o.t, sub: `${x.name}, ${o.y}`, id: x.id, to: `/a/${x.id}` }),
     );
   });
+  PHENOMENES.forEach((p) =>
+    items.push({ kind: 'Phénomène', title: p.t, sub: p.d, id: p.id, to: `/p/${p.id}` }),
+  );
   return items;
 })();
 
-export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres'];
-const KIND_BY_FILTER = { Auteurs: 'Auteur', Concepts: 'Concept', Œuvres: 'Œuvre' };
+export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes'];
+const KIND_BY_FILTER = { Auteurs: 'Auteur', Concepts: 'Concept', Œuvres: 'Œuvre', Phénomènes: 'Phénomène' };
 export const SEARCH_LIMIT = 24;
 
 /** Comparaison insensible à la casse et aux accents (« precede » trouve « précède »). */
