@@ -24,15 +24,15 @@ menu classé en trois catégories avec tout le reste :
 
 | Catégorie | Contenu |
 |---|---|
-| **Explorer le corpus** | Accueil, Graphe, Carte des courants, Phénomènes sociaux |
+| **Explorer le corpus** | Accueil, Graphe, Carte des courants, Phénomènes sociaux, Processus sociaux |
 | **Retrouver** | Recherche, Mes fiches |
 | **Aide et réglages** | Documentation, Paramètres |
 
 L'entrée de l'écran courant, s'il y en a une, est mise en évidence. Toucher
 une entrée y navigue et referme le menu ; toucher le fond, la croix, ou la
 touche **Échap** referme le menu sans naviguer. C'est le seul endroit d'où
-partent la carte des courants et les phénomènes sociaux sans passer par un
-autre écran.
+partent la carte des courants, les phénomènes sociaux et les processus
+sociaux sans passer par un autre écran.
 
 ## L'en-tête
 
@@ -44,7 +44,7 @@ autre écran.
 | 🔍 | Ouvre la recherche (accueil) |
 | ⚙️ | Ouvre les paramètres (accueil) |
 | ★ | Épingle ou retire la fiche (écran Fiche auteur) |
-| Partage | Partage le lien de la fiche (écran Fiche auteur, Fiche concept, Fiche phénomène) |
+| Partage | Partage le lien de la fiche (écran Fiche auteur, Fiche concept, Fiche phénomène, Fiche processus) |
 
 ## Adresses des écrans
 
@@ -62,6 +62,8 @@ Chaque écran a sa propre adresse : elle peut être mise en favori ou partagée.
 | Carte centrée sur un courant | `/courants?focus=<identifiant>` |
 | Phénomènes sociaux | `/phenomenes` |
 | Fiche phénomène | `/p/<identifiant>` |
+| Processus sociaux | `/processus` |
+| Fiche processus | `/pr/<identifiant>` |
 | Recherche | `/recherche?q=<texte>&type=<filtre>` |
 | Mes fiches | `/mes-fiches` |
 | Paramètres | `/parametres` |

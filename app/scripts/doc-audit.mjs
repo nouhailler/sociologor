@@ -16,7 +16,9 @@
  * 10. chaque domaine a une famille, un nom et de quoi remplir son écran ;
  * 11. la carte des courants est complète, et chaque fiche a un courant ;
  * 12. chaque phénomène a une catégorie, des dimensions et des notions bien
- *     formées, et concepts/notions ne sont jamais mélangés dans un même champ.
+ *     formées, et concepts/notions ne sont jamais mélangés dans un même champ ;
+ * 13. chaque processus a une catégorie, au moins deux étapes, et ses éventuels
+ *     phénomènes liés existent bien parmi les phénomènes déjà décrits.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -57,7 +59,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/phenomenes$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/phenomenes$/, /^\/processus$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/pr\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -366,6 +368,45 @@ for (const dim of DIMENSIONS_PHENOMENES) {
   }
 }
 
+/* — 13. intégrité des processus sociaux — */
+// Même discipline que les phénomènes : `concepts` n'admet que des fiches du
+// corpus, `notions` que du texte libre, jamais les deux confondus. `phenomenes`
+// est le seul champ propre aux processus : il pointe vers un état déjà décrit
+// dans `phenomenes.js`, jamais vers un identifiant inconnu.
+const { CATEGORIES_PROCESSUS, PROCESSUS } = await import('../src/data/processus.js');
+
+const procCatIds = new Set(CATEGORIES_PROCESSUS.map((c) => c.id));
+const procIds = new Set();
+
+for (const p of PROCESSUS) {
+  if (procIds.has(p.id)) fail(`Processus en double : ${p.id}`);
+  procIds.add(p.id);
+  for (const f of ['t', 'd', 'detail']) {
+    if (!p[f]) fail(`Processus ${p.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  if (!procCatIds.has(p.categorie)) fail(`Processus ${p.id} : catégorie inconnue « ${p.categorie} ».`);
+  if ((p.etapes || []).length < 2) fail(`Processus ${p.id} : moins de deux étapes — ce n'est pas une trajectoire.`);
+  for (const c of p.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Processus ${p.id} : concept inconnu « ${c} » — ce champ n'admet que des fiches du corpus.`);
+  }
+  for (const ph of p.phenomenes || []) {
+    if (!phenIds.has(ph)) fail(`Processus ${p.id} : phénomène inconnu « ${ph} ».`);
+  }
+  if ((p.concepts || []).length === 0 && (p.notions || []).length === 0) {
+    fail(`Processus ${p.id} : ni concept ni notion — la fiche s'afficherait vide.`);
+  }
+  for (const n of p.notions || []) {
+    if (!n.includes(' — ')) fail(`Processus ${p.id} : notion sans apport « ${n.slice(0, 40)}… ».`);
+    const notionTitle = n.split(' — ')[0];
+    if (conceptTitles.has(notionTitle)) {
+      fail(`Processus ${p.id} : « ${notionTitle} » est une fiche concept, elle appartient à « concepts », pas à « notions ».`);
+    }
+  }
+}
+for (const cat of CATEGORIES_PROCESSUS) {
+  if (!PROCESSUS.some((p) => p.categorie === cat.id)) fail(`Catégorie de processus vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -394,6 +435,12 @@ console.log(
   line(
     'Phénomènes',
     `${PHENOMENES.length} en ${CATEGORIES_PHENOMENES.length} catégories, ${PHENOMENES.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PHENOMENES.reduce((n, p) => n + (p.notions || []).length, 0)} notions`,
+  ),
+);
+console.log(
+  line(
+    'Processus',
+    `${PROCESSUS.length} en ${CATEGORIES_PROCESSUS.length} catégories, ${PROCESSUS.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PROCESSUS.reduce((n, p) => n + (p.phenomenes || []).length, 0)} liens vers des phénomènes, ${PROCESSUS.reduce((n, p) => n + (p.notions || []).length, 0)} notions`,
   ),
 );
 

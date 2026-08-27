@@ -7,6 +7,8 @@ import Graph from './routes/Graph.jsx';
 import Courants from './routes/Courants.jsx';
 import Phenomenes from './routes/Phenomenes.jsx';
 import Phenomene from './routes/Phenomene.jsx';
+import Processus from './routes/Processus.jsx';
+import ProcessusFiche from './routes/ProcessusFiche.jsx';
 import Search from './routes/Search.jsx';
 import Favs from './routes/Favs.jsx';
 import Settings from './routes/Settings.jsx';
@@ -32,6 +34,8 @@ export default function App() {
       <Route path="/courants" element={<Courants />} />
       <Route path="/phenomenes" element={<Phenomenes />} />
       <Route path="/p/:id" element={<Phenomene />} />
+      <Route path="/processus" element={<Processus />} />
+      <Route path="/pr/:id" element={<ProcessusFiche />} />
       <Route path="/recherche" element={<Search />} />
       <Route path="/mes-fiches" element={<Favs />} />
       <Route path="/parametres" element={<Settings />} />

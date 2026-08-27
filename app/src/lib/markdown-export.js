@@ -126,6 +126,44 @@ export function phenomeneToMarkdown(p) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche processus en Markdown — les mêmes rubriques que l'écran. */
+export function processusToMarkdown(p) {
+  const L = [];
+  L.push(`# ${p.t}`, '');
+  L.push(`*${p.categorieT}*`, '');
+  L.push(`> ${p.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(p.detail, '');
+
+  L.push('## Étapes types', '');
+  p.etapes.forEach((e, i) => L.push(`${i + 1}. ${e}`));
+  L.push('');
+
+  L.push('## Concepts du corpus', '');
+  L.push(
+    p.conceptsLinks.length
+      ? p.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', ')
+      : 'Aucun.',
+  );
+  L.push('');
+
+  if (p.phenomenesLinks.length) {
+    L.push('## Phénomènes liés', '');
+    L.push(p.phenomenesLinks.map((ph) => ph.label).join(', '));
+    L.push('');
+  }
+
+  if (p.notions.length) {
+    L.push('## Notions associées', '');
+    p.notions.forEach((n) => L.push(`- ${n}`));
+    L.push('');
+  }
+
+  L.push('---', '', `Processus exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Nom de fichier sûr : sans accent, sans espace, sans caractère interdit. */
 export function slugify(name) {
   return name

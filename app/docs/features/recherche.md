@@ -2,8 +2,9 @@
 
 ## Description
 
-Une recherche locale et instantanée sur les 124 entrées du corpus : 15
-auteurs, 38 concepts, 43 œuvres et 28 phénomènes sociaux.
+Une recherche locale et instantanée sur les 145 entrées du corpus : 15
+auteurs, 38 concepts, 43 œuvres, 39 phénomènes sociaux et 10 processus
+sociaux.
 
 ## Objectif
 
@@ -17,15 +18,15 @@ Aucun.
 
 1. Ouvrez l'onglet **Chercher**.
 2. Tapez un mot : la liste se met à jour à chaque frappe.
-3. Restreignez au besoin par **Auteurs**, **Concepts**, **Œuvres** ou
-   **Phénomènes**.
+3. Restreignez au besoin par **Auteurs**, **Concepts**, **Œuvres**,
+   **Phénomènes** ou **Processus**.
 4. Touchez un résultat pour ouvrir sa fiche.
 
 ## Options
 
 | Option | Valeurs |
 |---|---|
-| Filtre de type | Tout (défaut), Auteurs, Concepts, Œuvres, Phénomènes |
+| Filtre de type | Tout (défaut), Auteurs, Concepts, Œuvres, Phénomènes, Processus |
 | Paramètres d'adresse | `q` (texte cherché), `type` (filtre) |
 
 ## Paramètres associés
@@ -58,6 +59,7 @@ Identique.
 | Concept | La [fiche du concept](/documentation/features/fiches-concepts) |
 | Œuvre | La fiche de l'auteur qui l'a écrite |
 | Phénomène | La [fiche du phénomène](/documentation/features/phenomenes-sociaux) |
+| Processus | La [fiche du processus](/documentation/features/processus-sociaux) |
 
 ## Limites
 
@@ -78,3 +80,8 @@ Aucun cas connu.
 
 - *La recherche tient-elle compte des accents ?* Non, et c'est voulu : « emile »
   trouve « Émile ».
+- *Pourquoi « déclassement » trouve-t-il deux résultats ?* Parce que
+  « Déclassement » (un processus) et « Déclassement social » (un phénomène)
+  sont deux fiches distinctes — le mécanisme et l'état qu'il peut produire.
+  Le filtre **Processus** ou **Phénomènes** permet de ne garder que l'un des
+  deux.

@@ -20,7 +20,7 @@ export default function Search() {
   }
 
   return (
-    <Shell title="Recherche" subtitle="Auteurs, concepts, œuvres, phénomènes">
+    <Shell title="Recherche" subtitle="Auteurs, concepts, œuvres, phénomènes, processus">
       <div style={{ maxWidth: 720 }}>
         <label className="text-muted" htmlFor="soc-q" style={{ display: 'block', fontSize: 12, marginBottom: 5 }}>
           Rechercher dans les fiches
@@ -65,7 +65,8 @@ export default function Search() {
         {results.length === 0 && (
           <p className="soc-lede" style={{ maxWidth: '48ch' }}>
             Aucun résultat pour « {q} ». Essayez un nom d&apos;auteur, un concept (habitus, anomie, stigmate), un
-            titre d&apos;œuvre ou un phénomène (chômage, gentrification).
+            titre d&apos;œuvre, un phénomène (chômage, gentrification) ou un processus (précarisation,
+            déclassement).
           </p>
         )}
 

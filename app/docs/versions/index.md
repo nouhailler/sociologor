@@ -4,6 +4,148 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.13.0
+
+Date : 2026-08-27
+
+Une nouvelle catégorie de fiches : les processus sociaux, distincts des
+phénomènes qu'ils produisent souvent.
+
+## Nouveautés
+
+- **Processus sociaux** : nouvel écran à l'adresse `/processus`, avec une
+  fiche par processus à `/pr/<identifiant>`. 10 processus — reproduction
+  sociale, mobilité sociale, déclassement, précarisation, individualisation…
+  — rangés en 3 catégories : Reproduction et transmission, Mobilité et
+  trajectoires, Individualisation et délitement du lien.
+- **Une trajectoire en étapes** : à la différence d'une fiche phénomène, qui
+  décrit un état, une fiche processus déroule quatre étapes types, du
+  déclencheur à l'état stabilisé — ce qu'un phénomène, snapshot plutôt que
+  séquence, ne fait pas.
+- **Phénomènes liés** : chaque processus cite les phénomènes déjà décrits
+  vers lesquels il mène le plus souvent, cliquables — 23 liens au total. Un
+  premier pas concret vers un graphe de connaissances qui relie plusieurs
+  couches du corpus entre elles.
+- **Export Markdown** et **partage** d'une fiche processus, comme pour un
+  phénomène.
+- Bouton d'entrée sur l'écran **Accueil**, à côté de celui des phénomènes ;
+  entrée dans le menu ☰, catégorie *Explorer le corpus* ; filtre dédié dans
+  la **recherche**, qui passe à 145 entrées indexées (contre 135).
+
+## Changements
+
+- L'**audit documentaire** gagne un treizième contrôle : catégorie connue,
+  au moins deux étapes, phénomènes liés existants, et la même discipline que
+  pour les phénomènes — concepts et notions jamais mélangés.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. Un fichier `processus.js` porte
+les 10 processus et leurs 3 catégories.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+Deux pages créées :
+[Processus sociaux](/documentation/features/processus-sociaux) et
+[Écran Processus sociaux](/documentation/guide/processus).
+Mises à jour :
+[Navigation générale](/documentation/guide/navigation),
+[Recherche](/documentation/features/recherche),
+[Écran Recherche](/documentation/guide/recherche),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites).
+
+## Limites connues à cette version
+
+« Déclassement » (processus) et « Déclassement social » (phénomène) sont
+deux fiches distinctes à deux adresses distinctes — voulu, mais à savoir
+avant de chercher l'un des deux. Les 10 processus sont une sélection : un
+par terme d'une liste fournie par l'auteur du contenu, sans consolidation
+des termes proches, contrairement aux phénomènes.
+
+---
+
+# Version 1.12.0
+
+Date : 2026-08-27
+
+Onze phénomènes sociaux de plus, tous liés aux inégalités.
+
+## Nouveautés
+
+- **Onze phénomènes ajoutés**, à partir d'une liste plus large fournie par
+  l'auteur du contenu, tous rangés dans le champ des inégalités : Stratification
+  sociale, Inégalités de revenus, Inégalités territoriales, Inégalités
+  générationnelles, Inégalités culturelles, Inégalités numériques, Inégalités
+  de santé, Exclusion sociale, Dépendance économique, Polarisation sociale,
+  Homogamie sociale. L'application compte désormais **39 phénomènes sociaux**.
+- **68 liens vers des concepts** du corpus (contre 50), sur les 25 mêmes
+  concepts déjà mobilisés — aucun concept jusque-là inutilisé n'a dû être
+  convoqué de force. **201 notions** au total (contre 144).
+
+## Changements
+
+- Trois termes de la liste fournie recoupaient des fiches déjà publiées —
+  Pauvreté, Concentration des richesses, Inégalités scolaires — et n'ont pas
+  été dupliqués. « Grande pauvreté » et « inégalités patrimoniales » sont
+  devenues des notions dans ces fiches existantes.
+- Plusieurs quasi-synonymes de la liste ont été consolidés en une seule fiche
+  plutôt que dupliqués : hiérarchisation sociale et classes sociales dans
+  Stratification sociale ; marginalisation dans Exclusion sociale ;
+  fragmentation sociale et ségrégation sociale dans Polarisation sociale.
+- La catégorie **Inégalités et classes sociales** passe de 3 à 7 phénomènes ;
+  les autres nouveaux phénomènes ont rejoint la catégorie la plus proche de
+  leur sujet plutôt que de s'accumuler tous au même endroit — inégalités
+  territoriales dans Ville et logement, inégalités numériques dans Numérique
+  et médias, par exemple.
+- L'entrée « N phénomènes sociaux » de l'accueil et l'index de recherche
+  (**135 entrées**, contre 124) reflètent automatiquement le nouveau compte.
+
+## Changements incompatibles
+
+Aucun. Les 28 phénomènes existants et leurs adresses restent inchangés.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. `phenomenes.js` gagne onze
+entrées et deux notions dans des fiches existantes.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Phénomènes sociaux](/documentation/features/phenomenes-sociaux),
+[Écran Phénomènes sociaux](/documentation/guide/phenomenes),
+[Recherche](/documentation/features/recherche),
+[Contenu embarqué](/documentation/reference/contenu),
+[Limites connues](/documentation/reference/limites).
+
+## Limites connues à cette version
+
+Quatre phénomènes sur 39 — étalement urbain, inégalités territoriales,
+éco-anxiété, migration climatique — n'ont toujours aucun concept du corpus
+qui les éclaire directement.
+
+---
+
 # Version 1.11.0
 
 Date : 2026-08-27

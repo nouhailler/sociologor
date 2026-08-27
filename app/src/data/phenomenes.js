@@ -189,6 +189,23 @@ export const PHENOMENES = [
       "Coût du logement — le moteur le plus souvent cité de l'éloignement des ménages modestes",
     ],
   },
+  {
+    id: 'inegalites-territoriales',
+    t: 'Inégalités territoriales',
+    categorie: 'ville',
+    d: "Naître dans un quartier ou une région plutôt qu'une autre pèse sur toute une vie : écoles, emplois, soins n'y sont jamais distribués également.",
+    detail:
+      "Aucun concept du corpus ne porte directement sur les écarts entre territoires — plus proche de la géographie sociale que de la théorie générale que les quinze fiches couvrent. Le phénomène s'analyse surtout par ses données : accès aux services publics, temps de trajet, prix du foncier, taux de chômage local.",
+    dimensions: ['urbaine', 'economique', 'politique', 'demographique'],
+    concepts: [],
+    notions: [
+      "Désert médical — un territoire où l'offre de soins ne suit plus la demande",
+      "Fracture territoriale — l'écart de services et d'opportunités entre centres et périphéries",
+      "Zone d'éducation prioritaire — un dispositif qui reconnaît l'inégalité territoriale sans toujours la corriger",
+      "Aménagement du territoire — les politiques publiques censées rééquilibrer ce que le marché concentre",
+      "France périphérique — une expression qui a fait débat, pointant les territoires éloignés des métropoles dynamiques",
+    ],
+  },
 
   /* — Famille et parcours de vie — */
   {
@@ -223,6 +240,40 @@ export const PHENOMENES = [
       "Retraite par répartition — un système qui suppose un équilibre entre actifs et retraités, de plus en plus tendu",
       "Solidarité intergénérationnelle — l'aide qui circule, dans les deux sens, entre générations d'une même famille",
       "Âgisme — la discrimination liée à l'âge, plus tolérée socialement que d'autres",
+    ],
+  },
+  {
+    id: 'inegalites-generationnelles',
+    t: 'Inégalités générationnelles',
+    categorie: 'famille-parcours',
+    d: "Chaque génération n'hérite pas des mêmes chances : patrimoine, marché du travail et système de retraite ne traitent pas les cohortes également.",
+    detail:
+      "Merton y verrait une tension anomique renouvelée à chaque génération : les buts que la société continue de promettre — la propriété, un emploi stable, une retraite décente — supposent des moyens que chaque cohorte plus jeune trouve un peu plus difficiles à réunir que la précédente. L'écart se mesure autant en patrimoine hérité qu'en accès au marché du travail ou en générosité du système de retraite.",
+    dimensions: ['demographique', 'economique', 'famille'],
+    concepts: ['tension-anomique'],
+    notions: [
+      "Transferts intergénérationnels — l'aide, financière ou en nature, qui circule des parents vers les enfants",
+      "Système de retraite par répartition — un pacte entre générations, tendu quand leur nombre respectif se déséquilibre",
+      "Génération sacrifiée — une expression récurrente, appliquée tour à tour à plusieurs cohortes",
+      "Accès à la propriété — un marqueur d'inégalité générationnelle particulièrement suivi",
+      "Conflit de générations — la compétition, rarement nommée comme telle, pour des ressources publiques limitées",
+    ],
+  },
+  {
+    id: 'homogamie-sociale',
+    t: 'Homogamie sociale',
+    categorie: 'famille-parcours',
+    d: "On ne choisit pas son conjoint au hasard : la position sociale, le diplôme et le milieu d'origine pèsent sur la rencontre autant que le sentiment.",
+    detail:
+      "Bourdieu explique l'homogamie par la proximité d'habitus : on se sent à l'aise, et on se rencontre plus souvent, avec quelqu'un dont les manières, les goûts et les références ressemblent aux siens. Le phénomène reconduit ainsi, à chaque génération, une part de la hiérarchie des classes sociales — deux patrimoines et deux capitaux culturels proches ont plus de chances de s'unir que de se mélanger.",
+    dimensions: ['famille', 'sociale', 'educative'],
+    concepts: ['classe-sociale', 'capital-culturel', 'habitus'],
+    notions: [
+      "Homogamie de diplôme — la forme la plus étudiée, et la plus stable dans le temps, de la rencontre entre semblables",
+      "Marché matrimonial — la métaphore, discutée, qui décrit la rencontre comme un espace de tri social",
+      "Hétérogamie — l'union entre partenaires de milieux différents, plus rare qu'on ne le pense",
+      "Rencontre en ligne — un nouveau lieu de rencontre dont l'effet sur l'homogamie reste débattu",
+      "Reproduction sociale — ce que l'homogamie transmet, mécaniquement, à la génération suivante",
     ],
   },
 
@@ -261,8 +312,42 @@ export const PHENOMENES = [
       "Autocensure — renoncer à une filière qu'on croit, à tort ou à raison, hors de portée",
     ],
   },
+  {
+    id: 'inegalites-culturelles',
+    t: 'Inégalités culturelles',
+    categorie: 'ecole',
+    d: "Aller au musée, lire, fréquenter un conservatoire : ces pratiques ne sont pas affaire de goût individuel, elles suivent fidèlement la position sociale.",
+    detail:
+      "Bourdieu en a fait la démonstration la plus citée : le capital culturel — l'aisance avec la culture légitime — se transmet en famille bien avant l'école, et continue d'y déterminer la réussite. L'habitus complète l'explication : ce n'est pas seulement un manque de moyens qui écarte certains publics des institutions culturelles, c'est un sentiment, souvent juste, de ne pas y être à sa place.",
+    dimensions: ['culturelle', 'educative', 'sociale'],
+    concepts: ['capital-culturel', 'habitus'],
+    notions: [
+      "Pratiques culturelles — fréquentation des musées, lecture, spectacles : des indicateurs suivis depuis les années 1970",
+      "Légitimité culturelle — la hiérarchie, jamais neutre, entre ce qui compte comme culture et ce qui n'y prétend pas",
+      "Démocratisation culturelle — un objectif de politique publique, aux résultats plus modestes que l'ambition",
+      "Éducation artistique — l'école comme lieu possible, mais inégalement saisi, de rattrapage culturel",
+      "Omnivorité culturelle — une thèse récente selon laquelle les plus favorisés cumulent goûts savants et populaires, plutôt qu'ils n'excluent ces derniers",
+    ],
+  },
 
   /* — Inégalités et classes sociales — */
+  {
+    id: 'stratification-sociale',
+    t: 'Stratification sociale',
+    categorie: 'inegalites',
+    d: "Toute société connue trie ses membres selon une hiérarchie — richesse, prestige, pouvoir — même quand elle se dit égalitaire.",
+    detail:
+      "Marx réduit la hiérarchie à une seule ligne de fracture, la place dans les rapports de production ; Weber la déplie en trois dimensions distinctes — la classe économique, le statut social, le pouvoir politique — qui ne se recouvrent pas toujours. Bourdieu ajoute une quatrième mesure, le capital culturel, pour expliquer pourquoi la hiérarchie se maintient même quand la fortune change de mains.",
+    dimensions: ['sociale', 'economique'],
+    concepts: ['classe-sociale', 'domination-legitime', 'capital-culturel'],
+    notions: [
+      "Hiérarchisation sociale — le classement des positions sur une échelle de prestige ou de ressources",
+      "Inégalités sociales — le terme générique recouvrant l'ensemble des écarts de position",
+      "Classes sociales — le découpage le plus ancien de la hiérarchie, toujours disputé entre approches marxienne et wébérienne",
+      "Ordres et castes — deux formes de hiérarchie plus rigides que la classe, où la naissance ferme presque tout déplacement",
+      "Méritocratie — l'idée que la hiérarchie récompense le mérite, plus proclamée que vérifiée",
+    ],
+  },
   {
     id: 'pauvrete',
     t: 'Pauvreté',
@@ -278,6 +363,7 @@ export const PHENOMENES = [
       "Stigmatisation de la pauvreté — le soupçon qui pèse sur celui qui vit des minima sociaux",
       "Précarité énergétique — ne plus pouvoir se chauffer, une privation devenue indicateur à part entière",
       "Aide alimentaire — un filet devenu, pour certains, un mode de subsistance durable",
+      "Grande pauvreté — les situations les plus sévères de privation, cumulant plusieurs manques à la fois",
     ],
   },
   {
@@ -312,6 +398,58 @@ export const PHENOMENES = [
       "Évasion fiscale — une pratique qui accentue l'écart entre les patrimoines déclarés et réels",
       "1 % les plus riches — un raccourci statistique devenu repère du débat public",
       "Fiscalité du patrimoine — un levier politique disputé pour freiner la concentration",
+      "Inégalités patrimoniales — l'écart de patrimoine, plus marqué encore que celui des revenus, entre le haut et le bas de la distribution",
+    ],
+  },
+  {
+    id: 'inegalites-de-revenus',
+    t: 'Inégalités de revenus',
+    categorie: 'inegalites',
+    d: "Le salaire le plus élevé d'une entreprise peut valoir plusieurs centaines de fois le plus bas : l'écart de revenus s'est creusé plus vite que la croissance elle-même.",
+    detail:
+      "Tocqueville faisait de l'égalisation des conditions le grand mouvement des sociétés démocratiques ; l'écart de revenus contemporain s'y lit comme un mouvement inverse, ou du moins comme sa limite — l'égalité en droit n'empêche pas l'écart en fait. Marx y ajoute la question de l'origine : un revenu du travail et un revenu du capital ne se justifient pas de la même manière, ni ne se répartissent selon les mêmes règles.",
+    dimensions: ['economique', 'politique'],
+    concepts: ['classe-sociale', 'egalisation-des-conditions'],
+    notions: [
+      "Inégalités économiques — le terme large qui inclut revenus, patrimoine et conditions de vie",
+      "Rapport interdécile — l'écart entre les 10 % les mieux payés et les 10 % les moins bien payés",
+      "Salaire minimum — un plancher légal, disputé, censé contenir l'écart par le bas",
+      "Rémunération des dirigeants — l'écart le plus spectaculaire, et le plus commenté, de la hiérarchie salariale",
+      "Redistribution fiscale — l'impôt et les prestations sociales, qui réduisent l'écart mesuré avant leur passage",
+    ],
+  },
+  {
+    id: 'exclusion-sociale',
+    t: 'Exclusion sociale',
+    categorie: 'inegalites',
+    d: "Perdre un emploi, un logement ou un lien peut suffire à faire glisser hors du jeu social commun — pas seulement hors du marché du travail.",
+    detail:
+      "Durkheim donne le mécanisme de fond : quand les liens qui rattachent un individu à la collectivité se relâchent, l'anomie s'installe, et la désaffiliation devient un état plus qu'un accident. Becker ajoute que l'exclusion se referme souvent sur elle-même : une fois hors du jeu commun, l'étiquette qui s'attache à cette position — chômeur de longue durée, sans-abri — rend le retour plus difficile qu'il ne l'aurait été sans elle.",
+    dimensions: ['sociale', 'economique'],
+    concepts: ['anomie', 'etiquetage'],
+    notions: [
+      "Marginalisation — le processus, progressif, qui éloigne du centre de la vie sociale ordinaire",
+      "Désaffiliation — la rupture des liens de travail et de sociabilité qui tenaient un individu rattaché",
+      "Grande exclusion — les situations les plus extrêmes, sans domicile ni ressources",
+      "Non-recours aux droits — ne pas demander une aide à laquelle on a droit, par méconnaissance ou par honte",
+      "Insertion — les dispositifs qui visent, avec des résultats inégaux, à ramener vers l'emploi ou le logement",
+    ],
+  },
+  {
+    id: 'polarisation-sociale',
+    t: 'Polarisation sociale',
+    categorie: 'inegalites',
+    d: "Le milieu se resserre, les extrêmes s'éloignent : une partie du débat social se joue désormais entre des groupes qui ne se croisent plus.",
+    detail:
+      "Tocqueville annonçait un mouvement de fond vers l'égalisation des conditions ; la polarisation contemporaine s'y lit comme une pause, ou un recul localisé — les classes moyennes qui s'amenuisent pendant que le haut et le bas de l'échelle s'éloignent l'un de l'autre. Le phénomène ne se limite pas au revenu : il touche aussi les valeurs, les votes et les lieux de vie, de moins en moins partagés d'un groupe à l'autre.",
+    dimensions: ['sociale', 'economique', 'politique'],
+    concepts: ['egalisation-des-conditions'],
+    notions: [
+      "Classes moyennes — la catégorie la plus directement exposée au resserrement du milieu",
+      "Fragmentation sociale — l'affaiblissement des liens et des cadres qui rassemblaient au-delà des groupes",
+      "Ségrégation sociale — la séparation, résidentielle ou scolaire, qui empêche des groupes de se côtoyer",
+      "Polarisation politique — la traduction électorale d'un éloignement d'abord social et économique",
+      "Entre-soi — le choix, ou la contrainte, de ne fréquenter que des semblables",
     ],
   },
 
@@ -348,6 +486,23 @@ export const PHENOMENES = [
       "Féminicide — le terme qui nomme le meurtre d'une femme parce qu'elle est une femme",
       "Ordonnance de protection — une réponse juridique récente à l'urgence du danger",
       "Emprise économique — priver l'autre de ressources pour l'empêcher de partir",
+    ],
+  },
+  {
+    id: 'dependance-economique',
+    t: 'Dépendance économique',
+    categorie: 'genre-sexualite',
+    d: "Ne pas avoir de revenu propre change tout dans un couple ou une famille : la dépendance économique n'est jamais qu'une question d'argent.",
+    detail:
+      "Parsons décrivait déjà une répartition des rôles où l'un des conjoints, souvent la femme, se spécialise dans le foyer pendant que l'autre pourvoit au revenu — un arrangement qu'il présentait comme fonctionnel, et que la sociologie du genre a depuis relu comme une source d'inégalité de pouvoir. Bourdieu y ajoute la violence symbolique : la dépendance se maintient parce qu'elle se vit, des deux côtés, comme allant de soi plus que comme un rapport de force.",
+    dimensions: ['genre', 'economique', 'famille'],
+    concepts: ['role-et-attentes', 'violence-symbolique'],
+    notions: [
+      "Temps partiel subi — un aménagement du travail qui installe la dépendance plus qu'il ne la choisit",
+      "Interruption de carrière — un congé parental ou un retrait du marché du travail, aux conséquences durables sur la retraite",
+      "Emprise économique — priver l'autre de ressources pour restreindre son autonomie",
+      "Pension de réversion — un dispositif qui prolonge, après veuvage, la dépendance construite pendant la vie active",
+      "Autonomie financière — l'objectif affiché de nombreuses politiques d'égalité, encore inégalement atteint",
     ],
   },
 
@@ -439,6 +594,23 @@ export const PHENOMENES = [
       "Droit à l'oubli — la possibilité, limitée, de faire effacer un contenu qui nuit durablement",
     ],
   },
+  {
+    id: 'inegalites-numeriques',
+    t: 'Inégalités numériques',
+    categorie: 'numerique-medias',
+    d: "Avoir une connexion ne suffit pas : savoir s'en servir, et pour quoi, redistribue une fracture numérique qu'on croyait résolue par l'équipement.",
+    detail:
+      "Aucun auteur du corpus n'a théorisé directement le numérique, mais le capital culturel de Bourdieu s'y prête par extension : au-delà de l'accès matériel, ce sont les usages — chercher un emploi, remplir une démarche administrative, distinguer une information fiable — qui séparent le plus nettement les publics.",
+    dimensions: ['numerique', 'sociale', 'educative'],
+    concepts: ['capital-culturel'],
+    notions: [
+      "Fracture numérique — l'écart d'équipement et de connexion, la plus ancienne mesure du phénomène",
+      "Fracture des usages — l'écart, plus tenace, dans ce que chacun sait faire une fois connecté",
+      "Illectronisme — l'incapacité à utiliser les outils numériques du quotidien, y compris chez des publics équipés",
+      "Dématérialisation des services publics — une simplification annoncée qui déplace la charge vers l'usager le moins à l'aise",
+      "Aidants numériques — les proches ou les médiateurs qui compensent, de façon informelle, l'écart de compétence",
+    ],
+  },
 
   /* — Déviance et contrôle social — */
   {
@@ -509,6 +681,23 @@ export const PHENOMENES = [
       "Body shaming — la moquerie ou le jugement public sur l'apparence corporelle",
       "Errance médicale — des symptômes attribués au poids avant d'être réellement examinés",
       "Body positivity — un mouvement qui conteste la hiérarchie des corps sans toujours convaincre au-delà de ses cercles",
+    ],
+  },
+  {
+    id: 'inegalites-de-sante',
+    t: 'Inégalités de santé',
+    categorie: 'sante-corps',
+    d: "L'espérance de vie d'un cadre et celle d'un ouvrier ne se rejoignent nulle part : la position sociale s'inscrit jusque dans le corps.",
+    detail:
+      "Bourdieu montre que le rapport au corps lui-même — l'alimentation, l'activité physique, le recours au soin — obéit à un habitus de classe, appris avant d'être choisi. L'écart qui en résulte ne se referme pas avec l'accès théorique aux soins : à système de santé égal, l'espérance de vie continue de suivre la position sociale, du diplôme au quartier de résidence.",
+    dimensions: ['sante', 'sociale', 'economique'],
+    concepts: ['habitus'],
+    notions: [
+      "Espérance de vie en bonne santé — un indicateur qui creuse l'écart social plus encore que l'espérance de vie totale",
+      "Renoncement aux soins — reporter ou refuser un soin pour des raisons financières ou d'accès",
+      "Désert médical — un territoire où l'offre de soins ne suit plus la demande",
+      "Littératie en santé — la capacité à comprendre et utiliser l'information médicale, inégalement répartie",
+      "Surmortalité — l'écart de mortalité entre catégories sociales, mesuré à chaque crise sanitaire",
     ],
   },
 

@@ -1,23 +1,27 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.11.0.
+la version 1.13.0.
 
 ## Contenu
 
 - Corpus **figé** : 15 fiches auteurs, 38 fiches concepts, 32 domaines,
-  28 phénomènes sociaux, 43 œuvres. Ni ajout, ni annotation, ni édition par
-  l'utilisateur.
+  39 phénomènes sociaux, 10 processus sociaux, 43 œuvres. Ni ajout, ni
+  annotation, ni édition par l'utilisateur.
 - Les inspirateurs hors corpus d'un domaine sont des noms, pas des fiches :
   aucun lien, aucune œuvre, aucune bibliographie ne leur est attachée.
-- Les concepts et les phénomènes ne peuvent pas être épinglés dans « Mes
-  fiches » : l'épinglage ne porte que sur les auteurs.
-- Les 28 phénomènes sont une sélection, pas un inventaire exhaustif de la
-  discipline. Trois d'entre eux — étalement urbain, éco-anxiété, migration
-  climatique — n'ont aucun concept du corpus qui les éclaire directement.
-  Théories, auteurs hors corpus, méthodes et données ne figurent pas sur leur
-  fiche : voir [Phénomènes
+- Les concepts, les phénomènes et les processus ne peuvent pas être épinglés
+  dans « Mes fiches » : l'épinglage ne porte que sur les auteurs.
+- Les 39 phénomènes sont une sélection, pas un inventaire exhaustif de la
+  discipline. Quatre d'entre eux — étalement urbain, inégalités
+  territoriales, éco-anxiété, migration climatique — n'ont aucun concept du
+  corpus qui les éclaire directement. Théories, auteurs hors corpus, méthodes
+  et données ne figurent pas sur leur fiche : voir [Phénomènes
   sociaux](/documentation/features/phenomenes-sociaux).
+- Les 10 processus, de même, sont une sélection : un par terme d'une liste
+  fournie par l'auteur du contenu, sans consolidation des termes proches —
+  contrairement aux phénomènes. Voir [Processus
+  sociaux](/documentation/features/processus-sociaux).
 - Le graphe des concepts n'a pas de fiche auteur ou concept qui y renvoie par
   un `focus` : contrairement au graphe des filiations et à la carte des
   courants, on n'y arrive que depuis l'écran Graphe lui-même.
@@ -42,7 +46,7 @@ la version 1.11.0.
 - Export Markdown **fiche par fiche** ; pas d'export global, pas de PDF.
 - Recherche par sous-chaîne, sans tolérance aux fautes de frappe, plafonnée à
   24 résultats ; les domaines, courants, critiques et bibliographies ne sont
-  pas indexés.
+  pas indexés. Les phénomènes et les processus, eux, le sont.
 - La notion du jour ne peut être ni choisie, ni rejouée.
 
 ## Graphe

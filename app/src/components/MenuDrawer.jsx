@@ -18,13 +18,14 @@ const CATEGORIES = [
       { to: '/graphe', label: 'Graphe', hint: 'Filiations, et réseau de concepts' },
       { to: '/courants', label: 'Carte des courants', hint: "D'où vient une manière de faire de la sociologie" },
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
+      { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
     ],
   },
   {
     id: 'retrouver',
     t: 'Retrouver',
     items: [
-      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes' },
+      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes, processus' },
       { to: '/mes-fiches', label: 'Mes fiches', hint: 'Fiches épinglées' },
     ],
   },
@@ -42,6 +43,7 @@ const CATEGORIES = [
 function activeTo(pathname) {
   if (pathname === '/' || pathname === '/accueil') return '/';
   if (pathname.startsWith('/phenomenes') || pathname.startsWith('/p/')) return '/phenomenes';
+  if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
   if (pathname.startsWith('/courants')) return '/courants';
   if (pathname.startsWith('/graphe')) return '/graphe';
   if (pathname.startsWith('/recherche')) return '/recherche';

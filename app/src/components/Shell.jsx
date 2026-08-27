@@ -19,7 +19,7 @@ import {
 const NAV = [
   { to: '/', label: 'Accueil', hint: 'Domaines et notion du jour', tab: 'Accueil', Icon: IconHome },
   { to: '/graphe', label: 'Graphe', hint: 'Filiations intellectuelles', tab: 'Graphe', Icon: IconGraph },
-  { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes', tab: 'Chercher', Icon: IconSearch },
+  { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes, processus', tab: 'Chercher', Icon: IconSearch },
   { to: '/mes-fiches', label: 'Mes fiches', hint: null, tab: 'Fiches', Icon: IconStar },
   { to: '/documentation', label: 'Documentation', hint: 'Aide et guide complet', tab: 'Aide', Icon: IconBook },
 ];

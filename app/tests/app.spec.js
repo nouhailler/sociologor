@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(8);
+    await expect(dialog.getByRole('link')).toHaveCount(9);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -405,6 +405,22 @@ test.describe('Parcours principal', () => {
     await expect(content(page).getByRole('heading', { name: 'Classe sociale', exact: true })).toBeVisible();
   });
 
+  test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {
+    await enter(page, '/phenomenes');
+    // Pauvreté et Concentration des richesses restent des fiches uniques :
+    // les termes proches du même lot (Grande pauvreté, Inégalités
+    // patrimoniales) sont des notions à l'intérieur, pas de nouvelles fiches.
+    await expect(page.getByRole('link', { name: /^Pauvreté/ })).toHaveCount(1);
+    await expect(page.getByRole('link', { name: /^Concentration des richesses/ })).toHaveCount(1);
+    await expect(page.getByRole('link', { name: /^Stratification sociale/ })).toHaveCount(1);
+
+    await page.getByRole('link', { name: /^Stratification sociale/ }).click();
+    await expect(page).toHaveURL(/\/p\/stratification-sociale$/);
+    await expect(content(page).getByRole('heading', { name: 'Stratification sociale', exact: true })).toBeVisible();
+    await expect(page.getByText('Classes sociales — ', { exact: false })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Domination légitime/ })).toBeVisible();
+  });
+
   test('phénomène sans concept du corpus : le dit au lieu de paraître vide', async ({ page }) => {
     await enter(page, '/p/etalement-urbain');
     await expect(page.getByText(/Aucun concept des quinze fiches/)).toBeVisible();
@@ -431,6 +447,56 @@ test.describe('Parcours principal', () => {
   test('phénomène inconnu : écran Introuvable', async ({ page }) => {
     await enter(page, '/p/inexistant');
     await expect(page.getByText("Ce phénomène n'existe pas.")).toBeVisible();
+  });
+
+  test('processus sociaux : accueil → liste → fiche → étapes, concept et phénomène lié', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /processus sociaux/ }).click();
+    await expect(page).toHaveURL(/\/processus$/);
+    await expect(content(page).getByRole('heading', { name: 'Processus sociaux' })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Précarisation/ }).click();
+    await expect(page).toHaveURL(/\/pr\/precarisation$/);
+    await expect(content(page).getByRole('heading', { name: 'Précarisation', exact: true })).toBeVisible();
+    // Quatre étapes, une trajectoire — ce qu'un phénomène n'a pas.
+    await expect(page.getByText('Un premier contrat court', { exact: false })).toBeVisible();
+
+    // Le processus mène à un phénomène déjà décrit, cliquable.
+    await page.getByRole('link', { name: /^Précarité professionnelle/ }).click();
+    await expect(page).toHaveURL(/\/p\/precarite-professionnelle$/);
+    await expect(content(page).getByRole('heading', { name: 'Précarité professionnelle', exact: true })).toBeVisible();
+  });
+
+  test('processus sociaux : « Déclassement » (processus) et « Déclassement social » (phénomène) restent deux fiches distinctes', async ({ page }) => {
+    await enter(page, '/pr/declassement');
+    await expect(content(page).getByRole('heading', { name: 'Déclassement', exact: true })).toBeVisible();
+    await expect(page.getByText('Processus', { exact: true }).first()).toBeVisible();
+
+    await enter(page, '/p/declassement-social');
+    await expect(content(page).getByRole('heading', { name: 'Déclassement social', exact: true })).toBeVisible();
+  });
+
+  test('processus inconnu : écran Introuvable', async ({ page }) => {
+    await enter(page, '/pr/inexistant');
+    await expect(page.getByText("Ce processus n'existe pas.")).toBeVisible();
+  });
+
+  test('export Markdown d’un processus : étapes, concepts et phénomènes dans le fichier', async ({ page }) => {
+    await enter(page, '/pr/precarisation');
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      content(page).getByRole('button', { name: /Exporter en Markdown/ }).click(),
+    ]);
+    expect(download.suggestedFilename()).toBe('sociologor-processus-precarisation.md');
+    const stream = await download.createReadStream();
+    const chunks = [];
+    for await (const c of stream) chunks.push(c);
+    const md = Buffer.concat(chunks).toString('utf8');
+    expect(md).toContain('## Étapes types');
+    expect(md).toContain('1. Un premier contrat court');
+    expect(md).toContain('## Concepts du corpus');
+    expect(md).toContain('## Phénomènes liés');
+    expect(md).toContain('Précarité professionnelle');
   });
 
   test('export Markdown : téléchargement d\'un fichier nommé', async ({ page }) => {

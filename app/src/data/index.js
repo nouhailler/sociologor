@@ -4,6 +4,7 @@ import { COURANTS as COURANTS_BASE, PERIODES, NIVEAUX } from './courants.js';
 import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
+import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
 
 export { AUTHORS, EXTRA, EXTRA_EDGES, FAMILIES };
 
@@ -253,7 +254,38 @@ export function getPhenomene(id) {
   };
 }
 
-/** Index de recherche : une entrée par auteur, par concept, par œuvre et par phénomène. */
+/* — Processus sociaux — */
+
+export { CATEGORIES_PROCESSUS };
+export const PROCESSUS_COUNT = PROCESSUS.length;
+
+/** Les processus groupés par catégorie, dans l'ordre de la liste. */
+export const PROCESSUS_CATEGORIES = CATEGORIES_PROCESSUS.map((cat) => ({
+  ...cat,
+  processus: PROCESSUS.filter((p) => p.categorie === cat.id),
+}));
+
+/** Fiche processus complète : étapes telles quelles, concepts et phénomènes cliquables. */
+export function getProcessus(id) {
+  const p = PROCESSUS.find((x) => x.id === id);
+  if (!p) return null;
+  const categorie = CATEGORIES_PROCESSUS.find((c) => c.id === p.categorie);
+  return {
+    ...p,
+    categorieT: categorie?.t || '',
+    etapes: p.etapes || [],
+    conceptsLinks: (p.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    phenomenesLinks: (p.phenomenes || [])
+      .map((ph) => PHENOMENES.find((x) => x.id === ph))
+      .filter(Boolean)
+      .map((ph) => ({ id: ph.id, label: ph.t })),
+    notions: p.notions || [],
+  };
+}
+
+/** Index de recherche : une entrée par auteur, par concept, par œuvre, par phénomène et par processus. */
 export const SEARCH_INDEX = (() => {
   const items = [];
   Object.values(AUTHORS).forEach((x) => {
@@ -269,11 +301,20 @@ export const SEARCH_INDEX = (() => {
   PHENOMENES.forEach((p) =>
     items.push({ kind: 'Phénomène', title: p.t, sub: p.d, id: p.id, to: `/p/${p.id}` }),
   );
+  PROCESSUS.forEach((p) =>
+    items.push({ kind: 'Processus', title: p.t, sub: p.d, id: p.id, to: `/pr/${p.id}` }),
+  );
   return items;
 })();
 
-export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes'];
-const KIND_BY_FILTER = { Auteurs: 'Auteur', Concepts: 'Concept', Œuvres: 'Œuvre', Phénomènes: 'Phénomène' };
+export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes', 'Processus'];
+const KIND_BY_FILTER = {
+  Auteurs: 'Auteur',
+  Concepts: 'Concept',
+  Œuvres: 'Œuvre',
+  Phénomènes: 'Phénomène',
+  Processus: 'Processus',
+};
 export const SEARCH_LIMIT = 24;
 
 /** Comparaison insensible à la casse et aux accents (« precede » trouve « précède »). */

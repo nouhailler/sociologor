@@ -50,8 +50,8 @@ concepts théoriques du corpus qui l'éclairent.
 
 - Un phénomène sans concept du corpus l'indique explicitement — « Aucun
   concept des quinze fiches ne porte directement sur ce phénomène » — plutôt
-  que d'afficher une section vide. C'est le cas de l'étalement urbain, de
-  l'éco-anxiété et de la migration climatique.
+  que d'afficher une section vide. C'est le cas de l'étalement urbain, des
+  inégalités territoriales, de l'éco-anxiété et de la migration climatique.
 - Une fiche sans notion n'affiche pas la section **Notions associées**.
 
 ## Erreurs possibles

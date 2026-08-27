@@ -2,8 +2,8 @@
 
 ## Objectif
 
-Retrouver un auteur, un concept, une œuvre ou un phénomène social sans
-connaître son domaine.
+Retrouver un auteur, un concept, une œuvre, un phénomène ou un processus
+social sans connaître son domaine.
 
 ## Accès
 
@@ -15,9 +15,9 @@ connaître son domaine.
 | Élément | Description |
 |---|---|
 | Champ de recherche | Texte libre ; exemple proposé : « habitus, Weber, chômage, anomie… » |
-| Filtres | **Tout**, **Auteurs**, **Concepts**, **Œuvres**, **Phénomènes** |
+| Filtres | **Tout**, **Auteurs**, **Concepts**, **Œuvres**, **Phénomènes**, **Processus** |
 | Compteur | Nombre de résultats affichés |
-| Liste de résultats | Type, titre, et sous-titre (dates et courant, explication du concept, auteur et année, ou phrase de présentation du phénomène) |
+| Liste de résultats | Type, titre, et sous-titre (dates et courant, explication du concept, auteur et année, ou phrase de présentation du phénomène ou du processus) |
 
 ## Actions et résultats
 
@@ -25,7 +25,7 @@ connaître son domaine.
 |---|---|
 | Saisir du texte | La liste se met à jour à chaque frappe |
 | Choisir un filtre | Restreint la liste à ce type d'entrée |
-| Toucher un résultat | Ouvre sa fiche — celle de l'auteur pour un résultat Auteur ou Œuvre, une fiche dédiée pour un Concept ou un Phénomène |
+| Toucher un résultat | Ouvre sa fiche — celle de l'auteur pour un résultat Auteur ou Œuvre, une fiche dédiée pour un Concept, un Phénomène ou un Processus |
 
 ## Cas particuliers
 
@@ -36,15 +36,18 @@ connaître son domaine.
 - La requête est inscrite dans l'adresse : une recherche peut être partagée ou
   mise en favori.
 - Un résultat de type Œuvre ouvre la fiche de l'auteur qui l'a écrite, faute
-  d'écran propre à une œuvre. Concept et Phénomène, eux, ont chacun leur
-  fiche.
+  d'écran propre à une œuvre. Concept, Phénomène et Processus, eux, ont
+  chacun leur fiche.
+- « Déclassement » (processus) et « Déclassement social » (phénomène)
+  apparaissent tous deux pour la requête « déclassement » : ce sont deux
+  fiches distinctes, pas un doublon. Le filtre les sépare au besoin.
 
 ## Erreurs possibles
 
 Aucune. Sans résultat, un message invite à essayer un nom d'auteur, un concept,
-un titre d'œuvre ou un phénomène.
+un titre d'œuvre, un phénomène ou un processus.
 
 ## Navigation
 
-Recherche → fiche auteur, fiche concept ou fiche phénomène, selon le résultat
-touché.
+Recherche → fiche auteur, fiche concept, fiche phénomène ou fiche processus,
+selon le résultat touché.

@@ -7,6 +7,7 @@ import {
   DOMAIN_COUNT,
   DOMAIN_FAMILIES,
   PHENOMENE_COUNT,
+  PROCESSUS_COUNT,
   conceptOfTheDay,
 } from '../data/index.js';
 
@@ -51,13 +52,14 @@ export default function Home() {
           domaine, ou suivez les fils du graphe : chaque fiche pointe vers les suivantes.
         </p>
 
-        <Link
-          to="/phenomenes"
-          className="btn btn-ghost"
-          style={{ fontSize: 12.5, marginBottom: 24, display: 'inline-flex' }}
-        >
-          {PHENOMENE_COUNT} phénomènes sociaux — du chômage à la gentrification →
-        </Link>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
+          <Link to="/phenomenes" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {PHENOMENE_COUNT} phénomènes sociaux — du chômage à la gentrification →
+          </Link>
+          <Link to="/processus" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {PROCESSUS_COUNT} processus sociaux — de la précarisation au déclassement →
+          </Link>
+        </div>
 
         <div
           style={{
