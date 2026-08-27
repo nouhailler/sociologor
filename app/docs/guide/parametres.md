@@ -3,7 +3,8 @@
 ## Objectif
 
 Régler l'affichage, consulter et effacer les données locales, connaître la
-version installée, ouvrir la documentation.
+version installée, forcer une vérification de mise à jour, ouvrir la
+documentation.
 
 ## Accès
 
@@ -17,7 +18,7 @@ version installée, ouvrir la documentation.
 |---|---|
 | **Affichage** | *Afficher les citations* (case à cocher) et *Écran de démarrage* (Accueil / Graphe) |
 | **Données locales** | Nombre de fiches épinglées, clés de stockage utilisées (réglages, fiches, avertissement légal), absence de compte et de télémétrie, bouton d'effacement |
-| **À propos** | Version, date de build, contenu embarqué, état du réseau |
+| **À propos** | Version, date de build, contenu embarqué, état du réseau, bouton *Forcer la mise à jour* |
 | Boutons | *📚 Aide & documentation*, *Informations légales* |
 
 ## Actions et résultats
@@ -27,6 +28,7 @@ version installée, ouvrir la documentation.
 | Cocher / décocher *Afficher les citations* | Effet immédiat sur les fiches et sur l'export Markdown |
 | Choisir un écran de démarrage | S'applique au prochain lancement de l'application |
 | **Effacer mes données locales** | Demande une confirmation, puis supprime les fiches épinglées et remet les réglages par défaut. Ne réaffiche pas l'avertissement légal |
+| **Forcer la mise à jour** | Vérifie tout de suite auprès du serveur ; applique et recharge automatiquement si une version plus récente existe, sinon un message le confirme |
 
 L'effacement est **définitif et local** : il n'y a pas de sauvegarde ailleurs.
 

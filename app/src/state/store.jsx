@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { readJSON, removeKeys, writeJSON } from '../lib/storage.js';
+import { checkForUpdate as pwaCheckForUpdate } from '../pwa.js';
 
 export const STORAGE_KEYS = {
   favs: 'sociologor.favs.v1',
@@ -28,6 +29,7 @@ export function StoreProvider({ children }) {
     typeof navigator === 'undefined' ? true : navigator.onLine,
   );
   const [updateReady, setUpdateReady] = useState(false);
+  const [checkingUpdate, setCheckingUpdate] = useState(false);
 
   // État réseau : sert le bandeau « hors connexion » et la doc du mode offline.
   // Aux événements `online`/`offline` s'ajoute une relecture au retour d'onglet
@@ -80,6 +82,40 @@ export function StoreProvider({ children }) {
     return () => clearTimeout(t);
   }, [toast]);
 
+  // Mise à jour forcée (Paramètres) : vérifie tout de suite plutôt que
+  // d'attendre le prochain contrôle passif du navigateur, puis applique
+  // automatiquement si une version plus récente est trouvée — l'utilisateur
+  // a déjà donné son accord en déclenchant la vérification lui-même.
+  const forceUpdateCheck = useCallback(() => {
+    if (!online) {
+      flash('Hors connexion : impossible de vérifier une mise à jour.');
+      return;
+    }
+    const started = pwaCheckForUpdate();
+    if (!started) {
+      flash("Rien à vérifier : le service worker n'est actif qu'en production.");
+      return;
+    }
+    setCheckingUpdate(true);
+    flash('Vérification de la dernière version…');
+  }, [flash, online]);
+
+  useEffect(() => {
+    if (checkingUpdate && updateReady) {
+      setCheckingUpdate(false);
+      applyUpdate();
+    }
+  }, [checkingUpdate, updateReady, applyUpdate]);
+
+  useEffect(() => {
+    if (!checkingUpdate) return undefined;
+    const t = setTimeout(() => {
+      setCheckingUpdate(false);
+      flash('Vous avez déjà la dernière version.');
+    }, 6000);
+    return () => clearTimeout(t);
+  }, [checkingUpdate, flash]);
+
   const toggleFav = useCallback(
     (id) => {
       setFavs((cur) => {
@@ -115,6 +151,8 @@ export function StoreProvider({ children }) {
       online,
       updateReady,
       applyUpdate,
+      checkingUpdate,
+      forceUpdateCheck,
     }),
     [
       favs,
@@ -128,6 +166,8 @@ export function StoreProvider({ children }) {
       online,
       updateReady,
       applyUpdate,
+      checkingUpdate,
+      forceUpdateCheck,
     ],
   );
 

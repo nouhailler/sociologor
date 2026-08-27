@@ -17,16 +17,19 @@ dans **Paramètres → À propos** n'est pas la dernière.
 ## Diagnostic
 
 1. Ouvrez **Paramètres → À propos** et notez la version et la date de build.
-2. Connectez-vous à Internet, puis fermez et rouvrez complètement
-   l'application.
-3. Guettez le bandeau de mise à jour en haut de l'écran.
+2. Connectez-vous à Internet, puis touchez **Forcer la mise à jour**.
+3. Guettez le message qui suit, ou le bandeau de mise à jour en haut de
+   l'écran.
 
 ## Solution
 
-1. Si le bandeau apparaît, touchez **Mettre à jour** : l'écran se recharge sur
-   la nouvelle version.
-2. Sinon, fermez **tous** les onglets et fenêtres de l'application, puis
-   rouvrez-la en étant connecté.
+1. **Paramètres → À propos → Forcer la mise à jour** : une vérification
+   immédiate, sans attendre le contrôle automatique du navigateur. Si une
+   version plus récente existe, elle s'applique directement.
+2. Si le message indique que la version installée est déjà la dernière,
+   fermez **tous** les onglets et fenêtres de l'application, puis rouvrez-la
+   en étant connecté — un service worker en attente, retenu par un autre
+   onglet ouvert, se libère ainsi.
 3. En dernier recours, effacez les données du site puis rechargez : vos fiches
    épinglées seront perdues, mais l'application repartira sur la dernière
    version.

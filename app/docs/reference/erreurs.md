@@ -18,10 +18,17 @@ message éphémère en bas, ou un écran complet.
 |---|---|
 | Épinglée — disponible hors connexion | Une fiche vient d'être épinglée |
 | Retirée de vos fiches | Une fiche vient d'être retirée |
-| Fiche exportée en Markdown | L'export a été déclenché |
-| Lien copié dans le presse-papiers | Partage sans Web Share API |
+| Fiche exportée en Markdown | L'export d'une fiche auteur a été déclenché |
+| Concept exporté en Markdown | L'export d'une fiche concept a été déclenché |
+| Phénomène exporté en Markdown | L'export d'une fiche phénomène a été déclenché |
+| Lien copié dans le presse-papiers | Partage d'une fiche auteur, sans Web Share API |
+| Lien copié | Partage d'une fiche concept ou phénomène, sans Web Share API |
 | Lien de la fiche : … | Le presse-papiers a été refusé — copier le lien à la main |
 | Données locales effacées | L'effacement a été confirmé |
+| Vérification de la dernière version… | **Forcer la mise à jour** vient d'être touché |
+| Vous avez déjà la dernière version. | Aucune version plus récente trouvée après vérification forcée |
+| Hors connexion : impossible de vérifier une mise à jour. | **Forcer la mise à jour** touché sans réseau |
+| Rien à vérifier : le service worker n'est actif qu'en production. | **Forcer la mise à jour** touché en environnement de développement |
 
 ## Écrans complets
 

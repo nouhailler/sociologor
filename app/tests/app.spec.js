@@ -530,6 +530,25 @@ test.describe('PWA', () => {
     await context.setOffline(false);
   });
 
+  test('paramètres : forcer la mise à jour, déjà à jour', async ({ page }) => {
+    await enter(page, '/parametres');
+    await page.evaluate(() => navigator.serviceWorker.ready);
+    const button = page.getByRole('button', { name: 'Forcer la mise à jour' });
+    await button.click();
+    await expect(page.getByRole('button', { name: 'Vérification…' })).toBeDisabled();
+    // Même préversion servie des deux côtés : aucune mise à jour à trouver.
+    await expect(page.getByText('Vous avez déjà la dernière version.')).toBeVisible({ timeout: 8000 });
+    await expect(button).toBeEnabled();
+  });
+
+  test('paramètres : forcer la mise à jour hors connexion', async ({ page, context }) => {
+    await enter(page, '/parametres');
+    await context.setOffline(true);
+    await page.getByRole('button', { name: 'Forcer la mise à jour' }).click();
+    await expect(page.getByText('Hors connexion : impossible de vérifier une mise à jour.')).toBeVisible();
+    await context.setOffline(false);
+  });
+
   test('bandeau « Hors connexion » à la perte du réseau', async ({ page }) => {
     await enter(page);
     // Le signal fiable en session vivante est l'événement du navigateur :

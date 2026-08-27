@@ -9,7 +9,8 @@ const APP_VERSION = __APP_VERSION__;
 const BUILD_DATE = __BUILD_DATE__;
 
 export default function Settings() {
-  const { settings, updateSetting, resetAll, favs, persistFailed, online } = useStore();
+  const { settings, updateSetting, resetAll, favs, persistFailed, online, checkingUpdate, forceUpdateCheck } =
+    useStore();
   const [confirming, setConfirming] = useState(false);
 
   return (
@@ -168,6 +169,20 @@ export default function Settings() {
             </tr>
           </tbody>
         </table>
+
+        <button
+          type="button"
+          className="btn btn-secondary"
+          style={{ fontSize: 12.5, marginBottom: 6 }}
+          disabled={checkingUpdate}
+          onClick={forceUpdateCheck}
+        >
+          {checkingUpdate ? 'Vérification…' : 'Forcer la mise à jour'}
+        </button>
+        <p className="text-muted" style={{ fontSize: 11.5, margin: '0 0 20px' }}>
+          Vérifie tout de suite auprès du serveur, sans attendre le prochain contrôle automatique du
+          navigateur. Sans effet hors ligne, ou si aucune version plus récente n&apos;est publiée.
+        </p>
 
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
           <Link className="btn btn-primary" to="/documentation" style={{ fontSize: 12.5 }}>

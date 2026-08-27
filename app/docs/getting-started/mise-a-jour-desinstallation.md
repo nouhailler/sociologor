@@ -28,6 +28,18 @@ séparément de l'application. Voir [Stockage local](/documentation/data/stockag
 **Paramètres → À propos** affiche la version de l'application et sa date de
 build.
 
+## Forcer une vérification
+
+L'application vérifie l'existence d'une nouvelle version au lancement, puis
+selon le rythme propre au navigateur — jusqu'à 24 h peuvent s'écouler avant le
+contrôle suivant. Le bouton **Forcer la mise à jour**, dans **Paramètres → À
+propos**, déclenche une vérification immédiate au lieu d'attendre :
+
+- si une version plus récente existe, elle est appliquée directement — pas de
+  second bouton à chercher, l'appui sur *Forcer la mise à jour* vaut demande ;
+- sinon, un message confirme que la version installée est déjà la dernière ;
+- hors connexion, un message le signale sans tenter de requête.
+
 ## Désinstaller
 
 | Plateforme | Procédure |

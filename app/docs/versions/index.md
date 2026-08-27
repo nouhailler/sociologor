@@ -4,6 +4,60 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.11.0
+
+Date : 2026-08-27
+
+Un bouton pour ne plus attendre le contrôle automatique du navigateur.
+
+## Nouveautés
+
+- **Forcer la mise à jour**, dans **Paramètres → À propos** : déclenche une
+  vérification immédiate auprès du serveur, au lieu d'attendre le prochain
+  contrôle passif (jusqu'à 24 h). Une version plus récente trouvée s'applique
+  directement — l'appui sur le bouton vaut la demande explicite déjà exigée
+  pour toute mise à jour. Sinon, un message confirme que la version installée
+  est déjà la dernière. Hors connexion, ou en environnement de développement
+  (sans service worker), un message dédié l'indique sans tenter de requête.
+
+## Changements
+
+- Aucun changement du comportement automatique existant : le bandeau
+  « Une nouvelle version est disponible » continue d'apparaître quand le
+  navigateur détecte seul une mise à jour.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune — aucun réglage persistant ajouté, l'action est ponctuelle.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée.
+
+## Modifications de confidentialité
+
+Aucune. La vérification interroge le même serveur que le contrôle
+automatique, sans requête supplémentaire ni donnée transmise.
+
+## Documentation mise à jour
+
+[Écran Paramètres](/documentation/guide/parametres),
+[Mise à jour et désinstallation](/documentation/getting-started/mise-a-jour-desinstallation),
+[L'application n'est pas à jour](/documentation/troubleshooting/mise-a-jour-bloquee),
+[Messages et états](/documentation/reference/erreurs).
+
+## Limites connues à cette version
+
+Le bouton ne fonctionne qu'en production, où le service worker est actif —
+comme le reste du mécanisme de mise à jour. Voir [Hors
+connexion](/documentation/offline/index).
+
+---
+
 # Version 1.10.0
 
 Date : 2026-08-26
