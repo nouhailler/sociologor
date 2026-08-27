@@ -1,6 +1,6 @@
 # Contenu embarqué
 
-Inventaire du corpus livré avec l'application (version 1.8.0).
+Inventaire du corpus livré avec l'application (version 1.9.0).
 
 ## Chiffres
 
@@ -59,7 +59,8 @@ Ils sont rangés en huit familles, qui donnent aussi l'ordre de l'accueil.
 Chaque domaine rassemble 1 à 4 auteurs de référence parmi les 15 fiches ; un
 même auteur peut figurer dans plusieurs domaines. La carte porte un libellé
 court, l'écran du domaine son nom complet — « Genre » et « Sociologie du
-genre ».
+genre ». Un paragraphe de contexte, de trois à quatre phrases, complète la
+phrase de présentation sur l'écran du domaine.
 
 ## Inspirateurs hors corpus
 

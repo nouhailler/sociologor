@@ -228,6 +228,7 @@ for (const d of allDomains) {
   if (!familyIds.has(extra.famille)) fail(`Domaine ${d.id} : famille inconnue « ${extra.famille} ».`);
   if (!(d.nom || extra.nom)) fail(`Domaine ${d.id} : nom complet manquant.`);
   if (!d.d) fail(`Domaine ${d.id} : phrase de présentation manquante.`);
+  if (!extra.detail) fail(`Domaine ${d.id} : paragraphe de contexte (« detail ») manquant.`);
 
   const corpus = (d.a || []).filter((x) => AUTHORS[x]);
   (d.a || []).forEach((x) => {

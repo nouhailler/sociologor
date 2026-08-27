@@ -64,6 +64,15 @@ test.describe('Parcours principal', () => {
     await expect(page.getByText('Étiquetage').first()).toBeVisible();
   });
 
+  test('domaine : paragraphe de contexte, au-delà de la phrase de présentation', async ({ page }) => {
+    await enter(page, '/d/generale');
+    await expect(content(page).getByRole('heading', { name: 'Sociologie générale' })).toBeVisible();
+    // La phrase de présentation reste affichée…
+    await expect(page.getByText("Avant de découper la société en objets", { exact: false })).toBeVisible();
+    // … et un paragraphe plus long la complète, citant les auteurs listés plus bas.
+    await expect(page.getByText('Comte fonde le mot et le projet', { exact: false })).toBeVisible();
+  });
+
   test('domaine : inspirateurs hors corpus, non cliquables', async ({ page }) => {
     await enter(page, '/d/genre');
     await expect(content(page).getByRole('heading', { name: 'Sociologie du genre' })).toBeVisible();

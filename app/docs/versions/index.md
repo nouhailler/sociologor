@@ -4,6 +4,59 @@ La version installée s'affiche dans **Paramètres → À propos**.
 
 ---
 
+# Version 1.9.0
+
+Date : 2026-08-26
+
+Une phrase ne suffisait pas à présenter un domaine : chacun des 32 gagne un
+paragraphe de contexte.
+
+## Nouveautés
+
+- **Paragraphe de contexte** sur l'écran Domaine, sous la phrase de
+  présentation : trois à quatre phrases qui situent ce que les auteurs du
+  corpus disent de ce thème, où ils se rejoignent et où ils se distinguent.
+  Les 32 domaines en sont pourvus.
+
+## Changements
+
+- Le paragraphe ne cite jamais un nom qui n'apparaîtrait pas déjà plus bas
+  sur l'écran, comme auteur du corpus (cliquable) ou comme inspirateur hors
+  corpus (texte) — même règle que pour les inspirateurs eux-mêmes.
+- L'**audit documentaire** vérifie désormais que chacun des 32 domaines porte
+  ce paragraphe.
+
+## Changements incompatibles
+
+Aucun.
+
+## Modifications de paramètres
+
+Aucune.
+
+## Modifications de données
+
+Aucune clé de stockage ajoutée ni modifiée. `domains.js` gagne un champ
+`detail` par domaine, dans `DOMAIN_EXTRA`.
+
+## Modifications de confidentialité
+
+Aucune. Le contenu reste entièrement embarqué, sans requête réseau.
+
+## Documentation mise à jour
+
+[Entrée par domaines](/documentation/features/domaines),
+[Écran Domaine](/documentation/guide/domaine),
+[Contenu embarqué](/documentation/reference/contenu).
+
+## Limites connues à cette version
+
+Le paragraphe de contexte reste une synthèse pédagogique, pas une revue de
+littérature : il ne couvre que ce que les auteurs déjà présents sur l'écran
+apportent au domaine.
+
+---
+
 # Version 1.8.0
 
 Date : 2026-08-26

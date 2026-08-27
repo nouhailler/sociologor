@@ -6,6 +6,10 @@
 référence du thème — et, pour les domaines que le corpus ne couvre pas, aux
 auteurs qui les ont fondés sans avoir de fiche ici.
 
+Chaque domaine porte aussi un **paragraphe de contexte** : trois à quatre
+phrases qui situent ce que les auteurs du corpus en disent, au-delà de la
+phrase de présentation.
+
 La liste complète figure dans [Contenu embarqué](/documentation/reference/contenu).
 
 ## Objectif
@@ -20,8 +24,8 @@ Aucun.
 ## Comment l'utiliser
 
 1. Sur l'accueil, parcourez **Les domaines**, famille par famille.
-2. Touchez un domaine : sa présentation, ses auteurs de référence et ses
-   inspirateurs hors corpus s'affichent.
+2. Touchez un domaine : sa présentation, son paragraphe de contexte, ses
+   auteurs de référence et ses inspirateurs hors corpus s'affichent.
 3. Touchez un auteur pour ouvrir sa fiche. Les inspirateurs hors corpus ne sont
    pas cliquables : ils n'ont pas de fiche.
 
@@ -35,9 +39,11 @@ Aucun.
 
 ## Données utilisées
 
-La liste des domaines, leur famille, leurs auteurs et leurs inspirateurs sont
-livrés avec l'application. Les auteurs de référence renvoient aux 15 fiches ;
-les inspirateurs sont du texte, sans destination.
+La liste des domaines, leur famille, leur paragraphe de contexte, leurs
+auteurs et leurs inspirateurs sont livrés avec l'application. Les auteurs de
+référence renvoient aux 15 fiches ; les inspirateurs sont du texte, sans
+destination. Le paragraphe de contexte ne nomme jamais personne d'autre que
+ces deux groupes.
 
 ## Résultat
 

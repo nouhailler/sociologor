@@ -15,7 +15,23 @@ export default function Domain() {
     <Shell title={domain.t} subtitle={domain.familleT} canBack>
       <div className="soc-enter">
         <h2 className="soc-h2">{domain.nom}</h2>
-        <p className="soc-lede">{domain.d}</p>
+        <p className="soc-lede" style={{ marginBottom: 14 }}>
+          {domain.d}
+        </p>
+        {domain.detail && (
+          <p
+            style={{
+              fontSize: 14,
+              lineHeight: 1.6,
+              margin: '0 0 26px',
+              color: 'color-mix(in srgb, var(--color-text) 84%, transparent)',
+              maxWidth: '62ch',
+              textWrap: 'pretty',
+            }}
+          >
+            {domain.detail}
+          </p>
+        )}
         <p className="soc-kicker" style={{ margin: '0 0 10px' }}>
           {domain.authors.length} auteur{domain.authors.length > 1 ? 's' : ''} de référence
         </p>

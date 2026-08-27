@@ -2,8 +2,9 @@
 
 ## Objectif
 
-Lister les auteurs de référence d'un thème sociologique, avec une phrase
-d'accroche pour chacun, puis les fondateurs du domaine qui n'ont pas de fiche.
+Présenter un thème sociologique — ce qu'il recouvre, ce que les auteurs du
+corpus en disent — puis lister ses auteurs de référence, avec une phrase
+d'accroche pour chacun, et les fondateurs du domaine qui n'ont pas de fiche.
 
 ## Accès
 
@@ -17,6 +18,7 @@ d'accroche pour chacun, puis les fondateurs du domaine qui n'ont pas de fiche.
 | Titre | Nom complet du domaine — « Sociologie du genre » |
 | Sous-titre de l'en-tête | Famille du domaine — « Inégalités et identités » |
 | Texte de présentation | Ce que le domaine recouvre, en une phrase |
+| Paragraphe de contexte | Trois à quatre phrases : ce que les auteurs du corpus disent de ce domaine, et où ils se rejoignent ou se distinguent |
 | Compteur | « N auteur(s) de référence » |
 | Liste d'auteurs | Initiales, nom, dates, courant, accroche |
 | **Inspirateurs hors corpus** | Trois auteurs sans fiche, et en une ligne ce qu'on leur doit ici |
@@ -31,6 +33,9 @@ d'accroche pour chacun, puis les fondateurs du domaine qui n'ont pas de fiche.
 
 ## Cas particuliers
 
+- Le paragraphe de contexte ne cite jamais un nom qui n'apparaîtrait pas déjà
+  plus bas sur l'écran, comme auteur du corpus ou comme inspirateur — jamais
+  un troisième nom introduit sans lien ni explication.
 - Un même auteur apparaît dans plusieurs domaines : Bourdieu figure dans une
   dizaine d'entre eux, de l'éducation à la sociologie rurale.
 - Certains domaines n'ont qu'un seul auteur de référence — la sociologie

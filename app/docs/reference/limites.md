@@ -1,7 +1,7 @@
 # Limites connues
 
 Liste honnête de ce que l'application ne fait pas, ou fait imparfaitement, dans
-la version 1.8.0.
+la version 1.9.0.
 
 ## Contenu
 
