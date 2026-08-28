@@ -173,4 +173,60 @@ export const POLITIQUES_PUBLIQUES = [
     limites:
       "La loi interdit par principe la constitution de statistiques ethniques, ce qui prive la mesure française d'un outil que d'autres pays utilisent pour objectiver l'ampleur des discriminations fondées sur l'origine.",
   },
+  {
+    id: 'loi-sru-2000',
+    t: 'Loi relative à la solidarité et au renouvellement urbains (SRU)',
+    pays: 'France',
+    annee: '2000',
+    type: 'Loi imposant des quotas de logement social',
+    d: "Une loi qui impose aux communes urbaines de compter, à terme, un quota minimal de logements sociaux dans leur parc total, sous peine de pénalités financières croissantes en cas de non-respect.",
+    detail:
+      "L'objectif affiché est double : accroître l'offre de logement social là où elle manque, et éviter la concentration de la pauvreté dans un petit nombre de communes qui en construiraient seules l'essentiel.",
+    resultats:
+      "De nombreuses communes ont rattrapé une partie de leur retard, mais un nombre significatif préfère encore payer les pénalités financières plutôt que de construire le quota exigé.",
+    limites:
+      "La loi impose un quota global sans garantir la répartition fine des logements construits au sein même d'une commune, ce qui peut laisser se reconstituer une ségrégation à une échelle plus locale.",
+  },
+  {
+    id: 'loi-dalo-2007',
+    t: 'Droit au logement opposable (DALO)',
+    pays: 'France',
+    annee: '2007',
+    type: 'Droit garanti, recours devant une commission puis la justice administrative',
+    d: "Une loi qui fait du logement un droit que les personnes prioritaires (sans domicile, mal logées, en attente excessive) peuvent faire valoir devant une commission de médiation, puis devant un tribunal si l'État ne les reloge pas dans les délais.",
+    detail:
+      "La loi renverse la logique habituelle de l'aide sociale : elle ne se contente pas de proposer un dispositif, elle ouvre un droit dont le non-respect par l'État peut être sanctionné financièrement par la justice administrative.",
+    resultats:
+      "Le nombre de ménages reconnus prioritaires dépasse largement le nombre de relogements effectifs, l'État étant régulièrement condamné à indemniser des ménages non relogés dans les délais légaux.",
+    limites:
+      "Le droit reconnu se heurte à l'insuffisance de l'offre de logements sociaux disponibles : une décision de justice favorable ne crée, par elle-même, aucun logement supplémentaire.",
+  },
+  {
+    id: 'prime-de-precarite',
+    t: 'Indemnité de fin de contrat (prime de précarité)',
+    pays: 'France',
+    annee: '1990',
+    type: 'Compensation légale obligatoire',
+    d: "Une indemnité égale à un pourcentage du salaire brut total perçu, versée obligatoirement à la fin d'un CDD ou d'une mission d'intérim non poursuivis en contrat stable, pour compenser l'instabilité de l'emploi occupé.",
+    detail:
+      "Le nom même du dispositif reconnaît légalement l'existence d'un préjudice propre à la précarité du contrat, distinct du salaire dû pour le travail effectué — une rare mesure qui indemnise directement l'instabilité en tant que telle.",
+    resultats:
+      "La prime atténue le coût de l'instabilité sans la corriger : elle n'ouvre aucun droit supplémentaire à la continuité de l'emploi, ni à la protection sociale attachée à un contrat stable.",
+    limites:
+      "Plusieurs exceptions légales (contrats saisonniers, emplois d'usage dans certains secteurs) excluent une partie des situations les plus précaires du bénéfice de cette indemnité.",
+  },
+  {
+    id: 'bonus-malus-contrats-courts',
+    t: 'Bonus-malus sur la contribution chômage',
+    pays: 'France',
+    annee: '2019',
+    type: 'Modulation des cotisations employeurs',
+    d: "Un dispositif qui module la cotisation chômage payée par une entreprise selon son recours réel aux contrats courts, comparé aux entreprises de son secteur : plus une entreprise en abuse, plus elle cotise.",
+    detail:
+      "Le principe cherche à corriger un effet pervers du système d'assurance chômage : sans ce mécanisme, une entreprise qui alterne contrats courts et périodes de chômage indemnisé fait porter le coût de cette instabilité sur la collectivité plutôt que sur elle-même.",
+    resultats:
+      "Ciblé sur un nombre limité de secteurs à fort recours aux contrats courts, le dispositif a d'abord suscité une forte opposition patronale avant sa mise en œuvre progressive.",
+    limites:
+      "Le calcul par comparaison sectorielle peut inciter une entreprise à réduire son recours aux contrats courts sans que cela change la précarité globale du secteur, si toutes les entreprises du secteur ajustent leur comportement de façon comparable.",
+  },
 ];

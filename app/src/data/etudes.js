@@ -174,4 +174,64 @@ export const ETUDES = [
       "La seconde phase de l'expérience montre que le contact seul entre les deux groupes ne suffit pas à réduire l'hostilité : il faut leur donner un but commun, que ni l'un ni l'autre ne peut atteindre seul, pour que la coopération remplace la rivalité — un résultat qui nourrira directement l'hypothèse du contact d'Allport.",
     theories: ['nature-du-prejuge-allport'],
   },
+  {
+    id: 'glass-londres-1964',
+    t: 'Observation de quartiers ouvriers londoniens',
+    auteur: 'Ruth Glass',
+    annee: '1964',
+    methode:
+      "Observation de plusieurs quartiers ouvriers de Londres (Islington notamment) au moment où des ménages de la classe moyenne commencent à y racheter et rénover des logements anciens.",
+    d: "L'observation qui donne son nom à la gentrification : Glass y décrit, quartier par quartier, le remplacement progressif des habitants d'origine par des ménages plus aisés attirés par le charme de l'ancien et sa proximité du centre.",
+    detail:
+      "L'étude reste largement descriptive selon les standards actuels, mais son vocabulaire — la gentry qui s'installe — s'est imposé internationalement pour désigner un phénomène depuis mesuré statistiquement dans la plupart des grandes métropoles.",
+    theories: ['gentrification-glass'],
+  },
+  {
+    id: 'kain-etude-1968',
+    t: 'Étude sur la ségrégation résidentielle et l’emploi à Détroit et Chicago',
+    auteur: 'John Kain',
+    annee: '1968',
+    methode:
+      "Analyse croisée de données de localisation des emplois et de données de ségrégation résidentielle dans les agglomérations de Détroit et Chicago.",
+    d: "L'étude qui fonde l'hypothèse de l'inadéquation spatiale : Kain y mesure la corrélation entre l'éloignement résidentiel des emplois et le taux de chômage des populations concernées par la ségrégation.",
+    detail:
+      "L'étude a été critiquée pour la difficulté à isoler l'effet propre de la localisation de celui d'autres facteurs — qualification, réseau, discrimination directe — mais son intuition centrale, la distance compte en elle-même, a résisté à plusieurs décennies de débats méthodologiques.",
+    theories: ['inadequation-spatiale-kain'],
+  },
+  {
+    id: 'chicago-cartographie-park-burgess',
+    t: 'Cartographie sociale de Chicago',
+    auteur: 'Robert Park, Ernest Burgess et l’école de Chicago',
+    annee: '1920–1930',
+    methode:
+      "Relevé systématique, quartier par quartier, des taux de délinquance, de pauvreté et de composition de la population de Chicago, superposé à un découpage de la ville en zones concentriques.",
+    d: "Le travail cartographique qui fonde le modèle des zones concentriques : une génération d'étudiants de l'école de Chicago documente, rue par rue, la répartition sociale d'une grande ville industrielle en pleine croissance.",
+    detail:
+      "La méthode, combinant statistiques officielles et observation de terrain directe, deviendra le modèle de toute la sociologie urbaine américaine ultérieure, bien après que le modèle des zones concentriques lui-même ait été nuancé pour d'autres villes que Chicago.",
+    theories: ['ecole-de-chicago-park-burgess'],
+  },
+  {
+    id: 'standing-recherche-oit',
+    t: 'Recherches sur la flexibilisation du marché du travail',
+    auteur: 'Guy Standing',
+    annee: '1975–2010 (carrière au Bureau international du travail)',
+    methode:
+      "Compilation et analyse de données comparatives sur l'emploi informel, les contrats courts et la protection sociale dans une centaine de pays, menées durant plusieurs décennies au sein d'une organisation internationale.",
+    d: "Le travail de terrain international qui fonde la théorie du précariat : une longue carrière consacrée à documenter, pays par pays, la montée de formes d'emploi instables et faiblement protégées.",
+    detail:
+      "L'ampleur comparative de cette recherche donne à la thèse du précariat une portée internationale que peu de travaux sociologiques centrés sur un seul pays peuvent revendiquer, au prix d'une définition parfois large de ce qui compte comme situation précaire.",
+    theories: ['precariat-standing'],
+  },
+  {
+    id: 'bourdieu-precarite-1997',
+    t: 'Discours sur la précarité comme mode de domination',
+    auteur: 'Pierre Bourdieu',
+    annee: '1997',
+    methode:
+      "Analyse sociologique et politique, appuyée sur l'observation de la diffusion des contrats courts et de l'intérim en France durant les années 1980 et 1990, présentée sous forme de discours puis publiée.",
+    d: "Le texte qui fonde la thèse de la précarité comme mode de domination : un discours prononcé devant des militants syndicaux et associatifs à Grenoble, republié depuis dans plusieurs recueils.",
+    detail:
+      "Le texte reste plus argumentatif qu'empirique au sens strict, mais s'appuie sur des données de l'époque concernant la progression des contrats courts et de l'intérim en France, qu'il interprète à la lumière de sa théorie de la domination symbolique.",
+    theories: ['precarite-domination-bourdieu'],
+  },
 ];

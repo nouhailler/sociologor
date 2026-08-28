@@ -1159,4 +1159,370 @@ export const PROBLEMATIQUES = [
     etudes: ['bertrand-mullainathan-testing', 'crenshaw-analyse-juridique', 'robbers-cave-sherif'],
     problematiquesConnexes: ['exclusion-sociale', 'inegalites', 'chomage'],
   },
+  {
+    id: 'logement',
+    categorie: 'inegalites-et-conditions-de-vie',
+
+    /* — 1. Identité — */
+    t: 'Logement',
+    synonymes: [],
+    simple:
+      "L'accès inégal à un habitat stable, décent et abordable — un enjeu qui conditionne, plus qu'aucun autre, l'accès à l'emploi, à l'école, à la santé et aux relations sociales.",
+    detaille: [
+      "Le logement n'est pas qu'un toit : c'est le point d'ancrage à partir duquel se construisent ou se referment presque tous les autres accès — une adresse détermine l'école de secteur, la distance à l'emploi, et jusqu'à la manière dont un dossier de location ou une candidature sont reçus ailleurs.",
+      "La question du logement se décline en plusieurs difficultés distinctes qui se recoupent sans se confondre — l'absence de toit, l'insalubrité, le surpeuplement, le coût excessif, la difficulté d'accès — chacune appelant des réponses différentes, même si elles touchent souvent les mêmes ménages à la fois.",
+    ],
+    sousCategories: [
+      { t: 'Mal-logement', d: "Le terme générique qui recouvre l'ensemble des situations où le logement occupé ne permet pas de vivre dans des conditions dignes, de l'absence de toit au logement simplement inadapté." },
+      { t: 'Sans-abrisme', d: "L'absence de tout logement personnel, la forme la plus visible et la plus sévère du mal-logement." },
+      { t: 'Logement insalubre', d: "Un logement dont l'état — humidité, moisissures, installations dangereuses — présente un risque direct pour la santé de ses occupants." },
+      { t: 'Surpeuplement', d: "Un logement dont le nombre de pièces ne correspond pas à la taille du ménage qui l'occupe, faute de moyens pour accéder à plus grand." },
+      { t: 'Précarité énergétique', d: "La difficulté à chauffer correctement son logement à un coût raisonnable, entre mauvaise isolation du bâti et faiblesse des revenus." },
+      { t: 'Difficulté d\'accès au logement', d: "Les obstacles rencontrés pour obtenir un logement — garanties exigées, discrimination, délais d'attente — indépendamment de l'état du logement finalement occupé." },
+      { t: 'Logement social', d: "Le parc de logements à loyer encadré, réservé sous conditions de ressources, dont l'insuffisance dans certains territoires allonge les délais d'attente." },
+      { t: 'Coût du logement', d: "Le poids du loyer ou du remboursement dans le budget d'un ménage, devenu le premier poste de dépense pour une large part des locataires du parc privé." },
+      { t: 'Gentrification', d: "La transformation d'un quartier populaire par l'arrivée de ménages plus aisés, qui en fait monter les prix jusqu'à évincer progressivement les habitants d'origine." },
+    ],
+    motsCles: ['mal-logement', 'ségrégation résidentielle', 'gentrification', 'logement social', 'taux d\'effort', 'précarité énergétique'],
+    gravite:
+      "Une problématique suivie chaque année par l'enquête Logement de l'INSEE et par des associations spécialisées, avec des indicateurs allant du taux d'effort au nombre de personnes sans domicile : voir la rubrique Mesurer pour le détail et ses limites.",
+
+    /* — 2. Comprendre la problématique — */
+    description: [
+      "Le logement concentre, plus qu'aucun autre domaine, l'effet cumulatif des inégalités : le prix d'un logement dépend du quartier, le quartier détermine l'école et la distance à l'emploi, et ce que l'on peut payer dépend de l'emploi déjà obtenu — une boucle qui se referme sur elle-même plus qu'elle ne s'ouvre.",
+      "L'école de Chicago, dans les années 1920, a la première cartographié la ville comme un espace socialement trié plutôt que neutre : ce que Park et Burgess observaient à l'échelle d'anneaux concentriques se retrouve aujourd'hui, sous des formes différentes, dans la plupart des grandes métropoles.",
+    ],
+    origineEmergence:
+      "La question du logement comme problème social distinct émerge avec l'urbanisation industrielle du XIXᵉ siècle, quand l'afflux de population vers les villes fait apparaître des taudis urbains et les premières politiques de logement social, d'abord portées par le patronat et les œuvres charitables.",
+    contexteHistorique:
+      "La reconstruction d'après-guerre et les Trente Glorieuses donnent naissance aux grands ensembles, conçus pour résorber la crise du logement, avant que leur relégation progressive n'en fasse, plusieurs décennies plus tard, un symbole de la ségrégation urbaine qu'ils devaient combattre.",
+    evolutionHistorique: [
+      { p: '1920–1930', f: "L'école de Chicago cartographie la ville en zones concentriques et fonde la sociologie urbaine moderne." },
+      { p: '1945–1975', f: "La construction massive de grands ensembles répond à la crise du logement d'après-guerre." },
+      { p: '1964', f: "Ruth Glass observe à Londres le remplacement des habitants populaires par des ménages plus aisés, et forge le mot gentrification." },
+      { p: '1968', f: "Kain formule l'hypothèse de l'inadéquation spatiale entre lieux de résidence et lieux d'emploi." },
+      { p: '2000', f: "La loi SRU impose des quotas de logement social aux communes urbaines françaises." },
+      { p: '2007', f: "La loi DALO fait du logement un droit opposable devant la justice administrative." },
+    ],
+    situationActuelle:
+      "Le coût du logement absorbe une part croissante du budget des ménages locataires du parc privé, tandis que la gentrification de certains centres-villes repousse une partie des ménages modestes vers des périphéries plus mal desservies par l'emploi et les services.",
+    dimensionIndividuelle:
+      "Vécue comme une insécurité résidentielle permanente pour certains, et comme une contrainte budgétaire de premier ordre pour beaucoup, qui pèse sur toutes les autres dépenses du foyer.",
+    dimensionCollective:
+      "Un marché où l'offre et la demande ne s'ajustent pas librement, tant les règles d'urbanisme, la fiscalité et les politiques de logement social pèsent sur qui peut se loger, et où.",
+    dimensionStructurelle:
+      "Le produit attendu de la rareté du foncier, des prix de l'immobilier et de l'ampleur — ou de l'insuffisance — de l'intervention publique sur le marché du logement — ce que la rubrique Facteurs détaille.",
+
+    /* — 3. Population concernée — */
+    population: {
+      generale:
+        "Le poids du logement dans le budget touche la quasi-totalité des ménages, mais son ampleur et ses formes les plus sévères — insalubrité, surpeuplement, absence de toit — restent concentrées sur une partie de la population.",
+      groupesExposes: [
+        'Ménages locataires du parc privé dans les grandes métropoles',
+        'Familles nombreuses ou monoparentales à revenus modestes',
+        'Jeunes actifs et étudiants en début de parcours résidentiel',
+        'Personnes sans domicile ou en hébergement précaire',
+        'Ménages candidats à un logement social en zone tendue',
+        'Personnes discriminées dans l\'accès à la location',
+      ],
+      age: "Les jeunes actifs et les étudiants sont particulièrement exposés à la difficulté d'accès au logement, faute de garanties financières suffisantes ; les personnes âgées peuvent l'être à l'inadaptation du logement à la perte de mobilité.",
+      genre: "Les femmes seules, notamment à la tête d'une famille monoparentale, sont plus souvent exposées à un taux d'effort logement élevé, à revenu comparable.",
+      csp: "Les ouvriers et employés consacrent, en proportion de leur revenu, une part plus importante au logement que les cadres, à qualité de logement souvent inférieure.",
+      revenu: "Le taux d'effort logement croît fortement à mesure que le revenu baisse, ce qui absorbe une part disproportionnée du budget des ménages les plus modestes.",
+      education: "Le niveau de diplôme influence indirectement l'accès au logement, via son effet sur le revenu et la stabilité de l'emploi, deux critères déterminants pour un dossier de location.",
+      territoire: "Le poids du logement varie fortement selon le territoire : très élevé dans les métropoles tendues, plus faible mais parfois couplé à un habitat dégradé dans certaines zones rurales ou périurbaines.",
+      situationFamiliale: "Les familles nombreuses sont les plus exposées au surpeuplement, faute de logements suffisamment grands et abordables à la fois.",
+      statutProfessionnel: "Les personnes en contrat précaire ou en recherche d'emploi rencontrent des difficultés accrues pour constituer un dossier de location jugé solvable par les bailleurs.",
+    },
+
+    /* — 4. Causes et facteurs — */
+    facteurs: {
+      economiques: ['Hausse des prix immobiliers dans les zones tendues', 'Écart croissant entre revenus des ménages et prix du logement', 'Insuffisance de l\'offre de logements neufs', 'Spéculation immobilière'],
+      sociaux: ['Discrimination dans l\'accès à la location', 'Réseaux relationnels mobilisés pour trouver un logement'],
+      culturels: ['Normes de confort et de surface jugées nécessaires', 'Aspirations résidentielles différenciées selon les générations'],
+      politiques: ['Niveau d\'investissement public dans le logement social', 'Régulation ou non des loyers selon les territoires'],
+      institutionnels: ['Règles d\'urbanisme limitant la construction', 'Lenteur des procédures d\'attribution de logement social'],
+      territoriaux: ['Concentration urbaine et rareté du foncier disponible', 'Écarts de prix considérables entre métropoles et zones rurales'],
+      demographiques: ['Croissance et décohabitation des ménages', 'Vieillissement de la population et taille décroissante des foyers'],
+      historiques: ['Héritage du parc de grands ensembles construit pendant les Trente Glorieuses', 'Politiques de rénovation urbaine successives'],
+    },
+
+    /* — 5. Manifestations — */
+    manifestations: {
+      comportements: ['Renoncement à déménager malgré des besoins nouveaux', 'Sur-occupation acceptée faute d\'alternative abordable'],
+      situations: ['Impayés de loyer', 'Files d\'attente pour un logement social', 'Coupures d\'énergie liées à la précarité énergétique'],
+      indicateurs: ['Taux d\'effort logement', 'Taux de surpeuplement', 'Demandes de logement social en attente'],
+      pratiques: ['Recours à la colocation ou à l\'hébergement chez des proches', 'Renoncement au confort thermique pour limiter la facture d\'énergie'],
+      evenements: ['Expulsion locative', 'Vente à la découpe d\'un immeuble', 'Opération de rénovation urbaine'],
+      statistiques: [
+        "Le taux d'effort logement dépasse le seuil d'un tiers du revenu pour une part substantielle des locataires du parc privé — voir la rubrique Mesurer pour la méthode et ses limites.",
+        "Le surpeuplement touche une part minoritaire mais non négligeable des ménages, nettement plus élevée en Île-de-France que dans le reste du territoire.",
+      ],
+    },
+
+    /* — 6. Mécanismes sociaux — */
+    mecanismeSchema: [
+      'Hausse des prix et rareté de l\'offre dans les zones attractives',
+      'Éloignement des ménages modestes vers des zones moins chères',
+      'Ségrégation résidentielle et exclusion territoriale',
+      'Éloignement des emplois, des écoles et des services',
+      'Difficultés cumulées (scolaires, professionnelles, sanitaires)',
+    ],
+    mecanismes: ['segregation-residentielle', 'exclusion-territoriale', 'gentrification', 'mobilite-residentielle'],
+
+    /* — 7. Conséquences — */
+    consequences: {
+      individuelles: ['Insécurité résidentielle chronique', 'Rétrécissement de la sociabilité lié à l\'éloignement ou à la honte du logement'],
+      familiales: ['Tensions liées à la promiscuité et au surpeuplement', 'Vie familiale contrainte par le manque d\'espace'],
+      professionnelles: ['Difficulté à accepter un emploi trop éloigné faute de logement abordable à proximité', 'Fatigue et coût liés à l\'allongement des trajets domicile-travail'],
+      economiques: ['Part croissante du budget absorbée par le logement', 'Moindre épargne disponible pour les autres postes de dépense'],
+      sanitaires: ['Problèmes respiratoires liés à l\'humidité et à l\'insalubrité', 'Stress chronique lié à l\'insécurité résidentielle'],
+      scolaires: ['Moindres conditions de travail scolaire faute d\'espace calme', 'Fatigue liée à l\'allongement des trajets vers l\'école'],
+      territoriales: ['Immobilité résidentielle forcée faute de moyens pour déménager', 'Éloignement croissant des bassins d\'emploi et des services'],
+      politiques: ['Défiance envers des pouvoirs publics jugés inactifs face à la crise du logement'],
+      intergenerationnelles: ['Transmission de conditions de logement dégradées', 'Héritage très inégal en matière de patrimoine immobilier'],
+    },
+
+    /* — 8. Dynamiques — */
+    dynamiques: {
+      aggravation: "La hausse des prix dans les zones les plus recherchées repousse continûment les ménages modestes vers des zones moins chères mais aussi moins bien desservies, ce qui aggrave l'éloignement des emplois et des services.",
+      reduction: "Une offre de logements plus abondante, une régulation efficace des loyers ou un investissement soutenu dans le logement social peuvent desserrer la contrainte, sans qu'aucun levier isolé n'y suffise généralement.",
+      stabilisation: "Un marché tendu qui se maintient sur longue période, sans amélioration ni dégradation nette, notamment dans les métropoles où la demande dépasse durablement l'offre disponible.",
+      transformation: "Le déplacement progressif de la crise du logement, des grandes métropoles historiquement les plus chères vers des villes moyennes désormais elles-mêmes touchées par la hausse des prix.",
+      cycles: "Des phases de gentrification qui, une fois un quartier devenu inabordable, en déplacent la pression vers un quartier voisin encore accessible, dans un mouvement qui se répète plutôt qu'il ne s'arrête.",
+      effetsDeSeuil: "Le franchissement d'un taux d'effort logement trop élevé peut faire basculer brutalement un budget équilibré vers l'impayé, sans dégradation progressive préalable des autres revenus du ménage.",
+      effetsCumulatifs: "Un logement mal situé éloigne de l'emploi, ce qui fragilise le revenu, ce qui réduit d'autant les possibilités de déménager vers un logement mieux situé.",
+      reproductionIntergenerationnelle: "Les conditions de logement de l'enfance restent statistiquement liées à la position résidentielle occupée à l'âge adulte, notamment via le patrimoine immobilier transmis ou non par la famille.",
+    },
+
+    /* — 9. Mesurer la problématique — */
+    mesure: {
+      description:
+        "La mesure croise plusieurs approches complémentaires : le coût rapporté au revenu (taux d'effort), la qualité du bâti (insalubrité, précarité énergétique), l'occupation (surpeuplement) et l'accès (files d'attente en logement social) — aucune ne suffit seule à décrire l'ensemble de la problématique.",
+      statistiques: ['taux-effort-logement', 'taux-de-precarite-energetique', 'taux-de-surpeuplement', 'demande-logement-social-en-attente'],
+      limites: [
+        "Le taux d'effort logement ne tient pas compte du reste à vivre réel, très différent à taux d'effort identique selon le niveau de revenu du ménage.",
+        "La demande de logement social en attente peut inclure des demandes anciennes non activement suivies, ce qui tend à surestimer la tension réellement observée.",
+        "Aucun de ces indicateurs ne mesure directement la qualité de vie dans le logement, qui dépend aussi de facteurs non couverts comme le bruit, la luminosité ou l'état des parties communes.",
+      ],
+    },
+
+    /* — 10. Débats sociologiques — */
+    debats: [
+      {
+        t: 'Logement, bien marchand ou droit fondamental',
+        d: "Le logement doit-il être traité comme un bien économique ordinaire, dont le prix s'ajuste à l'offre et à la demande, ou comme un droit fondamental que la collectivité doit garantir indépendamment du marché ?",
+      },
+      {
+        t: 'Mixité sociale imposée ou libre choix résidentiel',
+        d: "Des quotas de logement social comme ceux de la loi SRU sont-ils un outil légitime de mixité sociale, ou une atteinte au libre choix résidentiel des communes et de leurs habitants ?",
+      },
+      {
+        t: 'Gentrification, renouvellement bénéfique ou déplacement forcé',
+        d: "La transformation d'un quartier populaire par l'arrivée de ménages plus aisés améliore-t-elle les conditions de vie du quartier, ou déplace-t-elle simplement le problème vers les habitants qu'elle finit par évincer ?",
+      },
+      {
+        t: 'Encadrement des loyers',
+        d: "Plafonner les loyers protège-t-il les locataires en place, ou décourage-t-il l'investissement locatif et réduit-il, à terme, l'offre de logements disponibles ?",
+      },
+      {
+        t: 'Construire plus ou mieux répartir l\'existant',
+        d: "Faut-il d'abord augmenter l'offre de logements neufs, ou mieux répartir et mieux utiliser le parc déjà construit — logements vacants, sous-occupation — avant d'artificialiser de nouveaux terrains ?",
+      },
+    ],
+
+    /* — 11. Politiques publiques — */
+    politiquesPubliques: ['loi-sru-2000', 'loi-dalo-2007', 'aides-personnelles-au-logement', 'logement-dabord'],
+
+    /* — 12. Liens avec Sociologor — */
+    phenomenes: ['gentrification', 'segregation-urbaine', 'etalement-urbain', 'inegalites-territoriales', 'pauvrete', 'exclusion-sociale'],
+    concepts: ['capital-economique', 'capital-social', 'capital-culturel', 'classe-sociale', 'position-sociale', 'blasement-urbain', 'domination-legitime'],
+    processus: ['declassement', 'declin-social', 'mobilite-sociale', 'desaffiliation'],
+    theories: ['gentrification-glass', 'inadequation-spatiale-kain', 'ecole-de-chicago-park-burgess', 'underclass'],
+    auteurs: ['simmel', 'weber', 'bourdieu', 'marx'],
+    etudes: ['glass-londres-1964', 'kain-etude-1968', 'chicago-cartographie-park-burgess'],
+    problematiquesConnexes: ['pauvrete', 'exclusion-sociale', 'inegalites', 'chomage', 'discrimination'],
+  },
+  {
+    id: 'precarite',
+    categorie: 'inegalites-et-conditions-de-vie',
+
+    /* — 1. Identité — */
+    t: 'Précarité',
+    synonymes: ['Instabilité sociale'],
+    simple:
+      "L'instabilité et l'incertitude d'une situation — d'emploi, de logement, de statut — plutôt que l'insuffisance de ses ressources : on peut être précaire sans être pauvre, et pauvre sans être précaire.",
+    detaille: [
+      "La distinction avec la pauvreté est essentielle, et souvent brouillée dans le langage courant. La pauvreté se définit par un niveau insuffisant de ressources, mesurable par un seuil : elle répond à la question combien. La précarité se définit par l'instabilité et l'incertitude d'une situation, quel que soit son niveau : elle répond à la question pour combien de temps, et avec quelle garantie. Un cadre en contrat court bien rémunéré est précaire sans être pauvre ; un retraité aux revenus modestes mais stables peut être pauvre sans être précaire.",
+      "Les deux se recoupent statistiquement — la précarité expose au risque de pauvreté, et la pauvreté rend plus vulnérable à toute instabilité supplémentaire — sans jamais se confondre complètement : c'est précisément cet écart qui rend la distinction utile plutôt que purement académique.",
+    ],
+    sousCategories: [
+      { t: "Précarité de l'emploi", d: "L'enchaînement de contrats courts, de missions d'intérim ou de temps partiel subi, sans garantie de continuité ni de perspective de carrière." },
+      { t: 'Précarité des revenus', d: "Des ressources qui varient d'un mois à l'autre, rendant impossible toute prévision budgétaire fiable, même quand leur niveau moyen reste correct." },
+      { t: 'Précarité du logement', d: "Une occupation instable — hébergement temporaire, bail précaire, risque d'expulsion — indépendamment du confort ou de la salubrité du logement occupé." },
+      { t: 'Précarité familiale', d: "Des configurations familiales fragilisées ou en recomposition, qui privent d'un appui stable au moment où il serait le plus nécessaire." },
+      { t: 'Précarité de santé', d: "Une couverture de soins incertaine ou interrompue, qui expose à renoncer aux soins par crainte du coût ou de la complexité des démarches." },
+      { t: 'Précarité du statut administratif', d: "Un titre de séjour, un statut ou des droits sociaux dont le renouvellement n'est jamais acquis, ce qui installe une incertitude permanente sur la légalité même de la situation." },
+      { t: "Précarité de l'accès aux droits", d: "Des droits théoriquement ouverts mais dont l'accès reste incertain, faute d'information, de démarches simples ou de continuité administrative." },
+    ],
+    motsCles: ['instabilité', 'incertitude', 'contrats courts', 'vulnérabilité', 'flexibilité', 'précariat'],
+    gravite:
+      "Une notion popularisée en France par le discours de Pierre Bourdieu en 1997 sur la précarité comme mode de domination, et théorisée à l'échelle internationale par Guy Standing sous le nom de précariat en 2011 : voir la rubrique Mesurer pour les indicateurs disponibles et leurs limites.",
+
+    /* — 2. Comprendre la problématique — */
+    description: [
+      "Castel situe la précarité dans une zone intermédiaire de vulnérabilité, entre l'intégration (travail et liens stables) et la désaffiliation (les deux manquent à la fois) : ni installée, ni rompue, mais exposée à la moindre rupture supplémentaire que la zone d'intégration aurait absorbée sans peine.",
+      "La précarité n'est pas propre aux situations de faible revenu : elle a gagné, depuis les années 1980, des catégories auparavant protégées par un statut stable, ce qui en fait un objet d'étude distinct de la seule pauvreté, avec ses mécanismes et ses conséquences propres.",
+    ],
+    origineEmergence:
+      "Le mot s'impose en France dans les années 1970-1980, à mesure que la fin du plein emploi et la multiplication des contrats courts font émerger des situations d'instabilité que le seul vocabulaire de la pauvreté ne suffisait plus à décrire.",
+    contexteHistorique:
+      "La crise économique des années 1970 met fin à plusieurs décennies de croissance et de plein emploi, et les entreprises recourent de plus en plus à des formes d'emploi flexibles pour s'adapter à une conjoncture devenue incertaine.",
+    evolutionHistorique: [
+      { p: '1970–1980', f: "La fin du plein emploi et la multiplication des contrats courts font émerger le vocabulaire de la précarité en France." },
+      { p: '1990', f: "La prime de précarité devient obligatoire en France, reconnaissant légalement un préjudice propre à l'instabilité du contrat." },
+      { p: '1995', f: "Castel situe la vulnérabilité comme zone intermédiaire entre intégration et désaffiliation." },
+      { p: '1997', f: "Bourdieu prononce à Grenoble son discours sur la précarité comme mode de domination généralisé." },
+      { p: '2011', f: "Standing publie The Precariat et théorise une nouvelle classe sociale définie par l'instabilité plutôt que par le revenu." },
+      { p: '2019', f: "La France instaure un bonus-malus sur la cotisation chômage pour limiter le recours abusif aux contrats courts." },
+    ],
+    situationActuelle:
+      "La part des contrats courts dans les embauches a fortement progressé, tandis que le sujet reste au cœur des débats sur la réforme du droit du travail et de l'assurance chômage.",
+    dimensionIndividuelle:
+      "Vécue comme une incapacité à se projeter — dans un logement, une carrière, un projet familial — plus que comme un manque immédiat de ressources.",
+    dimensionCollective:
+      "Une transformation du rapport salarial observée à l'échelle de catégories entières, au-delà des seules situations individuelles, que Standing propose de lire comme l'émergence d'une classe sociale nouvelle.",
+    dimensionStructurelle:
+      "Le produit attendu de la flexibilisation du marché du travail et de droits sociaux encore largement construits autour du contrat stable — ce que la rubrique Facteurs détaille.",
+
+    /* — 3. Population concernée — */
+    population: {
+      generale:
+        "La précarité touche, à un moment ou un autre, une part croissante de la population active, dans des proportions et des durées très variables selon le secteur d'activité, l'âge et le niveau de qualification.",
+      groupesExposes: [
+        'Salariés enchaînant contrats courts et missions d\'intérim',
+        'Salariés à temps partiel subi',
+        'Jeunes actifs en insertion professionnelle',
+        'Familles monoparentales ou en recomposition récente',
+        'Personnes en situation administrative incertaine (titre de séjour à renouveler)',
+        'Travailleurs indépendants aux revenus irréguliers',
+      ],
+      age: "Les jeunes actifs cumulent souvent plusieurs formes de précarité à la fois (emploi, logement, revenus) au moment de leur insertion professionnelle.",
+      genre: "Les femmes sont surreprésentées parmi les salariés à temps partiel subi, une des formes les plus répandues de précarité de revenu.",
+      csp: "Les employés et ouvriers sont plus exposés aux contrats courts que les cadres, dont l'emploi reste statistiquement plus stable même en période de ralentissement économique.",
+      revenu: "La précarité touche des niveaux de revenu très divers : elle expose davantage au risque de pauvreté qu'elle n'en est la conséquence directe.",
+      education: "Un diplôme élevé réduit l'exposition à la précarité de l'emploi sans l'annuler, notamment en tout début de carrière ou dans certains secteurs très concurrentiels.",
+      territoire: "Certains territoires concentrent des activités structurellement précaires (saisonnier, tourisme), ce qui y installe une précarité récurrente plus qu'accidentelle.",
+      situationFamiliale: "Une séparation ou une recomposition familiale récente fragilise souvent plusieurs dimensions à la fois — logement, revenu, garde d'enfants.",
+      statutProfessionnel: "Les indépendants et micro-entrepreneurs aux revenus irréguliers cumulent souvent une précarité de revenu avec une protection sociale plus limitée que le salariat.",
+    },
+
+    /* — 4. Causes et facteurs — */
+    facteurs: {
+      economiques: ['Multiplication des contrats courts', 'Développement du temps partiel', 'Chômage récurrent ou de longue durée', 'Revenus faibles ou irréguliers'],
+      sociaux: ['Séparation ou rupture familiale', 'Maladie ou accident réduisant la capacité de travail'],
+      culturels: ['Faible qualification limitant l\'accès à des postes stables', 'Méconnaissance des droits sociaux disponibles'],
+      politiques: ['Niveau de protection offert par le droit du travail', 'Générosité et conditions d\'accès des dispositifs de solidarité'],
+      institutionnels: ['Absence ou insuffisance de protection sociale attachée à certains statuts d\'emploi', 'Complexité et durée des démarches de renouvellement de droits'],
+      territoriaux: ['Concentration de l\'emploi précaire dans certains secteurs et territoires (saisonnier, tourisme)'],
+      demographiques: ['Recomposition des trajectoires familiales et professionnelles sur une vie active'],
+      historiques: ['Transformation du marché du travail depuis la fin du plein emploi des années 1970', 'Flexibilisation croissante des formes d\'emploi depuis les années 1980'],
+    },
+
+    /* — 5. Manifestations — */
+    manifestations: {
+      comportements: ['Renoncement à des projets de long terme (logement, enfant)', 'Vigilance budgétaire permanente'],
+      situations: ['Enchaînement de contrats courts', 'Changements fréquents de logement', 'Démarches répétées pour renouveler des droits ou un statut'],
+      indicateurs: ['Part des contrats courts dans les embauches', 'Taux de temps partiel subi'],
+      pratiques: ['Cumul de plusieurs activités pour stabiliser un revenu', 'Recours à des aides ponctuelles ou à l\'entraide familiale'],
+      evenements: ['Fin de contrat non renouvelé', 'Échéance d\'un droit social ou d\'un titre de séjour', 'Changement soudain de statut administratif'],
+      statistiques: [
+        "Une très large majorité des embauches se font aujourd'hui en contrat court plutôt qu'en contrat stable — voir la rubrique Mesurer pour la méthode et ses limites.",
+        "Une part significative des personnes à temps partiel déclarent souhaiter travailler davantage sans y parvenir.",
+      ],
+    },
+
+    /* — 6. Mécanismes sociaux — */
+    mecanismeSchema: [
+      'Situation initiale stable',
+      'Choc ou fragilisation (contrat non renouvelé, séparation, maladie)',
+      'Cumul de plusieurs instabilités à la fois',
+      'Vulnérabilité installée',
+      'Bascule possible vers le déclassement ou la pauvreté',
+    ],
+    mecanismes: ['normalisation-de-l-instabilite', 'cumul-de-precarites', 'vulnerabilite-sociale', 'choc-biographique', 'flexibilisation-du-travail', 'trappe-a-pauvrete'],
+
+    /* — 7. Conséquences — */
+    consequences: {
+      individuelles: ['Incertitude permanente sur l\'avenir', 'Stress chronique', 'Difficulté à se projeter dans un projet de vie'],
+      familiales: ['Report ou renoncement à des projets familiaux (enfant, installation commune)'],
+      professionnelles: ['Alternance de contrats sans continuité de carrière', 'Renoncement à négocier ses conditions de travail par crainte du non-renouvellement'],
+      economiques: ['Endettement pour compenser l\'irrégularité des revenus', 'Impossibilité de constituer une épargne de précaution'],
+      sanitaires: ['Stress chronique et troubles du sommeil', 'Renoncement aux soins non urgents faute de couverture stable'],
+      scolaires: ['Instabilité résidentielle et scolaire des enfants du foyer'],
+      territoriales: ['Déménagements fréquents liés aux changements de situation professionnelle ou familiale'],
+      politiques: ['Défiance envers des institutions perçues comme peu protectrices'],
+      intergenerationnelles: ['Transmission d\'une insécurité économique et d\'un rapport anxieux à l\'avenir'],
+    },
+
+    /* — 8. Dynamiques — */
+    dynamiques: {
+      aggravation: "Le cumul de plusieurs précarités à la fois (emploi, logement, santé) aggrave chacune d'elles, dans un enchaînement qui dépasse la somme de leurs effets pris séparément.",
+      reduction: "Un accès à un contrat stable, un logement pérenne ou une protection sociale continue peut interrompre la spirale, à condition d'intervenir avant que plusieurs instabilités ne se cumulent.",
+      stabilisation: "Une installation durable dans la précarité, sans dégradation supplémentaire ni retour à la stabilité, notamment dans les secteurs où l'emploi précaire est devenu la norme plutôt que l'exception.",
+      transformation: "L'extension de la précarité à des catégories auparavant protégées par un statut stable, au-delà des seuls emplois traditionnellement précaires.",
+      cycles: "Des allers-retours entre stabilité et instabilité tout au long d'une trajectoire, plutôt qu'une bascule unique et définitive.",
+      effetsDeSeuil: "La fin d'un contrat, d'un droit ou d'un statut peut faire basculer brutalement une situation stabilisée, sans dégradation progressive préalable.",
+      effetsCumulatifs: "Chaque instabilité supplémentaire réduit la capacité à absorber la suivante, ce qui rend chaque nouveau choc plus coûteux que le précédent.",
+      reproductionIntergenerationnelle: "Grandir dans un foyer marqué par l'instabilité de l'emploi ou du logement est associé à un risque accru de connaître soi-même des trajectoires précaires à l'âge adulte.",
+    },
+
+    /* — 9. Mesurer la problématique — */
+    mesure: {
+      description:
+        "Mesurer la précarité suppose de mesurer une instabilité dans le temps, pas seulement un niveau à un instant donné : la part des contrats courts dans les embauches et le taux de temps partiel subi en sont les indicateurs les plus directs, complétés par les indicateurs de chômage de longue durée et de chômage au sens du BIT qui en mesurent une partie.",
+      statistiques: ['part-contrats-courts-embauches', 'taux-temps-partiel-subi', 'chomage-longue-duree', 'taux-de-chomage-bit'],
+      limites: [
+        "Les statistiques d'emploi mesurent des stocks à un instant donné, quand la précarité se définit surtout par une instabilité dans le temps, plus difficile à capter par une photographie ponctuelle.",
+        "Aucun indicateur usuel ne mesure directement le cumul de plusieurs précarités à la fois (emploi et logement, par exemple), pourtant central dans la définition sociologique du phénomène.",
+        "La frontière entre précarité choisie et précarité subie reste largement déclarative et varie selon la situation personnelle de la personne interrogée au moment de l'enquête.",
+      ],
+    },
+
+    /* — 10. Débats sociologiques — */
+    debats: [
+      {
+        t: 'Précarité choisie ou subie',
+        d: "Une part de la flexibilité observée est-elle recherchée par certains actifs (indépendance, économie de plateformes), ou la plupart des situations précaires restent-elles imposées faute d'alternative stable disponible ?",
+      },
+      {
+        t: 'Flexibilité et sécurité (flexicurité)',
+        d: "Une flexibilité accrue pour les employeurs peut-elle se combiner avec une sécurité réelle pour les salariés, comme le prétendent les modèles scandinaves, ou l'une se fait-elle nécessairement au détriment de l'autre ?",
+      },
+      {
+        t: 'Le CDI comme norme ou comme anachronisme',
+        d: "Faut-il continuer à faire du contrat à durée indéterminée la référence du droit du travail, ou adapter la protection sociale à des trajectoires professionnelles devenues structurellement plus fragmentées ?",
+      },
+      {
+        t: 'Le précariat, une classe sociale ou une addition de situations',
+        d: "Les personnes en situation de précarité partagent-elles des intérêts communs suffisants pour former une classe sociale au sens plein, comme le soutient Standing, ou seulement des situations juxtaposées trop diverses pour agir ensemble ?",
+      },
+      {
+        t: 'Protection liée au statut ou protection universelle',
+        d: "Faut-il détacher les droits sociaux du statut d'emploi occupé — portabilité des droits, revenu universel — pour mieux protéger des trajectoires précaires, ou maintenir des droits attachés à un statut, au risque d'en exclure ceux qui en changent trop souvent ?",
+      },
+    ],
+
+    /* — 11. Politiques publiques — */
+    politiquesPubliques: ['prime-de-precarite', 'bonus-malus-contrats-courts', 'rsa', 'assurance-chomage-are'],
+
+    /* — 12. Liens avec Sociologor — */
+    phenomenes: ['precarite-professionnelle', 'pauvrete', 'chomage', 'monoparentalite', 'exclusion-sociale', 'inegalites-de-sante'],
+    concepts: ['tension-anomique', 'anomie', 'capital-social', 'ressources-sociales', 'nouvel-esprit-du-capitalisme', 'alienation', 'individualisme-methodologique', 'effets-pervers'],
+    processus: ['precarisation', 'declassement', 'desaffiliation'],
+    theories: ['precariat-standing', 'precarite-domination-bourdieu', 'desaffiliation-castel'],
+    auteurs: ['boltanski', 'bourdieu', 'durkheim', 'merton', 'marx'],
+    etudes: ['standing-recherche-oit', 'bourdieu-precarite-1997'],
+    problematiquesConnexes: ['pauvrete', 'exclusion-sociale', 'inegalites', 'chomage', 'discrimination', 'logement'],
+  },
 ];

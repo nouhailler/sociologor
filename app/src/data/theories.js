@@ -197,4 +197,59 @@ export const THEORIES = [
       "Crenshaw part de plaintes rejetées par des tribunaux américains qui n'admettaient une discrimination que fondée sur un seul critère à la fois — le genre, ou la race — et montre qu'un cadre juridique conçu ainsi laisse sans protection les personnes dont la discrimination résulte précisément du croisement de plusieurs critères. La notion s'est depuis étendue à toute combinaison de critères — origine, classe, handicap, orientation sexuelle — dont l'effet combiné diffère de chacun pris séparément.",
     concepts: ['etiquetage', 'domination-legitime'],
   },
+  {
+    id: 'gentrification-glass',
+    t: 'Théorie de la gentrification',
+    auteur: 'Ruth Glass',
+    annee: '1964',
+    oeuvre: 'London: Aspects of Change',
+    d: "Quand des ménages plus aisés s'installent dans un quartier populaire, ils en transforment le caractère au point d'en évincer progressivement les habitants d'origine — un mouvement que Glass baptise du nom de la petite noblesse anglaise, la gentry.",
+    detail:
+      "Glass observe ce mouvement dans plusieurs quartiers ouvriers de Londres, où des ménages de la classe moyenne rachètent et rénovent des logements anciens : les prix et le standing du quartier montent, jusqu'à ce que les habitants historiques, souvent locataires, ne puissent plus s'y maintenir. Le terme s'est depuis exporté bien au-delà de Londres, pour désigner un mouvement observé dans la plupart des grandes métropoles mondiales.",
+    concepts: ['capital-economique', 'capital-culturel'],
+  },
+  {
+    id: 'inadequation-spatiale-kain',
+    t: "Hypothèse de l'inadéquation spatiale",
+    auteur: 'John Kain',
+    annee: '1968',
+    oeuvre: 'Housing Segregation, Negro Employment, and Metropolitan Decentralization',
+    d: "La ségrégation résidentielle et le déplacement des emplois vers des zones où les ménages modestes ne peuvent pas se loger suffisent, à eux seuls, à expliquer une partie du chômage et des bas salaires observés chez les populations qui en résultent captives.",
+    detail:
+      "Kain observe qu'aux États-Unis, les emplois se sont déplacés vers des banlieues où l'accès au logement restait fermé à une partie de la population par la ségrégation résidentielle : le simple lieu de résidence devient alors un obstacle à l'emploi, indépendamment de toute discrimination directe à l'embauche.",
+    concepts: ['capital-social', 'position-sociale'],
+  },
+  {
+    id: 'ecole-de-chicago-park-burgess',
+    t: 'Modèle des zones concentriques',
+    auteur: 'Robert Park et Ernest Burgess',
+    annee: '1925',
+    oeuvre: 'The City',
+    d: "Une ville se structure en anneaux concentriques autour de son centre d'affaires, chaque anneau étant occupé par une population différente selon son ancienneté d'installation et ses ressources, dans un mouvement constant de succession d'un groupe par un autre.",
+    detail:
+      "Park et Burgess, fondateurs de l'école de Chicago, cartographient la ville comme un laboratoire social : le centre concentre les activités économiques, une zone de transition dégradée accueille les nouveaux arrivants les plus pauvres, puis des anneaux successifs de plus en plus résidentiels et aisés s'étendent vers la périphérie. Le modèle, pensé pour Chicago dans les années 1920, a depuis été largement nuancé, mais reste la matrice de toute la sociologie urbaine ultérieure.",
+    concepts: ['blasement-urbain'],
+  },
+  {
+    id: 'precariat-standing',
+    t: 'Le précariat',
+    auteur: 'Guy Standing',
+    annee: '2011',
+    oeuvre: 'The Precariat: The New Dangerous Class',
+    d: "Une nouvelle classe sociale émergerait, définie non par son revenu mais par l'instabilité de sa situation — contrats courts, absence de protection, incertitude permanente sur l'avenir — distincte à la fois du salariat stable et du sous-prolétariat traditionnel.",
+    detail:
+      "Standing part du constat que la flexibilisation du marché du travail a produit, à travers le monde, un groupe nombreux qui ne se reconnaît ni dans la classe ouvrière traditionnelle, protégée par un statut stable, ni dans le chômage pur : ni pleinement intégré, ni totalement exclu, mais maintenu dans une instabilité chronique qui touche l'emploi, le logement et le rapport au temps lui-même. Il en fait une classe en formation, potentiellement porteuse d'une conflictualité politique nouvelle.",
+    concepts: ['nouvel-esprit-du-capitalisme', 'classe-sociale'],
+  },
+  {
+    id: 'precarite-domination-bourdieu',
+    t: 'La précarité comme mode de domination',
+    auteur: 'Pierre Bourdieu',
+    annee: '1997',
+    oeuvre: 'Contre-feux',
+    d: "Faire régner l'insécurité de l'emploi devient un instrument de gouvernement des conduites : un salarié qui peut être remplacé à tout moment s'autodiscipline sans qu'il soit besoin de le contraindre ouvertement.",
+    detail:
+      "Bourdieu soutient, dans un discours prononcé à Grenoble puis largement diffusé, que la précarité généralisée n'est pas seulement un effet secondaire indésirable de la flexibilisation économique, mais un mode de domination à part entière : la peur de perdre un emploi instable discipline plus efficacement qu'une hiérarchie déclarée, en rendant chacun responsable de sa propre docilité.",
+    concepts: ['domination-legitime', 'violence-symbolique'],
+  },
 ];

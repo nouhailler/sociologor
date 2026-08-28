@@ -230,6 +230,39 @@ export const MECANISMES = [
     phenomenes: ['segregation-urbaine', 'inegalites-territoriales'],
   },
   {
+    id: 'exclusion-territoriale',
+    t: 'Exclusion territoriale',
+    categorie: 'relationnel',
+    d: "Vivre dans un territoire mal desservi ou mal doté ferme, de fait, l'accès à des ressources qui existent pourtant ailleurs — emplois, écoles réputées, transports — sans qu'aucune règle ne l'interdise explicitement.",
+    detail:
+      "Kain formule dès 1968 l'hypothèse d'une inadéquation spatiale : les emplois se sont déplacés vers des zones où les ménages modestes ne peuvent pas se loger, si bien que le seul lieu de résidence suffit à réduire les chances d'accéder à un emploi, indépendamment des qualifications.",
+    concepts: ['capital-social', 'position-sociale'],
+    processus: ['declin-social'],
+    phenomenes: ['inegalites-territoriales', 'segregation-urbaine'],
+  },
+  {
+    id: 'gentrification',
+    t: 'Dynamique de gentrification',
+    categorie: 'relationnel',
+    d: "L'arrivée de ménages plus aisés dans un quartier populaire fait monter les prix de l'immobilier et des loyers, au point de contraindre les habitants historiques à partir sans qu'aucune expulsion formelle ne soit toujours nécessaire.",
+    detail:
+      "Le mécanisme n'a besoin d'aucune intention d'exclure : il suffit qu'une demande nouvelle et plus solvable s'installe dans un quartier pour que les prix s'ajustent à la hausse et que les habitants d'origine, souvent locataires, ne puissent plus suivre — un renouvellement urbain qui déplace plus qu'il n'inclut.",
+    concepts: ['capital-economique', 'capital-culturel'],
+    processus: ['declassement'],
+    phenomenes: ['gentrification', 'segregation-urbaine'],
+  },
+  {
+    id: 'mobilite-residentielle',
+    t: 'Mobilité résidentielle',
+    categorie: 'relationnel',
+    d: "Les ménages changent de logement en réponse aux prix, aux opportunités d'emploi ou aux évolutions de la famille — un mouvement qui peut être choisi ou largement contraint par le marché.",
+    detail:
+      "Une même statistique de déménagement recouvre des réalités opposées : une mobilité ascendante, choisie pour se rapprocher d'un emploi ou d'un cadre de vie recherché, et une mobilité contrainte, subie faute de pouvoir se maintenir là où l'on vivait.",
+    concepts: ['ressources-sociales', 'individualisme-methodologique'],
+    processus: ['mobilite-sociale'],
+    phenomenes: ['segregation-urbaine', 'inegalites-territoriales'],
+  },
+  {
     id: 'discrimination-statistique',
     t: 'Discrimination statistique',
     categorie: 'relationnel',
@@ -318,6 +351,17 @@ export const MECANISMES = [
     concepts: ['alienation', 'nouvel-esprit-du-capitalisme'],
     processus: ['precarisation'],
     phenomenes: ['precarite-professionnelle', 'exclusion-sociale'],
+  },
+  {
+    id: 'vulnerabilite-sociale',
+    t: 'Vulnérabilité sociale',
+    categorie: 'rupture',
+    d: "Une zone intermédiaire où le travail ou les liens sociaux se fragilisent sans avoir encore disparu — ni installé dans une position stable, ni encore désaffilié.",
+    detail:
+      "Castel en fait la zone la plus peuplée et la plus mal connue des trois qu'il distingue : contrairement à la désaffiliation, visible et souvent prise en charge, la vulnérabilité reste discrète, réversible en principe, mais expose à la moindre rupture supplémentaire — un choc que la zone d'intégration aurait absorbé sans peine.",
+    concepts: ['anomie', 'capital-social'],
+    processus: ['precarisation'],
+    phenomenes: ['precarite-professionnelle'],
   },
 
   /* — Structurel et collectif — */

@@ -216,4 +216,70 @@ export const STATISTIQUES = [
     limites:
       "Une mesure déclarative dépend de ce que chacun reconnaît ou nomme comme une discrimination, une catégorie elle-même inégalement connue et mobilisée selon le niveau d'information et l'expérience antérieure des personnes interrogées.",
   },
+  {
+    id: 'taux-effort-logement',
+    t: "Taux d'effort logement",
+    source: 'INSEE, enquête Logement',
+    valeur: "La part du revenu consacrée au logement (loyer ou remboursement, charges comprises) dépasse le seuil d'un tiers du revenu pour une partie substantielle des ménages locataires du parc privé, davantage encore parmi les ménages modestes",
+    d: "La part du revenu d'un ménage absorbée par les dépenses de logement — un indicateur qui mesure directement le poids du logement dans le budget, au-delà du seul niveau de revenu.",
+    detail:
+      "Le taux d'effort varie fortement selon le statut d'occupation : il est structurellement plus élevé pour les locataires du parc privé que pour les propriétaires ayant fini de rembourser leur crédit ou les locataires du parc social, à revenu comparable.",
+    limites:
+      "Un même taux d'effort recouvre des situations très différentes selon le niveau de revenu : un taux de 30 % laisse un reste à vivre confortable pour un revenu élevé, et très serré pour un revenu modeste.",
+  },
+  {
+    id: 'taux-de-precarite-energetique',
+    t: 'Taux de précarité énergétique',
+    source: 'INSEE / ONPE (Observatoire national de la précarité énergétique)',
+    valeur: "Une part significative des ménages déclare souffrir du froid dans leur logement ou consacrer une part disproportionnée de son revenu aux dépenses d'énergie, la proportion étant plus élevée dans le parc de logements anciens et mal isolés",
+    d: "La difficulté à chauffer correctement son logement à un coût raisonnable, croisant la mauvaise isolation du bâti et la faiblesse des revenus du ménage qui l'occupe.",
+    detail:
+      "L'indicateur combine deux mesures distinctes, une objective (part du revenu consacrée à l'énergie) et une subjective (sensation de froid déclarée), qui ne désignent pas toujours les mêmes ménages.",
+    limites:
+      "La mesure objective dépend fortement des prix de l'énergie au moment de l'enquête, ce qui rend les comparaisons dans le temps sensibles à des chocs conjoncturels sans rapport avec l'état du logement lui-même.",
+  },
+  {
+    id: 'taux-de-surpeuplement',
+    t: 'Taux de surpeuplement du logement',
+    source: 'INSEE, enquête Logement',
+    valeur: "Une part minoritaire mais non négligeable des ménages vit dans un logement ne comptant pas le nombre de pièces jugé nécessaire à sa composition, la proportion étant nettement plus élevée en Île-de-France et dans le parc locatif privé",
+    d: "La part des ménages dont le logement compte moins de pièces que ce que leur composition familiale requiert selon une norme d'occupation conventionnelle.",
+    detail:
+      "Le surpeuplement touche plus particulièrement les familles nombreuses et les ménages récemment installés dans les grandes agglomérations, où le coût du logement contraint la surface accessible à budget donné.",
+    limites:
+      "La norme de pièces jugées nécessaires reste conventionnelle et ne tient pas compte de la surface réelle des pièces ni des besoins spécifiques (télétravail, garde alternée) qui varient d'un ménage à l'autre.",
+  },
+  {
+    id: 'demande-logement-social-en-attente',
+    t: 'Demandes de logement social en attente',
+    source: 'Système national d’enregistrement (SNE), ministère chargé du Logement',
+    valeur: "Plusieurs centaines de milliers de demandes actives restent en attente chaque année, pour un nombre d'attributions annuelles nettement inférieur, avec des délais très variables selon les territoires",
+    d: "Le nombre de ménages ayant déposé une demande de logement social non encore satisfaite — un indicateur direct de la tension entre l'offre de logements sociaux et la demande adressée.",
+    detail:
+      "Les délais d'attente varient considérablement d'un territoire à l'autre, particulièrement longs en Île-de-France et dans les grandes métropoles où la tension entre offre et demande est la plus forte.",
+    limites:
+      "Une même personne peut déposer plusieurs demandes dans différentes communes, et certaines demandes anciennes ne sont plus activement suivies par leur auteur, ce qui peut surestimer la demande réellement active.",
+  },
+  {
+    id: 'part-contrats-courts-embauches',
+    t: 'Part des contrats courts dans les embauches',
+    source: 'DARES, déclarations préalables à l’embauche',
+    valeur: "Une très large majorité des embauches se font aujourd'hui en contrat court (CDD de moins d'un mois ou mission d'intérim), contre une minorité en contrat à durée indéterminée",
+    d: "La part des nouvelles embauches réalisées en contrat court plutôt qu'en contrat stable — un indicateur qui montre que l'entrée dans l'emploi, aujourd'hui, passe presque systématiquement par une forme d'instabilité, même quand le contrat stable reste la norme statistique de l'emploi en stock.",
+    detail:
+      "L'écart entre la photographie de l'emploi en stock, où le CDI reste très majoritaire, et le flux des embauches, où le contrat court domine largement, s'explique par la multiplication de contrats très courts renouvelés plusieurs fois, comptés à chaque renouvellement.",
+    limites:
+      "L'indicateur ne distingue pas les contrats courts choisis (certains secteurs fonctionnent structurellement ainsi, comme le spectacle) des contrats courts subis faute d'alternative stable proposée.",
+  },
+  {
+    id: 'taux-temps-partiel-subi',
+    t: 'Taux de temps partiel subi',
+    source: 'INSEE, enquête Emploi',
+    valeur: "Une part significative des personnes à temps partiel déclarent souhaiter travailler davantage et ne pas trouver de temps plein, la proportion étant nettement plus élevée chez les femmes et dans certains secteurs (commerce, nettoyage, aide à domicile)",
+    d: "La part des salariés à temps partiel qui n'ont pas choisi cette durée de travail et souhaiteraient travailler davantage — à distinguer du temps partiel choisi, pour convenance personnelle ou familiale.",
+    detail:
+      "Le temps partiel subi concentre une bonne part de la précarité de revenu, dans des secteurs où il est devenu une norme d'organisation du travail plus qu'une option individuelle laissée aux salariés.",
+    limites:
+      "La frontière entre subi et choisi reste déclarative, et peut évoluer pour une même personne selon sa situation familiale ou financière au moment de l'enquête.",
+  },
 ];
