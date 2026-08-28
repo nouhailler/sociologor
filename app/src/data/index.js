@@ -225,6 +225,18 @@ export function getConcept(id) {
 export const conceptsOf = (authorId) =>
   (AUTHORS[authorId]?.concepts || []).map((c) => ({ ...c, authorId }));
 
+/** Les concepts groupés par auteur, dans l'ordre du corpus — pour la liste `/concepts`. */
+export const CONCEPTS_BY_AUTHOR = AUTHOR_IDS.map((id) => {
+  const a = AUTHORS[id];
+  return {
+    id,
+    name: a.name,
+    dates: a.dates,
+    courant: a.courant,
+    concepts: conceptsOf(id),
+  };
+}).filter((a) => a.concepts.length > 0);
+
 /* — Phénomènes sociaux — */
 
 export { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES };

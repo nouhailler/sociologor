@@ -17,6 +17,8 @@ const CATEGORIES = [
       { to: '/', label: 'Accueil', hint: 'Domaines et notion du jour' },
       { to: '/graphe', label: 'Graphe', hint: 'Filiations, et réseau de concepts' },
       { to: '/courants', label: 'Carte des courants', hint: "D'où vient une manière de faire de la sociologie" },
+      { to: '/sociologues', label: 'Sociologues', hint: 'Les quinze fiches, par leur portrait' },
+      { to: '/concepts', label: 'Concepts sociaux', hint: 'Les outils théoriques, par auteur' },
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
       { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
     ],
@@ -42,6 +44,8 @@ const CATEGORIES = [
 /** L'entrée du menu que l'écran courant met en évidence, s'il y en a une. */
 function activeTo(pathname) {
   if (pathname === '/' || pathname === '/accueil') return '/';
+  if (pathname.startsWith('/sociologues') || pathname.startsWith('/a/')) return '/sociologues';
+  if (pathname.startsWith('/concepts') || pathname.startsWith('/c/')) return '/concepts';
   if (pathname.startsWith('/phenomenes') || pathname.startsWith('/p/')) return '/phenomenes';
   if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
   if (pathname.startsWith('/courants')) return '/courants';

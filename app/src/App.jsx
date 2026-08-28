@@ -2,7 +2,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from './routes/Home.jsx';
 import Domain from './routes/Domain.jsx';
 import Author from './routes/Author.jsx';
+import Sociologues from './routes/Sociologues.jsx';
 import Concept from './routes/Concept.jsx';
+import Concepts from './routes/Concepts.jsx';
 import Graph from './routes/Graph.jsx';
 import Courants from './routes/Courants.jsx';
 import Phenomenes from './routes/Phenomenes.jsx';
@@ -29,7 +31,9 @@ export default function App() {
       <Route path="/accueil" element={<Home />} />
       <Route path="/d/:id" element={<Domain />} />
       <Route path="/a/:id" element={<Author />} />
+      <Route path="/sociologues" element={<Sociologues />} />
       <Route path="/c/:id" element={<Concept />} />
+      <Route path="/concepts" element={<Concepts />} />
       <Route path="/graphe" element={<Graph />} />
       <Route path="/courants" element={<Courants />} />
       <Route path="/phenomenes" element={<Phenomenes />} />

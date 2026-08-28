@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "app", "run", "preview", "--", "--host", "--port", "4173"],
       "port": 4173
+    },
+    {
+      "name": "sociologor-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "app", "run", "dev", "--", "--host", "--port", "5173"],
+      "port": 5173
     }
   ]
 }
