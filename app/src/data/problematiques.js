@@ -953,4 +953,210 @@ export const PROBLEMATIQUES = [
     etudes: ['marienthal-etude', 'doeringer-piore-terrain'],
     problematiquesConnexes: ['pauvrete', 'exclusion-sociale', 'inegalites'],
   },
+  {
+    id: 'discrimination',
+    categorie: 'inegalites-et-conditions-de-vie',
+
+    /* — 1. Identité — */
+    t: 'Discrimination',
+    synonymes: [],
+    simple:
+      "Le traitement défavorable et injustifié d'une personne en raison d'une caractéristique — réelle ou supposée — plutôt qu'en raison de ses actes ou de ses compétences, sur un critère que le droit ou la morale jugent illégitime.",
+    detaille: [
+      "Le droit français reconnaît vingt-cinq critères de discrimination prohibés, parmi lesquels l'origine, le sexe, l'âge, le handicap, la religion, l'apparence physique, l'orientation sexuelle ou le lieu de résidence ne sont que les plus documentés — voir la rubrique Population concernée pour les principaux.",
+      "Discriminer ne suppose pas toujours une intention hostile déclarée. La discrimination directe traite ouvertement différemment sur un critère prohibé ; l'indirecte applique une règle en apparence neutre qui désavantage en pratique un groupe donné ; l'institutionnelle et la systémique se logent dans le fonctionnement ordinaire des organisations, sans acte isolé identifiable ; la statistique traite une moyenne de groupe comme une information individuelle ; l'intersectionnelle, enfin, résulte du croisement de plusieurs critères à la fois, sans se réduire à la somme de chacun pris séparément — voir la rubrique Sous-catégories.",
+    ],
+    sousCategories: [
+      { t: 'Discrimination directe', d: "Un traitement ouvertement différent, fondé explicitement sur un critère prohibé — refuser un logement en raison de l'origine déclarée du candidat." },
+      { t: 'Discrimination indirecte', d: "Une règle formellement neutre qui désavantage en pratique un groupe donné, sans le viser nommément — une exigence de taille minimale qui écarte disproportionnellement les femmes." },
+      { t: 'Discrimination institutionnelle', d: "Une discrimination logée dans les règles et procédures ordinaires d'une organisation, reproduite sans qu'aucun individu n'ait besoin d'exprimer une intention hostile à aucune étape." },
+      { t: 'Discrimination systémique', d: "Le même mécanisme que l'institutionnelle, mais étendu à l'ensemble d'un système social — marché du travail, logement, justice — au-delà d'une seule organisation." },
+      { t: 'Discrimination statistique', d: "Le fait de traiter une caractéristique de groupe comme une information individuelle fiable, faute de connaître réellement la personne évaluée." },
+      { t: 'Discrimination intersectionnelle', d: "Une discrimination qui résulte du croisement de plusieurs critères à la fois — origine et genre, par exemple — et qui ne se réduit à la discrimination que subirait chaque critère pris isolément." },
+    ],
+    motsCles: ['stéréotype', 'préjugé', 'testing', 'égalité de traitement', 'critères prohibés', 'biais'],
+    gravite:
+      "Un phénomène mesuré depuis les années 2000 en France par des méthodes expérimentales (testing) autant que déclaratives, suivi par une autorité indépendante dédiée depuis 2004 : voir la rubrique Mesurer pour le détail des méthodes et leurs limites.",
+
+    /* — 2. Comprendre la problématique — */
+    description: [
+      "La discrimination se distingue du préjugé, une attitude, et du stéréotype, une croyance : elle en est l'effet observable sur une décision réelle — une candidature écartée, un logement refusé, un contrôle déclenché.",
+      "Elle se distingue aussi des inégalités en général : toute inégalité n'est pas une discrimination — un écart de salaire lié à l'ancienneté ne l'est pas — mais toute discrimination avérée produit, en s'accumulant, des inégalités mesurables entre les groupes qui en sont la cible et les autres.",
+    ],
+    origineEmergence:
+      "La discrimination comme catégorie juridique et sociale distincte émerge avec les mouvements pour les droits civiques du XXᵉ siècle, en particulier aux États-Unis, où elle donne lieu aux premiers cadres légaux et aux premiers outils de mesure sociologique.",
+    contexteHistorique:
+      "Les luttes pour l'égalité des droits civiques dans les années 1950 et 1960 imposent l'idée qu'un traitement inégal, même sans loi le formalisant explicitement, peut constituer une injustice à corriger par le droit et l'action publique.",
+    evolutionHistorique: [
+      { p: '1954', f: "Allport publie The Nature of Prejudice et distingue catégorisation ordinaire et préjugé proprement dit." },
+      { p: '1954', f: "Sherif mène l'expérience de la caverne des voleurs, qui montre la formation rapide de préjugés intergroupes." },
+      { p: '1967', f: "Carmichael et Hamilton forgent la notion de racisme institutionnel, au-delà des seuls actes individuels." },
+      { p: '1972–1973', f: "Arrow et Phelps formalisent la théorie de la discrimination statistique." },
+      { p: '1989', f: "Crenshaw formule la théorie de l'intersectionnalité à partir de jurisprudences américaines." },
+      { p: '2001', f: "La France adopte sa première loi transversale de lutte contre les discriminations, avec aménagement de la charge de la preuve." },
+      { p: '2004', f: "Bertrand et Mullainathan publient leur étude de testing sur les prénoms à consonance raciale, largement reprise depuis." },
+      { p: '2011', f: "Le Défenseur des droits reprend et élargit les missions de la HALDE, créée en 2004." },
+    ],
+    situationActuelle:
+      "La mesure de la discrimination s'appuie aujourd'hui à la fois sur des méthodes expérimentales (testing) et déclaratives (enquêtes de perception), avec une attention croissante portée aux discriminations intersectionnelles et aux formes institutionnelles ou systémiques, plus difficiles à établir qu'un acte isolé.",
+    dimensionIndividuelle:
+      "Vécue comme une atteinte à la dignité et une incertitude permanente — ne jamais savoir avec certitude si tel refus tient à une discrimination ou à une autre cause.",
+    dimensionCollective:
+      "Un phénomène statistiquement mesurable par comparaison entre groupes, qui structure l'accès collectif à l'emploi, au logement et aux services, au-delà de chaque situation individuelle.",
+    dimensionStructurelle:
+      "Le produit attendu de catégorisations sociales ordinaires, de rapports de domination hérités et de procédures institutionnelles peu contrôlées — ce que la rubrique Facteurs détaille.",
+
+    /* — 3. Population concernée — */
+    population: {
+      generale:
+        "Toute personne peut en principe subir une discrimination sur l'un des critères reconnus, mais l'exposition reste très concentrée sur certains groupes, identifiables par les vingt-cinq critères que le droit français reconnaît.",
+      groupesExposes: [
+        "Personnes perçues comme d'origine étrangère ou ultramarine",
+        "Femmes, et personnes ne correspondant pas aux normes de genre attendues",
+        "Jeunes actifs et seniors, aux deux extrémités de la pyramide des âges",
+        "Personnes en situation de handicap visible ou déclaré",
+        "Personnes perçues comme pratiquantes d'une religion minoritaire",
+        "Personnes dont l'apparence physique s'écarte des normes dominantes (poids, tenue, signes visibles)",
+        "Personnes LGBT+",
+        "Personnes des classes populaires, perçues à l'adresse, à l'accent ou au vocabulaire",
+        "Habitants de quartiers stigmatisés, notamment de la politique de la ville",
+      ],
+      age: "Les jeunes actifs et les salariés de plus de 50 ans figurent parmi les groupes d'âge les plus souvent cités dans les études de discrimination à l'embauche.",
+      genre: "Les femmes restent davantage exposées aux discriminations liées à la maternité et à la progression de carrière ; les personnes ne correspondant pas aux attentes de genre le sont dans des registres plus larges encore.",
+      csp: "Les personnes perçues comme issues des classes populaires, à l'adresse, à l'accent ou à la présentation, rapportent des discriminations dans l'accès à certains emplois ou services indépendamment de l'origine ou du genre.",
+      revenu: "Le niveau de revenu module la capacité à contourner une discrimination — changer de quartier, recourir à un avocat — plus qu'il n'en détermine directement l'exposition.",
+      education: "Un niveau de diplôme élevé réduit certaines discriminations sans les annuler : les études de testing montrent des écarts de traitement y compris à diplôme égal ou supérieur.",
+      territoire: "Les habitants de quartiers associés dans l'opinion à une origine ou à une classe sociale particulière rapportent des discriminations liées à leur seule adresse, y compris à CV par ailleurs identique.",
+      situationFamiliale: "La grossesse et la parentalité restent citées parmi les motifs de discrimination professionnelle les plus fréquemment rapportés par les femmes.",
+      statutProfessionnel: "Les personnes en recherche d'emploi ou en contrat précaire sont les plus exposées aux discriminations à l'embauche, faute de statut stable qui protège des décisions arbitraires.",
+    },
+
+    /* — 4. Causes et facteurs — */
+    facteurs: {
+      economiques: ['Rareté relative de certains emplois ou logements, qui accroît le tri sur des critères informels', 'Coûts d\'adaptation perçus, à tort ou à raison, comme liés à la différence'],
+      sociaux: ['Préjugés diffusés par la socialisation ordinaire', 'Entre-soi social qui limite les contacts réguliers entre groupes'],
+      culturels: ['Normes esthétiques et comportementales dominantes érigées en référence implicite', 'Stéréotypes véhiculés par les représentations culturelles et médiatiques'],
+      politiques: ['Ancienneté et portée inégale du cadre légal antidiscrimination selon les critères', 'Priorité politique inégale donnée à la lutte contre la discrimination selon les périodes'],
+      institutionnels: ['Procédures de sélection peu encadrées, laissant place au jugement subjectif', 'Absence de contrôle systématique des pratiques de recrutement ou d\'attribution'],
+      territoriaux: ['Ségrégation résidentielle préexistante qui associe origine sociale et lieu de résidence', 'Concentration de certains groupes dans des quartiers eux-mêmes stigmatisés'],
+      demographiques: ['Visibilité et taille relative de certains groupes minoritaires', 'Évolution de la composition de la population active'],
+      historiques: ['Héritages coloniaux et migratoires jamais pleinement soldés', 'Discriminations passées inscrites dans des habitudes institutionnelles anciennes'],
+    },
+
+    /* — 5. Manifestations — */
+    manifestations: {
+      comportements: ['Autocensure dans les candidatures ou les démarches', 'Évitement anticipé de certains lieux ou services', 'Vigilance accrue dans les interactions avec les institutions'],
+      situations: [
+        "Emploi : écarts de convocation à l'entretien selon le nom, l'adresse ou la photo apparaissant sur un CV par ailleurs identique",
+        "Logement : refus de visite ou de bail fondés sur l'origine perçue du nom ou du profil du candidat locataire",
+        "École : orientation différenciée à compétences égales selon l'origine sociale ou perçue",
+        "Santé : écoute clinique ou prise en charge différenciée selon l'origine, le poids ou le genre du patient",
+        "Police : contrôles d'identité disproportionnés selon l'apparence physique",
+        "Justice : décisions statistiquement corrélées à l'origine ou au statut social du prévenu, à faits comparables",
+        "Services publics : traitement différencié des démarches administratives selon l'accent, le nom ou l'apparence",
+        "Consommation : refus de service ou tarification différenciée dans le commerce ou les loisirs",
+      ],
+      indicateurs: ['Écart de taux de réponse mesuré par testing', 'Part de la population déclarant avoir vécu une discrimination'],
+      pratiques: ['Recrutement par cooptation plutôt que par annonce ouverte', 'Recours à des critères informels non déclarés (présentation, adresse)'],
+      evenements: ['Saisine du Défenseur des droits', 'Procès pour discrimination', 'Testing rendu public par une association ou un média'],
+      statistiques: [
+        "Les candidatures perçues comme issues de l'immigration doivent, selon plusieurs études de testing françaises et internationales, être envoyées significativement plus souvent pour obtenir un même taux de réponse positive — voir la rubrique Mesurer pour la méthode et ses limites.",
+        "Une part significative de la population déclare avoir personnellement vécu une situation de discrimination, la proportion étant nettement plus élevée dans certains groupes minoritaires.",
+      ],
+    },
+
+    /* — 6. Mécanismes sociaux — */
+    mecanismeSchema: [
+      'Catégorisation sociale ordinaire (origine, genre, âge…)',
+      'Stéréotype et préjugé attachés à la catégorie',
+      'Biais dans une décision concrète (embauche, logement, contrôle)',
+      'Discrimination répétée et cumulée',
+      'Inégalités mesurables entre groupes',
+    ],
+    mecanismes: [
+      'categorisation-sociale',
+      'discrimination-statistique',
+      'stigmatisation',
+      'segregation-residentielle',
+      'naturalisation-des-inegalites',
+    ],
+
+    /* — 7. Conséquences — */
+    consequences: {
+      individuelles: ['Autocensure et perte de confiance en soi', 'Vigilance chronique face à l\'anticipation d\'un refus'],
+      familiales: ['Transmission de stratégies de prudence ou de méfiance envers certaines institutions'],
+      professionnelles: ['Perte d\'opportunités d\'embauche ou de promotion à compétences égales', 'Orientation contrainte vers des postes ou secteurs perçus comme plus accessibles'],
+      economiques: ['Creusement des inégalités de revenu déjà présentes', 'Moindre valorisation salariale de qualifications pourtant équivalentes'],
+      sanitaires: ['Stress chronique lié à l\'anticipation de la discrimination', 'Moindre recours aux soins par méfiance envers certaines institutions'],
+      scolaires: ['Orientation subie plutôt que choisie', 'Découragement scolaire face à un traitement perçu comme inéquitable'],
+      territoriales: ['Renforcement de la ségrégation résidentielle déjà présente'],
+      politiques: ['Défiance envers les institutions perçues comme discriminantes', 'Désengagement civique et électoral'],
+      intergenerationnelles: ['Transmission du risque de discrimination', 'Transmission de stratégies d\'évitement ou d\'adaptation aux enfants'],
+    },
+
+    /* — 8. Dynamiques — */
+    dynamiques: {
+      aggravation: "Le cumul de discriminations sur plusieurs critères à la fois (intersectionnalité) aggrave l'exposition au-delà de ce que chaque critère produirait séparément.",
+      reduction: "Un cadre légal appliqué, des procédures de recrutement encadrées et un contact intergroupe organisé autour d'un but commun réduisent mesurablement le préjugé et la discrimination qui en découle.",
+      stabilisation: "Un niveau de discrimination mesuré qui se maintient dans le temps malgré un cadre légal établi, quand son application reste peu contrôlée en pratique.",
+      transformation: "Le déplacement progressif de l'attention, des discriminations directes et déclarées vers les formes institutionnelles, systémiques et intersectionnelles, plus difficiles à établir mais tout aussi mesurables par testing.",
+      cycles: "Des phases de mobilisation publique et judiciaire, suivies de périodes de relâchement de l'attention institutionnelle, sans que le niveau réel mesuré ne suive nécessairement le même rythme.",
+      effetsDeSeuil: "La visibilité d'un critère (accent, tenue, nom) peut déclencher un traitement défavorable au-delà d'un certain seuil de perceptibilité, sans gradation progressive en deçà.",
+      effetsCumulatifs: "Chaque discrimination subie augmente la probabilité d'anticiper et donc d'éviter certaines démarches, ce qui réduit d'autant les occasions de contester la discrimination suivante.",
+      reproductionIntergenerationnelle: "Les stratégies d'évitement et de prudence apprises face à la discrimination se transmettent souvent d'une génération à l'autre, au même titre que l'exposition au risque lui-même.",
+    },
+
+    /* — 9. Mesurer la problématique — */
+    mesure: {
+      description:
+        "Deux grandes familles de méthodes se complètent sans se recouvrir : les méthodes expérimentales, comme le testing, mesurent un écart de traitement sans jamais interroger personne ; les enquêtes déclaratives mesurent ce que les personnes concernées perçoivent et nomment elles-mêmes comme une discrimination.",
+      statistiques: ['ecart-de-callback-testing', 'indice-discrimination-percue'],
+      limites: [
+        "Le testing isole un seul critère à la fois et ne mesure qu'une étape du parcours (l'obtention d'un entretien, par exemple), sans rien dire de ce qui se passe ensuite.",
+        "Les enquêtes déclaratives dépendent de ce que chacun reconnaît comme une discrimination, une catégorie inégalement connue et mobilisée selon l'information et l'expérience de la personne interrogée.",
+        "La loi française interdit par principe la constitution de statistiques ethniques, ce qui prive la recherche française d'un outil que d'autres pays utilisent pour objectiver certaines discriminations.",
+      ],
+    },
+
+    /* — 10. Débats sociologiques — */
+    debats: [
+      {
+        t: 'Discrimination intentionnelle ou discrimination sans intention',
+        d: "Faut-il une intention hostile identifiable pour qualifier une discrimination, ou le seul résultat inégal d'une procédure en apparence neutre suffit-il, comme l'admettent les notions de discrimination indirecte et systémique ?",
+      },
+      {
+        t: 'Le testing comme preuve',
+        d: "Un écart statistique mesuré par testing suffit-il à établir juridiquement une discrimination dans un cas individuel, ou seulement à révéler une tendance générale sans valeur de preuve pour une situation particulière ?",
+      },
+      {
+        t: 'Statistiques ethniques',
+        d: "Faut-il autoriser des statistiques fondées sur l'origine pour mieux mesurer et combattre la discrimination, au risque de figer juridiquement des catégories raciales, ou maintenir l'interdiction actuelle par principe d'égalité formelle ?",
+      },
+      {
+        t: 'Actions positives',
+        d: "Faut-il corriger des discriminations avérées par des politiques qui traitent différemment certains groupes pour rétablir un équilibre, au risque d'être elles-mêmes qualifiées de discriminantes envers d'autres ?",
+      },
+      {
+        t: 'Intersectionnalité comme grille d\'action publique',
+        d: "Une grille d'analyse qui combine plusieurs critères à la fois rend-elle l'action publique plus juste et plus précise, ou trop complexe à traduire en politiques concrètes et en catégories juridiques opérationnelles ?",
+      },
+    ],
+
+    /* — 11. Politiques publiques — */
+    politiquesPubliques: ['defenseur-des-droits', 'loi-lutte-discriminations-2001'],
+
+    /* — 12. Liens avec Sociologor — */
+    phenomenes: ['discrimination-a-l-embauche', 'grossophobie', 'incarceration-de-masse', 'segregation-urbaine', 'ecart-salarial', 'exclusion-sociale'],
+    concepts: ['etiquetage', 'stigmate', 'domination-legitime', 'violence-symbolique', 'ideologie', 'statut-social', 'classe-sociale', 'capital-symbolique'],
+    processus: ['desaffiliation', 'declassement', 'precarisation'],
+    theories: [
+      'nature-du-prejuge-allport',
+      'discrimination-statistique-arrow-phelps',
+      'racisme-institutionnel-carmichael-hamilton',
+      'intersectionnalite-crenshaw',
+    ],
+    auteurs: ['goffman', 'becker', 'weber', 'bourdieu', 'marx'],
+    etudes: ['bertrand-mullainathan-testing', 'crenshaw-analyse-juridique', 'robbers-cave-sherif'],
+    problematiquesConnexes: ['exclusion-sociale', 'inegalites', 'chomage'],
+  },
 ];

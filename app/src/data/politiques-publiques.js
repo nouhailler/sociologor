@@ -145,4 +145,32 @@ export const POLITIQUES_PUBLIQUES = [
     limites:
       "L'efficacité de l'accompagnement reste très inégale selon le profil des demandeurs : les publics les plus éloignés de l'emploi bénéficient rarement du suivi le plus intensif, pourtant celui dont ils auraient le plus besoin.",
   },
+  {
+    id: 'defenseur-des-droits',
+    t: 'Défenseur des droits',
+    pays: 'France',
+    annee: '2011 (fusion de la HALDE et de trois autres autorités)',
+    type: 'Autorité administrative indépendante',
+    d: "Une institution indépendante que toute personne peut saisir gratuitement en cas de discrimination, chargée d'instruire les réclamations, de proposer une médiation et de porter des recommandations devant les tribunaux.",
+    detail:
+      "L'institution reprend et élargit les missions de la HALDE, créée en 2004 pour la seule lutte contre les discriminations, en les regroupant avec la défense des droits de l'enfant, la déontologie de la sécurité et les relations avec les administrations.",
+    resultats:
+      "Le nombre de réclamations reçues chaque année dépasse largement le nombre de discriminations réellement vécues, signe d'un non-recours massif documenté par ailleurs par les enquêtes de perception.",
+    limites:
+      "L'institution ne dispose d'aucun pouvoir de sanction direct : elle instruit, recommande et peut saisir la justice, mais ne peut contraindre elle-même un employeur ou un bailleur reconnu responsable d'une discrimination.",
+  },
+  {
+    id: 'loi-lutte-discriminations-2001',
+    t: 'Lois de lutte contre les discriminations (2001 et extensions)',
+    pays: 'France',
+    annee: '2001 (loi fondatrice), critères étendus par lois successives jusqu\'en 2016',
+    type: 'Cadre législatif',
+    d: "Le socle législatif qui définit juridiquement la discrimination en droit français, aménage la charge de la preuve en faveur du plaignant, et énumère les critères prohibés — au nombre de vingt-cinq depuis les dernières extensions.",
+    detail:
+      "La loi de 2001 transpose des directives européennes et introduit un aménagement de la preuve : le plaignant doit seulement présenter des éléments laissant supposer une discrimination, à charge ensuite pour la partie mise en cause de prouver que sa décision reposait sur des éléments objectifs étrangers à toute discrimination.",
+    resultats:
+      "L'aménagement de la preuve a facilité l'instruction des dossiers, mais le nombre de condamnations pénales pour discrimination reste très inférieur au nombre de situations mesurées par les enquêtes et le testing.",
+    limites:
+      "La loi interdit par principe la constitution de statistiques ethniques, ce qui prive la mesure française d'un outil que d'autres pays utilisent pour objectiver l'ampleur des discriminations fondées sur l'origine.",
+  },
 ];

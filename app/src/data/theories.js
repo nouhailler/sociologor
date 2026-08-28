@@ -153,4 +153,48 @@ export const THEORIES = [
       "Schumpeter voit dans ce processus le vrai moteur du capitalisme, plus que la concurrence par les prix : chaque vague d'innovation (le rail, l'électricité, aujourd'hui le numérique) balaie des pans entiers d'activités antérieures. Le solde net d'emplois est positif sur longue période, mais rien ne garantit que ceux dont l'emploi est détruit soient ceux qui profitent des emplois créés ailleurs, dans d'autres secteurs ou d'autres régions.",
     concepts: ['capital-economique'],
   },
+  {
+    id: 'nature-du-prejuge-allport',
+    t: 'Théorie du préjugé',
+    auteur: 'Gordon Allport',
+    annee: '1954',
+    oeuvre: 'The Nature of Prejudice',
+    d: "Catégoriser autrui est une opération mentale ordinaire et nécessaire ; le préjugé apparaît quand cette catégorie s'accompagne par avance d'un jugement défavorable, entretenu même face à des preuves contraires.",
+    detail:
+      "Allport distingue le simple fait de catégoriser — indispensable pour traiter rapidement un monde social trop complexe — du préjugé proprement dit, qui fige la catégorie en jugement hostile résistant à l'expérience individuelle. Il propose aussi l'hypothèse du contact : sous certaines conditions (statut égal, but commun, soutien institutionnel), le contact entre groupes réduit le préjugé plutôt qu'il ne l'attise, une hypothèse depuis largement testée et globalement confirmée.",
+    concepts: ['etiquetage'],
+  },
+  {
+    id: 'discrimination-statistique-arrow-phelps',
+    t: 'Théorie de la discrimination statistique',
+    auteur: 'Kenneth Arrow et Edmund Phelps',
+    annee: '1972–1973',
+    oeuvre: "The Theory of Discrimination / The Statistical Theory of Racism and Sexism",
+    d: "Un employeur incertain de la productivité réelle d'un candidat peut se fier à des caractéristiques de groupe — genre, origine, âge — comme s'il s'agissait d'une information individuelle, sans qu'aucune hostilité personnelle n'intervienne.",
+    detail:
+      "Arrow et Phelps formalisent, indépendamment l'un de l'autre et presque simultanément, un mécanisme qui ne suppose aucun préjugé hostile : il suffit qu'un employeur traite une moyenne statistique de groupe comme un indicateur individuel fiable pour reconduire une inégalité de traitement, à chaque décision prise séparément et rationnellement de son point de vue.",
+    concepts: ['ideal-type'],
+  },
+  {
+    id: 'racisme-institutionnel-carmichael-hamilton',
+    t: 'Théorie du racisme institutionnel',
+    auteur: 'Stokely Carmichael et Charles Hamilton',
+    annee: '1967',
+    oeuvre: 'Black Power: The Politics of Liberation',
+    d: "Une discrimination peut se reproduire par le seul fonctionnement normal des institutions — règles, procédures, routines — sans qu'aucun individu n'ait besoin d'exprimer la moindre hostilité pour que le résultat reste inégal.",
+    detail:
+      "Carmichael et Hamilton distinguent le racisme individuel, un acte identifiable commis par une personne, du racisme institutionnel, inscrit dans le fonctionnement ordinaire d'organisations qui produisent des résultats inégaux sans discrimination déclarée à aucune étape isolée — une distinction reprise depuis sous le terme plus large de discrimination systémique, étendu à d'autres critères que la seule origine.",
+    concepts: ['domination-legitime', 'violence-symbolique'],
+  },
+  {
+    id: 'intersectionnalite-crenshaw',
+    t: 'Théorie de l’intersectionnalité',
+    auteur: 'Kimberlé Crenshaw',
+    annee: '1989',
+    oeuvre: 'Demarginalizing the Intersection of Race and Sex',
+    d: "Certaines personnes subissent une discrimination qui ne se réduit à la somme d'aucun critère pris isolément : une femme noire peut être discriminée d'une façon spécifique, ni identique à celle que subit une femme blanche, ni à celle que subit un homme noir.",
+    detail:
+      "Crenshaw part de plaintes rejetées par des tribunaux américains qui n'admettaient une discrimination que fondée sur un seul critère à la fois — le genre, ou la race — et montre qu'un cadre juridique conçu ainsi laisse sans protection les personnes dont la discrimination résulte précisément du croisement de plusieurs critères. La notion s'est depuis étendue à toute combinaison de critères — origine, classe, handicap, orientation sexuelle — dont l'effet combiné diffère de chacun pris séparément.",
+    concepts: ['etiquetage', 'domination-legitime'],
+  },
 ];

@@ -194,4 +194,26 @@ export const STATISTIQUES = [
     limites:
       "Comparer ce taux entre pays est trompeur si les systèmes éducatifs retiennent très différemment les jeunes en études : un pays qui scolarise plus longtemps affiche mécaniquement moins de jeunes actifs, donc une base de calcul plus restreinte et plus fragile statistiquement.",
   },
+  {
+    id: 'ecart-de-callback-testing',
+    t: 'Écart de taux de réponse mesuré par testing',
+    source: 'DARES, ISM Corum, et études académiques de type Bertrand-Mullainathan',
+    valeur: "Selon les études et les critères testés, les candidatures perçues comme issues de l'immigration ou de quartiers stigmatisés doivent être envoyées significativement plus souvent que des candidatures identiques par ailleurs pour obtenir un même nombre de réponses positives",
+    d: "L'écart de rappel entre candidatures rigoureusement identiques, sauf sur un critère testé (nom, adresse, photo) — la mesure la plus directe dont dispose la recherche pour établir une discrimination sans avoir à en démontrer l'intention.",
+    detail:
+      "Le testing isole un seul critère à la fois en gardant tout le reste identique, ce qui en fait une preuve statistique difficile à contester sur le principe, même si le débat reste vif sur l'ampleur exacte de l'écart selon les métiers, les secteurs et les méthodes.",
+    limites:
+      "Un testing mesure un écart à un instant donné, sur un échantillon d'offres et de métiers donné : il ne dit rien de ce qui se passe après l'entretien, ni des discriminations qui ne passent jamais par une candidature écrite comparable.",
+  },
+  {
+    id: 'indice-discrimination-percue',
+    t: 'Part de la population déclarant avoir vécu une discrimination',
+    source: 'Défenseur des droits / OIT, baromètre de la perception des discriminations',
+    valeur: "Une part significative de la population déclare avoir personnellement vécu au moins une situation de discrimination au cours des cinq dernières années, la proportion étant nettement plus élevée dans certains groupes minoritaires",
+    d: "La mesure déclarative de la discrimination, obtenue en demandant directement aux personnes si elles estiment en avoir été victimes — complémentaire du testing, qui mesure un écart de traitement sans jamais interroger qui que ce soit.",
+    detail:
+      "L'écart entre discrimination déclarée et discrimination mesurée par testing va dans les deux sens : certaines personnes ne perçoivent pas comme discriminatoire un traitement qui l'est statistiquement, d'autres attribuent à la discrimination des refus qui tiennent à d'autres causes.",
+    limites:
+      "Une mesure déclarative dépend de ce que chacun reconnaît ou nomme comme une discrimination, une catégorie elle-même inégalement connue et mobilisée selon le niveau d'information et l'expérience antérieure des personnes interrogées.",
+  },
 ];

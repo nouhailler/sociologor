@@ -243,7 +243,7 @@ export default function ProblematiqueFiche() {
         <FieldLabel>Évolution historique</FieldLabel>
         <ol style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', display: 'flex', flexDirection: 'column', gap: 8 }}>
           {p.evolutionHistorique.map((step) => (
-            <li key={step.p} style={{ display: 'flex', gap: 12, fontSize: 12.5, lineHeight: 1.5 }}>
+            <li key={`${step.p}-${step.f}`} style={{ display: 'flex', gap: 12, fontSize: 12.5, lineHeight: 1.5 }}>
               <span
                 style={{
                   flex: 'none',

@@ -138,4 +138,40 @@ export const ETUDES = [
       "L'étude montre que la mobilité entre entreprises compte souvent moins, pour la trajectoire d'un salarié, que la position occupée dans la hiérarchie interne d'une seule entreprise — un résultat qui a pesé durablement sur l'analyse économique du marché du travail.",
     theories: ['marche-du-travail-segmente-doeringer-piore'],
   },
+  {
+    id: 'bertrand-mullainathan-testing',
+    t: 'Are Emily and Greg More Employable Than Lakisha and Jamal?',
+    auteur: 'Marianne Bertrand et Sendhil Mullainathan',
+    annee: '2004',
+    methode:
+      "Envoi de plus de 5 000 CV fictifs, strictement identiques en compétences et en expérience, à des offres d'emploi réelles, en ne faisant varier que le prénom porté — perçu comme typiquement blanc ou typiquement afro-américain.",
+    d: "L'étude de testing la plus citée sur la discrimination à l'embauche : à CV rigoureusement identique, seul le prénom change le taux de réponse des employeurs.",
+    detail:
+      "Les CV à prénom perçu comme blanc reçoivent significativement plus de rappels que les CV à prénom perçu comme afro-américain, à qualification affichée strictement égale — un écart que ni l'expérience ni le diplôme ne suffisent à effacer dans l'étude.",
+    theories: ['discrimination-statistique-arrow-phelps', 'nature-du-prejuge-allport'],
+  },
+  {
+    id: 'crenshaw-analyse-juridique',
+    t: 'Analyse de jurisprudences américaines sur la discrimination',
+    auteur: 'Kimberlé Crenshaw',
+    annee: '1989',
+    methode:
+      "Analyse de décisions de justice américaines, en particulier l'affaire DeGraffenreid contre General Motors, où des plaignantes noires avaient vu leur plainte rejetée faute de cadre juridique reconnaissant une discrimination combinant race et sexe.",
+    d: "Le travail juridique qui fonde la théorie de l'intersectionnalité : en étudiant des cas où le droit américain avait explicitement refusé de reconnaître une discrimination croisée, Crenshaw en tire l'argument théorique.",
+    detail:
+      "Dans l'affaire étudiée, le tribunal avait jugé qu'aucune discrimination raciale n'existait, puisque des hommes noirs étaient employés, et qu'aucune discrimination sexuelle n'existait non plus, puisque des femmes blanches étaient employées — sans jamais examiner la situation spécifique des femmes noires, cumulant les deux critères.",
+    theories: ['intersectionnalite-crenshaw'],
+  },
+  {
+    id: 'robbers-cave-sherif',
+    t: "Expérience de la caverne des voleurs (Robbers Cave)",
+    auteur: 'Muzafer Sherif',
+    annee: '1954',
+    methode:
+      "Expérience de terrain dans un camp de vacances, où des garçons répartis en deux groupes séparés développent une hostilité intergroupe rapide, avant qu'un objectif commun forcé ne la réduise.",
+    d: "Une expérience fondatrice sur la formation rapide des préjugés intergroupes : la seule appartenance à deux groupes en compétition suffit à engendrer stéréotypes et hostilité, sans aucune différence réelle préexistante entre les garçons.",
+    detail:
+      "La seconde phase de l'expérience montre que le contact seul entre les deux groupes ne suffit pas à réduire l'hostilité : il faut leur donner un but commun, que ni l'un ni l'autre ne peut atteindre seul, pour que la coopération remplace la rivalité — un résultat qui nourrira directement l'hypothèse du contact d'Allport.",
+    theories: ['nature-du-prejuge-allport'],
+  },
 ];

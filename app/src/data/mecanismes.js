@@ -434,6 +434,17 @@ export const MECANISMES = [
 
   /* — Symbolique et normatif — */
   {
+    id: 'categorisation-sociale',
+    t: 'Catégorisation sociale',
+    categorie: 'symbolique',
+    d: "L'esprit range spontanément les personnes rencontrées dans des catégories toutes faites — origine, âge, genre — et prête à chaque catégorie des traits attendus, avant même de connaître la personne elle-même.",
+    detail:
+      "Allport montre que ce classement est d'abord une économie cognitive banale, indispensable pour traiter rapidement un monde social trop complexe pour être jugé au cas par cas : le stéréotype en est le contenu, tout fait et partagé ; le préjugé, l'attitude défavorable qui s'y attache par avance ; le biais, l'effet mesurable de l'un et de l'autre sur un jugement ou une décision, souvent sans que la personne qui décide en ait conscience.",
+    concepts: ['etiquetage', 'ideal-type'],
+    processus: ['desaffiliation'],
+    phenomenes: ['discrimination-a-l-embauche'],
+  },
+  {
     id: 'stigmatisation',
     t: 'Stigmatisation',
     categorie: 'symbolique',
