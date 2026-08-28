@@ -498,7 +498,18 @@ export function getProblematique(id) {
     etudesLinks: (p.etudes || []).map(etudeLinkOf).filter(Boolean),
     auteursLinks: (p.auteurs || []).map(auteurLinkOf).filter(Boolean),
     politiquesPubliquesLinks: (p.politiquesPubliques || []).map(politiquePubliqueLinkOf).filter(Boolean),
-    problematiquesConnexesLinks: (p.problematiquesConnexes || []).map(problematiqueLinkOf).filter(Boolean),
+    // Symétrisé comme les voisinages de concepts : « A cite B comme connexe »
+    // suffit à afficher le lien sur les deux fiches, sans le déclarer deux fois.
+    problematiquesConnexesLinks: [
+      ...new Set([
+        ...(p.problematiquesConnexes || []),
+        ...PROBLEMATIQUES.filter((other) => other.id !== p.id && (other.problematiquesConnexes || []).includes(p.id)).map(
+          (other) => other.id,
+        ),
+      ]),
+    ]
+      .map(problematiqueLinkOf)
+      .filter(Boolean),
     mesure: {
       ...p.mesure,
       statistiquesLinks: (p.mesure?.statistiques || []).map(statistiqueLinkOf).filter(Boolean),

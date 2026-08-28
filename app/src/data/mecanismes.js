@@ -409,8 +409,52 @@ export const MECANISMES = [
     processus: ['precarisation'],
     phenomenes: ['pauvrete', 'chomage'],
   },
+  {
+    id: 'destruction-creatrice-d-emplois',
+    t: 'Destruction créatrice d’emplois',
+    categorie: 'structurel',
+    d: "Une économie détruit continûment des emplois obsolètes et en crée d'autres ailleurs, sans que les personnes touchées par la destruction soient celles qui profitent de la création.",
+    detail:
+      "Schumpeter voit dans ce renouvellement permanent le moteur même du capitalisme : chaque innovation rend obsolète ce qui existait avant elle. Le mécanisme est positif à l'échelle globale — plus d'emplois créés que détruits sur longue période — mais laisse toujours un solde de personnes pour qui la destruction précède, parfois de plusieurs années, une création à laquelle elles n'ont pas accès.",
+    concepts: ['effets-pervers'],
+    processus: ['declassement'],
+    phenomenes: ['chomage'],
+  },
+  {
+    id: 'segmentation-du-marche-du-travail',
+    t: 'Segmentation du marché du travail',
+    categorie: 'structurel',
+    d: "Le marché du travail ne fonctionne pas comme un bloc unique : un segment primaire offre emplois stables, progression et protection, un segment secondaire concentre précarité, faible qualification et rotation rapide de la main-d'œuvre.",
+    detail:
+      "Doeringer et Piore montrent que le passage du segment secondaire au segment primaire est rare, non parce que les compétences manqueraient, mais parce que les règles de recrutement et de carrière internes aux entreprises ferment l'accès aux marchés internes à ceux qui n'y sont jamais entrés.",
+    concepts: ['classe-sociale', 'domination-legitime'],
+    processus: ['precarisation'],
+    phenomenes: ['chomage', 'precarite-professionnelle'],
+  },
 
   /* — Symbolique et normatif — */
+  {
+    id: 'stigmatisation',
+    t: 'Stigmatisation',
+    categorie: 'symbolique',
+    d: "Un attribut, un lieu ou un statut se met à discréditer globalement une personne, au point que ce seul trait efface le reste de son identité aux yeux des autres.",
+    detail:
+      "Goffman montre que le stigmate ne tient pas dans l'attribut lui-même, mais dans la relation : la même caractéristique passe inaperçue dans un contexte et devient disqualifiante dans un autre. Une fois posée, l'étiquette précède la personne dans chaque interaction nouvelle, et referme des portes avant même qu'elle ait pu se présenter autrement.",
+    concepts: ['stigmate', 'etiquetage'],
+    processus: ['desaffiliation'],
+    phenomenes: ['exclusion-sociale'],
+  },
+  {
+    id: 'institutionnalisation',
+    t: 'Institutionnalisation',
+    categorie: 'symbolique',
+    d: "Le passage prolongé dans une institution fermée — hôpital psychiatrique, prison, foyer — coupe peu à peu des rôles, des relations et des repères qui rendaient la vie ordinaire possible au-dehors.",
+    detail:
+      "Goffman appelle institution totale un lieu qui organise entièrement la vie de ceux qui y séjournent, au point de remplacer leur identité antérieure par celle que l'institution leur assigne. Le retour à l'ordinaire, une fois la sortie venue, se heurte alors à des habitudes et des droits qu'il faut réapprendre, souvent sans accompagnement suffisant pour le faire.",
+    concepts: ['domination-legitime', 'role-et-attentes'],
+    processus: ['desaffiliation'],
+    phenomenes: ['exclusion-sociale', 'incarceration-de-masse'],
+  },
   {
     id: 'naturalisation-des-inegalites',
     t: 'Naturalisation des inégalités',

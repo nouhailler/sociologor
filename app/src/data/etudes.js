@@ -54,4 +54,88 @@ export const ETUDES = [
       "Le décalage entre l'année de perception des revenus et la date de publication — généralement deux ans — est la principale limite pratique de l'enquête : le taux de pauvreté publié une année donnée décrit toujours une situation déjà un peu ancienne.",
     theories: ['privation-relative'],
   },
+  {
+    id: 'lenoir-recensement-1974',
+    t: 'Recensement des catégories exclues',
+    auteur: 'René Lenoir',
+    annee: '1974',
+    methode:
+      "Compilation de statistiques administratives déjà existantes — handicap, vieillesse dépendante, inadaptation, marginalité, délinquance — additionnées en une seule catégorie pour la première fois.",
+    d: "Le calcul qui fonde la théorie de l'exclusion de Lenoir : un chiffre unique, un Français sur dix, obtenu en additionnant des populations jusque-là comptées séparément par des administrations différentes.",
+    detail:
+      "La méthode elle-même vaudra à la théorie sa critique la plus durable : additionner des catégories aussi disparates masque des causes et des trajectoires très différentes derrière un chiffre unique, facile à retenir mais difficile à traduire en politique publique ciblée.",
+    theories: ['exclusion-lenoir'],
+  },
+  {
+    id: 'castel-etude-historique',
+    t: 'Analyse historique de la question sociale',
+    auteur: 'Robert Castel',
+    annee: '1995',
+    methode:
+      "Analyse socio-historique des dispositifs d'assistance et de protection sociale en France, de l'Ancien Régime au salariat industriel puis à l'État-providence du XXᵉ siècle.",
+    d: "Le travail historique qui fonde la théorie de la désaffiliation : Castel y retrace comment le salariat stable a longtemps servi de socle à l'intégration sociale, et ce qu'il advient quand ce socle se fissure.",
+    detail:
+      "En repartant de l'assistance aux pauvres sous l'Ancien Régime, Castel montre que la vulnérabilité sociale n'est pas propre à notre époque, mais que la forme qu'elle prend — liée à l'effritement du salariat stable plutôt qu'à l'absence de travail agricole ou artisanal — est, elle, spécifiquement contemporaine.",
+    theories: ['desaffiliation-castel'],
+  },
+  {
+    id: 'enquete-sans-domicile-insee',
+    t: 'Enquête auprès des personnes sans domicile',
+    auteur: 'INSEE / INED',
+    annee: '2001, 2012, 2021',
+    methode:
+      "Enquête directe auprès des usagers des services d'hébergement et de distribution de repas, dans un échantillon de communes urbaines représentatif du territoire.",
+    d: "La principale source française pour mesurer le sans-abrisme et son évolution, reconduite tous les dix ans environ faute de recensement administratif continu de cette population.",
+    detail:
+      "La méthode ne peut compter que les personnes qui recourent aux services d'aide au moment de l'enquête : elle sous-estime nécessairement les personnes qui échappent à tout contact avec ces dispositifs.",
+    theories: ['desaffiliation-castel'],
+  },
+  {
+    id: 'kuznets-donnees-historiques',
+    t: 'Compilation historique des revenus déclarés',
+    auteur: 'Simon Kuznets',
+    annee: '1955',
+    methode:
+      "Rassemblement et harmonisation de séries fiscales américaines et britanniques sur plusieurs décennies, à une époque où aucune base de données internationale comparable n'existait encore.",
+    d: "Le travail statistique fondateur derrière la courbe de Kuznets : une reconstitution, encore partielle selon les standards actuels, de l'évolution des inégalités de revenus sur longue période.",
+    detail:
+      "La rareté des données disponibles à l'époque a longtemps limité la possibilité de tester l'hypothèse hors des deux pays étudiés — un chantier que les grandes bases de données historiques constituées depuis les années 2000 ont considérablement élargi.",
+    theories: ['courbe-de-kuznets'],
+  },
+  {
+    id: 'world-inequality-database',
+    t: 'World Inequality Database',
+    auteur: 'Thomas Piketty, Emmanuel Saez, Gabriel Zucman et al.',
+    annee: 'constituée depuis 2011, mise à jour en continu',
+    methode:
+      "Compilation et harmonisation de données fiscales, comptables et d'enquêtes sur près de deux siècles et une centaine de pays, pour reconstituer des séries longues de revenus et de patrimoine comparables entre pays.",
+    d: "La base de données la plus complète pour suivre l'évolution des inégalités de revenus et de patrimoine dans le temps et entre pays, à l'origine des travaux de Piketty sur le rendement du capital.",
+    detail:
+      "En croisant des sources que les enquêtes de revenu classiques ne couvrent pas — déclarations fiscales des plus hauts revenus, statistiques de patrimoine — la base capte mieux la concentration au sommet de la distribution que les enquêtes déclaratives ordinaires.",
+    theories: ['capital-au-21e-siecle-piketty'],
+  },
+  {
+    id: 'marienthal-etude',
+    t: 'Les Chômeurs de Marienthal',
+    auteur: 'Marie Jahoda, Paul Lazarsfeld, Hans Zeisel',
+    annee: '1933',
+    methode:
+      "Enquête de terrain approfondie dans un village industriel autrichien où la fermeture de l'unique usine textile avait laissé la quasi-totalité des familles sans emploi, croisant observation, journaux de temps et données administratives.",
+    d: "L'étude fondatrice de la sociologie du chômage : elle documente, dans un village entièrement touché par la fermeture d'une usine, l'effritement du rapport au temps et à l'activité que le seul manque de revenu n'explique pas.",
+    detail:
+      "L'équipe observe une désorganisation progressive du temps quotidien, indépendante du niveau des allocations perçues : plus le chômage se prolonge, moins les journées se structurent, ce qui posera les bases de la théorie des fonctions latentes de l'emploi développée par Jahoda cinquante ans plus tard.",
+    theories: ['fonctions-latentes-emploi-jahoda'],
+  },
+  {
+    id: 'doeringer-piore-terrain',
+    t: 'Observation des marchés internes en entreprise',
+    auteur: 'Peter Doeringer et Michael Piore',
+    annee: '1971',
+    methode:
+      "Étude de cas dans plusieurs entreprises manufacturières américaines, portant sur les règles effectives de recrutement, de promotion et de licenciement observées de l'intérieur.",
+    d: "Le travail de terrain qui fonde la théorie du marché du travail segmenté : Doeringer et Piore y documentent des règles de carrière internes aux entreprises, largement indépendantes du marché du travail externe.",
+    detail:
+      "L'étude montre que la mobilité entre entreprises compte souvent moins, pour la trajectoire d'un salarié, que la position occupée dans la hiérarchie interne d'une seule entreprise — un résultat qui a pesé durablement sur l'analyse économique du marché du travail.",
+    theories: ['marche-du-travail-segmente-doeringer-piore'],
+  },
 ];
