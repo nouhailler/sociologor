@@ -89,12 +89,11 @@ export const PHENOMENES = [
     detail:
       "Le chômage se vit différemment selon la classe, l'âge et la durée : un cadre entre deux postes et un ouvrier de longue durée n'affrontent pas la même épreuve. Merton y verrait une tension entre un but socialement valorisé — l'emploi — et des moyens légitimes qui manquent pour l'atteindre.",
     dimensions: ['economique', 'sociale', 'travail'],
-    concepts: ['classe-sociale', 'anomie', 'tension-anomique'],
+    concepts: ['classe-sociale', 'anomie', 'tension-anomique', 'capital-social'],
     notions: [
       "Précarité — l'instabilité qui s'installe entre deux contrats, plus qu'un accident passager",
       "Exclusion sociale — la perte progressive des liens que l'emploi entretenait",
       "Identité professionnelle — ce que « qui suis-je » doit à « que fais-je »",
-      "Capital social — le réseau qui aide, ou qui manque, pour retrouver un poste",
       "Mobilité sociale — le risque d'un déclassement durable après une rupture d'emploi",
       "Discrimination à l'embauche — un obstacle qui s'ajoute à la recherche, selon le nom, l'adresse ou l'âge",
       "Politiques publiques — indemnisation, formation, accompagnement : ce que la collectivité choisit de compenser",
@@ -339,13 +338,12 @@ export const PHENOMENES = [
     detail:
       "Marx réduit la hiérarchie à une seule ligne de fracture, la place dans les rapports de production ; Weber la déplie en trois dimensions distinctes — la classe économique, le statut social, le pouvoir politique — qui ne se recouvrent pas toujours. Bourdieu ajoute une quatrième mesure, le capital culturel, pour expliquer pourquoi la hiérarchie se maintient même quand la fortune change de mains.",
     dimensions: ['sociale', 'economique'],
-    concepts: ['classe-sociale', 'domination-legitime', 'capital-culturel'],
+    concepts: ['classe-sociale', 'domination-legitime', 'capital-culturel', 'meritocratie'],
     notions: [
       "Hiérarchisation sociale — le classement des positions sur une échelle de prestige ou de ressources",
       "Inégalités sociales — le terme générique recouvrant l'ensemble des écarts de position",
       "Classes sociales — le découpage le plus ancien de la hiérarchie, toujours disputé entre approches marxienne et wébérienne",
       "Ordres et castes — deux formes de hiérarchie plus rigides que la classe, où la naissance ferme presque tout déplacement",
-      "Méritocratie — l'idée que la hiérarchie récompense le mérite, plus proclamée que vérifiée",
     ],
   },
   {

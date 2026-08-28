@@ -20,6 +20,7 @@ const CATEGORIES = [
       { to: '/sociologues', label: 'Sociologues', hint: 'Les quinze fiches, par leur portrait' },
       { to: '/concepts', label: 'Concepts sociaux', hint: 'Les outils théoriques, par auteur' },
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
+      { to: '/mecanismes', label: 'Mécanismes sociaux', hint: "Les rouages qui expliquent comment un phénomène se produit" },
       { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
     ],
   },
@@ -27,7 +28,7 @@ const CATEGORIES = [
     id: 'retrouver',
     t: 'Retrouver',
     items: [
-      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes, processus' },
+      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes, mécanismes, processus' },
       { to: '/mes-fiches', label: 'Mes fiches', hint: 'Fiches épinglées' },
     ],
   },
@@ -47,6 +48,7 @@ function activeTo(pathname) {
   if (pathname.startsWith('/sociologues') || pathname.startsWith('/a/')) return '/sociologues';
   if (pathname.startsWith('/concepts') || pathname.startsWith('/c/')) return '/concepts';
   if (pathname.startsWith('/phenomenes') || pathname.startsWith('/p/')) return '/phenomenes';
+  if (pathname.startsWith('/mecanismes') || pathname.startsWith('/m/')) return '/mecanismes';
   if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
   if (pathname.startsWith('/courants')) return '/courants';
   if (pathname.startsWith('/graphe')) return '/graphe';

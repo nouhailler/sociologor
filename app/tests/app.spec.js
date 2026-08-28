@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(9);
+    await expect(dialog.getByRole('link')).toHaveCount(12);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -330,9 +330,9 @@ test.describe('Parcours principal', () => {
   test('graphe des concepts : sous le graphe des filiations, un nœud par concept', async ({ page }) => {
     await enter(page, '/graphe');
     const concepts = page.locator('[aria-label="Graphe des concepts, défilement horizontal et vertical"]');
-    await expect(concepts.getByRole('link')).toHaveCount(38);
-    // Une arête par paire associée ou opposée, dédoublonnée : 64 + 36.
-    await expect(concepts.locator('svg path')).toHaveCount(100);
+    await expect(concepts.getByRole('link')).toHaveCount(48);
+    // Une arête par paire associée ou opposée, dédoublonnée : 85 + 45.
+    await expect(concepts.locator('svg path')).toHaveCount(130);
     await concepts.getByRole('link', { name: /Habitus/ }).click();
     await expect(page).toHaveURL(/\/c\/habitus/);
     await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();

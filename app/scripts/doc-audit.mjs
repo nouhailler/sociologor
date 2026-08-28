@@ -18,7 +18,9 @@
  * 12. chaque phénomène a une catégorie, des dimensions et des notions bien
  *     formées, et concepts/notions ne sont jamais mélangés dans un même champ ;
  * 13. chaque processus a une catégorie, au moins deux étapes, et ses éventuels
- *     phénomènes liés existent bien parmi les phénomènes déjà décrits.
+ *     phénomènes liés existent bien parmi les phénomènes déjà décrits ;
+ * 14. chaque mécanisme a une catégorie, au moins un concept et au moins un
+ *     processus qu'il alimente, et ses éventuels phénomènes liés existent.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -59,7 +61,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/phenomenes$/, /^\/processus$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/pr\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -407,6 +409,38 @@ for (const cat of CATEGORIES_PROCESSUS) {
   if (!PROCESSUS.some((p) => p.categorie === cat.id)) fail(`Catégorie de processus vide : ${cat.id}`);
 }
 
+/* — 14. intégrité des mécanismes sociaux — */
+// Un mécanisme sans processus n'expliquerait rien : ce champ n'admet donc pas
+// la liste vide, à la différence de `phenomenes`, qui peut rester vide si le
+// mécanisme n'aboutit à aucun état déjà décrit.
+const { CATEGORIES_MECANISMES, MECANISMES } = await import('../src/data/mecanismes.js');
+
+const mecaCatIds = new Set(CATEGORIES_MECANISMES.map((c) => c.id));
+const mecaIds = new Set();
+
+for (const m of MECANISMES) {
+  if (mecaIds.has(m.id)) fail(`Mécanisme en double : ${m.id}`);
+  mecaIds.add(m.id);
+  for (const f of ['t', 'd', 'detail']) {
+    if (!m[f]) fail(`Mécanisme ${m.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  if (!mecaCatIds.has(m.categorie)) fail(`Mécanisme ${m.id} : catégorie inconnue « ${m.categorie} ».`);
+  if ((m.concepts || []).length === 0) fail(`Mécanisme ${m.id} : aucun concept — la fiche s'afficherait sans ancrage théorique.`);
+  for (const c of m.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Mécanisme ${m.id} : concept inconnu « ${c} ».`);
+  }
+  if ((m.processus || []).length === 0) fail(`Mécanisme ${m.id} : aucun processus — un mécanisme doit alimenter au moins une trajectoire.`);
+  for (const pr of m.processus || []) {
+    if (!procIds.has(pr)) fail(`Mécanisme ${m.id} : processus inconnu « ${pr} ».`);
+  }
+  for (const ph of m.phenomenes || []) {
+    if (!phenIds.has(ph)) fail(`Mécanisme ${m.id} : phénomène inconnu « ${ph} ».`);
+  }
+}
+for (const cat of CATEGORIES_MECANISMES) {
+  if (!MECANISMES.some((m) => m.categorie === cat.id)) fail(`Catégorie de mécanisme vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -441,6 +475,12 @@ console.log(
   line(
     'Processus',
     `${PROCESSUS.length} en ${CATEGORIES_PROCESSUS.length} catégories, ${PROCESSUS.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PROCESSUS.reduce((n, p) => n + (p.phenomenes || []).length, 0)} liens vers des phénomènes, ${PROCESSUS.reduce((n, p) => n + (p.notions || []).length, 0)} notions`,
+  ),
+);
+console.log(
+  line(
+    'Mécanismes',
+    `${MECANISMES.length} en ${CATEGORIES_MECANISMES.length} catégories, ${MECANISMES.reduce((n, m) => n + (m.concepts || []).length, 0)} liens vers des concepts, ${MECANISMES.reduce((n, m) => n + (m.processus || []).length, 0)} liens vers des processus, ${MECANISMES.reduce((n, m) => n + (m.phenomenes || []).length, 0)} liens vers des phénomènes`,
   ),
 );
 

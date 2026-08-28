@@ -116,6 +116,12 @@ export function phenomeneToMarkdown(p) {
   );
   L.push('');
 
+  if (p.mecanismesLinks.length) {
+    L.push("## Mécanismes qui l'expliquent", '');
+    L.push(p.mecanismesLinks.map((m) => m.label).join(', '));
+    L.push('');
+  }
+
   if (p.notions.length) {
     L.push('## Notions associées', '');
     p.notions.forEach((n) => L.push(`- ${n}`));
@@ -140,6 +146,12 @@ export function processusToMarkdown(p) {
   p.etapes.forEach((e, i) => L.push(`${i + 1}. ${e}`));
   L.push('');
 
+  if (p.mecanismesLinks.length) {
+    L.push("## Mécanismes qui l'alimentent", '');
+    L.push(p.mecanismesLinks.map((m) => m.label).join(', '));
+    L.push('');
+  }
+
   L.push('## Concepts du corpus', '');
   L.push(
     p.conceptsLinks.length
@@ -161,6 +173,38 @@ export function processusToMarkdown(p) {
   }
 
   L.push('---', '', `Processus exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
+/** Sérialise une fiche mécanisme en Markdown — les mêmes rubriques que l'écran. */
+export function mecanismeToMarkdown(m) {
+  const L = [];
+  L.push(`# ${m.t}`, '');
+  L.push(`*${m.categorieT}*`, '');
+  L.push(`> ${m.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(m.detail, '');
+
+  L.push('## Concepts du corpus', '');
+  L.push(
+    m.conceptsLinks.length
+      ? m.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', ')
+      : 'Aucun.',
+  );
+  L.push('');
+
+  L.push('## Processus alimentés', '');
+  L.push(m.processusLinks.length ? m.processusLinks.map((pr) => pr.label).join(', ') : 'Aucun.');
+  L.push('');
+
+  if (m.phenomenesLinks.length) {
+    L.push('## Phénomènes liés', '');
+    L.push(m.phenomenesLinks.map((ph) => ph.label).join(', '));
+    L.push('');
+  }
+
+  L.push('---', '', `Mécanisme exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
 

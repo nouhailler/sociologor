@@ -298,6 +298,142 @@ export const CONCEPTS = {
       { p: '1970', f: "Bourdieu la reformule : la légitimité est le produit d'un travail d'imposition, pas un donné." },
     ],
   },
+  'pouvoir': {
+    detaille: [
+      "Weber définit le pouvoir (Macht) le plus largement possible : la chance qu'a un acteur, quel que soit son fondement, d'imposer sa volonté dans une relation sociale, même contre la résistance d'autrui.",
+      "Cette définition est délibérément neutre sur la légitimité : elle couvre la menace, la ruse, la persuasion, l'argent, aussi bien que l'autorité reconnue. La domination, elle, est le cas plus étroit où l'obéissance est attendue et généralement obtenue sans qu'il soit besoin d'y recourir à chaque fois.",
+      "Le pouvoir est donc premier et plus large que la domination légitime : toute domination est un pouvoir stabilisé, mais tout pouvoir n'a pas besoin d'être légitimé pour s'exercer, au moins un temps.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber ouvre ses définitions sociologiques fondamentales par cette formule volontairement large, avant de la restreindre au chapitre suivant pour construire sa typologie de la domination légitime.",
+    },
+    exemples: [
+      "Un fournisseur qui impose ses délais à un client dépendant de lui, sans avoir sur lui ni autorité ni titre, seulement l'absence d'alternative.",
+      "Une rumeur qui suffit à faire céder une administration, sans qu'aucune loi ni aucun rapport de force déclaré n'ait été invoqué.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre I, §16' },
+      { y: '1919', t: 'Le Savant et le politique' },
+    ],
+    associes: ['domination-legitime', 'capital-symbolique'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "La définition est si large qu'elle finit par couvrir presque toute relation sociale, ce qui la rend difficile à manier empiriquement.",
+      "Elle pense le pouvoir comme un attribut qu'un acteur détiendrait sur un autre, quand des approches plus récentes le décrivent comme diffus, circulant dans les pratiques plutôt que possédé par quiconque.",
+      "Parsons lui reproche une vision à somme nulle — ce que je gagne, tu le perds — alors que le pouvoir peut aussi, selon lui, être créé collectivement pour atteindre un but commun.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber pose la définition la plus large, avant de la restreindre à la domination légitime." },
+      { p: '1963', f: "Parsons propose une lecture concurrente : le pouvoir comme média circulant dans un système, ressource collective plutôt que rapport de force à somme nulle." },
+      { p: '1974', f: "Lukes distingue trois visages du pouvoir, dont un troisième — façonner les préférences elles-mêmes — que Weber n'envisageait pas." },
+      { p: '1975–1976', f: "Foucault déplace la question du qui-détient-le-pouvoir vers le comment-il-s'exerce, dans les pratiques et les savoirs plutôt que dans une source unique." },
+    ],
+  },
+  'statut-social': {
+    detaille: [
+      "Weber distingue trois ordres de la stratification, souvent réduits au seul premier par l'analyse marxiste : la situation de classe, définie par la position économique sur le marché ; la situation de statut (Stand), définie par une estime sociale partagée et un style de vie reconnu ; et le parti, organisé pour conquérir le pouvoir.",
+      "Un groupe de statut se reconnaît à ce qu'il partage : mêmes usages de consommation, mêmes codes vestimentaires ou langagiers, et souvent des restrictions au mariage ou à la fréquentation qui maintiennent la frontière avec les autres groupes.",
+      "Statut et classe peuvent diverger fortement : la richesse récente n'achète pas immédiatement l'estime, et un titre ancien peut survivre longtemps à la fortune qui l'avait fondé.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Publication posthume ; Weber y répond à une lecture trop strictement économique de la hiérarchie sociale, dominante dans l'Allemagne marxiste de son temps.",
+    },
+    exemples: [
+      "Une famille de vieille noblesse désargentée qui garde, dans son village, une considération que n'obtient pas l'entrepreneur enrichi du coin.",
+      "Des codes vestimentaires informels qui trient une soirée aussi sûrement qu'un prix d'entrée, sans qu'aucune règle écrite ne les impose.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre IV : classes, Stände, partis' },
+      { y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" },
+    ],
+    associes: ['prestige-social', 'position-sociale'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "La frontière entre classe et statut se brouille en pratique : le revenu influence presque toujours l'estime sociale à long terme.",
+      "Le modèle décrit mal les sociétés très mobiles, où les groupes de statut peinent à se refermer sur eux-mêmes.",
+      "Certains sociologues marxistes y voient une manière de dissoudre le conflit de classe dans une multitude de hiérarchies concurrentes, moins mobilisatrices.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule la trilogie classe / statut / parti dans Économie et société." },
+      { p: '1947', f: "Parsons traduit et popularise le texte aux États-Unis (The Theory of Social and Economic Organization), où il nourrit la sociologie de la stratification." },
+      { p: '1979', f: "Bourdieu déplace la question : le statut devient un effet du volume et de la structure des capitaux, plus qu'une catégorie à part." },
+    ],
+  },
+  'prestige-social': {
+    detaille: [
+      "Le prestige est la face mesurable du statut : une estime que l'on peut classer, comparer, faire varier d'une position à l'autre, quand le statut au sens plein suppose un groupe fermé et un style de vie partagé.",
+      "Il s'attache d'abord aux professions, et se révèle étonnamment stable : demandé à des inconnus dans des pays différents, le classement des métiers par considération varie peu, alors que les revenus, eux, varient beaucoup.",
+      "Le prestige circule aussi par contamination : fréquenter, porter, habiter ce qui est prestigieux en emprunte un peu, ce qui explique une bonne part de la consommation dite ostentatoire.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber pose l'« estimation sociale de l'honneur » (soziale Ehre) comme ce qui définit un Stand ; les sociologues de la stratification en feront ensuite un indicateur chiffré.",
+    },
+    exemples: [
+      "Un chirurgien et un trader gagnent parfois le même revenu ; interrogés, la plupart des gens placent le premier bien plus haut en considération.",
+      "Une adresse dont le seul nom de quartier rehausse, aux yeux d'un tiers, la valeur perçue d'un bien pourtant identique ailleurs.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société' },
+      { y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" },
+    ],
+    associes: ['statut-social', 'capital-symbolique'],
+    opposes: ['capital-economique'],
+    critiques: [
+      "Les échelles de prestige professionnel, construites par sondage, mesurent une opinion moyenne qui masque de grands désaccords entre groupes sociaux.",
+      "Le prestige d'un métier évolue plus lentement que ses conditions réelles : il continue de valoriser des professions dont l'autonomie et le revenu se sont dégradés.",
+      "Réduire le statut à un score de prestige, comme le fera la sociologie américaine de la stratification, perd la dimension collective — le style de vie partagé — que Weber visait.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber pose l'estimation sociale de l'honneur comme fondement du groupe de statut." },
+      { p: '1947', f: "La première grande enquête américaine (NORC) fait classer des métiers par un échantillon représentatif." },
+      { p: '1961', f: "Duncan en tire un indice socio-économique combinant revenu, éducation et prestige perçu." },
+      { p: '1977', f: "Treiman construit une échelle internationale standard, encore utilisée en sociologie comparative." },
+    ],
+  },
+  'elitisme': {
+    detaille: [
+      "Weber observe, dans la démocratie de masse qui se généralise en Europe, la montée de partis-machines dirigés par des professionnels de la politique : la direction effective échappe aux militants et aux électeurs pour se concentrer entre les mains d'un appareil permanent.",
+      "Son ami et collègue Robert Michels pousse l'observation jusqu'à la loi : toute organisation, aussi démocratique soit-elle dans ses statuts, finit gouvernée par une minorité stable — mieux informée, mieux formée à la parole publique, seule disponible à plein temps pour la tâche. Il l'appelle la loi d'airain de l'oligarchie.",
+      "Le paradoxe touche en premier les partis ouvriers et les syndicats, nés pour combattre les hiérarchies, et qui reproduisent, pour simplement fonctionner à grande échelle, une division dirigeants/dirigés comparable à celle qu'ils combattent.",
+    ],
+    origine: {
+      oeuvre: 'Le Savant et le politique',
+      annee: '1919',
+      contexte:
+        "Weber observe la démocratie de masse se doter de partis-machines dirigés par des professionnels de la politique, et se demande ce que devient le suffrage universel une fois la direction confisquée par un appareil.",
+    },
+    exemples: [
+      "Une association de quartier fondée par consensus, dont les mêmes trois personnes rédigent l'ordre du jour d'une réunion à l'autre, faute d'autres volontaires disponibles.",
+      "Un mouvement horizontal qui se choisit, à mesure qu'il grandit, des porte-parole non élus mais reconnus par les médias — et qui le restent.",
+    ],
+    oeuvres: [
+      { y: '1919', t: 'Le Savant et le politique' },
+      { y: '1922', t: 'Économie et société' },
+    ],
+    associes: ['domination-legitime', 'rationalisation'],
+    opposes: ['egalisation-des-conditions'],
+    critiques: [
+      "Le déterminisme est total chez Michels : aucune place n'est laissée aux organisations qui résistent réellement à l'oligarchisation, alors que certaines coopératives ou syndicats de base y échappent longtemps.",
+      "L'observation de Michels porte sur un seul parti, à un moment précis de son histoire : l'ériger en loi universelle généralise beaucoup à partir de peu.",
+      "Le mot « loi » masque un choix qui n'a rien de neutre : déçu du socialisme, Michels glissera lui-même vers le fascisme, qu'il justifiera par cette même théorie des élites.",
+    ],
+    evolution: [
+      { p: '1911', f: "Michels, proche de Weber, formule la loi d'airain de l'oligarchie à partir de son enquête sur la social-démocratie allemande." },
+      { p: '1919', f: "Weber décrit à son tour la confiscation de la démocratie de masse par des partis-machines et des professionnels de la politique." },
+      { p: '1896–1923', f: "Mosca, puis Pareto, développent en parallèle une théorie générale de la circulation des élites." },
+      { p: '1956', f: "C. Wright Mills actualise la thèse pour les États-Unis dans The Power Elite, en y ajoutant l'armée et la grande industrie." },
+      { p: '1956', f: "Lipset, Trow et Coleman trouvent dans le syndicat typographe américain (Union Democracy) l'exception rare qui confirme, en creux, la règle de Michels." },
+    ],
+  },
 
   /* — Georg Simmel — */
   'formes-de-socialisation': {
@@ -923,6 +1059,142 @@ export const CONCEPTS = {
       { p: '1998', f: 'La Domination masculine applique le concept aux rapports de genre, et suscite de vives critiques féministes.' },
     ],
   },
+  'capital-economique': {
+    detaille: [
+      "Bourdieu part du capital économique — la richesse directement convertible en argent : revenus, patrimoine, biens matériels — comme d'une base, avant de montrer que la position sociale ne s'y réduit jamais complètement.",
+      "Il reprend le mot à Marx, mais généralise son usage : l'argent n'est qu'une des monnaies dans lesquelles s'exprime la position sociale, à côté du capital culturel, social et symbolique, en principe convertibles les uns dans les autres au prix d'un travail et d'un temps de conversion.",
+      "Le capital économique reste néanmoins la forme la plus liquide et la plus directement transmissible : c'est par rapport à lui, et à sa dissimulation possible, que Bourdieu définit les autres capitaux.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu construit l'espace social français à deux dimensions — volume global du capital, et structure entre économique et culturel — et a besoin d'un capital économique nettement défini pour faire apparaître l'autre axe.",
+    },
+    exemples: [
+      "Deux successions transmises la même année : un patrimoine immobilier d'un côté, un réseau de relations et une aisance sociale de l'autre — deux héritages, une seule catégorie fiscale.",
+      "Un chef d'entreprise fortuné mais peu à l'aise dans un dîner mondain, qui découvre que sa richesse n'y suffit pas à elle seule.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1986', t: 'The Forms of Capital' },
+    ],
+    associes: ['capital-culturel', 'capital-social', 'capital-symbolique'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Faire de l'économique le capital de référence, celui par rapport auquel les autres se définissent, reconduit une hiérarchie que Bourdieu prétend justement dénaturaliser.",
+      "La frontière avec le capital culturel institutionnalisé — un diplôme se vend, s'hérite, se monnaie — est plus poreuse que le modèle ne le dit.",
+      "Boudon objecte qu'un cadre unique de « capitaux » masque des logiques d'acquisition très différentes, économique d'un côté, cognitive de l'autre.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx pose le capital économique comme rapport social d'exploitation, non comme simple somme d'argent." },
+      { p: '1979', f: "Bourdieu le reprend comme base de son espace social, dans La Distinction." },
+      { p: '1986', f: "The Forms of Capital en donne la formulation la plus systématique, avec les trois autres capitaux." },
+      { p: '1990–2010', f: "Le vocabulaire du « capital » se diffuse hors sociologie, jusqu'en économie du développement, au risque de perdre sa charge critique d'origine." },
+    ],
+  },
+  'capital-social': {
+    detaille: [
+      "Le capital social est l'ensemble des ressources actuelles ou potentielles liées à un réseau durable de relations, plus ou moins institutionnalisé, de connaissance et de reconnaissance mutuelles.",
+      "Il ne se réduit pas au nombre de relations : il dépend aussi du capital — économique, culturel, symbolique — que détiennent ceux avec qui l'on est lié, et de l'effort constant qu'il faut fournir pour entretenir le lien, sous peine de le voir se déprécier.",
+      "Bourdieu insiste sur le travail que suppose ce capital, largement invisible : cadeaux, visites, obligations rendues — un travail qui transforme des relations utiles en relations qui paraissent désintéressées.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital social. Notes provisoires',
+      annee: '1980',
+      contexte:
+        "Bourdieu publie un court texte de méthode dans les Actes de la recherche en sciences sociales, pour compléter sa théorie des capitaux d'une dimension relationnelle jusque-là sous-développée.",
+    },
+    exemples: [
+      "Un poste pourvu par cooptation avant même d'être annoncé, grâce à une relation prête à se porter garante.",
+      "Une carte de vœux annuelle qui ne coûte rien et entretient, des années durant, un lien qu'on pourra un jour solliciter.",
+    ],
+    oeuvres: [
+      { y: '1980', t: 'Le Capital social. Notes provisoires' },
+      { y: '1986', t: 'The Forms of Capital' },
+    ],
+    associes: ['capital-economique', 'capital-culturel', 'champ'],
+    opposes: ['ressources-sociales'],
+    critiques: [
+      "Coleman puis Putnam donneront au même mot un sens presque inverse : une ressource collective, bénéfique à toute la communauté, plutôt qu'un avantage privé qui reconduit les inégalités.",
+      "La frontière entre capital social et simple sociabilité n'est pas tracée : toute relation devient, après coup, un placement.",
+      "La mesure est délicate : on approche le capital social par le nombre de relations déclarées, ce qui néglige leur qualité et leur composition en capital.",
+    ],
+    evolution: [
+      { p: '1980', f: "Bourdieu formule le concept comme ressource liée au réseau, convertible avec les autres capitaux." },
+      { p: '1981', f: "Aux États-Unis, Nan Lin formalise en parallèle une théorie des « ressources sociales » mobilisées par l'individu à travers son réseau — proche dans l'esprit de la lecture individualiste de Boudon, sans lien direct entre les deux." },
+      { p: '1988', f: "Coleman en propose une version fonctionnaliste : le capital social comme bien collectif qui facilite l'action." },
+      { p: '1995', f: "Putnam le popularise à l'échelle des nations, comme indicateur du lien civique déclinant." },
+    ],
+  },
+  'capital-symbolique': {
+    detaille: [
+      "Le capital symbolique n'est pas une quatrième espèce de capital à côté des trois autres : c'est ce que devient n'importe lequel d'entre eux — économique, culturel, social — une fois perçu comme légitime par ceux qui le reconnaissent, au point de ne plus apparaître comme un capital du tout.",
+      "Sa force tient précisément à cette méconnaissance : un capital symbolique reconnu se présente comme un mérite, un talent naturel ou une évidence, jamais comme un rapport de force accumulé.",
+      "Bourdieu l'élabore d'abord sur le terrain kabyle, à propos de l'honneur, avant de le généraliser à toutes les sociétés : ce qui varie n'est pas le mécanisme, mais ce que chaque champ reconnaît comme digne d'estime.",
+    ],
+    origine: {
+      oeuvre: "Esquisse d'une théorie de la pratique",
+      annee: '1972',
+      contexte:
+        "Bourdieu observe en Kabylie une économie de l'honneur et du don qui, sans passer par l'argent, produit pourtant des hiérarchies aussi contraignantes qu'une économie marchande.",
+    },
+    exemples: [
+      "Un don qui semble gratuit et qui engage pourtant son bénéficiaire, tenu d'en rendre un jour la pareille sous peine de déchoir.",
+      "Une signature ou un nom qui, apposé sur un projet, lui vaut un crédit qu'aucun argument supplémentaire n'obtiendrait.",
+    ],
+    oeuvres: [
+      { y: '1972', t: "Esquisse d'une théorie de la pratique" },
+      { y: '1994', t: 'Raisons pratiques' },
+    ],
+    associes: ['capital-economique', 'capital-culturel', 'capital-social', 'prestige-social'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le concept explique après coup n'importe quelle hiérarchie par la reconnaissance qu'elle obtient, ce qui frôle la tautologie : est légitime ce qui est reconnu, est reconnu ce qui est légitime.",
+      "Il suppose une méconnaissance chez le dominé que Bourdieu, lui, saurait percer — retour de l'objection déjà faite à la violence symbolique.",
+      "Le passage entre les formes de capital reste plus affirmé que démontré : rien ne dit précisément à quel taux un capital culturel se convertit en capital symbolique.",
+    ],
+    evolution: [
+      { p: '1972', f: "Bourdieu forge le concept à partir de son terrain kabyle, autour de l'honneur et du don." },
+      { p: '1979–1980', f: "Extension à la France contemporaine, où le capital symbolique recouvre le prestige et la distinction." },
+      { p: '1994', f: "Raisons pratiques en généralise l'usage à tous les champs, y compris scientifique et politique." },
+      { p: '1998', f: "La Domination masculine applique le mécanisme au rapport entre les sexes, comme forme extrême de méconnaissance." },
+    ],
+  },
+  'position-sociale': {
+    detaille: [
+      "Une position sociale se définit relationnellement : ce n'est pas un rang sur une échelle unique, mais un point dans un espace à plusieurs dimensions, déterminé par le volume global des capitaux qu'un agent détient et par leur structure — la part respective de l'économique et du culturel.",
+      "Deux agents peuvent détenir le même volume de capital et occuper des positions différentes selon la composition de ce capital : un professeur et un commerçant peuvent gagner autant, l'un riche en capital culturel, l'autre en capital économique, et occuper des régions opposées de l'espace social.",
+      "L'espace des positions n'existe qu'en tant que système : une position ne se comprend que par sa distance et sa proximité avec toutes les autres, jamais isolément.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu construit une carte de l'espace social français à partir d'une vaste enquête sur les pratiques culturelles, pour montrer que le goût trahit la position occupée plus sûrement qu'aucune déclaration.",
+    },
+    exemples: [
+      "Deux ménages au revenu identique qui ne fréquentent ni les mêmes lieux de vacances, ni les mêmes établissements scolaires, parce que la composition de leur capital diffère.",
+      "Un changement de quartier qui, à revenu constant, déplace visiblement la position perçue d'une famille.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['capital-economique', 'capital-culturel', 'champ'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "L'espace social de La Distinction est calé sur la France des années 1960 et 1970 : sa cartographie précise vieillit vite, même si son principe reste utilisé.",
+      "Boudon objecte qu'un espace de positions décrit une structure figée là où il faudrait des acteurs capables d'y agir et parfois d'en déjouer les attentes.",
+      "Réduire une position à deux dimensions — volume et structure du capital — laisse de côté ce que le genre, l'origine migratoire ou l'âge ajoutent à la hiérarchie.",
+    ],
+    evolution: [
+      { p: '1966', f: "Premiers usages, dans les travaux du Centre de sociologie européenne sur l'espace des styles de vie." },
+      { p: '1979', f: "La Distinction en donne la cartographie empirique complète, à partir d'une enquête nationale." },
+      { p: '1980', f: "Le Sens pratique en formalise les deux dimensions : volume global et structure du capital." },
+      { p: '1990–2015', f: "La méthode d'analyse géométrique des données que Bourdieu utilise pour cartographier ces positions devient un standard de la sociologie quantitative française." },
+    ],
+  },
 
   /* — Erving Goffman — */
   'mise-en-scene-de-soi': {
@@ -1208,6 +1480,75 @@ export const CONCEPTS = {
       { p: '1971', f: "Schelling montre par un modèle simple qu'une ségrégation urbaine forte naît de préférences faibles." },
       { p: '1973–1977', f: "Boudon formalise et applique le mécanisme à l'école, puis à l'ordre social en général." },
       { p: '1984', f: 'La Place du désordre en tire une critique des philosophies du changement social.' },
+    ],
+  },
+  'meritocratie': {
+    detaille: [
+      "La méritocratie est l'idée qu'une société juste distribue ses positions — postes, revenus, honneurs — selon le mérite de chacun plutôt que selon sa naissance. Elle suppose une compétition ouverte, des critères objectifs de sélection, et l'égalité des chances au départ de la course.",
+      "Boudon ne rejette pas l'idéal, mais en mesure l'écart avec ce que produisent réellement des systèmes scolaires pourtant ouverts à tous : les familles calculent différemment le coût et le bénéfice des études selon leur position de départ, et ces calculs, individuellement raisonnables, reconduisent en agrégat des destins scolaires très inégaux.",
+      "Le mérite lui-même n'est jamais neutre : ce qu'une institution reconnaît comme mérite — telle épreuve, tel style d'argumentation — favorise toujours certains apprentissages antérieurs plus que d'autres.",
+    ],
+    origine: {
+      oeuvre: "L'Inégalité des chances",
+      annee: '1973',
+      contexte:
+        "Boudon modélise les choix scolaires comme une succession de paris, faits à chaque palier par des familles aux ressources et aux anticipations inégales, pour expliquer pourquoi l'école de masse n'a pas égalisé les destins.",
+    },
+    exemples: [
+      "Un concours anonymisé, donc formellement méritocratique, dont les lauréats ont presque tous suivi une préparation coûteuse que seules certaines familles peuvent financer.",
+      "Une bourse au mérite qui récompense des résultats déjà obtenus grâce à des conditions de travail favorables, plutôt que de les créer.",
+    ],
+    oeuvres: [
+      { y: '1973', t: "L'Inégalité des chances" },
+      { y: '1979', t: 'La Logique du social' },
+    ],
+    associes: ['effets-pervers', 'individualisme-methodologique'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Bourdieu répond que parler de « mérite » revient à valider les critères d'un jeu que l'école a elle-même fixés selon les dispositions des classes dominantes.",
+      "Young, qui invente le mot en 1958 dans un texte satirique, le forge justement pour dénoncer une nouvelle aristocratie du diplôme, et non pour la vanter — un sens souvent oublié aujourd'hui.",
+      "La méritocratie mesurée par les seuls résultats scolaires ignore ce qui, hors de l'école, façonne aussi le mérite reconnu : le réseau, l'aisance, l'apparence.",
+    ],
+    evolution: [
+      { p: '1958', f: "Michael Young invente le mot dans The Rise of the Meritocracy, comme satire d'une société future gouvernée par le seul QI." },
+      { p: '1973', f: "Boudon en donne le modèle formel : des choix scolaires rationnels qui, agrégés, reconduisent l'inégalité malgré l'ouverture du système." },
+      { p: '1979', f: "Bourdieu et Boudon s'opposent frontalement sur la lecture des mêmes statistiques scolaires, l'un y voyant un héritage culturel, l'autre des calculs sous contrainte." },
+      { p: '2020', f: "Sandel relance le débat en montrant que la méritocratie, même honnête, produit chez ses gagnants un mépris pour les perdants qu'aucune aristocratie n'aurait osé revendiquer." },
+    ],
+  },
+  'ressources-sociales': {
+    detaille: [
+      "Boudon élargit son modèle de l'acteur rationnel au-delà du seul calcul économique : agir suppose de disposer de ressources — de l'information, du temps, de l'argent, des relations, une position d'où observer les options — inégalement réparties avant même que la décision ne soit prise.",
+      "Ces ressources ne sont pas un capital accumulé au sens de Bourdieu, transmis et converti selon une logique structurale : elles sont mobilisées au cas par cas, dans une situation donnée, par un acteur qui garde son autonomie de jugement, même sous contrainte.",
+      "L'inégalité de ressources suffit, à elle seule, à produire des destins différents sans qu'il soit besoin d'invoquer des dispositions incorporées ou une domination systémique : deux acteurs aussi rationnels l'un que l'autre décident différemment parce qu'ils partent de positions différentes.",
+    ],
+    origine: {
+      oeuvre: 'La Logique du social',
+      annee: '1979',
+      contexte:
+        "Boudon y systématise une sociologie de l'action qui doit expliquer l'inégalité sans invoquer ni un capital hérité, ni des dispositions inconscientes — seulement des ressources et une information inégalement distribuées.",
+    },
+    exemples: [
+      "Deux candidats à un même poste, dont l'un connaît par un contact les questions probables de l'entretien, l'autre non.",
+      "Une famille qui dispose du temps et des relations pour obtenir un stage de dernière minute, quand une autre n'a ni l'un ni les autres.",
+    ],
+    oeuvres: [
+      { y: '1973', t: "L'Inégalité des chances" },
+      { y: '1979', t: 'La Logique du social' },
+      { y: '1984', t: 'La Place du désordre' },
+    ],
+    associes: ['individualisme-methodologique', 'effets-pervers'],
+    opposes: ['capital-social'],
+    critiques: [
+      "La frontière avec le capital social de Bourdieu est ténue dans les faits : une relation mobilisée une fois ressemble beaucoup à une relation entretenue comme un capital.",
+      "Le modèle prête aux acteurs une capacité à recenser leurs propres ressources et à en calculer l'usage optimal, ce qu'aucune enquête ne confirme vraiment.",
+      "Il explique bien l'inégalité de résultat à ressources égales, mais dit peu sur l'origine de l'inégalité de ressources elle-même, qu'il tend à prendre comme donnée de départ.",
+    ],
+    evolution: [
+      { p: '1973', f: "Premiers usages implicites, dans le modèle des choix scolaires sous contrainte de L'Inégalité des chances." },
+      { p: '1979', f: "La Logique du social généralise la notion de ressources à toute action sociale, contre les explications par le seul héritage culturel." },
+      { p: '1981', f: "Nan Lin en fait, aux États-Unis, une théorie autonome des ressources sociales mobilisées à travers les réseaux, distincte du capital social de Bourdieu." },
+      { p: '1973–1974', f: "Granovetter montre, avec la force des liens faibles, que les relations les moins intimes sont souvent les plus utiles pour trouver un emploi — une thèse proche dans l'esprit, sans jamais citer Boudon." },
     ],
   },
 

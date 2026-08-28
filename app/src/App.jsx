@@ -9,6 +9,8 @@ import Graph from './routes/Graph.jsx';
 import Courants from './routes/Courants.jsx';
 import Phenomenes from './routes/Phenomenes.jsx';
 import Phenomene from './routes/Phenomene.jsx';
+import Mecanismes from './routes/Mecanismes.jsx';
+import MecanismeFiche from './routes/MecanismeFiche.jsx';
 import Processus from './routes/Processus.jsx';
 import ProcessusFiche from './routes/ProcessusFiche.jsx';
 import Search from './routes/Search.jsx';
@@ -38,6 +40,8 @@ export default function App() {
       <Route path="/courants" element={<Courants />} />
       <Route path="/phenomenes" element={<Phenomenes />} />
       <Route path="/p/:id" element={<Phenomene />} />
+      <Route path="/mecanismes" element={<Mecanismes />} />
+      <Route path="/m/:id" element={<MecanismeFiche />} />
       <Route path="/processus" element={<Processus />} />
       <Route path="/pr/:id" element={<ProcessusFiche />} />
       <Route path="/recherche" element={<Search />} />

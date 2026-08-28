@@ -159,6 +159,29 @@ export default function ProcessusFiche() {
         </ol>
 
         <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
+          Mécanismes qui l&apos;alimentent
+        </h3>
+        {p.mecanismesLinks.length === 0 ? (
+          <p
+            style={{
+              fontSize: 12.5,
+              color: 'color-mix(in srgb, var(--color-text) 40%, transparent)',
+              margin: '0 0 24px',
+            }}
+          >
+            Aucun mécanisme déjà décrit ne se rattache directement à ce processus.
+          </p>
+        ) : (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>
+            {p.mecanismesLinks.map((m) => (
+              <Link key={m.id} to={`/m/${m.id}`} className="soc-link-chip">
+                {m.label}
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
           Concepts du corpus
         </h3>
         {p.conceptsLinks.length === 0 ? (

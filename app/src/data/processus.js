@@ -59,12 +59,10 @@ export const PROCESSUS = [
       "Un passage par des institutions — l'école en premier lieu — qui reconnaissent et récompensent ce qui a déjà été transmis en famille",
       "Une position d'arrivée qui ressemble, à quelques écarts près, à la position de départ",
     ],
-    concepts: ['capital-culturel', 'habitus', 'violence-symbolique'],
+    concepts: ['capital-culturel', 'habitus', 'violence-symbolique', 'capital-social'],
     phenomenes: ['inegalites-scolaires', 'homogamie-sociale', 'stratification-sociale'],
     notions: [
-      "Capital social — le réseau de relations, lui aussi transmis, qui ouvre ou ferme des portes",
       "École de la reproduction — l'expression qui a fait débat en 1970, restée depuis un repère de la discipline",
-      "Transmission patrimoniale — le canal le plus direct, et le plus étudié, de la reproduction",
       "Reproduction élargie — la thèse selon laquelle chaque génération ne se contente pas de reconduire sa position, mais réinvestit ses capitaux pour la consolider",
       "Rupture de la reproduction — les cas, minoritaires mais réels, où la position d'arrivée s'écarte nettement de la position de départ",
     ],
@@ -227,7 +225,6 @@ export const PROCESSUS = [
     notions: [
       "Statut d'emploi — la variable la plus suivie pour mesurer la précarisation, du CDI à l'intérim",
       "Précariat — un terme proposé pour désigner un groupe social défini par l'instabilité plutôt que par le métier",
-      "Cumul de précarités — quand l'instabilité de l'emploi s'ajoute à celle du logement ou de la santé",
       "Trappe à précarité — l'idée que certains dispositifs, censés aider, enferment plutôt dans l'instabilité",
       "Sécurisation des parcours — les politiques qui tentent, avec des résultats inégaux, de ralentir le processus",
     ],

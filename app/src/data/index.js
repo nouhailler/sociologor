@@ -5,6 +5,7 @@ import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
 import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
+import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 
 export { AUTHORS, EXTRA, EXTRA_EDGES, FAMILIES };
 
@@ -263,6 +264,12 @@ export function getPhenomene(id) {
       .filter((c) => CONCEPT_BASE[c])
       .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
     notions: p.notions || [],
+    // Dérivés par lecture inverse de mecanismes.js plutôt que recopiés ici :
+    // un mécanisme déclare les phénomènes qu'il produit, jamais l'inverse.
+    mecanismesLinks: MECANISMES.filter((m) => (m.phenomenes || []).includes(id)).map((m) => ({
+      id: m.id,
+      label: m.t,
+    })),
   };
 }
 
@@ -294,10 +301,47 @@ export function getProcessus(id) {
       .filter(Boolean)
       .map((ph) => ({ id: ph.id, label: ph.t })),
     notions: p.notions || [],
+    mecanismesLinks: MECANISMES.filter((m) => (m.processus || []).includes(id)).map((m) => ({
+      id: m.id,
+      label: m.t,
+    })),
   };
 }
 
-/** Index de recherche : une entrée par auteur, par concept, par œuvre, par phénomène et par processus. */
+/* — Mécanismes sociaux — */
+
+export { CATEGORIES_MECANISMES };
+export const MECANISME_COUNT = MECANISMES.length;
+
+/** Les mécanismes groupés par catégorie, dans l'ordre de la liste. */
+export const MECANISME_CATEGORIES = CATEGORIES_MECANISMES.map((cat) => ({
+  ...cat,
+  mecanismes: MECANISMES.filter((m) => m.categorie === cat.id),
+}));
+
+/** Fiche mécanisme complète : concepts, processus et phénomènes cliquables. */
+export function getMecanisme(id) {
+  const m = MECANISMES.find((x) => x.id === id);
+  if (!m) return null;
+  const categorie = CATEGORIES_MECANISMES.find((c) => c.id === m.categorie);
+  return {
+    ...m,
+    categorieT: categorie?.t || '',
+    conceptsLinks: (m.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    processusLinks: (m.processus || [])
+      .map((pr) => PROCESSUS.find((x) => x.id === pr))
+      .filter(Boolean)
+      .map((pr) => ({ id: pr.id, label: pr.t })),
+    phenomenesLinks: (m.phenomenes || [])
+      .map((ph) => PHENOMENES.find((x) => x.id === ph))
+      .filter(Boolean)
+      .map((ph) => ({ id: ph.id, label: ph.t })),
+  };
+}
+
+/** Index de recherche : une entrée par auteur, par concept, par œuvre, par phénomène, par processus et par mécanisme. */
 export const SEARCH_INDEX = (() => {
   const items = [];
   Object.values(AUTHORS).forEach((x) => {
@@ -316,16 +360,20 @@ export const SEARCH_INDEX = (() => {
   PROCESSUS.forEach((p) =>
     items.push({ kind: 'Processus', title: p.t, sub: p.d, id: p.id, to: `/pr/${p.id}` }),
   );
+  MECANISMES.forEach((m) =>
+    items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
+  );
   return items;
 })();
 
-export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes', 'Processus'];
+export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes', 'Processus', 'Mécanismes'];
 const KIND_BY_FILTER = {
   Auteurs: 'Auteur',
   Concepts: 'Concept',
   Œuvres: 'Œuvre',
   Phénomènes: 'Phénomène',
   Processus: 'Processus',
+  Mécanismes: 'Mécanisme',
 };
 export const SEARCH_LIMIT = 24;
 
@@ -394,7 +442,7 @@ export const GRAPH_NODES = AUTHOR_IDS.map((id) => ({
 }));
 
 /* — Graphe des concepts — */
-// Pas de coordonnées éditoriales pour 38 concepts : la position se calcule,
+// Pas de coordonnées éditoriales concept par concept : la position se calcule,
 // groupée par auteur (cinq colonnes, trois rangées — les quinze fiches du
 // corpus, dans l'ordre déjà utilisé partout ailleurs) plutôt que placée à la
 // main comme pour les quinze auteurs.
@@ -402,7 +450,10 @@ export const CNODE_W = 168;
 export const CNODE_H = 56;
 const CCOLS = 5;
 const CCOL_W = 210;
-const CROW_H = 320;
+// Bourdieu porte désormais huit concepts, le plus grand groupe : la hauteur de
+// rangée doit contenir CHEADER_GAP + 7 pas de CSLOT_GAP + la hauteur d'un
+// nœud, sans quoi ses derniers concepts chevaucheraient la rangée suivante.
+const CROW_H = 584;
 const CMARGIN_X = 40;
 const CMARGIN_Y = 40;
 const CHEADER_GAP = 30;

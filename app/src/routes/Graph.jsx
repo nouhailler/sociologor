@@ -5,6 +5,7 @@ import {
   CNODE_H,
   CNODE_W,
   CONCEPT_CLUSTERS,
+  CONCEPT_COUNT,
   CONCEPT_GRAPH_EDGES,
   CONCEPT_GRAPH_H,
   CONCEPT_GRAPH_NODES,
@@ -135,8 +136,8 @@ export default function Graph() {
           Graphe des concepts
         </h2>
         <p className="soc-lede" style={{ marginBottom: 18 }}>
-          Les 38 concepts, groupés par auteur, reliés par leurs voisinages. Touchez un concept pour
-          ouvrir sa fiche.
+          Les {CONCEPT_COUNT} concepts, groupés par auteur, reliés par leurs voisinages. Touchez un
+          concept pour ouvrir sa fiche.
         </p>
 
         <div
