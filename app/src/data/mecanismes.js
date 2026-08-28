@@ -265,6 +265,17 @@ export const MECANISMES = [
     phenomenes: ['pauvrete', 'declassement-social'],
   },
   {
+    id: 'cumul-des-desavantages',
+    t: 'Cumul des désavantages',
+    categorie: 'rupture',
+    d: "Un premier désavantage — pauvreté, mauvaise santé, faible qualification — augmente la probabilité d'en subir d'autres, qui à leur tour aggravent le premier.",
+    detail:
+      "Merton en décrit le principe sous le nom d'effet Matthieu : un petit écart initial s'amplifie mécaniquement à chaque étape, si bien que l'écart final entre deux trajectoires dépasse de loin ce que l'écart de départ laissait attendre.",
+    concepts: ['tension-anomique', 'capital-economique'],
+    processus: ['declassement', 'declin-social'],
+    phenomenes: ['pauvrete', 'exclusion-sociale'],
+  },
+  {
     id: 'ajustement-des-aspirations',
     t: 'Ajustement des aspirations',
     categorie: 'rupture',
@@ -386,6 +397,17 @@ export const MECANISMES = [
     concepts: ['alienation'],
     processus: ['precarisation'],
     phenomenes: ['precarite-professionnelle'],
+  },
+  {
+    id: 'trappe-a-pauvrete',
+    t: 'Trappe à pauvreté',
+    categorie: 'structurel',
+    d: "Un dispositif d'aide construit pour protéger finit, par son seul mode de calcul, par décourager la reprise d'un emploi qui ferait perdre plus en aides que ce que le salaire rapporterait.",
+    detail:
+      "Le mécanisme ne suppose aucune mauvaise volonté : il suffit qu'une aide dégressive s'annule plus vite que le revenu d'activité ne progresse pour qu'un calcul parfaitement rationnel conduise à rester hors de l'emploi — ce que les réformes des minima sociaux tentent régulièrement de corriger, sans jamais l'éliminer complètement.",
+    concepts: ['individualisme-methodologique', 'effets-pervers'],
+    processus: ['precarisation'],
+    phenomenes: ['pauvrete', 'chomage'],
   },
 
   /* — Symbolique et normatif — */

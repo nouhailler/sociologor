@@ -242,7 +242,7 @@ export default function Concept() {
           }}
         >
           {c.evolution.map((s) => (
-            <li key={s.p} style={{ display: 'flex', gap: 12, alignItems: 'baseline' }}>
+            <li key={`${s.p}-${s.f}`} style={{ display: 'flex', gap: 12, alignItems: 'baseline' }}>
               <span
                 style={{
                   flex: 'none',
@@ -313,6 +313,23 @@ export default function Concept() {
             </Link>
           </div>
         </div>
+
+        <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
+          Problématiques qui le mobilisent
+        </h3>
+        {c.problematiquesLinks.length === 0 ? (
+          <p style={{ fontSize: 12.5, color: 'color-mix(in srgb, var(--color-text) 40%, transparent)', margin: '0 0 24px' }}>
+            Aucune problématique déjà décrite ne mobilise directement ce concept.
+          </p>
+        ) : (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>
+            {c.problematiquesLinks.map((p) => (
+              <Link key={p.id} to={`/pb/${p.id}`} className="soc-link-chip">
+                {p.label}
+              </Link>
+            ))}
+          </div>
+        )}
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingTop: 4 }}>
           <button type="button" className="btn btn-secondary" style={{ fontSize: 12.5 }} onClick={onExport}>

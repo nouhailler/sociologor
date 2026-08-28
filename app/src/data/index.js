@@ -6,6 +6,11 @@ import { CONCEPTS } from './concepts.js';
 import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
 import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
+import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
+import { THEORIES } from './theories.js';
+import { ETUDES } from './etudes.js';
+import { STATISTIQUES } from './statistiques.js';
+import { POLITIQUES_PUBLIQUES } from './politiques-publiques.js';
 
 export { AUTHORS, EXTRA, EXTRA_EDGES, FAMILIES };
 
@@ -219,6 +224,10 @@ export function getConcept(id) {
     associesLinks: [...NEIGHBOURS[id].associes].map(conceptLink),
     opposesLinks: [...NEIGHBOURS[id].opposes].map(conceptLink),
     domainTags: DOMAINS.filter((d) => d.a.includes(base.authorId)).slice(0, 3).map((d) => d.t),
+    problematiquesLinks: PROBLEMATIQUES.filter((p) => (p.concepts || []).includes(id)).map((p) => ({
+      id: p.id,
+      label: p.t,
+    })),
   };
 }
 
@@ -270,6 +279,10 @@ export function getPhenomene(id) {
       id: m.id,
       label: m.t,
     })),
+    problematiquesLinks: PROBLEMATIQUES.filter((pb) => (pb.phenomenes || []).includes(id)).map((pb) => ({
+      id: pb.id,
+      label: pb.t,
+    })),
   };
 }
 
@@ -305,6 +318,10 @@ export function getProcessus(id) {
       id: m.id,
       label: m.t,
     })),
+    problematiquesLinks: PROBLEMATIQUES.filter((pb) => (pb.processus || []).includes(id)).map((pb) => ({
+      id: pb.id,
+      label: pb.t,
+    })),
   };
 }
 
@@ -338,7 +355,220 @@ export function getMecanisme(id) {
       .map((ph) => PHENOMENES.find((x) => x.id === ph))
       .filter(Boolean)
       .map((ph) => ({ id: ph.id, label: ph.t })),
+    problematiquesLinks: PROBLEMATIQUES.filter((pb) => (pb.mecanismes || []).includes(id)).map((pb) => ({
+      id: pb.id,
+      label: pb.t,
+    })),
   };
+}
+
+/* — Théories, études, statistiques, politiques publiques — */
+// Quatre types de mini-fiches, cités par les problématiques plutôt que par le
+// reste du corpus. Chacune ne connaît qu'un seul lien vers ailleurs — vers un
+// concept, une autre théorie ou une problématique — jamais l'inverse : la
+// problématique qui la cite le déclare une fois, dans `problematiques.js`,
+// et cette page-ci le lit en sens inverse plutôt que de le recopier.
+
+/** Fiche théorie complète : concepts cliquables, problématiques qui la citent. */
+export function getTheorie(id) {
+  const th = THEORIES.find((x) => x.id === id);
+  if (!th) return null;
+  return {
+    ...th,
+    conceptsLinks: (th.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    problematiquesLinks: PROBLEMATIQUES.filter((p) => (p.theories || []).includes(id)).map((p) => ({
+      id: p.id,
+      label: p.t,
+    })),
+  };
+}
+
+/** Fiche étude complète : théories qu'elle fonde, problématiques qui la citent. */
+export function getEtude(id) {
+  const e = ETUDES.find((x) => x.id === id);
+  if (!e) return null;
+  return {
+    ...e,
+    theoriesLinks: (e.theories || [])
+      .map((t) => THEORIES.find((x) => x.id === t))
+      .filter(Boolean)
+      .map((t) => ({ id: t.id, label: t.t })),
+    problematiquesLinks: PROBLEMATIQUES.filter((p) => (p.etudes || []).includes(id)).map((p) => ({
+      id: p.id,
+      label: p.t,
+    })),
+  };
+}
+
+/** Fiche statistique complète : problématiques qui la citent. */
+export function getStatistique(id) {
+  const s = STATISTIQUES.find((x) => x.id === id);
+  if (!s) return null;
+  return {
+    ...s,
+    problematiquesLinks: PROBLEMATIQUES.filter((p) => (p.mesure?.statistiques || []).includes(id)).map((p) => ({
+      id: p.id,
+      label: p.t,
+    })),
+  };
+}
+
+/** Fiche politique publique complète : problématiques qui la citent. */
+export function getPolitiquePublique(id) {
+  const pp = POLITIQUES_PUBLIQUES.find((x) => x.id === id);
+  if (!pp) return null;
+  return {
+    ...pp,
+    problematiquesLinks: PROBLEMATIQUES.filter((p) => (p.politiquesPubliques || []).includes(id)).map((p) => ({
+      id: p.id,
+      label: p.t,
+    })),
+  };
+}
+
+/* — Problématiques sociales — */
+
+export { CATEGORIES_PROBLEMATIQUES, THEORIES, ETUDES, STATISTIQUES, POLITIQUES_PUBLIQUES };
+export const PROBLEMATIQUE_COUNT = PROBLEMATIQUES.length;
+export const THEORIE_COUNT = THEORIES.length;
+export const ETUDE_COUNT = ETUDES.length;
+export const STATISTIQUE_COUNT = STATISTIQUES.length;
+export const POLITIQUE_PUBLIQUE_COUNT = POLITIQUES_PUBLIQUES.length;
+
+/** Les problématiques groupées par catégorie, dans l'ordre de la liste. */
+export const PROBLEMATIQUE_CATEGORIES = CATEGORIES_PROBLEMATIQUES.map((cat) => ({
+  ...cat,
+  problematiques: PROBLEMATIQUES.filter((p) => p.categorie === cat.id),
+}));
+
+const conceptLinkOf = (c) =>
+  CONCEPT_BASE[c] && { id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName };
+const phenomeneLinkOf = (id) => {
+  const ph = PHENOMENES.find((x) => x.id === id);
+  return ph && { id: ph.id, label: ph.t };
+};
+const processusLinkOf = (id) => {
+  const pr = PROCESSUS.find((x) => x.id === id);
+  return pr && { id: pr.id, label: pr.t };
+};
+const mecanismeLinkOf = (id) => {
+  const m = MECANISMES.find((x) => x.id === id);
+  return m && { id: m.id, label: m.t };
+};
+const theorieLinkOf = (id) => {
+  const t = THEORIES.find((x) => x.id === id);
+  return t && { id: t.id, label: t.t };
+};
+const etudeLinkOf = (id) => {
+  const e = ETUDES.find((x) => x.id === id);
+  return e && { id: e.id, label: e.t };
+};
+const statistiqueLinkOf = (id) => {
+  const s = STATISTIQUES.find((x) => x.id === id);
+  return s && { id: s.id, label: s.t };
+};
+const politiquePubliqueLinkOf = (id) => {
+  const pp = POLITIQUES_PUBLIQUES.find((x) => x.id === id);
+  return pp && { id: pp.id, label: pp.t };
+};
+const auteurLinkOf = (id) => {
+  const a = AUTHORS[id];
+  return a && { id: a.id, name: a.name, dates: a.dates, courant: a.courant };
+};
+const problematiqueLinkOf = (id) => {
+  const p = PROBLEMATIQUES.find((x) => x.id === id);
+  return p && { id: p.id, label: p.t };
+};
+
+/** Fiche problématique complète : les douze rubriques, tous les renvois résolus en liens cliquables. */
+export function getProblematique(id) {
+  const p = PROBLEMATIQUES.find((x) => x.id === id);
+  if (!p) return null;
+  const categorie = CATEGORIES_PROBLEMATIQUES.find((c) => c.id === p.categorie);
+  return {
+    ...p,
+    categorieT: categorie?.t || '',
+    phenomenesLinks: (p.phenomenes || []).map(phenomeneLinkOf).filter(Boolean),
+    conceptsLinks: (p.concepts || []).map(conceptLinkOf).filter(Boolean),
+    processusLinks: (p.processus || []).map(processusLinkOf).filter(Boolean),
+    mecanismesLinks: (p.mecanismes || []).map(mecanismeLinkOf).filter(Boolean),
+    theoriesLinks: (p.theories || []).map(theorieLinkOf).filter(Boolean),
+    etudesLinks: (p.etudes || []).map(etudeLinkOf).filter(Boolean),
+    auteursLinks: (p.auteurs || []).map(auteurLinkOf).filter(Boolean),
+    politiquesPubliquesLinks: (p.politiquesPubliques || []).map(politiquePubliqueLinkOf).filter(Boolean),
+    problematiquesConnexesLinks: (p.problematiquesConnexes || []).map(problematiqueLinkOf).filter(Boolean),
+    mesure: {
+      ...p.mesure,
+      statistiquesLinks: (p.mesure?.statistiques || []).map(statistiqueLinkOf).filter(Boolean),
+    },
+  };
+}
+
+/**
+ * Le graphe d'une problématique : un nœud central et ses dix familles de
+ * liens disposées en rayons, chacune avec ses propres nœuds — calculé plutôt
+ * que positionné à la main, sur le modèle du graphe des concepts. Une famille
+ * sans lien n'apparaît pas : mieux vaut un rayon manquant qu'un rayon vide.
+ */
+const PB_CENTER_R = 90;
+const PB_RING_R = 240;
+const PB_ITEM_GAP = 78;
+const PB_ITEM_R0 = 130;
+
+export function getProblematiqueGraph(id) {
+  const p = getProblematique(id);
+  if (!p) return null;
+
+  const families = [
+    { key: 'phenomenes', t: 'Phénomènes', items: p.phenomenesLinks, to: (i) => `/p/${i.id}` },
+    { key: 'concepts', t: 'Concepts', items: p.conceptsLinks, to: (i) => `/c/${i.id}` },
+    { key: 'mecanismes', t: 'Mécanismes', items: p.mecanismesLinks, to: (i) => `/m/${i.id}` },
+    { key: 'processus', t: 'Processus', items: p.processusLinks, to: (i) => `/pr/${i.id}` },
+    { key: 'theories', t: 'Théories', items: p.theoriesLinks, to: (i) => `/th/${i.id}` },
+    { key: 'auteurs', t: 'Auteurs', items: p.auteursLinks, to: (i) => `/a/${i.id}`, label: (i) => i.name },
+    { key: 'etudes', t: 'Études', items: p.etudesLinks, to: (i) => `/et/${i.id}` },
+    { key: 'statistiques', t: 'Statistiques', items: p.mesure.statistiquesLinks, to: (i) => `/st/${i.id}` },
+    { key: 'politiques', t: 'Politiques publiques', items: p.politiquesPubliquesLinks, to: (i) => `/pp/${i.id}` },
+    { key: 'connexes', t: 'Problématiques connexes', items: p.problematiquesConnexesLinks, to: (i) => `/pb/${i.id}` },
+  ].filter((f) => f.items.length > 0);
+
+  const nodes = [{ id: `pb:${p.id}`, kind: 'center', label: p.t, x: 0, y: 0, to: `/pb/${p.id}` }];
+  const edges = [];
+  const n = families.length || 1;
+
+  families.forEach((fam, i) => {
+    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    const ringX = Math.round(cos * PB_RING_R);
+    const ringY = Math.round(sin * PB_RING_R);
+    nodes.push({ id: `fam:${fam.key}`, kind: 'famille', label: fam.t, x: ringX, y: ringY });
+    edges.push({ id: `pb-fam:${fam.key}`, x1: 0, y1: 0, x2: ringX, y2: ringY });
+
+    fam.items.forEach((item, j) => {
+      const r = PB_ITEM_R0 + j * PB_ITEM_GAP;
+      const x = Math.round(cos * r);
+      const y = Math.round(sin * r);
+      const label = fam.label ? fam.label(item) : item.label;
+      nodes.push({ id: `item:${fam.key}:${item.id}`, kind: 'item', label, sub: fam.t, x, y, to: fam.to(item) });
+      const prevR = j === 0 ? PB_RING_R : PB_RING_R + (r - PB_ITEM_R0);
+      const prevX = j === 0 ? ringX : Math.round(cos * (PB_ITEM_R0 + (j - 1) * PB_ITEM_GAP));
+      const prevY = j === 0 ? ringY : Math.round(sin * (PB_ITEM_R0 + (j - 1) * PB_ITEM_GAP));
+      edges.push({ id: `fam-item:${fam.key}:${item.id}`, x1: prevX, y1: prevY, x2: x, y2: y });
+    });
+  });
+
+  const maxR =
+    PB_CENTER_R +
+    Math.max(
+      PB_RING_R,
+      ...families.map((f) => PB_ITEM_R0 + Math.max(0, f.items.length - 1) * PB_ITEM_GAP),
+    ) +
+    120;
+
+  return { problematique: p, nodes, edges, size: maxR * 2, center: maxR };
 }
 
 /** Index de recherche : une entrée par auteur, par concept, par œuvre, par phénomène, par processus et par mécanisme. */
@@ -363,10 +593,38 @@ export const SEARCH_INDEX = (() => {
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
+  PROBLEMATIQUES.forEach((p) =>
+    items.push({ kind: 'Problématique', title: p.t, sub: p.simple, id: p.id, to: `/pb/${p.id}` }),
+  );
+  THEORIES.forEach((t) =>
+    items.push({ kind: 'Théorie', title: t.t, sub: `${t.auteur}, ${t.annee}`, id: t.id, to: `/th/${t.id}` }),
+  );
+  ETUDES.forEach((e) =>
+    items.push({ kind: 'Étude', title: e.t, sub: `${e.auteur}, ${e.annee}`, id: e.id, to: `/et/${e.id}` }),
+  );
+  STATISTIQUES.forEach((s) =>
+    items.push({ kind: 'Statistique', title: s.t, sub: s.source, id: s.id, to: `/st/${s.id}` }),
+  );
+  POLITIQUES_PUBLIQUES.forEach((pp) =>
+    items.push({ kind: 'Politique publique', title: pp.t, sub: `${pp.pays}, ${pp.annee}`, id: pp.id, to: `/pp/${pp.id}` }),
+  );
   return items;
 })();
 
-export const SEARCH_FILTERS = ['Tout', 'Auteurs', 'Concepts', 'Œuvres', 'Phénomènes', 'Processus', 'Mécanismes'];
+export const SEARCH_FILTERS = [
+  'Tout',
+  'Auteurs',
+  'Concepts',
+  'Œuvres',
+  'Phénomènes',
+  'Processus',
+  'Mécanismes',
+  'Problématiques',
+  'Théories',
+  'Études',
+  'Statistiques',
+  'Politiques publiques',
+];
 const KIND_BY_FILTER = {
   Auteurs: 'Auteur',
   Concepts: 'Concept',
@@ -374,6 +632,11 @@ const KIND_BY_FILTER = {
   Phénomènes: 'Phénomène',
   Processus: 'Processus',
   Mécanismes: 'Mécanisme',
+  Problématiques: 'Problématique',
+  Théories: 'Théorie',
+  Études: 'Étude',
+  Statistiques: 'Statistique',
+  'Politiques publiques': 'Politique publique',
 };
 export const SEARCH_LIMIT = 24;
 

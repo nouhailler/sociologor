@@ -29,10 +29,10 @@ test.describe('Parcours principal', () => {
     const dialog = page.getByRole('dialog', { name: 'Fonctionnalités de Sociologor' });
     await expect(dialog).toBeVisible();
 
-    for (const cat of ['Explorer le corpus', 'Retrouver', 'Aide et réglages']) {
+    for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(12);
+    await expect(dialog.getByRole('link')).toHaveCount(17);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();

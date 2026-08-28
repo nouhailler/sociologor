@@ -20,7 +20,7 @@ export default function Search() {
   }
 
   return (
-    <Shell title="Recherche" subtitle="Auteurs, concepts, œuvres, phénomènes, mécanismes, processus">
+    <Shell title="Recherche" subtitle="Auteurs, concepts, phénomènes, mécanismes, processus, problématiques">
       <div style={{ maxWidth: 720 }}>
         <label className="text-muted" htmlFor="soc-q" style={{ display: 'block', fontSize: 12, marginBottom: 5 }}>
           Rechercher dans les fiches

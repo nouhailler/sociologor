@@ -167,6 +167,29 @@ export default function Phenomene() {
           </div>
         )}
 
+        <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
+          Problématiques liées
+        </h3>
+        {p.problematiquesLinks.length === 0 ? (
+          <p
+            style={{
+              fontSize: 12.5,
+              color: 'color-mix(in srgb, var(--color-text) 40%, transparent)',
+              margin: '0 0 24px',
+            }}
+          >
+            Aucune problématique déjà décrite ne cite ce phénomène.
+          </p>
+        ) : (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>
+            {p.problematiquesLinks.map((pb) => (
+              <Link key={pb.id} to={`/pb/${pb.id}`} className="soc-link-chip">
+                {pb.label}
+              </Link>
+            ))}
+          </div>
+        )}
+
         {p.notions.length > 0 && (
           <>
             <p style={LABEL}>Notions associées</p>

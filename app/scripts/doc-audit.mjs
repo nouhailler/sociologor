@@ -20,7 +20,14 @@
  * 13. chaque processus a une catégorie, au moins deux étapes, et ses éventuels
  *     phénomènes liés existent bien parmi les phénomènes déjà décrits ;
  * 14. chaque mécanisme a une catégorie, au moins un concept et au moins un
- *     processus qu'il alimente, et ses éventuels phénomènes liés existent.
+ *     processus qu'il alimente, et ses éventuels phénomènes liés existent ;
+ * 15. les théories, études, statistiques et politiques publiques sont
+ *     complètes, et leurs renvois internes (une étude vers une théorie…)
+ *     pointent quelque part ;
+ * 16. chaque problématique a ses douze rubriques remplies — aucun registre de
+ *     facteurs, conséquences, dynamiques ou manifestations vide — et aucune
+ *     théorie, étude, statistique ou politique publique n'est orpheline
+ *     (aucune problématique ne la cite).
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -61,7 +68,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -441,6 +448,171 @@ for (const cat of CATEGORIES_MECANISMES) {
   if (!MECANISMES.some((m) => m.categorie === cat.id)) fail(`Catégorie de mécanisme vide : ${cat.id}`);
 }
 
+/* — 15. intégrité des théories, études, statistiques et politiques publiques — */
+// Ces quatre types ne sont cités que par les problématiques : c'est donc
+// `problematiques.js`, plus loin, qui vérifie qu'aucune fiche n'est orpheline.
+const { THEORIES } = await import('../src/data/theories.js');
+const { ETUDES } = await import('../src/data/etudes.js');
+const { STATISTIQUES } = await import('../src/data/statistiques.js');
+const { POLITIQUES_PUBLIQUES } = await import('../src/data/politiques-publiques.js');
+
+const theorieIds = new Set();
+for (const t of THEORIES) {
+  if (theorieIds.has(t.id)) fail(`Théorie en double : ${t.id}`);
+  theorieIds.add(t.id);
+  for (const f of ['t', 'auteur', 'annee', 'oeuvre', 'd', 'detail']) {
+    if (!t[f]) fail(`Théorie ${t.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  for (const c of t.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Théorie ${t.id} : concept inconnu « ${c} ».`);
+  }
+}
+
+const etudeIds = new Set();
+for (const e of ETUDES) {
+  if (etudeIds.has(e.id)) fail(`Étude en double : ${e.id}`);
+  etudeIds.add(e.id);
+  for (const f of ['t', 'auteur', 'annee', 'methode', 'd', 'detail']) {
+    if (!e[f]) fail(`Étude ${e.id} : rubrique « ${f} » vide ou absente.`);
+  }
+  for (const t of e.theories || []) {
+    if (!theorieIds.has(t)) fail(`Étude ${e.id} : théorie inconnue « ${t} ».`);
+  }
+}
+
+const statistiqueIds = new Set();
+for (const s of STATISTIQUES) {
+  if (statistiqueIds.has(s.id)) fail(`Statistique en double : ${s.id}`);
+  statistiqueIds.add(s.id);
+  for (const f of ['t', 'source', 'valeur', 'd', 'detail', 'limites']) {
+    if (!s[f]) fail(`Statistique ${s.id} : rubrique « ${f} » vide ou absente.`);
+  }
+}
+
+const politiqueIds = new Set();
+for (const pp of POLITIQUES_PUBLIQUES) {
+  if (politiqueIds.has(pp.id)) fail(`Politique publique en double : ${pp.id}`);
+  politiqueIds.add(pp.id);
+  for (const f of ['t', 'pays', 'annee', 'type', 'd', 'detail', 'resultats', 'limites']) {
+    if (!pp[f]) fail(`Politique publique ${pp.id} : rubrique « ${f} » vide ou absente.`);
+  }
+}
+
+/* — 16. intégrité des problématiques sociales — */
+// La fiche la plus large du corpus : douze rubriques, dont plusieurs
+// découpées en plusieurs registres (facteurs, conséquences…) qui doivent
+// chacun compter au moins un élément — un registre vide s'afficherait comme
+// un titre sans contenu.
+const { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } = await import('../src/data/problematiques.js');
+
+const pbCatIds = new Set(CATEGORIES_PROBLEMATIQUES.map((c) => c.id));
+const pbIds = new Set(PROBLEMATIQUES.map((p) => p.id));
+const usedTheories = new Set();
+const usedEtudes = new Set();
+const usedStatistiques = new Set();
+const usedPolitiques = new Set();
+
+const FACTEURS_REGISTRES = ['economiques', 'sociaux', 'culturels', 'politiques', 'institutionnels', 'territoriaux', 'demographiques', 'historiques'];
+const MANIFESTATIONS_REGISTRES = ['comportements', 'situations', 'indicateurs', 'pratiques', 'evenements', 'statistiques'];
+const CONSEQUENCES_REGISTRES = ['individuelles', 'familiales', 'professionnelles', 'economiques', 'sanitaires', 'scolaires', 'territoriales', 'politiques', 'intergenerationnelles'];
+const DYNAMIQUES_REGISTRES = ['aggravation', 'reduction', 'stabilisation', 'transformation', 'cycles', 'effetsDeSeuil', 'effetsCumulatifs', 'reproductionIntergenerationnelle'];
+const POPULATION_CHAMPS = ['generale', 'age', 'genre', 'csp', 'revenu', 'education', 'territoire', 'situationFamiliale', 'statutProfessionnel'];
+
+const seenPbIds = new Set();
+for (const p of PROBLEMATIQUES) {
+  if (seenPbIds.has(p.id)) fail(`Problématique en double : ${p.id}`);
+  seenPbIds.add(p.id);
+  const tag = `Problématique ${p.id}`;
+
+  for (const f of ['t', 'simple', 'gravite', 'origineEmergence', 'contexteHistorique', 'situationActuelle', 'dimensionIndividuelle', 'dimensionCollective', 'dimensionStructurelle']) {
+    if (!p[f]) fail(`${tag} : rubrique « ${f} » vide ou absente.`);
+  }
+  if (!pbCatIds.has(p.categorie)) fail(`${tag} : catégorie inconnue « ${p.categorie} ».`);
+  for (const f of ['detaille', 'sousCategories', 'motsCles', 'description', 'evolutionHistorique', 'mecanismeSchema', 'debats']) {
+    if ((p[f] || []).length === 0) fail(`${tag} : rubrique « ${f} » vide ou absente.`);
+  }
+  for (const sc of p.sousCategories || []) {
+    if (!sc.t || !sc.d) fail(`${tag} : sous-catégorie sans titre ou sans définition.`);
+  }
+  for (const d of p.debats || []) {
+    if (!d.t || !d.d) fail(`${tag} : débat sans titre ou sans description.`);
+  }
+
+  for (const champ of POPULATION_CHAMPS) {
+    if (!p.population?.[champ]) fail(`${tag} : population.${champ} vide ou absent.`);
+  }
+  if ((p.population?.groupesExposes || []).length === 0) fail(`${tag} : population.groupesExposes vide.`);
+
+  for (const reg of FACTEURS_REGISTRES) {
+    if ((p.facteurs?.[reg] || []).length === 0) fail(`${tag} : facteurs.${reg} vide.`);
+  }
+  for (const reg of MANIFESTATIONS_REGISTRES) {
+    if ((p.manifestations?.[reg] || []).length === 0) fail(`${tag} : manifestations.${reg} vide.`);
+  }
+  for (const reg of CONSEQUENCES_REGISTRES) {
+    if ((p.consequences?.[reg] || []).length === 0) fail(`${tag} : consequences.${reg} vide.`);
+  }
+  for (const reg of DYNAMIQUES_REGISTRES) {
+    if (!p.dynamiques?.[reg]) fail(`${tag} : dynamiques.${reg} vide ou absent.`);
+  }
+
+  if (!p.mesure?.description) fail(`${tag} : mesure.description vide ou absent.`);
+  if ((p.mesure?.limites || []).length === 0) fail(`${tag} : mesure.limites vide.`);
+  if ((p.mesure?.statistiques || []).length === 0) fail(`${tag} : mesure.statistiques vide — rien ne mesure la problématique.`);
+  for (const s of p.mesure?.statistiques || []) {
+    if (!statistiqueIds.has(s)) fail(`${tag} : statistique inconnue « ${s} ».`);
+    usedStatistiques.add(s);
+  }
+
+  if ((p.mecanismes || []).length === 0) fail(`${tag} : aucun mécanisme — la rubrique 6 s'afficherait sans lien.`);
+  for (const m of p.mecanismes || []) {
+    if (!mecaIds.has(m)) fail(`${tag} : mécanisme inconnu « ${m} ».`);
+  }
+  for (const ph of p.phenomenes || []) {
+    if (!phenIds.has(ph)) fail(`${tag} : phénomène inconnu « ${ph} ».`);
+  }
+  for (const c of p.concepts || []) {
+    if (!conceptBase.has(c)) fail(`${tag} : concept inconnu « ${c} ».`);
+  }
+  for (const pr of p.processus || []) {
+    if (!procIds.has(pr)) fail(`${tag} : processus inconnu « ${pr} ».`);
+  }
+  for (const t of p.theories || []) {
+    if (!theorieIds.has(t)) fail(`${tag} : théorie inconnue « ${t} ».`);
+    usedTheories.add(t);
+  }
+  for (const a of p.auteurs || []) {
+    if (!AUTHORS[a]) fail(`${tag} : auteur inconnu « ${a} ».`);
+  }
+  for (const e of p.etudes || []) {
+    if (!etudeIds.has(e)) fail(`${tag} : étude inconnue « ${e} ».`);
+    usedEtudes.add(e);
+  }
+  for (const pp of p.politiquesPubliques || []) {
+    if (!politiqueIds.has(pp)) fail(`${tag} : politique publique inconnue « ${pp} ».`);
+    usedPolitiques.add(pp);
+  }
+  for (const conn of p.problematiquesConnexes || []) {
+    if (conn === p.id) fail(`${tag} : problématiques connexes se référence elle-même.`);
+    if (!pbIds.has(conn)) fail(`${tag} : problématique connexe inconnue « ${conn} ».`);
+  }
+}
+for (const cat of CATEGORIES_PROBLEMATIQUES) {
+  if (!PROBLEMATIQUES.some((p) => p.categorie === cat.id)) fail(`Catégorie de problématique vide : ${cat.id}`);
+}
+for (const t of THEORIES) {
+  if (!usedTheories.has(t.id)) fail(`Théorie orpheline (aucune problématique ne la cite) : ${t.id}`);
+}
+for (const e of ETUDES) {
+  if (!usedEtudes.has(e.id)) fail(`Étude orpheline (aucune problématique ne la cite) : ${e.id}`);
+}
+for (const s of STATISTIQUES) {
+  if (!usedStatistiques.has(s.id)) fail(`Statistique orpheline (aucune problématique ne la cite) : ${s.id}`);
+}
+for (const pp of POLITIQUES_PUBLIQUES) {
+  if (!usedPolitiques.has(pp.id)) fail(`Politique publique orpheline (aucune problématique ne la cite) : ${pp.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -481,6 +653,18 @@ console.log(
   line(
     'Mécanismes',
     `${MECANISMES.length} en ${CATEGORIES_MECANISMES.length} catégories, ${MECANISMES.reduce((n, m) => n + (m.concepts || []).length, 0)} liens vers des concepts, ${MECANISMES.reduce((n, m) => n + (m.processus || []).length, 0)} liens vers des processus, ${MECANISMES.reduce((n, m) => n + (m.phenomenes || []).length, 0)} liens vers des phénomènes`,
+  ),
+);
+console.log(
+  line(
+    'Problématiques',
+    `${PROBLEMATIQUES.length} en ${CATEGORIES_PROBLEMATIQUES.length} catégorie(s)`,
+  ),
+);
+console.log(
+  line(
+    'Ressources',
+    `${THEORIES.length} théories, ${ETUDES.length} études, ${STATISTIQUES.length} statistiques, ${POLITIQUES_PUBLIQUES.length} politiques publiques`,
   ),
 );
 

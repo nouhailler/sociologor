@@ -13,6 +13,17 @@ import Mecanismes from './routes/Mecanismes.jsx';
 import MecanismeFiche from './routes/MecanismeFiche.jsx';
 import Processus from './routes/Processus.jsx';
 import ProcessusFiche from './routes/ProcessusFiche.jsx';
+import Problematiques from './routes/Problematiques.jsx';
+import ProblematiqueFiche from './routes/ProblematiqueFiche.jsx';
+import GrapheProblematique from './routes/GrapheProblematique.jsx';
+import Theories from './routes/Theories.jsx';
+import TheorieFiche from './routes/TheorieFiche.jsx';
+import Etudes from './routes/Etudes.jsx';
+import EtudeFiche from './routes/EtudeFiche.jsx';
+import Statistiques from './routes/Statistiques.jsx';
+import StatistiqueFiche from './routes/StatistiqueFiche.jsx';
+import PolitiquesPubliques from './routes/PolitiquesPubliques.jsx';
+import PolitiquePubliqueFiche from './routes/PolitiquePubliqueFiche.jsx';
 import Search from './routes/Search.jsx';
 import Favs from './routes/Favs.jsx';
 import Settings from './routes/Settings.jsx';
@@ -44,6 +55,17 @@ export default function App() {
       <Route path="/m/:id" element={<MecanismeFiche />} />
       <Route path="/processus" element={<Processus />} />
       <Route path="/pr/:id" element={<ProcessusFiche />} />
+      <Route path="/problematiques" element={<Problematiques />} />
+      <Route path="/pb/:id" element={<ProblematiqueFiche />} />
+      <Route path="/pb/:id/graphe" element={<GrapheProblematique />} />
+      <Route path="/theories" element={<Theories />} />
+      <Route path="/th/:id" element={<TheorieFiche />} />
+      <Route path="/etudes" element={<Etudes />} />
+      <Route path="/et/:id" element={<EtudeFiche />} />
+      <Route path="/statistiques" element={<Statistiques />} />
+      <Route path="/st/:id" element={<StatistiqueFiche />} />
+      <Route path="/politiques-publiques" element={<PolitiquesPubliques />} />
+      <Route path="/pp/:id" element={<PolitiquePubliqueFiche />} />
       <Route path="/recherche" element={<Search />} />
       <Route path="/mes-fiches" element={<Favs />} />
       <Route path="/parametres" element={<Settings />} />

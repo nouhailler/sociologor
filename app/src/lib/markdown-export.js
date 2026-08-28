@@ -94,6 +94,12 @@ export function conceptToMarkdown(c) {
   L.push(`- **Concepts opposés** : ${names(c.opposesLinks)}`);
   L.push('');
 
+  if (c.problematiquesLinks.length) {
+    L.push('## Problématiques qui le mobilisent', '');
+    L.push(c.problematiquesLinks.map((p) => p.label).join(', '));
+    L.push('');
+  }
+
   L.push('---', '', `Concept exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
@@ -125,6 +131,12 @@ export function phenomeneToMarkdown(p) {
   if (p.notions.length) {
     L.push('## Notions associées', '');
     p.notions.forEach((n) => L.push(`- ${n}`));
+    L.push('');
+  }
+
+  if (p.problematiquesLinks.length) {
+    L.push('## Problématiques liées', '');
+    L.push(p.problematiquesLinks.map((pb) => pb.label).join(', '));
     L.push('');
   }
 
@@ -172,6 +184,12 @@ export function processusToMarkdown(p) {
     L.push('');
   }
 
+  if (p.problematiquesLinks.length) {
+    L.push('## Problématiques liées', '');
+    L.push(p.problematiquesLinks.map((pb) => pb.label).join(', '));
+    L.push('');
+  }
+
   L.push('---', '', `Processus exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
@@ -204,7 +222,82 @@ export function mecanismeToMarkdown(m) {
     L.push('');
   }
 
+  if (m.problematiquesLinks.length) {
+    L.push('## Problématiques liées', '');
+    L.push(m.problematiquesLinks.map((pb) => pb.label).join(', '));
+    L.push('');
+  }
+
   L.push('---', '', `Mécanisme exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
+/** Sérialise une fiche problématique en Markdown — les douze rubriques de l'écran. */
+export function problematiqueToMarkdown(p) {
+  const L = [];
+  const listOrDash = (items) => (items && items.length ? items.join(', ') : '—');
+  const linksOrDash = (items) => (items.length ? items.map((i) => i.label || i.name).join(', ') : '—');
+
+  L.push(`# ${p.t}`, '');
+  L.push(`*${p.categorieT}*`, '');
+  L.push(`> ${p.simple}`, '');
+
+  L.push('## 1. Identité', '');
+  p.detaille.forEach((para) => L.push(para, ''));
+  p.sousCategories.forEach((sc) => L.push(`- **${sc.t}** — ${sc.d}`));
+  L.push('');
+
+  L.push('## 2. Comprendre la problématique', '');
+  p.description.forEach((para) => L.push(para, ''));
+  L.push(`**Situation actuelle** — ${p.situationActuelle}`, '');
+
+  L.push('## 3. Population concernée', '');
+  L.push(p.population.generale, '');
+  p.population.groupesExposes.forEach((g) => L.push(`- ${g}`));
+  L.push('');
+
+  L.push('## 4. Causes et facteurs', '');
+  Object.entries(p.facteurs).forEach(([k, items]) => L.push(`- **${k}** : ${listOrDash(items)}`));
+  L.push('');
+
+  L.push('## 5. Manifestations', '');
+  Object.entries(p.manifestations).forEach(([k, items]) => L.push(`- **${k}** : ${listOrDash(items)}`));
+  L.push('');
+
+  L.push('## 6. Mécanismes sociaux', '');
+  L.push(p.mecanismeSchema.join(' → '), '');
+  L.push(linksOrDash(p.mecanismesLinks), '');
+
+  L.push('## 7. Conséquences', '');
+  Object.entries(p.consequences).forEach(([k, items]) => L.push(`- **${k}** : ${listOrDash(items)}`));
+  L.push('');
+
+  L.push('## 8. Dynamiques', '');
+  Object.entries(p.dynamiques).forEach(([k, v]) => L.push(`- **${k}** : ${v}`));
+  L.push('');
+
+  L.push('## 9. Mesurer la problématique', '');
+  L.push(p.mesure.description, '');
+  L.push(linksOrDash(p.mesure.statistiquesLinks), '');
+
+  L.push('## 10. Débats sociologiques', '');
+  p.debats.forEach((d) => L.push(`- **${d.t}** — ${d.d}`));
+  L.push('');
+
+  L.push('## 11. Politiques publiques', '');
+  L.push(linksOrDash(p.politiquesPubliquesLinks), '');
+
+  L.push('## 12. Liens avec Sociologor', '');
+  L.push(`- **Phénomènes** : ${linksOrDash(p.phenomenesLinks)}`);
+  L.push(`- **Concepts** : ${linksOrDash(p.conceptsLinks)}`);
+  L.push(`- **Processus** : ${linksOrDash(p.processusLinks)}`);
+  L.push(`- **Théories** : ${linksOrDash(p.theoriesLinks)}`);
+  L.push(`- **Auteurs** : ${linksOrDash(p.auteursLinks)}`);
+  L.push(`- **Études** : ${linksOrDash(p.etudesLinks)}`);
+  L.push(`- **Problématiques connexes** : ${linksOrDash(p.problematiquesConnexesLinks)}`);
+  L.push('');
+
+  L.push('---', '', `Problématique exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
 

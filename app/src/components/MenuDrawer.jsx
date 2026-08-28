@@ -22,13 +22,24 @@ const CATEGORIES = [
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
       { to: '/mecanismes', label: 'Mécanismes sociaux', hint: "Les rouages qui expliquent comment un phénomène se produit" },
       { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
+      { to: '/problematiques', label: 'Problématiques sociales', hint: 'Les enjeux qui font débat, avec leur graphe de liens' },
+    ],
+  },
+  {
+    id: 'ressources',
+    t: 'Ressources des problématiques',
+    items: [
+      { to: '/theories', label: 'Théories', hint: 'Des cadres explicatifs signés et datés' },
+      { to: '/etudes', label: 'Études', hint: 'Les enquêtes et terrains qui les fondent' },
+      { to: '/statistiques', label: 'Statistiques', hint: 'Indicateurs, sources et limites de mesure' },
+      { to: '/politiques-publiques', label: 'Politiques publiques', hint: 'Dispositifs, résultats et limites' },
     ],
   },
   {
     id: 'retrouver',
     t: 'Retrouver',
     items: [
-      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, œuvres, phénomènes, mécanismes, processus' },
+      { to: '/recherche', label: 'Recherche', hint: 'Auteurs, concepts, phénomènes, mécanismes, processus, problématiques' },
       { to: '/mes-fiches', label: 'Mes fiches', hint: 'Fiches épinglées' },
     ],
   },
@@ -50,6 +61,11 @@ function activeTo(pathname) {
   if (pathname.startsWith('/phenomenes') || pathname.startsWith('/p/')) return '/phenomenes';
   if (pathname.startsWith('/mecanismes') || pathname.startsWith('/m/')) return '/mecanismes';
   if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
+  if (pathname.startsWith('/problematiques') || pathname.startsWith('/pb/')) return '/problematiques';
+  if (pathname.startsWith('/theories') || pathname.startsWith('/th/')) return '/theories';
+  if (pathname.startsWith('/etudes') || pathname.startsWith('/et/')) return '/etudes';
+  if (pathname.startsWith('/statistiques') || pathname.startsWith('/st/')) return '/statistiques';
+  if (pathname.startsWith('/politiques-publiques') || pathname.startsWith('/pp/')) return '/politiques-publiques';
   if (pathname.startsWith('/courants')) return '/courants';
   if (pathname.startsWith('/graphe')) return '/graphe';
   if (pathname.startsWith('/recherche')) return '/recherche';
