@@ -7,23 +7,45 @@ leurs filiations. Application web progressive, consultable hors connexion.
 ## Ce que c'est
 
 Une PWA React + Vite, sans compte, sans serveur applicatif et sans collecte de
-données. Tout le contenu — 15 fiches, 14 domaines, 38 concepts, 43 œuvres, et
-la documentation utilisateur — est embarqué dans le bundle et mis en cache par
-un service worker.
+données. Tout le contenu — 15 fiches, 32 domaines, 38 concepts, 15 courants,
+39 phénomènes sociaux, 10 processus sociaux, 43 œuvres, et la documentation
+utilisateur — est embarqué dans le bundle et mis en cache par un service
+worker.
 
 | Écran | Contenu |
 |---|---|
-| Accueil | Notion du jour (rotation sur les 38 concepts) et les 14 domaines |
-| Domaine | Les auteurs de référence d'un thème |
+| Accueil | Notion du jour (rotation sur les 38 concepts) et les 32 domaines, en 8 familles |
+| Domaine | Les auteurs de référence d'un thème, avec un paragraphe de contexte |
 | Fiche auteur | Repères, concepts, filiation, œuvres, citations, critiques, bibliographie |
-| Graphe | 15 nœuds, 18 liens, filiation directe / influence indirecte |
-| Recherche | 96 entrées, insensible aux accents, filtrable |
+| Graphe | Filiations entre les 15 fiches, et réseau des 38 concepts |
+| Carte des courants | 15 courants — paradigme, courant, école, variante — reliés par leurs filiations |
+| Phénomènes sociaux | 39 faits sociaux concrets, chacun relié aux concepts du corpus qui l'éclairent |
+| Processus sociaux | 10 trajectoires en étapes, reliées aux phénomènes qu'elles produisent |
+| Recherche | 145 entrées, insensible aux accents, filtrable par type |
 | Mes fiches | Les fiches épinglées, conservées sur l'appareil |
-| Paramètres | Affichage, données locales, à propos |
-| Documentation | 44 pages, sommaire en accordéon, recherche plein texte |
+| Paramètres | Affichage, données locales, mise à jour forcée, à propos |
+| Documentation | 53 pages, sommaire en accordéon, recherche plein texte |
+| Menu ☰ | Toutes les fonctionnalités, classées par catégorie |
 
 Export Markdown d'une fiche, partage de son lien, bandeaux d'état réseau et de
 mise à jour, avertissement légal au premier lancement.
+
+## Aperçu
+
+<table>
+<tr>
+<td width="25%"><img src="screenshots/accueil.png" alt="Écran Accueil : notion du jour et domaines classés par famille" width="100%"></td>
+<td width="25%"><img src="screenshots/graphe.png" alt="Graphe des filiations entre auteurs, et graphe des concepts" width="100%"></td>
+<td width="25%"><img src="screenshots/carte-courants.png" alt="Carte des courants, du positivisme au pragmatisme" width="100%"></td>
+<td width="25%"><img src="screenshots/phenomenes-sociaux.png" alt="Liste des phénomènes sociaux, classés par catégorie" width="100%"></td>
+</tr>
+<tr>
+<td align="center">Accueil</td>
+<td align="center">Graphe</td>
+<td align="center">Carte des courants</td>
+<td align="center">Phénomènes sociaux</td>
+</tr>
+</table>
 
 ## Démarrer
 
