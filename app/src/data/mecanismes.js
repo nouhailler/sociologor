@@ -172,6 +172,17 @@ export const MECANISMES = [
     processus: ['mobilite-sociale'],
     phenomenes: ['inegalites-generationnelles', 'declassement-social'],
   },
+  {
+    id: 'non-reconnaissance-des-diplomes-etrangers',
+    t: 'Non-reconnaissance des diplômes étrangers',
+    categorie: 'selection',
+    d: "Un diplôme obtenu à l'étranger n'ouvre presque jamais, de plein droit, les mêmes portes professionnelles que son équivalent national — quelle que soit la rigueur réelle de la formation suivie.",
+    detail:
+      "Les procédures d'équivalence, longues et coûteuses, découragent une partie des personnes concernées ; faute de reconnaissance, un diplôme d'ingénieur ou de médecin obtenu ailleurs peut ne valoir, sur le marché du travail d'arrivée, qu'un accès à des emplois bien en dessous du niveau de qualification réel — ce que la sociologie de l'immigration appelle le gaspillage de compétences.",
+    concepts: ['capital-culturel'],
+    processus: ['declassement'],
+    phenomenes: ['migration-internationale'],
+  },
 
   /* — Relationnel et réseaux — */
   {
@@ -586,5 +597,27 @@ export const MECANISMES = [
     concepts: ['capital-culturel', 'capital-economique'],
     processus: ['reproduction-des-elites'],
     phenomenes: ['inegalites-scolaires'],
+  },
+  {
+    id: 'orientation-subie',
+    t: 'Orientation subie',
+    categorie: 'selection',
+    d: "Une orientation présentée comme un choix peut n'en être un que de façade : faute de place dans la filière demandée, l'élève se retrouve dans un cursus qu'il n'a pas choisi.",
+    detail:
+      "Contrairement à l'autocensure, où l'élève renonce lui-même par anticipation, l'orientation subie vient de l'institution : un avis de conseil de classe, une capacité d'accueil insuffisante dans la filière visée, ou une procédure d'affectation qui ne tient pas compte du vœu initial. Le sentiment d'injustice qui en résulte fragilise souvent l'investissement scolaire ultérieur.",
+    concepts: ['violence-symbolique'],
+    processus: ['reproduction-sociale'],
+    phenomenes: ['inegalites-scolaires', 'decrochage-scolaire'],
+  },
+  {
+    id: 'desengagement-scolaire',
+    t: 'Désengagement scolaire',
+    categorie: 'rupture',
+    d: "Avant même l'absentéisme, une part de l'investissement psychologique dans l'école s'effrite : l'élève cesse progressivement de se sentir concerné par ce qui s'y joue.",
+    detail:
+      "Finn décrit un cercle qui s'auto-alimente : une participation en classe qui faiblit fragilise les résultats, ce qui affaiblit à son tour l'identification à l'école — le sentiment d'y avoir sa place et d'y être reconnu — jusqu'à ce que le lien se rompe presque de lui-même, bien avant toute décision explicite de partir.",
+    concepts: ['anomie'],
+    processus: ['desaffiliation'],
+    phenomenes: ['decrochage-scolaire'],
   },
 ];

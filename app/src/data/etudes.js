@@ -234,4 +234,88 @@ export const ETUDES = [
       "Le texte reste plus argumentatif qu'empirique au sens strict, mais s'appuie sur des données de l'époque concernant la progression des contrats courts et de l'intérim en France, qu'il interprète à la lumière de sa théorie de la domination symbolique.",
     theories: ['precarite-domination-bourdieu'],
   },
+  {
+    id: 'kansas-city-study-cumming-henry',
+    t: 'Kansas City Study of Adult Life',
+    auteur: 'Elaine Cumming et William Henry',
+    annee: '1952–1961',
+    methode:
+      "Étude longitudinale par entretiens répétés auprès de plusieurs centaines d'adultes de 50 à 90 ans résidant à Kansas City, portant sur leur niveau de participation sociale et leur satisfaction de vie au fil du temps.",
+    d: "L'enquête de terrain qui fonde empiriquement la théorie du désengagement : le suivi dans la durée d'un même groupe d'adultes vieillissants, pour observer comment leur rapport aux rôles et aux relations sociales évolue avec l'âge.",
+    detail:
+      "L'étude documente une baisse mesurable de l'interaction sociale à mesure que ses enquêtés avancent en âge, que Cumming et Henry interprètent comme un retrait mutuellement consenti. Des relectures ultérieures des mêmes données ont souligné que cette baisse recoupait aussi des contraintes externes — perte d'emploi imposée, deuils, mobilité réduite — que l'interprétation initiale minorait.",
+    theories: ['desengagement-cumming-henry'],
+  },
+  {
+    id: 'enquete-care-drees',
+    t: 'Enquête CARE (Capacités, Aides et REssources des seniors)',
+    auteur: 'DREES',
+    annee: '2015',
+    methode:
+      "Enquête statistique nationale en deux volets — personnes âgées vivant à domicile et personnes âgées en établissement — croisée avec un questionnaire adressé à leurs proches aidants, sur la perte d'autonomie et l'aide reçue.",
+    d: "La principale source française sur la dépendance et l'aide informelle aux personnes âgées, construite pour mesurer conjointement l'ampleur de la perte d'autonomie et la charge qui repose sur l'entourage familial.",
+    detail:
+      "L'enquête met en évidence le poids central des aidants familiaux, en particulier des conjointes et des filles, dans la prise en charge quotidienne de la dépendance, bien avant tout recours à une aide professionnelle ou à un établissement — un rôle largement invisible dans les statistiques d'aide publique.",
+    theories: [],
+  },
+  {
+    id: 'polish-peasant-thomas-znaniecki',
+    t: 'The Polish Peasant in Europe and America',
+    auteur: 'William I. Thomas et Florian Znaniecki',
+    annee: '1918–1920',
+    methode:
+      "Analyse de correspondances familiales, de récits de vie et de journaux intimes de paysans polonais émigrés aux États-Unis, croisée avec des archives institutionnelles — la première grande étude de sociologie de la migration fondée sur ce type de matériau.",
+    d: "L'enquête fondatrice de la sociologie de la migration et de la méthode biographique : reconstituer, à partir de la parole même des migrants, ce qu'un déplacement transforme dans une existence, plutôt que de la déduire de statistiques agrégées.",
+    detail:
+      "Thomas et Znaniecki documentent la désorganisation puis la réorganisation progressive des attitudes et des valeurs d'une communauté paysanne polonaise confrontée à l'urbanisation industrielle américaine, une méthode et un objet qui inspireront directement l'école de Chicago naissante.",
+    theories: [],
+  },
+  {
+    id: 'cils-portes-rumbaut',
+    t: 'Children of Immigrants Longitudinal Study (CILS)',
+    auteur: 'Alejandro Portes et Rubén Rumbaut',
+    annee: '1992–2006',
+    methode:
+      "Enquête longitudinale menée à trois reprises auprès de plusieurs milliers d'enfants d'immigrés à San Diego et à Miami-Fort Lauderdale, suivis de l'adolescence au début de l'âge adulte.",
+    d: "L'enquête empirique qui fonde la théorie de l'assimilation segmentée : suivre dans la durée une même cohorte d'enfants d'immigrés pour observer laquelle des trois trajectoires — ascendante, descendante, ou sélective — se dessine réellement.",
+    detail:
+      "L'étude met en évidence l'importance du capital communautaire et de la structure familiale, bien plus que de la seule volonté d'intégration, pour expliquer pourquoi des enfants d'immigrés aux origines nationales comparables connaissent des destins scolaires et professionnels très différents une fois adultes.",
+    theories: ['assimilation-segmentee-portes-zhou'],
+  },
+  {
+    id: 'enquete-teo-insee-ined',
+    t: 'Enquête Trajectoires et Origines (TeO)',
+    auteur: 'INSEE et INED',
+    annee: '2008–2009',
+    methode:
+      "Enquête statistique nationale menée en France auprès de plus de vingt mille personnes, immigrées, descendantes d'immigrés ou natives, portant sur leurs trajectoires scolaires, professionnelles, résidentielles et sur les discriminations déclarées.",
+    d: "La principale source française sur les trajectoires des immigrés et de leurs descendants, construite précisément pour distinguer ces deux populations et mesurer si les inégalités observées se prolongent, s'atténuent ou se recomposent d'une génération à l'autre.",
+    detail:
+      "L'enquête permet, pour la première fois à cette échelle en France, de comparer directement les trajectoires des immigrés, de leurs enfants nés en France et de la population sans ascendance migratoire récente, sur des critères identiques — plutôt que de déduire l'intégration de statistiques d'origine indirectes.",
+    theories: [],
+  },
+  {
+    id: 'les-heritiers-bourdieu-passeron-1964',
+    t: 'Les Héritiers. Les étudiants et la culture',
+    auteur: 'Pierre Bourdieu et Jean-Claude Passeron',
+    annee: '1964',
+    methode:
+      "Enquête statistique et par entretiens auprès d'étudiants français, croisant leurs résultats et leurs pratiques culturelles avec l'origine sociale de leur famille.",
+    d: "L'enquête empirique qui précède et fonde la théorie de la reproduction scolaire : montrer, chiffres à l'appui, que l'accès et la réussite dans l'enseignement supérieur restent statistiquement liés à l'origine sociale, malgré la gratuité et l'ouverture formelle du système.",
+    detail:
+      "L'étude documente que les étudiants d'origine populaire, minoritaires et souvent en difficulté dans un système scolaire qui valorise des codes culturels transmis en famille, ne doivent pas leur moindre réussite à un moindre talent mais à un désajustement entre leur capital culturel et celui qu'exige, sans le déclarer, l'institution.",
+    theories: ['reproduction-bourdieu-passeron'],
+  },
+  {
+    id: 'panel-eleves-depp',
+    t: 'Panels d’élèves du second degré',
+    auteur: 'DEPP (ministère de l’Éducation nationale)',
+    annee: '1995–',
+    methode:
+      "Suivi longitudinal de cohortes d'élèves entrant en sixième une même année, observés jusqu'à leur sortie du système scolaire, avec relevé de leur parcours, de leurs résultats et de leur origine sociale.",
+    d: "La principale source française pour suivre, dans la durée, comment un retard scolaire ou une orientation précoce se transforme, ou non, en décrochage plusieurs années plus tard.",
+    detail:
+      "Le suivi d'une même cohorte sur l'ensemble d'un cursus permet d'isoler les facteurs de risque qu'une simple photographie annuelle ne peut pas révéler, en particulier le poids du redoublement précoce, largement confirmé par ces données comme le plus puissant prédicteur statistique du décrochage ultérieur.",
+    theories: [],
+  },
 ];

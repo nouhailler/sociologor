@@ -229,4 +229,130 @@ export const POLITIQUES_PUBLIQUES = [
     limites:
       "Le calcul par comparaison sectorielle peut inciter une entreprise à réduire son recours aux contrats courts sans que cela change la précarité globale du secteur, si toutes les entreprises du secteur ajustent leur comportement de façon comparable.",
   },
+  {
+    id: 'apa-2002',
+    t: 'Allocation personnalisée d’autonomie (APA)',
+    pays: 'France',
+    annee: '2002',
+    type: 'Prestation sociale financée par les départements, sous condition de perte d’autonomie',
+    d: "Une aide versée aux personnes de 60 ans ou plus en perte d'autonomie, évaluée selon une grille nationale (AGGIR), pour financer les dépenses liées à leur maintien à domicile ou leur séjour en établissement.",
+    detail:
+      "L'APA remplace une prestation antérieure plus restrictive et ouvre le droit à toute personne dépendante selon la grille AGGIR, sans condition de ressources pour l'accès — seul le montant de l'aide varie ensuite selon le revenu. Financée et gérée par les départements, avec une compensation nationale partielle, elle distingue explicitement une APA à domicile et une APA en établissement.",
+    resultats:
+      "Le dispositif a permis une prise en charge très élargie de la dépendance par rapport à la situation antérieure, et a contribué à retarder l'entrée en établissement pour une partie des bénéficiaires.",
+    limites:
+      "Le reste à charge demeure important pour de nombreuses familles, en particulier en établissement, et le montant effectif de l'aide varie sensiblement d'un département à l'autre, malgré un cadre national commun.",
+  },
+  {
+    id: 'loi-adaptation-societe-vieillissement-2015',
+    t: 'Loi relative à l’adaptation de la société au vieillissement',
+    pays: 'France',
+    annee: '2015',
+    type: 'Loi-cadre articulant prévention, domicile et soutien aux aidants',
+    d: "Un texte qui déplace la politique du grand âge vers la prévention de la perte d'autonomie et le maintien à domicile, plutôt que de la centrer sur le seul hébergement en établissement.",
+    detail:
+      "La loi revalorise l'APA à domicile, crée un droit au répit pour les proches aidants, encourage le développement de formes de logement intermédiaires entre le domicile ordinaire et l'établissement médicalisé, et pose un cadre pour la prévention de la perte d'autonomie avant qu'elle ne s'installe.",
+    resultats:
+      "Premier texte français à structurer la politique de la vieillesse autour du maintien à domicile et de la reconnaissance des aidants plutôt que du seul hébergement, il a servi de référence à l'ensemble des réformes ultérieures du secteur.",
+    limites:
+      "Plusieurs volets plus coûteux, notamment le financement structurel des établissements et les ratios de personnel soignant, sont restés hors de son champ, reportés à une loi « grand âge » annoncée à plusieurs reprises depuis mais jamais adoptée.",
+  },
+  {
+    id: 'reforme-retraites-2023',
+    t: 'Réforme des retraites de 2023',
+    pays: 'France',
+    annee: '2023',
+    type: 'Relèvement de l’âge légal de départ et accélération de la durée de cotisation',
+    d: "Un relèvement progressif de l'âge légal de départ à la retraite, de 62 à 64 ans, combiné à une accélération du calendrier d'allongement de la durée de cotisation déjà engagé par une réforme antérieure.",
+    detail:
+      "Le texte vise à rééquilibrer financièrement à moyen terme un système de retraite par répartition, dont le rapport entre cotisants actifs et retraités continue de se dégrader avec le vieillissement démographique. Il a été adopté dans un contexte parlementaire contesté et a donné lieu à l'un des mouvements sociaux les plus prolongés des dernières décennies en France.",
+    resultats:
+      "L'effet sur l'équilibre financier du système est présenté comme substantiel par ses défenseurs, mais reste débattu selon les hypothèses économiques et démographiques retenues pour le mesurer.",
+    limites:
+      "La réforme est critiquée pour son impact jugé disproportionné sur les carrières longues commencées tôt, sur les métiers pénibles à l'espérance de vie plus courte, et sur les femmes aux carrières interrompues par des périodes non ou peu cotisées.",
+  },
+  {
+    id: 'regroupement-familial-cadre-legal',
+    t: 'Regroupement familial',
+    pays: 'France',
+    annee: '1976',
+    type: 'Droit reconnu par décret puis confirmé comme principe fondamental par le Conseil d’État',
+    d: "Le droit, pour une personne étrangère installée régulièrement, de faire venir son conjoint et ses enfants mineurs, sous conditions de ressources et de logement.",
+    detail:
+      "Institué par décret en 1976, le regroupement familial est confirmé comme un principe à valeur constitutionnelle par le Conseil d'État en 1978, après une tentative de suspension temporaire du gouvernement de l'époque : le droit de mener une vie familiale normale l'emporte sur la seule maîtrise des flux migratoires.",
+    resultats:
+      "Le dispositif est devenu l'une des principales voies légales d'entrée sur le territoire, transformant durablement la composition de l'immigration, d'abord majoritairement masculine et de travail, vers une immigration plus familiale et plus féminine.",
+    limites:
+      "Les conditions de ressources et de logement exigées, régulièrement durcies, excluent de fait une partie des personnes qui rempliraient les conditions de résidence mais pas les conditions matérielles, prolongeant d'autant la séparation des familles.",
+  },
+  {
+    id: 'contrat-integration-republicaine-2016',
+    t: 'Contrat d’intégration républicaine (CIR)',
+    pays: 'France',
+    annee: '2016',
+    type: 'Parcours d’accueil obligatoire pour les primo-arrivants en séjour régulier',
+    d: "Un parcours obligatoire de formation linguistique et civique que doit suivre toute personne étrangère admise pour la première fois au séjour durable en France, comme condition du renouvellement de son titre de séjour.",
+    detail:
+      "Le CIR remplace le contrat d'accueil et d'intégration de 2006, avec des exigences linguistiques renforcées et une formation civique sur les institutions et les valeurs de la République, sanctionnées par une évaluation qui conditionne la suite du parcours administratif.",
+    resultats:
+      "Le dispositif a formalisé et généralisé un parcours d'intégration jusque-là plus disparate, en le rendant obligatoire plutôt que volontaire pour l'ensemble des nouveaux arrivants en séjour durable.",
+    limites:
+      "Le niveau de langue exigé, régulièrement relevé, est jugé par plusieurs études trop ambitieux pour être atteint dans le volume d'heures de formation effectivement proposé, en particulier pour les personnes les moins scolarisées dans leur pays d'origine.",
+  },
+  {
+    id: 'loi-immigration-2024',
+    t: 'Loi pour contrôler l’immigration, améliorer l’intégration',
+    pays: 'France',
+    annee: '2024',
+    type: 'Réforme du droit des étrangers et de l’asile',
+    d: "Une loi qui durcit plusieurs conditions d'entrée, de séjour et d'éloignement, tout en créant une voie de régularisation facilitée pour certains métiers en tension.",
+    detail:
+      "Le texte, très débattu lors de son adoption, combine des dispositions présentées comme relevant à la fois du contrôle des flux migratoires (conditions de séjour, éloignement facilité) et de l'intégration (nouvelles obligations linguistiques), avant qu'une partie de ses articles ne soit censurée par le Conseil constitutionnel pour défaut de lien avec le texte initial.",
+    resultats:
+      "La censure partielle du Conseil constitutionnel a réduit la portée effective du texte par rapport à la version votée par le Parlement, tout en laissant subsister l'essentiel des dispositions relatives au séjour et à l'éloignement.",
+    limites:
+      "L'épisode de la censure constitutionnelle a lui-même relancé le débat sur la méthode législative employée, autant que sur le contenu des mesures adoptées.",
+  },
+  {
+    id: 'siei-2011',
+    t: 'Système interministériel d’échange d’informations (SIEI)',
+    pays: 'France',
+    annee: '2011',
+    type: 'Dispositif de repérage administratif des décrocheurs',
+    d: "Un système qui croise les fichiers scolaires pour identifier nommément, plusieurs fois par an, les jeunes qui ont quitté le système scolaire sans diplôme ni inscription en formation.",
+    detail:
+      "Avant sa création, aucun dispositif ne permettait de savoir, de façon fiable et à l'échelle nationale, qui avait décroché : le repérage reposait sur des remontées locales incomplètes. Le SIEI transmet ensuite les listes de jeunes repérés aux missions locales et aux établissements scolaires pour une prise de contact.",
+    resultats:
+      "Le dispositif a permis un repérage systématique là où il restait auparavant largement approximatif, condition préalable à toute politique de raccrochage ciblée.",
+    limites:
+      "Le repérage ne garantit pas la prise de contact effective avec chaque jeune identifié, ni son adhésion à une proposition d'accompagnement une fois contacté.",
+  },
+  {
+    id: 'ecole-de-la-deuxieme-chance-1997',
+    t: 'École de la deuxième chance',
+    pays: 'France',
+    annee: '1997',
+    type: 'Dispositif de raccrochage hors cursus scolaire classique',
+    d: "Un parcours de remobilisation et de formation, hors du cadre scolaire ordinaire, destiné aux jeunes de 16 à 25 ans sortis du système sans diplôme ni qualification.",
+    detail:
+      "Le premier site pilote ouvre à Marseille en 1997, dans la lignée d'une proposition du Livre blanc européen sur l'éducation de 1995 ; le réseau s'est depuis étendu à plusieurs dizaines de sites en France, combinant remise à niveau, immersion en entreprise et accompagnement individualisé, sans reproduire le cadre scolaire que les jeunes concernés ont souvent rejeté.",
+    resultats:
+      "Une majorité des jeunes accueillis accèdent, à l'issue du parcours, à un emploi ou à une formation qualifiante, dans un cadre pédagogique explicitement différent de celui qui n'avait pas fonctionné pour eux.",
+    limites:
+      "La capacité d'accueil reste limitée au regard du nombre total de jeunes sortis sans qualification chaque année, et l'admission suppose déjà une démarche volontaire que tous les décrocheurs n'engagent pas.",
+  },
+  {
+    id: 'obligation-formation-18-ans-2019',
+    t: 'Obligation de formation jusqu’à 18 ans',
+    pays: 'France',
+    annee: '2019',
+    type: 'Extension de l’obligation scolaire par la loi pour une école de la confiance',
+    d: "L'obligation, non plus seulement de scolarisation jusqu'à 16 ans mais de formation jusqu'à 18 ans, sous une forme scolaire, en apprentissage, en service civique ou en accompagnement vers l'emploi.",
+    detail:
+      "Le texte élargit le filet de sécurité au-delà de la seule fin de la scolarité obligatoire, en imposant aux missions locales de proposer une solution à tout jeune de 16 à 18 ans qui ne serait ni scolarisé, ni en formation, ni en emploi.",
+    resultats:
+      "Le dispositif a permis d'identifier et de recontacter des jeunes qui, avant 2019, sortaient du radar administratif dès leurs 16 ans sans qu'aucune obligation ne s'applique plus à leur situation.",
+    limites:
+      "L'obligation repose sur la capacité effective des missions locales à proposer une solution concrète à chaque jeune signalé, une capacité inégale selon les territoires et les moyens qui leur sont alloués.",
+  },
 ];

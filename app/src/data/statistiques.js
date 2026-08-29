@@ -282,4 +282,136 @@ export const STATISTIQUES = [
     limites:
       "La frontière entre subi et choisi reste déclarative, et peut évoluer pour une même personne selon sa situation familiale ou financière au moment de l'enquête.",
   },
+  {
+    id: 'taux-de-dependance-demographique',
+    t: 'Taux de dépendance démographique des personnes âgées',
+    source: 'INSEE, projections de population',
+    valeur: "De l'ordre d'un senior de 65 ans ou plus pour trois personnes d'âge actif en France, une proportion en hausse continue selon les dernières projections publiées",
+    d: "Le rapport entre le nombre de personnes de 65 ans ou plus et le nombre de personnes d'âge actif — l'indicateur le plus direct de la pression démographique qui pèse sur les systèmes de retraite et de dépendance financés par répartition.",
+    detail:
+      "Le ratio s'est nettement dégradé depuis les années 1960, sous l'effet conjoint de l'allongement de l'espérance de vie et du recul de la fécondité, et continue de se dégrader à mesure que les générations nombreuses de l'après-guerre atteignent le grand âge.",
+    limites:
+      "Un ratio d'âge ne dit rien de l'état de santé réel des personnes concernées, ni de leur participation effective au marché du travail après 65 ans ; il repose aussi sur des hypothèses de long terme (fécondité, migrations) par nature incertaines.",
+  },
+  {
+    id: 'esperance-de-vie-a-la-naissance',
+    t: 'Espérance de vie à la naissance',
+    source: 'INSEE, statistiques de l’état civil',
+    valeur: "De l'ordre de 85 ans pour les femmes et 79 ans pour les hommes en France, sur les derniers chiffres publiés",
+    d: "Le nombre moyen d'années qu'un nouveau-né peut espérer vivre si les conditions de mortalité observées l'année de sa naissance restaient inchangées — l'indicateur le plus ancien et le plus suivi du vieillissement démographique.",
+    detail:
+      "La progression de l'espérance de vie s'est ralentie ces dernières années dans plusieurs pays développés après des décennies de hausse quasi continue, ce qui alimente un débat sur ses causes (mode de vie, accès aux soins, inégalités sociales de santé).",
+    limites:
+      "Une moyenne nationale masque des écarts sociaux considérables : plusieurs années séparent l'espérance de vie des cadres de celle des ouvriers, et l'espérance de vie en bonne santé, sensiblement plus courte, reste moins souvent citée que l'espérance de vie totale.",
+  },
+  {
+    id: 'taux-d-emploi-des-seniors',
+    t: 'Taux d’emploi des 55-64 ans',
+    source: 'INSEE, enquête Emploi',
+    valeur: "De l'ordre de six actifs sur dix parmi les 55-64 ans en France, en progression sur longue période mais encore inférieur à la moyenne de l'Union européenne",
+    d: "La part des personnes de 55 à 64 ans qui occupent un emploi — l'indicateur de référence pour suivre le maintien ou le retrait des seniors du marché du travail avant l'âge de la retraite.",
+    detail:
+      "Le taux a fortement progressé depuis les années 2000, sous l'effet du recul de l'âge légal de départ et de la fin progressive de certains dispositifs de préretraite, sans effacer l'écart avec les pays où l'emploi des seniors est structurellement plus élevé.",
+    limites:
+      "L'indicateur agrège des situations très différentes — fin de carrière stable, temps partiel choisi, chômage récurrent non reconnu comme tel après un certain âge — et ne distingue pas l'emploi choisi de l'emploi prolongé faute de retraite suffisante.",
+  },
+  {
+    id: 'beneficiaires-apa',
+    t: 'Nombre de bénéficiaires de l’APA',
+    source: 'DREES',
+    valeur: "De l'ordre d'un million trois cent mille bénéficiaires en France, dont une majorité vivant à domicile plutôt qu'en établissement, sur les derniers chiffres publiés",
+    d: "Le nombre de personnes percevant l'allocation personnalisée d'autonomie — l'indicateur le plus direct du nombre de personnes âgées officiellement reconnues en perte d'autonomie en France.",
+    detail:
+      "La part des bénéficiaires à domicile a progressivement dépassé celle des bénéficiaires en établissement, dans la lignée des politiques publiques qui privilégient le maintien à domicile quand il reste possible.",
+    limites:
+      "Le nombre de bénéficiaires ne couvre que les personnes ayant engagé la démarche et reconnues éligibles selon la grille AGGIR : il laisse hors champ le non-recours et les situations de fragilité pas encore reconnues administrativement.",
+  },
+  {
+    id: 'part-immigres-population-france',
+    t: 'Part des immigrés dans la population française',
+    source: 'INSEE, recensement de la population',
+    valeur: "De l'ordre d'une personne sur dix en France, proportion restée relativement stable sur les vingt dernières années",
+    d: "La part de personnes nées étrangères à l'étranger et résidant en France — la catégorie statistique « immigré » de l'INSEE, indépendante d'une éventuelle acquisition ultérieure de la nationalité française.",
+    detail:
+      "Cette catégorie ne se confond ni avec celle d'« étranger » (une nationalité, pas un lieu de naissance) ni avec celle de « descendant d'immigré » (né en France de parent immigré) : les trois se recoupent largement dans le débat public sans jamais coïncider statistiquement.",
+    limites:
+      "La définition INSEE fixe le statut d'immigré une fois pour toutes à la naissance et ne le retire jamais, même après une naturalisation, ce qui peut surprendre par rapport à l'usage courant du mot.",
+  },
+  {
+    id: 'demandes-asile-france',
+    t: 'Demandes d’asile déposées en France',
+    source: 'OFPRA (Office français de protection des réfugiés et apatrides)',
+    valeur: "De l'ordre de cent cinquante mille demandes par an sur les derniers chiffres publiés, en nette hausse par rapport à la décennie précédente",
+    d: "Le nombre annuel de demandes de reconnaissance du statut de réfugié déposées auprès de l'autorité administrative compétente — un indicateur de flux, à ne pas confondre avec le nombre de personnes effectivement reconnues réfugiées.",
+    detail:
+      "Une part minoritaire seulement des demandes aboutit à une reconnaissance du statut de réfugié ou d'une protection subsidiaire, le reste des demandeurs restant dans des situations juridiques variées après un refus, y compris un recours devant la Cour nationale du droit d'asile.",
+    limites:
+      "Le nombre de demandes dépend autant de la situation dans les pays d'origine que des évolutions de la procédure elle-même (délais, voies de recours), ce qui complique la comparaison d'une année sur l'autre.",
+  },
+  {
+    id: 'taux-de-chomage-immigres',
+    t: 'Écart de taux de chômage entre immigrés et non-immigrés',
+    source: 'INSEE, enquête Emploi',
+    valeur: "Un taux de chômage sensiblement plus élevé chez les personnes immigrées que dans le reste de la population, à tous les niveaux de diplôme",
+    d: "L'écart de taux de chômage entre personnes immigrées et non-immigrées, à âge et à niveau de diplôme comparables — un indicateur qui isole ce qui ne s'explique ni par l'âge ni par la qualification.",
+    detail:
+      "L'écart reste net même après avoir neutralisé statistiquement l'âge et le diplôme, ce qui pointe vers d'autres facteurs — discrimination à l'embauche, non-reconnaissance des qualifications obtenues à l'étranger, moindre densité de réseau professionnel local.",
+    limites:
+      "L'indicateur agrège des situations très hétérogènes selon l'ancienneté d'installation et le pays d'origine, deux facteurs qui font sensiblement varier l'écart mesuré.",
+  },
+  {
+    id: 'part-immigres-diplomes-emploi-non-qualifie',
+    t: 'Part des immigrés diplômés occupant un emploi non qualifié',
+    source: 'INSEE, enquête Emploi',
+    valeur: "Une proportion nettement plus élevée que chez les diplômés non immigrés, particulièrement marquée chez les personnes diplômées hors de l'Union européenne",
+    d: "La part des personnes immigrées titulaires d'un diplôme de l'enseignement supérieur qui occupent néanmoins un emploi classé comme non qualifié — l'indicateur le plus direct de la déqualification professionnelle liée à la migration.",
+    detail:
+      "L'écart avec les diplômés non immigrés se réduit avec l'ancienneté d'installation, sans jamais s'annuler complètement, ce qui suggère un effet durable de la non-reconnaissance des diplômes obtenus à l'étranger plutôt qu'un simple délai d'adaptation.",
+    limites:
+      "La classification des niveaux de qualification des emplois reste conventionnelle, et ne rend pas toujours compte de l'écart réel entre les compétences exercées et celles validées par le diplôme d'origine.",
+  },
+  {
+    id: 'taux-de-decrocheurs-scolaires',
+    t: 'Taux de sortants précoces sans diplôme',
+    source: 'DEPP (ministère de l’Éducation nationale) / Eurostat',
+    valeur: "De l'ordre de 8 % des 18-24 ans en France sur les derniers chiffres publiés, en net recul par rapport au début des années 2010",
+    d: "La part des jeunes de 18 à 24 ans ni scolarisés ni en formation, et n'ayant obtenu aucun diplôme de fin de second cycle du secondaire — l'indicateur de référence, harmonisé au niveau européen, pour suivre le décrochage scolaire.",
+    detail:
+      "Le recul du taux depuis 2010 est attribué conjointement au repérage plus systématique des décrocheurs et à la multiplication des dispositifs de raccrochage, sans que l'écart selon l'origine sociale et le territoire de scolarisation ne se soit refermé dans les mêmes proportions.",
+    limites:
+      "L'indicateur mesure une situation à un âge donné et ne distingue pas un décrochage définitif d'un raccrochage ultérieur non encore survenu au moment de l'enquête ; il ne capte pas non plus le décrochage larvé, sans rupture de scolarisation visible.",
+  },
+  {
+    id: 'taux-absenteisme-scolaire',
+    t: 'Taux d’absentéisme scolaire',
+    source: 'DEPP (ministère de l’Éducation nationale)',
+    valeur: "Une minorité d'élèves du second degré concernés par un absentéisme régulier (au moins dix demi-journées non justifiées par mois), la proportion augmentant nettement en lycée professionnel",
+    d: "La part d'élèves dont l'absentéisme dépasse le seuil réglementaire justifiant un signalement — le symptôme précoce le plus directement mesuré du désengagement scolaire, avant tout décrochage effectif.",
+    detail:
+      "L'écart entre voie générale, technologique et professionnelle reste net, la voie professionnelle concentrant à la fois davantage d'élèves déjà en difficulté avant leur orientation et des conditions de scolarisation (stages, alternance) qui compliquent parfois le suivi de l'assiduité.",
+    limites:
+      "Le seuil de signalement, fixé administrativement, ne distingue pas un absentéisme ponctuel sans gravité d'un désengagement plus profond en cours d'installation, et dépend de la rigueur avec laquelle chaque établissement comptabilise les absences.",
+  },
+  {
+    id: 'taux-de-chomage-sans-diplome',
+    t: 'Taux de chômage des jeunes sortis sans diplôme',
+    source: 'INSEE, enquête Emploi',
+    valeur: "Un taux de chômage plusieurs fois supérieur à celui des jeunes diplômés de l'enseignement supérieur, sur les dernières données publiées",
+    d: "Le taux de chômage des jeunes sortis du système scolaire sans diplôme, comparé à celui des diplômés — l'indicateur le plus direct de la conséquence du décrochage sur l'insertion professionnelle.",
+    detail:
+      "L'écart reste marqué même en période de reprise économique, ce qui suggère un effet propre de l'absence de diplôme, distinct de la seule conjoncture du marché du travail.",
+    limites:
+      "L'indicateur n'isole pas ce qui, dans cet écart, revient à l'absence de diplôme elle-même plutôt qu'aux autres difficultés (sociales, territoriales, de santé) qui ont pu conduire au décrochage et pèsent, elles aussi, sur l'insertion professionnelle.",
+  },
+  {
+    id: 'part-decrocheurs-raccroches',
+    t: 'Part des jeunes repérés raccrochés à une formation ou un emploi',
+    source: 'DEPP, réseau Formation Qualification Emploi (FOQUALE)',
+    valeur: "Une majorité des jeunes repérés par les dispositifs de lutte contre le décrochage renouent avec une formation, un accompagnement ou un emploi dans l'année suivant leur repérage",
+    d: "La part des jeunes identifiés comme décrocheurs par le repérage administratif qui, un an après, sont revenus vers une formation, un accompagnement ou un emploi — l'indicateur de résultat des politiques de raccrochage.",
+    detail:
+      "Le taux de retour vers une solution varie fortement selon la rapidité du repérage et de la prise de contact : plus l'intervention suit de près la sortie effective, plus la probabilité d'un raccrochage réussi augmente.",
+    limites:
+      "« Raccrocher » recouvre des situations très hétérogènes, d'un retour en formation diplômante à un simple entretien d'orientation, ce que l'indicateur agrégé ne permet pas de distinguer.",
+  },
 ];
