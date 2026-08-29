@@ -355,4 +355,46 @@ export const POLITIQUES_PUBLIQUES = [
     limites:
       "L'obligation repose sur la capacité effective des missions locales à proposer une solution concrète à chaque jeune signalé, une capacité inégale selon les territoires et les moyens qui leur sont alloués.",
   },
+  {
+    id: 'ordonnance-de-protection-2010',
+    t: 'Ordonnance de protection',
+    pays: 'France',
+    annee: '2010',
+    type: 'Mesure judiciaire d’urgence pour les victimes de violences conjugales',
+    d: "Une décision qu'un juge aux affaires familiales peut prononcer en urgence, hors de toute procédure pénale déjà engagée, pour protéger une personne en danger au sein de son couple — éloignement de l'auteur, attribution du logement, mesures relatives aux enfants.",
+    detail:
+      "Créée par la loi du 9 juillet 2010, l'ordonnance de protection permet d'agir avant même qu'une plainte pénale n'ait abouti, sur la seule vraisemblance des faits de violence et du danger encouru — une célérité pensée pour répondre à l'urgence propre à ces situations, où l'attente d'une décision pénale peut se compter en mois.",
+    resultats:
+      "Le nombre de demandes a fortement progressé depuis sa création, signe d'une appropriation croissante du dispositif par les victimes et les professionnels qui les accompagnent.",
+    limites:
+      "Le délai de traitement, bien que raccourci par rapport à une procédure pénale classique, reste jugé trop long par une partie des associations au regard de l'urgence de certaines situations, et la charge de la preuve de la vraisemblance des faits pèse sur une victime déjà fragilisée.",
+  },
+  {
+    id: 'grenelle-violences-conjugales-2019',
+    t: 'Grenelle des violences conjugales',
+    pays: 'France',
+    annee: '2019',
+    type: 'Consultation nationale suivie de mesures gouvernementales',
+    d: "Une concertation nationale de plusieurs mois entre pouvoirs publics, associations et professionnels, débouchant sur un ensemble de mesures pour la prévention, la protection et l'accompagnement des victimes de violences conjugales.",
+    detail:
+      "Le Grenelle fait suite à une mobilisation associative et médiatique majeure autour du nombre de féminicides recensés cette année-là, et débouche sur des mesures variées — généralisation du bracelet anti-rapprochement, formation renforcée des forces de l'ordre à l'accueil des victimes, création de places d'hébergement d'urgence dédiées.",
+    resultats:
+      "L'initiative a permis une mise à l'agenda politique sans précédent du sujet en France, avec un renforcement mesurable de plusieurs dispositifs de protection existants.",
+    limites:
+      "Plusieurs associations ont critiqué un décalage entre l'ampleur des annonces et les moyens budgétaires effectivement engagés pour les mettre en œuvre sur la durée.",
+  },
+  {
+    id: 'loi-contre-harcelement-scolaire-2022',
+    t: 'Loi visant à combattre le harcèlement scolaire',
+    pays: 'France',
+    annee: '2022',
+    type: 'Création d’un délit spécifique de harcèlement scolaire',
+    d: "Une loi qui crée, pour la première fois en droit français, un délit autonome de harcèlement scolaire, distinct des infractions générales (violences, injures) auparavant seules mobilisables.",
+    detail:
+      "Le texte du 2 mars 2022 permet de sanctionner spécifiquement le harcèlement en milieu scolaire, y compris sous sa forme numérique, et impose aux établissements des obligations de prévention et de signalement renforcées.",
+    resultats:
+      "La création d'un délit nommé a permis une meilleure visibilité statistique et judiciaire du phénomène, auparavant dilué dans des catégories juridiques plus générales.",
+    limites:
+      "La caractérisation juridique du harcèlement (répétition, intentionnalité) reste délicate à établir dans un cadre scolaire où les faits sont souvent rapportés tardivement et par des mineurs.",
+  },
 ];

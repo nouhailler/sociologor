@@ -362,4 +362,48 @@ export const THEORIES = [
       "Finn décrit un cycle qui s'auto-entretient : moins un élève participe en classe, moins il obtient de résultats satisfaisants ; moins il en obtient, moins il se sent reconnu et à sa place dans l'institution ; moins il s'y sent à sa place, moins il y participe. Le modèle déplace l'explication du décrochage d'un trait individuel (le manque de motivation) vers une dynamique relationnelle entre l'élève et l'école, qui peut en principe être interrompue à plusieurs étapes de la spirale.",
     concepts: ['anomie'],
   },
+  {
+    id: 'violence-structurelle-galtung',
+    t: 'Violence structurelle et culturelle',
+    auteur: 'Johan Galtung',
+    annee: '1969–1990',
+    oeuvre: 'Violence, Peace, and Peace Research',
+    d: "La violence ne se réduit pas à un acte direct commis par un agresseur identifiable : elle peut être structurelle, logée dans l'organisation d'une société qui prive durablement certains de ressources ou de droits, ou culturelle, dans les représentations qui la rendent acceptable.",
+    detail:
+      "Galtung distingue la violence directe, un acte identifiable commis par un ou plusieurs auteurs, de la violence structurelle, un tort produit par le fonctionnement ordinaire d'institutions ou d'un système économique sans qu'aucun individu n'ait besoin d'agir avec intention de nuire — la faim évitable dans un monde d'abondance en est son exemple le plus cité. En 1990, il ajoute la violence culturelle : les aspects d'une culture (religion, idéologie, langage) qui servent à légitimer la violence directe ou structurelle, en la rendant normale plutôt que scandaleuse.",
+    concepts: ['violence-symbolique'],
+  },
+  {
+    id: 'monopole-violence-legitime-weber',
+    t: 'Le monopole de la violence physique légitime',
+    auteur: 'Max Weber',
+    annee: '1919',
+    oeuvre: 'Le Savant et le politique',
+    d: "Un État se définit précisément par le fait qu'il revendique avec succès, sur un territoire donné, le monopole de l'usage légitime de la violence physique — tout autre usage de la force devant, en principe, recevoir son autorisation ou sa délégation.",
+    detail:
+      "Weber ne dit pas que l'État emploie toujours la violence, mais qu'il en détient seul, en théorie, le droit d'en juger la légitimité : la police et la justice exercent une force que le droit qualifie de légitime, quand la même force exercée par un particulier devient un délit. La frontière entre les deux, jamais totalement stabilisée, reste un objet de contestation permanent — sur l'usage de la force publique comme sur ce que la loi tolère au nom de la légitime défense.",
+    concepts: ['domination-legitime', 'pouvoir'],
+  },
+  {
+    id: 'domination-masculine-bourdieu',
+    t: 'La domination masculine',
+    auteur: 'Pierre Bourdieu',
+    annee: '1998',
+    oeuvre: 'La Domination masculine',
+    d: "La hiérarchie entre les sexes se maintient moins par la contrainte ouverte que par son incorporation par les dominés eux-mêmes, au point de paraître aller de soi — la forme la plus achevée de la violence symbolique.",
+    detail:
+      "Bourdieu montre que les catégories mêmes avec lesquelles chacun pense la différence des sexes (actif/passif, dehors/dedans, fort/faible) sont déjà façonnées par le rapport de domination qu'elles servent à justifier, ce qui rend cette domination particulièrement difficile à percevoir de l'intérieur. La violence physique contre les femmes n'en est, dans cette lecture, que la manifestation la plus visible d'un rapport plus large, entretenu aussi par le langage, le corps et la répartition ordinaire des rôles.",
+    concepts: ['violence-symbolique', 'habitus'],
+  },
+  {
+    id: 'processus-de-civilisation-elias-violence',
+    t: 'Le recul historique de la violence interpersonnelle',
+    auteur: 'Norbert Elias',
+    annee: '1939',
+    oeuvre: 'Über den Prozess der Zivilisation',
+    d: "Sur la longue durée, la violence interpersonnelle directe recule en Europe à mesure que les États centralisent le monopole de la force et que les individus intériorisent un contrôle de soi qu'une contrainte extérieure leur imposait auparavant.",
+    detail:
+      "Elias relie deux mouvements simultanés : la monopolisation de la violence légitime par des États de plus en plus centralisés retire aux particuliers le droit de se faire justice eux-mêmes, tandis que l'allongement des chaînes d'interdépendance sociale rend chacun plus attentif aux conséquences de ses propres emportements. Le résultat n'est pas une disparition de la violence, mais son déplacement — vers des formes plus indirectes, plus différées dans le temps, et plus honteuses lorsqu'elle éclate malgré tout au grand jour.",
+    concepts: ['processus-de-civilisation', 'configuration'],
+  },
 ];

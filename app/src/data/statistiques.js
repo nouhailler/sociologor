@@ -414,4 +414,48 @@ export const STATISTIQUES = [
     limites:
       "« Raccrocher » recouvre des situations très hétérogènes, d'un retour en formation diplômante à un simple entretien d'orientation, ce que l'indicateur agrégé ne permet pas de distinguer.",
   },
+  {
+    id: 'taux-de-victimation-violences-physiques-sexuelles',
+    t: 'Taux de victimation pour violences physiques et sexuelles',
+    source: 'Enquête Cadre de vie et sécurité, INSEE et SSMSI',
+    valeur: "Une part significative de la population française de 18 à 75 ans se déclare victime de violences physiques et/ou sexuelles hors ménage sur les douze derniers mois, sur les dernières données publiées",
+    d: "La part de la population qui déclare, dans une enquête menée en population générale, avoir subi une violence physique ou sexuelle au cours de l'année écoulée — une mesure indépendante du dépôt d'une plainte.",
+    detail:
+      "Cette enquête de victimation, menée chaque année depuis 2007, sert précisément à corriger l'image que donneraient les seules statistiques de plaintes enregistrées, très inférieures au nombre réel de victimes déclarées.",
+    limites:
+      "Une enquête déclarative dépend de ce que chacun accepte de nommer comme violence, et sous-estime probablement les violences les plus intimes, les moins facilement verbalisées face à un enquêteur.",
+  },
+  {
+    id: 'nombre-de-feminicides-france',
+    t: 'Nombre de féminicides recensés en France',
+    source: 'Ministère de l’Intérieur',
+    valeur: "De l'ordre d'une centaine de femmes tuées chaque année par leur conjoint ou ex-conjoint, sur les derniers chiffres publiés",
+    d: "Le nombre de femmes tuées par leur partenaire ou ex-partenaire au cours d'une année — l'indicateur le plus grave et le plus médiatisé des violences conjugales, parce qu'il ne dépend d'aucun seuil de déclaration.",
+    detail:
+      "Le recensement systématique de cet indicateur, désormais publié chaque année par les autorités françaises, résulte directement de la mobilisation associative et médiatique des années 2010, qui a imposé le terme même de féminicide dans le débat public.",
+    limites:
+      "Le décompte ne couvre que les meurtres au sein du couple, laissant hors champ d'autres morts violentes liées au genre (tentatives non abouties, morts par suicide consécutif à des violences subies), plus difficiles à recenser de façon homogène.",
+  },
+  {
+    id: 'taux-de-harcelement-scolaire',
+    t: 'Taux de harcèlement scolaire déclaré',
+    source: 'Ministère de l’Éducation nationale, enquêtes de climat scolaire',
+    valeur: "De l'ordre d'un élève sur dix se déclarant victime de harcèlement scolaire répété, sur les dernières enquêtes publiées",
+    d: "La part d'élèves qui déclarent avoir subi, de façon répétée, des violences verbales, physiques ou d'exclusion de la part d'autres élèves — la mesure de référence du harcèlement scolaire en France.",
+    detail:
+      "L'ampleur mesurée dépend fortement de la définition retenue (répétition, intentionnalité, déséquilibre de pouvoir entre les élèves) : des enquêtes utilisant des critères plus larges obtiennent des taux sensiblement plus élevés.",
+    limites:
+      "Une part des victimes, en particulier les plus jeunes, ne se reconnaît pas toujours dans le terme de harcèlement au moment où elle répond à l'enquête, ce qui peut conduire à une sous-déclaration.",
+  },
+  {
+    id: 'ecart-plaintes-victimation',
+    t: 'Écart entre victimation déclarée et plaintes enregistrées',
+    source: 'Croisement enquête Cadre de vie et sécurité et statistiques du ministère de l’Intérieur',
+    valeur: "Une minorité seulement des personnes se déclarant victimes de violences sexuelles en enquête indiquent avoir déposé plainte, un écart particulièrement marqué pour ce type de violence",
+    d: "L'écart entre le nombre de victimes recensées par une enquête déclarative et le nombre de plaintes effectivement enregistrées — la mesure la plus directe du « chiffre noir » de la violence, ce qui échappe aux statistiques administratives.",
+    detail:
+      "L'écart varie fortement selon le type de violence : plus resserré pour les vols avec effraction, il reste particulièrement large pour les violences sexuelles et conjugales, où la peur de représailles, la honte ou le lien avec l'auteur découragent le dépôt de plainte.",
+    limites:
+      "L'écart mesuré dépend lui-même de la qualité de l'enquête de victimation utilisée en comparaison, et peut varier selon la formulation exacte des questions posées sur le dépôt de plainte.",
+  },
 ];

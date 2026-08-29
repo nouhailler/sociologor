@@ -48,6 +48,11 @@ export const CATEGORIES_PROBLEMATIQUES = [
     t: 'École et éducation',
     d: "Ce que l'école promet, ce qu'elle transmet, et ceux qu'elle laisse au bord du chemin.",
   },
+  {
+    id: 'violences-et-securite',
+    t: 'Violences et sécurité',
+    d: "Ce qu'une société inflige, tolère ou refuse de nommer comme violence — et ce que ce choix change pour qui la subit.",
+  },
 ];
 
 export const PROBLEMATIQUES = [
@@ -2109,5 +2114,205 @@ export const PROBLEMATIQUES = [
     auteurs: ['bourdieu', 'boudon', 'durkheim', 'becker', 'merton'],
     etudes: ['les-heritiers-bourdieu-passeron-1964', 'panel-eleves-depp'],
     problematiquesConnexes: ['pauvrete', 'inegalites', 'chomage', 'exclusion-sociale'],
+  },
+  {
+    id: 'violences',
+    categorie: 'violences-et-securite',
+
+    /* — 1. Identité — */
+    t: 'Violences',
+    synonymes: ['Violences sociales'],
+    simple:
+      "L'atteinte, physique ou non, portée à l'intégrité d'une personne ou d'un groupe — un mot unique qui recouvre des réalités si différentes qu'aucune définition ne les épuise toutes à la fois, d'un coup porté dans une rue à une règle administrative qui prive durablement de droits sans qu'aucun coup ne soit jamais donné.",
+    detaille: [
+      "Galtung distingue trois strates que le sens commun confond souvent sous le seul mot violence. La violence directe est un acte identifiable, commis par un ou plusieurs auteurs contre une ou plusieurs victimes — un coup, une agression, un meurtre. La violence structurelle ne suppose aucun agresseur identifiable : elle est le tort que produit le fonctionnement ordinaire d'un système économique ou social, qui prive durablement certains de ressources ou de droits que d'autres tiennent pour acquis. La violence culturelle, enfin, désigne ce qui rend les deux précédentes acceptables — les représentations, les récits, les normes qui les présentent comme normales, méritées ou inévitables.",
+      "S'y ajoute une distinction politique et juridique tout aussi structurante : Weber définit l'État précisément par le monopole qu'il revendique sur l'usage légitime de la violence physique. Ce qui compte comme violence, au sens fort et condamnable du terme, dépend alors de qui l'exerce et au nom de quoi — une frontière entre force légitime et violence illégitime qui reste, dans les faits, un objet de contestation permanente plutôt qu'une ligne fixée une fois pour toutes.",
+    ],
+    sousCategories: [
+      { t: 'Violence physique', d: "Une atteinte directe portée au corps d'autrui — coup, blessure, séquestration — la forme la plus immédiatement reconnue comme telle." },
+      { t: 'Violence psychologique', d: "Une atteinte à l'intégrité mentale et émotionnelle — dévalorisation répétée, menaces, manipulation — qui ne laisse aucune trace visible mais peut durablement fragiliser." },
+      { t: 'Violence sexuelle', d: "Toute atteinte à l'intégrité sexuelle commise sans le consentement de la personne qui la subit, du harcèlement au viol." },
+      { t: 'Violence économique', d: "La privation ou le contrôle des ressources matérielles d'une personne — confiscation de revenus, interdiction de travailler, dettes imposées — souvent un des premiers leviers de l'emprise conjugale." },
+      { t: 'Violence verbale', d: "Insultes, humiliations et menaces exprimées par la parole, qui peuvent précéder ou accompagner d'autres formes de violence sans jamais y mener nécessairement." },
+      { t: 'Violence symbolique', d: "Une domination acceptée par ceux qui la subissent au point de ne plus la percevoir comme telle — la forme la plus difficile à nommer, parce qu'elle ne s'exerce jamais à visage découvert." },
+      { t: 'Violence institutionnelle', d: "Une violence produite par le fonctionnement ordinaire d'une institution — administration, hôpital, lieu de détention — sans qu'aucun individu isolé n'ait besoin d'en porter seul la responsabilité." },
+      { t: 'Violence politique', d: "Une violence exercée à des fins politiques — répression d'État, action armée, terrorisme — dont la légitimité reste, par nature, l'objet même du conflit qu'elle exprime." },
+      { t: 'Violence criminelle', d: "Une violence commise dans le cadre d'une activité délictuelle ou criminelle organisée, distincte par son mobile de la violence interpersonnelle ou politique." },
+      { t: 'Violence domestique', d: "Une violence exercée au sein du foyer, entre conjoints ou envers des enfants ou des personnes âgées à charge, le plus souvent en huis clos et sur la durée." },
+      { t: 'Violence scolaire', d: "Une violence exercée en milieu scolaire, entre élèves ou impliquant le personnel, du harcèlement répété à l'agression isolée." },
+      { t: 'Violence urbaine', d: "Une violence qui se déploie dans l'espace public urbain — agressions, incivilités, émeutes — souvent concentrée dans certains quartiers et certaines périodes." },
+      { t: 'Cyberviolence', d: "Une violence exercée par l'intermédiaire des outils numériques — harcèlement en ligne, diffusion non consentie de contenus — qui prolonge et amplifie des violences déjà présentes hors ligne." },
+    ],
+    motsCles: ['domination', 'pouvoir', 'contrôle social', 'emprise', 'stigmatisation', 'monopole de la violence légitime'],
+    gravite:
+      "Un objet mesuré depuis 2007 en France par une enquête annuelle de victimation, en complément des statistiques de plaintes enregistrées, qui révèlent un écart persistant et documenté entre le nombre de victimes déclarées et celui des faits portés à la connaissance de la justice — voir la rubrique Mesurer pour le détail des sources et leurs limites.",
+
+    /* — 2. Comprendre la problématique — */
+    description: [
+      "Le triptyque de Galtung — violence directe, structurelle, culturelle — déplace la question de savoir « qui a frappé » vers celle de savoir ce qu'une société laisse subsister sans jamais avoir besoin de frapper : un accès aux soins durablement inégal ne suppose aucun agresseur, mais produit des torts mesurables, que la violence culturelle environnante présente souvent comme une fatalité plutôt que comme un choix collectif.",
+      "Cette lecture élargie entre en tension avec la définition weberienne de l'État par le monopole de la violence légitime : reconnaître une violence structurelle ou institutionnelle suppose d'admettre qu'une institution peut produire un tort sans jamais commettre d'acte que le droit qualifierait lui-même de violence — un décalage entre la mesure sociologique du phénomène et sa reconnaissance juridique qui traverse presque tous les débats contemporains sur le sujet.",
+    ],
+    origineEmergence:
+      "La sociologie de la violence comme objet distinct de la seule criminologie se constitue dans la seconde moitié du XXᵉ siècle, à mesure que les mouvements féministes, les recherches sur la paix et la sociologie historique convergent pour montrer que le mot recouvre des mécanismes sociaux bien plus larges que le seul crime de sang.",
+    contexteHistorique:
+      "L'après-guerre et la recherche sur la paix, née des deux conflits mondiaux, poussent à interroger la violence au-delà du seul acte de guerre déclarée ; au même moment, les mouvements féministes des années 1970 imposent la violence conjugale et sexuelle comme un fait social à mesurer, longtemps tenu pour une affaire strictement privée.",
+    evolutionHistorique: [
+      { p: '1919', f: "Weber définit l'État par le monopole de la violence physique légitime, dans Le Savant et le politique." },
+      { p: '1939', f: "Elias documente, dans Sur le processus de civilisation, le recul historique de la violence interpersonnelle en Europe." },
+      { p: '1969', f: "Galtung distingue violence directe et violence structurelle dans Violence, Peace, and Peace Research." },
+      { p: '1979', f: "Straus met au point la Conflict Tactics Scale, premier outil de mesure standardisé de la violence familiale." },
+      { p: '1990', f: "Galtung ajoute la violence culturelle à sa typologie." },
+      { p: '1998', f: "Bourdieu publie La Domination masculine." },
+      { p: '2007', f: "La France crée l'enquête Cadre de vie et sécurité, principale source annuelle de mesure de la victimation." },
+      { p: '2019', f: "Le Grenelle des violences conjugales relance les politiques publiques françaises de lutte contre les violences au sein du couple." },
+    ],
+    situationActuelle:
+      "La mesure combine aujourd'hui des enquêtes de victimation déclaratives et des statistiques administratives de plaintes, avec une attention croissante portée à la cyberviolence et à la violence scolaire, deux formes longtemps restées en marge des outils de mesure conçus pour d'autres contextes.",
+    dimensionIndividuelle:
+      "Vécue de façon extrêmement variable selon la forme de violence en cause, d'une blessure ponctuelle à une emprise durable qui redéfinit, jour après jour, ce qui paraît encore normal.",
+    dimensionCollective:
+      "Un fait social mesurable à l'échelle d'une population entière, dont la répartition entre groupes — selon le genre, l'âge, le territoire — révèle des rapports de pouvoir qu'aucun acte isolé ne suffit à expliquer.",
+    dimensionStructurelle:
+      "Le produit attendu de rapports de pouvoir inégaux, de normes sociales qui légitiment certaines formes de violence tout en en condamnant d'autres, et d'institutions dont le fonctionnement ordinaire peut lui-même produire un tort — ce que la rubrique Facteurs détaille.",
+
+    /* — 3. Population concernée — */
+    population: {
+      generale:
+        "Personne n'est à l'abri de toute forme de violence, mais l'exposition varie considérablement selon le type considéré : les hommes sont statistiquement plus souvent victimes de violences physiques dans l'espace public, les femmes de violences sexuelles et conjugales, et les mineurs de violences intrafamiliales et scolaires.",
+      groupesExposes: [
+        'Femmes, pour les violences conjugales et sexuelles',
+        'Enfants et adolescents, pour les violences intrafamiliales et scolaires',
+        'Jeunes hommes, pour les violences physiques et criminelles dans l\'espace public',
+        'Personnes LGBT+, pour les violences liées à l\'orientation ou à l\'identité de genre',
+        'Personnes en situation de handicap, plus exposées à plusieurs formes de violence à la fois',
+        'Habitants de quartiers marqués par une délinquance installée',
+      ],
+      age: "Le risque de violence varie fortement selon l'âge et le type considéré : les mineurs concentrent l'essentiel des violences intrafamiliales et scolaires, les jeunes adultes les violences physiques et criminelles en espace public, les personnes âgées certaines formes de maltraitance moins souvent déclarées.",
+      genre: "L'asymétrie de genre traverse presque toutes les formes de violence, mais pas toujours dans le même sens : les femmes sont très majoritairement les victimes des violences conjugales et sexuelles, les hommes des violences physiques hors cadre familial.",
+      csp: "Les violences institutionnelles et symboliques touchent statistiquement davantage les classes populaires, tandis que les violences conjugales et intrafamiliales traversent l'ensemble des catégories sociales, avec des taux de signalement inégaux selon les ressources disponibles pour y échapper.",
+      revenu: "La précarité économique limite les ressources permettant d'échapper à une situation de violence, en particulier conjugale, sans en être la cause initiale.",
+      education: "Le niveau de diplôme ne protège pas de la violence conjugale ou sexuelle, mais influe sur les ressources mobilisables pour la signaler et y échapper.",
+      territoire: "Certains types de violence se concentrent territorialement — violence urbaine dans certains quartiers, violences intrafamiliales en huis clos partout — ce qui rend leur répartition géographique très inégale selon la forme considérée.",
+      situationFamiliale: "La cohabitation avec l'auteur des violences, notamment conjugales ou intrafamiliales, complique fortement le signalement et l'échappement à la situation.",
+      statutProfessionnel: "Le lien de subordination hiérarchique expose spécifiquement aux violences et au harcèlement en milieu professionnel, avec un risque de représailles qui limite le signalement.",
+    },
+
+    /* — 4. Causes et facteurs — */
+    facteurs: {
+      economiques: ['Précarité qui limite les ressources pour échapper à une situation de violence', 'Dépendance économique au sein du couple ou de la famille'],
+      sociaux: ['Inégalités de pouvoir entre les personnes en présence', 'Conflits sociaux non régulés autrement', 'Marginalisation qui expose davantage à la violence sans protection sociale suffisante'],
+      culturels: ['Socialisation différenciée qui valorise l\'agressivité ou la domination selon le genre', 'Normes sociales qui tolèrent ou minimisent certaines formes de violence selon leur contexte'],
+      politiques: ['Rapports de pouvoir institutionnalisés entre gouvernants et gouvernés', 'Usage de la violence comme moyen d\'action politique ou de répression'],
+      institutionnels: ['Fonctionnement ordinaire d\'institutions qui peut produire une violence sans acte individuel isolé', 'Insuffisance des dispositifs de signalement et de protection'],
+      territoriaux: ['Concentration de la marginalisation économique et sociale dans certains territoires', 'Désinvestissement des services publics dans certains quartiers'],
+      demographiques: ['Surreprésentation des jeunes hommes parmi les auteurs de violences physiques et criminelles', 'Vulnérabilité accrue aux âges extrêmes de la vie (enfance, grand âge)'],
+      historiques: ['Normes de genre héritées qui ont historiquement légitimé certaines formes de domination', 'Conflits et ruptures historiques dont la violence continue de se transmettre'],
+    },
+
+    /* — 5. Manifestations — */
+    manifestations: {
+      comportements: ['Vigilance accrue et évitement de certains lieux ou situations', 'Silence ou non-signalement, par peur, honte ou dépendance', 'Reproduction de comportements violents appris dans l\'enfance'],
+      situations: [
+        "Famille — violences intrafamiliales, envers les enfants ou les personnes âgées à charge",
+        "Couple — emprise et violences conjugales, jusqu'au féminicide dans les cas les plus graves",
+        "École — harcèlement entre élèves, violence envers ou de la part du personnel",
+        "Travail — harcèlement moral ou sexuel, violence hiérarchique",
+        "Espace public — agressions, incivilités, violence urbaine",
+        "Institutions — violence institutionnelle dans le fonctionnement ordinaire d'une administration, d'un hôpital ou d'un lieu de détention",
+        "Internet — cyberharcèlement, diffusion non consentie de contenus",
+        "Conflits politiques — répression, violence d'État, violence politique organisée",
+      ],
+      indicateurs: ['Taux de victimation déclarée en enquête', 'Nombre de plaintes enregistrées', 'Nombre de féminicides recensés'],
+      pratiques: ['Recours à une association d\'aide aux victimes', 'Dépôt de plainte ou de main courante', 'Recherche d\'un hébergement d\'urgence pour échapper à une situation de danger'],
+      evenements: ['Dépôt de plainte', 'Obtention d\'une ordonnance de protection', 'Signalement à une institution (école, employeur, services sociaux)'],
+      statistiques: [
+        "Une part significative de la population française se déclare victime de violences physiques ou sexuelles au cours d'une année donnée, selon l'enquête Cadre de vie et sécurité — voir la rubrique Mesurer pour la méthode et ses limites.",
+        "Une minorité seulement des victimes de violences sexuelles déclarées en enquête indiquent avoir déposé plainte, l'un des écarts les plus documentés entre violence subie et violence enregistrée.",
+      ],
+    },
+
+    /* — 6. Mécanismes sociaux — */
+    mecanismeSchema: [
+      'Rapports de pouvoir inégaux',
+      'Normes qui légitiment ou banalisent la violence',
+      'Passage à l\'acte',
+      'Silence ou non-dénonciation',
+      'Répétition et escalade',
+      'Conséquences durables pour la victime',
+    ],
+    mecanismes: ['naturalisation-des-inegalites', 'stigmatisation', 'categorisation-sociale', 'institutionnalisation', 'emprise', 'banalisation-de-la-violence'],
+
+    /* — 7. Conséquences — */
+    consequences: {
+      individuelles: ['Blessures physiques, parfois durables ou invalidantes', 'Traumatismes psychologiques durables', 'Perte de confiance en soi et en autrui'],
+      familiales: ['Isolement progressif de la victime au sein même de son entourage', 'Reproduction de schémas de violence au sein du foyer'],
+      professionnelles: ['Absentéisme et perte de performance liés au traumatisme', 'Perte d\'emploi ou interruption de carrière'],
+      economiques: ['Coût direct des soins et de l\'accompagnement', 'Perte de revenu liée à une incapacité de travail'],
+      sanitaires: ['Troubles du stress post-traumatique', 'Dépression et troubles anxieux', 'Recours accru aux soins somatiques sans lien apparent avec l\'origine réelle du trouble'],
+      scolaires: ['Décrochage scolaire consécutif à un harcèlement ou une violence subie', 'Difficultés de concentration et baisse des résultats'],
+      territoriales: ['Évitement de certains lieux ou quartiers jugés dangereux', 'Concentration de la délinquance dans certains territoires déjà marginalisés'],
+      politiques: ['Défiance envers les institutions censées protéger', 'Mobilisations collectives contre certaines formes de violence longtemps tolérées'],
+      intergenerationnelles: ['Risque accru de reproduire ou de subir à nouveau une violence à l\'âge adulte après une exposition dans l\'enfance', 'Transmission de stratégies de méfiance ou de silence face à la violence'],
+    },
+
+    /* — 8. Dynamiques — */
+    dynamiques: {
+      aggravation: "L'emprise et l'isolement se renforcent mutuellement : moins la victime dispose de liens extérieurs, moins elle dispose de points de comparaison pour nommer ce qu'elle vit, ce qui approfondit encore l'isolement.",
+      reduction: "Un signalement précoce, un réseau relationnel maintenu et un cadre légal effectivement appliqué peuvent interrompre l'escalade avant qu'elle ne s'installe durablement.",
+      stabilisation: "Une installation dans une violence chronique de faible intensité, ni dénoncée ni aggravée, notamment dans les formes symboliques ou institutionnelles les moins visibles.",
+      transformation: "Le déplacement d'une partie de la violence vers des formes numériques, qui prolongent au-delà de l'espace physique des dynamiques de harcèlement déjà connues hors ligne.",
+      cycles: "Le cycle de la violence conjugale — tension, agression, réconciliation, accalmie — qui se répète plutôt qu'il ne s'arrête, chaque phase de rémission rendant la suivante plus difficile à anticiper.",
+      effetsDeSeuil: "Le franchissement d'un seuil de gravité peut déclencher un signalement ou une intervention qui n'aurait pas eu lieu pour des faits pourtant déjà installés depuis longtemps.",
+      effetsCumulatifs: "Chaque épisode de violence non traité fragilise davantage la capacité de la victime à se protéger du suivant, dans un enchaînement qui rend chaque nouvelle atteinte plus coûteuse à surmonter.",
+      reproductionIntergenerationnelle: "Grandir dans un foyer marqué par la violence est associé à un risque statistiquement accru, à l'âge adulte, de reproduire ou de subir à nouveau une violence comparable.",
+    },
+
+    /* — 9. Mesurer la problématique — */
+    mesure: {
+      description:
+        "Mesurer la violence suppose de croiser deux sources qui ne coïncident jamais complètement : la victimation déclarée, mesurée par des enquêtes en population générale indépendantes de tout dépôt de plainte, et la violence enregistrée, mesurée par les statistiques administratives de plaintes et de condamnations — l'écart entre les deux, documenté et persistant, porte le nom de chiffre noir de la violence.",
+      statistiques: ['taux-de-victimation-violences-physiques-sexuelles', 'nombre-de-feminicides-france', 'taux-de-harcelement-scolaire', 'ecart-plaintes-victimation'],
+      limites: [
+        "Une enquête déclarative dépend de ce que chacun accepte de nommer comme violence, et sous-estime probablement les formes les plus intimes, les moins facilement verbalisées.",
+        "Les statistiques de plaintes ne mesurent que ce qui a été signalé, très en deçà du nombre réel de victimes pour la plupart des violences sexuelles et conjugales.",
+        "Aucune de ces sources ne mesure directement la violence structurelle ou culturelle au sens de Galtung, qui échappe par nature à un comptage d'actes individuels.",
+      ],
+    },
+
+    /* — 10. Débats sociologiques — */
+    debats: [
+      {
+        t: 'Définir la violence : acte ou structure',
+        d: "Faut-il réserver le mot violence aux actes directs et intentionnels, ou l'étendre aux effets d'une structure sociale qui prive durablement certains de ressources ou de droits, même sans agresseur identifiable — la distinction proposée par Galtung entre violence directe et violence structurelle ?",
+      },
+      {
+        t: 'Le monopole de la violence légitime',
+        d: "Où passe la frontière entre l'usage légitime de la force par l'État — police, justice — et la violence proprement dite ? Le débat traverse aussi bien les controverses sur le maintien de l'ordre que celles sur la légitime défense.",
+      },
+      {
+        t: 'Violence, nature ou construction sociale',
+        d: "La violence procède-t-elle d'une agressivité humaine en partie innée, que la socialisation contient plus ou moins bien, ou est-elle d'abord apprise et transmise par des normes sociales et une éducation différenciée selon le genre ?",
+      },
+      {
+        t: 'Répression ou prévention',
+        d: "Faut-il concentrer les moyens publics sur la sanction des actes de violence une fois commis, ou sur leur prévention en amont — éducation, accompagnement, détection précoce des situations à risque ?",
+      },
+      {
+        t: 'Le chiffre noir de la violence',
+        d: "L'écart persistant entre le nombre de victimes déclarées en enquête et le nombre de plaintes enregistrées reflète-t-il d'abord la défiance envers les institutions, la crainte de représailles, ou la difficulté même à nommer certains actes comme une violence ?",
+      },
+    ],
+
+    /* — 11. Politiques publiques — */
+    politiquesPubliques: ['ordonnance-de-protection-2010', 'grenelle-violences-conjugales-2019', 'loi-contre-harcelement-scolaire-2022'],
+
+    /* — 12. Liens avec Sociologor — */
+    phenomenes: ['violences-conjugales', 'cyberharcelement', 'delinquance-juvenile'],
+    concepts: ['domination-legitime', 'pouvoir', 'violence-symbolique', 'etiquetage', 'stigmate', 'anomie', 'carriere-deviante', 'entrepreneur-de-morale'],
+    processus: ['desaffiliation', 'individualisation', 'reproduction-intergenerationnelle'],
+    theories: ['violence-structurelle-galtung', 'monopole-violence-legitime-weber', 'domination-masculine-bourdieu', 'processus-de-civilisation-elias-violence'],
+    auteurs: ['weber', 'bourdieu', 'elias', 'becker', 'goffman', 'durkheim'],
+    etudes: ['conflict-tactics-scale-straus', 'enquete-virage-ined'],
+    problematiquesConnexes: ['exclusion-sociale', 'discrimination', 'decrochage-scolaire', 'precarite'],
   },
 ];

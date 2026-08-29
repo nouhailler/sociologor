@@ -620,4 +620,26 @@ export const MECANISMES = [
     processus: ['desaffiliation'],
     phenomenes: ['decrochage-scolaire'],
   },
+  {
+    id: 'emprise',
+    t: 'Emprise',
+    categorie: 'rupture',
+    d: "Un contrôle qui s'installe progressivement, bien avant tout acte de violence physique : isoler la victime de son entourage, contrôler ses ressources, ses déplacements, ses fréquentations.",
+    detail:
+      "L'emprise fonctionne par étapes suffisamment lentes pour qu'aucune ne paraisse, prise isolément, alarmante : un compliment qui se mue en contrôle du vêtement, une inquiétude qui limite les sorties, une gestion commune des finances qui devient privation. Une fois l'isolement installé, la victime dispose de moins en moins de points de comparaison extérieurs pour nommer ce qu'elle vit.",
+    concepts: ['domination-legitime'],
+    processus: ['desaffiliation'],
+    phenomenes: ['violences-conjugales'],
+  },
+  {
+    id: 'banalisation-de-la-violence',
+    t: 'Banalisation de la violence',
+    categorie: 'symbolique',
+    d: "Une violence répétée dans un cadre donné — familial, scolaire, professionnel — finit par se fondre dans l'ordinaire de ce cadre, au point de ne plus être nommée comme telle par ceux qui la vivent ou l'observent.",
+    detail:
+      "Le mécanisme ne nie pas l'acte : il en déplace la lecture, d'une transgression à une habitude — « ça a toujours été comme ça », « c'est une affaire privée » — ce qui retarde d'autant le moment où elle pourra être nommée, signalée et interrompue.",
+    concepts: ['violence-symbolique'],
+    processus: ['reproduction-sociale'],
+    phenomenes: ['violences-conjugales'],
+  },
 ];

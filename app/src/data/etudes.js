@@ -318,4 +318,28 @@ export const ETUDES = [
       "Le suivi d'une même cohorte sur l'ensemble d'un cursus permet d'isoler les facteurs de risque qu'une simple photographie annuelle ne peut pas révéler, en particulier le poids du redoublement précoce, largement confirmé par ces données comme le plus puissant prédicteur statistique du décrochage ultérieur.",
     theories: [],
   },
+  {
+    id: 'conflict-tactics-scale-straus',
+    t: 'Conflict Tactics Scale',
+    auteur: 'Murray A. Straus',
+    annee: '1979',
+    methode:
+      "Questionnaire standardisé mesurant la fréquence de différentes tactiques de résolution de conflit au sein du couple ou de la famille, du raisonnement verbal jusqu'à la violence physique grave, administré à grande échelle et traduit dans de nombreux pays.",
+    d: "Le premier outil de mesure comparable internationalement pour quantifier la violence conjugale et familiale, conçu pour être posé systématiquement plutôt que de dépendre du seul signalement spontané des victimes.",
+    detail:
+      "L'échelle a permis les premières comparaisons statistiques rigoureuses entre pays et entre périodes, mais son principe même — compter des actes sans toujours en mesurer le contexte, la gravité ou qui en a pris l'initiative — a été critiqué pour risquer de mettre sur un même plan des situations très différentes, notamment entre violence défensive et violence offensive.",
+    theories: [],
+  },
+  {
+    id: 'enquete-virage-ined',
+    t: 'Enquête Violences et rapports de genre (VIRAGE)',
+    auteur: 'INED',
+    annee: '2015',
+    methode:
+      "Enquête statistique nationale menée en France auprès de plusieurs dizaines de milliers de personnes, mesurant les violences subies au cours de la vie dans plusieurs contextes distincts — couple, famille, travail, espace public, milieu scolaire — plutôt qu'un seul.",
+    d: "La principale source française pour comparer, avec une méthode commune, la fréquence des violences selon le contexte où elles se produisent et selon le genre de la personne qui les subit.",
+    detail:
+      "L'enquête confirme une asymétrie de genre marquée mais non uniforme selon le contexte : les femmes déclarent nettement plus de violences sexuelles et conjugales, les hommes davantage de violences physiques en espace public, ce qu'une mesure agrégée, tous contextes confondus, aurait masqué.",
+    theories: [],
+  },
 ];
