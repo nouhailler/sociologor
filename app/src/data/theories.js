@@ -406,4 +406,48 @@ export const THEORIES = [
       "Elias relie deux mouvements simultanés : la monopolisation de la violence légitime par des États de plus en plus centralisés retire aux particuliers le droit de se faire justice eux-mêmes, tandis que l'allongement des chaînes d'interdépendance sociale rend chacun plus attentif aux conséquences de ses propres emportements. Le résultat n'est pas une disparition de la violence, mais son déplacement — vers des formes plus indirectes, plus différées dans le temps, et plus honteuses lorsqu'elle éclate malgré tout au grand jour.",
     concepts: ['processus-de-civilisation', 'configuration'],
   },
+  {
+    id: 'loi-des-soins-inverses-tudor-hart',
+    t: 'Loi des soins inverses',
+    auteur: 'Julian Tudor Hart',
+    annee: '1971',
+    oeuvre: 'The Inverse Care Law (The Lancet)',
+    d: "La disponibilité d'une bonne offre de soins tend à varier en sens inverse des besoins de la population qu'elle dessert : ceux qui en auraient le plus besoin sont souvent ceux à qui elle est le moins accessible.",
+    detail:
+      "Médecin généraliste dans un bassin minier gallois, Tudor Hart observe que les zones les plus pauvres, où les besoins de santé sont statistiquement les plus élevés, attirent le moins de médecins, disposent des équipements les plus anciens et des listes de patients les plus chargées — un mécanisme de marché qui aggrave, plutôt qu'il ne corrige, les inégalités de santé préexistantes. La loi reste citée aujourd'hui pour décrire la logique des déserts médicaux, y compris dans des systèmes de santé très différents du sien.",
+    concepts: ['ressources-sociales'],
+  },
+  {
+    id: 'modele-comportemental-andersen',
+    t: 'Modèle comportemental du recours aux soins',
+    auteur: 'Ronald Andersen',
+    annee: '1968–1995',
+    oeuvre: 'Behavioral Model of Health Services Use',
+    d: "Le recours effectif aux soins d'une personne dépend de trois familles de facteurs distincts : des facteurs prédisposants (âge, diplôme, croyances liées à la santé), des facteurs facilitants (revenu, couverture sociale, distance à parcourir) et le besoin de soins lui-même, ressenti ou objectivement évalué.",
+    detail:
+      "Andersen montre qu'un besoin de soins réel ne suffit pas à produire un recours effectif : encore faut-il que la personne soit prédisposée à consulter et dispose des moyens concrets de le faire. Le modèle, révisé à plusieurs reprises depuis 1968, reste la grille de lecture la plus utilisée en sociologie de la santé pour distinguer ce qui, dans un renoncement aux soins, relève du manque de ressources plutôt que d'un choix ou d'une méconnaissance.",
+    concepts: ['individualisme-methodologique'],
+  },
+  {
+    id: 'nemesis-medicale-illich',
+    t: 'Némésis médicale',
+    auteur: 'Ivan Illich',
+    annee: '1975',
+    oeuvre: 'Némésis médicale : l’expropriation de la santé',
+    d: "Au-delà d'un certain seuil, la médecine moderne produirait elle-même une part de la maladie qu'elle prétend combattre, et priverait les individus de la capacité à gérer eux-mêmes leur santé, leur douleur et leur mort.",
+    detail:
+      "Illich distingue trois formes d'iatrogénèse : clinique (les effets indésirables directs des soins), sociale (la dépendance croissante envers l'institution médicale pour des questions autrefois gérées socialement) et culturelle (la perte de la capacité collective à affronter la souffrance et la mort sans médiation médicale). La thèse, polémique dès sa publication, a nourri durablement la critique sociologique de la médicalisation croissante de l'existence.",
+    concepts: ['fonction-latente'],
+  },
+  {
+    id: 'dimensions-de-l-acces-aux-soins-penchansky-thomas',
+    t: "Dimensions de l'accès aux soins",
+    auteur: 'Ronald Penchansky et J. William Thomas',
+    annee: '1981',
+    oeuvre: 'The Concept of Access: Definition and Relationship to Consumer Satisfaction',
+    d: "L'accès aux soins ne se réduit pas à une seule barrière : il se décompose en plusieurs dimensions distinctes — la disponibilité de l'offre, l'accessibilité géographique, financière, administrative et culturelle — qui peuvent chacune faire obstacle indépendamment des autres.",
+    detail:
+      "Penchansky et Thomas montrent qu'une offre de soins disponible en théorie peut rester largement inaccessible en pratique si l'une seulement de ces dimensions fait défaut : un centre de santé proche et abordable, mais dont les horaires ou la langue ne conviennent pas, produit le même renoncement qu'une offre absente. Le cadre s'est depuis enrichi d'une dimension numérique, à mesure que la prise de rendez-vous et la téléconsultation se sont généralisées.",
+    concepts: ['ressources-sociales'],
+  },
 ];

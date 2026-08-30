@@ -642,4 +642,26 @@ export const MECANISMES = [
     processus: ['reproduction-sociale'],
     phenomenes: ['violences-conjugales'],
   },
+  {
+    id: 'renoncement-aux-soins',
+    t: 'Renoncement aux soins',
+    categorie: 'rupture',
+    d: "Face à un coût, un délai ou une distance jugés trop élevés, une personne reporte ou abandonne elle-même un soin dont elle reconnaît pourtant avoir besoin.",
+    detail:
+      "Contrairement au non-recours, qui touche un droit ou une prestation qu'on ignore ou qu'on n'active pas, le renoncement porte sur un besoin identifié : la personne sait ce dont elle aurait besoin, et y renonce en connaissance de cause, le plus souvent après avoir arbitré entre plusieurs dépenses contraintes.",
+    concepts: ['capital-economique'],
+    processus: ['precarisation'],
+    phenomenes: ['inegalites-de-sante'],
+  },
+  {
+    id: 'non-recours-aux-droits-de-sante',
+    t: 'Non-recours aux droits de santé',
+    categorie: 'structurel',
+    d: "Une personne qui remplirait les conditions pour bénéficier d'une couverture ou d'une aide n'en fait jamais la demande, souvent faute de le savoir ou de pouvoir engager la démarche.",
+    detail:
+      "Le non-recours ne suppose aucun choix conscient de renoncer, à la différence du renoncement aux soins : il tient à un droit resté invisible, à une démarche jugée trop complexe, ou à la crainte du regard associé à une aide sous condition de ressources.",
+    concepts: ['ressources-sociales'],
+    processus: ['precarisation'],
+    phenomenes: ['inegalites-de-sante'],
+  },
 ];

@@ -458,4 +458,48 @@ export const STATISTIQUES = [
     limites:
       "L'écart mesuré dépend lui-même de la qualité de l'enquête de victimation utilisée en comparaison, et peut varier selon la formulation exacte des questions posées sur le dépôt de plainte.",
   },
+  {
+    id: 'densite-medicale-generalistes',
+    t: 'Densité de médecins généralistes par territoire',
+    source: 'DREES / Conseil national de l’Ordre des médecins',
+    valeur: "Un écart de densité pouvant aller du simple au triple entre les départements les mieux et les moins bien dotés, sur les derniers chiffres publiés",
+    d: "Le nombre de médecins généralistes en exercice rapporté à la population d'un territoire donné — l'indicateur le plus direct de ce que recouvre, concrètement, un désert médical.",
+    detail:
+      "L'écart s'est creusé depuis les années 2010, sous l'effet conjoint du vieillissement du corps médical, de départs à la retraite non compensés et d'installations de jeunes médecins concentrées dans les grandes métropoles.",
+    limites:
+      "Un décompte de médecins inscrits ne mesure ni le temps médical réellement disponible (temps partiel, activités annexes), ni les délais d'attente effectifs pour un rendez-vous, deux facteurs qui aggravent souvent l'écart de densité mesuré.",
+  },
+  {
+    id: 'taux-de-renoncement-aux-soins',
+    t: 'Taux de renoncement aux soins pour raisons financières',
+    source: 'IRDES, enquête sur le renoncement aux soins',
+    valeur: "Une part significative de la population déclare avoir renoncé à au moins un soin pour des raisons financières au cours de l'année écoulée, la proportion étant nettement plus élevée pour les soins dentaires et optiques",
+    d: "La part de la population qui déclare avoir renoncé à un soin, dans l'année écoulée, en raison de son coût — un indicateur déclaratif qui ne dépend d'aucune démarche administrative préalable.",
+    detail:
+      "Le renoncement se concentre fortement sur les soins les moins bien remboursés par l'Assurance maladie obligatoire — dentaire, optique, audioprothèses — ce qui en fait un indicateur sensible aux évolutions de la couverture complémentaire plus qu'au seul système de soins de premier recours.",
+    limites:
+      "Un renoncement déclaré ne distingue pas toujours le renoncement strictement financier d'un renoncement lié au délai d'attente ou à l'éloignement, deux raisons souvent imbriquées dans la réponse d'une même personne.",
+  },
+  {
+    id: 'taux-de-non-recours-cmu-c',
+    t: 'Taux de non-recours à la Complémentaire santé solidaire',
+    source: 'DREES',
+    valeur: "Une part substantielle des personnes éligibles à la Complémentaire santé solidaire n'en font pas la demande, sur les dernières estimations publiées",
+    d: "La part des personnes qui rempliraient les conditions pour bénéficier d'une complémentaire santé gratuite ou à coût réduit, mais qui n'en font jamais la demande.",
+    detail:
+      "Le non-recours reste documenté comme l'un des freins les plus importants à la réduction du renoncement aux soins pour raisons financières, davantage que le niveau de la prestation elle-même.",
+    limites:
+      "Estimer une population éligible non couverte suppose de croiser plusieurs sources administratives et déclaratives, ce qui rend la mesure du non-recours structurellement moins précise que celle des bénéficiaires effectifs.",
+  },
+  {
+    id: 'ecart-esperance-de-vie-cadres-ouvriers',
+    t: 'Écart d’espérance de vie entre cadres et ouvriers',
+    source: 'INSEE',
+    valeur: "Un écart de plusieurs années d'espérance de vie à 35 ans entre cadres supérieurs et ouvriers, l'écart étant plus marqué encore pour l'espérance de vie en bonne santé",
+    d: "L'écart d'espérance de vie mesuré entre catégories socioprofessionnelles à âge de référence identique — l'indicateur le plus synthétique et le plus cité des inégalités sociales de santé.",
+    detail:
+      "L'écart ne se referme pas à système de santé universel constant : il persiste dans des pays aux systèmes de couverture très différents, ce qui pointe vers des facteurs qui débordent le seul accès théorique aux soins — conditions de travail, habitudes de vie, recours effectif à la prévention.",
+    limites:
+      "La catégorie socioprofessionnelle agrège des situations hétérogènes en son sein, et l'indicateur ne dit rien des trajectoires individuelles ni des écarts entre générations d'une même catégorie.",
+  },
 ];

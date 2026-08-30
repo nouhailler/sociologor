@@ -397,4 +397,46 @@ export const POLITIQUES_PUBLIQUES = [
     limites:
       "La caractérisation juridique du harcèlement (répétition, intentionnalité) reste délicate à établir dans un cadre scolaire où les faits sont souvent rapportés tardivement et par des mineurs.",
   },
+  {
+    id: 'complementaire-sante-solidaire-2019',
+    t: 'Complémentaire santé solidaire (CSS)',
+    pays: 'France',
+    annee: '2019',
+    type: 'Fusion et simplification de la couverture complémentaire pour les plus modestes',
+    d: "Une complémentaire santé gratuite ou à faible coût, sous condition de ressources, qui fusionne et simplifie deux dispositifs antérieurs — la CMU-C et l'aide à la complémentaire santé — pour réduire le non-recours.",
+    detail:
+      "Créée en 1999 sous le nom de couverture maladie universelle complémentaire (CMU-C), la prestation est réformée en 2019 pour unifier les seuils et les démarches, avec un objectif explicite de réduction du non-recours documenté par les enquêtes précédentes.",
+    resultats:
+      "La simplification administrative a permis une progression du nombre de bénéficiaires par rapport aux deux dispositifs antérieurs cumulés, sans faire disparaître le non-recours qui reste substantiel.",
+    limites:
+      "Le seuil de ressources exclut une partie des personnes aux revenus modestes mais supérieurs au plafond, qui restent exposées à un reste à charge significatif sans bénéficier d'aucun des deux dispositifs.",
+  },
+  {
+    id: 'ame-1999',
+    t: 'Aide médicale de l’État (AME)',
+    pays: 'France',
+    annee: '1999',
+    type: 'Couverture santé pour les personnes étrangères en situation irrégulière',
+    d: "Une prise en charge des frais de santé pour les personnes résidant en France sans titre de séjour régulier, sous condition de résidence et de ressources.",
+    detail:
+      "Le dispositif répond à un objectif de santé publique autant qu'individuel : sans couverture, une pathologie non traitée à temps chez une personne sans papiers peut se transformer en urgence coûteuse pour le système de santé, ou en risque de transmission pour son entourage.",
+    resultats:
+      "Le dispositif a permis un accès aux soins de premier recours à une population qui en aurait été sinon presque totalement dépourvue, en cohérence avec les objectifs de santé publique qui dépassent le seul bénéficiaire direct.",
+    limites:
+      "Le dispositif reste régulièrement débattu politiquement, entre propositions de restriction de son périmètre et alertes sur les conséquences sanitaires et budgétaires d'un accès aux soins retardé jusqu'à l'urgence.",
+  },
+  {
+    id: 'pacte-territoire-sante-2012',
+    t: 'Pacte territoire santé',
+    pays: 'France',
+    annee: '2012',
+    type: 'Plan national de lutte contre les déserts médicaux',
+    d: "Un ensemble de mesures incitatives — aides à l'installation, contrats d'engagement de service public pour les étudiants en médecine, développement de l'exercice regroupé — destinées à attirer des professionnels de santé dans les territoires sous-dotés.",
+    detail:
+      "Le plan mise sur l'incitation plutôt que sur la contrainte à l'installation, un choix débattu dès son adoption : plusieurs pays voisins imposent une régulation plus directe de l'installation des médecins, quand la France a privilégié des mesures d'attractivité.",
+    resultats:
+      "Le nombre de maisons de santé pluriprofessionnelles a fortement progressé depuis l'adoption du plan, sans que l'écart de densité médicale entre territoires ne se soit significativement résorbé.",
+    limites:
+      "Les mesures incitatives n'ont pas suffi à inverser la tendance de fond, ce qui relance régulièrement le débat sur une régulation plus contraignante de la liberté d'installation des médecins.",
+  },
 ];

@@ -53,6 +53,11 @@ export const CATEGORIES_PROBLEMATIQUES = [
     t: 'Violences et sécurité',
     d: "Ce qu'une société inflige, tolère ou refuse de nommer comme violence — et ce que ce choix change pour qui la subit.",
   },
+  {
+    id: 'sante-et-corps',
+    t: 'Santé et corps',
+    d: "Ce que le corps donne à voir d'une société — et ce qu'elle choisit, ou non, de soigner également.",
+  },
 ];
 
 export const PROBLEMATIQUES = [
@@ -2314,5 +2319,188 @@ export const PROBLEMATIQUES = [
     auteurs: ['weber', 'bourdieu', 'elias', 'becker', 'goffman', 'durkheim'],
     etudes: ['conflict-tactics-scale-straus', 'enquete-virage-ined'],
     problematiquesConnexes: ['exclusion-sociale', 'discrimination', 'decrochage-scolaire', 'precarite'],
+  },
+  {
+    id: 'inegalites-d-acces-aux-soins',
+    categorie: 'sante-et-corps',
+
+    /* — 1. Identité — */
+    t: "Inégalités d'accès aux soins",
+    synonymes: ['Accès aux soins', 'Inégalités territoriales de santé'],
+    simple:
+      "L'écart, entre personnes et entre territoires, dans la possibilité réelle d'obtenir un soin dont on a besoin, au moment où on en a besoin — un écart qui ne se referme pas par la seule existence d'un système de santé universel.",
+    detaille: [
+      "L'accès aux soins ne tient pas à une seule barrière mais à plusieurs, qui peuvent chacune suffire seule à produire un renoncement même quand toutes les autres sont franchies : disposer d'une bonne couverture sociale ne sert à rien si aucun professionnel n'exerce à proximité, et un professionnel proche et abordable reste inutile si le délai d'attente ou l'incompréhension mutuelle décourage la démarche.",
+      "Le renoncement se distingue par ailleurs du non-recours, une confusion fréquente. Le renoncement porte sur un besoin identifié : la personne sait ce dont elle aurait besoin, et y renonce en connaissance de cause, le plus souvent après avoir arbitré entre plusieurs dépenses contraintes. Le non-recours porte sur un droit ou une prestation à laquelle une personne serait éligible mais qu'elle n'active jamais, souvent sans même savoir qu'elle y a droit — deux mécanismes distincts, qui appellent des réponses différentes.",
+    ],
+    sousCategories: [
+      { t: 'Disponibilité', d: "L'existence même d'une offre de soins suffisante, en professionnels comme en équipements, sur un territoire donné — la condition la plus basique, et pourtant la première à faire défaut dans un désert médical." },
+      { t: 'Accessibilité géographique', d: "La distance et le temps de trajet nécessaires pour atteindre un professionnel ou un établissement de santé, qui peuvent décourager une démarche même quand l'offre existe quelque part dans la région." },
+      { t: 'Accessibilité financière', d: "Le reste à charge réel une fois les remboursements déduits, et la capacité à avancer les frais avant tout remboursement — un obstacle distinct du seul niveau de couverture théorique." },
+      { t: 'Accessibilité administrative', d: "La complexité des démarches d'ouverture de droits et de prise de rendez-vous, qui décourage une partie des personnes qui y auraient pourtant droit." },
+      { t: 'Accessibilité culturelle', d: "L'adéquation entre l'offre de soins et les représentations, la langue et les attentes de la personne soignée, condition trop souvent négligée par une offre pensée pour un public homogène." },
+      { t: 'Accessibilité numérique', d: "La maîtrise croissante d'outils numériques — prise de rendez-vous en ligne, téléconsultation — devenue nécessaire pour accéder à une part grandissante de l'offre de soins." },
+    ],
+    motsCles: ['désert médical', 'renoncement aux soins', 'non-recours', 'densité médicale', 'reste à charge', 'littératie en santé'],
+    gravite:
+      "Un phénomène documenté en France depuis les années 2000 par des enquêtes déclaratives et des cartographies de densité médicale, qui révèlent des écarts persistants entre territoires malgré un système de santé formellement universel — voir la rubrique Mesurer pour le détail des sources et leurs limites.",
+
+    /* — 2. Comprendre la problématique — */
+    description: [
+      "Penchansky et Thomas montrent qu'un système de santé universel dans son principe peut rester très inégalement accessible dans les faits : la couverture théorique des soins ne dit rien de la disponibilité réelle de l'offre sur un territoire donné, ni du temps qu'il faut y consacrer, ni de la confiance qu'elle inspire à qui la sollicite.",
+      "Tudor Hart pousse le constat plus loin avec sa loi des soins inverses : loin de compenser les besoins les plus élevés, l'offre de soins tend, par la seule logique des choix d'installation des professionnels, à se raréfier précisément là où les besoins sont les plus grands — un mécanisme qui aggrave les inégalités de santé plutôt qu'il ne les corrige, sans qu'aucun acteur n'ait besoin d'agir de mauvaise foi pour y parvenir.",
+    ],
+    origineEmergence:
+      "La sociologie de l'accès aux soins se constitue comme objet distinct de la seule sociologie de la santé dans les années 1970, quand plusieurs travaux, dont celui de Tudor Hart en médecine générale, montrent que l'existence d'un système de santé universel ne suffit pas à garantir un accès réellement égal aux soins qu'il couvre.",
+    contexteHistorique:
+      "La généralisation des systèmes de protection sociale dans l'après-guerre a longtemps laissé penser que l'égalité théorique des droits suffirait à produire une égalité effective d'accès ; la persistance d'écarts territoriaux et sociaux, malgré cette généralisation, impose progressivement l'idée que l'accès aux soins est un objet d'étude à part entière, distinct du seul niveau de couverture.",
+    evolutionHistorique: [
+      { p: '1968–1995', f: "Andersen élabore puis révise le modèle comportemental du recours aux soins, distinguant facteurs prédisposants, facilitants et besoin réel." },
+      { p: '1971', f: "Tudor Hart formule la loi des soins inverses dans The Lancet." },
+      { p: '1975', f: "Illich publie Némésis médicale et critique la médicalisation croissante de l'existence." },
+      { p: '1981', f: "Penchansky et Thomas formalisent les dimensions distinctes de l'accès aux soins." },
+      { p: '1999', f: "La France crée la couverture maladie universelle (CMU) et l'aide médicale de l'État (AME)." },
+      { p: '2009', f: "La France crée les contrats d'engagement de service public pour inciter de futurs médecins à s'installer dans les zones sous-dotées." },
+      { p: '2012', f: "Le Pacte territoire santé engage un premier plan structuré de lutte contre les déserts médicaux." },
+      { p: '2019', f: "La CMU-C devient la Complémentaire santé solidaire, avec un objectif explicite de réduction du non-recours." },
+    ],
+    situationActuelle:
+      "L'écart de densité médicale entre territoires reste marqué malgré les plans successifs de lutte contre les déserts médicaux, tandis que le renoncement aux soins pour raisons financières recule lentement sous l'effet de l'extension de la couverture complémentaire, sans que le non-recours à cette même couverture ne se résorbe au même rythme.",
+    dimensionIndividuelle:
+      "Vécue comme un arbitrage répété entre plusieurs dépenses contraintes, ou comme un renoncement silencieux quand aucun professionnel proche et abordable ne se trouve dans un délai jugé raisonnable.",
+    dimensionCollective:
+      "Un écart mesurable à l'échelle de territoires entiers, qui structure durablement l'espérance de vie et l'état de santé moyen d'une population bien au-delà des trajectoires individuelles qui la composent.",
+    dimensionStructurelle:
+      "Le produit attendu de choix d'installation des professionnels de santé peu régulés, d'une couverture complémentaire inégalement souscrite et de démarches administratives dont la complexité décourage une partie de ceux qui y auraient droit — ce que la rubrique Facteurs détaille.",
+
+    /* — 3. Population concernée — */
+    population: {
+      generale:
+        "L'accès aux soins concerne en principe l'ensemble de la population, mais les obstacles qui le limitent — géographiques, financiers, administratifs, culturels — se cumulent très inégalement selon le revenu, l'âge et le territoire de résidence.",
+      groupesExposes: [
+        'Habitants de zones rurales isolées ou de certains territoires périurbains sous-dotés en professionnels de santé',
+        'Personnes aux revenus modestes, non couvertes par une complémentaire santé',
+        'Personnes âgées à mobilité réduite, pour qui la distance à un professionnel devient un obstacle majeur',
+        'Personnes en situation irrégulière ou de grande précarité, aux droits sociaux souvent méconnus',
+        'Personnes peu à l\'aise avec l\'écrit, la langue française ou les outils numériques',
+        'Personnes en situation de handicap, confrontées à des cabinets ou équipements peu accessibles',
+      ],
+      age: "Les enfants et les personnes âgées, dont les besoins de soins sont statistiquement les plus élevés, sont aussi parmi les plus exposés à l'éloignement géographique d'un professionnel, faute de pouvoir toujours se déplacer seuls sur de longues distances.",
+      genre: "Les femmes déclarent davantage de renoncement aux soins gynécologiques dans les zones sous-dotées, quand les hommes renoncent statistiquement plus souvent aux consultations de prévention en général.",
+      csp: "Les catégories les moins qualifiées cumulent souvent plusieurs obstacles à la fois — revenu plus faible, littératie en santé moindre, emploi laissant peu de disponibilité pour un rendez-vous en journée.",
+      revenu: "Le renoncement aux soins pour raisons financières se concentre sur les soins les moins bien remboursés (dentaire, optique, audioprothèses), ce qui en fait un indicateur sensible au niveau de couverture complémentaire plus qu'au seul revenu.",
+      education: "Un diplôme plus élevé est associé à une meilleure littératie en santé — la capacité à comprendre et utiliser l'information médicale — qui facilite le recours aux soins y compris à revenu comparable.",
+      territoire: "La densité médicale varie fortement d'un département à l'autre, et davantage encore à l'intérieur d'un même département entre centre-ville et zones rurales ou périurbaines.",
+      situationFamiliale: "Les familles monoparentales cumulent souvent une contrainte de temps et de revenu qui complique la prise de rendez-vous et l'avance de frais, en particulier pour des soins non urgents.",
+      statutProfessionnel: "Les personnes en emploi précaire ou sans emploi stable renoncent plus souvent à des soins non urgents faute de couverture complémentaire d'entreprise et de disponibilité pour un rendez-vous.",
+    },
+
+    /* — 4. Causes et facteurs — */
+    facteurs: {
+      economiques: ['Niveau de revenu et capacité à avancer les frais de soin', 'Reste à charge après remboursement, notamment sur les soins mal couverts'],
+      sociaux: ['Couverture sociale et complémentaire santé inégalement souscrite', 'Isolement social qui prive d\'un entourage capable d\'aider à la démarche'],
+      culturels: ['Littératie en santé — la capacité à comprendre et utiliser l\'information médicale', 'Rapport au corps et au soin hérité du milieu social (habitus de santé)'],
+      politiques: ['Niveau de remboursement et régulation des dépassements d\'honoraires', 'Priorité budgétaire donnée ou non à la répartition territoriale de l\'offre de soins'],
+      institutionnels: ['Complexité administrative de l\'ouverture des droits (CMU-C, AME)', 'Délais d\'obtention d\'un rendez-vous selon la spécialité'],
+      territoriaux: ['Densité médicale très inégale d\'un territoire à l\'autre', 'Distance et temps de transport jusqu\'au professionnel de santé le plus proche'],
+      demographiques: ['Âge — davantage de besoins de soins aux âges extrêmes de la vie', 'Vieillissement de la population, qui accroît la demande de soins sans accroître l\'offre au même rythme'],
+      historiques: ['Répartition historique de l\'offre de soins héritée de choix d\'urbanisation anciens', 'Liberté d\'installation des médecins, peu régulée depuis la création de la sécurité sociale'],
+    },
+
+    /* — 5. Manifestations — */
+    manifestations: {
+      comportements: ['Report répété d\'un soin non urgent', 'Automédication en substitut d\'une consultation jugée trop coûteuse ou trop lointaine', 'Recours privilégié aux urgences hospitalières faute de médecin traitant disponible'],
+      situations: ['Absence de médecin traitant déclaré', 'Délai de plusieurs mois pour un rendez-vous chez un spécialiste', 'Renoncement à un soin dentaire ou optique faute de reste à charge supportable'],
+      indicateurs: ['Densité médicale par territoire', 'Taux de renoncement aux soins pour raisons financières', 'Taux de non-recours à la Complémentaire santé solidaire'],
+      pratiques: ['Recours à une plateforme de téléconsultation en l\'absence d\'offre locale', 'Déplacement vers un territoire mieux doté pour un rendez-vous', 'Sollicitation d\'une association d\'accès aux droits pour engager une démarche'],
+      evenements: ['Fermeture du dernier cabinet médical d\'une commune', 'Ouverture d\'une maison de santé pluriprofessionnelle', 'Recours tardif aux urgences pour une pathologie qui aurait pu être traitée plus tôt'],
+      statistiques: [
+        "La densité de médecins généralistes varie du simple au triple entre les départements les mieux et les moins bien dotés — voir la rubrique Mesurer pour la méthode et ses limites.",
+        "Une part substantielle des personnes éligibles à la Complémentaire santé solidaire n'en font jamais la demande, selon les estimations de la DREES.",
+      ],
+    },
+
+    /* — 6. Mécanismes sociaux — */
+    mecanismeSchema: [
+      'Faibles revenus, éloignement géographique et faible couverture sociale',
+      'Difficulté d\'accès aux soins',
+      'Renoncement aux soins',
+      'État de santé dégradé',
+      'Inégalités de santé',
+    ],
+    mecanismes: ['exclusion-territoriale', 'epuisement-des-ressources', 'cumul-des-desavantages', 'renoncement-aux-soins', 'non-recours-aux-droits-de-sante'],
+
+    /* — 7. Conséquences — */
+    consequences: {
+      individuelles: ['Aggravation d\'une pathologie faute de prise en charge précoce', 'Douleur ou inconfort prolongés sans traitement', 'Anxiété liée à l\'incertitude sur son propre état de santé'],
+      familiales: ['Report de soins pour préserver le budget des autres membres du foyer', 'Charge accrue pour les proches aidants en l\'absence de suivi médical régulier'],
+      professionnelles: ['Absentéisme accru lié à des pathologies non traitées à temps', 'Difficulté à maintenir une activité professionnelle avec un état de santé dégradé'],
+      economiques: ['Coût plus élevé, à terme, d\'une prise en charge tardive plutôt que préventive', 'Recours accru et coûteux aux urgences hospitalières'],
+      sanitaires: ['Aggravation de pathologies chroniques faute de suivi régulier', 'Espérance de vie en bonne santé réduite', 'Surmortalité évitable dans les territoires les moins bien dotés'],
+      scolaires: ['Absentéisme scolaire lié à des soins (dentaires, visuels, auditifs) non pris en charge à temps', 'Difficultés de concentration liées à des troubles non diagnostiqués'],
+      territoriales: ['Renforcement de l\'image dévalorisée de certains territoires ruraux ou périurbains', 'Départ de professionnels de santé qui aggrave encore l\'offre déjà réduite'],
+      politiques: ['Défiance envers des pouvoirs publics jugés inactifs face aux déserts médicaux', 'Mobilisations locales pour le maintien d\'un dernier cabinet ou d\'une maison de santé'],
+      intergenerationnelles: ['Transmission d\'un rapport distancié au soin, appris dans l\'enfance', 'Reproduction de l\'écart d\'espérance de vie en bonne santé entre catégories sociales'],
+    },
+
+    /* — 8. Dynamiques — */
+    dynamiques: {
+      aggravation: "Le départ d'un professionnel de santé dans un territoire déjà sous-doté rend la zone moins attractive pour les suivants, ce qui accélère encore le désinvestissement médical du territoire.",
+      reduction: "L'extension de la couverture complémentaire, la simplification des démarches d'ouverture de droits et le développement de l'exercice regroupé peuvent réduire sensiblement le renoncement et le non-recours.",
+      stabilisation: "Un territoire durablement sous-doté, sans dégradation supplémentaire ni amélioration, où la population s'organise autour de pratiques de contournement (déplacement, téléconsultation) devenues routinières.",
+      transformation: "Le développement de la téléconsultation déplace une partie de l'obstacle géographique vers un obstacle numérique, sans le faire disparaître pour les personnes les moins à l'aise avec ces outils.",
+      cycles: "Des alternances entre périodes de couverture par un professionnel de proximité et périodes de vacance, au gré des installations et des départs, plutôt qu'une situation stable dans un sens ou dans l'autre.",
+      effetsDeSeuil: "Le franchissement du seuil d'éligibilité à une aide (Complémentaire santé solidaire, AME) peut faire perdre d'un coup une couverture, pour un gain de revenu parfois inférieur à la perte de prise en charge.",
+      effetsCumulatifs: "Chaque soin reporté aggrave la pathologie sous-jacente, ce qui rend la prise en charge suivante plus lourde, plus coûteuse et parfois plus urgente que celle qui aurait suffi initialement.",
+      reproductionIntergenerationnelle: "Le rapport au soin — consulter tôt ou tard, faire confiance ou se méfier de l'institution médicale — s'apprend en famille et continue de peser sur le recours aux soins à l'âge adulte.",
+    },
+
+    /* — 9. Mesurer la problématique — */
+    mesure: {
+      description:
+        "Mesurer l'accès aux soins suppose de croiser des indicateurs de nature différente : la densité médicale (une mesure de l'offre), le renoncement déclaré (une mesure du vécu, indépendante de toute démarche administrative) et le non-recours aux droits (une mesure de ce qui reste inactivé alors qu'il serait dû) — trois angles qui ne se recoupent que partiellement.",
+      statistiques: ['densite-medicale-generalistes', 'taux-de-renoncement-aux-soins', 'taux-de-non-recours-cmu-c', 'ecart-esperance-de-vie-cadres-ouvriers'],
+      limites: [
+        "Un décompte de médecins inscrits ne mesure ni le temps médical réellement disponible ni les délais d'attente effectifs, deux facteurs qui aggravent souvent l'écart de densité mesuré.",
+        "Un renoncement déclaré ne distingue pas toujours le renoncement strictement financier d'un renoncement lié au délai d'attente ou à l'éloignement, deux raisons souvent imbriquées dans une même réponse.",
+        "Estimer une population éligible à une aide non réclamée suppose de croiser plusieurs sources administratives et déclaratives, ce qui rend la mesure du non-recours structurellement moins précise que celle des bénéficiaires effectifs.",
+      ],
+    },
+
+    /* — 10. Débats sociologiques — */
+    debats: [
+      {
+        t: 'Liberté d\'installation ou régulation contrainte',
+        d: "Faut-il continuer à inciter les médecins à s'installer dans les zones sous-dotées, ou réguler plus directement leur liberté d'installation, comme le font déjà plusieurs pays voisins, au risque de heurter un principe historiquement défendu par la profession ?",
+      },
+      {
+        t: 'Universalité du droit ou universalité de l\'accès réel',
+        d: "Un système de santé qui garantit les mêmes droits à tous a-t-il rempli sa promesse d'égalité, ou faut-il juger cette promesse à l'aune de l'accès réellement constaté, très inégal selon le territoire et les ressources de chacun ?",
+      },
+      {
+        t: 'Téléconsultation, solution ou nouvel obstacle',
+        d: "La téléconsultation comble-t-elle utilement un vide médical local, ou déplace-t-elle simplement l'obstacle vers une nouvelle barrière — numérique — qui touche des populations déjà fragilisées par les autres formes d'inaccessibilité ?",
+      },
+      {
+        t: 'Prévention ou soin curatif',
+        d: "Les moyens publics doivent-ils prioriser la prévention, dont les effets se mesurent sur le long terme et de façon diffuse, ou le soin curatif, dont l'urgence est immédiatement visible mais qui intervient souvent trop tard pour éviter le pire ?",
+      },
+      {
+        t: 'Simplifier les droits ou les rendre automatiques',
+        d: "Faut-il continuer à simplifier les démarches d'ouverture de droits pour réduire le non-recours, ou aller plus loin en rendant certains droits automatiques, sans démarche à engager par la personne concernée ?",
+      },
+    ],
+
+    /* — 11. Politiques publiques — */
+    politiquesPubliques: ['complementaire-sante-solidaire-2019', 'ame-1999', 'pacte-territoire-sante-2012'],
+
+    /* — 12. Liens avec Sociologor — */
+    phenomenes: ['inegalites-de-sante', 'medicalisation', 'grossophobie'],
+    concepts: ['habitus', 'capital-economique', 'capital-culturel', 'domination-legitime', 'fonction-latente', 'ressources-sociales'],
+    processus: ['precarisation', 'reproduction-intergenerationnelle'],
+    theories: ['loi-des-soins-inverses-tudor-hart', 'modele-comportemental-andersen', 'nemesis-medicale-illich', 'dimensions-de-l-acces-aux-soins-penchansky-thomas'],
+    auteurs: ['bourdieu', 'weber', 'merton', 'boudon'],
+    etudes: ['enquete-renoncement-soins-irdes', 'atlas-demographie-medicale-cnom'],
+    problematiquesConnexes: ['pauvrete', 'precarite', 'inegalites', 'vieillissement'],
   },
 ];

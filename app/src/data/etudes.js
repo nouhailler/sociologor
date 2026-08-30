@@ -342,4 +342,28 @@ export const ETUDES = [
       "L'enquête confirme une asymétrie de genre marquée mais non uniforme selon le contexte : les femmes déclarent nettement plus de violences sexuelles et conjugales, les hommes davantage de violences physiques en espace public, ce qu'une mesure agrégée, tous contextes confondus, aurait masqué.",
     theories: [],
   },
+  {
+    id: 'enquete-renoncement-soins-irdes',
+    t: 'Enquête sur le renoncement aux soins',
+    auteur: 'IRDES (Institut de recherche et documentation en économie de la santé)',
+    annee: '2008–',
+    methode:
+      "Questionnaire administré lors de l'inscription dans les centres d'examens de santé de l'Assurance maladie, distinguant explicitement le renoncement financier, le renoncement pour raisons d'accès (délai, distance) et le renoncement dit volontaire.",
+    d: "La principale source française pour mesurer le renoncement aux soins non pas comme un fait unique, mais comme plusieurs situations distinctes selon la raison qui l'explique.",
+    detail:
+      "En distinguant les raisons du renoncement plutôt que de le mesurer comme un bloc, l'enquête montre que le renoncement financier ne concerne qu'une partie des personnes déclarant avoir renoncé à des soins, une autre part relevant de délais d'attente trop longs ou de l'éloignement du professionnel recherché.",
+    theories: ['modele-comportemental-andersen'],
+  },
+  {
+    id: 'atlas-demographie-medicale-cnom',
+    t: 'Atlas de la démographie médicale',
+    auteur: 'Conseil national de l’Ordre des médecins (CNOM)',
+    annee: '2007–',
+    methode:
+      "Recensement annuel et cartographie de l'ensemble des médecins inscrits au tableau de l'Ordre, croisés avec la population de chaque territoire pour en déduire une densité médicale comparable d'un département à l'autre.",
+    d: "La principale source française pour objectiver, chaque année, l'écart de densité médicale entre territoires et son évolution dans le temps, au-delà des perceptions locales du phénomène de désert médical.",
+    detail:
+      "La publication annuelle documente un vieillissement du corps médical et une concentration croissante des nouvelles installations dans les grandes métropoles, au détriment de territoires ruraux et de certaines zones périurbaines déjà moins bien dotées.",
+    theories: ['loi-des-soins-inverses-tudor-hart'],
+  },
 ];
