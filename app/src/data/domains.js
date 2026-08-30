@@ -274,7 +274,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie du travail',
     famille: 'economie',
     detail:
-      "Durkheim voit dans la division du travail la source d'une solidarité nouvelle : on tient ensemble parce qu'on est devenus différents et interdépendants, non plus semblables. Marx y voit au contraire le lieu d'une aliénation, quand le geste productif cesse d'appartenir à celui qui le fait. Becker ajoute une dimension trop souvent oubliée : un travail n'est pas seulement une tâche, c'est aussi une carrière, faite d'apprentissages, de collègues et d'une identité qui s'y construit.",
+      "Durkheim voit dans la division du travail la source d'une solidarité nouvelle : on tient ensemble parce qu'on est devenus différents et interdépendants, non plus semblables. Marx y voit au contraire le lieu d'une aliénation, quand le geste productif cesse d'appartenir à celui qui le fait. Becker ajoute une dimension trop souvent oubliée : un travail n'est pas seulement une tâche, c'est aussi une carrière, faite d'apprentissages, de collègues et d'une identité qui s'y construit. Castel, enfin, montre que le salariat stable a fini par tenir lieu de statut social à part entière, une fois chargé des droits sociaux qui s'y sont accumulés au XXᵉ siècle.",
     inspirateurs: [
       "Georges Friedmann — le travail en miettes : la parcellisation vue de l'atelier",
       "Harry Braverman — la déqualification comme projet, non comme effet secondaire de la technique",

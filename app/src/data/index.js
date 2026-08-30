@@ -717,31 +717,42 @@ export const GRAPH_NODES = AUTHOR_IDS.map((id) => ({
 
 /* — Graphe des concepts — */
 // Pas de coordonnées éditoriales concept par concept : la position se calcule,
-// groupée par auteur (cinq colonnes, trois rangées — les quinze fiches du
-// corpus, dans l'ordre déjà utilisé partout ailleurs) plutôt que placée à la
-// main comme pour les quinze auteurs.
+// groupée par auteur (cinq colonnes, une rangée par tranche de cinq fiches,
+// dans l'ordre déjà utilisé partout ailleurs) plutôt que placée à la main
+// comme pour les fiches auteurs elles-mêmes.
 export const CNODE_W = 168;
 export const CNODE_H = 56;
 const CCOLS = 5;
 const CCOL_W = 210;
-// Bourdieu porte désormais huit concepts, le plus grand groupe : la hauteur de
-// rangée doit contenir CHEADER_GAP + 7 pas de CSLOT_GAP + la hauteur d'un
-// nœud, sans quoi ses derniers concepts chevaucheraient la rangée suivante.
-const CROW_H = 584;
 const CMARGIN_X = 40;
 const CMARGIN_Y = 40;
 const CHEADER_GAP = 30;
 const CSLOT_GAP = 66;
+const CROW_PAD = 40;
+const CROWS = Math.ceil(AUTHOR_IDS.length / CCOLS);
+
+// La hauteur d'une rangée dépend du groupe le plus fourni qu'elle contient —
+// Marx en porte désormais dix-sept, Bourdieu huit, Castel deux — plutôt que
+// d'une constante unique : une rangée courte n'hérite plus de la place que
+// seul le groupe le plus chargé réclamerait ailleurs.
+const rowMaxConcepts = Array.from({ length: CROWS }, (_, r) =>
+  Math.max(1, ...AUTHOR_IDS.slice(r * CCOLS, (r + 1) * CCOLS).map((id) => (AUTHORS[id].concepts || []).length)),
+);
+const rowHeight = (n) => CHEADER_GAP + (n - 1) * CSLOT_GAP + CNODE_H + CROW_PAD;
+const rowY = rowMaxConcepts.reduce((acc, n, r) => {
+  acc.push(r === 0 ? CMARGIN_Y : acc[r - 1] + rowHeight(rowMaxConcepts[r - 1]));
+  return acc;
+}, []);
 
 export const CONCEPT_GRAPH_W = CMARGIN_X * 2 + (CCOLS - 1) * CCOL_W + CNODE_W;
-export const CONCEPT_GRAPH_H = CMARGIN_Y * 2 + 2 * CROW_H + CHEADER_GAP + 4 * CSLOT_GAP;
+export const CONCEPT_GRAPH_H = rowY[CROWS - 1] + rowHeight(rowMaxConcepts[CROWS - 1]) + CMARGIN_Y;
 
 /** Un groupe par auteur : position du libellé d'en-tête, au-dessus de ses concepts. */
 export const CONCEPT_CLUSTERS = AUTHOR_IDS.map((id, i) => ({
   authorId: id,
   name: AUTHORS[id].name,
   x: CMARGIN_X + (i % CCOLS) * CCOL_W,
-  y: CMARGIN_Y + Math.floor(i / CCOLS) * CROW_H,
+  y: rowY[Math.floor(i / CCOLS)],
 }));
 
 export const CONCEPT_GRAPH_NODES = CONCEPT_CLUSTERS.flatMap((cl) =>

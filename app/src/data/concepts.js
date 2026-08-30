@@ -111,7 +111,7 @@ export const CONCEPTS = {
       { y: '1852', t: 'Le 18 Brumaire de Louis Bonaparte' },
       { y: '1867', t: 'Le Capital, livre I' },
     ],
-    associes: ['alienation', 'ideologie', 'capital-culturel'],
+    associes: ['alienation', 'ideologie', 'capital-culturel', 'bourgeoisie', 'lutte-des-classes'],
     opposes: ['systeme-social', 'domination-legitime'],
     critiques: [
       "La polarisation annoncée en deux classes ne s'est pas produite : les positions intermédiaires ont proliféré.",
@@ -145,7 +145,7 @@ export const CONCEPTS = {
       { y: '1846', t: "L'Idéologie allemande" },
       { y: '1867', t: 'Le Capital, livre I, chapitre sur le fétichisme de la marchandise' },
     ],
-    associes: ['ideologie', 'classe-sociale', 'raison-instrumentale'],
+    associes: ['ideologie', 'classe-sociale', 'raison-instrumentale', 'exploitation', 'fetichisme-de-la-marchandise'],
     opposes: ['role-et-attentes'],
     critiques: [
       "Le concept suppose une nature humaine non aliénée à laquelle comparer l'état présent — postulat philosophique, non observation.",
@@ -179,7 +179,7 @@ export const CONCEPTS = {
       { y: '1848', t: 'Manifeste du parti communiste' },
       { y: '1867', t: 'Le Capital, livre I' },
     ],
-    associes: ['classe-sociale', 'violence-symbolique', 'industrie-culturelle'],
+    associes: ['classe-sociale', 'violence-symbolique', 'industrie-culturelle', 'fausse-conscience'],
     opposes: ['regimes-de-justification'],
     critiques: [
       "Le concept se retourne contre celui qui l'emploie : au nom de quoi le sociologue échapperait-il à l'idéologie qu'il dénonce chez les autres ?",
@@ -192,6 +192,450 @@ export const CONCEPTS = {
       { p: '1944', f: "Adorno et Horkheimer la logent dans l'industrie culturelle plutôt que dans la doctrine." },
       { p: '1970', f: 'Bourdieu la reformule en violence symbolique : la domination est acceptée parce que les catégories pour la penser sont celles du dominant.' },
       { p: '1991', f: "Boltanski la refuse : les acteurs argumentent leurs justifications, ils ne les subissent pas." },
+    ],
+  },
+  'lutte-des-classes': {
+    detaille: [
+      "La première phrase du Manifeste pose le programme : « L'histoire de toute société jusqu'à nos jours n'est que l'histoire de la lutte des classes. » Ce n'est pas une description parmi d'autres : c'est la clé de lecture que Marx propose pour l'ensemble de l'histoire humaine, des sociétés antiques aux sociétés industrielles.",
+      "La lutte n'a pas besoin d'être armée ni même déclarée pour exister : elle se joue aussi dans la négociation d'un salaire, la durée d'une journée de travail ou le contenu d'une loi sociale. Ce qui en fait une lutte, plutôt qu'un simple désaccord, c'est l'antagonisme structurel d'intérêts qui l'alimente en continu.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste du parti communiste',
+      annee: '1848',
+      contexte:
+        "Marx et Engels rédigent ce texte pour la Ligue des communistes, à la veille des révolutions de 1848 qui embrasent l'Europe : le style est celui d'un programme d'action autant que d'une thèse historique.",
+    },
+    exemples: [
+      "Les négociations annuelles sur les salaires dans une branche entière, où patronat et syndicats défendent des intérêts qui ne coïncident jamais complètement.",
+    ],
+    oeuvres: [
+      { y: '1848', t: 'Manifeste du parti communiste' },
+      { y: '1852', t: 'Le 18 Brumaire de Louis Bonaparte' },
+    ],
+    associes: ['classe-sociale', 'conflit-de-classes', 'conscience-de-classe'],
+    opposes: ['solidarite-organique'],
+    critiques: [
+      "L'histoire humaine ne se laisse pas réduire à un seul moteur : religion, guerre, technique jouent aussi un rôle propre.",
+      "La lutte annoncée entre deux camps homogènes s'est heurtée à la multiplication des positions intermédiaires que Marx n'avait pas anticipée.",
+    ],
+    evolution: [
+      { p: '1848', f: "Formulation programmatique dans le Manifeste du parti communiste." },
+      { p: '1852', f: "Le 18 Brumaire nuance : la paysannerie française forme une classe sans conscience ni organisation communes." },
+      { p: '1893', f: "Durkheim, dans La Division du travail social, lui oppose la solidarité organique comme ciment alternatif des sociétés modernes." },
+      { p: '1923', f: "Lukács relie la lutte des classes à la prise de conscience de classe, condition de son efficacité historique." },
+    ],
+  },
+  'conflit-de-classes': {
+    detaille: [
+      "À distinguer de la lutte des classes, qui désigne l'affrontement effectif et parfois organisé, le conflit de classes nomme l'antagonisme structurel qui existe entre deux positions sociales, qu'il débouche ou non sur une mobilisation visible.",
+      "Le conflit tient à la structure même de la production : ce que l'un gagne en profit, l'autre le perd en salaire, et inversement — un jeu à somme fixe qui n'a besoin d'aucune hostilité personnelle pour exister.",
+    ],
+    origine: {
+      oeuvre: 'Misère de la philosophie',
+      annee: '1847',
+      contexte:
+        "Marx y répond à Proudhon, qui croyait pouvoir réformer le capitalisme sans en changer les rapports de production ; il y insiste sur le caractère structurel, non contingent, de l'antagonisme entre classes.",
+    },
+    exemples: [
+      "Un actionnariat qui vote une hausse de dividendes la même année où la direction annonce un gel des salaires, sans qu'aucun conflit ouvert n'éclate pour autant.",
+    ],
+    oeuvres: [
+      { y: '1847', t: 'Misère de la philosophie' },
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['lutte-des-classes', 'bourgeoisie', 'proletariat'],
+    opposes: ['solidarite-organique'],
+    critiques: [
+      "Réduire l'ensemble des rapports sociaux à un antagonisme économique laisse peu de place aux formes de coopération réelle observées dans le travail.",
+      "Dahrendorf reprendra la notion en l'élargissant à toute relation d'autorité, bien au-delà de la seule propriété des moyens de production.",
+    ],
+    evolution: [
+      { p: '1847', f: "Marx pose le caractère structurel du conflit contre la lecture réformiste de Proudhon." },
+      { p: '1867', f: "Le Capital en donne le mécanisme précis : l'extraction de la plus-value." },
+      { p: '1959', f: "Dahrendorf généralise le conflit de classes à toute relation d'autorité dans une organisation." },
+    ],
+  },
+  'bourgeoisie': {
+    detaille: [
+      "La bourgeoisie n'est pas, chez Marx, une catégorie de revenu ou de style de vie : elle se définit par la propriété des moyens de production — usines, machines, capital — qui lui permet de vivre du travail d'autrui plutôt que du sien.",
+      "Le Manifeste lui reconnaît un rôle historique révolutionnaire : elle a bouleversé, en quelques générations, des rapports sociaux restés stables pendant des siècles, en soumettant tout — la terre, le travail, les traditions — à la logique du profit.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste du parti communiste',
+      annee: '1848',
+      contexte:
+        "Marx et Engels décrivent une classe alors en pleine ascension en Europe occidentale, qui vient d'achever de démanteler les structures féodales héritées de l'Ancien Régime.",
+    },
+    exemples: [
+      "Un fonds d'investissement qui possède des parts dans des dizaines d'entreprises sans en diriger aucune directement, et vit du rendement de ce capital.",
+    ],
+    oeuvres: [
+      { y: '1848', t: 'Manifeste du parti communiste' },
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['classe-sociale', 'accumulation-du-capital'],
+    opposes: ['proletariat'],
+    critiques: [
+      "La catégorie regroupe des situations très inégales — le petit actionnaire et le grand industriel — que Marx lui-même distinguera plus tard sous le nom de petite bourgeoisie.",
+      "La séparation nette entre propriétaires et salariés s'est brouillée avec la diffusion de l'actionnariat salarié et des cadres dirigeants sans capital propre.",
+    ],
+    evolution: [
+      { p: '1848', f: "Le Manifeste en fait la classe montante, révolutionnaire face à l'aristocratie foncière." },
+      { p: '1852', f: "Le 18 Brumaire distingue en son sein une fraction financière et une fraction industrielle, aux intérêts parfois divergents." },
+      { p: 'XXᵉ siècle', f: "La séparation entre propriété du capital et direction de l'entreprise (managers salariés) complique la définition d'origine." },
+    ],
+  },
+  'proletariat': {
+    detaille: [
+      "Le prolétaire n'a, par définition, que sa force de travail à vendre : dépourvu de moyens de production, il ne peut subsister qu'en louant son temps et ses compétences à qui les possède.",
+      "Marx y voit plus qu'une condition économique : une position appelée, selon lui, à devenir le sujet du changement historique, à mesure que l'industrialisation en fait une classe toujours plus nombreuse, concentrée et interdépendante.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste du parti communiste',
+      annee: '1848',
+      contexte:
+        "Le terme, emprunté au vocabulaire romain (le proletarius, celui qui ne contribue à la cité que par sa descendance), est repris par Marx pour désigner la classe ouvrière industrielle naissante.",
+    },
+    exemples: [
+      "Un livreur à vélo, rémunéré à la course, qui ne possède ni son véhicule professionnel ni l'algorithme qui organise son travail.",
+    ],
+    oeuvres: [
+      { y: '1848', t: 'Manifeste du parti communiste' },
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['classe-sociale', 'exploitation'],
+    opposes: ['bourgeoisie'],
+    critiques: [
+      "La classe ouvrière industrielle a numériquement reculé dans les économies développées, sans que la catégorie de prolétariat se soit clairement recomposée pour en rendre compte.",
+      "L'unité de conditions annoncée entre tous les prolétaires masque des situations très inégales selon le secteur, le statut ou la qualification.",
+    ],
+    evolution: [
+      { p: '1848', f: "Le Manifeste en fait le fossoyeur historique du capitalisme, uni par la misère et la concentration industrielle." },
+      { p: 'XXᵉ siècle', f: "La désindustrialisation des pays développés déplace la classe ouvrière vers les services et vers d'autres régions du monde." },
+      { p: 'Depuis les années 1970', f: "La précarisation de l'emploi ravive le débat sur qui, aujourd'hui, occupe une position structurellement comparable." },
+    ],
+  },
+  'plus-value': {
+    detaille: [
+      "La plus-value est, pour Marx, l'écart entre la valeur que le travail produit dans une journée et la valeur du salaire qui rémunère ce travail — un écart qui n'apparaît nulle part sur la fiche de paie, mais qui fonde tout le profit capitaliste.",
+      "Marx distingue la plus-value absolue, obtenue en allongeant la journée de travail, de la plus-value relative, obtenue en augmentant la productivité pour réduire le temps de travail nécessaire à reproduire le salaire lui-même.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital, livre I',
+      annee: '1867',
+      contexte:
+        "Marx y construit, à partir de la théorie de la valeur-travail héritée de l'économie politique anglaise, une démonstration selon laquelle le profit ne vient ni de l'échange ni du hasard, mais d'un mécanisme précis et mesurable.",
+    },
+    exemples: [
+      "Un salarié dont le salaire couvre la valeur de sept heures de travail, mais qui en travaille huit : cette heure supplémentaire, non rémunérée en tant que telle, produit la plus-value.",
+    ],
+    oeuvres: [
+      { y: '1867', t: 'Le Capital, livre I' },
+      { y: '1885', t: 'Le Capital, livre II (posthume, éd. Engels)' },
+    ],
+    associes: ['exploitation', 'accumulation-du-capital'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "La théorie de la valeur-travail qui la fonde a été largement abandonnée par l'économie néoclassique au profit d'une théorie de la valeur par l'utilité marginale.",
+      "Le calcul suppose de pouvoir isoler un temps de travail « socialement nécessaire », une mesure jamais stabilisée empiriquement.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx formalise la distinction entre plus-value absolue et plus-value relative." },
+      { p: 'Fin XIXᵉ siècle', f: "L'école marginaliste (Jevons, Menger, Walras) propose une théorie concurrente de la valeur, fondée sur l'utilité plutôt que sur le travail." },
+      { p: 'XXᵉ siècle', f: "Le concept reste central dans l'économie marxiste, marginal ailleurs, sans jamais être définitivement départagé empiriquement." },
+    ],
+  },
+  'exploitation': {
+    detaille: [
+      "L'exploitation, chez Marx, n'est pas un abus moral ni un excès individuel : c'est un rapport structurel, présent même chez l'employeur le plus scrupuleux, dès lors qu'il s'approprie la plus-value produite par ses salariés.",
+      "Le concept déplace la critique sociale d'un registre moral (le mauvais patron) vers un registre structurel (le rapport capital-travail lui-même) — ce qui explique, selon Althusser, pourquoi le Marx mature du Capital lui préfère l'exploitation à l'aliénation, plus philosophique et moins mesurable.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital, livre I',
+      annee: '1867',
+      contexte:
+        "Marx cherche à donner à sa critique du capitalisme un fondement scientifique, mesurable en heures de travail, plutôt que le seul registre moral de l'injustice.",
+    },
+    exemples: [
+      "Un taux de profit calculable, en théorie, comme un rapport entre la plus-value extraite et le capital investi — une mesure, pas seulement un jugement.",
+    ],
+    oeuvres: [
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['plus-value', 'proletariat', 'alienation'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le concept suppose acquise la théorie de la valeur-travail, contestée par l'économie néoclassique.",
+      "Il traite comme structurellement identiques des situations de travail très différentes, du très faiblement au très fortement rémunéré.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx en donne la formulation classique, fondée sur l'extraction de la plus-value." },
+      { p: '1965', f: "Althusser y voit le concept mature du Capital, qui supplante l'aliénation plus philosophique des écrits de jeunesse." },
+      { p: 'XXᵉ siècle', f: "Le concept est étendu, hors du strict salariat, à d'autres rapports jugés structurellement inégaux (genre, domination internationale)." },
+    ],
+  },
+  'fetichisme-de-la-marchandise': {
+    detaille: [
+      "Une marchandise semble avoir un prix comme elle a un poids ou une couleur — une propriété intrinsèque. Marx montre que ce prix ne dit rien d'autre que le travail social nécessaire à sa production, un rapport entre producteurs qui s'est fait oublier derrière l'objet lui-même.",
+      "Le fétichisme n'est pas une illusion individuelle qu'un peu de lucidité suffirait à dissiper : c'est un effet nécessaire de l'échange marchand généralisé, où les producteurs n'entrent en rapport les uns avec les autres qu'à travers l'échange de leurs produits.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital, livre I',
+      annee: '1867',
+      contexte:
+        "Marx ouvre son analyse du capitalisme par la marchandise, l'unité la plus élémentaire du système, et y consacre la section la plus commentée du premier chapitre.",
+    },
+    exemples: [
+      "Le cours d'une action qui monte ou baisse en séance, comme s'il obéissait à une loi propre, alors qu'il ne fait que condenser des décisions humaines dispersées et largement invisibles les unes aux autres.",
+    ],
+    oeuvres: [
+      { y: '1867', t: 'Le Capital, livre I, section « Le caractère fétiche de la marchandise »' },
+    ],
+    associes: ['alienation', 'ideologie'],
+    opposes: ['ideal-type'],
+    critiques: [
+      "La comparaison avec le fétichisme religieux, empruntée à l'anthropologie de l'époque, est datée et jugée aujourd'hui condescendante envers les sociétés qu'elle prenait pour modèle du contre-exemple.",
+      "Le concept reste difficile à opérationnaliser hors du cadre théorique où Marx l'a forgé.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx formule le concept à l'ouverture du Capital." },
+      { p: '1923', f: "Lukács en fait la matrice de la réification, étendue à l'ensemble des rapports sociaux sous le capitalisme." },
+      { p: '1944', f: "L'École de Francfort en retrouve une version dans l'industrie culturelle, où l'œuvre devient produit interchangeable." },
+    ],
+  },
+  'mode-de-production': {
+    detaille: [
+      "Un mode de production combine, à une époque donnée, des forces productives (les moyens techniques disponibles) et des rapports de production (les relations sociales qui organisent leur usage) — féodalisme, capitalisme, ou tout autre agencement historique de ces deux éléments.",
+      "Marx en fait l'unité d'analyse fondamentale pour périodiser l'histoire, à la place des dynasties ou des idées : ce qui change d'une époque à l'autre, avant tout le reste, c'est la manière dont une société produit et se répartit ce qu'elle produit.",
+    ],
+    origine: {
+      oeuvre: "Contribution à la critique de l'économie politique",
+      annee: '1859',
+      contexte:
+        "Dans la préface de cet ouvrage, restée l'un des textes les plus cités du marxisme, Marx résume en quelques pages l'architecture générale de sa théorie de l'histoire.",
+    },
+    exemples: [
+      "Une économie de plantation coloniale fondée sur le travail forcé et une économie industrielle fondée sur le salariat libre peuvent mobiliser des techniques comparables tout en relevant de modes de production très différents.",
+    ],
+    oeuvres: [
+      { y: '1859', t: "Contribution à la critique de l'économie politique, préface" },
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['rapports-de-production', 'forces-productives'],
+    opposes: ['rationalisation'],
+    critiques: [
+      "La succession annoncée des modes de production (esclavagisme, féodalisme, capitalisme, socialisme) a été critiquée comme un schéma trop linéaire, calqué sur l'histoire européenne.",
+      "Des sociétés ont combiné durablement plusieurs modes de production à la fois, sans que l'un ne supplante clairement l'autre.",
+    ],
+    evolution: [
+      { p: '1859', f: "Marx formule le concept dans la préface de la Contribution à la critique de l'économie politique." },
+      { p: 'XXᵉ siècle', f: "Les marxismes structuralistes (Althusser, Balibar) en font une combinatoire abstraite plutôt qu'une succession historique nécessaire." },
+      { p: 'Depuis les années 1970', f: "Le concept est mobilisé pour penser la coexistence de plusieurs modes de production dans les économies mondialisées." },
+    ],
+  },
+  'rapports-de-production': {
+    detaille: [
+      "Les rapports de production désignent les relations sociales — de propriété, d'autorité, de répartition — qui déterminent qui travaille pour qui, et selon quelles règles le produit du travail se répartit.",
+      "Ils se distinguent des forces productives : deux sociétés peuvent disposer de techniques comparables tout en organisant très différemment qui possède les moyens de production et qui n'a que son travail à offrir.",
+    ],
+    origine: {
+      oeuvre: "Contribution à la critique de l'économie politique",
+      annee: '1859',
+      contexte:
+        "Marx y développe la distinction avec les forces productives, au fondement de sa théorie du changement historique : un mode de production évolue quand les rapports de production entravent le développement des forces productives.",
+    },
+    exemples: [
+      "Un contrat de franchise, qui fixe précisément ce que le franchisé doit reverser à l'enseigne propriétaire de la marque : un rapport de production contemporain, aussi codifié qu'un ancien rapport de métayage.",
+    ],
+    oeuvres: [
+      { y: '1859', t: "Contribution à la critique de l'économie politique" },
+      { y: '1867', t: 'Le Capital, livre I' },
+    ],
+    associes: ['mode-de-production', 'forces-productives', 'classe-sociale'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "Réduire les relations sociales à leur seule dimension de production laisse peu de place aux rapports de genre, de parenté ou de croyance qui les traversent aussi.",
+      "La détermination en dernière instance par l'économique reste difficile à établir empiriquement au cas par cas.",
+    ],
+    evolution: [
+      { p: '1859', f: "Marx distingue rapports de production et forces productives dans la Contribution à la critique de l'économie politique." },
+      { p: '1867', f: "Le Capital détaille comment le rapport salarial organise concrètement l'extraction de la plus-value." },
+    ],
+  },
+  'forces-productives': {
+    detaille: [
+      "Les forces productives regroupent tout ce qu'une société mobilise pour produire : outils, machines, savoir-faire, organisation du travail. Elles tendent, selon Marx, à se développer en continu, poussées par la recherche de productivité.",
+      "Le moteur du changement historique tient, pour Marx, à la tension entre ce développement continu des forces productives et des rapports de production qui, à partir d'un certain point, cessent de lui correspondre et deviennent une entrave plutôt qu'un cadre.",
+    ],
+    origine: {
+      oeuvre: "Contribution à la critique de l'économie politique",
+      annee: '1859',
+      contexte:
+        "Marx formule ici sa théorie la plus systématique du changement social, où la contradiction entre forces productives et rapports de production explique le passage d'un mode de production à un autre.",
+    },
+    exemples: [
+      "L'automatisation d'une chaîne de montage qui multiplie ce qu'une même équipe peut produire en une journée, sans que l'organisation du travail autour d'elle ne change au même rythme.",
+    ],
+    oeuvres: [
+      { y: '1859', t: "Contribution à la critique de l'économie politique" },
+    ],
+    associes: ['mode-de-production', 'rapports-de-production'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le schéma suppose un progrès technique linéaire et cumulatif, une hypothèse que l'histoire des techniques a largement nuancée.",
+      "Il peine à expliquer pourquoi des rapports de production peuvent survivre longtemps à leur inadéquation supposée aux forces productives disponibles.",
+    ],
+    evolution: [
+      { p: '1859', f: "Marx formule la tension entre forces productives et rapports de production comme moteur du changement historique." },
+      { p: 'XXᵉ siècle', f: "Le déterminisme technologique qu'on lui prête est débattu jusque dans le marxisme lui-même." },
+    ],
+  },
+  'infrastructure-et-superstructure': {
+    detaille: [
+      "Marx distingue l'infrastructure — la base économique d'une société, ses forces et ses rapports de production — de la superstructure, qui regroupe le droit, la politique, la religion et les idées qui s'y bâtissent. La formule classique veut que l'infrastructure détermine la superstructure « en dernière instance ».",
+      "Cette formule a été lue de deux manières très différentes : un déterminisme strict, où la superstructure ne fait que refléter l'économie, ou une détermination souple, laissant à la superstructure une autonomie et une capacité de rétroaction sur l'infrastructure elle-même — lecture que Marx et Engels ont eux-mêmes défendue dans leur correspondance tardive.",
+    ],
+    origine: {
+      oeuvre: "Contribution à la critique de l'économie politique",
+      annee: '1859',
+      contexte:
+        "La préface de cet ouvrage contient la formulation la plus célèbre et la plus commentée de tout le marxisme : « Ce n'est pas la conscience des hommes qui détermine leur être, c'est au contraire leur être social qui détermine leur conscience. »",
+    },
+    exemples: [
+      "L'essor du droit du travail au XIXᵉ siècle industriel, absent des sociétés agraires antérieures qui n'en avaient tout simplement pas l'usage.",
+    ],
+    oeuvres: [
+      { y: '1859', t: "Contribution à la critique de l'économie politique, préface" },
+    ],
+    associes: ['mode-de-production', 'ideologie'],
+    opposes: ['domination-legitime', 'ethique-protestante'],
+    critiques: [
+      "La métaphore architecturale (base et étage) a été jugée trop mécanique par des marxistes eux-mêmes, dont Gramsci, qui lui préfère l'idée d'une hégémonie où la superstructure a sa propre efficacité.",
+      "Weber objecte que des idées religieuses (l'éthique protestante) peuvent façonner l'économie, et pas seulement l'inverse.",
+    ],
+    evolution: [
+      { p: '1859', f: "Marx formule la distinction dans la préface de la Contribution à la critique de l'économie politique." },
+      { p: '1890', f: "Engels, dans une lettre à Joseph Bloch, précise que l'économie détermine « en dernière instance » seulement, contre les lectures trop mécaniques." },
+      { p: '1929–1935', f: "Gramsci développe la notion d'hégémonie pour redonner à la superstructure une autonomie et une efficacité propres." },
+      { p: '1904', f: "Weber, dans L'Éthique protestante, montre à l'inverse comment une croyance religieuse peut façonner un système économique." },
+    ],
+  },
+  'conscience-de-classe': {
+    detaille: [
+      "Une position de classe objective — occuper telle place dans les rapports de production — ne suffit pas à produire une action collective : encore faut-il que ceux qui la partagent en prennent conscience et s'organisent en conséquence. C'est cette prise de conscience que Marx nomme conscience de classe.",
+      "La distinction entre classe « en soi », une position partagée, et classe « pour soi », une position devenue consciente d'elle-même et organisée pour défendre ses intérêts, structure toute la théorie politique marxiste de l'action collective.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste du parti communiste',
+      annee: '1848',
+      contexte:
+        "Marx y esquisse le passage d'une classe ouvrière dispersée, en concurrence pour l'emploi, à une classe organisée, unie par la conscience de ses intérêts communs.",
+    },
+    exemples: [
+      "Un mouvement social qui ne se contente plus de demander une hausse de salaire ponctuelle, mais formule des revendications sur l'organisation même de la production : le signe d'un passage à une conscience de classe plus affirmée.",
+    ],
+    oeuvres: [
+      { y: '1848', t: 'Manifeste du parti communiste' },
+      { y: '1852', t: 'Le 18 Brumaire de Louis Bonaparte' },
+    ],
+    associes: ['lutte-des-classes', 'classe-sociale'],
+    opposes: ['fausse-conscience'],
+    critiques: [
+      "Le passage de la classe en soi à la classe pour soi reste largement postulé plutôt que démontré : rien n'en garantit l'automaticité.",
+      "L'histoire du XXᵉ siècle a montré des classes ouvrières nombreuses et durablement peu mobilisées, sans que la théorie n'explique bien pourquoi.",
+    ],
+    evolution: [
+      { p: '1848', f: "Marx esquisse le passage de la classe en soi à la classe pour soi dans le Manifeste." },
+      { p: '1852', f: "Le 18 Brumaire documente, à l'inverse, une paysannerie qui reste une classe sans conscience commune." },
+      { p: '1923', f: "Lukács en fait le cœur de sa théorie de la conscience de classe comme totalité, dans Histoire et conscience de classe." },
+    ],
+  },
+  'fausse-conscience': {
+    detaille: [
+      "L'expression désigne une représentation du monde qui empêche un groupe de percevoir ses propres intérêts de classe, au point de défendre parfois un ordre qui le dessert. Contrairement à une idée reçue, la formule elle-même n'apparaît jamais telle quelle sous la plume de Marx : c'est Engels qui la forge, dans une lettre de 1893 à Franz Mehring, pour résumer le mécanisme de l'idéologie déjà décrit avec Marx en 1846.",
+      "La fausse conscience n'est pas une simple erreur individuelle corrigible par l'information : elle tient à la position sociale elle-même, qui rend certaines vérités structurellement plus difficiles à voir que d'autres depuis là où l'on se trouve.",
+    ],
+    origine: {
+      oeuvre: "L'Idéologie allemande",
+      annee: '1846',
+      contexte:
+        "La théorie de l'idéologie que Marx et Engels développent dans ce texte fournit le socle sur lequel Engels bâtira, près de cinquante ans plus tard, l'expression devenue depuis la plus citée.",
+    },
+    exemples: [
+      "Un petit actionnaire salarié qui soutient une politique de baisse des impôts sur le capital, alors que l'essentiel de ses revenus provient de son salaire plutôt que de ses placements.",
+    ],
+    oeuvres: [
+      { y: '1846', t: "L'Idéologie allemande" },
+      { y: '1893', t: 'Lettre d’Engels à Franz Mehring' },
+    ],
+    associes: ['ideologie', 'alienation'],
+    opposes: ['conscience-de-classe', 'individualisme-methodologique'],
+    critiques: [
+      "Le concept est difficile à falsifier : toute conscience qui ne coïncide pas avec l'intérêt de classe supposé peut être requalifiée de fausse, sans critère extérieur indépendant.",
+      "Boudon lui oppose des acteurs aux raisons cognitives ordinaires, plutôt qu'une conscience structurellement faussée par leur seule position.",
+    ],
+    evolution: [
+      { p: '1846', f: "Marx et Engels posent les bases de la théorie de l'idéologie dans L'Idéologie allemande." },
+      { p: '1893', f: "Engels forge l'expression « fausse conscience » dans une lettre à Franz Mehring." },
+      { p: '1923', f: "Lukács en fait un concept central de sa théorie de la réification et de la conscience de classe." },
+    ],
+  },
+  'accumulation-du-capital': {
+    detaille: [
+      "Le capitaliste ne consomme pas l'essentiel de son profit : il en réinvestit une large part en capital supplémentaire, pour produire davantage et devancer ses concurrents. Cette accumulation continue, selon Marx, est une nécessité du système plus qu'un choix individuel — celui qui n'accumule pas risque d'être éliminé par celui qui le fait.",
+      "Marx en tire une loi générale : l'accumulation concentre la richesse à un pôle tout en repoussant à l'autre pôle une masse croissante de travailleurs dont la position relative ne s'améliore pas au même rythme que la richesse produite.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital, livre I',
+      annee: '1867',
+      contexte:
+        "Marx y consacre la dernière section du premier livre, où il tire les conséquences à long terme de la théorie de la plus-value développée dans les chapitres précédents.",
+    },
+    exemples: [
+      "Une vague de fusions et de rachats dans un secteur, où les entreprises les mieux capitalisées absorbent celles qui n'ont pas pu suivre le même rythme d'investissement.",
+    ],
+    oeuvres: [
+      { y: '1867', t: 'Le Capital, livre I, section « Loi générale de l’accumulation capitaliste »' },
+    ],
+    associes: ['plus-value', 'bourgeoisie', 'pauperisation'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "La concentration annoncée du capital entre un nombre toujours plus restreint de mains s'est heurtée à la diffusion de l'actionnariat et à la multiplication des formes intermédiaires de détention du capital.",
+      "Le mécanisme suppose une concurrence pure que les monopoles et les régulations publiques ont, dans les faits, souvent atténuée.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx formule la loi générale de l'accumulation capitaliste à la fin du premier livre du Capital." },
+      { p: 'XXᵉ siècle', f: "Le débat se déplace vers la financiarisation de l'accumulation, moins directement liée à l'investissement productif." },
+      { p: '2013', f: "Piketty relance empiriquement la question de la concentration du capital, avec des outils statistiques que Marx ne possédait pas." },
+    ],
+  },
+  'pauperisation': {
+    detaille: [
+      "Marx distingue deux formes de paupérisation. La paupérisation absolue désignerait une baisse effective du niveau de vie des travailleurs ; la paupérisation relative, la thèse qu'il développe le plus systématiquement, désigne un écart croissant entre la part de la richesse produite qui revient au capital et celle qui revient au travail, même quand le niveau de vie absolu progresse.",
+      "La loi générale de l'accumulation capitaliste veut que l'armée de réserve des chômeurs et des travailleurs précaires grossisse avec l'accumulation elle-même, ce qui maintient une pression à la baisse sur les salaires malgré l'enrichissement global de la société.",
+    ],
+    origine: {
+      oeuvre: 'Le Capital, livre I',
+      annee: '1867',
+      contexte:
+        "Marx y répond par anticipation à l'objection selon laquelle le capitalisme, en produisant de plus en plus de richesse, finirait par profiter à tous : il montre que la répartition de cette richesse peut se dégrader relativement, même quand son volume total augmente.",
+    },
+    exemples: [
+      "Un secteur où les gains de productivité sont réels et mesurables, mais où le pouvoir d'achat des salariés qui les ont produits stagne sur la même période.",
+    ],
+    oeuvres: [
+      { y: '1867', t: 'Le Capital, livre I, section « Loi générale de l’accumulation capitaliste »' },
+    ],
+    associes: ['accumulation-du-capital', 'exploitation'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "La paupérisation absolue, souvent attribuée à Marx, ne correspond pas à l'évolution du niveau de vie constatée dans les pays industrialisés au XXᵉ siècle.",
+      "La thèse repose sur une mesure de la part relative du travail dans la valeur ajoutée, elle-même sensible aux conventions comptables retenues.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx formule la loi générale de l'accumulation et la thèse de la paupérisation relative." },
+      { p: 'XXᵉ siècle', f: "La hausse générale du niveau de vie dans les pays industrialisés nuance fortement la lecture absolue de la thèse." },
+      { p: 'Depuis les années 1980', f: "Le débat sur la part du travail dans la valeur ajoutée, en recul dans plusieurs pays développés, relance la discussion sur la paupérisation relative." },
     ],
   },
 
@@ -216,7 +660,7 @@ export const CONCEPTS = {
       { y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" },
       { y: '1922', t: 'Économie et société' },
     ],
-    associes: ['domination-legitime', 'rationalisation'],
+    associes: ['domination-legitime', 'rationalisation', 'action-sociale', 'verstehen'],
     opposes: ['fait-social', 'physique-sociale'],
     critiques: [
       "Rien n'indique quels traits accentuer : le choix dépend de l'intérêt du chercheur, ce qui réintroduit ses valeurs par la porte de service.",
@@ -250,7 +694,7 @@ export const CONCEPTS = {
       { y: '1919', t: 'Le Savant et le politique' },
       { y: '1922', t: 'Économie et société' },
     ],
-    associes: ['domination-legitime', 'raison-instrumentale', 'ideal-type'],
+    associes: ['domination-legitime', 'raison-instrumentale', 'ideal-type', 'ethique-protestante', 'esprit-du-capitalisme', 'desenchantement-du-monde', 'bureaucratie'],
     opposes: ['loi-des-trois-etats', 'nouvel-esprit-du-capitalisme'],
     critiques: [
       "Le récit est occidental : il fait des autres civilisations des cas de rationalisation manquée.",
@@ -284,7 +728,7 @@ export const CONCEPTS = {
       { y: '1919', t: 'Le Savant et le politique' },
       { y: '1922', t: 'Économie et société, chapitre III' },
     ],
-    associes: ['rationalisation', 'ideal-type', 'role-et-attentes'],
+    associes: ['rationalisation', 'ideal-type', 'role-et-attentes', 'domination-traditionnelle', 'domination-charismatique', 'domination-legale-rationnelle'],
     opposes: ['classe-sociale', 'tyrannie-de-la-majorite'],
     critiques: [
       "Comment distinguer la légitimité reconnue de la résignation ? Weber ne fournit pas de critère observable.",
@@ -432,6 +876,469 @@ export const CONCEPTS = {
       { p: '1896–1923', f: "Mosca, puis Pareto, développent en parallèle une théorie générale de la circulation des élites." },
       { p: '1956', f: "C. Wright Mills actualise la thèse pour les États-Unis dans The Power Elite, en y ajoutant l'armée et la grande industrie." },
       { p: '1956', f: "Lipset, Trow et Coleman trouvent dans le syndicat typographe américain (Union Democracy) l'exception rare qui confirme, en creux, la règle de Michels." },
+    ],
+  },
+  'action-sociale': {
+    detaille: [
+      "Weber ouvre sa sociologie par une définition volontairement étroite : n'est une action sociale que la conduite à laquelle son auteur attache un sens subjectif, et qui tient compte du comportement d'autrui, en s'orientant sur lui. Un simple réflexe, ou un comportement purement mécanique, n'en est pas une.",
+      "Cette définition fait de la sociologie une science interprétative avant d'être explicative : comprendre le sens visé par l'acteur est la première tâche, chercher les régularités causales qui en découlent ne vient qu'ensuite. Deux gestes identiques peuvent ainsi relever ou non de l'action sociale selon ce qu'ils visent.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber ouvre son grand traité posthume par cette définition, qui fonde toute la sociologie compréhensive développée dans les chapitres suivants.",
+    },
+    exemples: [
+      "Prier seul dans sa chambre n'est pas une action sociale ; prier en public, en tenant compte du regard des autres fidèles, en devient une.",
+    ],
+    oeuvres: [
+      { y: '1913', t: 'Essai sur quelques catégories de la sociologie compréhensive' },
+      { y: '1922', t: 'Économie et société, chapitre I, §1' },
+    ],
+    associes: ['verstehen', 'types-d-action-sociale'],
+    opposes: ['fait-social'],
+    critiques: [
+      "La frontière entre action sociale et simple comportement reste difficile à tracer dans les cas concrets, où le sens visé n'est jamais directement observable.",
+      "La définition suppose un acteur qui sait ce qu'il vise, quand une bonne part de la conduite ordinaire reste largement irréfléchie.",
+    ],
+    evolution: [
+      { p: '1913', f: "Weber pose les catégories fondamentales de la sociologie compréhensive dans un essai méthodologique." },
+      { p: '1922', f: "Économie et société ouvre sur la définition systématique de l'action sociale et de ses quatre types." },
+      { p: '1937', f: "Parsons en fait le socle de sa théorie de l'action sociale, qu'il étendra ensuite vers le fonctionnalisme systémique." },
+    ],
+  },
+  'verstehen': {
+    detaille: [
+      "Comprendre (verstehen), pour Weber, ne signifie pas seulement observer une conduite : c'est se représenter le sens que celui qui agit lui donne, en se demandant quelles fins, quelles valeurs ou quelles émotions ont pu la motiver.",
+      "Weber distingue une compréhension immédiate, qui saisit le sens apparent d'un acte (voir quelqu'un couper du bois), d'une compréhension explicative, qui restitue le mobile qui le rend intelligible dans son contexte (couper du bois pour se chauffer, pour se calmer, ou pour gagner sa vie).",
+    ],
+    origine: {
+      oeuvre: 'Essai sur quelques catégories de la sociologie compréhensive',
+      annee: '1913',
+      contexte:
+        "Weber répond aux débats méthodologiques allemands de son temps sur la spécificité des sciences de la culture face aux sciences de la nature, hérités de Dilthey et de l'école néokantienne.",
+    },
+    exemples: [
+      "Un archiviste qui déchiffre une facture ancienne ne comprend le geste qui l'a produite qu'en restituant les usages commerciaux de l'époque, pas seulement les chiffres inscrits.",
+    ],
+    oeuvres: [
+      { y: '1913', t: 'Essai sur quelques catégories de la sociologie compréhensive' },
+      { y: '1922', t: 'Économie et société, chapitre I' },
+    ],
+    associes: ['action-sociale', 'ideal-type'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Rien ne garantit que le sens reconstitué par le chercheur corresponde à celui réellement visé par l'acteur, plutôt qu'à une projection plausible.",
+      "La méthode se prête mal à l'étude de comportements collectifs à grande échelle, où aucun sens individuel unique ne peut être restitué.",
+    ],
+    evolution: [
+      { p: '1883', f: "Dilthey distingue comprendre (sciences de l'esprit) et expliquer (sciences de la nature), matrice dont Weber part." },
+      { p: '1913', f: "Weber formalise la compréhension comme méthode propre à une sociologie de l'action." },
+      { p: '1932', f: "Schütz radicalise la démarche en phénoménologie sociale, centrée sur le sens vécu au quotidien." },
+    ],
+  },
+  'types-d-action-sociale': {
+    detaille: [
+      "Weber distingue quatre types purs, jamais observés à l'état isolé mais utiles pour démêler ce qui motive une conduite réelle : l'action traditionnelle, par habitude ancrée ; l'action affective, par émotion immédiate ; l'action rationnelle en valeur, par fidélité à une conviction indépendamment du coût ; l'action rationnelle en finalité, par calcul efficace des moyens pour atteindre un but.",
+      "Les deux derniers types, seuls pleinement rationnels aux yeux de Weber, s'opposent l'un à l'autre autant qu'aux deux premiers : l'un reste fidèle à une valeur quel qu'en soit le prix, l'autre ajuste ses moyens à ses fins sans s'attacher à aucune valeur en particulier.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber développe cette typologie immédiatement après avoir défini l'action sociale, pour donner à l'analyse un outil de classement plutôt qu'une simple catégorie générale.",
+    },
+    exemples: [
+      "Un pompier qui entre dans un immeuble en feu peut agir par devoir professionnel (valeur), par réflexe de survie d'autrui (affectif), par habitude du métier (tradition), ou en évaluant froidement ses chances de réussir l'intervention (finalité) — souvent les quatre à la fois.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre I, §2' },
+    ],
+    associes: ['action-sociale', 'rationalite-instrumentale', 'rationalite-en-valeur'],
+    opposes: ['fonction-latente'],
+    critiques: [
+      "Les quatre types se mélangent presque toujours dans une même conduite, ce qui rend leur usage empirique délicat au-delà de l'exercice de classement.",
+      "La hiérarchie implicite entre types rationnels et non rationnels a été lue comme un jugement de valeur déguisé en typologie neutre.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule la typologie des quatre types d'action dans Économie et société." },
+      { p: '1937', f: "Parsons en fait un point de départ pour sa théorie générale de l'action, qu'il complexifie ensuite." },
+      { p: '1981', f: "Habermas retravaille la distinction pour sa propre théorie de l'agir communicationnel." },
+    ],
+  },
+  'domination-traditionnelle': {
+    detaille: [
+      "L'autorité traditionnelle tire sa légitimité du caractère sacré de ce qui a toujours été : le chef obéit lui-même à la coutume, et ceux qui lui obéissent le font au nom d'un ordre ancien plutôt que d'une règle écrite ou d'une qualité personnelle.",
+      "Ce type de domination laisse une marge de manœuvre réelle au dominant, dans les limites que la coutume ne fixe pas explicitement — ce que Weber distingue de la domination légale-rationnelle, où même cette marge est en principe encadrée par des règles.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber construit cette forme comme l'un des trois types purs de sa typologie de la domination légitime, à partir de l'étude comparée des monarchies patrimoniales et des sociétés féodales.",
+    },
+    exemples: [
+      "Un chef d'entreprise familiale qui prend une décision inhabituelle sans se justifier davantage qu'en invoquant : « c'est ainsi que mon père faisait ».",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre III' },
+    ],
+    associes: ['domination-legitime', 'domination-charismatique'],
+    opposes: ['domination-legale-rationnelle'],
+    critiques: [
+      "La distinction avec la domination charismatique reste poreuse : bien des autorités traditionnelles s'appuient aussi sur le prestige personnel de qui les incarne.",
+      "Le type pur décrit mal les monarchies modernes, qui combinent traditions dynastiques et cadre constitutionnel légal-rationnel.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule le type dans sa typologie de la domination légitime." },
+      { p: 'XXᵉ siècle', f: "Le concept sert de référence pour analyser les autorités coutumières dans les sociétés colonisées, souvent maintenues à dessein par les administrations coloniales." },
+    ],
+  },
+  'domination-charismatique': {
+    detaille: [
+      "La domination charismatique repose sur la croyance en une qualité extraordinaire d'une personne — héroïsme, sainteté, don singulier — que rien d'autre qu'elle-même ne garantit. Elle naît en rupture avec l'ordre établi, traditionnel ou légal, et vaut tant que ses partisans continuent d'y croire.",
+      "Sa fragilité constitutive tient à sa personnalisation extrême : à la mort ou à l'échec du chef charismatique, l'autorité doit se « routiniser » — se transformer en domination traditionnelle (une dynastie s'installe) ou légale-rationnelle (une institution se formalise) — sous peine de disparaître avec lui.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber emprunte le mot charisme (don de grâce) au vocabulaire théologique protestant pour désigner une source d'autorité radicalement différente de la coutume ou de la règle.",
+    },
+    exemples: [
+      "Un mouvement politique bâti autour d'une seule figure, qui se scinde en plusieurs courants rivaux dès sa disparition, faute d'avoir organisé sa propre succession.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre III' },
+    ],
+    associes: ['domination-legitime', 'domination-traditionnelle'],
+    opposes: ['bureaucratie'],
+    critiques: [
+      "Le charisme, présenté comme une qualité reconnue par les partisans, est difficile à distinguer empiriquement d'une simple habileté de communication ou de mise en scène de soi.",
+      "La théorie explique mal pourquoi certaines figures charismatiques échouent à convaincre, quand d'autres, aux qualités personnelles comparables, y parviennent.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule le concept et sa fragilité constitutive, la routinisation." },
+      { p: '1968', f: "Eisenstadt systématise l'étude des processus de routinisation du charisme dans le mouvement religieux et politique." },
+    ],
+  },
+  'domination-legale-rationnelle': {
+    detaille: [
+      "La domination légale-rationnelle repose sur la croyance en la légalité de règles édictées et en le droit, pour ceux qui en sont investis, de donner des directives dans ce cadre. On obéit à la fonction, jamais à la personne qui l'occupe un temps donné.",
+      "Weber en fait la forme la plus adaptée à la société moderne, parce qu'elle est la plus prévisible et la plus facilement transmissible : contrairement à la tradition ou au charisme, elle ne dépend ni d'une continuité historique ni d'une personne irremplaçable.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber l'identifie comme la forme de domination caractéristique de l'État moderne et de l'entreprise capitaliste, dont la bureaucratie est l'expression organisationnelle la plus achevée.",
+    },
+    exemples: [
+      "Un maire nouvellement élu qui hérite immédiatement des pouvoirs attachés à sa fonction, sans avoir à en établir personnellement la légitimité auprès de chaque administré.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre III' },
+    ],
+    associes: ['domination-legitime', 'bureaucratie'],
+    opposes: ['domination-traditionnelle'],
+    critiques: [
+      "La neutralité impersonnelle annoncée masque souvent des rapports de pouvoir bien réels entre services, que la seule règle écrite ne suffit pas à neutraliser.",
+      "Une légitimité purement procédurale peine à mobiliser l'adhésion dans les moments de crise, où la seule légalité ne suffit pas à emporter la conviction.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber en fait le troisième type pur de sa typologie, et la forme dominante de l'État moderne." },
+      { p: '1957', f: "Crozier documente, en France, l'écart entre l'idéal légal-rationnel et le fonctionnement réel des bureaucraties." },
+    ],
+  },
+  'bureaucratie': {
+    detaille: [
+      "La bureaucratie est, pour Weber, la forme d'organisation la plus techniquement supérieure jamais inventée : hiérarchie stricte des fonctions, règles écrites appliquées sans égard aux personnes, recrutement sur qualification, carrière et rémunération fixe plutôt que rétribution au cas par cas.",
+      "Cette supériorité technique a un coût que Weber redoute : une fois installée, la bureaucratie devient très difficile à démonter, quel que soit le régime politique qui la chapeaute — une « cage d'acier » qui survit à ceux qui l'ont mise en place.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber observe l'expansion continue de l'administration prussienne et des grandes entreprises industrielles de son temps, deux organisations structurées selon des principes très proches.",
+    },
+    exemples: [
+      "Un service administratif où deux dossiers identiques reçoivent la même réponse, quel que soit l'agent qui les traite, tant que la procédure écrite reste inchangée.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre III, §6' },
+    ],
+    associes: ['domination-legale-rationnelle', 'rationalisation'],
+    opposes: ['domination-charismatique'],
+    critiques: [
+      "Merton montre que la même discipline qui rend la bureaucratie efficace produit aussi une rigidité — l'application aveugle de la règle même quand elle contredit son but initial.",
+      "Crozier ajoute que les agents eux-mêmes se servent des zones d'incertitude que la règle laisse ouvertes pour se ménager un pouvoir informel, loin de l'exécution neutre annoncée.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formalise les traits de la bureaucratie idéal-typique." },
+      { p: '1940', f: "Merton décrit le rituel bureaucratique et le déplacement des buts qu'une discipline excessive peut produire." },
+      { p: '1963', f: "Crozier documente, dans Le Phénomène bureaucratique, l'écart entre la règle formelle et le pouvoir réel des acteurs." },
+    ],
+  },
+  'ethique-protestante': {
+    detaille: [
+      "Weber observe que les régions et les groupes protestants, notamment calvinistes, réussissent économiquement mieux que leurs voisins catholiques dans l'Europe du XIXᵉ siècle, et cherche une explication qui ne soit ni raciale ni purement institutionnelle.",
+      "Sa réponse : la doctrine de la prédestination, qui laisse dans l'incertitude quant à son propre salut, pousse le croyant à chercher des signes de son élection dans une vie méthodique, disciplinée et laborieuse — un « ascétisme intramondain » qui investit le travail ordinaire d'une valeur religieuse inédite.",
+    ],
+    origine: {
+      oeuvre: "L'Éthique protestante et l'esprit du capitalisme",
+      annee: '1904',
+      contexte:
+        "Weber traverse une grave dépression nerveuse au tournant du siècle ; ce texte, l'un des premiers qu'il publie à son retour au travail intellectuel, porte la marque de son intérêt renouvelé pour la psychologie religieuse.",
+    },
+    exemples: [
+      "Un artisan qui refuse de profiter pleinement de ses gains, les réinvestissant presque tous dans son atelier plutôt que dans un confort qu'il jugerait moralement suspect.",
+    ],
+    oeuvres: [
+      { y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" },
+      { y: '1920', t: "Recueils d'études de sociologie de la religion" },
+    ],
+    associes: ['esprit-du-capitalisme', 'rationalisation'],
+    opposes: ['infrastructure-et-superstructure'],
+    critiques: [
+      "Les historiens économistes objectent que des foyers capitalistes précoces (Venise, Anvers) étaient catholiques, ce qui affaiblit le lien causal proposé.",
+      "La corrélation entre protestantisme et développement économique pourrait aussi s'expliquer par d'autres facteurs partagés — éducation, urbanisation — sans passer par l'angoisse du salut.",
+    ],
+    evolution: [
+      { p: '1904–1905', f: "Weber publie sa thèse en deux articles, avant de la reprendre et de l'étendre en volume." },
+      { p: '1926', f: "Tawney, dans Religion and the Rise of Capitalism, nuance la thèse par une histoire économique plus matérielle." },
+      { p: '1930', f: "La traduction anglaise par Talcott Parsons diffuse largement la thèse dans le monde anglophone." },
+    ],
+  },
+  'esprit-du-capitalisme': {
+    detaille: [
+      "L'esprit du capitalisme n'est pas, pour Weber, la simple soif de gain — universelle et de tout temps — mais une éthique précise : rechercher le profit de façon méthodique et continue, comme une vocation, un devoir moral en soi plutôt qu'un moyen de subvenir à ses besoins.",
+      "Weber l'illustre par les maximes de Benjamin Franklin (« le temps, c'est de l'argent », « le crédit, c'est de l'argent »), qu'il lit comme une éthique devenue autonome de sa matrice religieuse d'origine : l'ascétisme protestant a produit un esprit qui continue de s'imposer une fois la foi qui l'avait motivé retirée.",
+    ],
+    origine: {
+      oeuvre: "L'Éthique protestante et l'esprit du capitalisme",
+      annee: '1904',
+      contexte:
+        "Weber cherche à définir précisément ce qu'il entend démontrer avant de remonter à ses origines religieuses, en s'appuyant sur les écrits moraux de Benjamin Franklin comme cas exemplaire.",
+    },
+    exemples: [
+      "Un dirigeant qui continue de travailler avec la même discipline longtemps après avoir accumulé bien plus qu'il ne pourrait jamais dépenser, par fidélité à une éthique du travail plus que par nécessité.",
+    ],
+    oeuvres: [
+      { y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" },
+    ],
+    associes: ['ethique-protestante', 'nouvel-esprit-du-capitalisme'],
+    opposes: ['alienation'],
+    critiques: [
+      "L'esprit décrit par Weber, tourné vers l'épargne et l'accumulation ascétique, correspond mal au capitalisme consumériste contemporain, plus tourné vers la dépense que vers la frugalité.",
+      "Sombart, contemporain de Weber, propose une origine concurrente — le luxe et la dépense, plutôt que l'ascèse — pour expliquer l'essor du même capitalisme moderne.",
+    ],
+    evolution: [
+      { p: '1904', f: "Weber définit l'esprit du capitalisme à partir des maximes de Benjamin Franklin." },
+      { p: '1913', f: "Sombart propose une origine concurrente, fondée sur le luxe plutôt que sur l'ascèse." },
+      { p: '1999', f: "Boltanski et Chiapello décrivent un nouvel esprit du capitalisme, fondé sur l'autonomie et le projet plutôt que sur la discipline ascétique d'origine." },
+    ],
+  },
+  'desenchantement-du-monde': {
+    detaille: [
+      "Le désenchantement désigne le retrait progressif des puissances mystérieuses et incalculables du monde moderne : en principe, tout peut désormais être expliqué et maîtrisé par le calcul rationnel, même si personne, en pratique, ne maîtrise plus l'ensemble des savoirs nécessaires pour le faire soi-même.",
+      "Ce n'est pas un savoir accru dont il s'agit, mais une croyance : celle qu'un tel savoir existerait quelque part, disponible en principe, ce qui suffit à priver le monde de la part de mystère qu'il gardait pour l'homme prémoderne.",
+    ],
+    origine: {
+      oeuvre: 'Le Savant et le politique',
+      annee: '1919',
+      contexte:
+        "Weber prononce cette conférence (« Le métier et la vocation de savant ») devant des étudiants munichois, dans une Allemagne vaincue et désorientée, où il s'interroge sur ce que la science peut encore promettre.",
+    },
+    exemples: [
+      "Une éclipse solaire, prévue au jour et à la minute près par le calcul, qui ne suscite plus la terreur qu'elle inspirait aux sociétés qui ne disposaient pas de ce savoir.",
+    ],
+    oeuvres: [
+      { y: '1919', t: 'Le Savant et le politique' },
+      { y: '1922', t: 'Économie et société' },
+    ],
+    associes: ['rationalisation', 'secularisation'],
+    opposes: ['mise-en-scene-de-soi'],
+    critiques: [
+      "Le désenchantement annoncé n'a pas empêché la persistance, voire le renouveau, de pratiques ésotériques, religieuses ou magiques dans les sociétés les plus rationalisées.",
+      "Le diagnostic reste largement occidental, construit à partir de l'histoire européenne du rapport entre religion et science.",
+    ],
+    evolution: [
+      { p: '1919', f: "Weber formule le désenchantement du monde dans sa conférence munichoise." },
+      { p: '1966', f: "Berger et Luckmann en font un ressort de leur sociologie de la construction sociale de la réalité." },
+      { p: '1985', f: "Marcel Gauchet, dans Le Désenchantement du monde, en fait le fil directeur de toute l'histoire politique occidentale." },
+    ],
+  },
+  'secularisation': {
+    detaille: [
+      "La sécularisation désigne le recul de la religion comme cadre englobant qui organisait autrefois la totalité de la vie sociale : le droit, l'école, la politique, la morale s'en émancipent peu à peu pour fonctionner selon leurs propres logiques.",
+      "Le processus ne signifie pas nécessairement la disparition de la croyance individuelle, mais celle du monopole institutionnel de la religion sur des domaines qu'elle organisait auparavant seule — un déplacement plus qu'une extinction pure et simple.",
+    ],
+    origine: {
+      oeuvre: 'Le Savant et le politique',
+      annee: '1919',
+      contexte:
+        "Le thème prolonge directement le désenchantement du monde formulé la même année, et sera systématisé après Weber par toute une sociologie de la religion qui en fait son objet central.",
+    },
+    exemples: [
+      "Un hôpital public qui soigne indifféremment selon la religion du patient, là où le soin relevait autrefois d'institutions religieuses organisées selon leurs propres appartenances.",
+    ],
+    oeuvres: [
+      { y: '1919', t: 'Le Savant et le politique' },
+    ],
+    associes: ['desenchantement-du-monde', 'rationalisation'],
+    opposes: ['mise-en-scene-de-soi'],
+    critiques: [
+      "La thèse d'un déclin linéaire et irréversible de la religion a été largement révisée face à la vitalité religieuse persistante dans plusieurs régions du monde, notamment aux États-Unis.",
+      "Peter Berger, l'un des principaux théoriciens de la sécularisation dans les années 1960, reviendra lui-même sur sa propre thèse quarante ans plus tard.",
+    ],
+    evolution: [
+      { p: '1919', f: "Weber pose les bases du diagnostic dans le prolongement du désenchantement du monde." },
+      { p: '1967', f: "Berger systématise la thèse de la sécularisation dans La Religion dans la conscience moderne." },
+      { p: '1999', f: "Berger publie The Desecularization of the World et révise sa propre thèse initiale." },
+    ],
+  },
+  'parti': {
+    detaille: [
+      "Le parti, au sens wébérien, est un groupement organisé pour conquérir ou influencer le pouvoir au sein d'une communauté, quelle que soit par ailleurs la classe économique ou le groupe de statut de ses membres : il vit dans la sphère du pouvoir, comme la classe vit dans celle du marché et le statut dans celle de l'honneur.",
+      "Cette définition déborde largement le seul parti politique moderne : elle couvre toute organisation, syndicale, religieuse ou associative, dont l'objectif est d'influencer des décisions collectives plutôt que de défendre une seule position économique ou sociale.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber conclut par ce troisième ordre le chapitre où il distingue classe, statut et parti comme trois dimensions indépendantes de la stratification sociale.",
+    },
+    exemples: [
+      "Une coalition électorale qui rassemble, autour d'un même objectif de pouvoir, des personnes de professions et de niveaux de revenus très différents.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre IV' },
+    ],
+    associes: ['ordres-sociaux', 'pouvoir'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "La frontière entre parti et groupe de statut se brouille dans les partis eux-mêmes structurés autour d'une appartenance sociale homogène.",
+      "La définition, très large, peine à distinguer un parti politique d'un simple groupe de pression ou d'une association ordinaire.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule le parti comme troisième ordre de la stratification, aux côtés de la classe et du statut." },
+      { p: '1911', f: "Michels, dont Weber est proche, avait déjà étudié empiriquement l'organisation interne des partis de masse." },
+    ],
+  },
+  'classe': {
+    detaille: [
+      "Weber définit la classe par la situation de marché : les chances qu'un individu partage avec d'autres d'obtenir des biens, un revenu ou une position, du fait de ce qu'il peut offrir sur le marché — sa propriété, ou à défaut ses compétences et son travail.",
+      "Cette définition se distingue nettement de celle de Marx : la classe wébérienne n'est ni une communauté ni un acteur collectif en puissance, seulement une situation statistique partagée, qui n'entraîne aucune conscience ni aucune action commune automatique.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber ouvre par cette définition son chapitre sur la stratification, en réponse implicite à la théorie marxiste des classes alors dominante dans le débat allemand.",
+    },
+    exemples: [
+      "Deux personnes employées dans des secteurs très différents, mais dont les revenus et les perspectives de carrière sont statistiquement comparables, partagent une même situation de classe sans jamais s'être rencontrées.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre IV' },
+    ],
+    associes: ['classe-sociale', 'ordres-sociaux'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "En réduisant la classe à une situation de marché purement statistique, Weber s'interdit d'expliquer pourquoi et comment elle se transforme parfois en acteur collectif organisé.",
+      "La proximité avec la définition marxiste de la classe reste plus grande que Weber ne le laisse entendre, notamment pour les classes propriétaires.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber définit la classe comme situation de marché, distincte du statut et du parti." },
+      { p: '1979', f: "Bourdieu propose une synthèse qui reprend la pluralité wébérienne des dimensions tout en gardant l'ambition structurelle de Marx." },
+    ],
+  },
+  'ordres-sociaux': {
+    detaille: [
+      "Là où Marx réduit la position sociale à un seul axe — la place dans les rapports de production —, Weber en distingue trois, indépendants dans leur principe même si souvent corrélés dans les faits : la classe (situation de marché), le statut (estime sociale partagée) et le parti (accès organisé au pouvoir).",
+      "Ces trois ordres peuvent diverger fortement chez un même individu : un intellectuel peut jouir d'un grand prestige de statut avec un revenu modeste, un nouveau riche peut disposer d'une classe élevée sans le statut qui l'accompagne traditionnellement.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Ce chapitre, souvent cité isolément sous le titre « Classes, Stände, partis », est l'une des contributions les plus durables de Weber à la sociologie de la stratification.",
+    },
+    exemples: [
+      "Un académicien reconnu mais peu rémunéré occupe un statut élevé sans occuper la même classe qu'un entrepreneur moins considéré mais bien plus riche.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre IV' },
+      { y: '1947', t: 'The Theory of Social and Economic Organization (traduction Parsons)' },
+    ],
+    associes: ['classe', 'statut-social', 'parti'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "La pluralité des ordres, séduisante en théorie, complique la mesure empirique par rapport à un indicateur unique comme le revenu ou la catégorie socioprofessionnelle.",
+      "Les trois ordres restent statistiquement très corrélés dans la plupart des sociétés étudiées, ce qui limite la portée pratique de leur séparation analytique.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber distingue les trois ordres de la stratification dans Économie et société." },
+      { p: '1945', f: "Davis et Moore, aux États-Unis, développent une théorie fonctionnaliste de la stratification qui s'en inspire partiellement." },
+      { p: '1979', f: "Bourdieu déplace la pluralité wébérienne vers un espace à plusieurs capitaux, économique, culturel, social et symbolique." },
+    ],
+  },
+  'rationalite-en-valeur': {
+    detaille: [
+      "Agir par rationalité en valeur (wertrational), c'est agir pour rester fidèle à une conviction — religieuse, éthique, esthétique, politique — indépendamment des conséquences que cet acte entraîne et du coût qu'il peut représenter pour celui qui l'accomplit.",
+      "Weber ne juge pas ce type moins rationnel que le calcul instrumental : il est rationnel en ce qu'il organise méthodiquement la conduite autour d'un principe cohérent, mais il diffère du calcul en ce qu'il ne pèse jamais le principe lui-même contre son coût.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber l'isole comme l'un des quatre types purs d'action sociale, en le distinguant explicitement de la rationalité instrumentale avec laquelle on le confond souvent.",
+    },
+    exemples: [
+      "Un objecteur de conscience qui refuse le service armé même au prix d'une peine de prison, par fidélité absolue à une conviction plutôt que par calcul du meilleur résultat possible pour lui-même.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre I, §2' },
+      { y: '1919', t: 'Le Savant et le politique' },
+    ],
+    associes: ['types-d-action-sociale', 'action-sociale'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "La distinction avec l'action affective reste ténue : une conviction assumée « quel qu'en soit le prix » ressemble parfois beaucoup à une émotion rationalisée après coup.",
+      "Dans Le Savant et le politique, Weber lui-même reconnaîtra la tension entre cette éthique de conviction et une éthique de responsabilité plus attentive aux conséquences.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule la rationalité en valeur comme l'un des quatre types purs d'action." },
+      { p: '1919', f: "Il en tire, en politique, la distinction entre éthique de conviction et éthique de responsabilité." },
+    ],
+  },
+  'rationalite-instrumentale': {
+    detaille: [
+      "Agir par rationalité instrumentale (zweckrational), c'est choisir ses moyens en fonction d'une fin donnée, après avoir évalué froidement leur efficacité respective et les conséquences prévisibles de chaque option — le type le plus proche du calcul économique ordinaire.",
+      "Weber en fait le moteur principal de la rationalisation occidentale : à mesure que ce type d'action gagne du terrain sur les trois autres, l'économie, le droit et l'administration se réorganisent tout entiers autour du calcul des moyens les plus efficaces.",
+    ],
+    origine: {
+      oeuvre: 'Économie et société',
+      annee: '1922',
+      contexte:
+        "Weber l'isole comme le plus systématiquement rationnel des quatre types d'action, et le relie directement à sa thèse plus large de la rationalisation du monde occidental.",
+    },
+    exemples: [
+      "Un investisseur qui compare plusieurs placements sur le seul critère du rendement attendu, sans considération pour l'origine ou la nature des entreprises concernées.",
+    ],
+    oeuvres: [
+      { y: '1922', t: 'Économie et société, chapitre I, §2' },
+    ],
+    associes: ['types-d-action-sociale', 'raison-instrumentale'],
+    opposes: ['rationalite-en-valeur'],
+    critiques: [
+      "Poussée à son terme, la généralisation de ce type d'action est précisément ce que Horkheimer et Adorno dénonceront sous le nom de raison instrumentale, devenue une force de domination plutôt qu'un simple outil.",
+      "Le calcul suppose une information complète sur les moyens disponibles et leurs conséquences, une condition rarement remplie dans les situations réelles.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber formule la rationalité instrumentale comme moteur de la rationalisation occidentale." },
+      { p: '1947', f: "Horkheimer et Adorno la radicalisent en raison instrumentale, devenue elle-même une force de domination." },
     ],
   },
 
@@ -661,7 +1568,7 @@ export const CONCEPTS = {
       { y: '1947', t: 'Éclipse de la raison' },
       { y: '1964', t: "L'Homme unidimensionnel, de Marcuse" },
     ],
-    associes: ['rationalisation', 'industrie-culturelle', 'alienation'],
+    associes: ['rationalisation', 'industrie-culturelle', 'alienation', 'rationalite-instrumentale'],
     opposes: ['regimes-de-justification'],
     critiques: [
       "Le diagnostic est si total qu'il ne laisse aucune place d'où le critiquer — Habermas le reprochera à ses aînés.",
@@ -1693,6 +2600,73 @@ export const CONCEPTS = {
       { p: '1840', f: 'Le tome II lui substitue la figure du despotisme doux, « plus étendu et plus doux ».' },
       { p: '1859', f: 'Mill reprend l\'argument dans De la liberté et le pousse en défense des minorités.' },
       { p: '1974', f: "Noelle-Neumann le retrouve en science des médias sous le nom de spirale du silence." },
+    ],
+  },
+
+  /* — Robert Castel — */
+  'societe-salariale': {
+    detaille: [
+      "Castel refuse de voir dans le salariat un simple contrat d'échange entre un employeur et un employé. Au cours du XXᵉ siècle, l'emploi stable s'est chargé de droits sociaux — retraite, assurance maladie, indemnités — au point de devenir une véritable position sociale, protectrice bien au-delà du seul salaire versé chaque mois.",
+      "Il forge, pour nommer cette accumulation de droits attachés au poste occupé, l'expression de propriété sociale : à défaut de posséder un patrimoine, un salarié protégé possède une créance sur la collectivité, garantie par son statut d'actif. Cette propriété d'un genre nouveau a fait, selon lui, ce que la propriété privée avait longtemps été seule à offrir : une sécurité face aux aléas de l'existence.",
+      "La thèse éclaire, en creux, ce qui se joue quand ce socle se fissure : perdre un emploi stable, ce n'est pas seulement perdre un revenu, c'est perdre l'accès à toute une architecture de droits qui s'y trouvait attachée.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel écrit en pleine montée du chômage de masse et de la précarité en France, et cherche à comprendre pourquoi cette dégradation de l'emploi ébranle bien plus qu'un statut professionnel : il retrace pour cela l'histoire longue de l'assistance et du salariat, depuis l'Ancien Régime.",
+    },
+    exemples: [
+      "Un intérimaire enchaînant les missions sans jamais accéder aux mêmes droits qu'un titulaire d'un poste stable, alors qu'il occupe parfois exactement le même poste.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale : une chronique du salariat' },
+      { y: '2003', t: "L'Insécurité sociale : qu'est-ce qu'être protégé ?" },
+      { y: '2009', t: 'La Montée des incertitudes' },
+    ],
+    associes: ['anomie', 'capital-social'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept a été élaboré à partir du cas français, où la protection sociale s'est historiquement adossée à l'emploi plus qu'ailleurs, ce qui en complique l'exportation telle quelle.",
+      "Certains lui reprochent d'idéaliser rétrospectivement un âge d'or du salariat stable, qui a toujours coexisté avec des marges importantes de travail précaire ou informel.",
+    ],
+    evolution: [
+      { p: 'Avant le XXᵉ siècle', f: "Le travail salarié reste largement instable et sans protection ; l'assistance aux pauvres relève surtout de la charité ou de la famille." },
+      { p: '1930–1975', f: "La généralisation de la sécurité sociale et du droit du travail transforme l'emploi stable en statut protecteur à part entière." },
+      { p: '1995', f: "Castel publie Les Métamorphoses de la question sociale et nomme rétrospectivement cette période « société salariale »." },
+      { p: 'Depuis 1975', f: "La montée du chômage de masse et des contrats courts fragilise ce socle, sans qu'aucun modèle de remplacement ne se soit encore stabilisé." },
+    ],
+  },
+  'zones-de-l-integration-sociale': {
+    detaille: [
+      "Plutôt que de traiter l'intégration comme une frontière unique — dedans ou dehors —, Castel la découpe en zones, définies par le croisement de deux axes : le rapport au travail (stable, précaire, absent) et la densité des liens sociaux et familiaux (solides, fragilisés, rompus).",
+      "La zone d'intégration réunit un travail stable et des liens sociaux solides. La zone de désaffiliation cumule l'absence des deux. Entre les deux, Castel isole une zone de vulnérabilité, où l'un des deux piliers seulement se fragilise — la zone la plus peuplée, et la plus longtemps restée dans l'angle mort des politiques sociales, construites pour traiter soit l'emploi, soit l'exclusion, rarement l'entre-deux.",
+      "La désaffiliation elle-même n'est donc jamais un point de départ : c'est un processus, en principe réversible, qui décrit comment on s'en éloigne ou s'en approche au fil d'une trajectoire, plutôt qu'un état auquel certains seraient d'emblée assignés.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel construit cette cartographie en réaction aux usages flous du mot exclusion dans le débat public français des années 1980-1990, qui traitait comme un bloc homogène des situations très différentes.",
+    },
+    exemples: [
+      "Un cadre en poste stable mais isolé, sans famille ni amis proches, occupe lui aussi une zone de vulnérabilité — l'un des deux piliers seulement s'est fragilisé.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale : une chronique du salariat' },
+      { y: '2003', t: "L'Insécurité sociale : qu'est-ce qu'être protégé ?" },
+    ],
+    associes: ['tension-anomique', 'capital-social'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "Une cartographie en trois zones qui, une fois popularisée, a parfois été appliquée de façon rigide, comme si chacun occupait une case fixe plutôt qu'une position mouvante.",
+      "Le terme désaffiliation a connu le même succès, et le même risque de devenir un mot-valise, que l'exclusion qu'il visait pourtant à préciser.",
+    ],
+    evolution: [
+      { p: '1974', f: "Lenoir popularise « l'exclusion » comme catégorie administrative globale, sans en distinguer les situations." },
+      { p: '1995', f: "Castel lui substitue une cartographie en zones, avec la vulnérabilité comme charnière centrale." },
+      { p: '1988–1990', f: "Le RMI, puis le débat sur l'insertion, s'appuient implicitement sur cette distinction entre accompagner une vulnérabilité et traiter une désaffiliation déjà installée." },
+      { p: 'Depuis les années 2000', f: "Le cadre est repris bien au-delà de la sociologie du travail, jusque dans l'analyse du logement, de la santé ou du grand âge." },
     ],
   },
 };

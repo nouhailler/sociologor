@@ -270,4 +270,16 @@ export const COURANTS = [
     inspirateurs: ["Laurent Thévenot — les économies de la grandeur, écrites avec lui"],
     niveau: 'paradigme',
   },
+  {
+    id: 'sociologie-de-la-question-sociale',
+    t: 'Sociologie de la question sociale',
+    periode: 'contemporain',
+    d: "Le salariat stable n'est pas qu'un contrat de travail : c'est ce qui a longtemps tenu lieu de statut social et de protection contre les aléas de l'existence.",
+    detail:
+      "Castel reprend la préoccupation durkheimienne pour ce qui tient une société ensemble, et la déplace vers l'histoire longue de l'assistance et du salariat : la « société salariale » du XXᵉ siècle a offert, pour la première fois à cette échelle, une intégration par le travail assortie de droits sociaux. Sa fragilisation depuis les années 1970 redessine toute la question sociale, entre zones d'intégration, de vulnérabilité et de désaffiliation.",
+    auteurs: ['castel'],
+    vientDe: ['holisme', 'structuralisme-genetique'],
+    inspirateurs: ["Michel Foucault — l'analyse du pouvoir et des institutions, dont Castel fut proche avant de s'en écarter vers l'histoire du salariat"],
+    niveau: 'paradigme',
+  },
 ];

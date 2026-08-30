@@ -5,7 +5,7 @@
 export const DOMAINS = [
   { id: 'classes', t: 'Classes sociales', d: "Comment une société se hiérarchise, et pourquoi la position héritée pèse encore si lourd.", a: ['marx', 'bourdieu', 'weber'] },
   { id: 'education', t: 'Éducation', d: "L'école promet l'égalité des chances et distribue pourtant des destins très prévisibles.", a: ['bourdieu', 'durkheim', 'boudon'] },
-  { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker'] },
+  { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker', 'castel'] },
   { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber'] },
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
   { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel'] },
@@ -43,8 +43,23 @@ export const AUTHORS = {
       { id: 'classe-sociale', t: 'Classe sociale', year: '1848', simple: "Un groupe défini par sa place dans la production — posséder l'outil, ou vendre son temps pour l'utiliser.", ex: "Deux personnes au même salaire n'ont pas la même position si l'une détient l'entreprise et l'autre un contrat de travail." },
       { id: 'alienation', t: 'Aliénation', year: '1844', simple: "Quand le travail, censé être l'expression de soi, devient une activité étrangère qu'on subit.", ex: "Un opérateur qui répète un geste sur un produit qu'il ne verra jamais fini, ni ne pourra s'offrir." },
       { id: 'ideologie', t: 'Idéologie', year: '1846', simple: "Les idées qui font passer un ordre social particulier pour l'ordre naturel des choses.", ex: "« Chacun réussit à la mesure de son mérite » — une phrase qui rend invisible ce que le point de départ a apporté." },
+      { id: 'lutte-des-classes', t: 'Lutte des classes', year: '1848', simple: "Le moteur de l'histoire : l'affrontement, ouvert ou larvé, entre ceux qui possèdent les moyens de production et ceux qui n'ont que leur travail à vendre.", ex: "Une grève qui bloque une usine rend visible, le temps d'un conflit, un rapport de force habituellement recouvert par la routine du travail." },
+      { id: 'conflit-de-classes', t: 'Conflit de classes', year: '1847', simple: "L'antagonisme structurel d'intérêts entre classes, présent même quand aucune lutte ouverte ne l'exprime.", ex: "Un patron et ses salariés s'opposent sur le partage de la valeur produite, même dans une entreprise sans aucun conflit social déclaré." },
+      { id: 'bourgeoisie', t: 'Bourgeoisie', year: '1848', simple: "La classe qui possède les moyens de production et vit de la valeur que le travail d'autrui y ajoute.", ex: "Un actionnaire qui touche des dividendes sans jamais mettre les pieds dans l'entreprise qui les génère." },
+      { id: 'proletariat', t: 'Prolétariat', year: '1848', simple: "La classe qui, dépourvue de moyens de production, ne peut vivre qu'en vendant sa force de travail.", ex: "Un salarié qui n'a rien d'autre à proposer sur le marché que ses heures et ses compétences." },
+      { id: 'plus-value', t: 'Plus-value', year: '1867', simple: "L'écart entre la valeur que le travail produit et le salaire qui le rémunère — la source du profit capitaliste.", ex: "Un ouvrier dont la journée produit largement plus que ce que son salaire lui restitue en fin de mois." },
+      { id: 'exploitation', t: 'Exploitation', year: '1867', simple: "L'appropriation, par celui qui possède les moyens de production, de la plus-value créée par celui qui travaille.", ex: "Deux entreprises concurrentes, aussi respectueuses l'une que l'autre du droit du travail, mais où le rapport reste structurellement le même." },
+      { id: 'fetichisme-de-la-marchandise', t: 'Fétichisme de la marchandise', year: '1867', simple: "Un rapport social entre producteurs en vient à paraître un rapport entre choses — le prix d'un objet semble lui appartenir en propre.", ex: "Un vêtement dont l'étiquette de prix ne dit rien des mains qui l'ont cousu, ni des conditions dans lesquelles elles l'ont fait." },
+      { id: 'mode-de-production', t: 'Mode de production', year: '1859', simple: "La manière dont une société combine ses forces productives et ses rapports de production à une époque donnée.", ex: "Le servage médiéval et le salariat industriel organisent tous deux un travail, mais selon des rapports de production entièrement différents." },
+      { id: 'rapports-de-production', t: 'Rapports de production', year: '1859', simple: "Les relations sociales — de propriété, de pouvoir — qui organisent qui travaille pour qui, et qui décide du résultat.", ex: "Un métayer et un salarié produisent tous deux de la valeur, mais selon des rapports de production qui ne leur laissent pas la même part." },
+      { id: 'forces-productives', t: 'Forces productives', year: '1859', simple: "L'ensemble des moyens techniques et des savoir-faire qu'une société mobilise pour produire.", ex: "L'arrivée de la machine à vapeur transforme ce qu'une seule journée de travail permet de produire." },
+      { id: 'infrastructure-et-superstructure', t: 'Infrastructure et superstructure', year: '1859', simple: "L'organisation économique d'une société (l'infrastructure) façonne en dernière instance son droit, ses idées et ses institutions (la superstructure).", ex: "Un droit de propriété qui protège d'abord ce qu'une société produit et échange réellement, avant de se présenter comme un principe intemporel." },
+      { id: 'conscience-de-classe', t: 'Conscience de classe', year: '1848', simple: "Le moment où une classe cesse de subir sa position et se pense, s'organise et agit collectivement pour la défendre.", ex: "Des salariés dispersés dans des entreprises différentes qui se découvrent des intérêts communs et se syndiquent." },
+      { id: 'fausse-conscience', t: 'Fausse conscience', year: '1846', simple: "Une représentation du monde qui empêche un groupe de percevoir ses propres intérêts de classe.", ex: "Un salarié qui s'identifie aux intérêts de son entreprise au point de défendre une mesure qui réduit ses propres droits." },
+      { id: 'accumulation-du-capital', t: 'Accumulation du capital', year: '1867', simple: "Le réinvestissement de la plus-value en nouveau capital, qui concentre la richesse et intensifie la concurrence entre capitalistes eux-mêmes.", ex: "Une entreprise qui réinvestit ses profits dans des machines plus productives, ce qui pousse ses concurrentes à en faire autant ou à disparaître." },
+      { id: 'pauperisation', t: 'Paupérisation', year: '1867', simple: "La tendance du système capitaliste à appauvrir relativement les travailleurs à mesure que le capital s'accumule à l'autre pôle.", ex: "Une croissance économique réelle qui s'accompagne d'une part toujours plus faible de la valeur produite reversée en salaires." },
     ],
-    oeuvres: [{ y: '1848', t: 'Manifeste du parti communiste' }, { y: '1867', t: 'Le Capital, livre I' }, { y: '1846', t: "L'Idéologie allemande" }],
+    oeuvres: [{ y: '1847', t: 'Misère de la philosophie' }, { y: '1848', t: 'Manifeste du parti communiste' }, { y: '1859', t: "Contribution à la critique de l'économie politique" }, { y: '1867', t: 'Le Capital, livre I' }, { y: '1846', t: "L'Idéologie allemande" }],
     citations: [{ t: "Les hommes font leur propre histoire, mais dans des conditions qu'ils n'ont pas choisies.", src: 'Le 18 Brumaire de Louis Bonaparte, 1852' }],
     critiques: ["La prédiction d'une polarisation en deux classes ne s'est pas vérifiée : les classes moyennes ont grossi.", "Weber lui reproche de sous-estimer le rôle propre des croyances et du prestige."],
     up: [], down: ['bourdieu', 'francfort'], x: 30, y: 205,
@@ -62,8 +77,24 @@ export const AUTHORS = {
       { id: 'statut-social', t: 'Statut social', year: '1922', simple: "Une estime sociale partagée, attachée à un style de vie — distincte de la richesse, qu'elle habille souvent de manières et de goûts.", ex: "Un professeur mal payé garde une considération que n'obtient pas un commerçant plus riche mais jugé moins « distingué »." },
       { id: 'prestige-social', t: 'Prestige social', year: '1922', simple: "La valeur comparative qu'une société attache à une position, indépendamment du salaire qu'elle procure.", ex: "Un métier de la fonction publique recherché pour sa considération, alors qu'un poste mieux payé dans le privé inspire moins de respect." },
       { id: 'elitisme', t: 'Élitisme', year: '1919', simple: "Même une organisation démocratique finit gouvernée par une poignée de dirigeants professionnels — la « loi d'airain de l'oligarchie ».", ex: "Un syndicat né pour représenter sa base voit ses permanents, mieux informés et mieux organisés, décider seuls de l'orientation à suivre." },
+      { id: 'action-sociale', t: 'Action sociale', year: '1922', simple: "Un comportement devient une action sociale dès qu'il porte un sens visé par son auteur et qu'il tient compte du comportement d'autrui.", ex: "Deux cyclistes qui manquent de se percuter et se rattrapent tous deux d'un même geste : une action sociale, quand une simple collision physique n'en serait pas une." },
+      { id: 'verstehen', t: 'Compréhension (Verstehen)', year: '1913', simple: "Comprendre une conduite suppose de restituer le sens que celui qui agit lui donne, pas seulement d'en repérer les causes extérieures.", ex: "Voir quelqu'un lever le bras ne dit rien : voter, saluer ou s'étirer sont trois actions différentes que seul le sens visé permet de distinguer." },
+      { id: 'types-d-action-sociale', t: "Types d'action sociale", year: '1922', simple: "Quatre logiques distinctes peuvent motiver un même geste : la tradition, l'émotion, une valeur défendue pour elle-même, ou le calcul d'une fin à atteindre.", ex: "Faire un don peut relever de l'habitude familiale, de l'élan du moment, d'une conviction religieuse, ou d'un calcul de déduction fiscale — quatre types, un seul geste." },
+      { id: 'domination-traditionnelle', t: 'Domination traditionnelle', year: '1922', simple: "On obéit parce que les choses ont toujours été ainsi, et que l'autorité en place en hérite légitimement.", ex: "Un chef coutumier dont personne ne conteste l'autorité, transmise de génération en génération sans qu'aucun texte ne la fonde." },
+      { id: 'domination-charismatique', t: 'Domination charismatique', year: '1922', simple: "On obéit à une personne tenue pour extraordinaire, porteuse d'une qualité hors du commun que rien d'autre qu'elle-même ne garantit.", ex: "Un mouvement qui se délite ou se transforme du jour au lendemain à la mort de son fondateur, faute d'autre source d'autorité que sa seule personne." },
+      { id: 'domination-legale-rationnelle', t: 'Domination légale-rationnelle', year: '1922', simple: "On obéit à une règle impersonnelle et à la fonction qu'elle définit, jamais à la personne qui l'occupe.", ex: "Un fonctionnaire suit une procédure identique quel que soit son supérieur du moment, parce qu'elle vient du poste et non de qui le tient." },
+      { id: 'bureaucratie', t: 'Bureaucratie', year: '1922', simple: "L'organisation la plus efficace jamais inventée pour appliquer des règles écrites de façon impersonnelle, par des agents qualifiés et hiérarchisés.", ex: "Un dossier traité selon la même procédure, dans le même ordre d'arrivée, quel que soit l'agent qui le prend en charge ce jour-là." },
+      { id: 'ethique-protestante', t: 'Éthique protestante', year: '1904', simple: "L'angoisse du salut, chez certains protestants, se résout par un travail méthodique et une vie sobre, plutôt que par des rites ou des indulgences.", ex: "Un entrepreneur qui réinvestit ses profits au lieu de les dépenser, par discipline plus que par calcul de rentabilité." },
+      { id: 'esprit-du-capitalisme', t: 'Esprit du capitalisme', year: '1904', simple: "Une éthique qui fait du gain méthodique et du travail bien fait un devoir moral, détachée de sa matrice religieuse d'origine.", ex: "« Le temps, c'est de l'argent » : une maxime qui a gardé la rigueur morale de son origine religieuse bien après qu'elle a cessé d'en avoir besoin." },
+      { id: 'desenchantement-du-monde', t: 'Désenchantement du monde', year: '1919', simple: "Le monde moderne cesse d'être habité de forces mystérieuses : tout, en principe, peut être calculé et maîtrisé par la raison.", ex: "Une panne de voiture qui appelle un diagnostic technique plutôt qu'une explication surnaturelle, même chez qui n'y connaît rien en mécanique." },
+      { id: 'secularisation', t: 'Sécularisation', year: '1919', simple: "Le recul de la religion comme cadre englobant de la vie sociale, à mesure que le droit, l'école ou la politique s'en émancipent.", ex: "Un mariage civil, valide sans aucune cérémonie religieuse, là où le mariage religieux fondait autrefois seul l'union reconnue." },
+      { id: 'parti', t: 'Parti', year: '1922', simple: "Un groupement organisé pour conquérir ou influencer le pouvoir, indépendamment de la classe économique ou du statut social de ses membres.", ex: "Une coalition politique qui rassemble des personnes de conditions économiques très différentes, unies par un même objectif de pouvoir." },
+      { id: 'classe', t: 'Classe', year: '1922', simple: "Une situation partagée sur le marché, qui détermine des chances de vie comparables — un axe distinct du statut ou du parti.", ex: "Deux salariés au même niveau de vie mais dans des secteurs très différents peuvent partager la même classe sans partager le même statut." },
+      { id: 'ordres-sociaux', t: 'Ordres sociaux', year: '1922', simple: "La position sociale se joue sur trois plans distincts et non réductibles l'un à l'autre : la classe économique, le statut, et le parti.", ex: "Un très riche entrepreneur récemment enrichi peut occuper une classe élevée sans jouir du même statut qu'une vieille famille moins fortunée." },
+      { id: 'rationalite-en-valeur', t: 'Rationalité en valeur', year: '1922', simple: "Agir pour rester fidèle à une valeur ou une conviction, sans égard pour les conséquences ni le coût que cela suppose.", ex: "Refuser un compromis avantageux au nom d'un principe, en assumant pleinement le prix de ce refus." },
+      { id: 'rationalite-instrumentale', t: 'Rationalité instrumentale', year: '1922', simple: "Choisir les moyens les plus efficaces pour atteindre un but donné, en évaluant froidement coûts et bénéfices.", ex: "Comparer plusieurs itinéraires pour ne retenir que le plus rapide, sans considération pour autre chose que le temps gagné." },
     ],
-    oeuvres: [{ y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" }, { y: '1922', t: 'Économie et société' }, { y: '1919', t: 'Le Savant et le politique' }],
+    oeuvres: [{ y: '1904', t: "L'Éthique protestante et l'esprit du capitalisme" }, { y: '1913', t: 'Essai sur quelques catégories de la sociologie compréhensive' }, { y: '1919', t: 'Le Savant et le politique' }, { y: '1922', t: 'Économie et société' }],
     citations: [{ t: "L'homme est un animal suspendu dans les toiles de signification qu'il a lui-même tissées.", src: "d'après L'Éthique protestante, 1904" }],
     critiques: ["Le lien protestantisme–capitalisme a été contesté par les historiens économistes.", "Sa neutralité axiologique est jugée intenable par les sociologies critiques."],
     up: [], down: ['goffman', 'parsons', 'bourdieu'], x: 30, y: 375,
@@ -248,6 +279,20 @@ export const AUTHORS = {
     critiques: ["Une aristocratie nostalgique perce sous l'analyse.", "L'Amérique observée est celle des hommes blancs libres."],
     up: [], down: ['durkheim'], x: 30, y: 690,
   },
+  castel: {
+    id: 'castel', name: 'Robert Castel', initials: 'RC', dates: '1933–2013', nat: 'France', periode: 'Contemporain',
+    courant: 'Sociologie de la question sociale',
+    hook: "Il retrace l'histoire longue du salariat pour comprendre pourquoi sa fragilisation ébranle bien plus qu'un statut professionnel.",
+    resume: "Castel montre que le travail salarié stable a longtemps servi de socle à l'intégration sociale, et documente ce qu'il advient quand ce socle se fissure.",
+    concepts: [
+      { id: 'societe-salariale', t: 'Société salariale', year: '1995', simple: "Le salariat stable, avec ses droits sociaux attachés, a fini par tenir lieu de statut social à part entière — bien plus qu'un simple contrat de travail.", ex: "Un CDI ouvre, en plus d'un revenu, une retraite, une assurance maladie et un crédit immobilier : autant de droits accrochés à l'emploi lui-même." },
+      { id: 'zones-de-l-integration-sociale', t: "Zones de l'intégration sociale", year: '1995', simple: "Entre l'intégration pleine et la désaffiliation complète, une zone de vulnérabilité concentre le plus grand nombre — ni installée, ni rompue.", ex: "Un intérimaire sans logement stable n'est pas exclu : il occupe une zone intermédiaire, exposée à la moindre rupture supplémentaire." },
+    ],
+    oeuvres: [{ y: '1976', t: "L'Ordre psychiatrique" }, { y: '1995', t: 'Les Métamorphoses de la question sociale' }, { y: '2003', t: "L'Insécurité sociale" }],
+    citations: [{ t: "Être protégé, c'est être assuré de ne pas tomber en cas de coup dur.", src: "d'après L'Insécurité sociale, 2003" }],
+    critiques: ["Une cartographie en zones bâtie sur l'histoire spécifique du salariat français, jugée parfois difficile à exporter telle quelle.", "Le succès du mot désaffiliation a aussi produit ses propres effets fourre-tout, comme celui d'exclusion avant lui."],
+    up: ['durkheim', 'bourdieu'], down: [], x: 700, y: 530,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -404,7 +449,15 @@ export const EXTRA = {
       "Jean-Jacques Rousseau — l'égalité comme problème politique autant que comme fait social"
     ],
   },
+  castel: {
+    prenom: 'Robert', nom: 'Castel', disc: ["Histoire — l'histoire longue de l'assistance et du salariat, depuis l'Ancien Régime", "Psychiatrie — ses premiers travaux portent sur le pouvoir psychiatrique et l'internement", 'Droit social — la protection sociale comme construction juridique autant que politique'], biblio: ['N. Duvoux, Robert Castel, La Découverte, 2015', 'S. Paugam (dir.), Repenser la solidarité, PUF, 2007'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Robert Castel', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Michel Foucault — dont Castel fut proche dans les années 1970, avant de s'éloigner de l'analyse du pouvoir vers l'histoire du salariat",
+      "Karl Polanyi — la marchandisation du travail, et ce qu'une société doit en protéger",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0]];
 
