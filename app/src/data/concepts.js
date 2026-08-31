@@ -1431,7 +1431,7 @@ export const CONCEPTS = {
       { y: '1895', t: 'Les Règles de la méthode sociologique' },
       { y: '1897', t: 'Le Suicide' },
     ],
-    associes: ['anomie', 'solidarite-organique', 'physique-sociale'],
+    associes: ['anomie', 'solidarite-organique', 'physique-sociale', 'religion-comme-fait-social', 'representations-collectives'],
     opposes: ['individualisme-methodologique', 'ideal-type', 'configuration'],
     critiques: [
       "Traiter un fait social comme une chose fait disparaître le sens que les acteurs lui donnent — c'est l'objection de Weber.",
@@ -1465,7 +1465,7 @@ export const CONCEPTS = {
       { y: '1893', t: 'De la division du travail social, livre III' },
       { y: '1897', t: 'Le Suicide, livre II' },
     ],
-    associes: ['fait-social', 'tension-anomique'],
+    associes: ['fait-social', 'tension-anomique', 'suicide-anomique'],
     opposes: ['solidarite-organique'],
     critiques: [
       "Le concept est trop large : il a servi à expliquer le suicide, le crime, le divorce, la grève et le désengagement politique.",
@@ -1498,7 +1498,7 @@ export const CONCEPTS = {
       { y: '1893', t: 'De la division du travail social' },
       { y: '1902', t: 'Préface à la deuxième édition, sur les groupements professionnels' },
     ],
-    associes: ['fait-social', 'systeme-social'],
+    associes: ['fait-social', 'systeme-social', 'solidarite-mecanique', 'division-du-travail-social'],
     opposes: ['anomie', 'blasement-urbain'],
     critiques: [
       "L'histoire ne va pas du mécanique à l'organique : les deux formes coexistent dans toute société connue.",
@@ -1510,6 +1510,497 @@ export const CONCEPTS = {
       { p: '1902', f: "Durkheim ajoute une préface : la solidarité organique ne suffit pas, il faut des corporations pour l'encadrer." },
       { p: '1912', f: "Inflexion vers le religieux : c'est le rituel, plus que la fonction, qui refait le groupe." },
       { p: '1951', f: "Parsons reprend l'idée de différenciation fonctionnelle au cœur de sa théorie des systèmes." },
+    ],
+  },
+  'solidarite-mecanique': {
+    detaille: [
+      "Dans une société à solidarité mécanique, les individus se ressemblent bien plus qu'ils ne diffèrent : mêmes croyances, mêmes pratiques, une conscience collective forte qui laisse peu de place à la personnalité individuelle.",
+      "Le lien social y tient à la ressemblance elle-même, sans avoir besoin d'aucune interdépendance fonctionnelle : chacun pourrait, en principe, remplacer n'importe quel autre membre du groupe, ce qui rend toute atteinte à la norme commune vécue comme une menace pour tous.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Durkheim construit ce type comme pôle de comparaison historique, à partir de l'étude des sociétés dites segmentaires, peu différenciées par la division du travail.",
+    },
+    exemples: [
+      "Une petite communauté rurale où tout manquement à une coutume locale se sait et se commente immédiatement, faute d'anonymat possible.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social, livre I' },
+    ],
+    associes: ['solidarite-organique', 'conscience-collective'],
+    opposes: ['individualisme-moral'],
+    critiques: [
+      "L'ethnographie a montré que les sociétés dites simples sont souvent très différenciées, ce qui affaiblit la prémisse même du type.",
+      "Le droit répressif, censé indiquer cette forme de solidarité, existe aussi dans des sociétés très différenciées, ce qui brouille l'indicateur choisi par Durkheim.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim formule le type en contrepoint de la solidarité organique." },
+      { p: 'XXᵉ siècle', f: "L'anthropologie structurale nuance la thèse d'une homogénéité totale des sociétés dites simples." },
+    ],
+  },
+  'conscience-collective': {
+    detaille: [
+      "La conscience collective désigne l'ensemble des croyances et des sentiments communs à la moyenne des membres d'une société, un ensemble qui a sa vie propre, distincte de celle de chaque individu qui la porte à un moment donné.",
+      "Elle est particulièrement forte et englobante dans les sociétés à solidarité mécanique, où elle recouvre presque toute l'existence individuelle ; elle se rétrécit, sans disparaître, à mesure que la division du travail se développe et laisse davantage de place à la personnalité de chacun.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Durkheim en fait la base de la solidarité mécanique, avant de la retrouver, sous une forme transformée, dans son étude du sacré et de l'effervescence collective.",
+    },
+    exemples: [
+      "Une minute de silence spontanément respectée par des inconnus dans un lieu public, sans qu'aucune autorité ne l'ait formellement imposée.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social' },
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse' },
+    ],
+    associes: ['solidarite-mecanique', 'representations-collectives'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept prête à la société une vie psychique propre, une hypothèse que la psychologie sociale ultérieure a jugée peu opératoire.",
+      "Il explique mal comment un individu peut s'opposer à une norme collective qu'il est censé porter en lui.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim formule le concept dans sa thèse sur la division du travail." },
+      { p: '1912', f: "Les Formes élémentaires en font le produit de rituels collectifs précis plutôt qu'un donné permanent." },
+      { p: '1961', f: "Moscovici lui substitue la notion de représentation sociale, plus dynamique et mieux outillée empiriquement." },
+    ],
+  },
+  'representations-collectives': {
+    detaille: [
+      "Les représentations collectives sont les catégories et les images avec lesquelles une société pense et se pense elle-même — jusqu'aux catégories les plus abstraites, comme le temps, l'espace ou la causalité, que Durkheim tient pour d'origine sociale plutôt que purement individuelle.",
+      "Elles se distinguent des représentations individuelles par leur origine et leur permanence : elles préexistent à chaque individu, qui les reçoit par l'éducation, et lui survivent une fois qu'il a disparu.",
+    ],
+    origine: {
+      oeuvre: 'Représentations individuelles et représentations collectives',
+      annee: '1898',
+      contexte:
+        "Durkheim répond aux psychologues qui réduisent le fait social à une addition de faits psychiques individuels, et revendique pour la sociologie un objet et une méthode propres.",
+    },
+    exemples: [
+      "Le découpage du monde en catégories d'animaux « purs » et « impurs » dans certaines traditions religieuses, qui organise des pratiques bien après que leur origine s'est estompée.",
+    ],
+    oeuvres: [
+      { y: '1898', t: 'Représentations individuelles et représentations collectives' },
+      { y: '1903', t: 'De quelques formes primitives de classification (avec Marcel Mauss)' },
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse' },
+    ],
+    associes: ['conscience-collective', 'religion-comme-fait-social'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Le concept explique mal le changement des représentations dans le temps, plus centré sur leur transmission que sur leur transformation.",
+      "Il prête à la société un pouvoir de catégorisation homogène que les sociétés complexes, traversées de représentations concurrentes, ne vérifient pas toujours.",
+    ],
+    evolution: [
+      { p: '1898', f: "Durkheim distingue représentations individuelles et représentations collectives." },
+      { p: '1903', f: "Avec Mauss, il étend l'idée aux classifications primitives du monde naturel." },
+      { p: '1912', f: "Les Formes élémentaires en font l'origine sociale des catégories de l'entendement lui-même." },
+      { p: '1961', f: "Moscovici retravaille la notion en représentations sociales, plus attentives à leur circulation et à leur transformation." },
+    ],
+  },
+  'division-du-travail-social': {
+    detaille: [
+      "La division du travail social ne désigne pas seulement une organisation technique de la production : c'est, pour Durkheim, un fait social de premier ordre, qui transforme le mode même de cohésion d'une société, de la solidarité mécanique vers la solidarité organique.",
+      "Cette transformation tient à la croissance de la densité morale et dynamique : plus les individus entrent en contact fréquent et intense les uns avec les autres, plus la concurrence pour occuper les mêmes fonctions devient insoutenable, et plus la spécialisation progresse comme issue à cette concurrence.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Thèse de doctorat de Durkheim, où il répond à une inquiétude de son temps : la spécialisation croissante du travail affaiblit-elle nécessairement le lien social, comme le craignaient plusieurs penseurs du XIXᵉ siècle ?",
+    },
+    exemples: [
+      "Un même métier de menuisier qui, en un siècle, se scinde en dizaines de spécialités distinctes, de l'ébénisterie à la charpente industrielle.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social' },
+    ],
+    associes: ['solidarite-mecanique', 'solidarite-organique', 'densite-dynamique'],
+    opposes: ['alienation'],
+    critiques: [
+      "Marx et Durkheim décrivent le même phénomène — la spécialisation du travail — pour en tirer des diagnostics opposés : source d'aliénation pour l'un, de solidarité pour l'autre, sans que l'un ne réfute vraiment l'autre empiriquement.",
+      "Durkheim lui-même reconnaît, dans sa préface de 1902, que la division du travail peut aussi produire des formes « anormales » (anomique, forcée) qu'il faut distinguer de sa forme normale.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim établit le lien entre division du travail et type de solidarité." },
+      { p: '1902', f: "Il ajoute une préface distinguant les formes normale et anormales de la division du travail." },
+      { p: '1867', f: "Marx, avant lui, avait déjà fait de la division du travail une source d'aliénation plutôt que de cohésion — un contraste que Durkheim connaît et discute." },
+    ],
+  },
+  'integration-sociale': {
+    detaille: [
+      "L'intégration sociale mesure la force des liens qui rattachent un individu aux groupes auxquels il appartient — famille, religion, nation — et donc sa capacité à trouver, en dehors de lui-même, des raisons de continuer à vivre dans les moments difficiles.",
+      "Durkheim en fait l'un des deux axes qui expliquent, selon lui, les variations du taux de suicide d'un groupe à l'autre : ni trop faible (suicide égoïste), ni excessive au point d'effacer l'individu (suicide altruiste).",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim compare les taux de suicide entre catégories religieuses, familiales et nationales, et cherche ce qui, au-delà des cas individuels, explique des régularités statistiques stables d'un groupe à l'autre.",
+    },
+    exemples: [
+      "Les soldats mobilisés en temps de guerre affichent, selon les données que Durkheim mobilise, un taux de suicide inférieur à celui du temps de paix, malgré un danger de mort bien plus grand.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II' },
+    ],
+    associes: ['regulation-sociale', 'suicide-egoiste', 'suicide-altruiste'],
+    opposes: ['lutte-des-classes'],
+    critiques: [
+      "Le concept reste difficile à mesurer indépendamment de ses effets supposés, au risque d'un raisonnement circulaire.",
+      "Il dit peu de la qualité des liens en cause : une intégration forte mais toxique n'est pas distinguée d'une intégration forte et soutenante.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim en fait l'un des deux axes explicatifs du Suicide." },
+      { p: '1951', f: "La sociologie américaine de la santé mentale reprend l'intégration sociale comme facteur protecteur mesurable." },
+      { p: '2000', f: "Putnam relie une notion voisine, le capital social, au déclin de l'engagement associatif américain." },
+    ],
+  },
+  'regulation-sociale': {
+    detaille: [
+      "La régulation sociale mesure le degré auquel les désirs et les attentes d'un individu sont bornés par des normes reconnues — qui fixent ce qu'il est légitime de vouloir, et ce qu'il est raisonnable d'espérer atteindre.",
+      "C'est le second axe du Suicide, indépendant de l'intégration : une régulation trop faible libère des attentes sans limite (suicide anomique), une régulation trop forte enferme dans un avenir sans issue perceptible (suicide fataliste).",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim distingue cet axe de l'intégration pour expliquer des cas que le seul défaut de liens sociaux ne suffit pas à rendre compte, notamment les crises économiques et les booms soudains.",
+    },
+    exemples: [
+      "Une entreprise en pleine expansion, où l'absence de repères de carrière stabilisés désoriente parfois davantage les employés qu'une période de stagnation prévisible.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II' },
+    ],
+    associes: ['integration-sociale', 'suicide-anomique', 'suicide-fataliste'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "L'idée d'une régulation « juste », ni trop faible ni trop forte, suppose une norme implicite que Durkheim ne justifie jamais explicitement.",
+      "Le concept reste plus développé pour son défaut (l'anomie) que pour son excès (le fatalisme), à peine esquissé par Durkheim lui-même.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim formule la régulation comme second axe explicatif du Suicide." },
+      { p: '1938', f: "Merton reprend l'anomie mais délaisse largement le pôle fataliste, resté marginal dans la suite du champ." },
+    ],
+  },
+  'densite-morale': {
+    detaille: [
+      "La densité morale mesure l'intensité réelle des relations sociales entre les membres d'un groupe — la fréquence et la qualité de leurs échanges effectifs — plutôt que leur seul nombre ou leur proximité physique.",
+      "Elle croît avec la densité matérielle (la concentration démographique) sans lui être identique : deux populations aussi denses physiquement peuvent avoir des vies collectives très différentes selon l'intensité réelle de leurs échanges.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Durkheim en fait, avec la densité dynamique, l'une des causes qui expliquent pourquoi la division du travail progresse dans certaines sociétés plus que dans d'autres.",
+    },
+    exemples: [
+      "Un immeuble où les voisins se croisent tous les jours sans jamais échanger un mot, contre une résidence moins peuplée mais où circule une vraie vie de quartier.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social, livre II' },
+    ],
+    associes: ['densite-dynamique', 'division-du-travail-social'],
+    opposes: ['blasement-urbain'],
+    critiques: [
+      "La distinction avec la densité matérielle reste difficile à opérationnaliser statistiquement, faute d'indicateur direct de la « vie morale » d'un groupe.",
+      "Simmel, sur le même objet urbain, tire une conclusion opposée : la densité produit surtout une indifférence défensive, pas davantage de lien.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim distingue densité morale et densité matérielle dans sa thèse." },
+      { p: '1903', f: "Simmel, sur le même terrain urbain, propose une lecture concurrente avec le blasement des grandes villes." },
+    ],
+  },
+  'densite-dynamique': {
+    detaille: [
+      "Durkheim emploie parfois « densité dynamique » et « densité morale » de façon presque interchangeable, mais le premier terme met l'accent sur ce qui accélère historiquement les contacts entre individus : le développement des voies de communication et de transport, qui rapproche des populations jusque-là séparées.",
+      "C'est cette accélération qui, selon lui, intensifie la concurrence pour les mêmes ressources et les mêmes fonctions, et pousse ainsi à la spécialisation croissante que décrit la division du travail social.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Durkheim cherche une cause matérielle, observable et mesurable, à la progression historique de la division du travail, plutôt qu'une simple évolution des idées ou des besoins.",
+    },
+    exemples: [
+      "Le développement du télégraphe puis du téléphone, qui multiplie en quelques décennies le nombre de transactions et d'échanges possibles entre des villes jusque-là faiblement reliées.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social, livre II, chapitre II' },
+    ],
+    associes: ['densite-morale', 'division-du-travail-social'],
+    opposes: ['blasement-urbain'],
+    critiques: [
+      "Durkheim n'a jamais clairement stabilisé la distinction entre densité morale et densité dynamique, ce qui a nourri des lectures divergentes de son texte.",
+      "Le lien causal entre accélération des contacts et spécialisation du travail reste postulé plus que démontré empiriquement dans le texte de 1893.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim relie l'accélération des voies de communication et de transport à la progression de la division du travail." },
+      { p: 'XXᵉ siècle', f: "La sociologie urbaine reprend l'idée pour penser les effets des réseaux de transport sur l'intégration métropolitaine." },
+    ],
+  },
+  'suicide-anomique': {
+    detaille: [
+      "Le suicide anomique survient quand la régulation sociale se relâche brutalement, laissant les désirs sans limite reconnue — aussi bien dans une crise économique soudaine que dans un enrichissement trop rapide, qui déstabilise également les repères établis.",
+      "Ce type illustre le mieux le paradoxe central de Durkheim : ce n'est pas le manque de moyens qui blesse, mais le dérèglement brutal des attentes, que la prospérité peut provoquer aussi sûrement que la crise.",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim observe que les taux de suicide augmentent aussi bien lors des crises économiques que lors de booms soudains, ce qu'aucune théorie centrée sur la seule pauvreté ne peut expliquer.",
+    },
+    exemples: [
+      "Un veuvage brutal chez une personne jusque-là très encadrée par la vie conjugale, dont les repères quotidiens s'effondrent d'un coup sans qu'aucun nouveau cadre ne les remplace encore.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II, chapitre V' },
+    ],
+    associes: ['anomie', 'regulation-sociale', 'suicide-egoiste'],
+    opposes: ['suicide-fataliste'],
+    critiques: [
+      "Le type se recoupe largement avec le concept plus général d'anomie, au point que la distinction entre les deux reste parfois floue chez Durkheim lui-même.",
+      "Les statistiques de suicide du XIXᵉ siècle, dont dépend toute la démonstration, sont d'une fiabilité inégale selon les pays comparés.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim isole ce type à partir des variations de taux liées aux crises économiques et aux booms soudains." },
+      { p: '1938', f: "Merton en généralise le mécanisme au-delà du seul suicide, vers la déviance en général." },
+    ],
+  },
+  'suicide-egoiste': {
+    detaille: [
+      "Le suicide égoïste survient quand l'individu est insuffisamment rattaché à des groupes stables — famille, religion, nation — et se retrouve seul face aux épreuves de l'existence, sans le soutien que ces attaches procurent habituellement.",
+      "Durkheim s'appuie sur des écarts statistiques restés célèbres : les protestants, dont la pratique religieuse est plus individuelle, se suicident davantage que les catholiques, dont la pratique est plus collective et encadrée ; les célibataires davantage que les personnes mariées.",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim compare systématiquement les taux de suicide entre confessions religieuses, situations familiales et nations européennes, pour isoler ce que l'intégration sociale explique à elle seule.",
+    },
+    exemples: [
+      "Un retraité récemment isolé de ses anciens collègues et de sa famille éloignée, sans avoir retrouvé d'attaches sociales comparables depuis son départ à la retraite.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II, chapitre II' },
+    ],
+    associes: ['integration-sociale', 'suicide-anomique'],
+    opposes: ['suicide-altruiste'],
+    critiques: [
+      "L'écart entre protestants et catholiques, pierre angulaire de la démonstration, a été contesté par des relectures ultérieures des mêmes données statistiques.",
+      "Le concept ne dit rien de la souffrance psychique individuelle, réduite à un simple déficit de liens mesurables.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim isole ce type à partir des écarts confessionnels et familiaux observés dans ses données." },
+      { p: '1951', f: "La sociologie de la santé mentale américaine reprend l'intégration sociale comme facteur protecteur, au-delà du seul suicide." },
+    ],
+  },
+  'suicide-altruiste': {
+    detaille: [
+      "Le suicide altruiste est, à l'inverse du suicide égoïste, celui d'une intégration excessive : l'individu s'efface entièrement devant le groupe, au point que sa propre vie pèse moins, à ses yeux, que ce que le collectif attend de lui.",
+      "Durkheim le trouve surtout dans les sociétés traditionnelles ou dans des institutions à très forte cohésion — l'armée notamment, où le taux de suicide dépasse alors celui de la population civile comparable.",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim observe des taux de suicide plus élevés chez les militaires que dans la population civile, un résultat qui contredit à première vue l'hypothèse d'un lien simple entre isolement et suicide.",
+    },
+    exemples: [
+      "Un membre d'une organisation à très forte discipline collective qui met fin à ses jours après un échec vécu comme un déshonneur pour le groupe entier plus que pour lui-même.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II, chapitre IV' },
+    ],
+    associes: ['integration-sociale', 'suicide-fataliste'],
+    opposes: ['suicide-egoiste'],
+    critiques: [
+      "Le type reste le moins développé empiriquement des quatre, appuyé sur des données militaires que Durkheim discute plus qu'il ne les démontre pleinement.",
+      "La frontière avec un sacrifice pleinement choisi, plutôt que subi, reste difficile à établir depuis l'extérieur.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim isole ce type à partir des taux de suicide militaires." },
+      { p: 'XXᵉ–XXIᵉ siècle', f: "Le concept est repris pour analyser des formes contemporaines de sacrifice extrême au nom d'un groupe ou d'une cause." },
+    ],
+  },
+  'suicide-fataliste': {
+    detaille: [
+      "Le suicide fataliste, le plus brièvement traité des quatre types, survient quand la régulation sociale est si oppressante qu'elle ferme tout avenir concevable à l'individu qui la subit — l'excès inverse du suicide anomique.",
+      "Durkheim le relègue à une note de bas de page, le jugeant peu significatif statistiquement pour son époque, mais des sociologues ultérieurs y ont vu une catégorie utile pour penser des situations d'enfermement total, au sens propre comme au figuré.",
+    ],
+    origine: {
+      oeuvre: 'Le Suicide',
+      annee: '1897',
+      contexte:
+        "Durkheim l'ajoute presque en passant, pour compléter symétriquement sa typologie plutôt que pour illustrer un phénomène qu'il jugeait numériquement important en France à son époque.",
+    },
+    exemples: [
+      "Une personne détenue depuis très longtemps, dans un régime carcéral qui ne laisse entrevoir aucune perspective de libération ni de changement possible.",
+    ],
+    oeuvres: [
+      { y: '1897', t: 'Le Suicide, livre II, note de bas de page' },
+    ],
+    associes: ['regulation-sociale', 'suicide-altruiste'],
+    opposes: ['suicide-anomique'],
+    critiques: [
+      "Durkheim lui-même ne le développe pas, ce qui a longtemps fait douter de sa pertinence propre plutôt que d'un simple symétrique théorique.",
+      "Le type reste très rarement mobilisé empiriquement, faute de données historiques comparables à celles utilisées pour les trois autres.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim l'esquisse en note, pour compléter la symétrie de sa typologie." },
+      { p: 'Fin XXᵉ siècle', f: "Des sociologues de l'institution carcérale et des régimes totalitaires réactivent le concept, longtemps resté marginal." },
+    ],
+  },
+  'effervescence-collective': {
+    detaille: [
+      "Réunis en un même lieu, au même moment, autour d'un même objet d'attention, les individus peuvent atteindre un état d'exaltation collective qui dépasse largement ce que chacun ressentirait seul — une intensité qui donne au groupe le sentiment de sa propre force.",
+      "Durkheim voit dans ce moment l'origine même du sacré : c'est cette énergie collective, ressentie comme extérieure et supérieure à chacun, que les sociétés projettent ensuite sur des objets, des symboles ou des dieux.",
+    ],
+    origine: {
+      oeuvre: 'Les Formes élémentaires de la vie religieuse',
+      annee: '1912',
+      contexte:
+        "Durkheim étudie le totémisme des sociétés aborigènes australiennes, jugées les plus simples connues, pour en tirer une théorie générale de l'origine du sacré et du lien social.",
+    },
+    exemples: [
+      "Une manifestation dont les participants ressortent transformés, portés par une énergie collective qu'aucun d'eux n'aurait pu produire seul chez lui.",
+    ],
+    oeuvres: [
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse, livre II' },
+    ],
+    associes: ['sacre-et-profane', 'religion-comme-fait-social'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Le concept explique bien la naissance d'un sentiment collectif, moins bien sa cristallisation durable en institution stable.",
+      "L'observation ethnographique dont il part a depuis été discutée et partiellement révisée par l'anthropologie australianiste.",
+    ],
+    evolution: [
+      { p: '1912', f: "Durkheim formule le concept à partir de l'étude du totémisme australien." },
+      { p: '1959', f: "Goffman en retrouve une version affaiblie dans les rituels ordinaires de l'interaction quotidienne." },
+      { p: 'XXIᵉ siècle', f: "Le concept est repris pour analyser les grands rassemblements contemporains, sportifs comme politiques." },
+    ],
+  },
+  'sacre-et-profane': {
+    detaille: [
+      "Toute religion connue distingue, selon Durkheim, deux domaines radicalement séparés : le sacré, entouré d'interdits et de rites protecteurs, et le profane, le domaine ordinaire de la vie où ces précautions n'ont pas cours.",
+      "Ce qui rend un objet sacré ne tient à aucune propriété physique qui lui serait propre : n'importe quel objet — une pierre, un animal, un drapeau — peut devenir sacré si le groupe le charge de cette valeur, et cesser de l'être si le groupe s'en détourne.",
+    ],
+    origine: {
+      oeuvre: 'Les Formes élémentaires de la vie religieuse',
+      annee: '1912',
+      contexte:
+        "Durkheim pose cette distinction comme le critère le plus général pour définir la religion, avant même toute croyance en des dieux ou des esprits.",
+    },
+    exemples: [
+      "Une tombe, simple parcelle de terre ailleurs, devient un lieu qu'on ne piétine pas et où l'on baisse spontanément la voix.",
+    ],
+    oeuvres: [
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse, livre I' },
+    ],
+    associes: ['effervescence-collective', 'religion-comme-fait-social'],
+    opposes: ['desenchantement-du-monde'],
+    critiques: [
+      "La frontière entre sacré et profane s'avère, dans les faits, bien plus graduelle et mouvante que la coupure nette que Durkheim présente.",
+      "Le critère reste largement formel : il dit qu'un objet est sacralisé sans expliquer pourquoi celui-ci plutôt qu'un autre l'a été.",
+    ],
+    evolution: [
+      { p: '1912', f: "Durkheim pose la distinction comme critère universel du religieux." },
+      { p: '1917', f: "Otto, indépendamment, développe une approche voisine avec l'idée du numineux." },
+      { p: '1959', f: "Goffman retrouve une version profane du sacré dans le souci de face propre à toute interaction ordinaire." },
+    ],
+  },
+  'religion-comme-fait-social': {
+    detaille: [
+      "Durkheim refuse d'expliquer la religion par son contenu de croyance, vrai ou faux : ce qui l'intéresse, c'est sa fonction sociale — la manière dont un culte rassemble un groupe, entretient sa cohésion et lui donne le sentiment de sa propre existence.",
+      "Dans cette lecture, une société qui se rassemble, célèbre ses symboles et sanctionne leur profanation fait toujours quelque chose d'apparenté à de la religion, qu'elle invoque ou non un dieu — la religion devient un cas particulier d'un phénomène plus général, le culte que toute société rend à elle-même.",
+    ],
+    origine: {
+      oeuvre: 'Les Formes élémentaires de la vie religieuse',
+      annee: '1912',
+      contexte:
+        "Dernier grand ouvrage de Durkheim, où il choisit délibérément l'étude des sociétés qu'il juge les plus simples pour dégager, croit-il, la forme élémentaire — et donc la plus visible — du fait religieux.",
+    },
+    exemples: [
+      "Un hymne national entonné en chœur lors d'une cérémonie officielle, qui célèbre moins un contenu précis que l'existence même du groupe qui le chante ensemble.",
+    ],
+    oeuvres: [
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse' },
+    ],
+    associes: ['fait-social', 'sacre-et-profane', 'effervescence-collective'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Marx voit dans la religion un instrument de domination de classe ; Durkheim y voit une expression authentique de la vie collective — les deux lectures s'opposent sans que l'une réfute vraiment l'autre.",
+      "Réduire la religion à sa fonction sociale laisse de côté ce que les croyants eux-mêmes disent vivre, l'expérience du sacré comme telle.",
+    ],
+    evolution: [
+      { p: '1912', f: "Durkheim formule sa théorie fonctionnelle et sociale de la religion." },
+      { p: '1922–1935', f: "Marcel Mauss et le groupe de L'Année sociologique prolongent l'étude du don et du sacrifice dans le même esprit." },
+      { p: '1966', f: "Berger et Luckmann relisent la thèse à la lumière d'une sociologie de la connaissance plus générale." },
+    ],
+  },
+  'fonction-sociale': {
+    detaille: [
+      "Comprendre une institution, pour Durkheim, suppose deux questions distinctes : quelle cause l'a fait naître, et quel besoin collectif elle sert aujourd'hui. La fonction sociale répond à la seconde, indépendamment de l'origine historique parfois très différente de l'institution.",
+      "Cette méthode fondera tout le courant fonctionnaliste après lui, avant que Merton n'en corrige un défaut : Durkheim tend à confondre fonction et cause, comme si le besoin social auquel répond une institution suffisait à expliquer son apparition.",
+    ],
+    origine: {
+      oeuvre: 'De la division du travail social',
+      annee: '1893',
+      contexte:
+        "Durkheim développe cette méthode pour expliquer la persistance de la division du travail, en distinguant sa cause (la densité dynamique croissante) de sa fonction (produire la solidarité organique).",
+    },
+    exemples: [
+      "La peine judiciaire, née historiquement d'un désir de vengeance, remplit aujourd'hui la fonction sociale de réaffirmer publiquement la règle transgressée, quelle qu'ait été son origine.",
+    ],
+    oeuvres: [
+      { y: '1893', t: 'De la division du travail social' },
+      { y: '1895', t: 'Les Règles de la méthode sociologique' },
+    ],
+    associes: ['solidarite-organique', 'fonction-latente'],
+    opposes: ['effets-pervers'],
+    critiques: [
+      "Le raisonnement fonctionnel confond souvent cause et effet : une institution qui sert un besoin n'est pas nécessairement née pour le servir.",
+      "Boudon lui oppose des effets pervers, produits par l'agrégation de décisions individuelles sans qu'aucune fonction collective n'ait besoin d'être invoquée.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim distingue cause et fonction dans l'explication d'une institution." },
+      { p: '1895', f: "La méthode est généralisée comme règle de la sociologie explicative." },
+      { p: '1949', f: "Merton distingue fonctions manifestes et latentes, et alerte contre la confusion entre fonction et cause que Durkheim laissait parfois subsister." },
+    ],
+  },
+  'individualisme-moral': {
+    detaille: [
+      "Contre l'idée que l'individualisme dissoudrait nécessairement le lien social, Durkheim soutient qu'une société moderne peut s'unir précisément autour du respect de la personne humaine — un individualisme qui devient lui-même une croyance collective, presque religieuse, plutôt qu'un simple repli sur soi.",
+      "Ce culte de l'individu se distingue nettement de l'individualisme utilitariste, centré sur l'intérêt personnel : ce que la société sacralise ici, ce n'est pas l'intérêt de chacun, mais la dignité humaine en général, défendue au nom du groupe tout entier.",
+    ],
+    origine: {
+      oeuvre: "L'individualisme et les intellectuels",
+      annee: '1898',
+      contexte:
+        "Durkheim répond, en pleine affaire Dreyfus, à ceux qui accusent les défenseurs des droits individuels de mettre en péril la cohésion nationale.",
+    },
+    exemples: [
+      "Une mobilisation nationale pour la défense des droits d'une seule personne injustement condamnée, alors même que cette société n'a plus aucune croyance religieuse commune.",
+    ],
+    oeuvres: [
+      { y: '1898', t: "L'individualisme et les intellectuels" },
+      { y: '1912', t: 'Les Formes élémentaires de la vie religieuse' },
+    ],
+    associes: ['solidarite-organique', 'division-du-travail-social'],
+    opposes: ['solidarite-mecanique'],
+    critiques: [
+      "Le concept semble résoudre par définition la tension qu'il pose : appeler « collectif » ce qui protège l'individu esquive la question de savoir si les deux peuvent réellement entrer en conflit.",
+      "Durkheim écrit dans un contexte politique précis (l'affaire Dreyfus), ce qui a nourri le soupçon d'une thèse taillée pour les besoins de la cause plus qu'une observation neutre.",
+    ],
+    evolution: [
+      { p: '1898', f: "Durkheim formule le concept en réponse aux critiques adressées aux défenseurs de Dreyfus." },
+      { p: '1912', f: "Les Formes élémentaires généralisent l'idée d'un sacré qui peut se déplacer vers l'individu lui-même." },
+      { p: '1983', f: "Lipovetsky décrit un individualisme contemporain plus narcissique, qu'il distingue de l'individualisme moral durkheimien." },
     ],
   },
 
