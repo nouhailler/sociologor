@@ -6,17 +6,17 @@ export const DOMAINS = [
   { id: 'classes', t: 'Classes sociales', d: "Comment une société se hiérarchise, et pourquoi la position héritée pèse encore si lourd.", a: ['marx', 'bourdieu', 'weber'] },
   { id: 'education', t: 'Éducation', d: "L'école promet l'égalité des chances et distribue pourtant des destins très prévisibles.", a: ['bourdieu', 'durkheim', 'boudon'] },
   { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker', 'castel'] },
-  { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber'] },
+  { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber', 'berger-luckmann'] },
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
-  { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel'] },
+  { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel', 'schutz'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
   { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
   { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski', 'foucault'] },
   { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas', 'foucault'] },
-  { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte', 'giddens'] },
+  { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte', 'giddens', 'schutz', 'berger-luckmann'] },
   { id: 'inegalites', t: 'Mobilité sociale', d: "Monter, descendre, rester : la circulation entre positions et ses illusions.", a: ['boudon', 'bourdieu', 'merton'] },
-  { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville', 'parsons'] },
+  { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville', 'parsons', 'berger-luckmann'] },
 ];
 
 export const AUTHORS = {
@@ -511,6 +511,48 @@ export const AUTHORS = {
     critiques: ["Habermas objecte qu'un pouvoir partout diffus ne laisse plus voir d'où la critique elle-même pourrait parler.", "Des historiens contestent la précision de certaines de ses reconstitutions, plus fortes rhétoriquement qu'établies archivistiquement.", "Des critiques marxistes lui reprochent de dissoudre les rapports de classe et d'exploitation dans une notion de pouvoir trop générale."],
     up: ['marx', 'weber'], down: ['castel'], x: 700, y: 690,
   },
+  schutz: {
+    id: 'schutz', name: 'Alfred Schutz', initials: 'AS', dates: '1899–1959', nat: 'Autriche / États-Unis', periode: 'XXᵉ siècle',
+    courant: 'Phénoménologie sociale',
+    hook: "Il demande ce que Weber n'avait jamais expliqué : comment deux personnes parviennent-elles seulement à se comprendre ?",
+    resume: "Schutz donne à la sociologie compréhensive les fondations qui lui manquaient : un monde vécu partagé, un stock de connaissances accumulé, des types qui permettent de reconnaître le nouveau sans jamais tout redécouvrir.",
+    concepts: [
+      { id: 'stock-de-connaissances', t: 'Stock de connaissances', year: '1932', simple: "Le fonds d'expériences, d'habitudes et de savoirs accumulés qu'un acteur mobilise pour interpréter toute situation nouvelle.", ex: "Une secrétaire de mairie qui sait, sans consulter aucun texte, quel formulaire correspond à quelle demande." },
+      { id: 'typification', t: 'Typification', year: '1932', simple: "Comprendre une situation nouvelle en la rapportant à un type déjà connu, plutôt qu'en la redécouvrant entièrement à chaque fois.", ex: "Repérer d'emblée un « videur de boîte de nuit » à sa carrure et sa posture, avant même qu'il n'ait ouvert la bouche." },
+      { id: 'sens-commun', t: 'Sens commun', year: '1932', simple: "Le savoir pratique, non réfléchi, que chacun mobilise pour se débrouiller dans la vie quotidienne, distinct du savoir savant.", ex: "Savoir, sans qu'on l'ait jamais enseigné, à quel volume parler dans un ascenseur bondé." },
+      { id: 'intersubjectivite', t: 'Intersubjectivité', year: '1932', simple: "L'hypothèse, jamais vérifiée mais toujours agie, que les autres perçoivent le monde à peu près comme nous.", ex: "Un vendeur et un client qui s'accordent tacitement sur ce que signifie « je reviens tout de suite », sans en préciser la durée exacte." },
+      { id: 'pertinence', t: 'Pertinence', year: '1932', simple: "Ce qui compte dans une situation dépend des intérêts pratiques de l'acteur, jamais d'une importance donnée d'avance.", ex: "Un bruit de moteur, sans intérêt pour un passant et immédiatement inquiétant pour le mécanicien qui vient de le réparer." },
+      { id: 'motifs-en-vue-de', t: 'Motifs en-vue-de', year: '1932', simple: "La raison tournée vers l'avenir qui pousse à agir : ce qu'on veut obtenir par son acte, présent à l'esprit pendant qu'on agit.", ex: "Ranger son bureau avant de partir en-vue-de retrouver un espace clair le lendemain matin." },
+      { id: 'motifs-parce-que', t: 'Motifs parce-que', year: '1932', simple: "La raison tournée vers le passé qui explique une conduite, reconstituée après coup plutôt que présente à l'acteur pendant qu'il agit.", ex: "Un historien qui explique, des décennies après les faits, pourquoi un migrant a choisi cette ville plutôt qu'une autre." },
+    ],
+    oeuvres: [{ y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' }, { y: '1944', t: "L'Étranger" }, { y: '1962', t: 'Collected Papers I (posthume)' }],
+    citations: [{ t: "Le monde de la vie quotidienne est déjà interprété par nous, bien avant que nous n'y réfléchissions.", src: "d'après Le Sens vécu, 1932" }],
+    critiques: ["Trop philosophique pour certains sociologues, qui lui reprochent de ne jamais vraiment quitter le terrain de la théorie de la connaissance.", "L'accent mis sur le sens commun partagé laisse peu de place aux rapports de force qui traversent pourtant les situations les plus ordinaires.", "Son œuvre, dispersée en articles et restée en partie inachevée à sa mort, a longtemps été moins lue que celle de ses héritiers, Garfinkel et Berger et Luckmann."],
+    up: ['weber', 'simmel'], down: [], x: 470, y: 690,
+  },
+  'berger-luckmann': {
+    id: 'berger-luckmann', name: 'Peter Berger & Thomas Luckmann', initials: 'BL', dates: '1927–2017', nat: 'Autriche / États-Unis', periode: 'XXᵉ siècle',
+    courant: 'Constructivisme social',
+    hook: "Ils montrent que la réalité la plus objective en apparence reste un produit humain, à condition que personne ne s'en souvienne.",
+    resume: "Berger et Luckmann décrivent un cycle permanent : l'homme produit un monde qui, à force d'habitude, se fige en institutions, avant de se réinstaller en chacun par la socialisation — une réalité fabriquée qui finit par se vivre comme allant de soi.",
+    concepts: [
+      { id: 'construction-sociale-de-la-realite', t: 'Construction sociale de la réalité', year: '1966', simple: "Ce qu'une société tient pour la réalité la plus évidente est le produit sédimenté d'une activité humaine continue, non une donnée déjà là.", ex: "Une frontière nationale, tracée un jour sur une carte, aujourd'hui vécue comme une donnée aussi naturelle qu'un fleuve." },
+      { id: 'institutionnalisation-des-pratiques', t: 'Institutionnalisation des pratiques', year: '1966', simple: "Des actions répétées et mutuellement attendues finissent par se figer en institutions, transmissibles à ceux qui n'ont pas participé à leur origine.", ex: "Un pli laissé par des locataires successifs sur qui sort les poubelles, devenu une règle tacite que personne n'a jamais votée." },
+      { id: 'externalisation', t: 'Externalisation', year: '1966', simple: "L'activité humaine se déverse sans cesse dans le monde, y déposant des produits — outils, mots, institutions — qui n'existaient pas avant elle.", ex: "Un jargon de métier forgé par une première équipe, qui n'existait dans aucun dictionnaire avant qu'elle ne le crée pour se comprendre entre elle." },
+      { id: 'objectivation', t: 'Objectivation', year: '1966', simple: "Les produits de l'activité humaine acquièrent une allure de fait extérieur, indépendant de ceux qui les ont produits.", ex: "Un jour férié, décrété un jour par un gouvernement, vécu des générations plus tard comme une évidence du calendrier." },
+      { id: 'internalisation', t: 'Internalisation', year: '1966', simple: "Le monde social objectivé est réabsorbé par l'individu au point de devenir une part de sa propre conscience.", ex: "Un art de la table transmis sans un mot, qu'on retrouve intact chez l'adulte sans qu'il sache jamais où il l'a appris." },
+      { id: 'socialisation-primaire', t: 'Socialisation primaire', year: '1966', simple: "La première socialisation, vécue dans l'enfance, par laquelle un individu devient membre de la société — la plus décisive et la plus difficile à défaire.", ex: "Une manière de percevoir la générosité ou l'avarice, installée si tôt qu'elle semble relever du caractère plutôt que de l'éducation reçue." },
+      { id: 'socialisation-secondaire', t: 'Socialisation secondaire', year: '1966', simple: "Les socialisations ultérieures, plus partielles et plus révisables, qui donnent accès à des rôles et des savoirs spécialisés.", ex: "Les usages d'un laboratoire de recherche, appris en thèse, qu'on laisse de côté sans drame en changeant ensuite de discipline." },
+      { id: 'realite-objective', t: 'Réalité objective', year: '1966', simple: "La société vécue comme un ordre de choses extérieur, contraignant et antérieur à chaque individu qui y naît.", ex: "Un règlement de copropriété, rédigé avant l'arrivée du dernier acheteur, qui s'impose à lui comme une donnée du lieu." },
+      { id: 'realite-subjective', t: 'Réalité subjective', year: '1966', simple: "La société vécue de l'intérieur, telle qu'un individu se l'approprie et se construit lui-même à travers elle.", ex: "Le même règlement de copropriété, vécu par l'un comme une protection bienvenue et par l'autre comme une entrave absurde." },
+      { id: 'univers-symboliques', t: 'Univers symboliques', year: '1966', simple: "Les grandes constructions de sens — religieuses, philosophiques, scientifiques — qui intègrent tous les ordres institutionnels en un tout cohérent.", ex: "Une mythologie d'entreprise, transmise aux nouvelles recrues, qui relie fondateurs, valeurs et objectifs en un seul récit cohérent." },
+      { id: 'legitimation', t: 'Légitimation', year: '1966', simple: "Le travail, à plusieurs niveaux, par lequel les institutions déjà là se voient données une explication et une justification.", ex: "Une charte d'entreprise distribuée aux débutants, qui explique et justifie des usages dont personne d'autre ne se souvient plus l'origine." },
+    ],
+    oeuvres: [{ y: '1966', t: 'La Construction sociale de la réalité' }, { y: '1967', t: 'The Sacred Canopy (P. Berger)' }, { y: '1967', t: 'The Invisible Religion (T. Luckmann)' }],
+    citations: [{ t: "La société est un produit humain. La société est une réalité objective. L'homme est un produit social.", src: 'La Construction sociale de la réalité, 1966' }],
+    critiques: ["Des critiques marxistes leur reprochent de décrire comment une institution se maintient sans jamais dire pourquoi ce sont certaines constructions, plutôt que d'autres, qui l'emportent.", "L'idée d'une réalité entièrement construite a été accusée d'ouvrir la voie à un relativisme qui peine à rendre compte des contraintes matérielles et biologiques les moins négociables.", "La théorie, très générale, offre peu d'outils d'enquête concrets pour observer sur le terrain les processus qu'elle décrit."],
+    up: ['schutz', 'weber', 'durkheim'], down: [], x: 30, y: 850,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -703,7 +745,26 @@ export const EXTRA = {
       "Gilles Deleuze — les sociétés de contrôle, lues comme le prolongement des sociétés disciplinaires",
     ],
   },
+  schutz: {
+    prenom: 'Alfred', nom: 'Schutz', disc: ["Philosophie — la phénoménologie de Husserl, importée en sociologie", "Économie — banquier de profession toute sa vie, sociologue en dehors des heures de bureau", "Droit — sa formation initiale, à Vienne"], biblio: ['T. Luckmann, Alfred Schutz, Circé, 2012', 'M. Barber, The Participating Citizen: A Biography of Alfred Schutz, SUNY Press, 2004'],
+    portrait: { kind: 'monogram', alt: 'Monogramme d’Alfred Schutz', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Edmund Husserl — la phénoménologie, dont Schutz importe les outils en sociologie",
+      "Henri Bergson — la durée vécue, matrice de l'expérience du temps chez Schutz",
+      "Harold Garfinkel — son élève à la New School, fondateur de l'ethnométhodologie",
+      "Peter Berger et Thomas Luckmann — La Construction sociale de la réalité, 1966, prolongement direct de son œuvre",
+    ],
+  },
+  'berger-luckmann': {
+    prenom: '—', nom: 'Peter L. Berger et Thomas Luckmann', disc: ["Sociologie de la connaissance — élargie de la seule idéologie à toute réalité sociale", "Sociologie de la religion — Berger et Luckmann la prolongent chacun séparément après 1966", "Anthropologie philosophique — Gehlen et l'homme comme être institutionnellement inachevé"], biblio: ['D. Vidal, préface à La Construction sociale de la réalité, Armand Colin, 2012', "P. Corcuff, Les Nouvelles Sociologies, Armand Colin, 1995"],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Peter Berger et Thomas Luckmann', credit: "Aucun portrait : la fiche porte sur deux auteurs conjoints, pas sur une seule personne." },
+    horsCorpus: [
+      "Karl Mannheim — la sociologie de la connaissance, dont Berger et Luckmann élargissent le programme",
+      "Arnold Gehlen — l'homme comme être inachevé, qui a besoin d'institutions pour stabiliser son monde",
+      "Edmund Husserl — la phénoménologie, reçue via l'enseignement de Schutz à la New School",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0]];
 

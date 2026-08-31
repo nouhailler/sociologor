@@ -8288,4 +8288,577 @@ export const CONCEPTS = {
       { p: '1984', f: "Le Souci de soi en donne le traitement le plus développé, à travers l'éthique gréco-romaine." },
     ],
   },
+
+  /* — Alfred Schutz — */
+  'stock-de-connaissances': {
+    detaille: [
+      "Le stock de connaissances est le fonds d'expériences, d'habitudes, de savoir-faire et de croyances qu'un acteur a accumulé tout au long de sa vie, et qu'il mobilise à chaque instant pour interpréter une situation nouvelle sans avoir à repartir de zéro.",
+      "Ce stock n'est ni fixe ni homogène : certaines connaissances y sont claires et bien maîtrisées, d'autres restées vagues, à peine esquissées, suffisantes pourtant pour agir sans en avoir vraiment besoin de plus.",
+      "Il se renouvelle sans cesse : chaque expérience nouvelle vient s'y déposer, confirmant ou corrigeant ce qui s'y trouvait déjà, sans que l'acteur en ait le plus souvent conscience.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz cherche à préciser, contre l'abstraction du sens chez Weber, comment un acteur concret dispose déjà, à chaque instant, d'un fonds de savoirs qui rend son action possible et intelligible.",
+    },
+    exemples: [
+      "Un cuisinier expérimenté qui sait d'instinct rattraper un plat raté, sans jamais avoir appris cette recette précise.",
+      "Un habitué d'une ville qui sait éviter certains carrefours aux heures de pointe, sans avoir jamais consulté aucune carte du trafic.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+    ],
+    associes: ['typification', 'sens-commun', 'monde-vecu'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'un stock de connaissances aussi individuel et biographique ne suffit pas à expliquer la contrainte proprement collective des faits sociaux, extérieure à chaque conscience particulière.",
+      "Le concept dit peu de la façon dont ce stock, malgré sa dimension biographique, se trouve en réalité très largement partagé au sein d'un même groupe social.",
+      "Il reste difficile à observer directement : on l'infère surtout des conduites qu'il est censé expliquer.",
+    ],
+    evolution: [
+      { p: '1913', f: "Weber pose la compréhension du sens comme méthode, sans expliquer d'où ce sens vient pour l'acteur lui-même." },
+      { p: '1932', f: "Schutz comble ce manque avec le stock de connaissances, emprunté à la phénoménologie de Husserl." },
+      { p: '1966', f: "Berger et Luckmann en généralisent l'usage dans leur théorie de la construction sociale de la réalité." },
+    ],
+  },
+  'typification': {
+    detaille: [
+      "La typification est l'opération par laquelle un acteur comprend une situation, un objet ou une personne nouvelle en la rapportant à un type déjà connu de son stock de connaissances, plutôt qu'en la découvrant entièrement pour la première fois.",
+      "Sans elle, chaque situation exigerait une interprétation entièrement neuve, ce qu'aucune vie quotidienne ne pourrait supporter : reconnaître d'emblée un « facteur », un « guichet » ou une « salle d'attente » permet d'agir immédiatement, sans avoir à examiner chaque détail particulier.",
+      "Ces types ne sont pas purement individuels : une bonne part en est transmise socialement, par le langage et l'éducation, ce qui permet à des acteurs différents de reconnaître, à peu près de la même manière, des situations qu'ils n'ont pourtant jamais vécues ensemble.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz généralise et systématise un usage déjà présent chez Weber avec l'idéal-type, mais déplacé du seul chercheur vers l'acteur ordinaire, qui typifie en permanence pour pouvoir simplement vivre au quotidien.",
+    },
+    exemples: [
+      "Reconnaître d'un coup d'œil un « guichet de banque », sans avoir besoin d'observer en détail ce précis guichet-ci.",
+      "S'attendre à ce qu'un « facteur » dépose du courrier, sans jamais avoir rencontré celui qui occupe ce poste ce jour-là.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+    ],
+    associes: ['stock-de-connaissances', 'sens-commun'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait qu'expliquer une action suppose de reconstituer les raisons précises d'un acteur singulier, non de la ramener d'emblée à un type général qui risque d'en effacer la spécificité.",
+      "Le concept dit peu des moments où une typification échoue franchement, révélant que la situation ne correspondait pas au type qu'on lui avait prêté.",
+      "Il suppose des types suffisamment stables et partagés, ce qui vaut moins bien dans des situations inédites ou entre personnes de mondes sociaux très éloignés.",
+    ],
+    evolution: [
+      { p: '1913', f: "Weber emploie l'idéal-type comme outil de recherche du sociologue." },
+      { p: '1932', f: "Schutz généralise la typification comme opération de tout acteur ordinaire, non plus seulement du chercheur." },
+      { p: '1966', f: "Berger et Luckmann en font un pilier de la construction sociale de la réalité." },
+    ],
+  },
+  'sens-commun': {
+    detaille: [
+      "Le sens commun est le savoir pratique, non réfléchi et tenu pour allant de soi, que tout acteur mobilise pour se débrouiller dans la vie de tous les jours — distinct du savoir savant, qui vise au contraire à mettre ce sens commun lui-même en question.",
+      "Ce savoir n'est ni faux ni naïf : il suffit parfaitement à l'action pratique, qui n'a pas besoin d'une connaissance exacte et vérifiée pour fonctionner, seulement d'une connaissance suffisamment fiable pour la situation présente.",
+      "Schutz en tire une conséquence méthodologique décisive : la sociologie savante ne part jamais de rien, elle construit ses propres concepts par-dessus ceux que les acteurs eux-mêmes emploient déjà pour comprendre leur monde.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz s'oppose à une sociologie qui traiterait le sens commun comme un simple obstacle, une pré-connaissance naïve à corriger par la science, pour en faire au contraire l'objet même que la sociologie doit prendre au sérieux.",
+    },
+    exemples: [
+      "Savoir sans y penser qu'il faut faire la queue à la boulangerie, sans qu'aucun panneau ne l'indique.",
+      "Comprendre immédiatement qu'un « bonjour » lancé sans regarder n'attend pas de vraie réponse détaillée.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+      { y: '1944', t: "L'Étranger" },
+    ],
+    associes: ['stock-de-connaissances', 'typification'],
+    opposes: ['ideal-type'],
+    critiques: [
+      "Weber objecterait qu'un idéal-type, construit délibérément par le chercheur pour rester neutre et rigoureux, ne se confond pas avec les catégories spontanées et peu contrôlées du sens commun.",
+      "Le concept dit peu des cas où le sens commun se révèle profondément erroné, voire dangereux, sans qu'aucun mécanisme interne ne permette de le corriger de lui-même.",
+      "Il suppose un sens commun relativement homogène au sein d'un groupe, ce que des sociétés très fragmentées ne garantissent plus aussi facilement.",
+    ],
+    evolution: [
+      { p: '1932', f: "Schutz distingue le savoir de sens commun du savoir savant, et fait du premier l'objet propre de la sociologie compréhensive." },
+      { p: '1944', f: "L'Étranger montre ce qui arrive quand le sens commun d'un nouvel arrivant ne coïncide plus avec celui du groupe qu'il rejoint." },
+      { p: '1967', f: "Garfinkel en fait le point de départ de l'ethnométhodologie, par des expériences de rupture délibérée du sens commun." },
+    ],
+  },
+  'intersubjectivite': {
+    detaille: [
+      "L'intersubjectivité est l'hypothèse fondamentale, jamais vérifiée mais toujours pratiquement agie, que les autres perçoivent le monde à peu près comme nous le percevons nous-mêmes — Schutz parle de thèse générale de la réciprocité des perspectives.",
+      "Chaque acteur suppose que, s'il changeait de place avec un autre, il verrait sensiblement la même chose que celui-ci voit ; et que les différences entre leurs points de vue respectifs restent, pour l'essentiel de la vie pratique, sans grande importance.",
+      "Cette hypothèse n'a rien d'un fait démontré : elle reste une idéalisation commode, indispensable pourtant à toute vie sociale, sans laquelle même l'échange le plus banal deviendrait incertain à chaque instant.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz reprend et retravaille une question posée par Husserl — comment un sujet accède-t-il à l'existence d'autres sujets ? — pour en faire la condition de possibilité de toute vie sociale ordinaire.",
+    },
+    exemples: [
+      "Deux passagers qui se cèdent spontanément le passage dans un couloir étroit, chacun anticipant ce que l'autre va faire.",
+      "Une conversation où chacun suppose, sans jamais le vérifier, que l'autre attache à peu près le même sens aux mots employés.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+    ],
+    associes: ['sens-commun', 'pertinence'],
+    opposes: ['atomisation-sociale'],
+    critiques: [
+      "Le concept suppose une réciprocité largement acquise, ce qui masque les cas où les perspectives des acteurs sont trop éloignées pour que l'hypothèse tienne vraiment.",
+      "Il reste difficile de démontrer empiriquement que cette réciprocité fonctionne réellement, plutôt que de simplement la présupposer comme condition théorique.",
+      "Garfinkel objectera plus tard qu'il faut aussi étudier ce qui se passe précisément quand cette hypothèse échoue, ce que Schutz théorise sans jamais vraiment le mettre à l'épreuve empirique.",
+    ],
+    evolution: [
+      { p: '1913–1929', f: "Husserl pose le problème philosophique de l'accès à autrui, matrice de la question." },
+      { p: '1932', f: "Schutz en tire la thèse de la réciprocité des perspectives, condition pratique de la vie sociale ordinaire." },
+      { p: '1967', f: "Garfinkel teste expérimentalement les limites de cette réciprocité par la rupture délibérée des attentes ordinaires." },
+    ],
+  },
+  'pertinence': {
+    detaille: [
+      "La pertinence désigne, chez Schutz, le principe qui détermine ce qu'un acteur remarque, juge important ou tient pour problématique dans une situation donnée — un principe qui dépend toujours de ses intérêts pratiques et de sa situation biographique, jamais d'une importance donnée d'avance dans les choses elles-mêmes.",
+      "Un même objet, une même information peuvent ainsi être centraux pour l'un et complètement indifférents pour l'autre, selon ce que chacun est en train de faire et ce qu'il cherche à accomplir.",
+      "Schutz distingue plusieurs systèmes de pertinence — ce qui mérite d'être nommé, ce qui mérite d'être interprété, ce qui motive l'action — qui structurent ensemble, sans que l'acteur en ait toujours conscience, l'attention qu'il porte au monde.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz développe cette notion pour expliquer pourquoi deux acteurs, placés dans une situation objectivement identique, peuvent pourtant y voir des choses complètement différentes selon leurs intérêts respectifs.",
+    },
+    exemples: [
+      "Un même café bruyant, remarqué par un client qui veut travailler et jamais par un autre venu seulement discuter.",
+      "Une odeur de fumée, insignifiante pour un fumeur et immédiatement alarmante pour quiconque vient d'installer un détecteur d'incendie.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+      { y: '1970', t: 'Reflections on the Problem of Relevance (posthume)' },
+    ],
+    associes: ['intersubjectivite', 'motifs-en-vue-de'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Comte objecterait qu'une sociologie digne de ce nom doit chercher des régularités observables, valables indépendamment du point de vue de tel ou tel acteur particulier.",
+      "Le concept, très général, dit peu de la manière dont ces systèmes de pertinence eux-mêmes se forment et évoluent au cours d'une vie.",
+      "Il suppose une hiérarchie d'intérêts relativement stable chez l'acteur, ce qui vaut moins bien dans les situations d'urgence où les priorités se recomposent en un instant.",
+    ],
+    evolution: [
+      { p: '1932', f: "Le Sens vécu esquisse la notion de pertinence à travers l'analyse de l'attention à la vie." },
+      { p: '1970', f: "Les Reflections on the Problem of Relevance, publiées après sa mort, en donnent le traitement le plus systématique." },
+    ],
+  },
+  'motifs-en-vue-de': {
+    detaille: [
+      "Le motif en-vue-de est la raison tournée vers l'avenir qui pousse un acteur à agir : ce qu'il veut obtenir par son acte, présent à son esprit au moment même où il agit, comme un projet qu'il cherche à réaliser.",
+      "Schutz insiste sur cette dimension prospective de l'action : agir, ce n'est jamais seulement réagir à ce qui précède, c'est se projeter vers un état de choses qu'on veut voir advenir, et organiser sa conduite présente en fonction de ce but futur.",
+      "Ce motif reste, contrairement au motif parce-que, accessible à l'acteur lui-même pendant qu'il agit : il peut en général dire, si on le lui demande sur le moment, en vue de quoi il fait ce qu'il fait.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz précise la notion wébérienne de sens visé en distinguant deux structures temporelles différentes du motif, l'une tournée vers l'avenir, l'autre vers le passé — une distinction que Weber n'avait jamais formulée aussi nettement.",
+    },
+    exemples: [
+      "Partir plus tôt le matin en-vue-d'attraper un train précis, une intention présente à l'esprit au moment même de partir.",
+      "Réviser un examen en-vue-d'obtenir un diplôme, un but que l'étudiant pourrait énoncer à tout moment de sa révision.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+    ],
+    associes: ['motifs-parce-que', 'pertinence'],
+    opposes: ['effets-pervers'],
+    critiques: [
+      "Boudon objecterait qu'un motif en-vue-de individuel, aussi bien identifié soit-il, ne suffit jamais à prédire ce que produira, une fois agrégé à des milliers d'autres, l'ensemble des actions individuelles.",
+      "Le concept suppose une clarté du but que l'introspection ordinaire ne garantit pas toujours : bien des acteurs agissent sans savoir précisément ce qu'ils visent.",
+      "Il dit peu des motifs multiples et parfois contradictoires qui peuvent coexister chez un même acteur au même moment.",
+    ],
+    evolution: [
+      { p: '1913', f: "Weber pose le sens visé par l'acteur sans en distinguer les structures temporelles." },
+      { p: '1932', f: "Schutz sépare le motif en-vue-de, tourné vers l'avenir, du motif parce-que, tourné vers le passé." },
+    ],
+  },
+  'motifs-parce-que': {
+    detaille: [
+      "Le motif parce-que est la raison tournée vers le passé qui explique pourquoi un acteur en est venu à agir comme il l'a fait — une explication biographique et causale, reconstituée après coup plutôt que présente à l'esprit de l'acteur pendant qu'il agit.",
+      "Contrairement au motif en-vue-de, le motif parce-que échappe le plus souvent à la conscience immédiate de l'acteur : on comprend rarement, sur l'instant, tout ce qui, dans son propre passé, l'a rendu capable ou enclin à agir ainsi.",
+      "Schutz en tire une conséquence méthodologique importante : seul un regard rétrospectif, qu'il soit celui de l'acteur revenant sur sa propre trajectoire ou celui d'un observateur extérieur, peut vraiment reconstituer ces motifs parce-que.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive',
+      annee: '1932',
+      contexte:
+        "Schutz introduit cette seconde catégorie de motifs pour compléter le motif en-vue-de, et donner ainsi à la sociologie compréhensive une distinction que Weber avait laissée implicite entre projet et explication causale.",
+    },
+    exemples: [
+      "Comprendre, des années plus tard, qu'on a choisi un métier parce qu'un proche l'exerçait déjà, sans y avoir songé sur le moment.",
+      "Un thérapeute qui aide un patient à identifier, après coup, ce qui l'a poussé à réagir si vivement dans une situation donnée.",
+    ],
+    oeuvres: [
+      { y: '1932', t: 'Le Sens vécu, essai sur les fondements de la sociologie compréhensive' },
+    ],
+    associes: ['motifs-en-vue-de', 'stock-de-connaissances'],
+    opposes: ['rationalite-cognitive'],
+    critiques: [
+      "Boudon objecterait qu'un motif reconstitué seulement après coup, et inaccessible à l'acteur pendant qu'il agit, se prête mal à l'idée de bonnes raisons que l'acteur pourrait lui-même avancer et défendre.",
+      "Le concept, en reportant l'explication vers un regard rétrospectif, s'expose au risque de reconstruire un motif qui arrange après coup plus qu'il n'explique vraiment.",
+      "Il dit peu de la manière de distinguer une reconstruction fidèle d'une simple rationalisation biographique construite après l'action.",
+    ],
+    evolution: [
+      { p: '1913', f: "Weber laisse implicite la distinction entre projet d'action et explication causale du sens visé." },
+      { p: '1932', f: "Schutz formalise le motif parce-que en complément du motif en-vue-de." },
+    ],
+  },
+
+  /* — Peter Berger & Thomas Luckmann — */
+  'construction-sociale-de-la-realite': {
+    detaille: [
+      "Ce que chaque société tient pour la réalité la plus évidente — ses institutions, ses catégories, ses évidences — n'est pas une donnée qui existerait indépendamment des hommes : c'est le produit sédimenté d'une activité humaine continue, répétée par des générations qui en ont peu à peu perdu la trace.",
+      "Berger et Luckmann décrivent ce processus comme un cycle en trois temps, jamais interrompu : l'homme externalise son activité dans le monde, ce produit s'objective en une réalité qui semble extérieure et donnée, puis cette réalité est internalisée par les générations suivantes comme si elle avait toujours existé.",
+      "Ce cycle réconcilie deux thèses que la sociologie tenait pour rivales : Durkheim a raison de dire que la société est une chose extérieure et contraignante, et Weber a raison de dire qu'elle n'existe que par le sens que les acteurs y mettent — les deux sont vrais, à des moments différents du même cycle.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann, tous deux formés à la phénoménologie de Schutz à la New School, écrivent un traité de sociologie de la connaissance qui étend ce champ, jusque-là centré sur les idéologies savantes, à la réalité sociale tout entière, y compris la plus ordinaire.",
+    },
+    exemples: [
+      "Une frontière nationale, tracée un jour sur une carte par décision humaine, aujourd'hui vécue comme une donnée aussi naturelle qu'un fleuve.",
+      "Une monnaie, simple accord social au départ, devenue une réalité si évidente que sa valeur semble aller de soi.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['externalisation', 'objectivation', 'internalisation'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Comte objecterait qu'une sociologie digne de ce nom doit chercher des lois observables, non traiter la réalité sociale comme un pur artefact toujours révisable.",
+      "Le concept dit peu de ce qui détermine, parmi plusieurs constructions possibles, celle qui finit par s'imposer plutôt qu'une autre.",
+      "L'idée d'une réalité entièrement construite a été accusée d'ouvrir la voie à un relativisme qui peine à intégrer les contraintes matérielles et biologiques les moins négociables.",
+    ],
+    evolution: [
+      { p: '1929', f: "Mannheim fonde la sociologie de la connaissance, centrée sur les idéologies et les visions du monde savantes." },
+      { p: '1932', f: "Schutz pose les bases phénoménologiques dont Berger et Luckmann partiront." },
+      { p: '1966', f: "La Construction sociale de la réalité étend le programme de Mannheim à toute réalité sociale, y compris la plus quotidienne." },
+    ],
+  },
+  'institutionnalisation-des-pratiques': {
+    detaille: [
+      "L'institutionnalisation est le processus par lequel des actions répétées et réciproquement attendues — que tel type d'acteur accomplira tel type d'action dans telle situation — se figent en institutions, transmissibles à des individus qui n'ont pris part ni à leur origine ni à leur première négociation.",
+      "Ce processus commence par l'habitualisation : répéter une action en réduit le coût cognitif, la rend automatique, disponible pour être reproduite sans avoir à la réinventer. Dès que deux acteurs au moins se typifient réciproquement de cette manière, une institution est en germe.",
+      "Une fois transmise à une nouvelle génération, qui n'a pas participé à sa négociation initiale, l'institution change de statut : elle n'apparaît plus comme un arrangement pratique entre personnes, mais comme un fait déjà là, extérieur et contraignant — ce que Berger et Luckmann appellent son objectivation.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann veulent expliquer comment naissent les institutions sans invoquer ni contrat originaire ni volonté collective explicite : la simple répétition typifiée d'actions entre quelques acteurs suffit à en amorcer la genèse.",
+    },
+    exemples: [
+      "Une habitude de bureau instaurée par deux collègues, devenue une procédure que les nouveaux arrivants suivent sans en connaître l'origine.",
+      "Un rituel familial de fête, inventé sans intention particulière, devenu une tradition que les enfants perpétuent sans savoir qui l'a commencé.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['externalisation', 'legitimation'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait qu'une pratique qui se répète et se transmet reste, à chaque étape, le résultat de décisions individuelles qu'il vaudrait mieux reconstruire une par une plutôt que de les dissoudre dans un processus impersonnel.",
+      "Le concept dit peu des institutions imposées d'emblée par une autorité, sans passer par la lente habitualisation qu'il décrit.",
+      "Il porte le même mot qu'un usage bien différent en sociologie de la déviance — l'installation d'un individu dans une institution fermée — ce qui peut prêter à confusion.",
+    ],
+    evolution: [
+      { p: '1937', f: "Hughes étudie déjà, à Chicago, comment des pratiques professionnelles se stabilisent en routines transmissibles." },
+      { p: '1966', f: "Berger et Luckmann formalisent l'institutionnalisation comme fondée sur l'habitualisation et la typification réciproque." },
+    ],
+  },
+  'externalisation': {
+    detaille: [
+      "L'externalisation est le premier moment du cycle dialectique : l'activité humaine, physique et mentale, se déverse continuellement dans le monde, y produisant des objets, des mots, des institutions qui n'existaient pas avant elle.",
+      "Berger et Luckmann reprennent ici une intuition héritée de Marx et de la tradition hégélienne : l'homme n'est pleinement lui-même qu'en s'extériorisant dans le monde, en y laissant une empreinte de son activité — un geste sans lequel aucune culture, aucune institution ne pourrait exister.",
+      "Cette externalisation est une nécessité anthropologique plus qu'un choix : à la différence des autres espèces, l'être humain naît biologiquement inachevé et doit lui-même se construire un monde stable pour pouvoir simplement survivre et se reproduire.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann s'appuient sur l'anthropologie philosophique de Gehlen, pour qui l'homme, dépourvu d'instincts fixes, doit compenser cette absence en fabriquant lui-même, par son activité, un environnement institutionnel stable.",
+    },
+    exemples: [
+      "Un rite de deuil inventé par une communauté pour affronter la mort, qui n'existait dans la nature ni dans aucun texte avant d'être créé.",
+      "Un outil fabriqué pour résoudre un problème précis, qui n'avait aucune existence avant que quelqu'un ne le conçoive.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['construction-sociale-de-la-realite', 'objectivation'],
+    opposes: ['reification'],
+    critiques: [
+      "Le concept, très général, s'applique à peu près à toute activité humaine, ce qui limite sa capacité à distinguer des cas précis les uns des autres.",
+      "Il emprunte à Marx et Hegel un vocabulaire dont Berger et Luckmann assouplissent la portée critique initiale, au risque d'en perdre la charge polémique.",
+      "Il dit peu des cas où l'externalisation échoue : un produit humain qui ne trouve jamais preneur, ou qu'aucune institution ne vient jamais relayer.",
+    ],
+    evolution: [
+      { p: '1807', f: "Hegel pose l'extériorisation comme moment nécessaire de la conscience de soi." },
+      { p: '1844', f: "Marx en fait le travail externalisé, dont l'aliénation est le détournement pathologique." },
+      { p: '1966', f: "Berger et Luckmann généralisent la notion à toute activité humaine productrice de monde." },
+    ],
+  },
+  'objectivation': {
+    detaille: [
+      "L'objectivation est le second moment du cycle : les produits externalisés de l'activité humaine acquièrent une allure de fait, de chose extérieure, indépendante et donnée — au point que ceux qui les rencontrent ensuite n'y voient plus la trace d'une production humaine.",
+      "Le langage en est, pour Berger et Luckmann, le vecteur le plus puissant : nommer une pratique, c'est déjà commencer à en faire une catégorie stable, transmissible, que d'autres pourront reconnaître sans avoir eux-mêmes participé à sa création.",
+      "Cette objectivation n'est jamais un mensonge ni une illusion au sens fort : le produit humain devient réellement contraignant, au même titre qu'un fait extérieur, précisément parce qu'il circule désormais indépendamment de ceux qui l'ont fait naître.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann s'appuient sur la théorie du langage comme vecteur d'objectivation, empruntée à la fois à la phénoménologie de Schutz et à la linguistique, pour expliquer comment un fait social devient une donnée transmissible.",
+    },
+    exemples: [
+      "Une règle de circulation, inventée par des ingénieurs, vécue ensuite par tous comme une contrainte du monde plutôt que comme une décision humaine.",
+      "Un mot nouveau, créé pour désigner une pratique inédite, qui finit par désigner cette pratique comme si elle avait toujours existé sous ce nom.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['externalisation', 'internalisation'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait qu'un fait, même devenu contraignant en pratique, reste toujours le résultat de décisions individuelles qu'on peut en principe reconstituer une par une.",
+      "Le concept se rapproche fortement du fait social de Durkheim, sans que Berger et Luckmann précisent toujours ce qui, précisément, distingue les deux notions.",
+      "Il dit peu du moment où l'objectivation se défait, quand une institution redevient visible comme construction humaine plutôt que comme donnée.",
+    ],
+    evolution: [
+      { p: '1895', f: "Durkheim pose le fait social comme extérieur et contraignant, matrice de la notion." },
+      { p: '1966', f: "Berger et Luckmann en détaillent le mécanisme précis : externalisation, puis objectivation par le langage." },
+    ],
+  },
+  'internalisation': {
+    detaille: [
+      "L'internalisation est le troisième moment du cycle : le monde social déjà objectivé est réabsorbé par l'individu, au fil de la socialisation, au point de devenir une part constitutive de sa propre conscience plutôt qu'une réalité simplement subie de l'extérieur.",
+      "Ce mouvement n'est jamais passif au sens d'un simple enregistrement : internaliser suppose de faire sien un monde qu'on n'a pas créé, de s'y reconnaître comme un membre légitime, au point d'agir désormais depuis l'intérieur de ce monde plutôt qu'en spectateur.",
+      "L'internalisation referme le cycle : l'individu qui a intériorisé le monde social en devient à son tour, sans toujours le savoir, un agent d'externalisation — reproduisant par ses propres actions les institutions qu'il a lui-même reçues.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann s'appuient sur la psychologie sociale de Mead pour décrire comment un individu construit son identité en internalisant le regard et les attentes des autres, réunis dans la figure de l'« autrui généralisé ».",
+    },
+    exemples: [
+      "Une hiérarchie de valeurs familiale, jamais énoncée comme telle, que l'on retrouve pourtant intacte dans ses propres réflexes d'adulte.",
+      "Un sens de la politesse acquis sans leçon explicite, devenu un réflexe qu'on applique désormais sans y penser.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['objectivation', 'socialisation-primaire', 'habitus'],
+    opposes: ['agentivite'],
+    critiques: [
+      "Giddens objecterait qu'un individu n'internalise jamais aussi passivement le monde social : il garde, même dans la socialisation la plus poussée, une capacité d'agir autrement.",
+      "Le concept, très proche de l'habitus de Bourdieu, ne dit pas toujours nettement ce qui distingue les deux notions, élaborées de façon largement indépendante.",
+      "Il dit peu des internalisations partielles ou ratées, où un individu n'adopte jamais complètement le monde qu'on cherche à lui transmettre.",
+    ],
+    evolution: [
+      { p: '1934', f: "Mead décrit la formation du soi par l'internalisation du regard d'autrui, matrice de la notion." },
+      { p: '1966', f: "Berger et Luckmann en font le troisième moment du cycle de la construction sociale de la réalité." },
+    ],
+  },
+  'socialisation-primaire': {
+    detaille: [
+      "La socialisation primaire est la première et la plus décisive des socialisations : celle par laquelle un enfant devient membre de la société, en internalisant un monde présenté par ses proches non comme une possibilité parmi d'autres, mais comme la réalité elle-même, la seule concevable.",
+      "Elle se distingue par sa charge affective intense : l'enfant internalise le monde de ses parents, ou de ceux qui en tiennent lieu, précisément parce qu'il s'identifie émotionnellement à eux, non par un calcul ou une évaluation critique dont il serait de toute façon incapable.",
+      "Cette socialisation laisse une empreinte particulièrement difficile à défaire : le monde qu'elle installe se vit comme allant de soi, avec une évidence qu'aucune socialisation ultérieure ne parvient tout à fait à retrouver.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann distinguent la socialisation primaire de la socialisation secondaire pour expliquer pourquoi les identités et les évidences installées dans l'enfance résistent si fortement au changement, à la différence des savoirs plus spécialisés acquis ensuite.",
+    },
+    exemples: [
+      "Une langue maternelle, apprise sans effort conscient, qui reste la langue dans laquelle on continue de compter ou de rêver toute sa vie.",
+      "Un sentiment de sécurité ou d'insécurité de base, installé dans la petite enfance, qui continue de colorer les relations bien après qu'on en a oublié l'origine.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['socialisation-secondaire', 'internalisation', 'realite-subjective'],
+    opposes: ['rationalite-cognitive'],
+    critiques: [
+      "Boudon objecterait qu'une socialisation, aussi précoce soit-elle, laisse toujours une place à un travail de raisons, même modeste, que le concept tend à minimiser au profit du seul affect.",
+      "Le concept, centré sur la famille occidentale moderne, se transpose diversement à des configurations familiales très différentes, notamment celles à parentalité élargie.",
+      "Il dit peu des cas où la socialisation primaire elle-même se déroule dans des conditions de rupture ou d'instabilité, sans qu'aucun monde stable ne soit jamais vraiment transmis.",
+    ],
+    evolution: [
+      { p: '1902', f: "Cooley décrit le « soi-miroir », formé dans le regard des proches, prémisse de la socialisation primaire." },
+      { p: '1955', f: "Parsons théorise la socialisation dans le cadre du système social et de la famille nucléaire." },
+      { p: '1966', f: "Berger et Luckmann distinguent socialisation primaire et secondaire, et en précisent le mécanisme phénoménologique." },
+    ],
+  },
+  'socialisation-secondaire': {
+    detaille: [
+      "La socialisation secondaire regroupe toutes les acquisitions ultérieures à la socialisation primaire : l'apprentissage de rôles et de savoirs spécifiques à des institutions particulières — un métier, une discipline, une organisation — que l'individu n'a pas besoin d'internaliser avec la même charge affective totale.",
+      "Elle repose sur des sous-mondes plus restreints, souvent techniques, dont le vocabulaire et les évidences propres ne remettent en général pas en cause le monde de base déjà installé par la socialisation primaire.",
+      "Contrairement à la première, elle reste partiellement réversible : on peut, dans une certaine mesure, désapprendre ou remplacer une socialisation secondaire — changer de métier, de discipline — sans que cela ébranle l'identité la plus fondamentale de la personne.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann introduisent cette distinction pour expliquer pourquoi certains apprentissages, notamment professionnels, restent plus superficiels et plus révisables que les évidences installées dans la petite enfance.",
+    },
+    exemples: [
+      "Le vocabulaire technique d'un métier, appris à l'âge adulte, qu'on peut au besoin réapprendre autrement en changeant de profession.",
+      "Les codes d'une discipline universitaire, acquis pendant les études, qui coexistent sans peine avec des évidences familiales installées bien avant eux.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['socialisation-primaire', 'univers-symboliques'],
+    opposes: ['habitus'],
+    critiques: [
+      "Bourdieu objecterait qu'un apprentissage professionnel, aussi tardif soit-il, s'inscrit toujours dans un habitus déjà façonné, qui en oriente la réception plus qu'il ne le laisse entendre.",
+      "La frontière entre socialisation primaire et secondaire reste parfois difficile à tracer, notamment pour les apprentissages qui débutent tôt mais se poursuivent à l'âge adulte.",
+      "Le concept dit peu des socialisations secondaires si intenses qu'elles finissent par rivaliser avec la socialisation primaire elle-même, comme dans certaines conversions religieuses.",
+    ],
+    evolution: [
+      { p: '1966', f: "Berger et Luckmann distinguent la socialisation secondaire de la primaire, à partir de sa moindre charge affective." },
+      { p: '1961', f: "Goffman avait déjà, dans Asiles, décrit des resocialisations institutionnelles radicales, proches d'une nouvelle socialisation primaire." },
+    ],
+  },
+  'realite-objective': {
+    detaille: [
+      "La réalité objective est la société telle qu'elle apparaît à chaque individu qui y naît : un ordre déjà là, extérieur, contraignant, dont il n'a décidé ni les règles ni les catégories, et qui continuera d'exister indépendamment de sa propre existence.",
+      "Berger et Luckmann insistent sur son caractère facticiel : elle ne se discute pas d'emblée, elle s'impose comme un cadre à l'intérieur duquel chacun doit apprendre à agir, un peu comme une langue déjà constituée s'impose à quiconque veut simplement se faire comprendre.",
+      "Cette réalité objective n'a rien d'éternel malgré son apparence : elle est le produit sédimenté d'une histoire d'externalisations et d'objectivations, oubliée comme telle, mais toujours en principe susceptible d'être à nouveau transformée par l'activité humaine.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann consacrent la deuxième partie de leur ouvrage, « La société comme réalité objective », à décrire ce visage de la vie sociale, avant de lui opposer, dans la troisième partie, son pendant subjectif.",
+    },
+    exemples: [
+      "Un calendrier scolaire, fixé bien avant la naissance de chaque élève, qui s'impose à lui comme une donnée du monde.",
+      "Une devise nationale, gravée sur les frontons publics, présente et contraignante bien avant qu'aucun citoyen n'en ait discuté le contenu.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['objectivation', 'institutionnalisation-des-pratiques', 'legitimation'],
+    opposes: ['realite-subjective'],
+    critiques: [
+      "Le concept reprend largement le fait social de Durkheim, sans toujours préciser ce qu'il ajoute de propre à cette notion déjà bien établie.",
+      "Il dit peu des désaccords ouverts sur ce qui compte, à un instant donné, comme réalité objective légitime au sein d'une même société.",
+      "L'insistance sur la facticité peut masquer combien cette réalité reste, en pratique, plus fragile et plus contestée que son apparence de solidité ne le suggère.",
+    ],
+    evolution: [
+      { p: '1895', f: "Durkheim pose le fait social comme chose extérieure et contraignante." },
+      { p: '1966', f: "Berger et Luckmann en font le pôle objectif d'un cycle complet, en dialogue constant avec son pôle subjectif." },
+    ],
+  },
+  'realite-subjective': {
+    detaille: [
+      "La réalité subjective est la société vécue de l'intérieur : non plus le cadre extérieur et contraignant, mais la manière dont chaque individu se l'approprie, l'interprète et se construit lui-même à travers elle, au fil de sa propre trajectoire biographique.",
+      "Berger et Luckmann insistent sur le fait que cette appropriation n'est jamais un simple décalque de la réalité objective : deux individus qui internalisent le même monde social le vivent malgré tout chacun à sa manière, selon leur histoire personnelle et les personnes qui les y ont introduits.",
+      "C'est précisément cette réalité subjective qui, une fois agie par un individu devenu adulte, redevient à son tour de l'externalisation — refermant le cycle, puisque chaque individu contribue ainsi, à son échelle, à reproduire ou à légèrement modifier la réalité objective qu'il avait lui-même reçue.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann consacrent la troisième partie de leur ouvrage, « La société comme réalité subjective », à ce pôle intérieur de la construction sociale, en vis-à-vis exact de la réalité objective décrite dans la partie précédente.",
+    },
+    exemples: [
+      "Le même calendrier scolaire, vécu très différemment selon qu'un élève l'aime, le redoute ou n'y pense presque jamais.",
+      "Une même devise nationale, ressentie par certains citoyens comme un idéal vivant et par d'autres comme une formule vide de sens.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['internalisation', 'socialisation-primaire', 'socialisation-secondaire'],
+    opposes: ['realite-objective'],
+    critiques: [
+      "Le concept peine parfois à se distinguer nettement du sens commun de Schutz, dont il reprend largement l'inspiration sans toujours en marquer l'écart précis.",
+      "Il dit peu des tensions ouvertes entre plusieurs réalités subjectives concurrentes au sein d'un même groupe social.",
+      "La distinction avec la réalité objective, utile analytiquement, reste artificielle dans l'expérience vécue, où les deux se confondent le plus souvent sans qu'on les distingue.",
+    ],
+    evolution: [
+      { p: '1932', f: "Schutz pose les bases phénoménologiques de l'expérience subjective du monde social." },
+      { p: '1966', f: "Berger et Luckmann en font le pôle subjectif d'un cycle complet avec la réalité objective." },
+    ],
+  },
+  'univers-symboliques': {
+    detaille: [
+      "Les univers symboliques sont les constructions de sens les plus englobantes qu'une société élabore — religieuses, philosophiques, scientifiques — capables d'intégrer en un tout cohérent tous les ordres institutionnels particuliers, et de donner un sens même aux expériences qui menacent l'ordre établi : la mort, le rêve, la folie.",
+      "Ils fournissent une légitimation ultime : là où une simple justification explique pourquoi telle règle existe, un univers symbolique situe cette règle dans un ordre de sens si vaste qu'il semble englober la totalité de l'existence, passée, présente et à venir.",
+      "Leur fonction la plus décisive est de maintenir l'ordre social face à ce qui pourrait le menacer : un univers symbolique bien constitué sait intégrer, plutôt qu'ignorer, les expériences marginales qui pourraient sinon faire vaciller l'évidence de la réalité partagée.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann développent ce concept pour expliquer comment des sociétés entières parviennent à intégrer, sans se disloquer, des expériences aussi déstabilisantes que la mort ou la folie, sans jamais perdre le sentiment d'habiter un monde cohérent.",
+    },
+    exemples: [
+      "Un récit national qui relie l'école, l'armée et les fêtes civiles en un seul et même monde de sens partagé.",
+      "Une cosmologie religieuse qui donne un sens à la mort d'un proche, l'intégrant dans un ordre plus vaste plutôt que de la laisser comme une simple rupture absurde.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+      { y: '1967', t: 'The Sacred Canopy (P. Berger)' },
+    ],
+    associes: ['legitimation', 'socialisation-secondaire'],
+    opposes: ['anomie'],
+    critiques: [
+      "Durkheim objecterait qu'un univers symbolique aussi cohérent ne suffit pas toujours à empêcher l'anomie, qui peut s'installer même dans des sociétés dotées d'une cosmologie forte.",
+      "Le concept, pensé à une époque de relative homogénéité culturelle, se transpose plus difficilement à des sociétés traversées de plusieurs univers symboliques concurrents.",
+      "Il dit peu des univers symboliques qui échouent à intégrer certaines expériences, laissant des marges de sens irréductibles que la théorie ne prévoit pas.",
+    ],
+    evolution: [
+      { p: '1912', f: "Durkheim pose la religion comme représentation collective qui unifie une société autour du sacré." },
+      { p: '1966', f: "Berger et Luckmann généralisent le principe à toute grande construction de sens, religieuse ou non." },
+      { p: '1967', f: "The Sacred Canopy en prolonge l'analyse spécifiquement pour la religion." },
+    ],
+  },
+  'legitimation': {
+    detaille: [
+      "La légitimation est le travail par lequel une institution déjà objectivée reçoit une explication et une justification, qui lui donnent une validité cognitive — pourquoi les choses sont ainsi — et une dignité normative — pourquoi il convient qu'elles le soient.",
+      "Berger et Luckmann distinguent plusieurs niveaux de légitimation, du plus élémentaire — un simple vocabulaire qui nomme et classe sans encore expliquer — jusqu'au plus englobant, les univers symboliques, en passant par des propositions théoriques rudimentaires puis des théories explicites.",
+      "Cette légitimation n'a rien d'un mensonge délibéré : elle répond à un besoin réel, celui de transmettre une institution à une génération qui n'a pas participé à sa genèse, et qui a donc besoin qu'on lui explique pourquoi les choses doivent être ainsi plutôt qu'autrement.",
+    ],
+    origine: {
+      oeuvre: 'La Construction sociale de la réalité',
+      annee: '1966',
+      contexte:
+        "Berger et Luckmann développent cette notion pour répondre à une question précise : comment une institution, une fois transmise à ceux qui n'en connaissent plus l'origine, continue-t-elle malgré tout à paraître évidente et justifiée ?",
+    },
+    exemples: [
+      "Un dicton transmis en famille — « ça a toujours été comme ça » — qui suffit à justifier une règle sans jamais l'expliquer vraiment.",
+      "Un manuel scolaire qui explique et justifie une institution politique à des élèves qui n'ont assisté à aucune de ses négociations d'origine.",
+    ],
+    oeuvres: [
+      { y: '1966', t: 'La Construction sociale de la réalité' },
+    ],
+    associes: ['realite-objective', 'univers-symboliques'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Marx objecterait qu'une légitimation présentée comme neutre masque souvent, en réalité, les intérêts précis d'un groupe social plutôt que de servir également tout le monde.",
+      "Le concept, très général, s'applique à peu près à toute justification, ce qui limite sa capacité à distinguer une légitimation solide d'une légitimation fragile ou contestée.",
+      "Il dit peu des moments où une légitimation échoue ouvertement, laissant une institution sans justification acceptée par tous ceux à qui elle s'applique.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber pose la question de la légitimité de la domination, matrice partielle de la notion." },
+      { p: '1966', f: "Berger et Luckmann en font un processus cognitif à plusieurs niveaux, distinct de la seule légitimité politique." },
+    ],
+  },
 };

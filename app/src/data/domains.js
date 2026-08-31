@@ -40,7 +40,7 @@ export const DOMAINS_ADDED = [
     t: 'Générale',
     nom: 'Sociologie générale',
     d: "Avant de découper la société en objets, savoir ce qui la tient ensemble.",
-    a: ['comte', 'durkheim', 'weber', 'giddens'],
+    a: ['comte', 'durkheim', 'weber', 'giddens', 'schutz'],
   },
   {
     id: 'economique',
@@ -182,10 +182,9 @@ export const DOMAIN_EXTRA = {
     nom: 'Méthode sociologique',
     famille: 'fondations',
     detail:
-      "Deux gestes fondateurs s'y opposent depuis Durkheim et Weber : traiter le social comme un objet extérieur, observable et mesurable, ou comme un tissu de significations qu'il faut comprendre depuis l'intérieur des acteurs. De ce désaccord dépendent des choix très concrets — enquête statistique ou entretien, distance ou immersion, explication causale ou interprétation du sens. La méthode n'est donc jamais un simple outil neutre : elle engage une théorie de ce qu'est le social.",
+      "Deux gestes fondateurs s'y opposent depuis Durkheim et Weber : traiter le social comme un objet extérieur, observable et mesurable, ou comme un tissu de significations qu'il faut comprendre depuis l'intérieur des acteurs. De ce désaccord dépendent des choix très concrets — enquête statistique ou entretien, distance ou immersion, explication causale ou interprétation du sens. La méthode n'est donc jamais un simple outil neutre : elle engage une théorie de ce qu'est le social. Schutz pousse ce second geste jusqu'à son fondement : avant toute méthode savante, il y a le sens commun des acteurs eux-mêmes, que la sociologie doit prendre comme son matériau premier plutôt que comme un obstacle à corriger.",
     inspirateurs: [
       "Jean-Claude Passeron — le raisonnement sociologique, ni démonstration logique ni récit libre",
-      "Alfred Schütz — le sens commun comme donnée première, et non comme obstacle à écarter",
       "Aaron Cicourel — la mesure en question : ce que les catégories du questionnaire fabriquent",
     ],
   },

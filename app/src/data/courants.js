@@ -327,4 +327,34 @@ export const COURANTS = [
     ],
     niveau: 'paradigme',
   },
+  {
+    id: 'phenomenologie-sociale',
+    t: 'Phénoménologie sociale',
+    periode: 'premiere-moitie',
+    d: "Avant toute théorie savante, il y a le monde tel que les acteurs le vivent et le tiennent pour allant de soi.",
+    detail:
+      "Schutz reproche à Weber d'avoir posé la compréhension du sens sans jamais expliquer d'où ce sens vient ni comment deux acteurs parviennent à se comprendre. Il lui fournit les fondations qui manquaient, empruntées à la phénoménologie de Husserl : un monde vécu partagé, un stock de connaissances accumulé par l'expérience, des typifications qui permettent de reconnaître le nouveau sans jamais avoir à tout redécouvrir.",
+    auteurs: ['schutz'],
+    vientDe: ['sociologie-comprehensive'],
+    inspirateurs: [
+      "Edmund Husserl — la phénoménologie, dont Schutz importe les outils en sociologie",
+      "Henri Bergson — la durée vécue, matrice de l'expérience du temps chez Schutz",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'constructivisme-social',
+    t: 'Constructivisme social',
+    periode: 'seconde-moitie',
+    d: "La réalité la plus objective en apparence reste un produit humain — à condition de ne jamais oublier qu'elle l'est.",
+    detail:
+      "Berger et Luckmann réconcilient dans un même geste Durkheim, pour qui la société est une chose extérieure et contraignante, et Weber, pour qui elle n'existe que par le sens que les acteurs y mettent : les deux sont vrais, à des moments différents d'un même cycle. L'homme produit un monde qui, à force d'habitude, se fige en institutions ; ces institutions, une fois oubliées comme produits humains, s'imposent à la génération suivante comme une réalité déjà là, qu'elle n'aura plus qu'à intérioriser.",
+    auteurs: ['berger-luckmann'],
+    vientDe: ['phenomenologie-sociale', 'sociologie-comprehensive', 'holisme'],
+    inspirateurs: [
+      "Karl Mannheim — la sociologie de la connaissance, dont Berger et Luckmann élargissent le programme à toute réalité sociale",
+      "Arnold Gehlen — l'homme comme être inachevé, qui a besoin d'institutions pour stabiliser son monde",
+    ],
+    niveau: 'paradigme',
+  },
 ];
