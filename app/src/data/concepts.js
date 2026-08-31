@@ -5859,6 +5859,446 @@ export const CONCEPTS = {
       { p: 'après 2008', f: 'La crise financière relance la critique sociale ; les auteurs y voient un test de leur modèle.' },
     ],
   },
+  'cites': {
+    detaille: [
+      "Une cité, chez Boltanski et Thévenot, est un principe de justification cohérent : une conception du bien commun et une échelle de grandeur qui lui correspond, permettant de dire, dans un domaine donné, qui ou quoi mérite le plus d'estime et pourquoi.",
+      "Chaque cité forme un système complet — un ordre de grandeur, une définition de la dignité commune à tous malgré l'inégalité de grandeur, un répertoire d'épreuves légitimes, des objets et des dispositifs qui la matérialisent — construit à partir d'un corpus de philosophie politique classique.",
+      "Aucune cité n'est fausse ni illégitime en soi : leur pluralité est la condition même du désaccord ordinaire, et c'est en confrontant plusieurs cités qu'un différend prend sens plutôt qu'en désignant d'emblée un camp comme irrationnel ou de mauvaise foi.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent chaque cité à partir d'une œuvre de philosophie politique — Augustin, Bossuet, Hobbes, Rousseau, Smith, Saint-Simon — pour montrer que les disputes ordinaires mobilisent, sans le savoir, des grammaires déjà pensées.",
+    },
+    exemples: [
+      "Une même décision d'entreprise défendue tour à tour au nom de l'efficacité, de l'ancienneté et de l'intérêt général, sans qu'aucun des trois arguments ne soit absurde.",
+      "Un jury de prix littéraire où s'opposent la singularité de l'œuvre, sa notoriété et ses ventes — trois cités, une seule décision à prendre.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['regimes-de-justification', 'justification', 'grandeur'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le nombre de cités reste ouvert et contesté : rien ne garantit que les six ou sept repérées par Boltanski et Thévenot épuisent les grandeurs socialement reconnues.",
+      "Le modèle, tiré d'un corpus européen classique, se transpose mal à des sociétés dont la philosophie politique n'a pas suivi le même chemin.",
+      "Parsons objecterait qu'une société qui ne dispose d'aucun principe de grandeur partagé par tous ne pourrait tout simplement pas fonctionner comme système.",
+    ],
+    evolution: [
+      { p: '1984', f: 'Boltanski et Thévenot commencent leurs travaux communs au Groupe de sociologie politique et morale.' },
+      { p: '1991', f: 'De la justification systématise les six cités et leur grammaire commune.' },
+      { p: '1999', f: "Le Nouvel Esprit du capitalisme ajoute une septième cité, celle par projets." },
+    ],
+  },
+  'cite-de-l-inspiration': {
+    detaille: [
+      "Dans la cité de l'inspiration, la grandeur revient à ce qui échappe à la routine et au calcul : la créativité, la grâce, l'intuition, l'émotion authentique — tout ce qui surgit sans se laisser programmer ni justifier par avance.",
+      "Elle emprunte à la tradition augustinienne l'idée d'un état de grâce qui touche certains êtres sans qu'on puisse ni le mériter ni le fabriquer : l'artiste inspiré, l'enfant, le rêveur y sont grands précisément parce qu'ils échappent aux hiérarchies ordinaires.",
+      "Ce qui la rend difficile à faire vivre en public : sa grandeur se vérifie mal par une épreuve organisée, puisque l'institutionnaliser — un concours d'inspiration, une norme de créativité — la trahit presque aussitôt.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir des Confessions d'Augustin, où la grâce touche sans mérite ni calcul possible, pour nommer une grandeur que la tradition philosophique reconnaît sans jamais réussir à la codifier.",
+    },
+    exemples: [
+      "Une idée surgie sans qu'on sache d'où, jugée géniale précisément parce qu'aucune méthode n'aurait pu la produire à la demande.",
+      "Un enfant dont le dessin est loué pour sa spontanéité, avant même que quiconque n'ait cherché à en évaluer la technique.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur', 'critique-artiste'],
+    opposes: ['cite-industrielle'],
+    critiques: [
+      "Une grandeur qui refuse par principe toute épreuve organisée reste, pour le sociologue, la plus difficile à observer et à documenter empiriquement.",
+      "Elle se prête à toutes les récupérations : ériger l'inspiration en critère institutionnel — un prix, une prime à l'innovation — la trahit sans que rien, dans le modèle, ne permette de le prévenir.",
+      "Elle peine à distinguer l'inspiration authentique de sa simple mise en scène, qui peut en emprunter tous les signes extérieurs.",
+    ],
+    evolution: [
+      { p: '397–401', f: "Augustin décrit dans les Confessions un état de grâce qui échappe au mérite calculé." },
+      { p: '1991', f: "De la justification en fait la première des cités, matrice de toutes les grandeurs incalculables." },
+    ],
+  },
+  'cite-domestique': {
+    detaille: [
+      "Dans la cité domestique, la grandeur tient à la place que l'on occupe dans une chaîne de dépendances personnelles et hiérarchiques : l'aîné sur le cadet, le maître sur l'apprenti, l'ancien sur le nouveau — une grandeur de confiance et de tradition, jamais de compétence pure.",
+      "Elle emprunte à Bossuet une vision du pouvoir légitime comme prolongement de l'autorité paternelle : le respect dû à un supérieur n'a pas à se justifier par ses résultats, il tient à sa position dans un ordre transmis.",
+      "Sa grandeur se prouve par la parole donnée, la loyauté et la réputation personnelle construite dans la durée — à l'inverse d'une notoriété publique instantanée, qui relève d'une tout autre cité.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir de la Politique tirée des propres paroles de l'Écriture sainte de Bossuet, où l'autorité politique légitime se pense comme extension de l'autorité familiale.",
+    },
+    exemples: [
+      "Un salarié promu moins pour ses résultats mesurables que pour la confiance accumulée, année après année, auprès de sa hiérarchie.",
+      "Une réputation d'homme de parole qui vaut, dans certains milieux, davantage qu'un contrat écrit.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur'],
+    opposes: ['cite-de-l-opinion'],
+    critiques: [
+      "La grandeur domestique légitime des hiérarchies que d'autres cités — civique en tête — jugent précisément illégitimes parce que non électives ni méritocratiques.",
+      "Elle se prête à des usages qui masquent, sous le vocabulaire de la confiance et de la loyauté, des rapports de dépendance et d'exploitation bien réels.",
+      "Bourdieu objecterait qu'une grandeur fondée sur la tradition et la loyauté personnelle reconduit très directement des inégalités héritées, sous une apparence de vertu plutôt que de calcul.",
+    ],
+    evolution: [
+      { p: '1709', f: "Bossuet publie la Politique tirée de l'Écriture sainte, matrice de cette grandeur." },
+      { p: '1991', f: "De la justification en fait la cité domestique, fondée sur la hiérarchie personnelle et la confiance." },
+    ],
+  },
+  'cite-de-l-opinion': {
+    detaille: [
+      "Dans la cité de l'opinion, la grandeur se mesure à la reconnaissance publique : être connu, être vu, faire parler de soi. Ce qui compte n'est pas ce que l'on est en réalité, mais l'image que les autres s'en font et font circuler.",
+      "Elle emprunte à Hobbes l'idée que l'opinion d'autrui, une fois assez répandue, devient elle-même une réalité sociale à laquelle il faut compter — la réputation, même immotivée, produit des effets tout à fait concrets.",
+      "Cette grandeur est instable par nature : elle se construit et se défait selon les jugements changeants d'un public, ce qui la distingue nettement de la confiance domestique, patiemment bâtie et beaucoup plus stable dans le temps.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir du Léviathan de Hobbes, où l'opinion des autres, une fois partagée, devient une force sociale à part entière, indépendante de toute vérité qu'elle prétendrait refléter.",
+    },
+    exemples: [
+      "Un restaurant dont la réputation, entretenue par le bouche-à-oreille plus que par la qualité constatée, attire une clientèle qui ne l'a jamais testé lui-même.",
+      "Une personnalité dont l'influence tient moins à ses compétences réelles qu'au nombre de personnes qui la suivent et en parlent.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur'],
+    opposes: ['cite-domestique'],
+    critiques: [
+      "Une grandeur fondée sur l'opinion se prête particulièrement bien à la manipulation : rien, dans son principe, ne distingue une réputation méritée d'une réputation fabriquée.",
+      "Elle est difficile à stabiliser en épreuve légitime : les instruments censés la mesurer — audience, popularité — sont eux-mêmes contestés dans leur validité.",
+      "Elle se confond parfois, dans les usages courants, avec la grandeur marchande, alors que Boltanski et Thévenot en font deux logiques bien distinctes.",
+    ],
+    evolution: [
+      { p: '1651', f: "Hobbes décrit dans le Léviathan la force propre de l'opinion partagée." },
+      { p: '1991', f: "De la justification en fait la cité de l'opinion, ou du renom." },
+      { p: '2000–2020', f: "Les réseaux sociaux numériques donnent à cette grandeur des instruments de mesure inédits — vues, abonnés, mentions." },
+    ],
+  },
+  'cite-civique': {
+    detaille: [
+      "Dans la cité civique, la grandeur revient à ceux qui incarnent ou représentent la volonté collective : l'élu, le délégué, le militant désintéressé — quiconque agit ou parle au nom de tous plutôt que pour son seul intérêt.",
+      "Elle emprunte à Rousseau l'idée d'une volonté générale distincte de la simple somme des volontés particulières : est grand, dans cette cité, celui qui sait s'effacer devant l'intérêt collectif plutôt que le poursuivre pour lui-même.",
+      "Ses épreuves légitimes sont formelles et procédurales — l'élection, le vote, le mandat — précisément parce qu'elles seules peuvent authentifier qu'une parole engage bien un collectif et non un individu isolé.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir du Contrat social de Rousseau, où la légitimité politique tient à l'expression correcte d'une volonté générale distincte des intérêts particuliers.",
+    },
+    exemples: [
+      "Un représentant syndical dont la légitimité tient au mandat reçu, non à ses qualités personnelles ni à sa fortune.",
+      "Une association qui justifie une prise de position en invoquant l'intérêt général plutôt que celui, souvent réel, de ses propres membres.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur'],
+    opposes: ['cite-marchande'],
+    critiques: [
+      "La grandeur civique se prête à une hypocrisie récurrente : invoquer l'intérêt général pour couvrir des intérêts particuliers reste une stratégie disponible dans cette cité même.",
+      "Ses épreuves procédurales — vote, mandat — peuvent valider une volonté collective purement formelle, sans qu'aucun débat réel n'ait eu lieu.",
+      "Elle suppose un collectif suffisamment unifié pour qu'une volonté générale ait un sens, ce qui est loin d'être toujours acquis dans des sociétés très fragmentées.",
+    ],
+    evolution: [
+      { p: '1762', f: "Rousseau formule la volonté générale dans le Contrat social." },
+      { p: '1991', f: "De la justification en fait la cité civique, fondée sur la représentation légitime du collectif." },
+    ],
+  },
+  'cite-marchande': {
+    detaille: [
+      "Dans la cité marchande, la grandeur revient à ce qui se vend le mieux : est grand ce que des acheteurs, dans une concurrence ouverte, désirent au point d'en payer le prix — la richesse y est le signe visible d'une grandeur reconnue par tous ceux qui échangent.",
+      "Elle emprunte à Adam Smith l'idée que la poursuite de l'intérêt individuel, dans un marché concurrentiel, produit sans intention un ordre bénéfique à tous — sa grandeur n'a donc pas besoin de vertu désintéressée pour être légitime.",
+      "L'épreuve marchande, la vente conclue, a l'avantage d'être immédiate et tranchée : contrairement à d'autres grandeurs, elle se règle en un instant, par un prix accepté de part et d'autre.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir de La Richesse des nations de Smith, où la concurrence marchande ordonne les intérêts individuels sans qu'aucune volonté collective n'ait à s'en mêler.",
+    },
+    exemples: [
+      "Un objet ancien dont la valeur ne tient à rien d'autre qu'au prix qu'un acheteur est prêt à en donner ce jour-là.",
+      "Une entreprise jugée grande par son chiffre d'affaires, indépendamment de la qualité de ses conditions de travail ou de son utilité sociale.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur', 'capital-economique'],
+    opposes: ['cite-civique'],
+    critiques: [
+      "Réduire toute grandeur au prix laisse hors champ ce qui n'a, par nature, pas vocation à s'échanger — un lien affectif, une conviction.",
+      "La grandeur marchande favorise structurellement ceux qui disposent déjà de moyens pour entrer dans l'échange, ce que la cité elle-même ne peut corriger de l'intérieur.",
+      "Elle suppose une concurrence réellement ouverte, que des positions dominantes déjà installées faussent en pratique la plupart du temps.",
+    ],
+    evolution: [
+      { p: '1776', f: "Smith décrit dans La Richesse des nations l'ordre non intentionnel produit par l'intérêt individuel." },
+      { p: '1991', f: "De la justification en fait la cité marchande, fondée sur le prix et la concurrence." },
+    ],
+  },
+  'cite-industrielle': {
+    detaille: [
+      "Dans la cité industrielle, la grandeur revient à l'efficacité mesurable : la performance, la productivité, la compétence technique reconnue par des indicateurs objectifs — est grand ce qui fonctionne, se planifie et se contrôle.",
+      "Elle emprunte à Saint-Simon l'idée d'une société organisée par la science et la technique plutôt que par la tradition ou le pouvoir politique : les meilleurs administrateurs y sont les ingénieurs, non les nobles ni les élus.",
+      "Ses épreuves légitimes sont les tests, les mesures et les certifications — tout ce qui permet de comparer des performances selon un standard reconnu, indépendamment de la personne évaluée.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent cette cité à partir des écrits de Saint-Simon sur l'organisation industrielle, où l'efficacité technique devient le principe même de l'ordre social légitime.",
+    },
+    exemples: [
+      "Un poste attribué au candidat dont les résultats à un test standardisé sont les plus élevés, indépendamment de tout autre critère.",
+      "Une machine jugée supérieure à une autre sur la seule base de ses performances mesurées en conditions contrôlées.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'grandeur'],
+    opposes: ['cite-de-l-inspiration'],
+    critiques: [
+      "Réduire la grandeur à des indicateurs mesurables laisse hors champ tout ce qu'un test standardisé ne sait pas capter, souvent l'essentiel du travail réel.",
+      "La cité industrielle tend à imposer ses propres critères aux autres cités, au nom d'une objectivité qu'elle seule prétend détenir.",
+      "Elle suppose des instruments de mesure eux-mêmes neutres, alors que le choix de ce qu'on mesure — et de ce qu'on laisse hors mesure — est déjà un choix orienté.",
+    ],
+    evolution: [
+      { p: '1821–1825', f: "Saint-Simon développe l'idée d'une société organisée par la science et l'industrie." },
+      { p: '1991', f: "De la justification en fait la cité industrielle, fondée sur l'efficacité mesurable." },
+    ],
+  },
+  'cite-par-projets': {
+    detaille: [
+      "La cité par projets est la septième grandeur, ajoutée en 1999 : y est grand celui qui sait s'engager dans des projets successifs, tisser et mobiliser un réseau de connexions, s'adapter sans cesse à des missions nouvelles plutôt que d'occuper durablement une position stable.",
+      "Elle ne provient pas d'une œuvre classique de philosophie politique comme les six premières, mais d'une analyse de la littérature managériale des années 1990, où l'autonomie, la mobilité et l'activité permanente deviennent les nouveaux signes de la réussite.",
+      "Sa grandeur inverse les valeurs de la cité industrielle : la stabilité d'un poste, autrefois un signe de réussite, y devient presque un défaut, quand l'engagement dans des missions toujours nouvelles devient la preuve d'une valeur reconnue.",
+    ],
+    origine: {
+      oeuvre: 'Le Nouvel Esprit du capitalisme',
+      annee: '1999',
+      contexte:
+        "Boltanski et Chiapello identifient cette septième cité en comparant les manuels de management des années 1990 aux précédents, pour rendre compte d'un nouveau vocabulaire de la réussite qu'aucune des six cités de 1991 ne saisissait complètement.",
+    },
+    exemples: [
+      "Un CV valorisé pour la variété des missions accomplies plutôt que pour la stabilité d'un même poste occupé longtemps.",
+      "Un collaborateur jugé précieux pour l'étendue de son réseau professionnel, mobilisable d'un projet à l'autre.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' },
+    ],
+    associes: ['cites', 'monde-connecte', 'nouvel-esprit-du-capitalisme'],
+    opposes: ['cite-industrielle'],
+    critiques: [
+      "La grandeur par projets favorise ceux qui disposent déjà des ressources et du réseau nécessaires pour multiplier les engagements — elle valorise une mobilité que tout le monde n'a pas les moyens de choisir.",
+      "Boltanski et Chiapello notent eux-mêmes qu'elle laisse sans protection ceux qui ne trouvent jamais de nouveau projet, faute d'un statut stable auquel se raccrocher.",
+      "N'étant pas issue d'un corpus classique de philosophie politique, elle reste, pour certains critiques, moins une cité pleinement formée qu'une description empirique habillée du vocabulaire des cités.",
+    ],
+    evolution: [
+      { p: '1983–1991', f: "Boltanski et Thévenot recensent six cités issues de la philosophie politique classique." },
+      { p: '1999', f: "Boltanski et Chiapello ajoutent la cité par projets, tirée de la littérature managériale contemporaine." },
+      { p: '2000–2020', f: 'Le vocabulaire du projet, du réseau et de la mission se diffuse largement au-delà du seul management.' },
+    ],
+  },
+  'monde-connecte': {
+    detaille: [
+      "Le monde connecté est l'arrangement social concret — équipes mouvantes, réseaux professionnels, missions temporaires — que Boltanski et Chiapello observent dans le capitalisme des années 1990, et dont la cité par projets tente de formaliser la grandeur.",
+      "Contrairement à une cité pleinement constituée, le monde connecté ne dispose pas encore d'un corpus philosophique achevé qui en justifie explicitement les principes : c'est un ordre en formation, décrit avant d'être théorisé comme une véritable grammaire de la justification.",
+      "Sa logique propre est celle du lien plutôt que de la position : ce qui compte n'est plus le rang qu'on occupe dans une hiérarchie stable, mais le nombre et la qualité des connexions qu'on sait activer au bon moment.",
+    ],
+    origine: {
+      oeuvre: 'Le Nouvel Esprit du capitalisme',
+      annee: '1999',
+      contexte:
+        "Boltanski et Chiapello empruntent des outils à la sociologie des réseaux pour décrire un monde du travail où l'entreprise bureaucratique cède la place à des configurations plus fluides d'équipes et de projets.",
+    },
+    exemples: [
+      "Une carrière qui se construit moins par promotion interne que par l'accumulation de contacts mobilisables d'une mission à l'autre.",
+      "Une organisation en équipes projet reconfigurées à chaque nouvelle mission, sans organigramme stable d'une année sur l'autre.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' },
+    ],
+    associes: ['cite-par-projets', 'nouvel-esprit-du-capitalisme', 'configuration'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "La distinction entre monde et cité pleinement formée reste elle-même floue : à partir de quand un ordre décrit devient-il une grammaire justificative à part entière ?",
+      "Le monde connecté, présenté comme émergent dans les années 1990, s'est depuis largement stabilisé et institutionnalisé, ce qui interroge son statut encore provisoire chez les auteurs.",
+      "Il décrit surtout les cadres et les professions déjà dotées d'un réseau mobilisable, et rend moins compte des emplois où la connexion n'apporte aucun avantage.",
+    ],
+    evolution: [
+      { p: '1959', f: "Strauss et l'École de Chicago posent les bases de la notion de monde social, dont le monde connecté hérite." },
+      { p: '1999', f: "Boltanski et Chiapello décrivent le monde connecté comme substrat empirique de la cité par projets." },
+    ],
+  },
+  'critique-artiste': {
+    detaille: [
+      "La critique artiste dénonce le capitalisme au nom de l'authenticité, de l'autonomie et de la créativité : elle lui reproche d'imposer une hiérarchie étouffante, un travail répétitif et une existence standardisée qui empêchent chacun de se réaliser pleinement.",
+      "Historiquement portée par les avant-gardes artistiques puis par les mouvements de 1968, cette critique vise moins l'inégalité des revenus que l'ennui, la désincarnation et la perte de sens qu'impose la vie de bureau ou d'usine.",
+      "Boltanski et Chiapello montrent qu'elle a connu, plus que la critique sociale, un succès paradoxal : le capitalisme des années 1990 en a récupéré largement le vocabulaire — autonomie, créativité, épanouissement — sans pour autant réduire l'exploitation qu'elle dénonçait aussi.",
+    ],
+    origine: {
+      oeuvre: 'Le Nouvel Esprit du capitalisme',
+      annee: '1999',
+      contexte:
+        "Boltanski et Chiapello distinguent la critique artiste de la critique sociale pour expliquer pourquoi le capitalisme, contesté sur deux fronts très différents, n'a répondu véritablement qu'à l'un des deux.",
+    },
+    exemples: [
+      "Un mouvement de 1968 qui réclame moins un meilleur salaire qu'une vie de travail moins routinière et plus créative.",
+      "Un salarié qui quitte un poste stable mais jugé sans âme pour un projet plus incertain mais perçu comme plus authentique.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' },
+    ],
+    associes: ['critique-sociale', 'cite-de-l-inspiration', 'nouvel-esprit-du-capitalisme'],
+    opposes: ['industrie-culturelle'],
+    critiques: [
+      "L'École de Francfort objecterait qu'une critique de l'inauthenticité, aussi sincère soit-elle, reste vulnérable à une récupération marchande qui en vide le contenu contestataire.",
+      "Le partage entre critique artiste et critique sociale, commode pour l'analyse, correspond mal à des mouvements historiques qui ont souvent mêlé les deux registres.",
+      "La thèse de la récupération risque de disqualifier d'avance toute critique qui obtient un succès, même partiel, dans le débat public.",
+    ],
+    evolution: [
+      { p: '1830–1850', f: "Les avant-gardes artistiques du XIXᵉ siècle formulent les premiers refus de la vie bourgeoise routinière." },
+      { p: '1968', f: "La critique artiste culmine dans les mouvements étudiants et culturels." },
+      { p: '1999', f: "Boltanski et Chiapello en documentent la récupération managériale dans les années 1990." },
+    ],
+  },
+  'critique-sociale': {
+    detaille: [
+      "La critique sociale dénonce le capitalisme au nom de l'égalité et de la solidarité : elle lui reproche l'exploitation, la misère et l'égoïsme qu'il organise, et réclame une redistribution plus juste des richesses produites collectivement.",
+      "Historiquement portée par le mouvement ouvrier et les syndicats, elle vise directement les rapports de production et les inégalités de revenu, là où la critique artiste s'attaque plutôt à l'aliénation et à la perte de sens du travail.",
+      "Boltanski et Chiapello constatent qu'elle a été bien moins entendue que la critique artiste par le capitalisme des années 1990 : l'autonomie et la créativité ont trouvé une réponse managériale, l'exploitation et la précarité, beaucoup moins.",
+    ],
+    origine: {
+      oeuvre: 'Le Nouvel Esprit du capitalisme',
+      annee: '1999',
+      contexte:
+        "Boltanski et Chiapello reprennent une distinction déjà présente chez les théoriciens du mouvement ouvrier pour expliquer l'asymétrie de traitement entre les deux grandes critiques historiques du capitalisme.",
+    },
+    exemples: [
+      "Une grève qui réclame une meilleure répartition des bénéfices plutôt qu'une réorganisation du sens donné au travail.",
+      "Un mouvement social qui dénonce la précarité croissante de l'emploi, plutôt que son caractère routinier ou peu créatif.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'Le Nouvel Esprit du capitalisme (avec È. Chiapello)' },
+    ],
+    associes: ['critique-artiste', 'cite-civique', 'nouvel-esprit-du-capitalisme'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Marx objecterait qu'une critique centrée sur la seule redistribution laisse intacte la structure de propriété qui produit l'exploitation en premier lieu.",
+      "Le succès inégal des deux critiques, que Boltanski et Chiapello constatent, reste plus décrit qu'expliqué : pourquoi le capitalisme aurait-il structurellement plus à gagner à récupérer l'une que l'autre ?",
+      "La distinction nette entre critique sociale et critique artiste occulte les mouvements contemporains qui articulent explicitement les deux, comme certaines luttes autour du sens et des conditions du travail.",
+    ],
+    evolution: [
+      { p: '1830–1900', f: "Le mouvement ouvrier formule la critique sociale du capitalisme industriel." },
+      { p: '1936', f: 'Le Front populaire en France en obtient une traduction institutionnelle partielle.' },
+      { p: '1999', f: "Boltanski et Chiapello la distinguent explicitement de la critique artiste." },
+      { p: 'après 2008', f: 'La crise financière relance la critique sociale, jugée par les auteurs moins entendue que la critique artiste depuis 1968.' },
+    ],
+  },
+  'justification': {
+    detaille: [
+      "Se justifier, c'est répondre à une mise en cause non par la force ni par l'esquive, mais en invoquant un principe que l'on prétend valable au-delà du cas présent — un principe que l'autre partie pourrait, en droit, reconnaître à son tour.",
+      "Boltanski et Thévenot en font une compétence ordinaire, exercée en permanence dans la vie sociale la plus banale : négocier un désaccord au travail, en famille ou entre voisins suppose presque toujours de justifier sa position plutôt que de simplement l'imposer.",
+      "Une justification légitime doit remplir des conditions précises : elle ne peut invoquer un intérêt purement personnel, elle doit se référer à un principe reconnu par une cité, et elle doit rester ouverte à l'épreuve qui la mettra, le cas échéant, en défaut.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot font de la justification l'objet même de leur sociologie, contre une tradition qui réduisait souvent le discours des acteurs à un simple habillage de rapports de force sous-jacents.",
+    },
+    exemples: [
+      "Un désaccord de voisinage sur le bruit, où chacun invoque un principe — le droit au repos, la liberté de recevoir — plutôt que de simplement hausser le ton.",
+      "Une décision contestée en réunion, défendue par son auteur à l'aide d'arguments qu'il sait devoir pouvoir soutenir devant n'importe quel autre participant.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['regimes-de-justification', 'epreuve', 'grandeur'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Bourdieu objecterait que la justification donnée en public masque souvent des raisons bien moins avouables, que l'analyse du seul discours ne permet pas de faire apparaître.",
+      "Le modèle suppose des acteurs suffisamment compétents et outillés pour argumenter dans les termes attendus, ce qui n'est pas donné également à tous.",
+      "Il dit peu des situations où aucune justification n'est même tentée, la force ou l'évitement se substituant d'emblée à l'argumentation.",
+    ],
+    evolution: [
+      { p: '1991', f: "De la justification pose la justification comme objet sociologique central, distinct de la seule domination." },
+      { p: '2009', f: "De la critique revient sur les limites de ce modèle, notamment sa difficulté à décrire les situations où la domination empêche toute justification réelle." },
+    ],
+  },
+  'epreuve': {
+    detaille: [
+      "Une épreuve est le moment où un désaccord sur la grandeur respective de deux personnes ou de deux choses se règle, provisoirement, en les confrontant selon un dispositif reconnu comme légitime par la cité invoquée.",
+      "Boltanski et Thévenot distinguent l'épreuve légitime, qui met effectivement à l'épreuve la grandeur en jeu selon les règles d'une cité reconnue, de l'épreuve de force, qui tranche un différend sans qu'aucun principe partagé ne vienne la justifier.",
+      "Aucune épreuve n'est jamais définitive : une décision issue d'une épreuve légitime peut toujours être rouverte, contestée au nom d'une autre cité, ou requalifiée en simple rapport de force a posteriori.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot font de l'épreuve le pivot empirique de leur théorie : c'est en observant comment les disputes se règlent concrètement qu'ils reconstruisent les principes de grandeur qui les sous-tendent.",
+    },
+    exemples: [
+      "Un concours de recrutement, épreuve légitime dans la cité industrielle, mais aussitôt contesté au nom du piston si un lien personnel semble avoir pesé dans la décision.",
+      "Un vote à main levée, accepté comme épreuve légitime tant que personne ne soupçonne de pression exercée sur les votants.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['justification', 'grandeur', 'cites'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "La distinction entre épreuve légitime et épreuve de force reste elle-même contestable au cas par cas : qui décide, et selon quel principe, qu'une épreuve donnée est bien légitime ?",
+      "Le modèle dit peu des épreuves qui ne sont jamais ouvertement contestées alors qu'elles reconduisent, en silence, des inégalités structurelles.",
+      "Bourdieu objecterait qu'une épreuve prétendument neutre — un concours, un examen — favorise structurellement ceux dont l'habitus est le plus proche des critères de l'épreuve elle-même.",
+    ],
+    evolution: [
+      { p: '1991', f: "De la justification fait de l'épreuve le pivot méthodologique de l'enquête sur les disputes ordinaires." },
+      { p: '2009', f: "De la critique élargit la notion aux épreuves qui échappent à toute cité reconnue, plus proches du rapport de force pur." },
+    ],
+  },
+  'grandeur': {
+    detaille: [
+      "La grandeur est la mesure de valeur propre à une cité : ce qui permet, à l'intérieur d'un ordre de justification donné, de dire que telle personne ou telle chose vaut plus qu'une autre — et pourquoi ce classement n'a rien d'arbitraire aux yeux de ceux qui partagent cette cité.",
+      "Chaque cité a sa propre grandeur, incommensurable avec celle des autres : la grandeur inspirée ne se compare pas terme à terme à la grandeur industrielle, ce qui explique pourquoi tant de disputes ordinaires tournent en rond sans qu'aucun camp ne cède.",
+      "Ce qui distingue la grandeur d'un simple rapport de force : elle s'accompagne toujours d'un principe de dignité commune, selon lequel même les plus petits, dans une cité donnée, restent en droit de contester et de faire valoir leur propre grandeur.",
+    ],
+    origine: {
+      oeuvre: 'De la justification. Les économies de la grandeur',
+      annee: '1991',
+      contexte:
+        "Boltanski et Thévenot construisent la notion de grandeur comme pivot théorique de leur ouvrage, pour nommer ce que chaque cité met en jeu et ce sur quoi portent, en dernier ressort, la plupart des disputes ordinaires.",
+    },
+    exemples: [
+      "Deux collègues également estimés, l'un pour son ancienneté, l'autre pour ses résultats chiffrés — deux grandeurs différentes, aucune ne l'emportant en soi sur l'autre.",
+      "Un objet ancien jugé grand par un collectionneur pour sa rareté, et sans valeur par un autre qui n'y voit qu'un encombrant sans usage.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'De la justification (avec L. Thévenot)' },
+    ],
+    associes: ['cites', 'justification', 'epreuve'],
+    opposes: ['capital-symbolique'],
+    critiques: [
+      "Bourdieu objecterait qu'une pluralité de grandeurs, aussi réelle soit-elle en discours, reste hiérarchisée dans les faits par un capital symbolique qui pèse plus lourd que les autres selon les contextes.",
+      "Le concept peine à expliquer pourquoi certaines grandeurs l'emportent presque systématiquement sur d'autres dans des situations concrètes, malgré leur incommensurabilité affirmée en théorie.",
+      "Il suppose des acteurs qui maîtrisent suffisamment le langage de plusieurs cités pour en changer selon la situation, ce qui n'est pas donné également à tous.",
+    ],
+    evolution: [
+      { p: '1991', f: "De la justification pose la grandeur comme pivot de la théorie des cités." },
+      { p: '2006', f: "Boltanski en discute la portée dans La Condition fœtale, à propos d'une grandeur qui échappe à toute cité constituée : celle de la vie elle-même." },
+    ],
+  },
 
   /* — Alexis de Tocqueville — */
   'egalisation-des-conditions': {
