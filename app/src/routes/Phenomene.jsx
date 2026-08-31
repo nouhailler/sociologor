@@ -131,7 +131,7 @@ export default function Phenomene() {
               margin: '0 0 24px',
             }}
           >
-            Aucun concept des vingt et une fiches ne porte directement sur ce phénomène.
+            Aucun concept des vingt-deux fiches ne porte directement sur ce phénomène.
           </p>
         ) : (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>

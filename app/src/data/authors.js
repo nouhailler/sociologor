@@ -5,12 +5,12 @@
 export const DOMAINS = [
   { id: 'classes', t: 'Classes sociales', d: "Comment une société se hiérarchise, et pourquoi la position héritée pèse encore si lourd.", a: ['marx', 'bourdieu', 'weber'] },
   { id: 'education', t: 'Éducation', d: "L'école promet l'égalité des chances et distribue pourtant des destins très prévisibles.", a: ['bourdieu', 'durkheim', 'boudon'] },
-  { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker', 'castel'] },
+  { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker', 'castel', 'crozier'] },
   { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber', 'berger-luckmann'] },
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
   { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel', 'schutz'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
-  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens'] },
+  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens', 'crozier'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
   { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski', 'foucault'] },
   { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas', 'foucault'] },
@@ -553,6 +553,26 @@ export const AUTHORS = {
     critiques: ["Des critiques marxistes leur reprochent de décrire comment une institution se maintient sans jamais dire pourquoi ce sont certaines constructions, plutôt que d'autres, qui l'emportent.", "L'idée d'une réalité entièrement construite a été accusée d'ouvrir la voie à un relativisme qui peine à rendre compte des contraintes matérielles et biologiques les moins négociables.", "La théorie, très générale, offre peu d'outils d'enquête concrets pour observer sur le terrain les processus qu'elle décrit."],
     up: ['schutz', 'weber', 'durkheim'], down: [], x: 30, y: 850,
   },
+  crozier: {
+    id: 'crozier', name: 'Michel Crozier', initials: 'MC', dates: '1922–2013', nat: 'France', periode: 'XXᵉ siècle',
+    courant: 'Analyse stratégique',
+    hook: "Il montre que même dans la bureaucratie la plus rigide, chacun garde une carte à jouer.",
+    resume: "Crozier montre que le pouvoir dans une organisation ne suit jamais exactement l'organigramme : il appartient à qui contrôle une zone d'incertitude dont les autres dépendent, quelle que soit sa place hiérarchique.",
+    concepts: [
+      { id: 'zone-d-incertitude', t: "Zone d'incertitude", year: '1963', simple: "Une source de pouvoir : contrôler ce qui reste imprévisible pour les autres, même depuis une position hiérarchique modeste.", ex: "Une informaticienne, seule à savoir relancer un vieux système comptable, qui pèse davantage en réunion que son intitulé de poste ne le suggère." },
+      { id: 'pouvoir-organisationnel', t: 'Pouvoir organisationnel', year: '1963', simple: "Le pouvoir réel dans une organisation ne suit pas l'organigramme : il se négocie autour du contrôle des zones d'incertitude.", ex: "Un chauffeur-livreur, sans lequel une chaîne logistique entière s'arrête, dont le poids réel dépasse largement son échelon salarial." },
+      { id: 'strategie-d-acteur', t: "Stratégie d'acteur", year: '1977', simple: "Même dans la structure la plus contraignante, chaque acteur garde une marge de manœuvre qu'il exploite rationnellement à son avantage.", ex: "Un stagiaire qui pose sciemment des questions naïves en réunion, sachant que cela révèle des failles que personne n'osait signaler." },
+      { id: 'systeme-d-action-concret', t: "Système d'action concret", year: '1977', simple: "Le réseau réel de relations, de jeux et de pouvoirs qui structure une organisation, souvent bien différent de son organigramme officiel.", ex: "Une décision budgétaire qui se joue en réalité autour d'un déjeuner informel, bien avant la réunion officielle censée l'entériner." },
+      { id: 'jeu', t: 'Jeu', year: '1977', simple: "Une organisation est un ensemble de jeux, avec des règles formelles et informelles, où chacun déploie sa stratégie propre.", ex: "Un service où l'on sait, sans qu'on l'ait jamais formulé, jusqu'où on peut repousser une échéance sans risquer de sanction." },
+      { id: 'phenomene-bureaucratique', t: 'Phénomène bureaucratique', year: '1963', simple: "Les règles impersonnelles censées éliminer l'arbitraire produisent en réalité de nouvelles zones d'incertitude et de nouveaux jeux de pouvoir.", ex: "Une administration qui ajoute un tampon de contrôle supplémentaire après chaque erreur, sans que le taux d'erreurs baisse vraiment." },
+      { id: 'dysfonctionnement-organisationnel', t: 'Dysfonctionnement organisationnel', year: '1963', simple: "L'écart entre les objectifs officiels d'une organisation et son fonctionnement réel, produit par les stratégies rationnelles de ses membres.", ex: "Une entreprise dont chaque département optimise ses propres indicateurs, au prix d'un résultat global que personne n'avait souhaité." },
+      { id: 'regulation', t: 'Régulation', year: '1977', simple: "Le processus, jamais figé, par lequel les jeux et les stratégies des différents acteurs se stabilisent en un fonctionnement d'ensemble viable.", ex: "Deux équipes rivales qui, sans accord écrit, finissent chaque année par se répartir les mêmes dossiers sensibles selon un partage tacite." },
+    ],
+    oeuvres: [{ y: '1963', t: 'Le Phénomène bureaucratique' }, { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" }, { y: '1979', t: 'On ne change pas la société par décret' }],
+    citations: [{ t: 'On ne change pas la société par décret.', src: 'On ne change pas la société par décret, 1979' }],
+    critiques: ["Bourdieu objecterait qu'un acteur aussi calculateur sous-estime le poids des dispositions incorporées, qui orientent l'action bien avant tout calcul stratégique conscient.", "L'approche, centrée sur les jeux internes à l'organisation, laisse peu de place aux déterminants macrosociaux — classe, capital économique — qui pèsent pourtant sur ces mêmes jeux.", "Les enquêtes fondatrices portent sur l'administration française des années 1960 ; leur portée comparative à d'autres contextes reste à établir au cas par cas."],
+    up: ['weber', 'merton'], down: [], x: 250, y: 850,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -764,7 +784,16 @@ export const EXTRA = {
       "Edmund Husserl — la phénoménologie, reçue via l'enseignement de Schutz à la New School",
     ],
   },
+  crozier: {
+    prenom: 'Michel', nom: 'Crozier', disc: ["Science politique — l'analyse des politiques publiques et de l'administration", "Gestion — le management des organisations, largement irrigué par ses travaux", "Économie — la rationalité limitée, empruntée à Herbert Simon"], biblio: ['E. Friedberg, Le Pouvoir et la Règle, Seuil, 1993', 'P. Grémion, Michel Crozier, un sociologue en action, Vuibert, 2014'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Michel Crozier', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Erhard Friedberg — coauteur de L'Acteur et le système, 1977",
+      "Herbert Simon — la rationalité limitée, socle du modèle de l'acteur stratégique",
+      "Chester Barnard — la coopération dans les organisations, précurseur de l'analyse des jeux internes",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0], ['weber', 'crozier', 0], ['merton', 'crozier', 0]];
 

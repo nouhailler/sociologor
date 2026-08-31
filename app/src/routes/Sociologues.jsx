@@ -33,7 +33,7 @@ function Thumb({ a }) {
 }
 
 /**
- * Liste des vingt et une fiches — dix-neuf auteurs, le binôme Berger & Luckmann et
+ * Liste des vingt-deux fiches — vingt auteurs, le binôme Berger & Luckmann et
  * l'École de Francfort — chacune
  * accessible par sa miniature. Le pendant, côté personnes, des listes
  * thématiques (`/phenomenes`, `/processus`, `/concepts`) : celles-ci entrent
@@ -45,7 +45,7 @@ export default function Sociologues() {
       <div className="soc-enter">
         <h2 className="soc-h2">Sociologues</h2>
         <p className="soc-lede" style={{ maxWidth: '58ch', marginBottom: 18 }}>
-          Dix-neuf auteurs, le binôme Berger &amp; Luckmann et l&apos;École de Francfort, chacun avec ses concepts, ses œuvres et sa
+          Vingt auteurs, le binôme Berger &amp; Luckmann et l&apos;École de Francfort, chacun avec ses concepts, ses œuvres et sa
           place dans le graphe des filiations.
         </p>
 

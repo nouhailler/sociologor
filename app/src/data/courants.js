@@ -357,4 +357,19 @@ export const COURANTS = [
     ],
     niveau: 'paradigme',
   },
+  {
+    id: 'analyse-strategique',
+    t: 'Analyse stratégique',
+    periode: 'seconde-moitie',
+    d: "Même dans l'organisation la plus rigide, chacun garde une carte à jouer — et le pouvoir appartient à qui sait la faire durer.",
+    detail:
+      "Crozier reprend la bureaucratie de Weber pour en faire, non plus un modèle d'efficacité rationnelle, mais un objet d'enquête empirique : les règles impersonnelles censées éliminer l'arbitraire produisent en réalité de nouvelles zones d'incertitude, autour desquelles se rejouent sans fin des rapports de pouvoir informels. L'organisation réelle n'est jamais tout à fait l'organigramme officiel : c'est un système d'action concret, fait de jeux et de stratégies que la seule structure formelle ne suffit jamais à expliquer.",
+    auteurs: ['crozier'],
+    vientDe: ['sociologie-comprehensive', 'fonctionnalisme'],
+    inspirateurs: [
+      "Erhard Friedberg — coauteur de L'Acteur et le système, 1977",
+      "Herbert Simon — la rationalité limitée, socle du modèle de l'acteur stratégique",
+    ],
+    niveau: 'paradigme',
+  },
 ];

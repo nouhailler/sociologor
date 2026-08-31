@@ -8861,4 +8861,261 @@ export const CONCEPTS = {
       { p: '1966', f: "Berger et Luckmann en font un processus cognitif à plusieurs niveaux, distinct de la seule légitimité politique." },
     ],
   },
+
+  /* — Michel Crozier — */
+  'zone-d-incertitude': {
+    detaille: [
+      "Une zone d'incertitude est un espace de comportement imprévisible dont le contrôle donne du pouvoir à celui qui le détient : tant qu'un problème reste difficile à codifier entièrement à l'avance, celui qui sait y répondre garde barre sur ceux qui en dépendent.",
+      "Crozier en tire un renversement du modèle wébérien : le pouvoir dans une organisation ne se déduit pas simplement du rang hiérarchique, il se négocie autour de ces poches d'incertitude, que la position formelle ne suffit ni à créer ni à garantir.",
+      "Une organisation cherche sans cesse à réduire ces zones — par des règles, des procédures, une meilleure prévisibilité — mais chaque solution qui en referme une en ouvre souvent une nouvelle ailleurs, ce qui rend le pouvoir organisationnel perpétuellement mouvant.",
+    ],
+    origine: {
+      oeuvre: 'Le Phénomène bureaucratique',
+      annee: '1963',
+      contexte:
+        "Crozier étudie deux organisations administratives françaises, dont un atelier de fabrication de tabac, et observe que les ouvriers d'entretien, seuls capables de réparer des machines anciennes et capricieuses, détiennent un pouvoir informel largement supérieur à leur rang.",
+    },
+    exemples: [
+      "Un technicien, seul à comprendre une machine ancienne, dont dépend toute une équipe malgré son faible rang dans l'organigramme.",
+      "Un assistant qui seul maîtrise un logiciel interne mal documenté, ce qui le rend incontournable bien au-delà de son titre officiel.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Le Phénomène bureaucratique' },
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+    ],
+    associes: ['pouvoir-organisationnel', 'strategie-d-acteur'],
+    opposes: ['domination-legale-rationnelle'],
+    critiques: [
+      "Weber objecterait qu'une organisation bien conçue devrait précisément éliminer ces zones d'incertitude par des règles suffisamment précises, plutôt que les tenir pour une donnée inévitable.",
+      "Le concept dit peu de ce qui détermine, parmi plusieurs zones d'incertitude possibles, celles qui deviennent effectivement sources de pouvoir plutôt que de simples curiosités techniques.",
+      "Il repose sur une observation empirique précise mais ancienne, dont la transposition à des organisations très informatisées reste à réévaluer.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber théorise la bureaucratie comme organisation rationnelle où le pouvoir suit strictement la hiérarchie formelle." },
+      { p: '1963', f: "Crozier montre, à partir d'enquêtes concrètes, que le pouvoir réel s'organise plutôt autour des zones d'incertitude." },
+      { p: '1977', f: "L'Acteur et le système en généralise le principe à toute organisation, au-delà du seul cas administratif." },
+    ],
+  },
+  'pouvoir-organisationnel': {
+    detaille: [
+      "Le pouvoir organisationnel est, pour Crozier, un rapport de force et de négociation entre des acteurs interdépendants, et non un attribut fixé une fois pour toutes par l'organigramme : chacun dispose d'une capacité d'action sur l'autre, proportionnelle à ce que l'autre attend de lui et ne peut obtenir ailleurs.",
+      "Ce pouvoir se mesure très concrètement à la prévisibilité réciproque des comportements : plus mon comportement reste imprévisible pour vous tout en dépendant du vôtre, plus je détiens de pouvoir sur vous — une formule qui vaut aussi bien pour un ouvrier que pour un cadre dirigeant.",
+      "Cette conception relationnelle du pouvoir organisationnel s'oppose à toute lecture purement structurale : la position hiérarchique donne des ressources, elle ne garantit jamais à elle seule le pouvoir réellement exercé au quotidien.",
+    ],
+    origine: {
+      oeuvre: 'Le Phénomène bureaucratique',
+      annee: '1963',
+      contexte:
+        "Crozier construit ce concept en observant que des employés de rang modeste peuvent, dans certaines configurations, peser plus lourd dans les décisions effectives que des cadres supérieurs officiellement responsables.",
+    },
+    exemples: [
+      "Une secrétaire qui filtre l'accès à son directeur, et qui pèse de ce fait plus lourd que son grade ne le laisse supposer.",
+      "Un fournisseur unique, difficile à remplacer rapidement, qui négocie ses conditions en position de force malgré sa taille modeste.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Le Phénomène bureaucratique' },
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+    ],
+    associes: ['zone-d-incertitude', 'relations-de-pouvoir'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Weber objecterait qu'un pouvoir aussi éloigné de toute question de légitimité perd la dimension normative qui distingue, selon lui, le pouvoir de la simple domination de fait.",
+      "Le modèle, très centré sur l'interdépendance immédiate entre acteurs, dit peu des rapports de pouvoir qui s'exercent à distance, sans interaction directe régulière.",
+      "Il suppose des acteurs suffisamment informés de leur propre situation pour la négocier stratégiquement, ce qui n'est pas toujours vérifié en pratique.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber définit le pouvoir comme la chance d'imposer sa volonté, indépendamment de sa légitimité." },
+      { p: '1963', f: "Crozier en propose une lecture relationnelle et organisationnelle, fondée sur l'interdépendance et l'imprévisibilité réciproque." },
+      { p: '1977', f: "L'Acteur et le système formalise le pouvoir organisationnel comme rapport de négociation permanent." },
+    ],
+  },
+  'strategie-d-acteur': {
+    detaille: [
+      "La stratégie d'acteur est le postulat central de Crozier : même dans la structure la plus contraignante, chaque acteur — individu ou groupe — garde une marge de manœuvre réelle, qu'il exploite rationnellement pour défendre ou étendre son pouvoir et ses intérêts.",
+      "Cette stratégie n'a rien d'un plan explicite et conscient de bout en bout : elle se déploie souvent au coup par coup, par ajustements successifs, sans que l'acteur ait toujours une vision complète ni des règles du jeu ni des intentions des autres joueurs.",
+      "Crozier en tire une règle de méthode : aucun comportement, même apparemment irrationnel ou purement conformiste, ne doit être pris pour argent comptant — il faut toujours chercher la logique stratégique, souvent locale et limitée, qui le rend intelligible.",
+    ],
+    origine: {
+      oeuvre: "L'Acteur et le système",
+      annee: '1977',
+      contexte:
+        "Crozier et Friedberg systématisent, dans cet ouvrage écrit à deux, le postulat de l'acteur stratégique déjà à l'œuvre dans Le Phénomène bureaucratique, en le généralisant à l'analyse de toute organisation.",
+    },
+    exemples: [
+      "Un employé qui applique une consigne à la lettre, sachant que sa lenteur excessive fera pression sur sa hiérarchie sans jamais l'enfreindre ouvertement.",
+      "Un cadre qui retient volontairement une information utile, pour rester la personne à consulter avant toute décision importante.",
+    ],
+    oeuvres: [
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+      { y: '1963', t: 'Le Phénomène bureaucratique' },
+    ],
+    associes: ['zone-d-incertitude', 'jeu'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Bourdieu objecterait qu'une stratégie aussi délibérément rationnelle prête à l'acteur une lucidité et une liberté de calcul que ses dispositions incorporées, formées bien avant toute situation organisationnelle, limitent en réalité fortement.",
+      "Le concept peine à distinguer nettement une stratégie authentiquement calculée d'un comportement routinier réinterprété après coup comme stratégique.",
+      "Il suppose chez l'acteur une capacité d'ajustement permanent qui varie fortement selon les ressources cognitives et matérielles réellement disponibles.",
+    ],
+    evolution: [
+      { p: '1947', f: "Simon formule la rationalité limitée, contre l'hypothèse d'un acteur parfaitement informé et calculateur." },
+      { p: '1963', f: "Crozier applique une version organisationnelle de cette rationalité limitée à ses enquêtes de terrain." },
+      { p: '1977', f: "L'Acteur et le système formalise la stratégie d'acteur comme postulat méthodologique général." },
+    ],
+  },
+  'systeme-d-action-concret': {
+    detaille: [
+      "Le système d'action concret est le réseau réel de relations, de dépendances et de règles du jeu — formelles et informelles — qui structure effectivement le fonctionnement d'une organisation, souvent assez différent de l'organigramme officiel censé le représenter.",
+      "Crozier et Friedberg en font l'unité d'analyse propre à leur sociologie des organisations : ce système, contrairement à la structure formelle, ne s'observe que par l'enquête de terrain, en reconstituant qui dépend concrètement de qui, et à quel prix.",
+      "Ce système n'est ni chaotique ni entièrement rationnel : il constitue un équilibre relativement stable entre les stratégies divergentes des différents acteurs, un équilibre toujours provisoire et susceptible d'être recomposé par un changement dans les règles du jeu.",
+    ],
+    origine: {
+      oeuvre: "L'Acteur et le système",
+      annee: '1977',
+      contexte:
+        "Crozier et Friedberg forgent ce concept pour donner un statut théorique précis à ce que leurs enquêtes de terrain observaient déjà : une organisation réelle fonctionne rarement comme le prévoit son organigramme officiel.",
+    },
+    exemples: [
+      "Un service où les décisions passent en réalité par un couloir informel que ne montre aucun organigramme affiché.",
+      "Un hôpital où la coordination effective des soins repose sur des ajustements quotidiens entre équipes, bien au-delà des protocoles écrits.",
+    ],
+    oeuvres: [
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+    ],
+    associes: ['jeu', 'regulation'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Parsons objecterait qu'un système d'action aussi centré sur les jeux de pouvoir locaux perd de vue l'intégration fonctionnelle d'ensemble que le système social est censé assurer.",
+      "Le concept, très empirique par construction, dépend fortement de la qualité et de la profondeur de l'enquête de terrain qui seule permet de le reconstituer.",
+      "Il dit peu de la manière dont un système d'action concret peut se transformer radicalement, au-delà des ajustements progressifs qu'il décrit le mieux.",
+    ],
+    evolution: [
+      { p: '1963', f: "Le Phénomène bureaucratique esquisse déjà l'écart entre organisation formelle et fonctionnement réel." },
+      { p: '1977', f: "L'Acteur et le système formalise le système d'action concret comme unité d'analyse à part entière." },
+    ],
+  },
+  'jeu': {
+    detaille: [
+      "Le jeu est la métaphore centrale de Crozier pour décrire la vie organisationnelle : une organisation n'est jamais qu'un ensemble de jeux, avec des règles formelles et informelles, à l'intérieur desquels chaque acteur déploie sa propre stratégie pour maximiser sa marge de manœuvre.",
+      "Ces règles ne sont jamais entièrement arbitraires ni entièrement contraignantes : elles balisent le champ des coups possibles, sans jamais déterminer à l'avance lequel un acteur choisira de jouer à un instant donné.",
+      "Changer une organisation, pour Crozier, ne consiste donc jamais à changer simplement les intentions déclarées ou les objectifs affichés : c'est changer les règles du jeu lui-même, ce qui seul modifie durablement les stratégies que les acteurs ont intérêt à adopter.",
+    ],
+    origine: {
+      oeuvre: "L'Acteur et le système",
+      annee: '1977',
+      contexte:
+        "Crozier et Friedberg empruntent la métaphore du jeu à la théorie des jeux naissante pour formaliser l'interdépendance stratégique des acteurs organisationnels, sans pour autant en adopter tout l'appareil mathématique.",
+    },
+    exemples: [
+      "Une réunion dont chacun connaît les règles tacites — qui parle en premier, ce qu'on ne conteste jamais ouvertement — sans qu'elles soient écrites nulle part.",
+      "Une négociation salariale annuelle dont les acteurs connaissent d'avance les marges de manœuvre implicites, bien au-delà de ce que prévoit le texte officiel.",
+    ],
+    oeuvres: [
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+    ],
+    associes: ['strategie-d-acteur', 'systeme-d-action-concret'],
+    opposes: ['habitus'],
+    critiques: [
+      "Bourdieu, dont l'habitus décrit des dispositions largement inconscientes, objecterait qu'un jeu suppose des joueurs bien plus délibérément stratégiques que ne le sont la plupart des acteurs sociaux ordinaires.",
+      "La métaphore du jeu, séduisante, peut faire perdre de vue les cas où les règles elles-mêmes restent floues, contestées, ou changent en cours de partie sans que personne ne les redéfinisse clairement.",
+      "Elle suppose des joueurs relativement égaux dans leur capacité à comprendre et à exploiter les règles, ce qui minimise les inégalités de ressources cognitives entre acteurs.",
+    ],
+    evolution: [
+      { p: '1944', f: "Von Neumann et Morgenstern posent les bases mathématiques de la théorie des jeux." },
+      { p: '1977', f: "Crozier et Friedberg en adaptent librement la métaphore à l'analyse sociologique des organisations." },
+    ],
+  },
+  'phenomene-bureaucratique': {
+    detaille: [
+      "Le phénomène bureaucratique est le nom que Crozier donne à un cercle vicieux qu'il observe dans les organisations administratives françaises : les règles impersonnelles, conçues pour éliminer l'arbitraire et le favoritisme, finissent par générer de nouvelles zones d'incertitude et de nouveaux jeux de pouvoir informels autour d'elles.",
+      "Ce cercle se referme sur lui-même : plus une organisation multiplie les règles pour corriger les dysfonctionnements qu'elle observe, plus elle crée de cas non prévus et de zones grises, qui appellent à leur tour de nouvelles règles, sans jamais parvenir à l'efficacité rationnelle promise.",
+      "Crozier ne dit pas que la bureaucratie est absurde ou irrationnelle : chaque règle, chaque comportement pris isolément reste parfaitement compréhensible ; c'est leur combinaison, en système, qui produit une rigidité que personne n'a directement voulue.",
+    ],
+    origine: {
+      oeuvre: 'Le Phénomène bureaucratique',
+      annee: '1963',
+      contexte:
+        "Crozier construit cette thèse à partir de deux enquêtes de terrain, dans une agence administrative parisienne et dans une manufacture de tabac, deux organisations françaises réputées pour leur rigidité réglementaire.",
+    },
+    exemples: [
+      "Un règlement si détaillé qu'il crée sans cesse de nouveaux cas non prévus, autour desquels se rejoue un pouvoir informel.",
+      "Un service qui multiplie les procédures de contrôle après chaque incident, sans jamais parvenir à en réduire durablement la fréquence.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Le Phénomène bureaucratique' },
+    ],
+    associes: ['dysfonctionnement-organisationnel', 'zone-d-incertitude'],
+    opposes: ['bureaucratie'],
+    critiques: [
+      "Weber objecterait que son propre modèle décrit un type idéal, jamais entièrement réalisé, et que les dérives que Crozier documente n'invalident pas la rationalité formelle de la bureaucratie comme instrument de comparaison.",
+      "Le diagnostic, construit sur l'administration française des années 1950 et 1960, a été discuté quant à sa portée pour d'autres traditions administratives, notamment anglo-saxonnes.",
+      "Le concept dit peu des réformes qui, historiquement, ont malgré tout réussi à briser certains cercles vicieux bureaucratiques qu'il décrit.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber théorise la bureaucratie comme type idéal d'organisation rationnelle et efficace." },
+      { p: '1940', f: "Merton documente les dysfonctions de la personnalité bureaucratique, matrice directe de l'analyse de Crozier." },
+      { p: '1963', f: "Le Phénomène bureaucratique en donne l'étude empirique la plus développée, sur le cas français." },
+    ],
+  },
+  'dysfonctionnement-organisationnel': {
+    detaille: [
+      "Le dysfonctionnement organisationnel est l'écart persistant entre les objectifs officiellement affichés d'une organisation et ce qu'elle produit réellement — un écart qui n'a rien d'un simple accident ou d'une erreur isolée, mais qui résulte de la rencontre de stratégies individuellement rationnelles.",
+      "Crozier insiste sur ce point : chaque acteur, pris isolément, agit de façon parfaitement sensée compte tenu de sa propre situation ; c'est leur combinaison, à l'échelle de l'organisation entière, qui produit un résultat collectif que personne n'a vraiment voulu ni anticipé.",
+      "Ce dysfonctionnement n'est donc jamais réductible à un simple problème de compétence ou de moyens : le corriger suppose de comprendre et, souvent, de transformer les jeux de pouvoir qui le produisent, plutôt que de se contenter d'ajouter de nouvelles règles ou de nouveaux contrôles.",
+    ],
+    origine: {
+      oeuvre: 'Le Phénomène bureaucratique',
+      annee: '1963',
+      contexte:
+        "Crozier documente, dans ses enquêtes, des organisations où chaque service optimise sa propre position sans coordination réelle avec les autres, produisant collectivement une rigidité que personne, à titre individuel, n'a délibérément recherchée.",
+    },
+    exemples: [
+      "Un service qui n'atteint jamais ses objectifs affichés, alors que chacun de ses membres agit pourtant de façon parfaitement rationnelle.",
+      "Une chaîne de validation si prudente, à chaque étape rationnelle en soi, que le délai global finit par dépasser tout ce qu'aucun étage n'aurait accepté seul.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Le Phénomène bureaucratique' },
+    ],
+    associes: ['phenomene-bureaucratique', 'fonction-latente'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Le concept explique bien la persistance d'un dysfonctionnement, mais dit moins précisément comment en sortir sans se heurter aux mêmes stratégies qui l'ont produit.",
+      "Il suppose une distinction nette entre objectifs officiels et fonctionnement réel, alors que les objectifs eux-mêmes restent souvent ambigus ou contestés au sein d'une même organisation.",
+      "Boudon objecterait qu'un dysfonctionnement de ce type relève d'un effet de composition ordinaire, qu'un vocabulaire plus général suffirait à décrire sans recourir à un concept propre à la seule sociologie des organisations.",
+    ],
+    evolution: [
+      { p: '1940', f: "Merton décrit les dysfonctions de la personnalité bureaucratique, matrice de la notion." },
+      { p: '1963', f: "Crozier en propose une version organisationnelle complète, fondée sur les stratégies d'acteurs." },
+    ],
+  },
+  'regulation': {
+    detaille: [
+      "La régulation est le processus, jamais définitivement acquis, par lequel les jeux et les stratégies divergentes des différents acteurs d'une organisation finissent par se stabiliser en un fonctionnement d'ensemble viable, sans jamais se figer complètement ni basculer dans le chaos.",
+      "Cette régulation n'est pas décrétée d'en haut : elle émerge de la confrontation quotidienne des stratégies, des ajustements successifs, des compromis tacites qui permettent à des acteurs aux intérêts souvent contradictoires de continuer à coopérer malgré tout.",
+      "Crozier insiste sur sa fragilité constitutive : une régulation stabilisée aujourd'hui peut se défaire demain, dès qu'un acteur découvre une nouvelle zone d'incertitude à exploiter ou qu'une règle change les termes du jeu commun.",
+    ],
+    origine: {
+      oeuvre: "L'Acteur et le système",
+      annee: '1977',
+      contexte:
+        "Crozier et Friedberg développent ce concept pour expliquer comment un système d'action concret, fait de stratégies potentiellement conflictuelles, parvient malgré tout à fonctionner de façon relativement stable dans la durée.",
+    },
+    exemples: [
+      "Un conflit de service qui, sans jamais se régler formellement, retrouve chaque fois un équilibre de fait entre les parties.",
+      "Une répartition informelle des tâches, jamais actée officiellement, qui finit par tenir lieu de règle stable entre collègues.",
+    ],
+    oeuvres: [
+      { y: '1977', t: "L'Acteur et le système (avec E. Friedberg)" },
+    ],
+    associes: ['systeme-d-action-concret', 'jeu'],
+    opposes: ['regulation-sociale'],
+    critiques: [
+      "Durkheim objecterait qu'une régulation réduite à un ajustement stratégique entre intérêts particuliers perd la dimension proprement morale et partagée qu'implique, selon lui, toute régulation sociale digne de ce nom.",
+      "Le concept dit peu des régulations imposées unilatéralement par un acteur en position de force écrasante, sans véritable ajustement réciproque.",
+      "Il suppose des acteurs suffisamment stables dans leurs positions pour que des compromis durables puissent s'établir, ce qui vaut moins bien dans des organisations en changement rapide.",
+    ],
+    evolution: [
+      { p: '1897', f: "Durkheim pose la régulation sociale comme encadrement normatif des désirs individuels." },
+      { p: '1977', f: "Crozier et Friedberg en proposent une version stratégique et organisationnelle, fondée sur l'ajustement des jeux d'acteurs." },
+    ],
+  },
 };
