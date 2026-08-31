@@ -74,7 +74,7 @@ export default function TheorieFiche() {
         </h3>
         {t.conceptsLinks.length === 0 ? (
           <p style={{ fontSize: 12.5, color: 'color-mix(in srgb, var(--color-text) 40%, transparent)', margin: '0 0 24px' }}>
-            Aucun concept des seize fiches ne porte directement sur cette théorie.
+            Aucun concept des dix-sept fiches ne porte directement sur cette théorie.
           </p>
         ) : (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>

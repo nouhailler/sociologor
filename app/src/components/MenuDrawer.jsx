@@ -17,7 +17,7 @@ const CATEGORIES = [
       { to: '/', label: 'Accueil', hint: 'Domaines et notion du jour' },
       { to: '/graphe', label: 'Graphe', hint: 'Filiations, et réseau de concepts' },
       { to: '/courants', label: 'Carte des courants', hint: "D'où vient une manière de faire de la sociologie" },
-      { to: '/sociologues', label: 'Sociologues', hint: 'Les seize fiches, par leur portrait' },
+      { to: '/sociologues', label: 'Sociologues', hint: 'Les dix-sept fiches, par leur portrait' },
       { to: '/concepts', label: 'Concepts sociaux', hint: 'Les outils théoriques, par auteur' },
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
       { to: '/mecanismes', label: 'Mécanismes sociaux', hint: "Les rouages qui expliquent comment un phénomène se produit" },

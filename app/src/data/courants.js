@@ -282,4 +282,19 @@ export const COURANTS = [
     inspirateurs: ["Michel Foucault — l'analyse du pouvoir et des institutions, dont Castel fut proche avant de s'en écarter vers l'histoire du salariat"],
     niveau: 'paradigme',
   },
+  {
+    id: 'theorie-de-l-agir-communicationnel',
+    t: "Théorie de l'agir communicationnel",
+    periode: 'contemporain',
+    d: "Contre le pessimisme de ses aînés, la raison garde une ressource intacte : la capacité, inscrite dans le langage lui-même, à s'entendre sur ce qui vaut d'être fait ensemble.",
+    detail:
+      "Habermas reprend le programme de la théorie critique sans en partager le constat sans issue : là où Adorno et Horkheimer ne voyaient plus, dans la raison instrumentale généralisée, aucune ressource pour la critique, Habermas en trouve une dans la pragmatique du langage — chaque acte de communication authentique présuppose des conditions de validité qui, une fois explicitées, fondent une rationalité communicationnelle irréductible au seul calcul.",
+    auteurs: ['habermas'],
+    vientDe: ['theorie-critique', 'sociologie-comprehensive', 'fonctionnalisme'],
+    inspirateurs: [
+      "John Austin et John Searle — la théorie des actes de langage, socle de la pragmatique universelle",
+      "Niklas Luhmann — la théorie des systèmes, dont Habermas retient le concept en le limitant à l'argent et au pouvoir",
+    ],
+    niveau: 'paradigme',
+  },
 ];

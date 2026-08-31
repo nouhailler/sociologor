@@ -1362,7 +1362,7 @@ export const CONCEPTS = {
       { y: '1900', t: "Philosophie de l'argent" },
       { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation' },
     ],
-    associes: ['blasement-urbain', 'mise-en-scene-de-soi', 'configuration'],
+    associes: ['blasement-urbain', 'mise-en-scene-de-soi', 'configuration', 'dyade', 'triade', 'conflit', 'secret'],
     opposes: ['systeme-social', 'fait-social'],
     critiques: [
       "Le formalisme se paie cher : deux situations de même forme peuvent avoir des enjeux de pouvoir incomparables.",
@@ -1395,7 +1395,7 @@ export const CONCEPTS = {
       { y: '1900', t: "Philosophie de l'argent" },
       { y: '1903', t: "Les Grandes villes et la vie de l'esprit" },
     ],
-    associes: ['formes-de-socialisation', 'anomie', 'mise-en-scene-de-soi'],
+    associes: ['formes-de-socialisation', 'anomie', 'mise-en-scene-de-soi', 'metropole-et-vie-mentale', 'economie-monetaire'],
     opposes: ['solidarite-organique'],
     critiques: [
       "Le texte décrit le Berlin de 1900 et se lit comme une loi de la vie urbaine en général.",
@@ -1407,6 +1407,440 @@ export const CONCEPTS = {
       { p: '1915–1940', f: "L'école de Chicago en fait le point de départ de la sociologie urbaine de terrain." },
       { p: '1938', f: "Wirth systématise en trois variables — taille, densité, hétérogénéité." },
       { p: '1963', f: 'Goffman en tire l\'« inattention civile » : ne pas regarder est un travail, pas une absence.' },
+    ],
+  },
+  'dyade': {
+    detaille: [
+      "Une dyade — un groupe à deux — n'a pas d'existence au-delà des deux personnes qui la composent : contrairement à une organisation, elle ne se survit pas à elle-même si l'une des deux se retire, elle disparaît avec elle.",
+      "Cette fragilité constitutive rend chaque membre irremplaçable et pleinement responsable de la relation : aucun tiers ne peut diluer un désaccord, aucune majorité ne peut trancher, ce qui donne à la dyade une intensité que les groupes plus grands n'ont pas.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel ouvre son chapitre sur la quantité des membres en posant le cas le plus simple, pour en tirer un principe général : le nombre change la forme, pas seulement la taille.",
+    },
+    exemples: [
+      "Un binôme de travail où chaque décision engage directement les deux personnes, sans possibilité de reporter un désaccord sur un tiers absent.",
+    ],
+    oeuvres: [
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation, chapitre II' },
+    ],
+    associes: ['formes-de-socialisation', 'triade'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le modèle reste très formel : deux dyades de même structure peuvent vivre des rapports de pouvoir très inégaux selon qui les compose.",
+      "L'analyse dit peu de ce qui se passe quand une dyade se transforme en triade par l'arrivée d'un enfant ou d'un associé, plutôt que par simple addition.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel isole la dyade comme forme la plus simple et la plus fragile de socialisation." },
+      { p: '1950', f: "La théorie des petits groupes, en psychologie sociale américaine, reprend systématiquement la distinction dyade/triade." },
+    ],
+  },
+  'triade': {
+    detaille: [
+      "L'arrivée d'un troisième membre transforme radicalement une relation : la dyade fragile devient une structure qui peut, en principe, survivre au départ de n'importe lequel de ses membres — le groupe acquiert une existence propre, distincte de chacun.",
+      "La triade rend possibles des positions inédites : l'arbitre, qui tranche sans être partie ; le tiers profiteur, qui tire avantage de la discorde des deux autres ; et la stratégie de diviser pour régner, qui n'a aucun sens à deux.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel poursuit l'analyse entamée avec la dyade en ajoutant un membre, pour montrer que le passage de deux à trois n'est pas une simple addition mais un changement de nature.",
+    },
+    exemples: [
+      "Deux enfants qui se disputent un jouet changent de comportement dès qu'un parent entre dans la pièce, non parce qu'il intervient, mais parce que sa seule présence de tiers modifie la dispute.",
+    ],
+    oeuvres: [
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation, chapitre II' },
+    ],
+    associes: ['formes-de-socialisation', 'dyade'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le passage de deux à trois est présenté comme la rupture décisive, alors que l'ajout d'un quatrième ou d'un cinquième membre transforme aussi la dynamique, sans que Simmel ne le formalise autant.",
+      "L'analyse des rôles de tiers (arbitre, profiteur, diviseur) reste largement illustrative, sans typologie systématique des conditions qui font apparaître l'un plutôt que l'autre.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel formalise les positions inédites qu'ouvre le passage de deux à trois membres." },
+      { p: '1956', f: "Caplow développe une théorie des coalitions en triade, formalisant mathématiquement les intuitions de Simmel." },
+    ],
+  },
+  'sociabilite': {
+    detaille: [
+      "La sociabilité, au sens strict que lui donne Simmel, est la forme pure de l'association : on s'y réunit non pour un but extérieur — affaires, entraide, procréation — mais pour le seul plaisir de la forme sociale elle-même, comme dans un jeu.",
+      "Ce jeu a ses propres règles de tact : chacun y laisse à la porte ses intérêts personnels sérieux, sa fortune, ses soucis, pour ne présenter qu'une version stylisée et agréable de lui-même, au bénéfice de la conversation commune.",
+    ],
+    origine: {
+      oeuvre: 'La sociabilité, exemple de sociologie pure',
+      annee: '1910',
+      contexte:
+        "Simmel cherche un cas limite pour illustrer sa méthode : isoler la forme sociale de tout contenu, en prenant l'exemple d'une interaction qui n'a justement plus aucun contenu sérieux à faire valoir.",
+    },
+    exemples: [
+      "Un dîner mondain où évoquer ouvertement son salaire ou ses ennuis de santé briserait immédiatement l'atmosphère légère que tous s'efforcent tacitement de maintenir.",
+    ],
+    oeuvres: [
+      { y: '1910', t: 'La sociabilité, exemple de sociologie pure' },
+      { y: '1917', t: 'Grundfragen der Soziologie' },
+    ],
+    associes: ['formes-de-socialisation', 'mise-en-scene-de-soi'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Le modèle décrit surtout la sociabilité bourgeoise de salon, dans un contexte social et historique précis, plus qu'une forme universelle.",
+      "La distinction entre sociabilité pure et interaction intéressée reste difficile à tracer dans les faits, où les deux se mêlent souvent.",
+    ],
+    evolution: [
+      { p: '1910', f: "Simmel isole la sociabilité comme cas limite de sa sociologie des formes." },
+      { p: '1959', f: "Goffman en retrouve l'esprit dans son analyse du travail de figuration en public." },
+    ],
+  },
+  'distance-sociale': {
+    detaille: [
+      "Toute relation sociale suppose, selon Simmel, un dosage précis entre proximité et éloignement : ni la fusion totale ni l'indifférence complète ne permettent une relation viable, qui se règle toujours sur une distance particulière, propre à chaque type de lien.",
+      "Cette distance n'est pas seulement spatiale : elle est d'abord sociale, mesurable dans le degré d'intimité, de familiarité et de réciprocité qu'une relation autorise, indépendamment de la proximité physique réelle des personnes concernées.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel développe cette idée en creux de sa digression sur l'étranger, qui incarne le cas limite d'une distance sociale maintenue malgré la proximité physique.",
+    },
+    exemples: [
+      "Un supérieur hiérarchique qui tutoie ses subordonnés sans que cela réduise la distance réelle qui organise leur relation professionnelle.",
+    ],
+    oeuvres: [
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation' },
+    ],
+    associes: ['etranger', 'croisement-des-cercles-sociaux'],
+    opposes: ['solidarite-mecanique'],
+    critiques: [
+      "Le concept reste largement qualitatif chez Simmel, ce qui a nécessité, pour l'opérationnaliser statistiquement, les échelles construites bien plus tard par Bogardus.",
+      "Mesurer une distance suppose de choisir des indicateurs (fréquentation, mariage, voisinage) qui peuvent donner des résultats très différents pour une même relation.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel pose la distance sociale comme dosage constitutif de toute relation." },
+      { p: '1925', f: "Bogardus construit une échelle de mesure de la distance sociale entre groupes ethniques, encore utilisée aujourd'hui." },
+    ],
+  },
+  'etranger': {
+    detaille: [
+      "L'étranger, chez Simmel, n'est pas simplement celui qui vient d'ailleurs et repart : c'est celui qui vient d'ailleurs et reste, occupant une position sociale précise, faite à la fois de proximité (il participe à la vie du groupe) et de distance (il n'en partage jamais totalement les évidences).",
+      "Cette position paradoxale lui donne une objectivité que les membres nés dans le groupe n'ont pas : n'étant lié à aucune des factions internes par une histoire commune, il peut recevoir des confidences qu'aucun proche ne recevrait, et voir ce que l'habitude rend invisible aux autres.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel s'appuie sur la figure historique du marchand juif en Europe, durablement installé dans des communautés dont il ne partageait ni la religion ni les origines.",
+    },
+    exemples: [
+      "Un nouveau venu dans une équipe, encore consulté des années après son arrivée pour son regard neuf sur des habitudes que les autres ne voient plus.",
+    ],
+    oeuvres: [
+      { y: '1908', t: "Sociologie. Études sur les formes de la socialisation, Excursus sur l'étranger" },
+    ],
+    associes: ['distance-sociale', 'formes-de-socialisation'],
+    opposes: ['solidarite-mecanique'],
+    critiques: [
+      "Le portrait reste daté sur un cas précis, le commerçant juif européen, dont la généralisation à toute figure de l'étranger a été discutée.",
+      "La position décrite suppose un groupe suffisamment stable pour que l'écart de l'étranger s'y voie ; elle décrit mal les sociétés où la mobilité rend cette frontière floue.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel formule la position paradoxale de l'étranger, proche et distant à la fois." },
+      { p: '1928', f: "Park, à Chicago, en tire l'homme marginal, tiraillé entre deux mondes culturels sans appartenir pleinement à aucun." },
+      { p: '1944', f: "Schütz prolonge l'analyse pour penser la situation de l'immigrant récent, confronté à un monde social qui ne va plus de soi." },
+    ],
+  },
+  'secret': {
+    detaille: [
+      "Le secret n'est pas seulement une absence d'information : c'est une forme sociale à part entière, qui organise des relations aussi sûrement que ce qui se dit ouvertement — un groupe se définit autant par ce qu'il cache que par ce qu'il montre.",
+      "Simmel distingue le secret partagé, qui lie ceux qui le détiennent en excluant les autres, de la société secrète, une organisation entière structurée autour de la protection d'un contenu caché, avec sa propre hiérarchie et ses propres rites d'initiation.",
+    ],
+    origine: {
+      oeuvre: 'Le Secret et les sociétés secrètes',
+      annee: '1906',
+      contexte:
+        "Simmel étudie des organisations aussi diverses que la franc-maçonnerie et des sociétés politiques clandestines pour en tirer une théorie générale de la fonction sociale du secret.",
+    },
+    exemples: [
+      "Une entreprise dont certains projets restent confidentiels même en interne, ce qui crée entre les quelques initiés un lien que le reste de l'organisation n'a pas.",
+    ],
+    oeuvres: [
+      { y: '1906', t: 'Le Secret et les sociétés secrètes' },
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation' },
+    ],
+    associes: ['formes-de-socialisation', 'distance-sociale'],
+    opposes: ['fait-social'],
+    critiques: [
+      "L'analyse dit peu de ce qui arrive quand un secret est éventé, moment pourtant décisif pour la forme sociale qu'il organisait.",
+      "Elle traite le secret d'abord comme un lien positif, en minorant les usages de domination et de manipulation qu'il permet aussi.",
+    ],
+    evolution: [
+      { p: '1906', f: "Simmel théorise le secret comme forme sociale et fonde l'étude des sociétés secrètes." },
+      { p: '1963', f: "Goffman prolonge l'analyse avec la gestion de l'information discréditante dans Stigmate." },
+    ],
+  },
+  'conflit': {
+    detaille: [
+      "Contre l'idée d'une société tenue seulement par l'harmonie, Simmel montre que le conflit est lui-même une forme d'association : il suppose un engagement réciproque, une reconnaissance de l'autre comme partie prenante, ce qu'une pure indifférence n'exigerait pas.",
+      "Le conflit peut même renforcer la cohésion interne d'un groupe, en resserrant ses membres face à un adversaire commun, et clarifier des positions qu'une coexistence sans heurt aurait laissées dans le flou.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel écrit alors que la sociologie naissante pense surtout la société par l'ordre et la coopération ; il choisit délibérément d'étudier le conflit comme une forme aussi fondamentale que les autres.",
+    },
+    exemples: [
+      "Deux départements universitaires rivaux pour des postes et des crédits, dont la compétition ouverte structure et anime la vie académique plus qu'elle ne la paralyse.",
+    ],
+    oeuvres: [
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation, chapitre IV' },
+    ],
+    associes: ['formes-de-socialisation', 'conflit-de-classes'],
+    opposes: ['solidarite-organique'],
+    critiques: [
+      "L'idée d'un conflit fonctionnellement bénéfique a pu servir à minimiser des conflits réellement destructeurs, aux enjeux de pouvoir très inégaux.",
+      "Coser, en la reprenant, a été accusé de trop lisser le conflit en fonction sociale utile, perdant de vue ce qu'il peut avoir d'irréductiblement destructeur.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel formule le conflit comme forme de sociation à part entière." },
+      { p: '1956', f: "Coser publie Les Fonctions du conflit social et systématise la thèse pour la sociologie américaine." },
+    ],
+  },
+  'mode': {
+    detaille: [
+      "La mode répond à deux besoins contradictoires à la fois : le besoin d'imiter, qui rassure en rattachant l'individu à un groupe, et le besoin de se distinguer, qui affirme sa singularité. Elle vit de leur tension permanente, jamais de leur résolution.",
+      "Ce mécanisme la condamne à une obsolescence programmée : dès qu'une mode se généralise, elle cesse de distinguer ceux qui l'avaient adoptée les premiers, qui doivent alors s'en détourner pour retrouver la distinction recherchée — ce qui relance aussitôt le cycle.",
+    ],
+    origine: {
+      oeuvre: 'Philosophie de la mode',
+      annee: '1905',
+      contexte:
+        "Simmel observe la diffusion rapide des modes vestimentaires dans les grandes villes européennes, portée par une bourgeoisie urbaine en quête de distinction sociale.",
+    },
+    exemples: [
+      "Un prénom rare devenu très commun en une décennie, ce qui pousse les parents en quête d'originalité à s'en détourner à leur tour.",
+    ],
+    oeuvres: [
+      { y: '1905', t: 'Philosophie de la mode' },
+      { y: '1900', t: "Philosophie de l'argent" },
+    ],
+    associes: ['individualite', 'distance-sociale'],
+    opposes: ['egalisation-des-conditions'],
+    critiques: [
+      "L'analyse suppose une société suffisamment inégalitaire pour que l'imitation ait un sens ; elle décrit mal les sociétés très égalitaires où la fonction distinctive de la mode s'affaiblit.",
+      "Le modèle reste centré sur l'habillement bourgeois occidental, moins évident à transposer à d'autres régimes de la mode.",
+    ],
+    evolution: [
+      { p: '1904', f: "Veblen, aux États-Unis, décrit une version voisine sous le nom de consommation ostentatoire." },
+      { p: '1905', f: "Simmel formule le mécanisme d'imitation et de distinction propre à la mode." },
+      { p: '1979', f: "Bourdieu relie la mode à la logique plus générale de la distinction sociale par le goût." },
+    ],
+  },
+  'individualite': {
+    detaille: [
+      "Simmel distingue deux formes historiques d'individualisme. La première, née au XVIIIᵉ siècle, est quantitative et égalitaire : chaque individu compte également, indépendamment de ce qui le distingue des autres. La seconde, née au XIXᵉ siècle romantique, est qualitative : ce qui compte, c'est précisément ce qui rend chacun incomparable à tout autre.",
+      "Cette seconde forme, l'individualité proprement dite, se nourrit paradoxalement de la vie moderne qu'elle semble menacer : plus les cercles sociaux auxquels on appartient se multiplient et se croisent, plus la combinaison qui en résulte devient unique.",
+    ],
+    origine: {
+      oeuvre: "Philosophie de l'argent",
+      annee: '1900',
+      contexte:
+        "Simmel développe la distinction en observant comment l'économie monétaire, en rendant les individus interchangeables sur le plan économique, accentue en retour leur besoin de se distinguer sur d'autres plans.",
+    },
+    exemples: [
+      "Deux personnes au même métier, dans la même ville, qui ne se ressemblent en rien une fois considérées la totalité de leurs engagements associatifs, culturels et familiaux.",
+    ],
+    oeuvres: [
+      { y: '1900', t: "Philosophie de l'argent" },
+      { y: '1917', t: 'Grundfragen der Soziologie' },
+    ],
+    associes: ['mode', 'tragedie-de-la-culture'],
+    opposes: ['individualisme-moral'],
+    critiques: [
+      "La distinction entre les deux individualismes reste surtout descriptive : Simmel n'explique pas complètement pourquoi la seconde succède à la première plutôt qu'elle ne s'y ajoute.",
+      "L'individualité qualitative valorisée par Simmel suppose des ressources — temps, argent, éducation — inégalement disponibles, ce qu'il thématise peu.",
+    ],
+    evolution: [
+      { p: '1900', f: "Simmel distingue individualisme quantitatif et qualitatif dans Philosophie de l'argent." },
+      { p: '1908', f: "Le croisement des cercles sociaux en fournit le mécanisme structurel." },
+      { p: '1983', f: "Lipovetsky décrit une troisième forme, plus narcissique, dans L'Ère du vide." },
+    ],
+  },
+  'croisement-des-cercles-sociaux': {
+    detaille: [
+      "Dans une société traditionnelle, l'individu naît dans un seul cercle englobant — sa famille, son village, sa caste — qui organise l'essentiel de son existence. Dans la société moderne, il appartient simultanément à plusieurs cercles indépendants : famille, profession, loisirs, convictions, chacun recrutant ses membres selon une logique différente.",
+      "C'est la combinaison particulière de ces appartenances, propre à chaque individu, qui produit sa position sociale unique : deux personnes peuvent partager un cercle sans en partager aucun autre, ce qu'une société à cercle unique ne permettait pas.",
+    ],
+    origine: {
+      oeuvre: 'Sociologie. Études sur les formes de la socialisation',
+      annee: '1908',
+      contexte:
+        "Simmel observe la multiplication des associations, clubs et cercles professionnels dans les grandes villes allemandes de son temps, contrastée avec la structure des sociétés rurales et traditionnelles.",
+    },
+    exemples: [
+      "Un salarié syndiqué, pratiquant d'un sport collectif et membre d'une chorale appartient à trois cercles dont aucun ne recoupe entièrement les deux autres.",
+    ],
+    oeuvres: [
+      { y: '1908', t: 'Sociologie. Études sur les formes de la socialisation, chapitre VI' },
+    ],
+    associes: ['individualite', 'distance-sociale'],
+    opposes: ['solidarite-mecanique'],
+    critiques: [
+      "Le modèle suppose une liberté de choix des cercles d'appartenance que les inégalités sociales et économiques limitent en pratique fortement.",
+      "Il dit peu des cas où plusieurs cercles se recoupent presque entièrement, comme dans certains milieux professionnels très homogènes.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel formule le croisement des cercles sociaux comme trait distinctif de la modernité." },
+      { p: '1954', f: "La sociologie des réseaux sociaux, naissante, formalise mathématiquement l'intuition des cercles qui se recoupent partiellement." },
+    ],
+  },
+  'culture-objective': {
+    detaille: [
+      "La culture objective regroupe tout ce qu'une société a produit et accumulé — livres, œuvres d'art, institutions, techniques — sous une forme désormais indépendante de la conscience de qui l'a créé, disponible en principe à quiconque veut se l'approprier.",
+      "Cette accumulation ne cesse de croître, et croît même plus vite que la capacité de n'importe quel individu à en absorber une part significative : la culture objective échappe ainsi progressivement à l'échelle humaine qui l'a pourtant produite.",
+    ],
+    origine: {
+      oeuvre: "Philosophie de l'argent",
+      annee: '1900',
+      contexte:
+        "Simmel observe que l'économie monétaire accélère la production et la circulation des objets culturels, en les détachant toujours davantage de la relation personnelle entre créateur et destinataire.",
+    },
+    exemples: [
+      "Un logiciel utilisé quotidiennement par des millions de personnes qui n'en comprennent individuellement qu'une infime fraction du fonctionnement réel.",
+    ],
+    oeuvres: [
+      { y: '1900', t: "Philosophie de l'argent" },
+      { y: '1911', t: 'Le Concept et la tragédie de la culture' },
+    ],
+    associes: ['culture-subjective', 'tragedie-de-la-culture'],
+    opposes: ['habitus'],
+    critiques: [
+      "La distinction entre culture objective et subjective reste difficile à mesurer empiriquement, faute d'indicateur autre qu'introspectif.",
+      "Le diagnostic surestime peut-être l'unité de la « culture » d'une époque, qui recouvre en réalité des productions très hétérogènes et concurrentes.",
+    ],
+    evolution: [
+      { p: '1900', f: "Simmel esquisse la distinction entre culture objective et subjective." },
+      { p: '1911', f: "Il la développe pleinement dans son essai sur la tragédie de la culture." },
+      { p: '1944', f: "Adorno et Horkheimer en retrouvent une version critique dans leur diagnostic de l'industrie culturelle." },
+    ],
+  },
+  'culture-subjective': {
+    detaille: [
+      "La culture subjective est le degré effectif de développement personnel qu'un individu tire de la culture objective à laquelle il a accès — la différence entre disposer d'une bibliothèque et être réellement cultivé par ce qu'elle contient.",
+      "Simmel en fait le véritable but de toute culture : accumuler des œuvres n'a de sens que si elles contribuent, en retour, à l'épanouissement de qui les reçoit — un but que la croissance même de la culture objective rend de plus en plus difficile à atteindre.",
+    ],
+    origine: {
+      oeuvre: "Philosophie de l'argent",
+      annee: '1900',
+      contexte:
+        "Simmel s'inquiète que l'accumulation d'objets culturels, portée par l'économie monétaire, ne se traduise plus automatiquement par un enrichissement personnel comparable.",
+    },
+    exemples: [
+      "Un accès illimité à des cours en ligne qui n'entraîne, chez la plupart de ceux qui y souscrivent, aucune transformation personnelle proportionnée à l'offre disponible.",
+    ],
+    oeuvres: [
+      { y: '1900', t: "Philosophie de l'argent" },
+      { y: '1911', t: 'Le Concept et la tragédie de la culture' },
+    ],
+    associes: ['culture-objective', 'individualite'],
+    opposes: ['industrie-culturelle'],
+    critiques: [
+      "Le concept suppose un idéal de cultivation personnelle (Bildung) propre à la bourgeoisie éduquée allemande de l'époque, plus qu'une norme universelle.",
+      "Il reste difficile de départager, dans un enrichissement personnel donné, ce qui revient à la culture objective disponible et ce qui tient à d'autres facteurs (disposition, milieu, hasard des rencontres).",
+    ],
+    evolution: [
+      { p: '1900', f: "Simmel distingue culture objective et subjective dans Philosophie de l'argent." },
+      { p: '1944', f: "L'industrie culturelle, décrite par Adorno et Horkheimer, radicalise le diagnostic : la culture de masse ne cultive plus, elle occupe." },
+    ],
+  },
+  'tragedie-de-la-culture': {
+    detaille: [
+      "La tragédie de la culture désigne, pour Simmel, un écart structurel et croissant entre la culture objective — toujours plus vaste, produite en collaboration par des générations entières — et la culture subjective de chaque individu, dont les capacités d'appropriation restent, elles, à peu près constantes.",
+      "Le mot tragédie n'est pas choisi au hasard : ce n'est pas un accident réparable, mais une conséquence nécessaire du fait même que la culture, pour exister, doit se détacher de son créateur et prendre une forme objective — cette objectivation même est ce qui, ensuite, échappe à quiconque.",
+    ],
+    origine: {
+      oeuvre: 'Le Concept et la tragédie de la culture',
+      annee: '1911',
+      contexte:
+        "Simmel écrit cet essai vers la fin de sa vie, dans une Allemagne où la production intellectuelle, scientifique et artistique atteint une ampleur inédite, sans que l'expérience de la cultivation individuelle ne semble progresser au même rythme.",
+    },
+    exemples: [
+      "Une profession si spécialisée que sa propre littérature scientifique double avant qu'un seul de ses praticiens n'ait pu en lire la production précédente.",
+    ],
+    oeuvres: [
+      { y: '1911', t: 'Le Concept et la tragédie de la culture' },
+    ],
+    associes: ['culture-objective', 'culture-subjective'],
+    opposes: ['loi-des-trois-etats'],
+    critiques: [
+      "Le diagnostic reste largement spéculatif, sans mesure empirique de l'écart qu'il postule entre culture objective et subjective.",
+      "Il suppose une culture unifiée dont chaque individu serait également l'héritier, quand l'accès réel à la culture objective reste très inégalement réparti.",
+    ],
+    evolution: [
+      { p: '1911', f: "Simmel formule la tragédie de la culture comme conséquence nécessaire de l'objectivation culturelle." },
+      { p: '1930', f: "Freud, dans Malaise dans la civilisation, développe un diagnostic voisin sur le prix psychique de la civilisation." },
+      { p: '1947', f: "Horkheimer et Adorno radicalisent le diagnostic dans une version plus politique et critique." },
+    ],
+  },
+  'economie-monetaire': {
+    detaille: [
+      "L'argent n'est pas, pour Simmel, un simple instrument neutre d'échange : c'est une forme sociale à part entière, qui transforme profondément la manière dont les individus se représentent la valeur et se rapportent les uns aux autres.",
+      "Sa puissance tient à sa capacité à tout réduire à une même échelle quantitative : deux choses qui n'avaient rien de comparable — un tableau, un service rendu, une heure de travail — deviennent commensurables dès qu'on leur attribue un prix, ce qui nivelle des qualités jusque-là incommensurables.",
+    ],
+    origine: {
+      oeuvre: "Philosophie de l'argent",
+      annee: '1900',
+      contexte:
+        "Œuvre majeure de Simmel, où il analyse philosophiquement et sociologiquement ce que la généralisation de l'échange monétaire change à l'expérience humaine du monde, bien au-delà de la seule économie.",
+    },
+    exemples: [
+      "Un dédommagement financier proposé pour un préjudice moral, qui suppose de traduire en une somme précise une souffrance qui n'avait, à l'origine, aucune commune mesure avec l'argent.",
+    ],
+    oeuvres: [
+      { y: '1900', t: "Philosophie de l'argent" },
+    ],
+    associes: ['blasement-urbain', 'culture-objective'],
+    opposes: ['capital-symbolique'],
+    critiques: [
+      "L'analyse reste très générale sur « l'argent », sans toujours distinguer les monnaies et les systèmes financiers très différents apparus depuis 1900.",
+      "Elle dit peu des inégalités d'accès à cette même économie monétaire, qui n'affecte pas également tous les groupes sociaux qu'elle traverse.",
+    ],
+    evolution: [
+      { p: '1900', f: "Simmel publie Philosophie de l'argent et analyse le nivellement des valeurs qu'opère l'économie monétaire." },
+      { p: '1904', f: "Weber développe, en parallèle, sa propre analyse de la rationalisation économique moderne." },
+      { p: '1972', f: "Bourdieu, avec le capital symbolique, décrit à l'inverse des formes de valeur qui résistent précisément à cette réduction monétaire." },
+    ],
+  },
+  'metropole-et-vie-mentale': {
+    detaille: [
+      "Au-delà du seul blasement, la grande ville impose à ses habitants un mode de vie entièrement réorganisé autour du calcul, de la ponctualité et de la réserve : l'intellect, plus rapide et plus adaptable que l'affect, devient l'organe de défense privilégié contre la surcharge d'impressions urbaines.",
+      "Cette intellectualisation n'est pas un hasard : Simmel la relie directement à l'économie monétaire, qui a fait de la ville son terrain d'élection et impose, elle aussi, un rapport calculateur et impersonnel aux choses comme aux gens.",
+    ],
+    origine: {
+      oeuvre: "Les Grandes villes et la vie de l'esprit",
+      annee: '1903',
+      contexte:
+        "Simmel prononce ce texte, devenu son plus célèbre, dans une Allemagne dont les grandes villes connaissent une croissance démographique et économique sans précédent.",
+    },
+    exemples: [
+      "Une ville où chaque rendez-vous se cale à la minute près sur une horloge partagée, condition sans laquelle la coordination de millions de déplacements individuels s'effondrerait aussitôt.",
+    ],
+    oeuvres: [
+      { y: '1903', t: "Les Grandes villes et la vie de l'esprit" },
+      { y: '1900', t: "Philosophie de l'argent" },
+    ],
+    associes: ['blasement-urbain', 'economie-monetaire'],
+    opposes: ['solidarite-mecanique'],
+    critiques: [
+      "Le texte demeure impressionniste et daté sur le Berlin du tournant du siècle, sans données systématiques à l'appui.",
+      "Il présente l'intellectualisation urbaine comme une adaptation à peu près uniforme, sans distinguer selon la position sociale de qui l'habite.",
+    ],
+    evolution: [
+      { p: '1900', f: "Philosophie de l'argent pose les bases de l'analyse du rapport entre argent et vie mentale moderne." },
+      { p: '1903', f: "Simmel prononce sa conférence sur la métropole, qui en devient l'application la plus célèbre." },
+      { p: '1938', f: "Wirth reformule la thèse pour la sociologie urbaine américaine dans Urbanism as a Way of Life." },
     ],
   },
 
@@ -2025,7 +2459,7 @@ export const CONCEPTS = {
       { y: '1963', t: "Résumé sur l'industrie culturelle" },
       { y: '1964', t: "L'Homme unidimensionnel, de Marcuse" },
     ],
-    associes: ['raison-instrumentale', 'ideologie', 'alienation'],
+    associes: ['raison-instrumentale', 'ideologie', 'alienation', 'culture-de-masse', 'domination-culturelle', 'dialectique-des-lumieres'],
     opposes: ['champ', 'regimes-de-justification'],
     critiques: [
       "Le public y est un réceptacle passif : les études de réception ont montré depuis qu'on détourne, ignore et rejoue ce qu'on reçoit.",
@@ -2059,7 +2493,7 @@ export const CONCEPTS = {
       { y: '1947', t: 'Éclipse de la raison' },
       { y: '1964', t: "L'Homme unidimensionnel, de Marcuse" },
     ],
-    associes: ['rationalisation', 'industrie-culturelle', 'alienation', 'rationalite-instrumentale'],
+    associes: ['rationalisation', 'industrie-culturelle', 'alienation', 'rationalite-instrumentale', 'dialectique-des-lumieres', 'mimetisme'],
     opposes: ['regimes-de-justification'],
     critiques: [
       "Le diagnostic est si total qu'il ne laisse aucune place d'où le critiquer — Habermas le reprochera à ses aînés.",
@@ -2071,6 +2505,267 @@ export const CONCEPTS = {
       { p: '1947', f: 'Horkheimer isole et nomme la raison instrumentale.' },
       { p: '1964', f: "Marcuse en tire une critique de la société technicienne qui alimentera 1968." },
       { p: '1981', f: 'Habermas rompt : la Théorie de l\'agir communicationnel oppose au calcul une rationalité de la discussion.' },
+    ],
+  },
+  'theorie-critique-et-traditionnelle': {
+    detaille: [
+      "Horkheimer distingue deux façons de faire de la théorie sociale. La théorie traditionnelle, sur le modèle des sciences de la nature, décrit son objet de l'extérieur, comme un donné neutre à observer et à prévoir, sans jamais s'interroger sur sa propre place dans ce qu'elle étudie.",
+      "La théorie critique, au contraire, s'inclut elle-même dans son objet : elle sait qu'elle est produite par la société qu'elle analyse, et se donne pour but, non de simplement décrire cette société, mais de contribuer à sa transformation vers plus d'émancipation.",
+    ],
+    origine: {
+      oeuvre: 'Théorie traditionnelle et théorie critique',
+      annee: '1937',
+      contexte:
+        "Horkheimer publie cet essai fondateur dans la revue de l'Institut de recherche sociale, alors en exil aux États-Unis, pour donner un nom et un programme à la démarche qui distingue le groupe de Francfort des sciences sociales positivistes dominantes.",
+    },
+    exemples: [
+      "Un sondage d'opinion qui mesure une préférence sans jamais demander comment cette préférence a elle-même été façonnée par les conditions sociales de qui la formule.",
+    ],
+    oeuvres: [
+      { y: '1937', t: 'Théorie traditionnelle et théorie critique' },
+    ],
+    associes: ['raison-instrumentale', 'ideologie', 'agir-communicationnel'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Le critère de démarcation entre théorie traditionnelle et critique reste flou : beaucoup de sciences sociales revendiquent aussi, à leur façon, une visée transformatrice.",
+      "La théorie critique, en s'incluant elle-même dans son objet, s'expose à un relativisme qu'elle a du mal à contenir : au nom de quoi juger une société de l'intérieur de cette même société ?",
+    ],
+    evolution: [
+      { p: '1937', f: "Horkheimer formule la distinction fondatrice dans son essai éponyme." },
+      { p: '1968', f: "Habermas la reprend et la développe dans Connaissance et intérêt, en distinguant intérêts techniques, pratiques et émancipatoires." },
+    ],
+  },
+  'culture-de-masse': {
+    detaille: [
+      "La culture de masse désigne les productions culturelles conçues pour un public le plus large et le plus indifférencié possible, sans égard aux particularités locales, sociales ou culturelles de ceux qui les reçoivent.",
+      "Adorno et Horkheimer préfèrent lui substituer l'expression industrie culturelle, plus précise selon eux : « culture de masse » laisserait entendre que cette culture émane spontanément des masses, quand elle leur est en réalité produite et livrée depuis en haut, selon une logique industrielle de série.",
+    ],
+    origine: {
+      oeuvre: 'La Dialectique de la raison',
+      annee: '1944',
+      contexte:
+        "Adorno et Horkheimer discutent le terme, déjà courant dans le débat américain sur la société de masse, pour lui préférer une expression qu'ils jugent moins équivoque sur l'origine réelle de cette production culturelle.",
+    },
+    exemples: [
+      "Une chanson composée pour fonctionner identiquement dans n'importe quel pays, sans référence culturelle assez marquée pour risquer de déplaire nulle part.",
+    ],
+    oeuvres: [
+      { y: '1944', t: 'La Dialectique de la raison' },
+      { y: '1957', t: "L'Esprit du temps, d'Edgar Morin" },
+    ],
+    associes: ['industrie-culturelle', 'alienation-culturelle'],
+    opposes: ['individualite'],
+    critiques: [
+      "Le mot « masse » suggère un public passif et indifférencié, quand les publics réels restent segmentés par l'âge, la classe et le territoire, même face à des produits standardisés.",
+      "Le concept a souvent servi, dans le débat public, à disqualifier par avance tout goût populaire comme signe de manipulation plutôt que de préférence réelle.",
+    ],
+    evolution: [
+      { p: '1944', f: "Adorno et Horkheimer lui préfèrent le terme plus précis d'industrie culturelle." },
+      { p: '1962', f: "Edgar Morin, en France, réhabilite partiellement le terme dans L'Esprit du temps, moins sévère envers la culture de masse." },
+    ],
+  },
+  'domination-culturelle': {
+    detaille: [
+      "Pour l'École de Francfort, la domination moderne ne passe plus seulement par la contrainte économique ou politique directe : elle s'exerce aussi, et peut-être surtout, dans la sphère de la culture et du loisir, censée pourtant échapper au travail et à la contrainte.",
+      "Ce déplacement rend la domination plus difficile à percevoir et à contester : on ne subit plus un ordre qu'on pourrait refuser, on choisit apparemment librement un divertissement qui, en réalité, occupe le temps qui aurait pu servir à la réflexion critique.",
+    ],
+    origine: {
+      oeuvre: 'La Dialectique de la raison',
+      annee: '1944',
+      contexte:
+        "Adorno et Horkheimer prolongent l'analyse marxiste de la domination économique vers un domaine que Marx avait peu exploré systématiquement : celui de la culture et du temps libre.",
+    },
+    exemples: [
+      "Un divertissement présenté comme un choix personnel libre, dont le contenu et le rythme sont pourtant entièrement déterminés par une industrie qui n'a laissé ce choix qu'entre des options qu'elle a elle-même produites.",
+    ],
+    oeuvres: [
+      { y: '1944', t: 'La Dialectique de la raison' },
+      { y: '1964', t: "L'Homme unidimensionnel, de Marcuse" },
+    ],
+    associes: ['industrie-culturelle', 'ideologie'],
+    opposes: ['culture-subjective'],
+    critiques: [
+      "Le concept peine à expliquer les usages contestataires ou détournés que le public fait parfois des mêmes produits culturels qu'il est censé subir passivement.",
+      "Il suppose un public incapable de distance critique face à ce qu'il consomme, une hypothèse que les études de réception ultérieures ont largement nuancée.",
+    ],
+    evolution: [
+      { p: '1944', f: "Adorno et Horkheimer déplacent l'analyse de la domination vers la sphère culturelle." },
+      { p: '1971', f: "Althusser, en France, développe une thèse voisine avec les appareils idéologiques d'État." },
+    ],
+  },
+  'dialectique-des-lumieres': {
+    detaille: [
+      "Le projet des Lumières était d'affranchir l'humanité de la peur et du mythe par la connaissance rationnelle du monde. Adorno et Horkheimer montrent que ce même projet, poussé à son terme, se retourne : la raison qui devait libérer devient elle-même un instrument de domination, sur la nature comme sur les hommes.",
+      "Ce retournement n'est pas un accident de parcours mais une nécessité dialectique : maîtriser la nature par le calcul suppose de la réduire à ce qui est mesurable, un geste qui, appliqué aux hommes eux-mêmes, prépare les formes de domination les plus radicales — jusqu'au génocide industriellement organisé.",
+    ],
+    origine: {
+      oeuvre: 'La Dialectique de la raison',
+      annee: '1944',
+      contexte:
+        "Adorno et Horkheimer écrivent en exil à Los Angeles, cherchant à comprendre comment l'Allemagne, l'une des sociétés les plus cultivées et les plus rationalisées d'Europe, a pu produire le nazisme plutôt que d'y échapper.",
+    },
+    exemples: [
+      "Une bureaucratie qui organise avec la même compétence technique un recensement de population, un système de transport, ou la logistique d'un crime de masse.",
+    ],
+    oeuvres: [
+      { y: '1944', t: 'La Dialectique de la raison' },
+    ],
+    associes: ['raison-instrumentale', 'industrie-culturelle'],
+    opposes: ['loi-des-trois-etats'],
+    critiques: [
+      "Le diagnostic, très général, explique difficilement pourquoi certaines sociétés tout aussi rationalisées n'ont pas versé dans un totalitarisme comparable.",
+      "En faisant de la raison elle-même la source du problème, la thèse s'expose à retirer tout appui rationnel à sa propre critique — l'objection qu'Habermas adressera à ses aînés.",
+    ],
+    evolution: [
+      { p: '1944', f: "Adorno et Horkheimer publient La Dialectique de la raison en exil." },
+      { p: '1947', f: "Horkheimer isole et systématise la thèse dans Éclipse de la raison." },
+      { p: '1981', f: "Habermas répond par la raison communicationnelle, pour sauver une part de la promesse des Lumières que ses aînés jugeaient irrécupérable." },
+    ],
+  },
+  'alienation-culturelle': {
+    detaille: [
+      "Marx situait l'aliénation dans le travail : le produit et le geste du travailleur lui échappent, deviennent une puissance étrangère. Marcuse étend le diagnostic au temps libre lui-même, censé pourtant être le lieu où l'individu échappe à cette aliénation.",
+      "Dans une société de consommation avancée, les loisirs, les désirs et les goûts eux-mêmes sont façonnés de l'extérieur par une industrie qui les anticipe et les produit, si bien que l'individu ne se libère jamais vraiment du travail : il continue, sans le savoir, à consommer selon un scénario qui n'est pas davantage le sien.",
+    ],
+    origine: {
+      oeuvre: "L'Homme unidimensionnel",
+      annee: '1964',
+      contexte:
+        "Marcuse écrit dans une société de consommation d'après-guerre en pleine expansion, où l'abondance matérielle semblait avoir résolu les problèmes que Marx attribuait à la seule pénurie.",
+    },
+    exemples: [
+      "Des besoins de consommation ressentis comme personnels et impérieux, alors qu'ils ont été suscités, presque à l'identique, chez des millions d'autres personnes par les mêmes campagnes publicitaires.",
+    ],
+    oeuvres: [
+      { y: '1964', t: "L'Homme unidimensionnel" },
+      { y: '1955', t: 'Éros et civilisation' },
+    ],
+    associes: ['alienation', 'culture-de-masse'],
+    opposes: ['culture-subjective'],
+    critiques: [
+      "Le concept traite les désirs suscités par la publicité comme nécessairement inauthentiques, sans dire clairement ce que serait un désir authentique auquel les comparer.",
+      "Il prête à l'industrie une capacité de façonnage presque totale, qui laisse peu de place aux résistances et détournements réels observés chez les consommateurs.",
+    ],
+    evolution: [
+      { p: '1964', f: "Marcuse formule l'extension de l'aliénation au temps libre dans L'Homme unidimensionnel." },
+      { p: '1967', f: "Debord, en France, développe une thèse voisine avec la société du spectacle." },
+    ],
+  },
+  'personnalite-autoritaire': {
+    detaille: [
+      "À partir de longs entretiens et de questionnaires passés à des milliers d'Américains, l'équipe d'Adorno cherche à identifier ce qui, dans la structure psychologique d'un individu, le prédispose à l'adhésion aux idéologies autoritaires et à l'hostilité envers les groupes minoritaires.",
+      "L'échelle F (pour fascisme) qu'ils construisent mesure des traits comme la soumission à l'autorité en place, l'agressivité envers ceux qui s'en écartent, le rejet de l'introspection et une vision rigide, sans nuance, du monde social.",
+    ],
+    origine: {
+      oeuvre: 'The Authoritarian Personality',
+      annee: '1950',
+      contexte:
+        "Adorno participe à cette recherche collective aux États-Unis, financée pour comprendre les racines psychologiques de l'antisémitisme après la découverte de l'ampleur du génocide nazi.",
+    },
+    exemples: [
+      "Un score élevé sur l'échelle F associé, dans l'étude originale, à une adhésion plus fréquente à des affirmations antisémites et ethnocentriques, indépendamment du niveau d'éducation du répondant.",
+    ],
+    oeuvres: [
+      { y: '1950', t: 'The Authoritarian Personality' },
+    ],
+    associes: ['domination-legitime', 'ideologie'],
+    opposes: ['individualisme-moral'],
+    critiques: [
+      "L'échelle F a été critiquée pour un biais de méthode : formulée uniquement dans le sens de l'accord, elle confond l'adhésion à des idées autoritaires avec la simple tendance à toujours répondre « oui ».",
+      "Le recours à la psychanalyse pour expliquer un phénomène politique et social a été jugé réducteur, minimisant les conditions économiques et historiques propres à l'essor du nazisme.",
+    ],
+    evolution: [
+      { p: '1950', f: "L'équipe d'Adorno publie The Authoritarian Personality et l'échelle F." },
+      { p: '1981', f: "Altemeyer reformule le concept sous le nom d'autoritarisme de droite (RWA), avec une échelle méthodologiquement plus robuste." },
+    ],
+  },
+  'societe-administree': {
+    detaille: [
+      "Adorno décrit une société où la gestion technique et bureaucratique, initialement cantonnée à l'administration publique et à l'entreprise, s'étend progressivement à des domaines entiers de l'existence — la culture, les loisirs, jusqu'aux relations personnelles elles-mêmes.",
+      "Cette extension ne laisse plus, selon lui, d'espace véritablement extérieur à son emprise : même la contestation de la société administrée tend à se dérouler selon des formes déjà administrées — pétitions encadrées, canaux de participation prévus à l'avance.",
+    ],
+    origine: {
+      oeuvre: 'Minima Moralia',
+      annee: '1951',
+      contexte:
+        "Adorno écrit ce recueil de fragments en exil puis à son retour en Allemagne, dans une société d'après-guerre en pleine reconstruction technocratique et administrative.",
+    },
+    exemples: [
+      "Une association militante contrainte de se structurer en organisation gestionnaire — statuts, comptabilité, indicateurs de résultat — pour continuer d'exister dans un cadre administratif qu'elle prétendait pourtant contester.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Minima Moralia' },
+      { y: '1966', t: 'Dialectique négative' },
+    ],
+    associes: ['bureaucratie', 'rationalisation', 'colonisation-du-monde-vecu'],
+    opposes: ['regimes-de-justification'],
+    critiques: [
+      "Le diagnostic, très pessimiste, laisse peu de place aux marges de manœuvre réelles que les acteurs trouvent malgré tout dans les administrations les plus rigides.",
+      "Il reste largement descriptif, sans proposer d'alternative concrète à l'extension qu'il dénonce.",
+    ],
+    evolution: [
+      { p: '1951', f: "Adorno esquisse le diagnostic dans les fragments de Minima Moralia." },
+      { p: '1966', f: "Il le systématise dans Dialectique négative." },
+      { p: '1981', f: "Habermas relit le diagnostic à travers la notion de colonisation du monde vécu par le système." },
+    ],
+  },
+  'mimetisme': {
+    detaille: [
+      "Avant que la raison instrumentale n'impose sa logique de mesure et de contrôle, une manière plus ancienne de se rapporter au monde consistait à s'y assimiler par ressemblance — imiter un animal, un phénomène naturel, un autre être — plutôt qu'à le dominer par le calcul.",
+      "Adorno et Horkheimer voient dans cette faculté mimétique une part refoulée mais jamais totalement éteinte de l'expérience humaine, qui resurgit notamment dans l'art — capable, selon eux, de renouer avec cette relation non instrumentale au monde que la rationalisation a ailleurs presque partout éliminée.",
+    ],
+    origine: {
+      oeuvre: 'La Dialectique de la raison',
+      annee: '1944',
+      contexte:
+        "Adorno et Horkheimer développent cette idée à partir de l'anthropologie et de la psychanalyse de leur temps, pour esquisser ce que la rationalisation occidentale a dû refouler pour s'imposer.",
+    },
+    exemples: [
+      "Un rituel de chasse ancien où les chasseurs imitent les mouvements de l'animal traqué, moins pour le tromper que pour entrer dans un rapport de ressemblance avec lui.",
+    ],
+    oeuvres: [
+      { y: '1944', t: 'La Dialectique de la raison' },
+      { y: '1970', t: 'Théorie esthétique' },
+    ],
+    associes: ['dialectique-des-lumieres', 'effervescence-collective'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Le concept reste flou et peu opérationnalisable, plus proche d'une intuition philosophique que d'un outil d'analyse sociologique précis.",
+      "Le recours à l'anthropologie de l'époque, aujourd'hui datée, fragilise une partie de l'argumentation qui s'appuie sur elle.",
+    ],
+    evolution: [
+      { p: '1944', f: "Adorno et Horkheimer esquissent la faculté mimétique refoulée par la raison instrumentale." },
+      { p: '1970', f: "Adorno approfondit le rôle de l'art comme dernier refuge du mimétisme dans Théorie esthétique." },
+    ],
+  },
+  'reification': {
+    detaille: [
+      "Georg Lukács, dont l'École de Francfort reprend et prolonge largement le concept, décrit la réification comme le moment où les rapports sociaux entre personnes en viennent à apparaître comme des rapports entre choses — mesurables, échangeables, dépourvues de toute trace de la relation humaine qui les a pourtant produits.",
+      "Ce processus radicalise le fétichisme de la marchandise décrit par Marx : ce n'est plus seulement le produit du travail qui masque le rapport social qui l'a créé, c'est la totalité des rapports sociaux, y compris la conscience de ceux qui les vivent, qui finit par se penser sur le modèle de la chose.",
+    ],
+    origine: {
+      oeuvre: 'Histoire et conscience de classe',
+      annee: '1923',
+      contexte:
+        "Lukács écrit ce texte fondateur du marxisme occidental dans le contexte des révolutions ratées d'Europe centrale, cherchant à comprendre pourquoi la conscience de classe ne suit pas mécaniquement la position de classe.",
+    },
+    exemples: [
+      "Un service client entièrement automatisé qui traite chaque appelant comme une occurrence interchangeable d'un même type de requête, plutôt que comme une personne singulière.",
+    ],
+    oeuvres: [
+      { y: '1923', t: 'Histoire et conscience de classe' },
+      { y: '1966', t: 'Dialectique négative, d\'Adorno' },
+    ],
+    associes: ['fetichisme-de-la-marchandise', 'alienation'],
+    opposes: ['action-sociale'],
+    critiques: [
+      "Lukács lui-même reniera partiellement le concept dans les décennies suivantes, le jugeant trop hégélien et trop optimiste sur la capacité du prolétariat à en prendre conscience.",
+      "Le concept explique mal pourquoi certains rapports sociaux résistent à la réification quand d'autres, dans des conditions économiques comparables, y succombent.",
+    ],
+    evolution: [
+      { p: '1923', f: "Lukács formule la réification dans Histoire et conscience de classe." },
+      { p: '1944', f: "Adorno et Horkheimer en reprennent la logique sans toujours citer Lukács, dont l'œuvre reste marginale dans l'Allemagne d'après-guerre." },
+      { p: '1968', f: "Habermas la retravaille en colonisation du monde vécu par les logiques du système." },
     ],
   },
 
@@ -2095,7 +2790,7 @@ export const CONCEPTS = {
       { y: '1951', t: 'Le Système social' },
       { y: '1966', t: 'Sociétés : essai sur leur évolution comparée' },
     ],
-    associes: ['role-et-attentes', 'solidarite-organique', 'fonction-latente'],
+    associes: ['role-et-attentes', 'solidarite-organique', 'fonction-latente', 'systeme', 'agil', 'imperatifs-fonctionnels', 'structure-sociale'],
     opposes: ['classe-sociale', 'formes-de-socialisation', 'effets-pervers'],
     critiques: [
       "Le modèle explique la stabilité et ne sait pas rendre compte du conflit ni du changement — objection de Mills et de Dahrendorf.",
@@ -2129,7 +2824,7 @@ export const CONCEPTS = {
       { y: '1951', t: 'Le Système social, chapitres III et X' },
       { y: '1955', t: 'Family, Socialization and Interaction Process' },
     ],
-    associes: ['systeme-social', 'domination-legitime'],
+    associes: ['systeme-social', 'domination-legitime', 'pattern-variables', 'socialisation'],
     opposes: ['mise-en-scene-de-soi', 'alienation'],
     critiques: [
       "L'acteur y est un exécutant surdéterminé : Wrong parlera d'une « conception sursocialisée de l'homme ».",
@@ -2141,6 +2836,291 @@ export const CONCEPTS = {
       { p: '1951', f: 'Systématisation autour de la complémentarité des attentes et du rôle de malade.' },
       { p: '1959', f: "Goffman retourne le concept : le rôle est joué, avec des coulisses et de la distance." },
       { p: '1961', f: "Goffman pousse jusqu'au bout dans Asiles : l'institution totale est celle qui interdit toute distance au rôle." },
+    ],
+  },
+  'structure-sociale': {
+    detaille: [
+      "La structure sociale désigne, pour Parsons, le squelette relativement stable de positions et de rôles articulés qui organise une société à un moment donné — les institutions, les statuts et les relations qui persistent au-delà des individus qui les occupent tour à tour.",
+      "Cette stabilité relative n'est pas un donné brut : elle est constamment entretenue par les quatre fonctions du système (adaptation, poursuite des buts, intégration, maintien des modèles), qui agissent comme autant de mécanismes de maintenance de la structure existante.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons développe le concept pour donner un objet stable à son analyse systémique, distinct du flux continu des interactions individuelles qui la composent au jour le jour.",
+    },
+    exemples: [
+      "Une entreprise dont l'organigramme reste globalement identique sur plusieurs décennies, malgré un renouvellement quasi complet du personnel qui l'occupe.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social' },
+    ],
+    associes: ['systeme-social', 'role-et-attentes'],
+    opposes: ['effets-pervers'],
+    critiques: [
+      "L'accent mis sur la stabilité de la structure peine à expliquer les transformations rapides et profondes que certaines sociétés connaissent malgré tout.",
+      "Le concept traite la structure comme relativement donnée, quand elle résulte en réalité de rapports de force et de négociations permanentes entre groupes inégaux.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons pose la structure sociale comme objet stable de l'analyse systémique." },
+      { p: '1959', f: "Merton en nuance la lecture avec ses théories de portée moyenne, plus attentives aux structures partielles qu'au système global." },
+    ],
+  },
+  'normes-sociales': {
+    detaille: [
+      "Les normes sociales traduisent une valeur générale en règles concrètes de conduite, propres à une situation donnée : elles disent non pas ce qui est désirable en général, mais ce qu'il convient précisément de faire ici et maintenant.",
+      "Leur efficacité tient moins à la sanction qui les accompagne qu'à leur intériorisation : une norme pleinement sociale n'a plus besoin d'être rappelée de l'extérieur, elle est vécue comme relevant de soi plutôt que comme une contrainte imposée.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons distingue systématiquement normes et valeurs pour articuler le général (ce qu'une société tient pour désirable) et le particulier (ce qu'elle attend concrètement dans chaque situation).",
+    },
+    exemples: [
+      "Une norme de ponctualité, plus stricte pour un rendez-vous professionnel que pour une invitation entre amis, bien que la valeur générale de respect d'autrui reste la même dans les deux cas.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social' },
+    ],
+    associes: ['valeurs-sociales', 'role-et-attentes'],
+    opposes: ['anomie'],
+    critiques: [
+      "Le modèle suppose un consensus normatif qui masque souvent des normes concurrentes, propres à différents groupes sociaux d'une même société.",
+      "Il explique mal la coexistence, dans une même situation, de normes contradictoires entre lesquelles l'acteur doit trancher lui-même.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons distingue normes et valeurs dans Le Système social." },
+      { p: '1897', f: "Durkheim, avant lui, avait déjà montré ce qu'il advient quand les normes cessent de borner les attentes : l'anomie." },
+    ],
+  },
+  'valeurs-sociales': {
+    detaille: [
+      "Les valeurs sociales sont les idéaux les plus généraux qu'une société tient pour désirables — la réussite, l'égalité, la liberté — dont les normes concrètes ne sont, pour Parsons, que la traduction opérationnelle dans des situations particulières.",
+      "Une même valeur peut ainsi se décliner en normes très différentes selon le domaine considéré : la valeur de réussite individuelle ne prescrit pas la même conduite à l'école, au travail ou dans le sport, alors qu'elle en reste, à chaque fois, le principe sous-jacent.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons cherche ce qui, dans une société aussi diverse que les États-Unis d'après-guerre, permet malgré tout une coordination sociale sans recours systématique à la contrainte.",
+    },
+    exemples: [
+      "La valeur d'individualisme, largement partagée dans une société donnée, qui se traduit en normes très différentes selon qu'elle s'applique à l'éducation des enfants ou à l'organisation du travail.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social' },
+      { y: '1953', t: 'Working Papers in the Theory of Action' },
+    ],
+    associes: ['normes-sociales', 'socialisation'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Le concept suppose un consensus de valeurs qui masque la diversité réelle des valeurs concurrentes au sein d'une même société.",
+      "Marx y verrait une manière de présenter comme un accord général ce qui reste, en réalité, la valeur de certains groupes imposée à d'autres.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons pose les valeurs comme fondement le plus général de l'ordre social." },
+      { p: '1846', f: "Marx, bien avant lui, avait déjà proposé une lecture concurrente : les valeurs dominantes sont celles de la classe dominante." },
+    ],
+  },
+  'socialisation': {
+    detaille: [
+      "La socialisation est le processus par lequel un individu, dès la petite enfance, intériorise les valeurs et les normes de sa société au point de les vivre comme siennes plutôt que comme des contraintes extérieures — la condition, pour Parsons, de tout ordre social qui ne reposerait pas sur la seule coercition.",
+      "La famille en est, pour Parsons, l'agent premier et le plus déterminant : elle stabilise la personnalité de l'enfant avant que l'école, puis d'autres institutions, ne prennent le relais pour ajuster cette personnalité aux rôles qu'il occupera à l'âge adulte.",
+    ],
+    origine: {
+      oeuvre: 'Family, Socialization and Interaction Process',
+      annee: '1955',
+      contexte:
+        "Parsons développe cette analyse avec sa collègue Bales, en s'appuyant en partie sur la psychanalyse pour comprendre comment la personnalité individuelle s'articule au système social plus large.",
+    },
+    exemples: [
+      "Un enfant qui apprend, sans qu'on le lui explique jamais formellement, à ajuster son ton de voix selon qu'il s'adresse à un camarade ou à un enseignant.",
+    ],
+    oeuvres: [
+      { y: '1955', t: 'Family, Socialization and Interaction Process' },
+      { y: '1951', t: 'Le Système social' },
+    ],
+    associes: ['valeurs-sociales', 'role-et-attentes'],
+    opposes: ['carriere-deviante'],
+    critiques: [
+      "Le modèle décrit une socialisation réussie et laisse peu de place aux échecs de socialisation, pourtant statistiquement fréquents.",
+      "Becker objecte que devenir déviant tient moins à un défaut de socialisation qu'à la réaction sociale qui étiquette un acte comme tel.",
+    ],
+    evolution: [
+      { p: '1955', f: "Parsons et Bales systématisent le rôle de la famille dans la socialisation primaire." },
+      { p: '1963', f: "Becker déplace l'explication de la déviance de la socialisation manquée vers l'étiquetage social." },
+    ],
+  },
+  'controle-social': {
+    detaille: [
+      "Le contrôle social regroupe, pour Parsons, l'ensemble des mécanismes — formels comme informels — qui ramènent une conduite déviante vers la norme attendue, et maintiennent ainsi l'équilibre du système sans qu'il soit besoin de le refonder à chaque écart.",
+      "Ce contrôle ne repose pas d'abord sur la sanction ouverte : le regard désapprobateur d'un proche, la gêne ressentie face à un manquement, ou le simple rappel discret d'une attente suffisent le plus souvent, la sanction formelle n'intervenant qu'en dernier recours.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons développe le concept dans le prolongement de son analyse du rôle de malade, où il montre comment la médecine elle-même fonctionne comme un mécanisme de contrôle social de la déviance liée à la maladie.",
+    },
+    exemples: [
+      "Un collègue qui suggère discrètement de reformuler un courriel trop abrupt, évitant ainsi le recours à toute procédure disciplinaire formelle.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social, chapitre VII' },
+    ],
+    associes: ['normes-sociales', 'regulation-sociale'],
+    opposes: ['etiquetage'],
+    critiques: [
+      "Becker retourne l'argument : le contrôle social ne se contente pas de corriger la déviance, il contribue souvent à la produire en désignant qui en relève.",
+      "Le concept traite la déviance comme un dysfonctionnement à corriger, sans interroger la légitimité de la norme elle-même.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons intègre le contrôle social à sa théorie du système social." },
+      { p: '1963', f: "Becker inverse la perspective : le contrôle social participe à fabriquer la déviance qu'il prétend seulement corriger." },
+    ],
+  },
+  'equilibre-social': {
+    detaille: [
+      "Un système social, pour Parsons, tend structurellement vers un état d'équilibre : les perturbations qui l'affectent — un conflit, une crise, une innovation — sont le plus souvent absorbées par ses mécanismes internes, qui ramènent le système vers un fonctionnement stable plutôt que vers une transformation radicale.",
+      "Cet équilibre n'est pas statique : Parsons admet un « équilibre mobile », capable d'intégrer un changement progressif sans que la structure d'ensemble n'en soit bouleversée — une différence importante avec les théories qui font du conflit le moteur d'une transformation en rupture.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons écrit dans une Amérique d'après-guerre marquée par une forte croissance et une stabilité institutionnelle relative, un contexte qui informe sans doute son postulat d'équilibre.",
+    },
+    exemples: [
+      "Un marché du travail qui absorbe progressivement une vague de licenciements par des reconversions et de nouvelles créations d'emploi, sans effondrement durable de l'ensemble du système économique.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social' },
+    ],
+    associes: ['systeme-social', 'controle-social'],
+    opposes: ['conflit-de-classes'],
+    critiques: [
+      "Le postulat d'équilibre est accusé de naturaliser l'ordre existant, en présentant comme une tendance systémique ce qui pourrait être un rapport de force provisoire.",
+      "Dahrendorf et Mills reprochent au modèle de ne pouvoir penser le conflit et le changement que comme des perturbations à résorber, jamais comme des moteurs légitimes de transformation.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons formule l'hypothèse d'un système social tendant vers l'équilibre." },
+      { p: '1959', f: "Dahrendorf publie Class and Class Conflict in Industrial Society, en réponse directe au postulat d'équilibre." },
+    ],
+  },
+  'imperatifs-fonctionnels': {
+    detaille: [
+      "Parsons pose que tout système social durable, quelle que soit sa forme concrète, doit résoudre un même ensemble de problèmes pour survivre — se procurer des ressources, atteindre ses buts, coordonner ses parties, transmettre ses modèles culturels à ses nouveaux membres.",
+      "Ce sont ces impératifs fonctionnels, communs à toute société, qui donnent son unité au projet théorique de Parsons : comparer des institutions très différentes en apparence en cherchant, derrière leurs formes concrètes, le même problème structurel qu'elles résolvent chacune à sa manière.",
+    ],
+    origine: {
+      oeuvre: 'Working Papers in the Theory of Action',
+      annee: '1953',
+      contexte:
+        "Parsons, avec Bales et Shils, cherche à formaliser en un schéma général les problèmes que tout système d'action doit résoudre, qu'il s'agisse d'un individu, d'un petit groupe ou d'une société entière.",
+    },
+    exemples: [
+      "Une association bénévole qui doit, comme n'importe quelle grande organisation, trouver des ressources, fixer des objectifs, coordonner ses membres et transmettre ses valeurs aux nouveaux venus.",
+    ],
+    oeuvres: [
+      { y: '1953', t: 'Working Papers in the Theory of Action' },
+      { y: '1951', t: 'Le Système social' },
+    ],
+    associes: ['systeme-social', 'agil'],
+    opposes: ['fonction-latente'],
+    critiques: [
+      "Merton objecte que l'idée d'impératifs fonctionnels universels reste invérifiable : rien n'indique comment établir empiriquement qu'une fonction est réellement nécessaire à la survie d'un système donné.",
+      "Le schéma explique après coup l'existence de presque n'importe quelle institution, ce qui affaiblit sa capacité à être mis en défaut par l'observation.",
+    ],
+    evolution: [
+      { p: '1953', f: "Parsons, Bales et Shils formulent le principe des impératifs fonctionnels universels." },
+      { p: '1957', f: "Merton, dans Éléments de théorie et de méthode sociologiques, appelle à des théories de portée moyenne plutôt qu'à ce niveau d'abstraction." },
+    ],
+  },
+  'agil': {
+    detaille: [
+      "AGIL nomme les quatre fonctions que tout système social doit remplir pour survivre : Adaptation (se procurer des ressources dans son environnement), Goal attainment (fixer et poursuivre des buts), Integration (coordonner ses parties entre elles) et Latency, ou maintien des modèles (transmettre et stabiliser ses valeurs culturelles dans le temps).",
+      "Parsons associe à chaque fonction un sous-système spécialisé de la société — l'économie pour l'adaptation, la politique pour la poursuite des buts, le droit et les institutions de solidarité pour l'intégration, la famille et l'école pour le maintien des modèles — et applique le même schéma, en emboîtement, à des échelles plus petites comme un groupe ou une organisation.",
+    ],
+    origine: {
+      oeuvre: 'Working Papers in the Theory of Action',
+      annee: '1953',
+      contexte:
+        "Parsons systématise, avec Bales et Shils, les impératifs fonctionnels en un schéma à quatre cases devenu la formalisation la plus reconnaissable de sa théorie systémique.",
+    },
+    exemples: [
+      "Dans une université : les services financiers assurent l'adaptation, la présidence fixe les objectifs stratégiques, les conseils de coordination assurent l'intégration entre facultés, et les cérémonies de remise de diplômes entretiennent le maintien des modèles.",
+    ],
+    oeuvres: [
+      { y: '1953', t: 'Working Papers in the Theory of Action' },
+      { y: '1966', t: 'Sociétés : essai sur leur évolution comparée' },
+    ],
+    associes: ['imperatifs-fonctionnels', 'integration-sociale'],
+    opposes: ['effets-pervers'],
+    critiques: [
+      "Le découpage en exactement quatre fonctions reste largement arbitraire : rien ne garantit qu'il n'en faudrait ni plus ni moins pour rendre compte d'un système donné.",
+      "Le schéma, appliqué à toutes les échelles, finit par tout classer sans jamais rien exclure, ce qui le rend difficile à mettre en défaut empiriquement.",
+    ],
+    evolution: [
+      { p: '1953', f: "Parsons, Bales et Shils formulent le schéma AGIL." },
+      { p: '1966', f: "Parsons l'étend à une théorie de l'évolution comparée des sociétés." },
+      { p: 'après 1970', f: "Le schéma décline avec le fonctionnalisme, mais reste enseigné comme référence historique de la théorie systémique." },
+    ],
+  },
+  'pattern-variables': {
+    detaille: [
+      "Les pattern variables sont cinq paires de choix dichotomiques auxquels tout acteur fait face dans une interaction : universalisme ou particularisme, neutralité affective ou affectivité, spécificité ou diffusion, qualité ou performance (ascription ou mérite), orientation collective ou individuelle.",
+      "Parsons s'en sert pour caractériser aussi bien un type précis de relation (le rapport médecin-patient combine universalisme, neutralité affective et spécificité) qu'un type de société entière — les sociétés traditionnelles tendant vers un pôle des variables, les sociétés modernes vers l'autre.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons cherche un outil systématique pour comparer des types de relations et de sociétés très différents à partir d'un même jeu de critères, plutôt que de multiplier les typologies ad hoc.",
+    },
+    exemples: [
+      "Une relation familiale, marquée par l'affectivité, la diffusion et l'ascription, contraste terme à terme avec une relation professionnelle, marquée par la neutralité affective, la spécificité et la performance.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social, chapitre II' },
+    ],
+    associes: ['role-et-attentes', 'valeurs-sociales'],
+    opposes: ['habitus'],
+    critiques: [
+      "Le découpage en dichotomies strictes correspond mal à des situations réelles qui combinent souvent les deux pôles d'une même variable.",
+      "Le classement des sociétés traditionnelles et modernes sur ces cinq axes a été jugé trop évolutionniste, calqué sur une trajectoire occidentale présentée comme universelle.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons formule les cinq paires de pattern variables dans Le Système social." },
+      { p: '1972', f: "Bourdieu propose, avec l'habitus, un modèle concurrent : des dispositions incorporées et largement inconscientes plutôt que des choix explicites entre pôles définis." },
+    ],
+  },
+  'institutionnalisation-normative': {
+    detaille: [
+      "Une norme devient pleinement sociale, pour Parsons, quand elle franchit trois seuils à la fois : elle est attendue par les autres, sanctionnée si elle n'est pas suivie, et surtout intériorisée par l'acteur lui-même, qui cesse de la vivre comme une contrainte extérieure.",
+      "Ce processus d'institutionnalisation normative explique, selon Parsons, la stabilité relative des sociétés : une fois qu'une norme est institutionnalisée à ce point, elle n'a plus besoin d'être renforcée à chaque instant, elle se maintient d'elle-même par l'adhésion de ceux qui la suivent.",
+    ],
+    origine: {
+      oeuvre: 'Le Système social',
+      annee: '1951',
+      contexte:
+        "Parsons développe le concept pour expliquer pourquoi certaines normes se maintiennent durablement sans contrainte visible, quand d'autres restent fragiles et contestées malgré des sanctions formelles.",
+    },
+    exemples: [
+      "Le tri sélectif des déchets, d'abord perçu comme une contrainte administrative, devenu pour beaucoup un geste qu'on accomplit sans y penser, et dont l'omission suscite un malaise, même hors de toute sanction.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Le Système social, chapitre V' },
+    ],
+    associes: ['normes-sociales', 'socialisation'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept suppose une norme unique et stabilisée, quand des normes concurrentes coexistent souvent au sein d'un même groupe social.",
+      "Boudon objecte qu'une régularité de comportement, même durable, ne prouve pas une intériorisation véritable : elle peut aussi bien résulter de calculs individuels renouvelés à chaque situation.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons formule les trois conditions de l'institutionnalisation normative." },
+      { p: '1979', f: "Boudon lui oppose des acteurs qui recalculent leurs raisons à chaque situation, plutôt que de suivre une norme une fois pour toutes intériorisée." },
     ],
   },
 
@@ -3158,6 +4138,213 @@ export const CONCEPTS = {
       { p: '1995', f: "Castel lui substitue une cartographie en zones, avec la vulnérabilité comme charnière centrale." },
       { p: '1988–1990', f: "Le RMI, puis le débat sur l'insertion, s'appuient implicitement sur cette distinction entre accompagner une vulnérabilité et traiter une désaffiliation déjà installée." },
       { p: 'Depuis les années 2000', f: "Le cadre est repris bien au-delà de la sociologie du travail, jusque dans l'analyse du logement, de la santé ou du grand âge." },
+    ],
+  },
+
+  /* — Jürgen Habermas — */
+  'espace-public': {
+    detaille: [
+      "Habermas retrace l'émergence, au XVIIIᵉ siècle européen, d'un espace intermédiaire entre l'État et la sphère privée : des citoyens s'y réunissent — cafés, salons, gazettes — pour discuter des affaires communes en simples particuliers, sans mandat ni titre, avec pour seule autorité la force de l'argument échangé.",
+      "Cet espace public bourgeois n'a jamais été aussi ouvert qu'il le prétendait — il excluait de fait les femmes et les classes populaires — mais Habermas y voit malgré tout un acquis normatif réel : l'idée qu'un pouvoir doit se justifier devant une opinion formée par la discussion, et non l'imposer sans avoir à s'expliquer.",
+    ],
+    origine: {
+      oeuvre: "L'Espace public : archéologie de la publicité comme dimension constitutive de la société bourgeoise",
+      annee: '1962',
+      contexte:
+        "Thèse d'habilitation de Habermas, écrite dans l'Allemagne de l'après-guerre, qui cherche à comprendre les conditions historiques d'une opinion publique digne de ce nom, après l'expérience du nazisme.",
+    },
+    exemples: [
+      "Une tribune de presse largement commentée et discutée en dehors de tout cadre officiel, qui finit par peser sur une décision publique sans qu'aucun de ses participants ne détienne le moindre mandat.",
+    ],
+    oeuvres: [
+      { y: '1962', t: "L'Espace public" },
+      { y: '1992', t: 'Droit et démocratie' },
+    ],
+    associes: ['theorie-critique-et-traditionnelle', 'agir-communicationnel'],
+    opposes: ['industrie-culturelle'],
+    critiques: [
+      "L'espace public bourgeois décrit était en réalité très excluant — de genre, de classe, de race — ce qu'Habermas reconnaîtra lui-même dans des travaux ultérieurs.",
+      "Le diagnostic d'un déclin de l'espace public sous l'effet des médias de masse a été jugé trop pessimiste face à la vitalité de nouveaux espaces de débat, notamment numériques.",
+    ],
+    evolution: [
+      { p: '1962', f: "Habermas retrace l'émergence et le déclin annoncé de l'espace public bourgeois." },
+      { p: '1990', f: "Une nouvelle préface reconnaît les angles morts de genre et de classe du modèle initial." },
+      { p: '2000–2010', f: "Le concept est repris et débattu pour penser les espaces publics numériques, entre promesse d'ouverture et nouvelles fragmentations." },
+    ],
+  },
+  'agir-communicationnel': {
+    detaille: [
+      "Habermas distingue l'agir stratégique, orienté vers le succès — obtenir ce qu'on veut, y compris en manipulant autrui — de l'agir communicationnel, orienté vers l'entente mutuelle : on cherche alors à se faire comprendre et à convaincre par de bonnes raisons, pas seulement à obtenir un résultat.",
+      "Cette action suppose que chacun soulève, sans toujours le dire, des prétentions à la validité — que ce qu'il dit est vrai, que ce qu'il fait est juste, qu'il est sincère — que l'autre peut toujours mettre en question et exiger de voir justifiées par l'argument.",
+    ],
+    origine: {
+      oeuvre: "Théorie de l'agir communicationnel",
+      annee: '1981',
+      contexte:
+        "Habermas publie cette somme en réponse directe au pessimisme de ses aînés de l'École de Francfort, pour montrer que la raison garde, dans la structure même du langage, une ressource que la seule raison instrumentale ne peut épuiser.",
+    },
+    exemples: [
+      "Un désaccord réglé par un compromis que chacun accepte parce qu'il en comprend et en admet les raisons, plutôt qu'un accord obtenu en lassant l'autre partie jusqu'à ce qu'elle cède.",
+    ],
+    oeuvres: [
+      { y: '1981', t: "Théorie de l'agir communicationnel, tome I" },
+      { y: '1976', t: 'Zur Rekonstruktion des historischen Materialismus' },
+    ],
+    associes: ['espace-public', 'rationalite-communicationnelle'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "La distinction entre agir stratégique et communicationnel reste difficile à établir dans les faits, où les deux se mêlent souvent dans une même interaction.",
+      "Le modèle suppose des interlocuteurs en position d'égalité suffisante pour argumenter librement, une condition rarement remplie dans les rapports sociaux réels.",
+    ],
+    evolution: [
+      { p: '1976', f: "Habermas esquisse les prémisses de la théorie dans ses travaux sur le matérialisme historique." },
+      { p: '1981', f: "Théorie de l'agir communicationnel systématise la distinction avec l'agir stratégique." },
+      { p: '1992', f: "Droit et démocratie applique le cadre à la légitimité des normes juridiques et politiques." },
+    ],
+  },
+  'monde-vecu': {
+    detaille: [
+      "Le monde vécu (Lebenswelt), notion empruntée à la phénoménologie de Husserl, désigne l'arrière-plan de significations, de savoirs et d'évidences partagées à partir duquel toute communication devient possible, sans jamais avoir besoin d'être entièrement explicité.",
+      "Habermas en fait la ressource même de l'agir communicationnel : c'est parce que deux personnes partagent, sans le dire, tout un fond culturel commun qu'elles peuvent s'entendre rapidement sur ce qui reste à discuter, plutôt que de devoir tout redéfinir à chaque échange.",
+    ],
+    origine: {
+      oeuvre: "Théorie de l'agir communicationnel",
+      annee: '1981',
+      contexte:
+        "Habermas reprend et transforme la notion phénoménologique de Husserl et Schütz pour l'articuler à sa propre théorie de la communication et de la coordination sociale.",
+    },
+    exemples: [
+      "Une expression familière, comprise instantanément par deux collègues d'un même service, qui demanderait de longues explications à quiconque n'en partage pas les codes.",
+    ],
+    oeuvres: [
+      { y: '1981', t: "Théorie de l'agir communicationnel, tome II" },
+    ],
+    associes: ['agir-communicationnel', 'colonisation-du-monde-vecu'],
+    opposes: ['systeme'],
+    critiques: [
+      "La frontière entre monde vécu et système reste difficile à tracer nettement, tant les deux logiques s'entremêlent en pratique dans une même institution.",
+      "Le concept, très abstrait, peine à se prêter directement à l'enquête empirique sans un travail de traduction méthodologique important.",
+    ],
+    evolution: [
+      { p: '1936', f: "Husserl formule la notion de monde de la vie dans ses derniers travaux de phénoménologie." },
+      { p: '1932', f: "Schütz la retravaille pour la sociologie compréhensive, dans une filiation weberienne." },
+      { p: '1981', f: "Habermas l'intègre à sa théorie de l'agir communicationnel, en tension avec le système." },
+    ],
+  },
+  'systeme': {
+    detaille: [
+      "Reprenant et limitant le concept que Parsons puis Luhmann avaient généralisé à l'ensemble de la société, Habermas réserve le nom de système aux sphères coordonnées non par l'entente mutuelle mais par des médiums impersonnels — l'argent pour l'économie, le pouvoir administratif pour l'État.",
+      "Ces médiums ont un avantage réel : ils permettent de coordonner des actions à très grande échelle, entre inconnus, sans qu'il soit besoin de négocier un accord explicite à chaque interaction — un gain d'efficacité que le seul agir communicationnel ne pourrait offrir à cette échelle.",
+    ],
+    origine: {
+      oeuvre: "Théorie de l'agir communicationnel",
+      annee: '1981',
+      contexte:
+        "Habermas discute et retravaille la théorie des systèmes de Talcott Parsons puis de Niklas Luhmann, pour en garder l'outil sans en adopter la prétention à expliquer l'ensemble de la vie sociale.",
+    },
+    exemples: [
+      "Un marché financier où des milliers de transactions s'exécutent chaque seconde entre des parties qui ne se rencontrent jamais et n'ont besoin d'aucun accord de sens pour coordonner leurs actions.",
+    ],
+    oeuvres: [
+      { y: '1981', t: "Théorie de l'agir communicationnel, tome II" },
+    ],
+    associes: ['systeme-social', 'colonisation-du-monde-vecu'],
+    opposes: ['monde-vecu'],
+    critiques: [
+      "Réserver au seul argent et au pouvoir le statut de médium systémique reste une limitation contestée par certains disciples de Luhmann, qui l'étendent à d'autres sphères (le droit, la science).",
+      "La séparation nette entre système et monde vécu peine à rendre compte de sphères hybrides, comme les organisations à but non lucratif, tiraillées entre les deux logiques.",
+    ],
+    evolution: [
+      { p: '1951', f: "Parsons développe une théorie générale des systèmes sociaux, dont Habermas hérite le vocabulaire." },
+      { p: '1970–1980', f: "Luhmann radicalise l'approche en une théorie des systèmes auto-référentiels, qu'Habermas juge trop englobante." },
+      { p: '1981', f: "Habermas limite le concept de système à l'économie et à l'administration, en tension avec le monde vécu." },
+    ],
+  },
+  'colonisation-du-monde-vecu': {
+    detaille: [
+      "Habermas constate que les médiums systémiques — l'argent, le pouvoir administratif — ne se contentent pas de coordonner efficacement l'économie et l'État : ils tendent à envahir des sphères qui devraient rester réglées par l'entente mutuelle — la famille, l'école, la culture, les soins.",
+      "Cette colonisation ne s'impose pas par la force ouverte, mais par la généralisation discrète d'une logique de gestion, de calcul et de procédure là où une discussion authentique serait requise, ce qui appauvrit ces sphères sans que la contrainte ne soit toujours visible comme telle.",
+    ],
+    origine: {
+      oeuvre: "Théorie de l'agir communicationnel",
+      annee: '1981',
+      contexte:
+        "Habermas cherche à expliquer certains malaises sociaux contemporains — bureaucratisation de l'école, juridicisation croissante de la vie privée — sans revenir au diagnostic totalisant et sans issue de ses aînés de l'École de Francfort.",
+    },
+    exemples: [
+      "Un accompagnement social soumis à des indicateurs de performance chiffrés, qui finissent par compter davantage, dans l'évaluation du travail accompli, que la qualité réelle de la relation nouée avec la personne suivie.",
+    ],
+    oeuvres: [
+      { y: '1981', t: "Théorie de l'agir communicationnel, tome II" },
+    ],
+    associes: ['monde-vecu', 'systeme', 'societe-administree'],
+    opposes: ['regimes-de-justification'],
+    critiques: [
+      "Le diagnostic suppose un monde vécu originellement préservé de toute logique systémique, une pureté que l'histoire ne vérifie pas nécessairement.",
+      "Il reste difficile de tracer empiriquement la limite entre une gestion légitime, nécessaire à grande échelle, et une colonisation abusive du monde vécu.",
+    ],
+    evolution: [
+      { p: '1981', f: "Habermas formule la thèse de la colonisation du monde vécu par le système." },
+      { p: '1992', f: "Droit et démocratie applique l'analyse à la juridicisation croissante des rapports sociaux." },
+      { p: '2000–2010', f: "Le concept est repris pour analyser la généralisation des indicateurs de performance dans les services publics et le travail social." },
+    ],
+  },
+  'rationalite-communicationnelle': {
+    detaille: [
+      "La rationalité communicationnelle n'est ni celle du calcul des moyens (rationalité instrumentale) ni celle de la fidélité à une valeur quel qu'en soit le coût (rationalité en valeur) : c'est la capacité, propre à tout locuteur compétent, de justifier ce qu'il avance et de rester disposé à en changer si un meilleur argument survient.",
+      "Habermas en fait une ressource universelle inscrite dans la structure même du langage : parler sérieusement à autrui, ce n'est jamais seulement émettre des sons, c'est implicitement s'engager à pouvoir justifier ce qu'on dit si on nous le demande.",
+    ],
+    origine: {
+      oeuvre: "Théorie de l'agir communicationnel",
+      annee: '1981',
+      contexte:
+        "Habermas développe le concept en dialogue critique avec la théorie wébérienne de la rationalisation, pour montrer qu'elle ne rend compte que d'une des formes possibles de la rationalité moderne.",
+    },
+    exemples: [
+      "Un chercheur qui abandonne publiquement une hypothèse qu'il défendait, non parce qu'on l'y a contraint, mais parce qu'un contre-argument plus solide vient d'être présenté.",
+    ],
+    oeuvres: [
+      { y: '1981', t: "Théorie de l'agir communicationnel, tome I" },
+    ],
+    associes: ['agir-communicationnel', 'ethique-de-la-discussion'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Le modèle suppose des interlocuteurs prêts à se laisser convaincre par le meilleur argument, une disposition que l'observation des échanges réels ne confirme pas toujours.",
+      "Il reste flou sur la manière de départager, en pratique, ce qui constitue réellement le « meilleur » argument dans un désaccord de valeurs.",
+    ],
+    evolution: [
+      { p: '1981', f: "Habermas distingue la rationalité communicationnelle des types wébériens de rationalité." },
+      { p: '1983', f: "Le concept fonde l'éthique de la discussion, qui l'étend au domaine moral." },
+    ],
+  },
+  'ethique-de-la-discussion': {
+    detaille: [
+      "L'éthique de la discussion (Diskursethik) pose qu'une norme n'est moralement valide que si elle pourrait recueillir l'assentiment de toutes les personnes concernées, au terme d'une discussion réelle menée sans contrainte ni exclusion.",
+      "Cette exigence déplace la question morale : il ne s'agit plus de savoir quel contenu est juste dans l'absolu, mais quelle procédure de discussion permettrait à une norme d'être reconnue comme légitime par tous ceux qu'elle engage.",
+    ],
+    origine: {
+      oeuvre: 'Morale et communication',
+      annee: '1983',
+      contexte:
+        "Habermas développe cette éthique procédurale en prolongement direct de sa théorie de l'agir communicationnel, dans le sillage de l'universalisme moral kantien qu'il retravaille par le langage plutôt que par la seule raison individuelle.",
+    },
+    exemples: [
+      "Une charte d'établissement scolaire réécrite après consultation des élèves, des parents et des enseignants concernés, plutôt qu'imposée sans discussion par la seule direction.",
+    ],
+    oeuvres: [
+      { y: '1983', t: 'Morale et communication' },
+      { y: '1991', t: 'De l\'éthique de la discussion' },
+    ],
+    associes: ['rationalite-communicationnelle', 'agir-communicationnel'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le principe suppose une situation de discussion idéale, libre de toute contrainte et de toute inégalité de parole, que les conditions réelles ne réunissent presque jamais.",
+      "Il reste peu opérant pour trancher entre des positions qui s'opposent malgré une discussion menée de bonne foi et dans des conditions équitables.",
+    ],
+    evolution: [
+      { p: '1785', f: "Kant pose l'universalisme moral que Habermas retravaille, en le faisant reposer sur la discussion plutôt que sur la seule raison solitaire." },
+      { p: '1983', f: "Habermas formule l'éthique de la discussion dans Morale et communication." },
+      { p: '1991', f: "Apel développe en parallèle une fondation transcendantale voisine de l'éthique du discours." },
     ],
   },
 };

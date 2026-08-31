@@ -240,7 +240,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie politique',
     famille: 'institutions',
     detail:
-      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom.",
+      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom. Habermas, plus récemment, déplace la légitimité de la seule croyance des dominés vers la discussion elle-même : une norme n'est pleinement légitime que si elle pourrait recueillir l'accord de tous ceux qu'elle engage.",
     inspirateurs: [
       "Robert Michels — la loi d'airain de l'oligarchie : même un parti démocratique se donne des chefs",
       "Vilfredo Pareto — la circulation des élites, qui remplace une domination par une autre",

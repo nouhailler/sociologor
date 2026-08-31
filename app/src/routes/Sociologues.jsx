@@ -44,7 +44,7 @@ export default function Sociologues() {
       <div className="soc-enter">
         <h2 className="soc-h2">Sociologues</h2>
         <p className="soc-lede" style={{ maxWidth: '58ch', marginBottom: 18 }}>
-          Quinze auteurs et l&apos;École de Francfort, chacun avec ses concepts, ses œuvres et sa
+          Seize auteurs et l&apos;École de Francfort, chacun avec ses concepts, ses œuvres et sa
           place dans le graphe des filiations.
         </p>
 
