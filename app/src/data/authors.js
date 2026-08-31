@@ -12,8 +12,8 @@ export const DOMAINS = [
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
   { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
-  { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski'] },
-  { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas'] },
+  { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski', 'foucault'] },
+  { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas', 'foucault'] },
   { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte', 'giddens'] },
   { id: 'inegalites', t: 'Mobilité sociale', d: "Monter, descendre, rester : la circulation entre positions et ses illusions.", a: ['boudon', 'bourdieu', 'merton'] },
   { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville', 'parsons'] },
@@ -485,6 +485,32 @@ export const AUTHORS = {
     critiques: ["Archer lui reproche une « conflation centrale » : fondre structure et agent au point de ne plus pouvoir observer empiriquement lequel agit sur l'autre.", "Une théorie jugée plus philosophique qu'opérationnelle, qui peine à se traduire en méthode d'enquête précise.", "La modernité réflexive suppose une capacité de révision permanente que tous n'ont pas également les moyens d'exercer."],
     up: ['weber', 'durkheim', 'goffman'], down: [], x: 250, y: 690,
   },
+  foucault: {
+    id: 'foucault', name: 'Michel Foucault', initials: 'MF', dates: '1926–1984', nat: 'France', periode: 'XXᵉ siècle',
+    courant: 'Généalogie du pouvoir',
+    hook: "Il traque le pouvoir non pas au sommet de l'État, mais dans la prison, l'hôpital, l'école — partout où l'on dresse des corps.",
+    resume: "Foucault renverse la question classique du pouvoir : il ne demande plus qui le détient, mais comment il s'exerce, dans des techniques concrètes qui produisent des corps dociles et des sujets, sans jamais se réduire à une simple interdiction.",
+    concepts: [
+      { id: 'relations-de-pouvoir', t: 'Relations de pouvoir', year: '1975', simple: "Le pouvoir n'est pas une chose qu'on possède : il n'existe que dans l'exercice, diffus et relationnel, de rapports de force sans source unique.", ex: "Un service où personne ne détient formellement l'autorité, et où pourtant chacun ajuste sans cesse sa conduite à celle des autres." },
+      { id: 'micro-pouvoirs', t: 'Micro-pouvoirs', year: '1975', simple: "Le pouvoir circule d'abord à petite échelle — l'atelier, l'école, la caserne — avant, et bien au-delà, de se concentrer dans l'État.", ex: "Une file d'attente dont l'ordre, jamais écrit nulle part, s'impose pourtant à chacun aussi fermement qu'une règle." },
+      { id: 'discipline', t: 'Discipline', year: '1975', simple: "Une technique de pouvoir qui dresse les corps par un contrôle minutieux du temps, de l'espace et du geste, pour les rendre dociles et utiles.", ex: "Une rangée de bureaux identiques, alignés au millimètre, qui impose une posture avant même qu'aucun cours ne commence." },
+      { id: 'surveillance', t: 'Surveillance', year: '1975', simple: "Une observation continue et souvent asymétrique, qui rend le pouvoir disciplinaire efficace sans qu'il ait besoin de s'exercer par la force.", ex: "Un badge d'accès qui trace, sans qu'on y pense, chaque passage d'un employé d'un bureau à l'autre." },
+      { id: 'panoptisme', t: 'Panoptisme', year: '1975', simple: "Le principe architectural du Panoptique de Bentham, où l'on ne sait jamais si l'on est observé, et où l'on finit par se surveiller soi-même.", ex: "Une salle de classe surélevée d'où l'enseignant voit tous les élèves sans qu'aucun ne puisse voir ce qu'il regarde." },
+      { id: 'biopouvoir', t: 'Biopouvoir', year: '1976', simple: "Un pouvoir qui ne se contente plus de faire mourir : il prend en charge la vie elle-même, celle des corps et celle des populations.", ex: "Un carnet de santé qui accompagne un individu de la naissance à la vieillesse, objet d'un suivi que nul n'a personnellement réclamé." },
+      { id: 'biopolitique', t: 'Biopolitique', year: '1976', simple: "L'ensemble des techniques qui prennent la population comme telle pour objet — natalité, santé, longévité — plutôt que chaque individu un par un.", ex: "Un plan national de lutte contre l'obésité, pensé à l'échelle d'une population entière plutôt que d'un seul patient." },
+      { id: 'gouvernementalite', t: 'Gouvernementalité', year: '1978', simple: "L'art de conduire la conduite des autres — gouverner une population par le calcul et la sécurité plutôt que par le seul commandement.", ex: "Un système d'incitations fiscales qui oriente les choix des ménages sans jamais leur interdire explicitement quoi que ce soit." },
+      { id: 'normalisation', t: 'Normalisation', year: '1975', simple: "Une technique qui compare, classe et hiérarchise selon une norme, là où la loi se contente d'interdire ou de permettre.", ex: "Un test d'aptitude professionnelle qui situe chaque candidat sur une échelle, sans qu'aucun d'eux n'ait rien enfreint." },
+      { id: 'dispositif', t: 'Dispositif', year: '1977', simple: "Un ensemble hétérogène — discours, institutions, lois, bâtiments, mesures administratives — organisé pour répondre à une urgence historique donnée.", ex: "L'ensemble hétérogène de guichets, de formulaires et de conseillers qui compose, dans son entier, une politique d'insertion professionnelle." },
+      { id: 'savoir-pouvoir', t: 'Savoir-pouvoir', year: '1975', simple: "Le savoir et le pouvoir se produisent l'un l'autre : il n'y a pas de connaissance neutre, extérieure aux rapports de force qu'elle éclaire.", ex: "Une expertise judiciaire qui, en qualifiant un accusé de dangereux, oriente déjà la décision que le tribunal s'apprête à prendre." },
+      { id: 'subjectivation', t: 'Subjectivation', year: '1984', simple: "Le processus par lequel un individu se constitue lui-même comme sujet, par des pratiques choisies plutôt que par la seule contrainte extérieure.", ex: "Un pratiquant qui choisit librement un jeûne rituel pour se transformer, sans qu'aucune autorité ne le lui impose." },
+      { id: 'assujettissement', t: 'Assujettissement', year: '1975', simple: "Le double mouvement par lequel le pouvoir soumet un individu tout en le constituant, dans le même geste, comme sujet doté d'une identité.", ex: "Un bilan de compétences qui, en mesurant un salarié, le transforme aussi en profil désormais consultable par d'autres." },
+      { id: 'technologies-de-soi', t: 'Technologies de soi', year: '1982', simple: "Les pratiques concrètes par lesquelles un individu travaille sur lui-même pour se transformer, seul ou guidé, vers un état choisi.", ex: "Une pratique sportive assidue, poursuivie sans entraîneur ni obligation, pour se rapprocher d'un idéal qu'on s'est fixé seul." },
+    ],
+    oeuvres: [{ y: '1961', t: 'Histoire de la folie à l\'âge classique' }, { y: '1975', t: 'Surveiller et punir' }, { y: '1976', t: 'La Volonté de savoir' }, { y: '1984', t: 'Le Souci de soi' }],
+    citations: [{ t: "Là où il y a pouvoir, il y a résistance.", src: 'd\'après La Volonté de savoir, 1976' }],
+    critiques: ["Habermas objecte qu'un pouvoir partout diffus ne laisse plus voir d'où la critique elle-même pourrait parler.", "Des historiens contestent la précision de certaines de ses reconstitutions, plus fortes rhétoriquement qu'établies archivistiquement.", "Des critiques marxistes lui reprochent de dissoudre les rapports de classe et d'exploitation dans une notion de pouvoir trop générale."],
+    up: ['marx', 'weber'], down: ['castel'], x: 700, y: 690,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -645,7 +671,6 @@ export const EXTRA = {
     prenom: 'Robert', nom: 'Castel', disc: ["Histoire — l'histoire longue de l'assistance et du salariat, depuis l'Ancien Régime", "Psychiatrie — ses premiers travaux portent sur le pouvoir psychiatrique et l'internement", 'Droit social — la protection sociale comme construction juridique autant que politique'], biblio: ['N. Duvoux, Robert Castel, La Découverte, 2015', 'S. Paugam (dir.), Repenser la solidarité, PUF, 2007'],
     portrait: { kind: 'monogram', alt: 'Monogramme de Robert Castel', credit: "Photographies sous droits : aucune image libre disponible." },
     horsCorpus: [
-      "Michel Foucault — dont Castel fut proche dans les années 1970, avant de s'éloigner de l'analyse du pouvoir vers l'histoire du salariat",
       "Karl Polanyi — la marchandisation du travail, et ce qu'une société doit en protéger",
     ],
   },
@@ -668,7 +693,17 @@ export const EXTRA = {
       "Karl Marx — dont Giddens retravaille et critique le matérialisme historique sans y souscrire entièrement",
     ],
   },
+  foucault: {
+    prenom: 'Michel', nom: 'Foucault', disc: ["Philosophie — l'archéologie du savoir et l'histoire des systèmes de pensée", "Histoire — les institutions psychiatriques, médicales et pénales", "Science politique — le pouvoir comme objet d'analyse concret"], biblio: ['D. Eribon, Michel Foucault, Flammarion, 1989', 'F. Gros, Michel Foucault, PUF, 1996'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Michel Foucault', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Friedrich Nietzsche — la généalogie comme méthode, contre l'idée d'une origine pure des institutions",
+      "Georges Canguilhem — le normal et le pathologique, matrice de la normalisation",
+      "Louis Althusser — dont Foucault fut l'élève à l'École normale supérieure, avant de s'écarter du marxisme structural",
+      "Gilles Deleuze — les sociétés de contrôle, lues comme le prolongement des sociétés disciplinaires",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0]];
 

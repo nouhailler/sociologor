@@ -7834,4 +7834,458 @@ export const CONCEPTS = {
       { p: '1990', f: "Giddens formalise le désencastrement et ses deux mécanismes dans Les Conséquences de la modernité." },
     ],
   },
+
+  /* — Michel Foucault — */
+  'relations-de-pouvoir': {
+    detaille: [
+      "Foucault refuse de traiter le pouvoir comme une chose qu'un acteur détiendrait et qu'un autre subirait : il n'existe, dit-il, que dans son exercice, sous forme de relations mouvantes qui traversent tout le corps social, jamais concentrées en un point unique.",
+      "Ces relations ne sont pas d'abord répressives : elles produisent autant qu'elles interdisent — des savoirs, des comportements, des désirs, des institutions entières. Le pouvoir, avant d'être une force qui dit non, est ce qui rend possible tout un ordre de choses.",
+      "Là où il y a pouvoir, ajoute Foucault, il y a toujours résistance : non pas comme un dehors qui lui échapperait, mais comme son envers indissociable, présent dans chaque relation de pouvoir qui s'exerce.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault y rompt avec une tradition, de Machiavel à Marx, qui cherchait la source du pouvoir dans un lieu précis — le prince, l'État, la classe dominante — pour le décrire plutôt dans ses effets et ses techniques les plus concrets.",
+    },
+    exemples: [
+      "Une salle de classe où le pouvoir ne descend pas seulement du professeur vers les élèves, mais circule aussi entre eux, dans les regards, les rangs, les comparaisons.",
+      "Un mouvement de grève qui naît précisément à l'intérieur d'un rapport de pouvoir, sans lui être extérieur ni antérieur.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+      { y: '1976', t: 'La Volonté de savoir' },
+    ],
+    associes: ['micro-pouvoirs', 'savoir-pouvoir'],
+    opposes: ['pouvoir'],
+    critiques: [
+      "Weber, dont la définition classique reste la plus citée en sociologie, objecterait qu'un pouvoir sans aucun sujet qui le détienne devient difficile à distinguer d'une simple description de l'ordre social tout entier.",
+      "Habermas objecte que si le pouvoir est partout, on ne voit plus depuis quel point la critique elle-même pourrait légitimement parler.",
+      "Le concept, très général, dit peu de ce qui distingue un rapport de pouvoir ordinaire d'une domination dure, stable et difficile à renverser.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber définit le pouvoir comme la chance d'imposer sa volonté, même contre résistance — la définition que Foucault prend pour cible." },
+      { p: '1975–1976', f: "Foucault déplace la question du qui-détient-le-pouvoir vers le comment-il-s'exerce, dans les pratiques et les savoirs plutôt que dans une source unique." },
+    ],
+  },
+  'micro-pouvoirs': {
+    detaille: [
+      "Les micro-pouvoirs sont les innombrables points où le pouvoir s'exerce à petite échelle — dans l'atelier, l'école, la caserne, la famille — bien avant, et bien au-delà, de sa concentration dans les grands appareils d'État.",
+      "Foucault en fait le véritable terrain d'enquête de sa sociologie du pouvoir : comprendre l'État suppose d'abord de comprendre ce réseau capillaire de relations locales, sans lequel aucun pouvoir centralisé ne pourrait fonctionner ni même se maintenir.",
+      "Ces micro-pouvoirs ne descendent pas simplement du sommet vers la base : ils forment le socle sur lequel les pouvoirs plus visibles, ceux de l'État et du droit, viennent ensuite s'appuyer et se légitimer.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault y étudie les règlements d'atelier, d'école et de caserne du XVIIIᵉ siècle pour montrer qu'un pouvoir minutieux, bien plus fin que la loi, s'y exerçait déjà, indépendamment de toute décision prise au sommet de l'État.",
+    },
+    exemples: [
+      "Un règlement intérieur d'entreprise qui organise plus finement la vie quotidienne des salariés qu'aucune loi nationale.",
+      "Une salle d'attente dont l'agencement même — files, guichets, horaires — exerce un pouvoir sur les usagers sans qu'aucun agent n'ait besoin d'intervenir.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+    ],
+    associes: ['relations-de-pouvoir', 'discipline'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Weber objecterait qu'une théorie du pouvoir qui se dilue à ce point dans le local perd la capacité à expliquer ce qui distingue un État d'un simple agrégat d'institutions locales.",
+      "Le concept peine à rendre compte des moments où un pouvoir central impose, de haut en bas, une décision que rien au niveau local n'annonçait.",
+      "Il dit peu de la coordination réelle entre ces différents micro-pouvoirs, qui semblent parfois converger comme par hasard vers les mêmes effets globaux.",
+    ],
+    evolution: [
+      { p: '1975', f: "Surveiller et punir documente les micro-pouvoirs disciplinaires du XVIIIᵉ siècle." },
+      { p: '1976–1979', f: "Les cours au Collège de France généralisent l'enquête aux dispositifs de sécurité et à la population." },
+    ],
+  },
+  'discipline': {
+    detaille: [
+      "La discipline est une technique de pouvoir qui dresse les corps par un contrôle minutieux du temps, de l'espace, des gestes et des rythmes, pour produire des corps à la fois dociles et utiles — obéissants d'autant plus qu'ils sont devenus efficaces.",
+      "Elle procède par des méthodes précises : le quadrillage de l'espace, l'emploi du temps découpé en tranches, la surveillance hiérarchique, l'examen qui compare et classe — un ensemble de procédés minuscules, sans grand spectacle, qui n'ont pas besoin de la loi pour agir.",
+      "Foucault en fait la technique de pouvoir caractéristique de l'âge classique et moderne, née dans les monastères et les armées avant de se diffuser à l'école, à l'usine, à l'hôpital — partout où il s'agit de tirer d'un corps le maximum de force utile en minimisant sa force politique.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault construit ce concept en comparant le supplice public de l'Ancien Régime à la prison moderne, pour montrer qu'un même XVIIIᵉ siècle invente à la fois les droits de l'homme et une nouvelle technologie du dressage des corps.",
+    },
+    exemples: [
+      "Un emploi du temps scolaire qui découpe la journée en tranches précises, chacune assignée à un exercice et à une posture.",
+      "Un exercice militaire répété jusqu'à ce que le geste devienne automatique, sans plus avoir besoin d'être commandé.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+    ],
+    associes: ['micro-pouvoirs', 'surveillance', 'normalisation'],
+    opposes: ['autocontrole'],
+    critiques: [
+      "Elias, dont l'autocontrôle décrit une intériorisation progressive de la contrainte sur plusieurs siècles, objecterait que la discipline foucaldienne, plus institutionnelle et délibérée, ne rend pas compte de ce lent travail psychique.",
+      "Le tableau, très sombre, laisse peu de place aux résistances et aux détournements que les enquêtes de terrain documentent pourtant à l'intérieur même des institutions disciplinaires.",
+      "Certains historiens contestent la netteté de la rupture que Foucault dresse entre l'âge du supplice et l'âge de la discipline, plus progressive et plus poreuse qu'il ne le suggère.",
+    ],
+    evolution: [
+      { p: 'XVIIᵉ–XVIIIᵉ s.', f: "Les monastères et les armées développent les premières techniques disciplinaires abouties." },
+      { p: '1975', f: "Surveiller et punir généralise le concept à l'école, à l'usine et à l'hôpital." },
+    ],
+  },
+  'surveillance': {
+    detaille: [
+      "La surveillance est le mécanisme d'observation continue, souvent asymétrique, qui rend la discipline efficace sans avoir besoin de recourir à la force : il suffit que chacun se sache — ou puisse se croire — observé pour ajuster spontanément sa conduite.",
+      "Foucault en distingue plusieurs formes, de la surveillance hiérarchique directe — le contremaître qui observe l'atelier — à des dispositifs plus subtils, comme l'architecture elle-même, conçue pour rendre visible sans effort ce qui, ailleurs, exigerait une présence constante.",
+      "Son efficacité tient à son économie : bien menée, la surveillance coûte moins cher que la répression, et finit par se passer presque entièrement de surveillants, chacun devenant le gardien de sa propre conduite.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault documente la généralisation, au XVIIIᵉ siècle, de dispositifs de surveillance dans les écoles, les hôpitaux et les casernes, bien avant que la prison n'en devienne le symbole le plus achevé.",
+    },
+    exemples: [
+      "Un open space dont l'agencement permet à un responsable de voir tous les postes de travail d'un seul regard.",
+      "Un carnet de correspondance scolaire qui rend visible aux parents, à distance, la conduite quotidienne d'un élève.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+    ],
+    associes: ['discipline', 'panoptisme'],
+    opposes: ['territoires-du-soi'],
+    critiques: [
+      "Goffman objecterait qu'aucune surveillance, même la plus systématique, n'élimine entièrement les territoires du soi que les individus continuent de défendre, même dans les institutions les plus contrôlées.",
+      "Le concept, pensé pour des dispositifs architecturaux fixes, se transpose de façon parfois trop directe à la surveillance numérique contemporaine, dont les mécanismes techniques diffèrent sensiblement.",
+      "Il dit peu de ce qui arrive quand la surveillance est découverte comme un leurre, et cesse alors de produire l'effet disciplinaire escompté.",
+    ],
+    evolution: [
+      { p: 'XVIIIᵉ s.', f: "Les premiers dispositifs de surveillance hiérarchique se généralisent dans les institutions disciplinaires." },
+      { p: '1975', f: "Surveiller et punir en fait l'un des trois grands instruments du pouvoir disciplinaire, avec la sanction normalisatrice et l'examen." },
+      { p: '1990–2020', f: "Les technologies numériques relancent le débat sur une surveillance devenue continue, dispersée et largement volontaire." },
+    ],
+  },
+  'panoptisme': {
+    detaille: [
+      "Le panoptisme est le principe que Foucault tire du Panoptique imaginé par Bentham : une architecture où un gardien central peut voir chaque cellule sans jamais être vu lui-même, si bien que chaque détenu, ignorant s'il est observé à cet instant précis, finit par se conduire comme s'il l'était toujours.",
+      "Ce qui intéresse Foucault n'est pas le bâtiment lui-même, réalisé nulle part à l'identique, mais le principe qu'il incarne : un pouvoir qui n'a plus besoin de s'exercer effectivement pour produire ses effets, la seule possibilité d'être vu suffisant à discipliner.",
+      "Foucault généralise ce principe bien au-delà de la prison : il y voit un diagramme du pouvoir moderne lui-même, à l'œuvre dans l'école, l'usine, l'hôpital — partout où la visibilité organisée tient lieu de contrainte permanente.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault reprend le projet architectural de Jeremy Bentham, conçu à la fin du XVIIIᵉ siècle pour les prisons mais aussi les usines et les écoles, et en fait le symbole théorique de toute une technologie du pouvoir.",
+    },
+    exemples: [
+      "Une caméra factice, aussi dissuasive qu'une vraie, parce que personne ne peut savoir si elle fonctionne réellement.",
+      "Un open space où la simple possibilité qu'un supérieur passe à tout moment suffit à maintenir chacun à son poste.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+    ],
+    associes: ['surveillance', 'discipline'],
+    opposes: ['institution-totale'],
+    critiques: [
+      "Goffman, dont l'institution totale reste circonscrite à des lieux fermés et bien délimités, objecterait que le panoptisme, en se généralisant à toute la société, perd en précision descriptive ce qu'il gagne en portée théorique.",
+      "Le Panoptique de Bentham n'a presque jamais été construit tel quel : le principe reste, chez Foucault, plus théorique qu'attesté dans son application littérale.",
+      "Le concept dit peu de ce qui se passe quand les surveillés savent pertinemment qu'ils ne sont pas observés, et agissent alors en conséquence sans que le mécanisme perde toute efficacité.",
+    ],
+    evolution: [
+      { p: '1791', f: "Bentham conçoit le Panoptique comme un modèle architectural applicable aux prisons, aux usines et aux écoles." },
+      { p: '1975', f: "Foucault en fait le diagramme théorique du pouvoir disciplinaire moderne." },
+      { p: '1975', f: "Surveiller et punir consacre un chapitre entier, « Le panoptisme », à sa généralisation hors de la seule prison." },
+    ],
+  },
+  'biopouvoir': {
+    detaille: [
+      "Le biopouvoir désigne, pour Foucault, une mutation historique majeure dans la nature même du pouvoir politique : d'un pouvoir souverain qui se définissait par le droit de « faire mourir ou laisser vivre », on passe à un pouvoir qui prend en charge la vie elle-même, selon la formule inverse « faire vivre et laisser mourir ».",
+      "Ce nouveau pouvoir ne s'exerce plus seulement par la menace de la mort, mais par la gestion positive de la vie — sa santé, sa longévité, sa reproduction — devenue, à partir du XVIIIᵉ siècle, un objet politique à part entière.",
+      "Foucault en distingue deux pôles complémentaires : l'anatomo-politique du corps individuel, qui relève de la discipline, et la biopolitique des populations, qui gère la vie collective à l'échelle statistique — les deux ensemble formant le biopouvoir.",
+    ],
+    origine: {
+      oeuvre: 'La Volonté de savoir',
+      annee: '1976',
+      contexte:
+        "Foucault y clôt son histoire de la sexualité par une thèse plus large sur la transformation du pouvoir occidental, qu'il développera ensuite dans ses cours au Collège de France sur la biopolitique et la gouvernementalité.",
+    },
+    exemples: [
+      "Une campagne de vaccination obligatoire, qui gère la vie collective plutôt que de sanctionner une désobéissance individuelle.",
+      "Un indicateur d'espérance de vie nationale, devenu un objet de politique publique à part entière, indépendamment de tout individu précis.",
+    ],
+    oeuvres: [
+      { y: '1976', t: 'La Volonté de savoir' },
+      { y: '1997', t: "« Il faut défendre la société » (cours 1975-1976)" },
+    ],
+    associes: ['biopolitique', 'gouvernementalite'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Weber, dont la typologie de la domination reste centrée sur la question de l'obéissance légitime, objecterait qu'un pouvoir qui gère la vie déplace la question politique classique sans vraiment y répondre.",
+      "Le récit d'une rupture nette entre pouvoir souverain et biopouvoir a été critiqué comme trop tranché : le souverain classique se souciait déjà, au moins partiellement, de la prospérité de ses sujets.",
+      "Des critiques féministes objectent que la notion, très générale, dit peu des inégalités de genre dans la manière dont la vie reproductive elle-même est prise en charge par le pouvoir.",
+    ],
+    evolution: [
+      { p: 'XVIIIᵉ s.', f: "Les premières politiques de santé publique et de démographie annoncent le biopouvoir, selon Foucault." },
+      { p: '1976', f: "La Volonté de savoir formule le concept et sa formule inversée, « faire vivre et laisser mourir »." },
+      { p: '1975–1976', f: "Le cours « Il faut défendre la société » en approfondit l'articulation avec le racisme d'État." },
+    ],
+  },
+  'biopolitique': {
+    detaille: [
+      "La biopolitique est le versant du biopouvoir qui prend la population, et non plus l'individu isolé, comme objet de gouvernement : natalité, mortalité, santé publique, longévité deviennent des variables à connaître, mesurer et gérer à l'échelle collective.",
+      "Elle suppose des instruments spécifiques — statistiques démographiques, enquêtes épidémiologiques, dispositifs d'assurance — qui rendent visible et gouvernable une réalité, la population, que la seule addition des individus ne suffirait pas à décrire.",
+      "Foucault y voit une rationalité politique à part entière, distincte du droit et de la discipline : elle ne dit pas ce qui est permis ou interdit, elle optimise un état de fait — le taux de natalité, l'espérance de vie — au nom du bien-être collectif.",
+    ],
+    origine: {
+      oeuvre: 'Naissance de la biopolitique',
+      annee: '1979',
+      contexte:
+        "Foucault développe ce concept dans ses cours au Collège de France, en étudiant notamment le libéralisme et l'ordolibéralisme allemand comme rationalités politiques centrées sur la gestion de la population.",
+    },
+    exemples: [
+      "Une politique de santé publique qui vise le taux de mortalité infantile d'un pays, sans traiter aucun nourrisson en particulier.",
+      "Un système d'assurance sociale qui répartit statistiquement un risque, sans jamais viser un assuré précis pris isolément.",
+    ],
+    oeuvres: [
+      { y: '1976', t: 'La Volonté de savoir' },
+      { y: '2004', t: 'Naissance de la biopolitique (cours 1978-1979)' },
+    ],
+    associes: ['biopouvoir', 'gouvernementalite'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Parsons objecterait qu'une gestion strictement statistique de la population ne suffit pas à expliquer l'intégration normative que suppose tout système social durable.",
+      "Le concept, développé surtout à partir de l'Europe des XIXᵉ et XXᵉ siècles, se transpose difficilement à des sociétés dont l'appareil statistique d'État est resté peu développé.",
+      "Il dit peu des résistances collectives à la biopolitique, que les mouvements de santé publique contemporains rendent pourtant très visibles.",
+    ],
+    evolution: [
+      { p: 'XVIIIᵉ s.', f: "Les premières statistiques démographiques nationales rendent la population visible comme objet de gouvernement." },
+      { p: '1976', f: "La Volonté de savoir introduit la notion de biopolitique au sein du biopouvoir." },
+      { p: '1978–1979', f: "Naissance de la biopolitique en étudie l'articulation avec le libéralisme économique." },
+    ],
+  },
+  'gouvernementalite': {
+    detaille: [
+      "La gouvernementalité est l'art de conduire la conduite des autres — gouverner une population par le calcul, l'anticipation et la sécurité, plutôt que par le seul commandement souverain qui ordonne et sanctionne.",
+      "Foucault en fait un processus historique précis : le moment où l'État occidental, à partir du XVIIIᵉ siècle, prend pour objet non plus seulement son territoire ou ses sujets, mais une population dont il faut connaître et gérer les régularités propres — économiques, démographiques, sanitaires.",
+      "Cette rationalité de gouvernement se distingue nettement de la souveraineté classique et de la discipline : elle ne dit pas ce qu'il faut faire dans le détail, elle organise les conditions — sécurité, circulation, incitation — dans lesquelles les individus, laissés libres d'agir, se conduiront d'une manière prévisible et désirée.",
+    ],
+    origine: {
+      oeuvre: 'Sécurité, territoire, population',
+      annee: '1978',
+      contexte:
+        "Foucault développe ce concept dans ses cours au Collège de France de 1977-1978, en retraçant l'émergence, à partir du XVIᵉ siècle, d'un art de gouverner distinct à la fois de la souveraineté médiévale et de la discipline étudiée dans Surveiller et punir.",
+    },
+    exemples: [
+      "Une campagne de prévention qui vise à faire adopter un comportement plutôt qu'à l'imposer par la contrainte.",
+      "Un aménagement urbain pensé pour orienter les flux de circulation plutôt que pour les interdire par un règlement strict.",
+    ],
+    oeuvres: [
+      { y: '2004', t: 'Sécurité, territoire, population (cours 1977-1978)' },
+      { y: '2004', t: 'Naissance de la biopolitique (cours 1978-1979)' },
+    ],
+    associes: ['biopolitique', 'dispositif'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait qu'une rationalité de gouvernement aussi englobante laisse peu de place à la reconstruction des raisons précises que chaque acteur a de se conduire ainsi.",
+      "Le concept, très large, en vient parfois à désigner presque toute forme d'action publique, ce qui affaiblit sa capacité à isoler ce qui est proprement moderne dans la gouvernementalité.",
+      "Certains lecteurs objectent que la notion, développée dans des cours oraux publiés à titre posthume, reste moins stabilisée que les concepts formulés dans les livres achevés de Foucault.",
+    ],
+    evolution: [
+      { p: 'XVIᵉ s.', f: "Les traités de gouvernement et de raison d'État posent les premiers jalons d'une pensée du gouvernement distincte de la souveraineté." },
+      { p: '1977–1978', f: "Foucault formule la gouvernementalité dans son cours Sécurité, territoire, population." },
+      { p: '1978–1979', f: "Naissance de la biopolitique en prolonge l'analyse jusqu'au libéralisme contemporain." },
+    ],
+  },
+  'normalisation': {
+    detaille: [
+      "La normalisation est une technique de pouvoir qui compare, mesure, classe et hiérarchise les individus selon une norme, là où le droit classique se contente de dire ce qui est permis ou interdit sans jamais graduer entre les deux.",
+      "Elle opère par un jugement continu plutôt que par une sanction ponctuelle : chaque conduite est rapportée à une moyenne, un écart-type, un rang, ce qui permet de repérer et de corriger l'anomalie bien avant qu'elle ne devienne une infraction au sens juridique.",
+      "Cette logique normalisatrice ne se contente pas d'exclure ceux qui s'écartent trop de la norme : elle produit aussi, en creux, l'individu normal lui-même, dont l'existence suppose la mesure constante de tous les autres.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault y montre comment l'examen scolaire, l'inspection militaire ou le contrôle médical instaurent, aux côtés du droit, un pouvoir normalisateur qui juge en termes de conformité à une norme plutôt qu'en termes de légalité.",
+    },
+    exemples: [
+      "Une notation scolaire qui classe chaque élève par rapport à la moyenne, indépendamment de toute règle qu'il aurait enfreinte.",
+      "Une courbe de croissance qui situe un enfant par rapport à une norme statistique, sans qu'aucune loi n'ait jamais fixé cette norme comme obligatoire.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+    ],
+    associes: ['discipline', 'assujettissement'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "Boudon objecterait qu'un classement selon une norme n'est pas nécessairement un mécanisme de pouvoir insidieux : il peut aussi servir une compétition ouverte et légitime entre des acteurs consentants.",
+      "Le concept, en insistant sur la fonction de contrôle du classement, dit peu de son utilité informative réelle, que les individus classés peuvent eux-mêmes revendiquer.",
+      "Canguilhem, dont Foucault reprend la distinction du normal et du pathologique, insistait davantage sur la normativité propre du vivant, que la seule normalisation sociale ne suffit pas à épuiser.",
+    ],
+    evolution: [
+      { p: '1943', f: "Canguilhem distingue le normal et le pathologique dans Le Normal et le Pathologique, matrice du concept." },
+      { p: '1975', f: "Surveiller et punir en fait l'un des trois grands instruments du pouvoir disciplinaire, avec la surveillance hiérarchique et l'examen." },
+    ],
+  },
+  'dispositif': {
+    detaille: [
+      "Un dispositif est, chez Foucault, un ensemble résolument hétérogène — discours, institutions, lois, arrangements architecturaux, mesures administratives, énoncés scientifiques — organisé pour répondre à une urgence historique donnée, à un moment précis.",
+      "Ce qui définit un dispositif n'est pas la nature de ses éléments, très divers, mais le réseau de relations qui peut s'établir entre eux : un même bâtiment, une même loi peuvent appartenir à des dispositifs différents selon la fonction stratégique qu'ils y remplissent.",
+      "Un dispositif n'est jamais figé : il se transforme, se recompose, change de fonction dominante au fil du temps, sans qu'aucun de ses éléments d'origine ne soit nécessairement resté à sa place initiale.",
+    ],
+    origine: {
+      oeuvre: 'La Volonté de savoir',
+      annee: '1976',
+      contexte:
+        "Foucault y étudie le « dispositif de sexualité » — discours médicaux, aveu, pédagogie, démographie — pour montrer comment un ensemble hétérogène d'éléments a construit, plus qu'il ne l'a simplement réprimée, la sexualité moderne comme objet de savoir et de pouvoir.",
+    },
+    exemples: [
+      "L'ensemble des lois, des campagnes, des tests et des services qui composent la lutte contre une épidémie, bien au-delà du seul vaccin.",
+      "Un dispositif scolaire qui articule bâtiments, emplois du temps, examens et discours pédagogiques en un ensemble cohérent, sans qu'aucun de ces éléments n'ait été pensé seul.",
+    ],
+    oeuvres: [
+      { y: '1976', t: 'La Volonté de savoir' },
+      { y: '1977', t: 'Le Jeu de Michel Foucault (entretien)' },
+    ],
+    associes: ['savoir-pouvoir', 'biopouvoir'],
+    opposes: ['configuration'],
+    critiques: [
+      "Elias, dont la configuration relie des personnes en interdépendance, objecterait qu'un dispositif, en mêlant discours, lois et bâtiments à des individus, brouille la distinction entre relations humaines et éléments matériels ou institutionnels.",
+      "Le concept, très ouvert, risque de désigner presque n'importe quel ensemble d'éléments reliés par une fonction commune, ce qui le rend difficile à circonscrire précisément.",
+      "Il dit peu de qui, concrètement, décide d'assembler ainsi des éléments hétérogènes en un dispositif cohérent, et selon quels intérêts.",
+    ],
+    evolution: [
+      { p: '1975–1977', f: "Foucault précise la notion de dispositif dans des entretiens, en complément de Surveiller et punir." },
+      { p: '1976', f: "La Volonté de savoir en donne l'application la plus développée, avec le dispositif de sexualité." },
+      { p: '1990–2010', f: "Le concept se diffuse largement en sciences sociales pour analyser des ensembles techniques et institutionnels complexes." },
+    ],
+  },
+  'savoir-pouvoir': {
+    detaille: [
+      "Le couple savoir-pouvoir désigne la thèse selon laquelle connaissance et pouvoir ne s'opposent jamais totalement : loin qu'un savoir pur puisse exister indépendamment de tout rapport de force, le pouvoir produit du savoir, et tout savoir porte en lui des effets de pouvoir.",
+      "Foucault s'oppose ainsi à une image répandue du savoir comme vérité neutre, menacée ou faussée par le pouvoir qui l'instrumentaliserait de l'extérieur : pour lui, il n'y a pas de relation de pouvoir sans constitution corrélative d'un champ de savoir, ni de savoir qui ne présuppose des relations de pouvoir.",
+      "Cette thèse déplace le rôle même de l'expert : psychiatre, médecin, pédagogue ne se contentent pas de décrire une réalité déjà là, ils participent, par leur savoir même, à constituer les catégories — le fou, le malade, le délinquant — sur lesquelles s'exerce ensuite le pouvoir.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault y montre comment la naissance de la prison moderne s'accompagne de la naissance de sciences humaines nouvelles — criminologie, psychologie — qui ne décrivent pas simplement le délinquant, mais contribuent à le produire comme objet de savoir.",
+    },
+    exemples: [
+      "Un diagnostic médical qui, en nommant une pathologie, autorise aussitôt toute une série d'interventions sur celui qui la porte.",
+      "Un test psychologique qui, en mesurant une aptitude, contribue lui-même à définir ce que cette aptitude signifie socialement.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+      { y: '1976', t: 'La Volonté de savoir' },
+    ],
+    associes: ['dispositif', 'relations-de-pouvoir'],
+    opposes: ['ideal-type'],
+    critiques: [
+      "Weber, dont l'idéal-type suppose une neutralité axiologique du chercheur au moins méthodologiquement possible, objecterait qu'une science entièrement dissoute dans le pouvoir perd toute prétention à la connaissance objective.",
+      "Le concept, poussé à l'extrême, semble rendre impossible toute distinction entre un savoir mieux établi et un savoir moins fondé, puisque les deux seraient également traversés par le pouvoir.",
+      "Des critiques objectent que Foucault lui-même, en écrivant sur le pouvoir, produit un savoir qui échapperait alors difficilement à sa propre thèse.",
+    ],
+    evolution: [
+      { p: '1963', f: "Naissance de la clinique esquisse déjà le lien entre regard médical et pouvoir institutionnel." },
+      { p: '1975', f: "Surveiller et punir formule explicitement le couple savoir-pouvoir." },
+      { p: '1976', f: "La Volonté de savoir l'applique au discours scientifique sur la sexualité." },
+    ],
+  },
+  'subjectivation': {
+    detaille: [
+      "La subjectivation est le processus par lequel un individu se constitue lui-même comme sujet moral, à travers des pratiques de soi choisies plutôt qu'imposées de l'extérieur — la dimension la plus tardive et la moins connue de l'œuvre de Foucault.",
+      "Elle suppose une marge d'invention : le sujet ne se contente pas de recevoir passivement une identité que le pouvoir lui assignerait, il travaille activement sur lui-même, selon des techniques héritées — souvent de l'Antiquité grecque et romaine — mais réappropriées et réinterprétées.",
+      "Foucault y trouve, tard dans son œuvre, une possibilité de résistance et de liberté qu'il n'avait pas également mise en avant dans ses analyses antérieures du pouvoir disciplinaire : le rapport à soi comme espace, sinon extérieur au pouvoir, du moins irréductible à sa seule contrainte.",
+    ],
+    origine: {
+      oeuvre: "L'Usage des plaisirs",
+      annee: '1984',
+      contexte:
+        "Foucault opère, dans le deuxième tome de l'Histoire de la sexualité, un déplacement méthodologique vers l'éthique antique, pour étudier comment les Grecs et les Romains constituaient leur propre conduite en objet de souci et de travail personnel.",
+    },
+    exemples: [
+      "Une personne qui tient un journal intime pour mieux se comprendre et orienter sa propre conduite.",
+      "Un athlète qui suit un régime d'entraînement librement choisi pour se façonner selon un idéal qu'il s'est lui-même fixé.",
+    ],
+    oeuvres: [
+      { y: '1984', t: "L'Usage des plaisirs" },
+      { y: '1984', t: 'Le Souci de soi' },
+    ],
+    associes: ['technologies-de-soi', 'agentivite'],
+    opposes: ['assujettissement'],
+    critiques: [
+      "Certains commentateurs objectent une rupture difficile à concilier avec l'œuvre antérieure : comment le même auteur qui insistait sur des corps entièrement dressés en vient-il à parler d'un sujet capable de se façonner librement ?",
+      "Le tournant vers l'Antiquité grecque et romaine a été critiqué comme une évasion esthétisante, loin des analyses institutionnelles plus mordantes de Surveiller et punir.",
+      "Le concept dit peu des inégalités d'accès à ces pratiques de soi, réservées dans l'Antiquité à une minorité d'hommes libres et cultivés.",
+    ],
+    evolution: [
+      { p: '1975–1976', f: "Les analyses du pouvoir disciplinaire et du biopouvoir insistent surtout sur l'assujettissement du sujet." },
+      { p: '1980–1984', f: "Foucault opère un tournant vers l'éthique de soi dans l'Antiquité grecque et romaine." },
+      { p: '1984', f: "L'Usage des plaisirs et Le Souci de soi formulent pleinement la subjectivation comme pratique de liberté." },
+    ],
+  },
+  'assujettissement': {
+    detaille: [
+      "L'assujettissement est le double mouvement, indissociable, par lequel le pouvoir soumet un individu tout en le constituant, dans le même geste, comme sujet doté d'une identité, d'une intériorité et d'une histoire personnelle à surveiller.",
+      "Foucault joue ici sur le double sens du mot français : être assujetti, c'est être soumis à un pouvoir — mais c'est aussi, littéralement, devenir un sujet, acquérir cette forme d'existence individualisée sur laquelle le pouvoir moderne prend justement prise.",
+      "Ce mécanisme explique pourquoi le pouvoir disciplinaire ne se contente jamais de réprimer de l'extérieur un sujet déjà formé : il produit lui-même, par ses techniques d'examen et d'individualisation, le sujet précis sur lequel il s'exerce ensuite.",
+    ],
+    origine: {
+      oeuvre: 'Surveiller et punir',
+      annee: '1975',
+      contexte:
+        "Foucault y montre que l'examen disciplinaire — scolaire, militaire, médical — ne se contente pas d'évaluer un individu déjà là : il l'individualise, le documente, le transforme en cas, en dossier, en identité désormais surveillable.",
+    },
+    exemples: [
+      "Un dossier scolaire qui, en évaluant un élève, lui attribue du même coup une identité — « bon élève », « en difficulté » — qu'il devra désormais porter.",
+      "Un diagnostic psychiatrique qui, en nommant un trouble, façonne aussi la manière dont la personne concernée en vient à se percevoir elle-même.",
+    ],
+    oeuvres: [
+      { y: '1975', t: 'Surveiller et punir' },
+      { y: '1976', t: 'La Volonté de savoir' },
+    ],
+    associes: ['normalisation', 'discipline'],
+    opposes: ['subjectivation'],
+    critiques: [
+      "Le concept peine à expliquer comment un sujet ainsi constitué par le pouvoir peut malgré tout, comme Foucault le montrera plus tard, se réapproprier une marge de subjectivation autonome.",
+      "Bourdieu objecterait qu'un mécanisme aussi général risque de sous-estimer les différences de degré entre assujettissements légers et dominations lourdes, également dissoutes dans le même concept.",
+      "Il dit peu des cas où l'individualisation par le pouvoir échoue franchement à produire l'identité attendue.",
+    ],
+    evolution: [
+      { p: '1975', f: "Surveiller et punir formule l'assujettissement à travers l'examen disciplinaire." },
+      { p: '1980–1984', f: "Foucault reviendra sur cette notion pour la faire dialoguer avec la subjectivation, plus tardive." },
+    ],
+  },
+  'technologies-de-soi': {
+    detaille: [
+      "Les technologies de soi sont les pratiques concrètes — examen de conscience, écriture, exercices, régimes de vie — par lesquelles un individu travaille sur lui-même, seul ou guidé, pour transformer son corps, son âme, ses pensées et sa conduite vers un état choisi.",
+      "Foucault les distingue des technologies de pouvoir, qui déterminent la conduite des individus de l'extérieur : les technologies de soi supposent au contraire un travail actif de l'individu sur lui-même, même lorsqu'il s'inscrit dans une tradition ou sous la conduite d'un maître.",
+      "Il les retrouve principalement dans l'Antiquité gréco-romaine, où le souci de soi précédait et conditionnait le souci des autres, avant qu'une tradition chrétienne puis moderne ne les réoriente vers le déchiffrement d'une vérité intérieure cachée, à confesser plutôt qu'à cultiver.",
+    ],
+    origine: {
+      oeuvre: 'Le Souci de soi',
+      annee: '1984',
+      contexte:
+        "Foucault développe ce concept dans le troisième tome de l'Histoire de la sexualité et dans des séminaires donnés aux États-Unis, en étudiant les exercices philosophiques stoïciens et épicuriens comme des techniques concrètes de transformation de soi.",
+    },
+    exemples: [
+      "Un exercice de méditation quotidien suivi non pour obéir à une règle, mais pour se façonner soi-même.",
+      "Un carnet de bord tenu chaque soir pour examiner ses propres actions de la journée et en tirer des résolutions pour le lendemain.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Le Souci de soi' },
+      { y: '1988', t: 'Technologies of the Self (séminaire)' },
+    ],
+    associes: ['subjectivation', 'gouvernementalite'],
+    opposes: ['institution-totale'],
+    critiques: [
+      "Goffman objecterait que l'institution totale, par sa mainmise sur l'ensemble de l'existence, réduit à presque rien la marge que suppose toute véritable technologie de soi.",
+      "Le tournant vers l'Antiquité a été jugé par certains commentateurs trop optimiste sur la possibilité, dans les sociétés modernes très administrées, de retrouver un espace de travail sur soi réellement autonome.",
+      "Le concept dit peu des technologies de soi les moins choisies, imposées sous couvert de développement personnel par des institutions qui y trouvent leur propre intérêt.",
+    ],
+    evolution: [
+      { p: 'Antiquité grecque et romaine', f: "Les exercices stoïciens et épicuriens développent des techniques concrètes de transformation de soi." },
+      { p: '1982', f: "Foucault expose la notion dans un séminaire à l'université du Vermont." },
+      { p: '1984', f: "Le Souci de soi en donne le traitement le plus développé, à travers l'éthique gréco-romaine." },
+    ],
+  },
 };

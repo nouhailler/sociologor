@@ -40,7 +40,7 @@ export const DOMAINS_ADDED = [
     t: 'Générale',
     nom: 'Sociologie générale',
     d: "Avant de découper la société en objets, savoir ce qui la tient ensemble.",
-    a: ['comte', 'durkheim', 'weber'],
+    a: ['comte', 'durkheim', 'weber', 'giddens'],
   },
   {
     id: 'economique',
@@ -96,7 +96,7 @@ export const DOMAINS_ADDED = [
     t: 'Crime',
     nom: 'Sociologie du crime',
     d: "Durkheim tient le crime pour un fait normal, et même utile : reste à comprendre pourquoi.",
-    a: ['durkheim', 'merton', 'becker'],
+    a: ['durkheim', 'merton', 'becker', 'foucault'],
   },
   {
     id: 'mouvements-sociaux',
@@ -172,11 +172,10 @@ export const DOMAIN_EXTRA = {
   generale: {
     famille: 'fondations',
     detail:
-      "Comte fonde le mot et le projet ; avant que Durkheim et Weber ne lui donnent chacun sa méthode, la discipline devait d'abord prouver qu'un fait social s'explique par d'autres faits sociaux, non par la psychologie individuelle ou la providence. La sociologie générale porte cette question fondatrice — qu'est-ce qui fait tenir une société ensemble, malgré la diversité des intérêts et des croyances qui la traversent ? Elle est aussi le terrain de la grande querelle de méthode entre expliquer de l'extérieur, comme une chose, et comprendre de l'intérieur, par le sens que les acteurs y mettent.",
+      "Comte fonde le mot et le projet ; avant que Durkheim et Weber ne lui donnent chacun sa méthode, la discipline devait d'abord prouver qu'un fait social s'explique par d'autres faits sociaux, non par la psychologie individuelle ou la providence. La sociologie générale porte cette question fondatrice — qu'est-ce qui fait tenir une société ensemble, malgré la diversité des intérêts et des croyances qui la traversent ? Elle est aussi le terrain de la grande querelle de méthode entre expliquer de l'extérieur, comme une chose, et comprendre de l'intérieur, par le sens que les acteurs y mettent — une querelle que Giddens tentera plus tard de dépasser plutôt que de trancher, en montrant que structure et action se fabriquent l'une l'autre.",
     inspirateurs: [
       "Herbert Spencer — la société lue comme un organisme qui se différencie en grandissant",
       "Raymond Aron — la mise en ordre du canon, et l'idée que la discipline se raconte par ses querelles",
-      "Anthony Giddens — la structuration : les structures contraignent l'action et n'existent que par elle",
     ],
   },
   methode: {
@@ -240,7 +239,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie politique',
     famille: 'institutions',
     detail:
-      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom. Habermas, plus récemment, déplace la légitimité de la seule croyance des dominés vers la discussion elle-même : une norme n'est pleinement légitime que si elle pourrait recueillir l'accord de tous ceux qu'elle engage.",
+      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom. Habermas, plus récemment, déplace la légitimité de la seule croyance des dominés vers la discussion elle-même : une norme n'est pleinement légitime que si elle pourrait recueillir l'accord de tous ceux qu'elle engage. Foucault, enfin, renverse la question de départ : plutôt que de chercher qui détient le pouvoir et pourquoi on lui obéit, il demande comment le pouvoir s'exerce concrètement, dans des techniques diffuses bien en deçà de l'État.",
     inspirateurs: [
       "Robert Michels — la loi d'airain de l'oligarchie : même un parti démocratique se donne des chefs",
       "Vilfredo Pareto — la circulation des élites, qui remplace une domination par une autre",
@@ -381,7 +380,7 @@ export const DOMAIN_EXTRA = {
   crime: {
     famille: 'normes',
     detail:
-      "Durkheim ouvre le domaine par un paradoxe qui a fait date : le crime est un fait normal, présent dans toute société, et même utile — il rappelle les limites que la collectivité s'est fixées. Merton en explique la fréquence par une tension anomique : promettre à tous la réussite sans donner à tous les moyens légitimes de l'atteindre pousse certains vers des moyens illégitimes. Becker referme la boucle en rappelant que la loi elle-même est un produit social, porté par des groupes qui ont intérêt à faire reconnaître certains actes comme crimes plutôt que d'autres.",
+      "Durkheim ouvre le domaine par un paradoxe qui a fait date : le crime est un fait normal, présent dans toute société, et même utile — il rappelle les limites que la collectivité s'est fixées. Merton en explique la fréquence par une tension anomique : promettre à tous la réussite sans donner à tous les moyens légitimes de l'atteindre pousse certains vers des moyens illégitimes. Becker referme la boucle en rappelant que la loi elle-même est un produit social, porté par des groupes qui ont intérêt à faire reconnaître certains actes comme crimes plutôt que d'autres. Foucault déplace enfin la question de l'acte vers la peine : la prison moderne ne punit pas seulement, elle dresse un corps docile selon des techniques précises, et son échec apparent — la récidive — sert peut-être la fonction qu'on ne lui prête jamais.",
     inspirateurs: [
       "Cesare Lombroso — le criminel-né, thèse abandonnée mais fondatrice par contraste",
       "Edwin Sutherland — le crime en col blanc, qui déplace la question loin des quartiers pauvres",
@@ -447,10 +446,9 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie du corps',
     famille: 'corps',
     detail:
-      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot.",
+      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot. Foucault déplace encore la question : le corps discipliné ne l'est pas seulement par les autres ou par soi, il l'est par des techniques précises — l'emploi du temps, l'exercice, le rang — qui le dressent sans jamais avoir besoin d'invoquer la loi.",
     inspirateurs: [
       "Marcel Mauss — les techniques du corps : marcher, nager, s'asseoir s'apprennent",
-      "Michel Foucault — les corps dociles, dressés par la discipline plus que par la loi",
       "David Le Breton — la sociologie du corps constituée en domaine",
     ],
   },

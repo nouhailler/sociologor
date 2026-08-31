@@ -48,7 +48,7 @@ export default function Home() {
           <span style={{ color: 'var(--color-accent)' }}>reliée.</span>
         </p>
         <p className="soc-lede" style={{ maxWidth: '52ch' }}>
-          Dix-huit fiches — dix-sept auteurs et une école — leurs concepts et leur filiation. Entrez par un
+          Dix-neuf fiches — dix-huit auteurs et une école — leurs concepts et leur filiation. Entrez par un
           domaine, ou suivez les fils du graphe : chaque fiche pointe vers les suivantes.
         </p>
 

@@ -278,8 +278,8 @@ export const COURANTS = [
     detail:
       "Castel reprend la préoccupation durkheimienne pour ce qui tient une société ensemble, et la déplace vers l'histoire longue de l'assistance et du salariat : la « société salariale » du XXᵉ siècle a offert, pour la première fois à cette échelle, une intégration par le travail assortie de droits sociaux. Sa fragilisation depuis les années 1970 redessine toute la question sociale, entre zones d'intégration, de vulnérabilité et de désaffiliation.",
     auteurs: ['castel'],
-    vientDe: ['holisme', 'structuralisme-genetique'],
-    inspirateurs: ["Michel Foucault — l'analyse du pouvoir et des institutions, dont Castel fut proche avant de s'en écarter vers l'histoire du salariat"],
+    vientDe: ['holisme', 'structuralisme-genetique', 'genealogie-du-pouvoir'],
+    inspirateurs: [],
     niveau: 'paradigme',
   },
   {
@@ -309,6 +309,21 @@ export const COURANTS = [
     inspirateurs: [
       "Harold Garfinkel — l'ethnométhodologie et la conscience pratique des acteurs ordinaires",
       "Ludwig Wittgenstein — suivre une règle sans avoir besoin de la formuler",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'genealogie-du-pouvoir',
+    t: 'Généalogie du pouvoir',
+    periode: 'contemporain',
+    d: "Ne pas demander qui détient le pouvoir, mais comment il s'exerce — dans des techniques concrètes, diffuses, bien en deçà de l'État.",
+    detail:
+      "Foucault refuse de traiter le pouvoir comme une chose qu'on posséderait, à conquérir ou à confisquer. Il le retrace plutôt dans son fonctionnement le plus concret — la prison, l'hôpital, l'école, la caserne — pour montrer qu'il y produit des savoirs autant qu'il en dépend, et des sujets autant que des corps dressés. Cette généalogie, méfiante envers toute origine unique, préfère une histoire faite de ruptures à un récit continu de progrès.",
+    auteurs: ['foucault'],
+    vientDe: ['materialisme-historique', 'sociologie-comprehensive'],
+    inspirateurs: [
+      "Friedrich Nietzsche — la généalogie comme méthode, contre la recherche d'une origine pure",
+      "Georges Canguilhem — le normal et le pathologique, matrice de la normalisation",
     ],
     niveau: 'paradigme',
   },
