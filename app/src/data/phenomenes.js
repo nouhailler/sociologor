@@ -145,10 +145,9 @@ export const PHENOMENES = [
     detail:
       "Bourdieu y verrait un capital culturel qui précède et prépare le capital économique : ce sont souvent des habitants dotés en premier — artistes, étudiants, classes moyennes cultivées — qui rendent un quartier attractif pour des classes plus aisées ensuite.",
     dimensions: ['economique', 'sociale', 'urbaine', 'politique', 'culturelle', 'demographique'],
-    concepts: ['capital-culturel', 'champ'],
+    concepts: ['capital-culturel', 'champ', 'espace-social'],
     notions: [
       "Ségrégation urbaine — la recomposition, quartier par quartier, de qui vit où",
-      "Espace social — la position dans la ville comme reflet d'une position sociale plus large",
       "Mobilité résidentielle — le déplacement, souvent contraint, des habitants historiques",
       "Spéculation immobilière — la hausse des prix qui précède et accompagne l'arrivée de nouveaux habitants",
       "Patrimonialisation — la mise en valeur du bâti ancien qui accélère souvent le processus qu'elle célèbre",
@@ -319,10 +318,9 @@ export const PHENOMENES = [
     detail:
       "Bourdieu en a fait la démonstration la plus citée : le capital culturel — l'aisance avec la culture légitime — se transmet en famille bien avant l'école, et continue d'y déterminer la réussite. L'habitus complète l'explication : ce n'est pas seulement un manque de moyens qui écarte certains publics des institutions culturelles, c'est un sentiment, souvent juste, de ne pas y être à sa place.",
     dimensions: ['culturelle', 'educative', 'sociale'],
-    concepts: ['capital-culturel', 'habitus'],
+    concepts: ['capital-culturel', 'habitus', 'legitimite-culturelle'],
     notions: [
       "Pratiques culturelles — fréquentation des musées, lecture, spectacles : des indicateurs suivis depuis les années 1970",
-      "Légitimité culturelle — la hiérarchie, jamais neutre, entre ce qui compte comme culture et ce qui n'y prétend pas",
       "Démocratisation culturelle — un objectif de politique publique, aux résultats plus modestes que l'ambition",
       "Éducation artistique — l'école comme lieu possible, mais inégalement saisi, de rattrapage culturel",
       "Omnivorité culturelle — une thèse récente selon laquelle les plus favorisés cumulent goûts savants et populaires, plutôt qu'ils n'excluent ces derniers",

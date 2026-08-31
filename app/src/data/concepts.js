@@ -3213,7 +3213,7 @@ export const CONCEPTS = {
       { y: '1949', t: 'Éléments de théorie et de méthode sociologiques, chapitre I' },
       { y: '1957', t: 'Édition augmentée : Social Theory and Social Structure' },
     ],
-    associes: ['effets-pervers', 'prophetie-autorealisatrice', 'systeme-social'],
+    associes: ['effets-pervers', 'prophetie-autorealisatrice', 'systeme-social', 'fonction-manifeste', 'dysfonction'],
     opposes: ['individualisme-methodologique'],
     critiques: [
       "Une fonction latente n'est jamais réfutable : on peut en attribuer une à n'importe quelle pratique après coup.",
@@ -3279,7 +3279,7 @@ export const CONCEPTS = {
       { y: '1938', t: 'Social Structure and Anomie' },
       { y: '1949', t: 'Éléments de théorie et de méthode sociologiques, chapitres VI et VII' },
     ],
-    associes: ['anomie', 'carriere-deviante', 'fonction-latente'],
+    associes: ['anomie', 'carriere-deviante', 'fonction-latente', 'structure-culturelle', 'conformite', 'innovation-mertonienne', 'ritualisme', 'retrait', 'rebellion'],
     opposes: ['etiquetage'],
     critiques: [
       "Le modèle explique mal la délinquance des classes supérieures, qui ne manquent d'aucun moyen légitime.",
@@ -3292,6 +3292,344 @@ export const CONCEPTS = {
       { p: '1955–1960', f: 'Cohen, Cloward et Ohlin en tirent les théories des sous-cultures délinquantes.' },
       { p: '1963', f: "Becker renverse la question : la déviance n'est pas dans l'acte mais dans la réaction." },
       { p: '1992', f: 'Agnew la reformule en théorie générale de la tension, centrée sur les émotions négatives.' },
+    ],
+  },
+  'fonction-manifeste': {
+    detaille: [
+      "La fonction manifeste d'une pratique est la conséquence qu'elle produit intentionnellement, celle que ses participants reconnaissent et avancent eux-mêmes pour la justifier — le motif affiché, par opposition à ce que la pratique produit réellement mais sans le savoir.",
+      "Merton insiste : distinguer manifeste et latent n'est pas juger qu'un motif serait plus vrai que l'autre, mais reconnaître qu'une même pratique peut viser une chose et en accomplir une autre, sans que les deux se contredisent nécessairement.",
+    ],
+    origine: {
+      oeuvre: 'Éléments de théorie et de méthode sociologiques',
+      annee: '1949',
+      contexte:
+        "Merton forge le couple manifeste/latent pour discipliner l'analyse fonctionnelle, en distinguant systématiquement ce qu'une pratique prétend faire de ce qu'elle fait réellement.",
+    },
+    exemples: [
+      "Un entretien annuel d'évaluation, dont la fonction manifeste est de mesurer objectivement une performance individuelle sur l'année écoulée.",
+    ],
+    oeuvres: [
+      { y: '1949', t: 'Éléments de théorie et de méthode sociologiques, chapitre I' },
+    ],
+    associes: ['fonction-latente', 'dysfonction'],
+    opposes: ['effets-pervers'],
+    critiques: [
+      "La distinction suppose de pouvoir accéder à l'intention réelle des acteurs, un accès jamais garanti pour l'observateur extérieur.",
+      "Une même pratique peut avoir plusieurs fonctions manifestes concurrentes selon les acteurs concernés, ce que la dichotomie simple manifeste/latent ne rend pas toujours bien.",
+    ],
+    evolution: [
+      { p: '1949', f: "Merton formule le couple manifeste/latente comme outil de rigueur pour l'analyse fonctionnelle." },
+      { p: '1957', f: "L'édition augmentée de Social Theory and Social Structure en systématise l'usage." },
+    ],
+  },
+  'dysfonction': {
+    detaille: [
+      "Contre l'image d'un système toujours en équilibre que Parsons pouvait laisser entendre, Merton introduit la dysfonction : une conséquence qui affaiblit l'adaptation ou la cohésion d'un système, plutôt que de la servir.",
+      "La même pratique peut de surcroît être fonctionnelle pour un groupe et dysfonctionnelle pour un autre à l'intérieur de la même société — ce qui interdit de juger, sans préciser pour qui, qu'une institution est simplement « utile » ou « nuisible ».",
+    ],
+    origine: {
+      oeuvre: 'Éléments de théorie et de méthode sociologiques',
+      annee: '1949',
+      contexte:
+        "Merton ajoute la dysfonction pour corriger ce qu'il perçoit comme un biais conservateur du fonctionnalisme parsonien, qui présente trop facilement l'existant comme nécessairement utile.",
+    },
+    exemples: [
+      "Une règle de sécurité qui protège efficacement une usine des accidents, mais ralentit tant la production qu'elle menace la compétitivité de l'entreprise face à ses concurrents.",
+    ],
+    oeuvres: [
+      { y: '1949', t: 'Éléments de théorie et de méthode sociologiques, chapitre I' },
+    ],
+    associes: ['fonction-latente', 'fonction-manifeste'],
+    opposes: ['equilibre-social'],
+    critiques: [
+      "Le concept ne dit pas toujours pour qui exactement une pratique est dysfonctionnelle, ce qui peut en réduire la portée explicative si on ne le précise pas.",
+      "Une pratique jugée dysfonctionnelle à court terme peut se révéler fonctionnelle à plus long terme, et inversement, ce qui complique toute évaluation figée.",
+    ],
+    evolution: [
+      { p: '1949', f: "Merton introduit la dysfonction dans son cadre d'analyse fonctionnelle." },
+      { p: '1959', f: "Dahrendorf et Mills s'appuient sur cette ouverture pour critiquer plus largement le fonctionnalisme parsonien, jugé incapable de penser le conflit." },
+    ],
+  },
+  'structure-culturelle': {
+    detaille: [
+      "La structure culturelle regroupe les buts et les critères de réussite qu'une culture prescrit à tous ses membres comme désirables, indépendamment de la position de départ de chacun — la réussite matérielle, aux États-Unis, en est pour Merton l'exemple le plus net.",
+      "Cette structure culturelle ne se confond pas avec la structure sociale, qui distribue de façon très inégale les moyens légitimes d'atteindre ces mêmes buts : c'est précisément l'écart entre les deux qui produit, selon Merton, la tension anomique.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton distingue structure culturelle et structure sociale pour localiser précisément la source de la tension qu'il décrit, plutôt que de la loger dans un vague dérèglement général des attentes.",
+    },
+    exemples: [
+      "Une publicité qui promet la même réussite à quiconque « le veut vraiment », sans jamais mentionner l'inégalité des points de départ réels face à cette promesse.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['structure-sociale', 'tension-anomique'],
+    opposes: ['habitus'],
+    critiques: [
+      "Le concept suppose un consensus culturel sur les buts valorisés, que la diversité réelle des sociétés contemporaines rend de plus en plus difficile à soutenir tel quel.",
+      "Il traite les buts culturels comme un donné stable, quand ils évoluent eux-mêmes dans le temps sous l'effet des mêmes tensions qu'ils contribuent à produire.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton distingue structure culturelle et structure sociale dans Social Structure and Anomie." },
+      { p: '1951', f: "Parsons développe en parallèle sa propre théorie de la structure sociale, dans un cadre plus général." },
+    ],
+  },
+  'conformite': {
+    detaille: [
+      "La conformité est, pour Merton, l'adaptation la plus courante statistiquement : accepter à la fois les buts que la culture prescrit et les moyens institutionnalisés, légitimes, prévus pour les atteindre — sans quoi aucune société ne pourrait durablement fonctionner.",
+      "C'est précisément parce que la conformité domine numériquement que la société conserve sa stabilité malgré l'existence des quatre autres adaptations, plus visibles mais minoritaires.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton pose la conformité comme le premier terme de sa typologie des cinq adaptations à la tension entre buts culturels et moyens institutionnalisés.",
+    },
+    exemples: [
+      "Poursuivre des études, chercher un emploi stable et progresser par l'ancienneté ou le mérite reconnu, en suivant les étapes attendues sans jamais s'en écarter.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['tension-anomique', 'innovation-mertonienne'],
+    opposes: ['rebellion'],
+    critiques: [
+      "Le modèle traite la conformité comme allant de soi statistiquement, sans toujours interroger ce qui la rend elle-même coûteuse pour certains groupes sociaux.",
+      "La frontière entre conformité authentique et conformité de façade, purement stratégique, reste difficile à établir empiriquement.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton pose la conformité comme adaptation dominante dans sa typologie." },
+    ],
+  },
+  'innovation-mertonienne': {
+    detaille: [
+      "L'innovation, chez Merton, désigne l'adaptation qui accepte pleinement les buts culturels valorisés — la réussite matérielle — mais recourt à des moyens illégitimes pour les atteindre, faute d'accès suffisant aux moyens institutionnalisés.",
+      "Le mot ne renvoie donc pas ici à une nouveauté technique ou créative au sens courant : c'est une innovation dans les moyens employés pour atteindre un but que la société elle-même a fixé comme désirable pour tous.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton cherche à expliquer une partie de la délinquance économique américaine sans recourir à la pathologie individuelle, en la reliant plutôt à un écart structurel entre buts et moyens disponibles.",
+    },
+    exemples: [
+      "Un trafic organisé qui vise exactement la même réussite matérielle que la société valorise ouvertement, par une voie que le droit interdit.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['tension-anomique', 'conformite'],
+    opposes: ['ritualisme'],
+    critiques: [
+      "Le modèle explique mal l'innovation illégitime chez des personnes disposant pourtant de moyens légitimes suffisants pour réussir autrement.",
+      "Il traite comme homogène une catégorie qui recouvre en réalité des situations très différentes, de la petite entorse à la criminalité organisée.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton isole l'innovation comme réponse à l'écart entre buts et moyens légitimes." },
+      { p: '1960', f: "Cloward et Ohlin en tirent la théorie des sous-cultures délinquantes, en ajoutant l'accès inégal aux moyens illégitimes eux-mêmes." },
+    ],
+  },
+  'ritualisme': {
+    detaille: [
+      "Le ritualisme abandonne l'ambition des buts culturels — la réussite, la promotion, l'ascension — tout en continuant, souvent par sécurité ou par habitude, à suivre scrupuleusement les moyens institutionnalisés prévus pour les atteindre.",
+      "Merton en fait une déviance discrète, presque invisible, puisqu'elle ne transgresse aucune règle : c'est au contraire un excès de conformité aux moyens, détaché du but qui leur donnait initialement leur sens.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton observe une figure fréquente dans les grandes organisations bureaucratiques américaines de son temps : l'employé qui applique la règle à la lettre, sans plus rien attendre au-delà.",
+    },
+    exemples: [
+      "Un agent administratif qui suit chaque procédure avec une rigueur absolue, ayant depuis longtemps renoncé à toute perspective de promotion ou de reconnaissance particulière.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['tension-anomique', 'retrait'],
+    opposes: ['innovation-mertonienne'],
+    critiques: [
+      "Le concept peine à distinguer un ritualisme réellement défensif d'un simple respect scrupuleux des règles, positivement valorisé dans certains métiers.",
+      "Il présente le renoncement à l'ambition comme un problème à expliquer, ce qui présuppose que l'ambition constante serait, elle, la norme naturelle à atteindre.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton isole le ritualisme comme adaptation à l'écart entre buts et moyens." },
+      { p: '1956', f: "Whyte, dans L'Homme de l'organisation, en décrit une version proche chez le cadre moyen américain d'après-guerre." },
+    ],
+  },
+  'retrait': {
+    detaille: [
+      "Le retrait rejette à la fois les buts culturels valorisés et les moyens institutionnalisés prévus pour les atteindre, sans leur substituer aucun autre but ni aucun autre moyen — une sortie du jeu social plutôt qu'une déviance active dirigée contre lui.",
+      "Merton la présente comme la moins fréquente et la plus radicale des cinq adaptations : contrairement au ritualiste, qui reste engagé dans les moyens, la personne en retrait s'est désengagée de l'ensemble du système de buts et de moyens que sa société lui propose.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton cherche à rendre compte, dans sa typologie, de situations de rupture totale avec les attentes ordinaires d'une société, distinctes des formes plus actives de déviance qu'il décrit par ailleurs.",
+    },
+    exemples: [
+      "Une personne qui a cessé de rechercher tant la réussite valorisée par son entourage que les moyens conventionnels d'y prétendre, sans chercher à leur substituer d'autres objectifs.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['tension-anomique', 'ritualisme'],
+    opposes: ['agir-communicationnel'],
+    critiques: [
+      "La catégorie regroupe des situations très hétérogènes — choix personnel assumé, épuisement, exclusion subie — sous un même mot qui les traite comme équivalentes.",
+      "Merton lui-même reconnaît qu'elle reste la moins documentée empiriquement des cinq adaptations de sa typologie.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton isole le retrait comme rejet simultané des buts et des moyens institutionnalisés." },
+    ],
+  },
+  'rebellion': {
+    detaille: [
+      "La rébellion rejette elle aussi les buts culturels et les moyens institutionnalisés en vigueur, mais à la différence du retrait, elle leur substitue de nouveaux buts et de nouveaux moyens, et cherche activement à transformer l'ordre social existant plutôt qu'à s'en retirer.",
+      "Merton en fait la seule des cinq adaptations orientée vers le changement collectif plutôt que vers un ajustement individuel : c'est la réponse d'un groupe qui refuse la définition même de ce qui vaut d'être réussi, pas seulement les moyens d'y parvenir.",
+    ],
+    origine: {
+      oeuvre: 'Social Structure and Anomie',
+      annee: '1938',
+      contexte:
+        "Merton distingue cette adaptation des quatre autres pour rendre compte des mouvements qui ne demandent pas seulement une meilleure part du système existant, mais un système différent.",
+    },
+    exemples: [
+      "Un mouvement qui ne réclame pas seulement un meilleur accès à la réussite matérielle telle qu'elle est définie, mais propose une tout autre définition de ce qui devrait être collectivement valorisé.",
+    ],
+    oeuvres: [
+      { y: '1938', t: 'Social Structure and Anomie' },
+    ],
+    associes: ['tension-anomique', 'conflit-de-classes'],
+    opposes: ['conformite'],
+    critiques: [
+      "La frontière entre rébellion et innovation reste parfois ténue, notamment quand un mouvement conteste les moyens en vigueur sans toujours proposer de nouveaux buts clairement articulés.",
+      "Le concept reste plus descriptif qu'explicatif sur les conditions précises qui font basculer une tension individuelle vers une mobilisation collective organisée.",
+    ],
+    evolution: [
+      { p: '1938', f: "Merton isole la rébellion comme seule adaptation orientée vers la transformation collective de l'ordre existant." },
+    ],
+  },
+  'groupe-de-reference': {
+    detaille: [
+      "Un groupe de référence est le groupe — qu'on en soit membre ou non — dont on emprunte les normes et les valeurs pour évaluer sa propre situation, orienter ses conduites et mesurer sa réussite ou son échec.",
+      "Merton montre que ce groupe n'est pas nécessairement celui auquel on appartient effectivement : on peut se comparer et s'orienter par rapport à un groupe auquel on aspire, ce qui explique pourquoi deux personnes dans une situation objectivement comparable peuvent la vivre très différemment.",
+    ],
+    origine: {
+      oeuvre: 'Social Theory and Social Structure',
+      annee: '1950',
+      contexte:
+        "Merton reprend et systématise des observations faites pendant la Seconde Guerre mondiale sur la satisfaction des soldats américains, qui dépendait moins de leur situation objective que du groupe auquel ils se comparaient.",
+    },
+    exemples: [
+      "Un soldat bien noté dans une unité aux promotions rares se sent moins satisfait qu'un soldat moins bien noté dans une unité où les promotions sont fréquentes, chacun se comparant à ceux qui l'entourent.",
+    ],
+    oeuvres: [
+      { y: '1950', t: 'Social Theory and Social Structure' },
+      { y: '1949', t: "Contributions to the Theory of Reference Group Behavior" },
+    ],
+    associes: ['socialisation-anticipatrice', 'role-et-attentes'],
+    opposes: ['habitus'],
+    critiques: [
+      "Le concept explique mal pourquoi un individu choisit tel groupe de référence plutôt qu'un autre parmi tous ceux auxquels il pourrait en principe se comparer.",
+      "Il suppose une capacité de comparaison sociale assez délibérée, quand une bonne part des repères de comparaison reste largement implicite ou inconsciente.",
+    ],
+    evolution: [
+      { p: '1949', f: "Merton et Kitt systématisent la notion à partir des données de l'étude The American Soldier." },
+      { p: '1950', f: "Social Theory and Social Structure en donne l'exposé de référence." },
+      { p: '1966', f: "Le concept nourrit les théories de la privation relative, notamment chez Runciman." },
+    ],
+  },
+  'socialisation-anticipatrice': {
+    detaille: [
+      "La socialisation anticipatrice désigne le fait d'adopter, avant même d'en faire partie, les normes et les valeurs d'un groupe auquel on aspire à appartenir — une préparation qui facilite ensuite l'entrée réelle dans ce groupe.",
+      "Le mécanisme peut aussi comporter un coût : en adoptant par avance les codes d'un groupe convoité, on risque de se couper du groupe auquel on appartient effectivement, sans être encore pleinement accepté par celui qu'on vise.",
+    ],
+    origine: {
+      oeuvre: 'Social Theory and Social Structure',
+      annee: '1950',
+      contexte:
+        "Merton développe ce prolongement de la théorie du groupe de référence en observant comment certains soldats, dans l'étude The American Soldier, adoptaient déjà les attitudes des officiers avant toute promotion effective.",
+    },
+    exemples: [
+      "Un étudiant en droit qui commence à adopter le vocabulaire et les manières d'un cabinet prestigieux bien avant d'y avoir jamais travaillé.",
+    ],
+    oeuvres: [
+      { y: '1950', t: 'Social Theory and Social Structure' },
+    ],
+    associes: ['groupe-de-reference', 'socialisation'],
+    opposes: ['carriere-deviante'],
+    critiques: [
+      "Le mécanisme fonctionne surtout pour des groupes dont l'accès reste réaliste : il explique mal les aspirations vers des groupes structurellement fermés.",
+      "Il peut se retourner contre celui qui l'adopte, en le faisant paraître prétentieux ou déloyal envers son groupe d'origine, sans garantie d'acceptation par le groupe visé.",
+    ],
+    evolution: [
+      { p: '1950', f: "Merton formule la socialisation anticipatrice comme prolongement de la théorie du groupe de référence." },
+      { p: '1957', f: "Le concept est repris pour analyser la mobilité sociale ascendante et ses coûts relationnels." },
+    ],
+  },
+  'effet-matthieu': {
+    detaille: [
+      "En étudiant la répartition de la reconnaissance dans le monde scientifique, Merton observe que les chercheurs déjà renommés reçoivent, pour une contribution comparable, davantage de crédit que leurs collègues moins connus — un avantage qui s'accumule et se renforce lui-même dans le temps.",
+      "Il nomme le phénomène d'après un verset de l'évangile selon Matthieu : « Car on donnera à celui qui a, et il sera dans l'abondance, mais à celui qui n'a pas, on ôtera même ce qu'il a » — la reconnaissance, comme le capital, attire la reconnaissance.",
+    ],
+    origine: {
+      oeuvre: 'The Matthew Effect in Science',
+      annee: '1968',
+      contexte:
+        "Merton s'appuie sur des entretiens avec des lauréats du prix Nobel, qui reconnaissent eux-mêmes recevoir souvent un crédit disproportionné pour des travaux menés en collaboration avec des chercheurs moins établis.",
+    },
+    exemples: [
+      "Une découverte réalisée collectivement, dont les comptes rendus publics et les citations ultérieures attribuent l'essentiel du mérite au membre le plus reconnu de l'équipe.",
+    ],
+    oeuvres: [
+      { y: '1968', t: 'The Matthew Effect in Science' },
+      { y: '1988', t: 'The Matthew Effect in Science, II' },
+    ],
+    associes: ['prophetie-autorealisatrice', 'capital-symbolique'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "Le concept reste surtout documenté dans le monde académique ; son extension à d'autres domaines (l'économie, les médias) demande à être vérifiée au cas par cas.",
+      "Il explique la persistance des inégalités de reconnaissance sans toujours dire ce qui a produit l'écart initial, avant que l'effet cumulatif ne prenne le relais.",
+    ],
+    evolution: [
+      { p: '1968', f: "Merton nomme et documente l'effet Matthieu dans le monde de la recherche scientifique." },
+      { p: '1988', f: "Merton prolonge l'analyse en la reliant plus explicitement aux mécanismes d'accumulation du capital symbolique." },
+      { p: '2000', f: "Le concept est repris hors du champ scientifique pour analyser la popularité cumulative dans les industries culturelles et numériques." },
+    ],
+  },
+  'consequences-inattendues': {
+    detaille: [
+      "Dans son tout premier article majeur, Merton identifie plusieurs raisons pour lesquelles une action délibérée, entreprise pour atteindre un but précis, produit souvent des effets que personne n'avait anticipés : l'ignorance, l'erreur d'appréciation, l'urgence d'un intérêt immédiat qui masque les conséquences à long terme, des valeurs qui interdisent certaines options même efficaces, et des prédictions qui se démentent elles-mêmes une fois connues.",
+      "Ce texte de jeunesse pose déjà, avant la fonction latente ou la tension anomique, le principe qui traversera toute l'œuvre de Merton : les conséquences réelles d'une action sociale ne coïncident jamais totalement avec les intentions de ceux qui l'entreprennent.",
+    ],
+    origine: {
+      oeuvre: 'The Unanticipated Consequences of Purposive Social Action',
+      annee: '1936',
+      contexte:
+        "Merton publie cet article à vingt-six ans dans l'American Sociological Review, avant même sa thèse de doctorat, et y expose déjà la matrice de toute sa sociologie ultérieure.",
+    },
+    exemples: [
+      "Une mesure prise dans l'urgence pour répondre à un problème immédiat, qui déplace ou aggrave, sans que personne ne l'ait voulu, un problème différent à plus long terme.",
+    ],
+    oeuvres: [
+      { y: '1936', t: 'The Unanticipated Consequences of Purposive Social Action' },
+    ],
+    associes: ['fonction-latente', 'effets-pervers'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "La typologie des causes reste largement descriptive, sans hiérarchie claire entre elles ni méthode pour les distinguer empiriquement dans un cas donné.",
+      "Boudon objecte qu'une bonne part de ces conséquences n'a besoin d'aucune ignorance ni erreur pour survenir : l'agrégation de choix individuellement rationnels y suffit déjà.",
+    ],
+    evolution: [
+      { p: '1936', f: "Merton pose la matrice des conséquences inattendues de l'action sociale." },
+      { p: '1949', f: "Le texte prépare directement la distinction entre fonction manifeste et fonction latente." },
+      { p: '1977', f: "Boudon radicalise et systématise l'intuition dans sa théorie des effets pervers." },
     ],
   },
 
@@ -3573,6 +3911,659 @@ export const CONCEPTS = {
       { p: '1990–2015', f: "La méthode d'analyse géométrique des données que Bourdieu utilise pour cartographier ces positions devient un standard de la sociologie quantitative française." },
     ],
   },
+  'capital-culturel-incorpore': {
+    detaille: [
+      "L'état incorporé du capital culturel est celui des dispositions elles-mêmes : une aisance de langage, une culture générale, un goût — tout ce qui s'est déposé dans le corps et l'esprit à force de fréquentation, sans qu'aucun acte formel ne le certifie.",
+      "Il suppose un travail d'incorporation que personne ne peut faire à la place de l'agent, ni lui déléguer : contrairement à l'argent, il ne se transmet pas d'un coup, il s'acquiert lentement, souvent sans le savoir, dès la petite enfance.",
+      "C'est cette lenteur qui le rend si difficile à rattraper une fois le départ manqué, et si facile à confondre avec un don : personne ne voit le temps qu'il a fallu pour qu'il paraisse naturel.",
+    ],
+    origine: {
+      oeuvre: 'Les Trois États du capital culturel',
+      annee: '1979',
+      contexte:
+        "Dans un article des Actes de la recherche en sciences sociales, Bourdieu distingue trois états du capital culturel pour préciser un concept jusque-là traité comme un bloc. L'incorporé en est la forme première, celle dont les deux autres dérivent.",
+    },
+    exemples: [
+      "Une aisance à prendre la parole en réunion, acquise sans y penser dans une famille où l'on discutait à table, et que rien dans un CV ne mentionne.",
+      "Un accent, une façon de tenir ses couverts ou de citer un auteur à propos : rien de tout cela ne figure sur un diplôme, et pourtant tout se remarque.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'Les Trois États du capital culturel' },
+      { y: '1979', t: 'La Distinction' },
+    ],
+    associes: ['capital-culturel', 'capital-culturel-objective', 'capital-culturel-institutionnalise', 'habitus'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "N'étant jamais mesuré directement, l'état incorporé se prête à toutes les attributions rétrospectives : on l'invoque pour expliquer un succès déjà constaté.",
+      "Le confondre avec un talent est précisément ce que Bourdieu dénonce — mais le concept lui-même ne dit jamais à quel âge, ni comment, l'incorporation cesse d'être possible.",
+      "Lahire objecte qu'un même individu incorpore des dispositions hétérogènes selon les milieux traversés, plutôt qu'un bloc culturel cohérent.",
+    ],
+    evolution: [
+      { p: '1964–1970', f: "Les Héritiers puis La Reproduction esquissent la notion sans la nommer comme état distinct." },
+      { p: '1979', f: "L'article des Trois États lui donne son nom et sa place dans la typologie." },
+      { p: '1990–2010', f: "La sociologie de l'éducation en fait l'explication standard des écarts de réussite scolaire selon l'origine sociale." },
+    ],
+  },
+  'capital-culturel-objective': {
+    detaille: [
+      "L'état objectivé est celui des biens culturels matériels : livres, tableaux, instruments, machines — tout ce qui peut se posséder, se transmettre en héritage et parfois se vendre, comme n'importe quel bien économique.",
+      "Mais sa transmission légale ne transmet pas l'usage : hériter d'une bibliothèque ne donne pas la capacité de s'en servir, qui suppose l'état incorporé. L'objet reste inerte sans la disposition qui sait le déchiffrer.",
+      "Bourdieu y voit un piège pour la théorie économique du capital humain : elle compte les biens culturels comme un patrimoine, sans voir que leur rendement dépend entièrement d'une compétence qui, elle, ne s'achète pas.",
+    ],
+    origine: {
+      oeuvre: 'Les Trois États du capital culturel',
+      annee: '1979',
+      contexte:
+        "Bourdieu isole cet état pour montrer ce que les biens culturels ont de commun avec le capital économique — la transmissibilité — et ce qui les en distingue radicalement : leur usage exige une compétence incorporée.",
+    },
+    exemples: [
+      "Un piano hérité qui reste un meuble pour qui n'a jamais appris le solfège, et un instrument de travail pour qui en a reçu l'apprentissage.",
+      "Une collection de tableaux revendue aux enchères pour sa valeur marchande, quand l'héritier n'a reçu ni le goût ni le regard qui la faisaient vivre.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'Les Trois États du capital culturel' },
+      { y: '1979', t: 'La Distinction' },
+    ],
+    associes: ['capital-culturel', 'capital-culturel-incorpore', 'capital-culturel-institutionnalise'],
+    opposes: ['capital-economique'],
+    critiques: [
+      "La distinction entre bien objectivé et sa valeur marchande reste floue : un tableau de maître est aussi, et de plus en plus, un placement financier.",
+      "Le concept dit peu de ce qui se passe quand l'objet change d'usage social, comme un instrument ancien devenu objet de collection plutôt que de pratique.",
+      "Il suppose une frontière nette entre biens culturels et biens ordinaires que le marché de l'art contemporain brouille chaque jour davantage.",
+    ],
+    evolution: [
+      { p: '1979', f: "L'article des Trois États distingue l'objectivé de l'incorporé et de l'institutionnalisé." },
+      { p: '1986', f: "The Forms of Capital généralise la distinction pour un public anglophone." },
+      { p: '1990–2010', f: "L'économie de la culture s'en sert pour penser la valeur des patrimoines matériels au-delà de leur seul prix." },
+    ],
+  },
+  'capital-culturel-institutionnalise': {
+    detaille: [
+      "L'état institutionnalisé est celui du diplôme : un acte officiel qui convertit une compétence incertaine, incorporée et invérifiable, en un titre standardisé, garanti par l'État et négociable sur un marché — celui du travail en premier lieu.",
+      "Cette conversion règle un problème pratique : comment comparer des compétences que rien ne rend directement mesurables ? Le diplôme répond en instituant une équivalence formelle, indépendante de la personne qui le détient et de la manière dont elle l'a obtenu.",
+      "Il crée ainsi un capital culturel qui fonctionne, pour la première fois, comme un capital économique : on peut le faire valoir sans avoir à en faire la preuve à chaque fois, et son détenteur en tire un rendement stable sur le marché du travail.",
+    ],
+    origine: {
+      oeuvre: 'Les Trois États du capital culturel',
+      annee: '1979',
+      contexte:
+        "Bourdieu isole ce troisième état pour expliquer pourquoi un diplôme rapporte plus que la compétence qu'il est censé simplement attester : il produit une garantie collective que la compétence seule ne produit pas.",
+    },
+    exemples: [
+      "Deux candidats aux compétences réelles comparables, dont un seul a le titre requis, et qui n'ont donc aucune chance égale à l'entretien.",
+      "Une reconversion professionnelle, réussie sur le terrain, qui reste invisible sur un CV tant qu'aucun diplôme ne vient l'attester.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'Les Trois États du capital culturel' },
+      { y: '1970', t: 'La Reproduction (avec J.-C. Passeron)' },
+    ],
+    associes: ['capital-culturel', 'capital-culturel-incorpore', 'capital-culturel-objective', 'reproduction-scolaire'],
+    opposes: ['prestige-social'],
+    critiques: [
+      "Le concept explique bien la valeur du diplôme, mais peu son contenu : deux diplômes de même niveau peuvent recouvrir des compétences très inégales.",
+      "L'inflation scolaire — un diplôme de plus en plus nécessaire pour un rendement de moins en moins garanti — n'est décrite qu'après coup, jamais anticipée par la théorie.",
+      "Il traite le diplôme comme une simple conversion, quand l'examen qui le délivre est lui-même un jugement social, non un instrument de mesure neutre.",
+    ],
+    evolution: [
+      { p: '1970', f: "La Reproduction pose déjà le rôle du titre scolaire dans la conversion du capital culturel." },
+      { p: '1979', f: "L'article des Trois États nomme et formalise l'état institutionnalisé." },
+      { p: '1990–2020', f: "L'inflation des diplômes, largement documentée depuis, prolonge et complique la thèse initiale." },
+    ],
+  },
+  'doxa': {
+    detaille: [
+      "La doxa est l'ensemble de ce qui, dans un champ ou une société, va tellement de soi qu'il ne vient à l'idée de personne de le formuler, encore moins de le discuter : l'ordre naturel des choses, avant toute prise de position explicite.",
+      "Elle diffère d'une opinion : une opinion se discute, la doxa ne se voit même pas — elle est la condition silencieuse à partir de laquelle des opinions concurrentes peuvent ensuite se former.",
+      "Ce silence est ce qui fait sa force : tant qu'un arbitraire reste doxique, il échappe à toute discussion, et donc à toute contestation frontale — la violence symbolique s'exerce d'autant mieux qu'elle n'apparaît pas comme un choix parmi d'autres.",
+    ],
+    origine: {
+      oeuvre: "Esquisse d'une théorie de la pratique",
+      annee: '1972',
+      contexte:
+        "Bourdieu reprend un terme de la rhétorique grecque pour décrire, à partir de son terrain kabyle, l'adhésion immédiate et non réfléchie d'un groupe à l'ordre qui le régit.",
+    },
+    exemples: [
+      "Le fait qu'une école soit gratuite et obligatoire, qui ne se discute plus alors qu'il a fallu l'imposer contre de vives résistances.",
+      "Une hiérarchie de bureau si ancienne que personne, ni en haut ni en bas, ne songe plus à demander pourquoi elle existe.",
+    ],
+    oeuvres: [
+      { y: '1972', t: "Esquisse d'une théorie de la pratique" },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['orthodoxie', 'illusio', 'violence-symbolique'],
+    opposes: ['heterodoxie'],
+    critiques: [
+      "Le concept ne dit jamais comment une doxa se forme ni comment elle finit, à un moment donné, par céder à la discussion.",
+      "Boltanski objecte qu'un acteur, même dominé, dispose toujours d'une capacité de dénonciation qui suppose une distance à l'ordre établi — donc une sortie possible de la doxa.",
+      "La frontière entre doxa et simple habitude individuelle reste peu précisée : tout ce qui va de soi n'est pas nécessairement un rapport de domination.",
+    ],
+    evolution: [
+      { p: '1972', f: "Bourdieu forge le concept à partir du terrain kabyle, où l'ordre du monde ne se discute pas." },
+      { p: '1980', f: "Le Sens pratique l'articule à l'illusio et au sens du jeu." },
+      { p: '1990–2010', f: "Le mot passe dans le langage courant pour désigner, plus largement, toute pensée dominante non questionnée." },
+    ],
+  },
+  'orthodoxie': {
+    detaille: [
+      "L'orthodoxie est ce que devient la doxa une fois qu'elle cesse d'aller de soi : dès qu'une alternative devient pensable, il faut défendre explicitement ce qui n'avait auparavant besoin d'aucune défense.",
+      "Elle marque donc un recul, pas une force pure : parler ouvertement au nom de l'ordre établi, c'est déjà admettre qu'il pourrait en être autrement — ce que la doxa, elle, rendait impensable.",
+      "Dans un champ, l'orthodoxie est portée par ceux qui dominent et qui ont donc intérêt à la conservation ; elle s'oppose terme à terme à l'hétérodoxie, portée par les nouveaux venus qui ont intérêt au changement.",
+    ],
+    origine: {
+      oeuvre: "Esquisse d'une théorie de la pratique",
+      annee: '1972',
+      contexte:
+        "Bourdieu emprunte le vocabulaire théologique — orthodoxie, hérésie — pour décrire la lutte, dans tout champ, entre discours dominant explicite et discours de rupture.",
+    },
+    exemples: [
+      "Une institution qui se met soudain à justifier publiquement une règle qu'elle n'avait jamais eu à motiver auparavant.",
+      "Un courant artistique établi qui, face à une avant-garde montante, en vient à défendre en mots ce qu'il pratiquait sans y penser.",
+    ],
+    oeuvres: [
+      { y: '1972', t: "Esquisse d'une théorie de la pratique" },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['doxa', 'champ'],
+    opposes: ['heterodoxie'],
+    critiques: [
+      "Le schéma orthodoxie/hétérodoxie plaque une logique binaire sur des champs où coexistent souvent plusieurs positions concurrentes, ni tout à fait dominantes ni tout à fait marginales.",
+      "Il suppose une lutte permanente qui laisse peu de place à des périodes de coopération réelle entre positions différentes.",
+      "L'analogie théologique, féconde au départ, tend à faire de tout désaccord un schisme, ce qui exagère la cohérence interne des positions en présence.",
+    ],
+    evolution: [
+      { p: '1972', f: "Le vocabulaire orthodoxie/hérésie apparaît dans l'Esquisse, à propos des luttes de classement." },
+      { p: '1979', f: "La Distinction l'applique aux luttes de goût entre fractions de classe." },
+      { p: '1984', f: "Homo academicus en fait le ressort central des conflits universitaires." },
+    ],
+  },
+  'heterodoxie': {
+    detaille: [
+      "L'hétérodoxie est le discours de rupture qui, en rendant pensable ce que la doxa tenait pour impensable, force l'ordre établi à sortir du silence et à se défendre en orthodoxie.",
+      "Elle est portée, dans un champ, par les nouveaux venus ou les dominés : n'ayant rien à gagner à la conservation, ils ont intérêt à révéler l'arbitraire de ce qui passait pour naturel.",
+      "Son efficacité tient à ce simple fait de rendre visible : nommer un arbitraire, même sans le renverser aussitôt, suffit à lui faire perdre le statut de doxa — il devient désormais une position parmi d'autres, discutable.",
+    ],
+    origine: {
+      oeuvre: "Esquisse d'une théorie de la pratique",
+      annee: '1972',
+      contexte:
+        "Bourdieu construit le couple orthodoxie/hétérodoxie pour penser comment un ordre social peut être contesté sans pour autant être immédiatement renversé.",
+    },
+    exemples: [
+      "Un mouvement social qui gagne moins par ses résultats immédiats que par le simple fait d'avoir rendu discutable une règle jusque-là indiscutée.",
+      "Une génération d'artistes qui, en revendiquant une rupture, oblige leurs aînés à justifier pour la première fois ce qu'ils pratiquaient sans y penser.",
+    ],
+    oeuvres: [
+      { y: '1972', t: "Esquisse d'une théorie de la pratique" },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['champ', 'illusio'],
+    opposes: ['doxa', 'orthodoxie'],
+    critiques: [
+      "Le concept mesure mal la différence entre une hétérodoxie qui transforme réellement un champ et une contestation vite absorbée sans rien changer à l'ordre des positions.",
+      "Il présuppose chez le dominé une lucidité que la théorie de la violence symbolique, ailleurs, lui refuse presque entièrement — une tension jamais résolue chez Bourdieu.",
+      "Rien n'indique à quelles conditions une hétérodoxie réussit à percer plutôt qu'à être ignorée ou disqualifiée par l'orthodoxie en place.",
+    ],
+    evolution: [
+      { p: '1972', f: "L'Esquisse pose le couple orthodoxie/hétérodoxie comme moteur des luttes de classement." },
+      { p: '1979', f: "La Distinction en donne des exemples détaillés dans les luttes de goût." },
+      { p: '1992', f: "Les Règles de l'art en fait le ressort de l'histoire du champ littéraire, de Flaubert aux avant-gardes." },
+    ],
+  },
+  'illusio': {
+    detaille: [
+      "L'illusio est la croyance, pratique et non réfléchie, que le jeu d'un champ mérite d'être joué — que ses enjeux valent la peine qu'on s'y investisse. Sans elle, aucune règle ne suffirait à faire tenir un champ.",
+      "Elle n'a rien d'un calcul conscient : on n'entre pas dans un champ après avoir pesé le pour et le contre de son enjeu, on y est pris avant même de savoir qu'on pourrait s'en détacher — un peu comme on adhère à une passion avant de se demander si elle est raisonnable.",
+      "Bourdieu y voit la condition cachée de tout champ : critiquer les règles du jeu littéraire ou scientifique de l'intérieur suppose déjà d'y croire assez pour vouloir les améliorer plutôt que de simplement s'en désintéresser.",
+    ],
+    origine: {
+      oeuvre: 'Raisons pratiques',
+      annee: '1994',
+      contexte:
+        "Bourdieu popularise ce terme, présent dès ses premiers textes sur les champs, pour nommer ce que ni la théorie du contrat ni celle de l'intérêt rationnel ne parviennent à expliquer : pourquoi on croit à un jeu avant même d'y jouer.",
+    },
+    exemples: [
+      "Un chercheur en fin de carrière qui continue de se passionner pour une controverse dont l'enjeu semblerait dérisoire à qui n'est pas du métier.",
+      "Un supporter capable de vivre une défaite sportive comme un drame personnel, alors que rien, objectivement, n'en dépend pour lui.",
+    ],
+    oeuvres: [
+      { y: '1994', t: 'Raisons pratiques' },
+      { y: '1987', t: 'Choses dites' },
+    ],
+    associes: ['champ', 'doxa', 'sens-pratique'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept explique après coup n'importe quel investissement par la croyance au jeu, ce qui le rend difficile à mettre en défaut.",
+      "Boudon objecte qu'un acteur qui s'investit dans un champ le fait pour des raisons qu'il peut en général énoncer, sans qu'il faille supposer une adhésion aveugle et préalable.",
+      "Le concept dit peu des moments de désillusion, où un agent se retire brutalement d'un jeu auquel il croyait — la sortie de l'illusio reste peu théorisée.",
+    ],
+    evolution: [
+      { p: '1976', f: "Le terme apparaît dans les premiers articles de Bourdieu sur la théorie des champs." },
+      { p: '1980', f: "Le Sens pratique l'articule au sens du jeu et à la doxa." },
+      { p: '1994', f: "Raisons pratiques en fait un concept central, explicitement défini et généralisé à tous les champs." },
+    ],
+  },
+  'hexis-corporelle': {
+    detaille: [
+      "L'hexis corporelle est la dimension proprement physique de l'habitus : une manière de se tenir, de marcher, de parler, de regarder, où se lit directement la position sociale, sans qu'aucun mot n'ait besoin d'être prononcé.",
+      "Elle s'incorpore tôt et profondément, par l'imitation et la correction constante — une posture reprise, une voix qu'on baisse, un regard qu'on évite ou qu'on soutient — au point de devenir une seconde nature qu'aucun effort de volonté ne suffit ensuite à corriger d'un coup.",
+      "Bourdieu en fait la preuve la plus intime de sa thèse : si le social s'inscrit jusque dans le corps, c'est qu'il ne relève ni d'un choix ni d'une simple croyance, mais d'un dressage dont on ne se souvient même pas.",
+    ],
+    origine: {
+      oeuvre: "Esquisse d'une théorie de la pratique",
+      annee: '1972',
+      contexte:
+        "Bourdieu observe en Kabylie combien la manière de se tenir, de marcher ou de manger obéit à des codes précis et genrés, jamais énoncés en tant que règles mais transmis par le corps même.",
+    },
+    exemples: [
+      "Une aisance à occuper l'espace en réunion, ou au contraire un réflexe à se faire discret, appris bien avant qu'aucune règle explicite ne l'ait jamais formulé.",
+      "Une manière de tenir une fourchette ou de s'asseoir, reprise sans un mot par des générations de corrections silencieuses.",
+    ],
+    oeuvres: [
+      { y: '1972', t: "Esquisse d'une théorie de la pratique" },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['habitus', 'capital-culturel-incorpore', 'sens-pratique'],
+    opposes: ['mise-en-scene-de-soi'],
+    critiques: [
+      "Le concept dit peu de la marge d'ajustement consciente que garde un acteur sur sa propre tenue, en entretien d'embauche par exemple.",
+      "Goffman objecterait qu'une part de ce que Bourdieu lit comme incorporé durable relève aussi d'une gestion stratégique et momentanée de l'image, adaptée à chaque situation.",
+      "Comme pour l'habitus, l'hexis s'infère surtout des conduites qu'elle est censée expliquer, ce qui rend son observation directe délicate.",
+    ],
+    evolution: [
+      { p: '1972', f: "Bourdieu décrit l'hexis kabyle — démarche, port de tête, gestuelle genrée — dans l'Esquisse." },
+      { p: '1980', f: "Le Sens pratique en fait la dimension corporelle de l'habitus, distincte des dispositions mentales." },
+      { p: '1998', f: "La Domination masculine l'applique aux différences de maintien entre hommes et femmes." },
+    ],
+  },
+  'espace-social': {
+    detaille: [
+      "L'espace social est la représentation d'une société non comme un ensemble de groupes fixés d'avance, mais comme un espace à plusieurs dimensions où chaque agent occupe une position définie par le volume et la structure de ses capitaux.",
+      "Cet espace n'a pas d'existence physique : il est un système de différences et d'écarts, où la position de chacun ne se définit que relationnellement, par sa distance à toutes les autres.",
+      "C'est de cet espace que dérivent l'espace des positions — sa structure objective, mesurée par les capitaux — et l'espace des prises de position — les pratiques et les goûts qui en expriment la logique dans la vie quotidienne.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu construit ce modèle spatial à partir d'une enquête nationale sur les pratiques culturelles, pour remplacer une vision de la société en classes fixes par une cartographie continue des positions.",
+    },
+    exemples: [
+      "Deux familles au revenu identique, situées pourtant à des points très différents de cet espace selon que leur capital est surtout économique ou surtout culturel.",
+      "Un même quartier qui rassemble des habitants proches en revenu mais très éloignés dans l'espace social, selon leur trajectoire et leur capital culturel.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1994', t: 'Raisons pratiques' },
+    ],
+    associes: ['position-sociale', 'capital-economique', 'capital-culturel'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "La cartographie de La Distinction, fondée sur les années 1960 et 1970, se prête mal à une actualisation directe des grands axes qu'elle propose.",
+      "Le modèle réduit l'espace social à deux dimensions — volume et structure du capital — quand le genre, l'âge ou l'origine migratoire y ajoutent des hiérarchies propres.",
+      "Marx objecterait qu'un espace continu de positions dilue le rapport d'exploitation, seul principe selon lui capable d'expliquer pourquoi cet espace est structuré ainsi et non autrement.",
+    ],
+    evolution: [
+      { p: '1966', f: "Premiers travaux du Centre de sociologie européenne sur l'espace des styles de vie." },
+      { p: '1979', f: "La Distinction donne à l'espace social sa cartographie empirique complète." },
+      { p: '1994', f: "Raisons pratiques en généralise le principe à d'autres sociétés que la France des années 1970." },
+    ],
+  },
+  'espace-des-positions': {
+    detaille: [
+      "L'espace des positions est la structure objective de l'espace social : la répartition des agents selon le volume global de leurs capitaux et selon la structure de ce volume — la part respective de l'économique et du culturel.",
+      "Il se construit indépendamment de ce que les agents en pensent ou en disent : deux personnes occupant la même position peuvent avoir des opinions opposées sans que cela change la position elle-même, définie par des propriétés mesurables.",
+      "C'est cet espace objectif qui commande, sans jamais le déterminer entièrement, l'espace des prises de position — les goûts et les pratiques par lesquels chacun exprime, le plus souvent sans le savoir, la place qu'il occupe.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu élabore cette notion pour donner un socle objectif — mesurable par l'enquête — à une théorie qui, sans cela, risquerait de réduire les positions sociales aux seules représentations que les agents en ont.",
+    },
+    exemples: [
+      "Un professeur et un commerçant au revenu comparable, situés à des points distincts de cet espace parce que la composition de leur capital diffère.",
+      "Deux entreprises de même chiffre d'affaires, dont l'une mise sur le capital économique et l'autre sur la notoriété culturelle de ses dirigeants.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1980', t: 'Le Sens pratique' },
+    ],
+    associes: ['espace-social', 'position-sociale', 'capital-culturel'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Réduire une position à deux variables mesurables laisse de côté des dimensions de la hiérarchie sociale que l'enquête statistique saisit mal.",
+      "Boudon objecte qu'une structure de positions, aussi précisément cartographiée soit-elle, ne dit rien des raisons pour lesquelles un acteur choisit d'agir comme il agit.",
+      "La méthode d'analyse des correspondances qui sert à construire cet espace impose ses propres choix — le nombre d'axes retenus, les variables incluses — qui pèsent sur le résultat autant que les données elles-mêmes.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Distinction construit l'espace des positions à partir de l'analyse des correspondances multiples." },
+      { p: '1984', f: "Homo academicus applique la même méthode au champ universitaire français." },
+      { p: '1990–2015', f: "La méthode devient un standard de la sociologie quantitative française, au-delà même du cadre bourdieusien." },
+    ],
+  },
+  'espace-des-prises-de-position': {
+    detaille: [
+      "L'espace des prises de position est l'ensemble des pratiques, des goûts et des opinions par lesquels les agents expriment, dans leur vie quotidienne, la position qu'ils occupent dans l'espace social — sans en avoir nécessairement conscience.",
+      "À chaque région de l'espace des positions correspond une région de prises de position homologue : les mêmes écarts qui séparent les positions objectives se retrouvent, presque terme à terme, dans les choix musicaux, vestimentaires ou alimentaires.",
+      "Cette correspondance, ou homologie, est ce qui permet à Bourdieu de lire un vote, un vêtement ou un menu comme un signe fiable de position sociale, sans que l'agent ait jamais eu l'intention d'envoyer ce signal.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu construit ce second espace, homologue au premier, pour montrer que le goût n'est jamais un jugement purement personnel mais la traduction, dans l'ordre symbolique, d'un écart de position déjà là.",
+    },
+    exemples: [
+      "Deux foyers aux revenus comparables qui n'écoutent ni la même musique ni ne fréquentent les mêmes lieux de vacances, parce que la structure de leur capital diffère.",
+      "Un choix de mobilier ou de décoration qui trahit, à qui sait le lire, une position sociale qu'aucun des occupants n'a cherché à afficher.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+    ],
+    associes: ['espace-des-positions', 'distinction', 'habitus'],
+    opposes: ['carriere-deviante'],
+    critiques: [
+      "L'homologie entre les deux espaces est plus affirmée que démontrée : rien ne garantit qu'à chaque écart de position corresponde mécaniquement un écart de goût.",
+      "Le modèle laisse peu de place à l'omnivorisme culturel des classes supérieures contemporaines, qui brouille la correspondance stricte que La Distinction décrivait.",
+      "Il traite la prise de position comme un simple reflet de la position, ce qui minimise la capacité des agents à jouer, parfois délibérément, avec les signes de leur propre position.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Distinction établit l'homologie entre espace des positions et espace des prises de position." },
+      { p: '1990–2010', f: "Peterson, aux États-Unis, documente un omnivorisme culturel qui complique la correspondance stricte du modèle français." },
+    ],
+  },
+  'classe-dominante': {
+    detaille: [
+      "Dans l'espace social bourdieusien, la classe dominante n'est pas définie par la seule propriété des moyens de production, mais par la détention du plus fort volume global de capitaux, quelle qu'en soit la composition — économique, culturel ou les deux à la fois.",
+      "Elle se divise elle-même en fractions concurrentes : une fraction à dominante économique, une fraction à dominante culturelle, chacune tendant à imposer sa propre définition de ce qui mérite prestige et reconnaissance.",
+      "Cette division interne est un des ressorts de la lutte symbolique : chaque fraction cherche à faire reconnaître comme légitime la forme de capital où elle est elle-même la mieux dotée.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu construit une carte détaillée de la classe dominante française, distinguant patrons, professions libérales et enseignants selon la composition de leur capital, plutôt qu'un bloc homogène.",
+    },
+    exemples: [
+      "Un chef d'entreprise et un professeur d'université, tous deux membres de la classe dominante, mais rivaux quant à ce qui doit compter comme réussite légitime.",
+      "Une école qui valorise davantage la culture littéraire que la réussite commerciale, au bénéfice symbolique d'une fraction de la classe dominante plutôt que d'une autre.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+    ],
+    associes: ['espace-social', 'capital-symbolique', 'position-sociale', 'classe-dominee'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "Marx objecterait que diluer la classe dominante en fractions rivales masque ce qui, selon lui, prime toujours : leur intérêt commun à la propriété des moyens de production.",
+      "La cartographie de 1979 date vite : les fractions à dominante culturelle et économique de La Distinction ne se recoupent plus exactement avec celles d'aujourd'hui.",
+      "Le concept explique la position dominante par le capital détenu, ce qui laisse peu de place aux stratégies individuelles de ceux qui, à l'intérieur même de la classe, montent ou déclinent.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Distinction cartographie la classe dominante française et ses fractions concurrentes." },
+      { p: '1989', f: "La Noblesse d'État prolonge l'analyse du côté des grandes écoles, qui consacrent et reproduisent cette classe." },
+    ],
+  },
+  'classe-dominee': {
+    detaille: [
+      "La classe dominée occupe, dans l'espace social, les positions les plus démunies en capitaux, quelle qu'en soit la nature — économique ou culturelle. Sa situation se définit moins par un manque absolu que par son écart aux pôles dominants de l'espace.",
+      "Bourdieu insiste sur un paradoxe central : la classe dominée participe souvent elle-même, sans le vouloir, à sa propre domination — en reconnaissant comme légitimes les hiérarchies de goût et de mérite qui la placent en bas de l'échelle.",
+      "Cette adhésion, loin d'être une passivité ou un aveuglement, est l'effet d'une violence symbolique qui a façonné les catégories mêmes avec lesquelles la classe dominée perçoit sa propre position.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu documente, à partir de son enquête, un goût populaire qui se définit souvent en creux — le nécessaire plutôt que le raffiné — révélant une adhésion aux catégories mêmes qui le dévalorisent.",
+    },
+    exemples: [
+      "Un choix vestimentaire jugé « pratique avant tout » par celui qui le fait, alors qu'il traduit surtout l'absence des ressources qui permettraient d'en juger autrement.",
+      "Une famille qui, sans amertume apparente, considère certaines études « pas faites pour elle », reconduisant ainsi une frontière qu'elle n'a pourtant pas tracée.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1970', t: 'La Reproduction (avec J.-C. Passeron)' },
+    ],
+    associes: ['classe-dominante', 'violence-symbolique', 'position-sociale'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept est parfois lu comme condescendant : il prête à la classe dominée une adhésion à sa propre domination que celle-ci ne reconnaîtrait pas nécessairement pour elle-même.",
+      "Boltanski et Thévenot objectent qu'un acteur dominé garde une capacité de critique et de justification que le modèle de la violence symbolique tend à sous-estimer.",
+      "La notion de « nécessaire » comme goût par défaut a été critiquée pour minimiser les esthétiques populaires propres, plutôt que simplement définies en négatif du goût légitime.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Distinction décrit le goût populaire du nécessaire, en creux du goût légitime des classes dominantes." },
+      { p: '1993', f: "La Misère du monde donne la parole, sous forme d'entretiens, à des membres des classes dominées confrontés à cette hiérarchie." },
+    ],
+  },
+  'distinction': {
+    detaille: [
+      "La distinction est le processus par lequel le goût — en musique, en cuisine, en vêtement — sert simultanément à exprimer une position sociale et à la produire, en marquant une frontière entre ceux qui savent apprécier et ceux qui ne savent pas.",
+      "Elle fonctionne par écarts plus que par contenus : ce qui distingue n'est jamais une pratique en soi, mais la différence entre cette pratique et celle qu'adoptent, un cran plus bas, ceux dont on veut se démarquer — un mécanisme qui pousse chaque groupe à changer de pratiques dès que les groupes inférieurs les adoptent à leur tour.",
+      "Cette course, jamais achevée, explique pourquoi la mode ou le goût changent sans cesse : dès qu'une pratique se démocratise, elle perd sa valeur distinctive pour ceux qui l'avaient adoptée en premier.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu tire d'une vaste enquête sur les pratiques culturelles françaises la démonstration que le goût, loin d'être un jugement esthétique pur, est un instrument de classement social.",
+    },
+    exemples: [
+      "Un plat autrefois populaire, comme les abats ou le pot-au-feu, revalorisé par une partie des classes supérieures précisément parce qu'il n'est plus prisé par les classes populaires.",
+      "Une pratique sportive qui perd son prestige distinctif à mesure qu'elle se démocratise, et pousse ceux qui la pratiquaient en premier vers une autre activité, plus rare.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+    ],
+    associes: ['capital-culturel', 'habitus', 'espace-des-prises-de-position', 'legitimite-culturelle'],
+    opposes: ['industrie-culturelle'],
+    critiques: [
+      "Peterson et l'analyse de l'omnivorisme culturel objectent qu'aujourd'hui, ce n'est plus le rejet mais l'ouverture à des goûts variés qui distingue le plus les classes supérieures.",
+      "Le modèle, construit sur la France des années 1970, se prête mal à une culture numérique où les hiérarchies de goût se recomposent à grande vitesse.",
+      "Il traite tout écart de goût comme une stratégie de distinction, ce qui laisse peu de place à un plaisir esthétique qui ne viserait aucune position sociale.",
+    ],
+    evolution: [
+      { p: '1899', f: "Veblen décrit la consommation ostentatoire des classes de loisir, une intuition proche mais centrée sur la seule richesse affichée." },
+      { p: '1979', f: "La Distinction systématise le mécanisme et l'étend à l'ensemble des pratiques culturelles." },
+      { p: '1990–2000', f: "Peterson documente aux États-Unis un omnivorisme qui déplace, sans l'abolir, la logique de distinction." },
+    ],
+  },
+  'reproduction-scolaire': {
+    detaille: [
+      "La reproduction scolaire est le mécanisme précis par lequel l'institution scolaire, censée juger tous les élèves selon les mêmes critères, reconnaît et récompense en réalité un capital culturel familial qu'elle n'a jamais enseigné et ne nomme jamais comme tel.",
+      "L'école se présente comme un juge neutre, extérieur aux inégalités sociales ; elle en devient pourtant l'un des instruments les plus efficaces, en convertissant un héritage en mérite scolaire, donc en légitimant ce qu'elle ne fait, en réalité, que constater.",
+      "C'est cette conversion qui rend la reproduction scolaire si difficile à contester : personne, ni les gagnants ni les perdants, n'a intérêt ni raison de la voir comme une transmission d'héritage plutôt que comme la juste sanction du travail et du talent.",
+    ],
+    origine: {
+      oeuvre: 'La Reproduction',
+      annee: '1970',
+      contexte:
+        "Avec Passeron, Bourdieu construit une théorie de l'action pédagogique qui explique, sans invoquer aucune intention malveillante, pourquoi une école formellement égalitaire produit des résultats si régulièrement inégaux selon l'origine sociale.",
+    },
+    exemples: [
+      "Une épreuve de dissertation qui valorise, sans jamais l'exiger explicitement, une culture générale acquise en dehors de la classe.",
+      "Une orientation scolaire perçue comme un simple constat de niveau, alors qu'elle recoupe très régulièrement l'origine sociale des élèves orientés.",
+    ],
+    oeuvres: [
+      { y: '1964', t: 'Les Héritiers (avec J.-C. Passeron)' },
+      { y: '1970', t: 'La Reproduction (avec J.-C. Passeron)' },
+    ],
+    associes: ['capital-culturel-institutionnalise', 'violence-symbolique', 'capital-culturel'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "Boudon objecte que les écarts de scolarité s'expliquent aussi par des décisions rationnelles, prises sous contrainte de coût et de risque, sans qu'il faille invoquer un héritage culturel caché.",
+      "Le modèle, construit sur l'école française des années 1960, rend mal compte des politiques de démocratisation scolaire engagées depuis, même si les écarts qu'il décrit persistent.",
+      "Il laisse peu de place aux trajectoires de réussite scolaire malgré une origine populaire, statistiquement minoritaires mais réelles.",
+    ],
+    evolution: [
+      { p: '1964', f: "Les Héritiers documente empiriquement l'avantage scolaire des enfants de milieux favorisés." },
+      { p: '1970', f: "La Reproduction en donne la théorie complète, articulée à la violence symbolique." },
+      { p: '1990–2020', f: "Le débat entre reproduction et méritocratie reste l'un des plus vifs de la sociologie de l'éducation française." },
+    ],
+  },
+  'legitimite-culturelle': {
+    detaille: [
+      "La légitimité culturelle est le principe, jamais discuté par ceux qui l'appliquent, qui distingue une culture savante digne d'estime d'une culture ordinaire qui ne l'est pas — un classement présenté comme allant de soi, alors qu'il résulte d'un rapport de force historique.",
+      "Ce classement n'a rien de naturel : ce qui compte aujourd'hui comme culture légitime — certaines musiques, certains livres, certains arts — a dû, à un moment de son histoire, conquérir ce statut contre d'autres formes tout aussi élaborées mais restées hors du cercle légitime.",
+      "Son efficacité tient à sa neutralité apparente : les institutions qui la consacrent — l'école, les musées, la critique — se présentent comme de simples gardiennes de la qualité, jamais comme des instances qui, en réalité, fabriquent le classement qu'elles disent seulement constater.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu montre que la hiérarchie entre culture légitime et culture populaire n'est ni universelle ni éternelle, mais le produit historique d'institutions — l'école en premier lieu — qui consacrent certaines pratiques plutôt que d'autres.",
+    },
+    exemples: [
+      "Le jazz ou la bande dessinée, longtemps tenus hors de la culture légitime, aujourd'hui enseignés et exposés au même titre que des formes plus anciennement consacrées.",
+      "Un programme scolaire qui enseigne certains auteurs plutôt que d'autres, sans jamais présenter ce choix comme un choix parmi d'autres possibles.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1966', t: "L'Amour de l'art (avec A. Darbel)" },
+    ],
+    associes: ['capital-culturel', 'distinction', 'violence-symbolique'],
+    opposes: ['culture-de-masse'],
+    critiques: [
+      "Le concept dit peu du processus concret par lequel une pratique change de statut : il constate l'arbitraire du classement plus qu'il n'explique comment celui-ci évolue.",
+      "L'École de Francfort objecterait qu'une partie de la culture aujourd'hui légitimée reste néanmoins standardisée par une industrie culturelle que la seule notion de légitimité ne permet pas de saisir.",
+      "La frontière entre culture légitime et culture de masse, nette dans les années 1970, s'est nettement brouillée depuis, sans que le concept en rende compte directement.",
+    ],
+    evolution: [
+      { p: '1966', f: "L'Amour de l'art documente l'inégal accès aux musées selon l'origine sociale et scolaire." },
+      { p: '1979', f: "La Distinction systématise la notion de légitimité culturelle et sa fabrication institutionnelle." },
+      { p: '1990–2010', f: "Le débat sur l'omnivorisme culturel interroge la persistance d'une hiérarchie unique de légitimité." },
+    ],
+  },
+  'pouvoir-symbolique': {
+    detaille: [
+      "Le pouvoir symbolique est le pouvoir de faire voir et de faire croire, de nommer et de classer le monde social d'une manière qui s'impose comme la description même de la réalité, plutôt que comme un point de vue parmi d'autres.",
+      "Il n'a besoin d'aucune force physique pour s'exercer : dire qu'une œuvre est un chef-d'œuvre, qu'un diplôme est prestigieux ou qu'une pratique est déviante, c'est déjà agir sur le monde social, à condition d'être en position d'imposer cette parole comme légitime.",
+      "Son efficacité repose sur une croyance partagée, souvent invisible à ceux qui la partagent : le pouvoir symbolique ne fonctionne que si ceux sur qui il s'exerce reconnaissent — sans le percevoir comme une contrainte — l'autorité de celui qui nomme.",
+    ],
+    origine: {
+      oeuvre: 'Ce que parler veut dire',
+      annee: '1982',
+      contexte:
+        "Bourdieu discute et prolonge la théorie des actes de langage d'Austin : un énoncé n'a de pouvoir performatif que parce qu'une institution et un rapport de force social l'autorisent à l'avoir.",
+    },
+    exemples: [
+      "Une décision de justice qui, en nommant un fait « délit », ne se contente pas de le décrire mais change son statut social et ses conséquences.",
+      "Un jury qui, en décernant un prix, ne constate pas une valeur préexistante mais contribue lui-même à la fabriquer aux yeux de tous.",
+    ],
+    oeuvres: [
+      { y: '1982', t: 'Ce que parler veut dire' },
+      { y: '1991', t: 'Langage et pouvoir symbolique' },
+    ],
+    associes: ['capital-symbolique', 'violence-symbolique', 'doxa'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le concept explique la force d'un énoncé légitime par l'autorité de celui qui le prononce, ce qui laisse peu de place à la possibilité qu'un énoncé change lui-même les rapports de force qui l'entourent.",
+      "Austin, dont Bourdieu part, insistait sur des conditions de félicité précises et codifiées ; Bourdieu les dilue dans un rapport de force social plus large, moins directement vérifiable.",
+      "Le concept dit peu des situations où un pouvoir symbolique proclamé échoue à s'imposer, faute de reconnaissance de ceux à qui il s'adresse.",
+    ],
+    evolution: [
+      { p: '1962', f: "Austin distingue les énoncés performatifs des énoncés constatifs, matrice dont Bourdieu part." },
+      { p: '1982', f: "Ce que parler veut dire articule performativité et rapport de force social." },
+      { p: '1991', f: "Langage et pouvoir symbolique rassemble et systématise ces textes." },
+    ],
+  },
+  'domination-symbolique': {
+    detaille: [
+      "La domination symbolique est la relation durable qui s'établit entre dominants et dominés lorsque ces derniers perçoivent le monde social avec les catégories mêmes que la domination a produites — une relation, plus qu'un acte isolé.",
+      "Elle se distingue de la violence symbolique proprement dite : celle-ci nomme le mécanisme précis d'inculcation qui installe cette relation ; la domination symbolique en est l'état stable et durable, une fois la méconnaissance solidement établie.",
+      "Bourdieu en fait le modèle le plus général de la domination : à la différence d'une domination fondée sur la contrainte physique ou sur un contrat explicite, elle n'a besoin d'aucun consentement conscient pour se perpétuer.",
+    ],
+    origine: {
+      oeuvre: 'La Domination masculine',
+      annee: '1998',
+      contexte:
+        "Bourdieu applique aux rapports entre les sexes un cadre théorique élaboré depuis les années 1970 : le rapport de genre lui sert d'exemple paradigmatique d'une domination acceptée par ceux et celles qui la vivent.",
+    },
+    exemples: [
+      "Une répartition des tâches domestiques vécue comme allant de soi par les deux membres d'un couple, alors qu'elle reconduit une hiérarchie qu'aucun des deux n'a choisie.",
+      "Une femme qui s'excuse de prendre la parole dans une réunion où les hommes ne s'en excusent jamais, sans qu'aucune règle explicite ne le lui impose.",
+    ],
+    oeuvres: [
+      { y: '1998', t: 'La Domination masculine' },
+      { y: '1970', t: 'La Reproduction (avec J.-C. Passeron)' },
+    ],
+    associes: ['violence-symbolique', 'pouvoir-symbolique', 'capital-symbolique'],
+    opposes: ['regimes-de-justification'],
+    critiques: [
+      "La Domination masculine a suscité de vives critiques féministes : en insistant sur la méconnaissance des dominées, le livre laisserait peu de place aux résistances et aux luttes féministes historiquement documentées.",
+      "Le concept, comme la violence symbolique dont il dérive, est difficile à réfuter : l'adhésion des dominés le confirme, et leur contestation peut toujours se lire comme une résistance encore prise dans le même rapport.",
+      "Boltanski et Thévenot objectent qu'un acteur dominé garde une capacité de critique et de justification que le modèle de la domination symbolique tend à minimiser.",
+    ],
+    evolution: [
+      { p: '1970', f: "La Reproduction pose les bases théoriques de la domination fondée sur la méconnaissance." },
+      { p: '1990', f: "Un premier article dans les Actes de la recherche esquisse la domination masculine comme cas d'école." },
+      { p: '1998', f: "La Domination masculine en donne la version complète et suscite un débat encore vif avec les études de genre." },
+    ],
+  },
+  'sens-pratique': {
+    detaille: [
+      "Le sens pratique est la capacité, acquise et non calculée, à improviser la conduite appropriée à une situation sans avoir à en délibérer — un sens du jeu comparable à celui d'un joueur expérimenté, qui agit juste sans avoir le temps de raisonner.",
+      "Il naît de l'habitus mais en souligne une dimension précise : non pas les dispositions stables elles-mêmes, mais leur mise en œuvre improvisée, toujours ajustée à une situation qui, elle, n'est jamais tout à fait la même.",
+      "C'est ce sens pratique qui permet à un agent de suivre une règle sociale sans jamais l'avoir apprise comme une règle — de savoir, par exemple, jusqu'où on peut aller dans une plaisanterie sans avoir eu besoin qu'on le lui explique.",
+    ],
+    origine: {
+      oeuvre: 'Le Sens pratique',
+      annee: '1980',
+      contexte:
+        "Bourdieu y systématise une intuition présente depuis l'Esquisse : comprendre l'action sociale exige un modèle qui ne soit ni celui de la règle appliquée mécaniquement, ni celui du calcul rationnel explicite.",
+    },
+    exemples: [
+      "Un négociateur expérimenté qui sait quand insister et quand céder sans jamais avoir formulé de stratégie explicite avant l'échange.",
+      "Une personne qui ajuste instantanément son registre de langue selon son interlocuteur, sans y penser ni s'en rendre compte.",
+    ],
+    oeuvres: [
+      { y: '1980', t: 'Le Sens pratique' },
+      { y: "1972", t: "Esquisse d'une théorie de la pratique" },
+    ],
+    associes: ['habitus', 'illusio', 'champ'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecte que ce qui paraît improvisé résulte souvent d'un calcul rapide mais bien réel, que la notion de sens pratique écarte trop vite au profit d'un modèle purement dispositionnel.",
+      "Le concept, comme l'habitus dont il dérive, s'infère surtout des conduites qu'il est censé expliquer.",
+      "Il rend mal compte des situations d'hésitation ou de maladresse, où le sens du jeu, précisément, fait défaut — la théorie en dit peu sur ses propres limites.",
+    ],
+    evolution: [
+      { p: '1972', f: "L'Esquisse pose les bases d'une théorie de la pratique irréductible à la règle ou au calcul." },
+      { p: '1980', f: "Le Sens pratique en donne la formulation complète et lui donne son nom." },
+    ],
+  },
+  'trajectoire-sociale': {
+    detaille: [
+      "La trajectoire sociale est le parcours dans le temps d'un agent ou d'une famille à travers l'espace social — d'où il vient, par où il est passé, où il se trouve désormais — complément dynamique de la position sociale, qui n'en est qu'un instantané.",
+      "Deux agents occupant la même position à un moment donné peuvent avoir des trajectoires opposées — l'un montant, l'autre déclinant — ce qui affecte profondément leur rapport à cette position, leur habitus et leurs prises de position.",
+      "Bourdieu en fait un instrument essentiel pour comprendre le malaise de certaines classes moyennes ou de certains transfuges sociaux, tiraillés entre l'habitus de leur origine et les codes de la position qu'ils occupent désormais.",
+    ],
+    origine: {
+      oeuvre: 'La Distinction',
+      annee: '1979',
+      contexte:
+        "Bourdieu introduit la trajectoire pour expliquer des écarts de goût et de posture entre agents de même position sociale, que la seule photographie de leur position ne suffisait pas à rendre intelligibles.",
+    },
+    exemples: [
+      "Un cadre issu d'un milieu populaire qui, malgré une position désormais élevée, garde des goûts et des réflexes hérités de son origine.",
+      "Une famille en déclin économique qui continue longtemps d'afficher les signes d'une position qu'elle n'occupe déjà plus tout à fait.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Distinction' },
+      { y: '1993', t: 'La Misère du monde' },
+    ],
+    associes: ['position-sociale', 'espace-social', 'habitus'],
+    opposes: ['carriere-deviante'],
+    critiques: [
+      "Le concept reste plus descriptif qu'explicatif : il nomme un écart entre trajectoire et position sans toujours dire ce qui, précisément, en détermine le sens et l'ampleur.",
+      "La Misère du monde a été critiqué pour privilégier des trajectoires de déclin ou de tiraillement, plus spectaculaires à l'entretien que les trajectoires stables ou ascendantes réussies sans drame.",
+      "Boudon objecte qu'une trajectoire s'explique aussi par des décisions prises à chaque étape, non seulement par l'écart entre un habitus d'origine et une position d'arrivée.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Distinction introduit la trajectoire pour expliquer des écarts internes à une même position." },
+      { p: '1989', f: "La Noblesse d'État l'applique aux trajectoires scolaires vers les grandes écoles." },
+      { p: '1993', f: "La Misère du monde documente, par l'entretien, des trajectoires de déclassement et leurs souffrances propres." },
+    ],
+  },
 
   /* — Erving Goffman — */
   'mise-en-scene-de-soi': {
@@ -3846,7 +4837,7 @@ export const CONCEPTS = {
       { y: '1977', t: 'Effets pervers et ordre social' },
       { y: '1984', t: 'La Place du désordre' },
     ],
-    associes: ['individualisme-methodologique', 'fonction-latente', 'prophetie-autorealisatrice'],
+    associes: ['individualisme-methodologique', 'fonction-latente', 'prophetie-autorealisatrice', 'consequences-inattendues'],
     opposes: ['systeme-social'],
     critiques: [
       "Les modèles sont élégants et rarement testés : ils démontrent une possibilité logique, pas un fait établi.",
