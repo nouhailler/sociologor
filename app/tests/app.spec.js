@@ -330,9 +330,9 @@ test.describe('Parcours principal', () => {
   test('graphe des concepts : sous le graphe des filiations, un nœud par concept', async ({ page }) => {
     await enter(page, '/graphe');
     const concepts = page.locator('[aria-label="Graphe des concepts, défilement horizontal et vertical"]');
-    await expect(concepts.getByRole('link')).toHaveCount(171);
-    // Une arête par paire associée ou opposée, dédoublonnée : 309 + 157.
-    await expect(concepts.locator('svg path')).toHaveCount(466);
+    await expect(concepts.getByRole('link')).toHaveCount(198);
+    // Une arête par paire associée ou opposée, dédoublonnée : 367 + 184.
+    await expect(concepts.locator('svg path')).toHaveCount(551);
     await concepts.getByRole('link', { name: /Habitus/ }).click();
     await expect(page).toHaveURL(/\/c\/habitus/);
     await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();

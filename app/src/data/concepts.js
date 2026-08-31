@@ -4671,6 +4671,386 @@ export const CONCEPTS = {
       { p: 'après 1980', f: "Le framing devient un standard de l'analyse des médias et des mouvements sociaux, sans l'appareil d'origine." },
     ],
   },
+  'interaction-en-face-a-face': {
+    detaille: [
+      "L'interaction en face-à-face, ou « rencontre », est l'unité de base sur laquelle Goffman construit toute son analyse : deux personnes ou plus, en présence physique directe, se surveillent mutuellement et ajustent leur conduite en fonction de ce qu'elles perçoivent l'une de l'autre.",
+      "Cette coprésence a des propriétés propres, irréductibles à ce que chacun apporterait séparément : un simple regard croisé engage déjà une définition commune de la situation, avant même qu'un mot soit échangé.",
+      "Goffman en fait un ordre social à part entière — l'ordre de l'interaction —, avec ses propres règles, distinct de l'ordre institutionnel que décrivent d'ordinaire la sociologie des organisations ou des systèmes.",
+    ],
+    origine: {
+      oeuvre: 'Behavior in Public Places',
+      annee: '1963',
+      contexte:
+        "Goffman y distingue rassemblement, situation sociale et rencontre pour donner un vocabulaire précis à ce que l'observation directe montrait déjà : la vie publique obéit à un ordre que rien, dans les grandes théories macrosociales de l'époque, ne permettait de nommer.",
+    },
+    exemples: [
+      "Deux inconnus qui, dans un ascenseur, règlent sans un mot la distance et la direction du regard qui conviennent.",
+      "Une file d'attente où chacun surveille sa place et celle des autres sans jamais formuler la règle qui l'organise.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Behavior in Public Places' },
+      { y: '1959', t: 'La Mise en scène de la vie quotidienne' },
+    ],
+    associes: ['mise-en-scene-de-soi', 'cadre-de-l-experience', 'rituel-d-interaction'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "L'échelle choisie exclut par construction ce qui se joue hors coprésence physique — courrier, médias, aujourd'hui échanges numériques.",
+      "Parsons objecterait qu'une rencontre isolée ne s'explique elle-même que par le système de rôles et d'attentes plus vaste dans lequel elle s'insère.",
+      "Le vocabulaire, très fin pour classer les situations, dit peu de ce qui fait qu'une rencontre plutôt qu'une autre a lieu.",
+    ],
+    evolution: [
+      { p: '1961', f: "Encounters explore déjà les rencontres focalisées, centrées sur une activité commune." },
+      { p: '1963', f: "Behavior in Public Places formalise rassemblement, situation et rencontre comme unités distinctes." },
+      { p: '1983', f: "Le discours présidentiel « The Interaction Order » consacre ce niveau comme un ordre social autonome, digne d'étude pour lui-même." },
+    ],
+  },
+  'rituel-d-interaction': {
+    detaille: [
+      "Un rituel d'interaction est un acte bref et convenu — salutation, excuse, remerciement, compliment — qui n'a l'air de rien mais accomplit un travail précis : marquer que l'autre est reconnu comme un interlocuteur digne d'égards.",
+      "Goffman reprend à Durkheim l'idée que la vie sociale a besoin de rites, mais les déplace du sacré collectif vers le culte, minuscule et permanent, que chacun rend à la personne de l'autre dans les échanges les plus ordinaires.",
+      "Ces micro-rituels ne sont pas des politesses accessoires : leur absence — un salut non rendu, un remerciement omis — est immédiatement perçue et coûte cher à celui qui la commet.",
+    ],
+    origine: {
+      oeuvre: "Les Rites d'interaction",
+      annee: '1967',
+      contexte:
+        "Goffman rassemble dans ce recueil des essais des années 1950, dont « Le Travail des faces », pour montrer que le rituel durkheimien a un équivalent profane et quotidien : les égards que les inconnus s'échangent en public.",
+    },
+    exemples: [
+      "Un « pardon » machinal lâché en heurtant un inconnu dans la rue, sans lequel l'incident prendrait un tout autre sens.",
+      "Une poignée de main protocolaire, dont l'absence, dans certains contextes, se lirait comme un affront délibéré.",
+    ],
+    oeuvres: [
+      { y: '1967', t: "Les Rites d'interaction" },
+      { y: '1971', t: 'Relations in Public' },
+    ],
+    associes: ['interaction-en-face-a-face', 'face', 'maintien-de-la-face'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'un rituel sans sacré ni collectivité rassemblée n'est plus qu'une politesse — le mot « rituel » perd alors sa force explicative d'origine.",
+      "Le classement très fin des types de rituels reste plus descriptif qu'explicatif : il nomme des régularités sans dire d'où elles viennent.",
+      "L'analyse s'arrête aux sociétés où ces codes de politesse sont partagés ; elle dit peu de ce qui se passe quand les codes des interactants divergent.",
+    ],
+    evolution: [
+      { p: '1912', f: "Durkheim décrit le rite collectif comme ce qui entretient la ferveur du groupe envers lui-même." },
+      { p: '1955', f: "« Le Travail des faces » transpose l'intuition à l'échange ordinaire entre deux inconnus." },
+      { p: '1967', f: "Les Rites d'interaction rassemble et systématise ces essais." },
+    ],
+  },
+  'face': {
+    detaille: [
+      "La face est la valeur sociale positive qu'une personne revendique pour elle-même dans une interaction donnée, à travers l'image qu'elle projette et que les autres, provisoirement, acceptent de lui reconnaître.",
+      "Elle n'appartient à personne en propre : c'est un bien prêté par la situation, que l'on peut perdre en un instant — un lapsus, une maladresse — et qu'il faut sans cesse regagner par la conduite que l'on tient.",
+      "Avoir une face n'est donc pas un état stable mais une position tenue, renégociée à chaque échange, et dont la perte — l'embarras, la honte — se voit immédiatement sur le corps de celui qui la subit.",
+    ],
+    origine: {
+      oeuvre: "Les Rites d'interaction",
+      annee: '1967',
+      contexte:
+        "Goffman formalise, dans l'essai « Le Travail des faces » paru d'abord en 1955, une notion empruntée aux travaux d'anthropologues sur la Chine, où l'expression « perdre la face » désignait déjà une chute de statut social.",
+    },
+    exemples: [
+      "Un orateur qui bafouille et rougit devant son public : sa face en sort abîmée, quelle que soit la qualité réelle de son propos.",
+      "Un employé félicité publiquement pour un travail qui n'est pas vraiment le sien, et qui accepte l'éloge plutôt que de démentir devant tous.",
+    ],
+    oeuvres: [
+      { y: '1967', t: "Les Rites d'interaction" },
+    ],
+    associes: ['maintien-de-la-face', 'rituel-d-interaction', 'stigmate'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept suppose des normes de politesse largement partagées ; il se prête mal aux interactions entre inconnus de cultures très éloignées.",
+      "Boudon objecterait qu'un acteur qui « soigne sa face » le fait souvent par calcul d'image explicite, plus que par un réflexe interactionnel automatique.",
+      "La notion dit peu des situations où perdre la face délibérément — provocation, insulte assumée — devient elle-même une stratégie payante.",
+    ],
+    evolution: [
+      { p: '1955', f: "« Le Travail des faces » introduit le concept, à partir d'un vocabulaire emprunté à l'anthropologie de la Chine." },
+      { p: '1967', f: "Les Rites d'interaction lui donne sa place dans une théorie générale du rituel quotidien." },
+      { p: '1987', f: "Brown et Levinson en font, en linguistique, la base d'une théorie de la politesse encore utilisée aujourd'hui." },
+    ],
+  },
+  'maintien-de-la-face': {
+    detaille: [
+      "Le maintien de la face, ou travail des faces, est l'ensemble des efforts qu'une personne déploie pour préserver sa propre face et, tout autant, celle des autres présents — car la perte de face d'un seul embarrasse en général toute l'assistance.",
+      "Ce travail est en grande partie préventif : éviter les sujets embarrassants, laisser à l'autre une porte de sortie, feindre de ne pas remarquer une maladresse. Il devient correctif seulement quand l'incident a déjà eu lieu.",
+      "Goffman y voit une coopération de fait entre des personnes qui n'ont pourtant rien décidé ensemble : chacun protège la face d'autrui moins par générosité que parce que l'ordre de l'interaction tout entier en dépend.",
+    ],
+    origine: {
+      oeuvre: "Les Rites d'interaction",
+      annee: '1967',
+      contexte:
+        "Dans le prolongement du concept de face, Goffman détaille les pratiques concrètes — évitement, correction, réparation — par lesquelles les interactants maintiennent, ensemble, l'ordre rituel de l'échange.",
+    },
+    exemples: [
+      "Un convive qui renverse un verre, et que la tablée entière choisit de traiter comme un non-événement.",
+      "Une remarque maladroite aussitôt suivie d'un « ce n'est pas ce que je voulais dire », accepté sans discussion par l'interlocuteur.",
+    ],
+    oeuvres: [
+      { y: '1967', t: "Les Rites d'interaction" },
+    ],
+    associes: ['face', 'rituel-d-interaction', 'mise-en-scene-de-soi'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Le modèle décrit une coopération tacite qui suppose des interactants de statut proche ; il rend mal compte des interactions où le rapport de force est trop déséquilibré pour qu'un maintien mutuel ait lieu.",
+      "Bourdieu objecterait que cette coopération apparente masque des rapports de domination : sauver la face d'un supérieur n'est pas symétrique à sauver celle d'un subordonné.",
+      "Le concept dit peu des cultures ou des situations où l'affrontement ouvert, plutôt que l'évitement, est la norme socialement valorisée.",
+    ],
+    evolution: [
+      { p: '1955', f: "« Le Travail des faces » distingue pratiques préventives et pratiques correctives du maintien de la face." },
+      { p: '1967', f: "Les Rites d'interaction en généralise le principe à l'ensemble de la vie rituelle quotidienne." },
+    ],
+  },
+  'territoires-du-soi': {
+    detaille: [
+      "Les territoires du soi sont les espaces — physiques, conversationnels, informationnels — qu'une personne revendique comme siens dans une situation donnée, et dont l'intrusion, même mineure, se ressent comme une atteinte à sa personne.",
+      "Goffman en distingue plusieurs formes : l'espace corporel immédiat, la réserve conversationnelle — le droit de ne pas être interrompu ni interrogé sur tout —, ou encore le territoire informationnel, ce qu'on a le droit de savoir sur autrui sans le lui avoir demandé.",
+      "Ces territoires ne sont fixés par aucun titre de propriété : ils tiennent entièrement à ce que les autres, par habitude ou par égard, consentent à respecter — ce qui les rend visibles surtout au moment où quelqu'un les viole.",
+    ],
+    origine: {
+      oeuvre: 'Relations in Public',
+      annee: '1971',
+      contexte:
+        "Goffman y étend son analyse de la vie publique aux formes discrètes de propriété que chacun exerce sur un espace, un objet ou une information, sans qu'aucune loi ne les lui garantisse.",
+    },
+    exemples: [
+      "Un voisin de train qui étale ses affaires sur le siège vide à côté de lui, et le regard noir qu'il reçoit si on ose s'y asseoir.",
+      "Une question sur le salaire ou la vie privée, posée par un inconnu, ressentie comme déplacée alors qu'elle ne violerait aucune règle écrite.",
+    ],
+    oeuvres: [
+      { y: '1971', t: 'Relations in Public' },
+      { y: '1963', t: 'Behavior in Public Places' },
+    ],
+    associes: ['face', 'maintien-de-la-face', 'interaction-en-face-a-face'],
+    opposes: ['institution-totale'],
+    critiques: [
+      "La notion de territoire suppose des sociétés urbaines et individualistes ; elle se transpose mal à des contextes où l'espace personnel n'est pas découpé de la même manière.",
+      "Elle dit peu des inégalités d'accès à ces territoires : tout le monde n'a pas le même pouvoir de faire respecter sa réserve conversationnelle.",
+      "Le catalogue des territoires, très détaillé, reste plus taxinomique qu'explicatif — il classe sans toujours dire pourquoi tel territoire compte plus qu'un autre.",
+    ],
+    evolution: [
+      { p: '1963', f: "Behavior in Public Places esquisse déjà l'idée d'un territoire personnel en public." },
+      { p: '1971', f: "Relations in Public systématise les territoires du soi et leurs violations possibles." },
+    ],
+  },
+  'facade': {
+    detaille: [
+      "La façade est l'équipement expressif standardisé — décor, tenue, manières — qu'un individu ou une équipe déploie devant un public pour soutenir la définition de la situation qu'il souhaite donner à voir.",
+      "Goffman distingue le décor, fixe et propre à un lieu, et la façade personnelle — l'apparence et la manière, propres à l'acteur, qui l'accompagnent où qu'il aille : posture, ton de voix, vocabulaire.",
+      "Une façade n'est pas inventée à chaque représentation : elle est le plus souvent empruntée à un répertoire déjà institué, reconnu du public avant même que la représentation commence — ce qui la rend crédible sans effort particulier.",
+    ],
+    origine: {
+      oeuvre: 'La Mise en scène de la vie quotidienne',
+      annee: '1959',
+      contexte:
+        "Goffman construit l'appareil dramaturgique complet — façade, coulisses, équipe, public — pour décrire comment une représentation ordinaire s'organise matériellement.",
+    },
+    exemples: [
+      "Le bureau d'un médecin, ses diplômes encadrés et sa blouse : un décor et une façade personnelle qui soutiennent son autorité avant qu'il ait prononcé un mot.",
+      "Un vendeur qui adopte un ton assuré et un vocabulaire technique, même lorsqu'il découvre le produit en même temps que le client.",
+    ],
+    oeuvres: [
+      { y: '1959', t: 'La Mise en scène de la vie quotidienne' },
+    ],
+    associes: ['mise-en-scene-de-soi', 'coulisses', 'role-joue'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "La distinction entre façade sincère et façade calculée reste floue : Goffman lui-même refuse de trancher si l'acteur croit ou non à son propre rôle.",
+      "Le concept, pensé pour les sociétés de face-à-face, décrit mal des façades aujourd'hui largement médiatisées, construites hors coprésence.",
+      "Il dit peu de ce qui arrive quand deux façades incompatibles se heurtent dans la même situation, faute d'accord préalable sur le décor à adopter.",
+    ],
+    evolution: [
+      { p: '1959', f: "La Mise en scène de la vie quotidienne pose la façade comme premier élément de l'appareil dramaturgique." },
+      { p: '1963', f: "Stigmate montre ce qui arrive quand la façade ne suffit plus à masquer un attribut discréditable." },
+    ],
+  },
+  'coulisses': {
+    detaille: [
+      "Les coulisses sont l'espace où la représentation donnée en façade est préparée, contredite ou simplement suspendue : on y range les accessoires, on y répète un rôle, on y relâche une tenue qu'il faudra reprendre en scène.",
+      "Ce qui s'y passe contredit souvent, et parfois délibérément, ce que la façade donne à voir : le cuisinier qui jure en cuisine reste affable en salle, sans qu'aucune des deux conduites ne soit plus « vraie » que l'autre.",
+      "L'accès aux coulisses est un privilège étroitement contrôlé : y laisser entrer le public par erreur — un rideau mal fermé, une porte oubliée ouverte — menace de ruiner en un instant la représentation en cours.",
+    ],
+    origine: {
+      oeuvre: 'La Mise en scène de la vie quotidienne',
+      annee: '1959',
+      contexte:
+        "Goffman emprunte le vocabulaire théâtral pour nommer ce que toute organisation prévoit sans le dire : un lieu où l'équipe se retrouve entre elle, hors du regard du public qu'elle vient de quitter ou qu'elle va bientôt affronter.",
+    },
+    exemples: [
+      "Une salle de pause d'entreprise où le personnel commente librement une réunion qu'il vient de traverser tout sourire.",
+      "Les loges d'un studio de télévision, où l'animateur détendu redevient soudain formel dès que la caméra se rallume.",
+    ],
+    oeuvres: [
+      { y: '1959', t: 'La Mise en scène de la vie quotidienne' },
+    ],
+    associes: ['facade', 'mise-en-scene-de-soi', 'role-joue'],
+    opposes: ['hexis-corporelle'],
+    critiques: [
+      "La frontière entre scène et coulisses est présentée comme nette, alors qu'elle se déplace sans cesse selon qui est présent et ce qu'il est censé savoir.",
+      "Le numérique brouille la distinction : les réseaux sociaux exposent en public des conduites autrefois réservées aux coulisses.",
+      "Le concept suppose une équipe suffisamment soudée pour partager un même espace de repli, ce qui n'est pas donné dans tous les contextes de travail.",
+    ],
+    evolution: [
+      { p: '1959', f: "La Mise en scène de la vie quotidienne distingue scène et coulisses comme deux régions de toute représentation." },
+      { p: '1980–2010', f: "La généralisation des caméras et des réseaux sociaux relance la question de savoir où passent encore, aujourd'hui, les coulisses." },
+    ],
+  },
+  'role-joue': {
+    detaille: [
+      "Un rôle joué est la partie de la conduite d'un individu qui obéit à un script social reconnu — le rôle de médecin, de client, de parent — sans se confondre pour autant avec la personne qui l'exécute à un moment donné.",
+      "Goffman insiste sur l'écart, toujours possible, entre le rôle et celui qui le joue : la distance au rôle — un geste ironique, un clin d'œil au public — signale que l'acteur n'est pas dupe du personnage qu'il incarne, sans pour autant refuser de le jouer.",
+      "Cet écart est ce qui distingue la dramaturgie de Goffman d'une pure théorie des rôles : le rôle prescrit ce qu'il faut faire, mais jamais tout à fait comment le faire, et c'est dans cette marge que se loge la part propre de l'acteur.",
+    ],
+    origine: {
+      oeuvre: 'Encounters',
+      annee: '1961',
+      contexte:
+        "Goffman y développe la notion de distance au rôle à partir d'observations sur un manège pour enfants, où certains adultes chargés de l'opérer manifestaient, par un geste ou un ton, qu'ils étaient au-dessus du rôle qu'ils tenaient.",
+    },
+    exemples: [
+      "Un serveur qui exécute son rôle avec un sérieux appuyé, jusqu'à un clin d'œil complice qui signale, sans le rompre, qu'il n'est pas dupe de la mise en scène.",
+      "Un chirurgien qui, tout en respectant scrupuleusement le protocole, glisse une plaisanterie qui rappelle qu'un individu se tient derrière le rôle.",
+    ],
+    oeuvres: [
+      { y: '1961', t: 'Encounters' },
+      { y: '1959', t: 'La Mise en scène de la vie quotidienne' },
+    ],
+    associes: ['mise-en-scene-de-soi', 'facade', 'coulisses'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "Parsons objecterait qu'un rôle qui laisse toujours place à la distance et à l'ironie perd la fonction stabilisatrice que la théorie fonctionnaliste lui attribue.",
+      "Le concept dit peu des rôles qu'on ne peut pas se permettre de jouer avec distance, sous peine de sanction immédiate.",
+      "Il suppose un acteur suffisamment sûr de sa position pour se permettre l'ironie — un luxe qui n'est pas donné à tous les rôles ni à tous ceux qui les tiennent.",
+    ],
+    evolution: [
+      { p: '1961', f: "Encounters introduit la distance au rôle à partir d'un terrain volontairement mineur, presque anecdotique." },
+      { p: '1959–1974', f: "L'idée irrigue toute l'œuvre : le rôle n'absorbe jamais entièrement celui qui le joue." },
+    ],
+  },
+  'institution-totale': {
+    detaille: [
+      "Une institution totale est un lieu où un grand nombre d'individus, coupés du reste de la société pour une période prolongée, mènent ensemble une existence recluse et réglée dans ses moindres détails par une même autorité : hôpital psychiatrique, prison, caserne, couvent.",
+      "Ce qui la distingue n'est pas la contrainte seule, mais l'abolition des cloisons ordinaires de la vie : dormir, travailler et se divertir s'y déroulent au même endroit, sous le même regard, selon un emploi du temps unique imposé à tous.",
+      "Goffman y voit la matrice d'un processus de mortification du soi : dépouillé de ses vêtements, de ses objets, de son nom parfois, l'individu perd les supports mêmes sur lesquels reposait, à l'extérieur, l'identité qu'il présentait.",
+    ],
+    origine: {
+      oeuvre: 'Asiles',
+      annee: '1961',
+      contexte:
+        "Goffman observe pendant un an, en position d'assistant du directeur des sports, le fonctionnement d'un grand hôpital psychiatrique fédéral à Washington, et en tire une théorie générale des institutions qui absorbent la vie entière de leurs membres.",
+    },
+    exemples: [
+      "Un uniforme identique imposé à l'entrée, qui efface d'un coup les signes vestimentaires par lesquels chacun se distinguait auparavant.",
+      "Un emploi du temps affiché qui règle, minute par minute, le lever, les repas et le coucher de centaines de personnes à la fois.",
+    ],
+    oeuvres: [
+      { y: '1961', t: 'Asiles' },
+    ],
+    associes: ['stigmate', 'mise-en-scene-de-soi', 'gestion-de-l-identite'],
+    opposes: ['capital-social'],
+    critiques: [
+      "Le tableau, très sombre, laisse peu de place aux marges de manœuvre que les enquêtes ultérieures ont documentées à l'intérieur même de ces institutions.",
+      "La catégorie regroupe des lieux très différents — prison, couvent, internat — dont les logiques de contrainte et de sens ne sont pas réductibles les unes aux autres.",
+      "Les politiques de désinstitutionnalisation engagées depuis les années 1970 ont largement réduit le poids de l'hôpital psychiatrique, terrain d'origine du concept.",
+    ],
+    evolution: [
+      { p: '1957–1959', f: "Terrain à l'hôpital St. Elizabeths, à Washington." },
+      { p: '1961', f: "Asiles systématise le concept et sa théorie de la mortification du soi." },
+      { p: '1970–1990', f: "Le mouvement de désinstitutionnalisation psychiatrique s'appuie en partie sur cette critique de l'enfermement total." },
+    ],
+  },
+  'identite-sociale-virtuelle': {
+    detaille: [
+      "L'identité sociale virtuelle est le personnage qu'une première impression attribue à quelqu'un : la catégorie et les attributs que les autres lui prêtent avant toute vérification, sur la seule foi de son apparence ou du contexte.",
+      "Elle fonctionne comme une anticipation normative : elle indique ce qu'on est en droit d'attendre de la personne, et sert de mesure implicite à laquelle son identité réelle sera ensuite comparée.",
+      "L'écart entre cette identité virtuelle et l'identité sociale réelle est précisément ce qui définit le stigmate : quand ce que l'on découvre dément ce que l'on attendait, et que la découverte discrédite plutôt qu'elle ne surprend simplement.",
+    ],
+    origine: {
+      oeuvre: 'Stigmate. Les usages sociaux des handicaps',
+      annee: '1963',
+      contexte:
+        "Goffman ouvre Stigmate par cette distinction pour expliquer d'où vient, précisément, le discrédit : non de l'attribut en soi, mais de l'écart entre ce que la situation faisait attendre et ce qu'elle révèle.",
+    },
+    exemples: [
+      "Une voix au téléphone qui laisse présumer un âge, un genre ou une origine sociale, avant toute rencontre en personne.",
+      "Un costume et une allure qui font présumer une profession, jusqu'à ce qu'un détail vienne contredire cette première lecture.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Stigmate. Les usages sociaux des handicaps' },
+    ],
+    associes: ['stigmate', 'identite-sociale-reelle', 'etiquetage'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept suppose des catégories sociales de perception suffisamment partagées pour produire une attente commune, ce qui varie beaucoup selon les contextes culturels.",
+      "Il dit peu de la manière dont ces catégories de première impression se forment historiquement, et se contente de les prendre comme données.",
+      "La distinction virtuelle/réelle, utile pour penser une rencontre isolée, se prête mal à des relations longues où les deux identités finissent par converger.",
+    ],
+    evolution: [
+      { p: '1963', f: "Stigmate pose la distinction entre identité sociale virtuelle et identité sociale réelle comme fondement de toute la théorie du stigmate." },
+      { p: '1970–1990', f: "La sociologie de la déviance et de la santé reprend largement cette distinction pour penser le diagnostic et son annonce." },
+    ],
+  },
+  'identite-sociale-reelle': {
+    detaille: [
+      "L'identité sociale réelle est l'ensemble des attributs qu'une personne possède effectivement, tels qu'ils apparaissent une fois vérifiés — par opposition à ceux que la première impression lui avait provisoirement prêtés.",
+      "Elle n'a rien d'une identité plus « authentique » au sens intime du terme : c'est simplement ce que l'enquête, la fréquentation ou l'aveu finissent par établir, et qui peut confirmer ou démentir l'identité virtuelle de départ.",
+      "C'est le rapport entre les deux qui compte : identiques, elles ne posent aucun problème ; disjointes au détriment de la personne, elles ouvrent la situation du discrédité ou du discréditable, selon que l'écart se voit ou peut se cacher.",
+    ],
+    origine: {
+      oeuvre: 'Stigmate. Les usages sociaux des handicaps',
+      annee: '1963',
+      contexte:
+        "Goffman construit ce second pôle du couple conceptuel pour donner un contenu précis à ce que « démasquer » ou « découvrir » quelqu'un veut dire dans une interaction.",
+    },
+    exemples: [
+      "Un candidat dont l'entretien révèle, au fil des questions, un parcours très différent de celui que son allure avait d'abord suggéré.",
+      "Un dossier médical qui confirme, ou au contraire dément, ce qu'un premier examen superficiel avait laissé supposer.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Stigmate. Les usages sociaux des handicaps' },
+    ],
+    associes: ['stigmate', 'identite-sociale-virtuelle', 'gestion-de-l-identite'],
+    opposes: ['carriere-deviante'],
+    critiques: [
+      "Parler d'identité « réelle » suggère une stabilité que Goffman lui-même récuse ailleurs, où l'identité se négocie sans cesse dans l'interaction.",
+      "Becker objecterait qu'une identité ne se révèle pas simplement : elle se construit par étapes, au fil d'une carrière, ce que le couple virtuel/réel, plus statique, rend mal.",
+      "Le concept traite l'écart comme un fait à découvrir, sans dire grand-chose du pouvoir de celui qui décide, dans l'interaction, ce qui compte comme une découverte.",
+    ],
+    evolution: [
+      { p: '1963', f: "Stigmate formalise le couple identité virtuelle / identité réelle." },
+      { p: '1963', f: "Becker publie la même année Outsiders, qui déplace l'accent vers le processus temporel d'étiquetage plutôt que vers l'écart entre deux identités." },
+    ],
+  },
+  'gestion-de-l-identite': {
+    detaille: [
+      "La gestion de l'identité est le travail pratique, continu et souvent épuisant, par lequel une personne dont l'identité sociale réelle s'écarte de l'identité virtuelle attendue décide quoi dire, à qui, quand et comment, pour contrôler cet écart.",
+      "Goffman distingue le discrédité, dont l'écart se voit d'emblée et qui doit gérer la tension que cela crée, du discréditable, qui peut le dissimuler et doit alors gérer l'information elle-même : à qui la révéler, à qui la taire.",
+      "Cette gestion n'est jamais acquise une fois pour toutes : chaque nouvelle relation, chaque nouvelle situation, rouvre la question de ce qu'il convient de dire, et à quel moment de l'échange le dire devient encore possible sans dommage.",
+    ],
+    origine: {
+      oeuvre: 'Stigmate. Les usages sociaux des handicaps',
+      annee: '1963',
+      contexte:
+        "Goffman consacre une large part de Stigmate à cataloguer les techniques concrètes — camouflage, divulgation contrôlée, désamorçage par l'humour — que les personnes stigmatisées ou discréditables déploient au quotidien.",
+    },
+    exemples: [
+      "Une personne malentendante qui choisit, selon l'interlocuteur, de le préciser d'emblée ou de compter sur la lecture labiale pour ne pas avoir à le faire.",
+      "Un casier judiciaire ancien, mentionné à un employeur choisi avec soin plutôt que découvert par une vérification qu'on n'aurait pas anticipée.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Stigmate. Les usages sociaux des handicaps' },
+    ],
+    associes: ['identite-sociale-virtuelle', 'identite-sociale-reelle', 'stigmate'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept met tout le poids du travail sur l'individu stigmatisé, et dit peu de ce qui incomberait, symétriquement, à ceux qui accueillent l'information.",
+      "Il suppose une marge de manœuvre — choisir de dire ou de taire — qui n'existe pas pour tous les stigmates, certains étant impossibles à dissimuler.",
+      "Les mouvements de fierté identitaire, nés après Goffman, renversent la logique de gestion discrète en revendication ouverte, que le concept n'anticipe pas.",
+    ],
+    evolution: [
+      { p: '1963', f: "Stigmate catalogue les techniques de gestion de l'information sur soi." },
+      { p: '1990–2010', f: "Les mouvements de fierté identitaire (handicap, santé mentale, orientation sexuelle) déplacent une part de cette gestion vers la revendication publique." },
+    ],
+  },
 
   /* — Howard S. Becker — */
   'etiquetage': {
@@ -4775,6 +5155,264 @@ export const CONCEPTS = {
       { p: '1972', f: "Cohen en tire les « paniques morales », qui feront carrière en sociologie des médias." },
       { p: '1977–1988', f: 'Gusfield et Spector développent la sociologie des problèmes publics sur cette base.' },
       { p: 'après 2000', f: "Le concept est devenu un outil courant de l'analyse des politiques publiques." },
+    ],
+  },
+  'deviance-primaire': {
+    detaille: [
+      "La déviance primaire est un premier écart aux règles — vol, consommation illégale, incartade — commis pour des raisons variées, souvent banales, et qui n'entame pas encore l'image que la personne a d'elle-même : elle reste, à ses propres yeux, quelqu'un qui a un jour transgressé, pas un déviant.",
+      "Lemert insiste sur sa diversité de causes et son caractère souvent sans suite : la plupart des déviances primaires ne sont jamais découvertes, ou le sont sans conséquence durable, et ne débouchent sur aucune carrière.",
+      "Ce qui la distingue de la déviance secondaire n'est donc pas sa gravité, mais son statut : tant qu'aucune réaction sociale marquée ne vient la sanctionner publiquement, elle reste un épisode plutôt qu'une identité.",
+    ],
+    origine: {
+      oeuvre: 'Social Pathology',
+      annee: '1951',
+      contexte:
+        "Edwin Lemert introduit la distinction pour séparer, dans l'étude de la déviance, ce qui relève d'un comportement isolé de ce qui relève d'une réorganisation durable de l'identité autour de ce comportement.",
+    },
+    exemples: [
+      "Un adolescent qui chaparde une fois dans un magasin, sans être vu, et qui n'y repense presque plus quelques semaines plus tard.",
+      "Un excès de vitesse isolé, jamais verbalisé, qui ne change en rien la manière dont le conducteur se perçoit.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Social Pathology' },
+      { y: '1963', t: 'Outsiders (Becker en reprend la distinction)' },
+    ],
+    associes: ['etiquetage', 'deviance-secondaire'],
+    opposes: ['tension-anomique'],
+    critiques: [
+      "Merton objecterait que même une déviance dite « primaire » a des causes structurelles précises — un écart entre buts et moyens légitimes — plutôt qu'une origine aussi diverse et indifférenciée que le suggère Lemert.",
+      "La frontière entre primaire et secondaire reste difficile à dater précisément : à partir de quelle réaction bascule-t-on de l'une à l'autre ?",
+      "Le concept dit peu des déviances primaires qui, sans jamais être découvertes, deviennent pourtant récurrentes et organisées sans qu'aucune étiquette n'ait encore été posée.",
+    ],
+    evolution: [
+      { p: '1951', f: "Lemert distingue déviance primaire et secondaire dans Social Pathology." },
+      { p: '1963', f: "Becker reprend la distinction dans Outsiders, sans toujours nommer Lemert aussi explicitement qu'il l'aurait mérité." },
+    ],
+  },
+  'deviance-secondaire': {
+    detaille: [
+      "La déviance secondaire apparaît quand la réaction sociale à un premier écart — arrestation, exclusion, rumeur — devient si marquée que la personne finit par organiser sa conduite et son identité autour du rôle qu'on lui a assigné.",
+      "Le mécanisme est circulaire : plus la réaction est sévère, plus elle referme les portes légitimes et rapproche des milieux déjà désignés, ce qui rend la déviance suivante non seulement probable mais, pour la personne, presque la seule issue cohérente qui reste.",
+      "C'est à ce stade que Becker fait le lien avec sa propre notion de carrière déviante : la déviance secondaire n'est plus un épisode, elle devient une trajectoire, avec ses étapes et ses apprentissages propres.",
+    ],
+    origine: {
+      oeuvre: 'Social Pathology',
+      annee: '1951',
+      contexte:
+        "Lemert observe que la sanction sociale, censée corriger un écart, produit souvent l'effet inverse : elle consolide une identité déviante là où elle prétendait la dissuader.",
+    },
+    exemples: [
+      "Un renvoi scolaire qui, en coupant l'accès aux filières ordinaires, pousse vers des fréquentations où l'étiquette « mauvais élève » devient un statut à assumer plutôt qu'à fuir.",
+      "Une première incarcération qui, en coupant l'accès à l'emploi légal, rend la récidive plus probable que la réinsertion.",
+    ],
+    oeuvres: [
+      { y: '1951', t: 'Social Pathology' },
+      { y: '1963', t: 'Outsiders' },
+    ],
+    associes: ['deviance-primaire', 'etiquetage', 'carriere-deviante'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait que la « bascule » vers l'identité déviante reste toujours, même à ce stade, le résultat d'un choix qu'un acteur pourrait refuser de faire.",
+      "Le modèle prête à la réaction sociale un pouvoir presque mécanique, qui laisse peu de place aux personnes qui, malgré une sanction sévère, ne basculent jamais.",
+      "Il explique bien la consolidation d'une identité déviante, mais peu sa sortie : le retour à une identité ordinaire reste un angle mort de la théorie.",
+    ],
+    evolution: [
+      { p: '1951', f: "Lemert formule la déviance secondaire comme effet en retour de la réaction sociale." },
+      { p: '1963', f: "Outsiders l'articule à la carrière déviante et à l'étiquetage." },
+      { p: '1970–1990', f: "Le concept nourrit les critiques de l'enfermement carcéral comme facteur aggravant plutôt que correctif." },
+    ],
+  },
+  'entreprise-morale': {
+    detaille: [
+      "L'entreprise morale est le travail collectif, souvent long et incertain, par lequel une pratique jusque-là tolérée est transformée en scandale public puis en règle sanctionnée — le processus que mène l'entrepreneur de morale, distinct de la personne qui le porte.",
+      "Ce travail suppose des étapes concrètes : rendre visible un problème resté invisible, mobiliser des soutiens, convaincre des relais institutionnels, puis obtenir l'inscription de la nouvelle norme dans un texte ou une pratique de contrôle.",
+      "Rien ne garantit son succès : la plupart des entreprises morales échouent ou s'essoufflent avant d'aboutir à une règle effective, ce qui rend d'autant plus significatives celles qui y parviennent.",
+    ],
+    origine: {
+      oeuvre: 'Outsiders',
+      annee: '1963',
+      contexte:
+        "Becker construit ce concept en étudiant le processus complet du Marihuana Tax Act de 1937, depuis la mobilisation initiale jusqu'à l'inscription de la loi.",
+    },
+    exemples: [
+      "Une campagne de plusieurs années, menée par une poignée de militants, avant qu'une pratique jugée anodine ne devienne enfin passible de sanction.",
+      "Un scandale médiatique qui échoue à déboucher sur la moindre loi, faute d'avoir trouvé de relais institutionnel suffisant.",
+    ],
+    oeuvres: [
+      { y: '1963', t: 'Outsiders, chapitres VII et VIII' },
+    ],
+    associes: ['entrepreneur-de-morale', 'etiquetage'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept dit peu des entreprises morales qui réussissent sans campagne visible, par simple accumulation de décisions administratives.",
+      "Il centre l'analyse sur le succès ou l'échec d'une croisade, et laisse peu de place aux effets secondaires d'une entreprise morale qui échoue mais déplace malgré tout le débat public.",
+      "Gusfield objecte que l'issue d'une entreprise morale dépend autant des rapports symboliques entre groupes sociaux que de la seule habileté organisationnelle de ses porteurs.",
+    ],
+    evolution: [
+      { p: '1937', f: "Le Marihuana Tax Act sert de cas d'école à la formulation du concept." },
+      { p: '1963', f: "Outsiders formalise l'entreprise morale comme processus distinct de la figure de l'entrepreneur." },
+      { p: '1963', f: "Gusfield, la même année, étudie en parallèle les croisades de tempérance comme entreprises morales de classe." },
+    ],
+  },
+  'monde-social': {
+    detaille: [
+      "Un monde social est un ensemble de personnes coordonnées autour d'une activité commune, sans frontière fixe ni organisation formelle : on y entre et on en sort sans cérémonie, et l'appartenance se mesure à la participation plus qu'à un statut officiel.",
+      "Ce qui tient ensemble un monde social n'est ni une hiérarchie ni un règlement, mais des conventions partagées — des manières de faire convenues, apprises par la pratique, qui permettent à des participants de coordonner leur travail sans avoir à tout renégocier à chaque fois.",
+      "Un même monde social peut ainsi réunir des rôles très divers — professionnels, amateurs, fournisseurs, publics — dont aucun ne détient à lui seul l'ensemble de l'activité, et qui ne se rencontrent parfois jamais directement.",
+    ],
+    origine: {
+      oeuvre: 'Les Mondes de l\'art',
+      annee: '1982',
+      contexte:
+        "Becker généralise une notion héritée d'Anselm Strauss et de l'École de Chicago pour décrire, au-delà du seul art, toute activité collective organisée sans centre ni frontière nette.",
+    },
+    exemples: [
+      "L'ensemble très hétérogène des amateurs, revendeurs, réparateurs et passionnés qui gravitent, sans organisation centrale, autour d'un instrument de musique ancien.",
+      "Un monde du running amateur qui réunit coureurs, fabricants de chaussures, organisateurs de courses et blogueurs, sans qu'aucun d'eux ne le pilote entièrement.",
+    ],
+    oeuvres: [
+      { y: '1982', t: "Les Mondes de l'art" },
+      { y: '1998', t: 'Les Ficelles du métier' },
+    ],
+    associes: ['mondes-de-l-art', 'cooperation', 'convention'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Parsons objecterait qu'un ensemble aussi peu délimité ne permet plus de dire précisément qui appartient à quoi, ni d'en analyser la fonction pour la société globale.",
+      "La notion de frontière floue, féconde pour décrire, complique la comparaison entre mondes sociaux : sur quels critères les distinguer les uns des autres ?",
+      "Elle dit peu des rapports de pouvoir internes à un monde social, où certains participants pèsent bien plus lourd que d'autres sur les conventions communes.",
+    ],
+    evolution: [
+      { p: '1959', f: "Strauss introduit la notion de monde social en sociologie interactionniste." },
+      { p: '1982', f: "Les Mondes de l'art l'applique systématiquement à la production artistique." },
+      { p: '1990–2010', f: "Le concept se diffuse largement en sociologie des professions, des loisirs et des sous-cultures." },
+    ],
+  },
+  'carriere': {
+    detaille: [
+      "Une carrière est, dans le vocabulaire hérité d'Everett Hughes, toute séquence organisée de positions traversées par un individu au fil du temps — professionnelles, mais aussi médicales, familiales ou déviantes — reliées entre elles par les changements de statut, de perception et de relations qu'elles entraînent.",
+      "Ce qui fait une carrière n'est pas seulement la position occupée à un instant donné, mais la manière dont chaque étape modifie ce qui devient possible ensuite : une carrière se raconte par ses tournants plus que par un état stable.",
+      "Becker étend cette notion bien au-delà des professions établies pour en faire un outil général d'analyse de toute trajectoire sociale, y compris les plus marginales.",
+    ],
+    origine: {
+      oeuvre: 'Outsiders',
+      annee: '1963',
+      contexte:
+        "Hughes forge la notion à Chicago dans les années 1930 pour les professions ; Becker la reprend et la généralise à des trajectoires que la sociologie n'envisageait pas encore comme des carrières à part entière.",
+    },
+    exemples: [
+      "Le parcours d'un malade chronique, de l'apparition des premiers symptômes à l'installation dans un rôle de patient reconnu par son entourage.",
+      "La trajectoire d'un bénévole associatif, d'une participation ponctuelle à une place de responsable reconnu par tous les autres membres.",
+    ],
+    oeuvres: [
+      { y: '1937', t: "Hughes, Institutional Office and the Person" },
+      { y: '1963', t: 'Outsiders' },
+    ],
+    associes: ['carriere-deviante', 'monde-social', 'trajectoire-sociale'],
+    opposes: ['fait-social'],
+    critiques: [
+      "La souplesse même du concept — applicable à presque toute trajectoire — le rend parfois si général qu'il perd sa capacité à trancher entre des parcours très différents.",
+      "Il privilégie une lecture séquentielle et ordonnée, quand certains parcours réels sont faits de ruptures et de retours difficiles à faire tenir dans une seule ligne.",
+      "Bourdieu objecterait qu'une carrière, aussi bien décrite soit-elle étape par étape, reste orientée en amont par des dispositions et des capitaux qu'elle ne fait que dérouler dans le temps.",
+    ],
+    evolution: [
+      { p: '1937', f: "Hughes introduit la notion de carrière pour l'analyse des professions." },
+      { p: '1963', f: "Becker l'étend à la déviance dans Outsiders." },
+      { p: '1980–2000', f: "Le concept devient un outil transversal de la sociologie interactionniste, bien au-delà du travail et de la déviance." },
+    ],
+  },
+  'mondes-de-l-art': {
+    detaille: [
+      "Les mondes de l'art sont les réseaux de coopération, souvent immenses et largement invisibles, sans lesquels aucune œuvre ne pourrait exister : fabricants de matériel, techniciens, critiques, galeristes, publics — une œuvre attribuée à un seul nom est en réalité le produit d'un travail collectif.",
+      "Becker déplace ainsi le regard porté sur l'art : au lieu d'interroger le génie individuel, il interroge la division du travail, les conventions techniques et les circuits de diffusion qui rendent une œuvre possible, reconnaissable et montrable.",
+      "Ce déplacement change aussi la question de la valeur : une œuvre n'est pas belle en soi, elle est reconnue comme telle par un monde de l'art qui en fixe collectivement les critères, à un moment et dans un lieu donnés.",
+    ],
+    origine: {
+      oeuvre: "Les Mondes de l'art",
+      annee: '1982',
+      contexte:
+        "Becker construit le livre à partir d'enquêtes sur la musique, le cinéma et les arts plastiques, pour montrer qu'aucune œuvre, même la plus singulière, ne se passe entièrement de coopération collective.",
+    },
+    exemples: [
+      "Une symphonie qui suppose, derrière le nom du compositeur, des facteurs d'instruments, des copistes de partitions et des musiciens formés selon des conventions communes.",
+      "Un film porté par le nom d'un seul réalisateur, alors que des centaines de techniciens, de financeurs et de distributeurs en ont rendu l'existence possible.",
+    ],
+    oeuvres: [
+      { y: '1982', t: "Les Mondes de l'art" },
+    ],
+    associes: ['monde-social', 'cooperation', 'convention'],
+    opposes: ['champ'],
+    critiques: [
+      "Bourdieu objecte explicitement à Becker qu'un monde de l'art décrit comme une simple coopération efface les rapports de domination et de lutte pour la légitimité qui structurent, selon lui, tout champ artistique.",
+      "Le modèle, très attentif à la production, dit relativement peu de la réception et des luttes de classement qui décident, après coup, ce qui restera comme grand art.",
+      "Il peine à expliquer pourquoi certains mondes de l'art hiérarchisent fortement leurs participants quand d'autres restent, en apparence, plus égalitaires.",
+    ],
+    evolution: [
+      { p: '1974–1976', f: "Becker publie les premiers articles sur l'art comme action collective." },
+      { p: '1982', f: "Les Mondes de l'art en donne la synthèse complète." },
+      { p: '1980–1990', f: "Le débat avec Bourdieu sur coopération et domination structure une bonne part de la sociologie de l'art qui suit." },
+    ],
+  },
+  'cooperation': {
+    detaille: [
+      "La coopération est le mécanisme de base qui tient ensemble un monde social : des personnes accomplissent des tâches interdépendantes selon des manières de faire convenues, sans qu'il soit nécessaire qu'elles partagent les mêmes valeurs, se connaissent personnellement, ni même s'apprécient.",
+      "Elle ne suppose ni accord explicite ni intention commune : il suffit que chacun, en poursuivant son propre intérêt ou son propre travail, produise des résultats compatibles avec ce que les autres attendent de lui pour que l'ensemble fonctionne.",
+      "Becker en fait un principe d'explication concurrent de la lutte pour le pouvoir ou le prestige : l'essentiel de la vie collective, selon lui, tient moins à la domination qu'à ce travail d'ajustement mutuel, discret et permanent.",
+    ],
+    origine: {
+      oeuvre: "Les Mondes de l'art",
+      annee: '1982',
+      contexte:
+        "Becker construit ce principe en observant combien la production artistique la plus routinière dépend d'ajustements réciproques entre participants qui n'ont, la plupart du temps, jamais discuté explicitement de la manière de travailler ensemble.",
+    },
+    exemples: [
+      "Un technicien de tournage qui ajuste son travail à celui du réalisateur sans qu'aucune consigne écrite n'ait jamais précisé cette coordination.",
+      "Un fabricant d'instruments qui adapte ses cordes aux attentes des musiciens, sans jamais échanger directement avec la plupart d'entre eux.",
+    ],
+    oeuvres: [
+      { y: '1982', t: "Les Mondes de l'art" },
+      { y: '1998', t: 'Les Ficelles du métier' },
+    ],
+    associes: ['monde-social', 'mondes-de-l-art', 'convention'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Bourdieu objecterait que présenter la vie collective comme coopération relègue au second plan les rapports de force qui décident, en réalité, qui impose ses conventions à qui.",
+      "Le concept dit peu des situations où la coopération se rompt ouvertement, en conflit déclaré plutôt qu'en simple ajustement raté.",
+      "Il suppose une interdépendance déjà organisée, sans toujours expliquer comment un monde social en vient à se structurer ainsi plutôt qu'autrement.",
+    ],
+    evolution: [
+      { p: '1959', f: "Strauss pose les bases interactionnistes de l'ordre négocié, matrice du concept." },
+      { p: '1982', f: "Les Mondes de l'art en fait le principe central de l'analyse de la production artistique." },
+    ],
+  },
+  'convention': {
+    detaille: [
+      "Une convention est un accord tacite sur la manière de faire — un format, une notation, une taille standard, une durée usuelle — qui permet à des participants d'un monde social de coordonner leur travail sans avoir à en renégocier les termes à chaque fois.",
+      "Elle n'a rien d'arbitraire au sens d'un simple caprice : une convention en vigueur facilite tellement le travail collectif qu'il devient coûteux de s'en écarter, même quand une autre solution serait tout aussi valable en soi.",
+      "Les conventions changent pourtant, souvent lentement, parfois brusquement quand une innovation technique ou un nouveau groupe de participants impose d'autres manières de faire — ce qui distingue la convention de la règle imposée : elle se maintient par l'usage, non par la contrainte.",
+    ],
+    origine: {
+      oeuvre: "Les Mondes de l'art",
+      annee: '1982',
+      contexte:
+        "Becker montre que la production artistique repose sur d'innombrables conventions techniques — taille d'une toile, durée d'un morceau, format d'une page — trop souvent invisibles parce que trop bien intégrées par tous les participants.",
+    },
+    exemples: [
+      "Le format standard d'une page imprimée, qui n'a rien de naturel mais que personne, dans la chaîne du livre, n'a intérêt à remettre en question seul.",
+      "L'accordage standard des instruments d'un orchestre, sans lequel aucun musicien ne pourrait jouer avec les autres.",
+    ],
+    oeuvres: [
+      { y: '1982', t: "Les Mondes de l'art" },
+    ],
+    associes: ['cooperation', 'monde-social', 'mondes-de-l-art'],
+    opposes: ['doxa'],
+    critiques: [
+      "Le concept explique bien la stabilité des conventions, mais moins bien les moments précis où elles basculent d'un usage à un autre.",
+      "Il traite les conventions comme globalement neutres, alors que certains participants d'un monde social ont plus de pouvoir que d'autres pour les fixer à leur avantage.",
+      "La frontière entre convention et simple habitude individuelle reste parfois difficile à tracer dans l'enquête empirique.",
+    ],
+    evolution: [
+      { p: '1982', f: "Les Mondes de l'art systématise le rôle des conventions dans la coordination du travail artistique." },
+      { p: '1987', f: "Boltanski et Thévenot, en économie des conventions, développeront en France un usage proche mais distinct de la notion." },
     ],
   },
 
@@ -4918,6 +5556,236 @@ export const CONCEPTS = {
       { p: '1979', f: "La Logique du social généralise la notion de ressources à toute action sociale, contre les explications par le seul héritage culturel." },
       { p: '1981', f: "Nan Lin en fait, aux États-Unis, une théorie autonome des ressources sociales mobilisées à travers les réseaux, distincte du capital social de Bourdieu." },
       { p: '1973–1974', f: "Granovetter montre, avec la force des liens faibles, que les relations les moins intimes sont souvent les plus utiles pour trouver un emploi — une thèse proche dans l'esprit, sans jamais citer Boudon." },
+    ],
+  },
+  'action-individuelle': {
+    detaille: [
+      "L'action individuelle est, pour Boudon, la seule brique à partir de laquelle un phénomène collectif peut s'expliquer : aucune structure, aucun système ni aucune fonction ne fait quoi que ce soit — seuls des individus agissent, et le collectif n'est que la composition de ce qu'ils font.",
+      "Expliquer une action suppose de reconstruire les raisons que l'acteur avait de l'accomplir, telles qu'il pouvait les avoir dans sa situation, avec l'information et les ressources dont il disposait — pas les raisons qu'un observateur extérieur jugerait, après coup, les meilleures.",
+      "Ce principe ne dit rien de la nature humaine ni d'un quelconque égoïsme calculateur : c'est une règle de méthode, qui vaut aussi bien pour une action économique que pour une croyance religieuse ou un vote.",
+    ],
+    origine: {
+      oeuvre: 'La Logique du social',
+      annee: '1979',
+      contexte:
+        "Boudon reprend et systématise un principe déjà présent chez Weber, pour en faire le socle explicite de sa sociologie, contre les explications structuralistes et fonctionnalistes alors dominantes.",
+    },
+    exemples: [
+      "Un choix d'orientation scolaire qui, vu du dossier, semble irrationnel, mais qui s'éclaire entièrement une fois reconstituées les informations et les craintes propres à la famille qui l'a fait.",
+      "Un vote contradictoire avec les intérêts économiques apparents du votant, parfaitement cohérent une fois replacé dans le système de valeurs qui l'a motivé.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Logique du social' },
+      { y: '2003', t: 'Raison, bonnes raisons' },
+    ],
+    associes: ['individualisme-methodologique', 'rationalite'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait que certains faits — le taux de suicide, par exemple — ne varient pas comme la simple somme des raisons individuelles le laisserait attendre, et réclament une explication proprement collective.",
+      "Le principe suppose reconstituée une information dont l'acteur réel dispose rarement dans son intégralité au moment d'agir.",
+      "Il dit peu de la manière dont les raisons elles-mêmes se forment, avant que l'acteur ne les mobilise pour agir.",
+    ],
+    evolution: [
+      { p: '1908–1922', f: "Weber pose la compréhension du sens visé par l'acteur comme fondement de la sociologie." },
+      { p: '1979', f: "La Logique du social en fait le principe méthodologique explicite de toute explication sociologique." },
+      { p: '2003', f: "Raison, bonnes raisons prolonge le principe jusqu'aux croyances, pas seulement aux choix." },
+    ],
+  },
+  'rationalite': {
+    detaille: [
+      "Boudon défend une rationalité générale, bien plus large que le calcul coûts-avantages de la théorie économique classique : est rationnelle toute action, toute croyance ou tout jugement pour lesquels l'acteur peut donner de bonnes raisons, compte tenu de sa situation.",
+      "Cette extension change la portée du principe : des conduites longtemps jugées irrationnelles — croyances traditionnelles, choix apparemment illogiques, préférences qui semblent aller contre l'intérêt — deviennent intelligibles dès lors qu'on restitue les raisons, cognitives autant qu'axiologiques, qui les soutenaient.",
+      "Boudon n'affirme pas que tout acteur a toujours raison : il affirme qu'on comprend mieux l'action en cherchant d'abord ses bonnes raisons qu'en la disqualifiant d'emblée comme un effet d'irrationalité, d'idéologie ou de domination.",
+    ],
+    origine: {
+      oeuvre: 'La Logique du social',
+      annee: '1979',
+      contexte:
+        "Boudon élabore ce concept en réaction à deux tendances qu'il juge symétriquement insuffisantes : réduire toute rationalité au calcul économique étroit, ou l'abandonner dès qu'une conduite ne s'y ramène pas.",
+    },
+    exemples: [
+      "Une pratique agricole traditionnelle, longtemps jugée archaïque, qui se révèle parfaitement adaptée aux risques réels d'un climat mal connu des observateurs extérieurs.",
+      "Une méfiance envers une institution, jugée irrationnelle de l'extérieur, mais qui repose sur une série d'expériences vécues parfaitement cohérentes.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Logique du social' },
+      { y: '1990', t: "L'Art de se persuader" },
+      { y: '2003', t: 'Raison, bonnes raisons' },
+    ],
+    associes: ['action-individuelle', 'rationalite-cognitive', 'rationalite-axiologique'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Élargie à ce point, la rationalité risque de devenir une catégorie fourre-tout : presque toute conduite finit par trouver, après coup, de bonnes raisons qui la justifient.",
+      "Bourdieu objecterait que ce que Boudon appelle de « bonnes raisons » n'est souvent que la rationalisation, après coup, de dispositions incorporées bien avant toute délibération.",
+      "Le critère de la « bonne raison » reste flou : bonne selon qui, à quel moment, avec quelles informations disponibles ?",
+    ],
+    evolution: [
+      { p: '1979', f: "La Logique du social pose la rationalité générale contre le seul calcul économique." },
+      { p: '1990', f: "L'Art de se persuader applique le principe aux croyances collectives fausses mais rationnellement soutenues." },
+      { p: '1995–2003', f: "Boudon systématise la distinction entre rationalité cognitive et rationalité axiologique." },
+    ],
+  },
+  'rationalite-cognitive': {
+    detaille: [
+      "La rationalité cognitive étend le principe des bonnes raisons aux croyances elles-mêmes : une croyance, même fausse, peut être rationnelle si elle résulte d'un processus de raisonnement que l'acteur, dans sa situation et avec l'information dont il dispose, juge solide.",
+      "Boudon s'oppose ainsi à une explication très répandue des croyances erronées ou des préjugés, qui les attribue systématiquement à un intérêt caché, une idéologie ou un biais de domination : bien souvent, l'acteur croit ce qu'il croit parce que les arguments dont il dispose lui paraissent, de bonne foi, convaincants.",
+      "Cette rationalité n'a rien d'infaillible : elle explique pourquoi une croyance fausse peut néanmoins être largement partagée et durable, sans qu'il faille supposer chez ceux qui la tiennent ni bêtise, ni manipulation, ni mauvaise foi.",
+    ],
+    origine: {
+      oeuvre: "L'Art de se persuader des idées douteuses, fragiles ou fausses",
+      annee: '1990',
+      contexte:
+        "Boudon y étudie des croyances collectives qu'il juge objectivement fausses — de certaines théories scientifiques abandonnées à des préjugés sociaux — pour montrer qu'elles reposent presque toujours sur un raisonnement localement défendable.",
+    },
+    exemples: [
+      "Une théorie scientifique aujourd'hui réfutée, mais qui reposait, en son temps, sur les meilleures preuves disponibles et un raisonnement rigoureux.",
+      "Un préjugé fondé sur une expérience personnelle limitée, généralisée de bonne foi faute d'accès à des données plus larges.",
+    ],
+    oeuvres: [
+      { y: '1990', t: "L'Art de se persuader des idées douteuses, fragiles ou fausses" },
+      { y: '2003', t: 'Raison, bonnes raisons' },
+    ],
+    associes: ['rationalite', 'individualisme-methodologique', 'ressources-sociales'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Le concept peine à expliquer pourquoi certaines croyances fausses persistent bien après que les preuves de leur fausseté sont devenues largement accessibles.",
+      "Il minore le rôle de l'intérêt et du pouvoir dans la production et la diffusion de certaines croyances, que la notion de bonne raison individuelle traite comme secondaire.",
+      "La frontière entre raisonnement solide et rationalisation a posteriori reste difficile à établir dans l'enquête empirique.",
+    ],
+    evolution: [
+      { p: '1990', f: "L'Art de se persuader introduit la rationalité cognitive à propos de croyances collectives fausses." },
+      { p: '1995–2010', f: "Boudon en fait un programme de recherche à part entière, la « sociologie cognitive »." },
+    ],
+  },
+  'rationalite-axiologique': {
+    detaille: [
+      "La rationalité axiologique désigne, chez Boudon, une action ou un jugement fondés sur des raisons tirées de valeurs — la justice, l'égalité, la loyauté — plutôt que sur un calcul d'intérêt, mais qui n'en restent pas moins rationnels au sens où l'acteur peut en donner de bonnes raisons.",
+      "Boudon reprend ici la rationalité en valeur de Weber, mais la déplace : il ne s'agit plus seulement de décrire un type d'action possible parmi d'autres, mais d'affirmer que même l'adhésion à une valeur peut et doit s'expliquer par des raisons, et non par un simple attachement affectif ou un conditionnement.",
+      "Un jugement moral — trouver une inégalité injuste, par exemple — n'est donc pas, pour Boudon, un pur effet de sensibilité ou de position sociale : il repose sur des raisons qu'on peut examiner, discuter et parfois réviser, comme n'importe quel autre jugement rationnel.",
+    ],
+    origine: {
+      oeuvre: 'Le Juste et le Vrai',
+      annee: '1995',
+      contexte:
+        "Boudon y prolonge son programme de rationalité généralisée jusqu'au jugement moral, contre les théories qui réduisent les valeurs à de simples préférences ou à des produits de la position sociale.",
+    },
+    exemples: [
+      "Une personne qui refuse un avantage matériel au nom de l'équité, et qui peut justifier ce refus par des raisons précises plutôt que par un simple sentiment.",
+      "Un débat public où deux camps défendent des valeurs opposées, chacun avec des arguments qu'on peut examiner un par un, plutôt qu'un simple choc d'opinions arbitraires.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Le Juste et le Vrai' },
+      { y: '2003', t: 'Raison, bonnes raisons' },
+    ],
+    associes: ['rationalite', 'rationalite-en-valeur', 'individualisme-methodologique'],
+    opposes: ['rationalite-instrumentale'],
+    critiques: [
+      "Weber lui-même distinguait la rationalité en valeur de la rationalité instrumentale précisément pour marquer qu'elle n'obéit pas au même régime de justification — la refondre en simple variante rationnelle risque d'effacer cette différence.",
+      "Bourdieu objecterait qu'un jugement moral qui paraît raisonné reste souvent l'expression différée d'une disposition de classe, acquise bien avant toute délibération consciente.",
+      "Le concept dit peu de ce qui distingue une bonne raison axiologique d'une simple rationalisation d'un attachement déjà là.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber distingue la rationalité en valeur de la rationalité instrumentale dans sa typologie de l'action sociale." },
+      { p: '1995', f: "Le Juste et le Vrai reprend et généralise la rationalité en valeur en rationalité axiologique." },
+      { p: '2003', f: 'Raison, bonnes raisons systématise le rapprochement entre rationalité cognitive et rationalité axiologique.' },
+    ],
+  },
+  'effets-de-composition': {
+    detaille: [
+      "Un effet de composition est le résultat, à l'échelle collective, de l'agrégation d'actions individuelles — un résultat qui n'est en général l'intention d'aucun des acteurs pris séparément, qu'il soit finalement heureux, malheureux ou simplement neutre.",
+      "Boudon en fait la catégorie la plus large de sa sociologie : l'effet pervers en est le cas particulier négatif, le paradoxe d'agrégation le cas particulier où le résultat collectif est logiquement incohérent — mais tout phénomène social agrégé, désiré ou non, relève d'abord d'un effet de composition.",
+      "Ce terme neutre évite un biais fréquent : celui qui ne remarque les effets d'agrégation que lorsqu'ils déçoivent, alors que la même mécanique produit tout aussi bien des résultats collectifs heureux, jamais voulus comme tels par personne.",
+    ],
+    origine: {
+      oeuvre: 'La Logique du social',
+      annee: '1979',
+      contexte:
+        "Boudon distingue précisément, dans cet ouvrage, l'effet de composition comme catégorie générale et l'effet pervers comme son cas particulier négatif, pour donner à l'agrégation des conduites individuelles un traitement systématique.",
+    },
+    exemples: [
+      "Un quartier qui devient progressivement plus animé grâce à des choix résidentiels individuels sans qu'aucun habitant n'ait cherché ce résultat pour lui-même.",
+      "Une langue qui évolue par l'usage quotidien de millions de locuteurs, sans qu'aucun d'eux n'ait voulu, individuellement, la faire changer.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Logique du social' },
+      { y: '1977', t: 'Effets pervers et ordre social' },
+    ],
+    associes: ['effets-pervers', 'individualisme-methodologique', 'paradoxe-d-agregation'],
+    opposes: ['fait-social'],
+    critiques: [
+      "La catégorie, très large, explique après coup presque tout résultat collectif inattendu, ce qui la rend difficile à mettre en défaut empiriquement.",
+      "Elle traite l'agrégation comme un mécanisme neutre, sans toujours dire pourquoi certaines agrégations sont plus probables ou plus stables que d'autres.",
+      "Durkheim objecterait que certains faits sociaux ont une consistance et une contrainte propres qu'une simple somme d'actions individuelles peine à restituer.",
+    ],
+    evolution: [
+      { p: '1979', f: "La Logique du social distingue l'effet de composition, catégorie générale, de ses cas particuliers." },
+      { p: '1981', f: "Boudon publie une étude spécifique sur les effets de composition et l'ordre social." },
+    ],
+  },
+  'inegalites-des-chances': {
+    detaille: [
+      "Les inégalités des chances désignent, pour Boudon, l'écart persistant entre l'égalité formelle d'accès à l'école et la très inégale probabilité, selon l'origine sociale, d'y réussir et d'y poursuivre des études longues — un écart qui subsiste même quand l'école est ouverte à tous sans discrimination déclarée.",
+      "Boudon l'explique par un modèle de décisions rationnelles prises sous contrainte, à chaque palier d'orientation : les familles évaluent le coût, le risque et le bénéfice attendu des études longues différemment selon leurs ressources, et ces évaluations, individuellement raisonnables, reconduisent en agrégat des destins scolaires très inégaux.",
+      "L'explication n'invoque ni discrimination délibérée, ni transmission d'un héritage culturel inconscient : de simples différences de ressources et d'anticipations suffisent, une fois agrégées sur des millions de décisions, à produire une inégalité massive et stable.",
+    ],
+    origine: {
+      oeuvre: "L'Inégalité des chances",
+      annee: '1973',
+      contexte:
+        "Boudon construit un modèle formel des choix scolaires successifs pour expliquer pourquoi l'expansion massive de la scolarisation, en Europe comme aux États-Unis, n'a pas réduit les écarts de destin selon l'origine sociale.",
+    },
+    exemples: [
+      "Une même moyenne scolaire qui débouche, selon les familles, sur une filière sélective ou sur une orientation plus prudente, en fonction du risque que chacune est prête à assumer.",
+      "Deux élèves aux résultats comparables qui ne poursuivent pas les mêmes études, faute pour l'un d'un environnement familial prêt à absorber le coût d'un échec possible.",
+    ],
+    oeuvres: [
+      { y: '1973', t: "L'Inégalité des chances" },
+      { y: '1979', t: 'La Logique du social' },
+    ],
+    associes: ['meritocratie', 'ressources-sociales', 'individualisme-methodologique'],
+    opposes: ['capital-culturel'],
+    critiques: [
+      "Bourdieu objecte que réduire l'inégalité scolaire à des calculs de coût et de risque laisse de côté ce qui, bien avant tout calcul, dispose déjà un enfant à se sentir ou non légitime dans telle filière.",
+      "Le modèle suppose une information sur les probabilités de réussite dont les familles disposent rarement avec la précision qu'il leur prête.",
+      "Les deux explications, Boudon l'a lui-même reconnu, portent souvent sur les mêmes statistiques sans jamais avoir pu être départagées de façon décisive par l'enquête empirique.",
+    ],
+    evolution: [
+      { p: '1973', f: "L'Inégalité des chances formule le modèle des choix scolaires sous contrainte." },
+      { p: '1979', f: "Bourdieu et Boudon publient, la même décennie, deux lectures rivales des mêmes statistiques scolaires françaises." },
+      { p: '1990–2010', f: "Le débat reste l'un des plus structurants de la sociologie française de l'éducation." },
+    ],
+  },
+  'paradoxe-d-agregation': {
+    detaille: [
+      "Un paradoxe d'agrégation survient quand l'agrégation de préférences ou de jugements individuels, chacun parfaitement cohérent pris isolément, produit un résultat collectif logiquement incohérent — et non pas seulement indésirable, comme dans l'effet pervers ordinaire.",
+      "Le cas le plus connu, dû à Condorcet dès le XVIIIᵉ siècle, montre qu'un vote majoritaire peut faire émerger une préférence collective cyclique — le groupe préfère A à B, B à C, et pourtant C à A — alors qu'aucun électeur pris seul n'a de préférence contradictoire.",
+      "Boudon reprend ce type de résultat pour montrer que l'incohérence apparente d'une décision collective ne signale pas nécessairement l'irrationalité de ceux qui la composent : la seule mécanique de l'agrégation suffit à produire de telles anomalies, indépendamment de toute défaillance individuelle.",
+    ],
+    origine: {
+      oeuvre: 'La Logique du social',
+      annee: '1979',
+      contexte:
+        "Boudon mobilise le paradoxe de Condorcet et les travaux d'Arrow sur les choix collectifs pour distinguer, à l'intérieur de sa théorie des effets de composition, un cas proprement logique des cas simplement empiriques.",
+    },
+    exemples: [
+      "Un conseil qui, en votant point par point sur trois options prises séparément, adopte finalement une position qu'aucun de ses membres n'aurait choisie si le vote avait porté sur l'ensemble.",
+      "Un classement collectif de projets, obtenu par comparaisons successives, qui contredit le classement obtenu si l'on inverse simplement l'ordre des comparaisons.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'La Logique du social' },
+      { y: '1977', t: 'Effets pervers et ordre social' },
+    ],
+    associes: ['effets-de-composition', 'effets-pervers', 'rationalite'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le paradoxe, redoutable en théorie, reste rare à observer tel quel dans des votes réels, où les préférences sont souvent moins tranchées que le modèle ne le suppose.",
+      "Arrow lui-même a montré qu'aucune règle d'agrégation ne peut satisfaire à la fois tous les critères souhaitables de cohérence collective, ce qui dépasse le seul cas du vote majoritaire.",
+      "Le concept dit peu de la manière dont les institutions réelles contournent ou masquent, en pratique, ces incohérences logiques plutôt que de les résoudre.",
+    ],
+    evolution: [
+      { p: '1785', f: "Condorcet formule le paradoxe du vote majoritaire cyclique." },
+      { p: '1951', f: "Arrow généralise le résultat en théorème d'impossibilité, pour toute règle d'agrégation des préférences." },
+      { p: '1979', f: "Boudon l'intègre à sa théorie des effets de composition comme cas logique distinct des effets pervers ordinaires." },
     ],
   },
 
