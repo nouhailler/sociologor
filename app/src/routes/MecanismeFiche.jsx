@@ -120,7 +120,7 @@ export default function MecanismeFiche() {
               margin: '0 0 24px',
             }}
           >
-            Aucun concept des dix-sept fiches ne porte directement sur ce mécanisme.
+            Aucun concept des dix-huit fiches ne porte directement sur ce mécanisme.
           </p>
         ) : (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>

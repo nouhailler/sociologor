@@ -297,4 +297,19 @@ export const COURANTS = [
     ],
     niveau: 'paradigme',
   },
+  {
+    id: 'theorie-de-la-structuration',
+    t: 'Théorie de la structuration',
+    periode: 'contemporain',
+    d: "Ni l'acteur ne fabrique seul la structure, ni la structure ne détermine seule l'acteur : chaque pratique reproduit ou transforme les règles mêmes qui la rendent possible.",
+    detail:
+      "Giddens refuse le partage classique entre une sociologie de la structure, qui traite l'acteur comme un simple support des règles, et une sociologie de l'action, qui traite la structure comme un décor secondaire. Il en fait une dualité : la structure est à la fois le médium et le résultat des pratiques qu'elle organise, jamais l'un sans l'autre.",
+    auteurs: ['giddens'],
+    vientDe: ['sociologie-comprehensive', 'holisme', 'interactionnisme'],
+    inspirateurs: [
+      "Harold Garfinkel — l'ethnométhodologie et la conscience pratique des acteurs ordinaires",
+      "Ludwig Wittgenstein — suivre une règle sans avoir besoin de la formuler",
+    ],
+    niveau: 'paradigme',
+  },
 ];

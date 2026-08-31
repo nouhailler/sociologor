@@ -3193,6 +3193,231 @@ export const CONCEPTS = {
       { p: '1980–2000', f: 'La « sociologie figurationnelle » se constitue en courant, surtout aux Pays-Bas et en Angleterre.' },
     ],
   },
+  'interdependance': {
+    detaille: [
+      "L'interdépendance est le lien de base dont Elias fait l'unité première de toute sociologie : des êtres humains liés les uns aux autres par le besoin, l'affect ou la fonction, et dont aucun ne peut se comprendre isolément de ce réseau qui le traverse.",
+      "Elias s'en sert pour dissoudre ce qu'il appelle l'« homo clausus » : l'image d'un individu clos sur lui-même, d'abord séparé, qui n'entrerait qu'ensuite en relation avec les autres — une image que le langage courant impose, mais que l'observation dément.",
+      "Personne, dans ce tissu, ne détient seul les commandes : chacun dépend des autres au moins autant qu'il pèse sur eux, ce qui rend le cours des choses imprévisible dans le détail, même quand chaque acteur pris à part agit de façon parfaitement compréhensible.",
+    ],
+    origine: {
+      oeuvre: "Qu'est-ce que la sociologie ?",
+      annee: '1970',
+      contexte:
+        "Elias construit ce concept pour rompre avec une opposition, selon lui trompeuse, entre individu et société, en repartant d'une unité plus élémentaire : le lien qui les rattache déjà l'un à l'autre avant toute distinction.",
+    },
+    exemples: [
+      "Un enfant et ses parents, liés par un besoin réciproque — de soins d'un côté, de reconnaissance et d'affection de l'autre — bien avant qu'aucun choix n'intervienne.",
+      "Une chaîne de production où un retard à un poste modifie mécaniquement le travail de tous les postes suivants, sans qu'aucun d'eux ne l'ait décidé.",
+    ],
+    oeuvres: [
+      { y: '1970', t: "Qu'est-ce que la sociologie ?" },
+      { y: '1939', t: 'La Civilisation des mœurs' },
+    ],
+    associes: ['configuration', 'dependance-fonctionnelle'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Boudon objecterait qu'insister sur l'interdépendance ne dispense pas d'expliquer une action précise par les raisons que l'individu, lui, avait de l'accomplir.",
+      "Le concept, très général, décrit une condition permanente de la vie sociale plutôt qu'un mécanisme précis, ce qui le rend difficile à mettre en défaut empiriquement.",
+      "Il dit peu des situations où l'interdépendance elle-même est radicalement inégale, certains pesant beaucoup plus lourd que d'autres dans le même réseau.",
+    ],
+    evolution: [
+      { p: '1939', f: "L'idée d'interdépendance travaille déjà La Civilisation des mœurs, sans porter ce nom précis." },
+      { p: '1970', f: "Qu'est-ce que la sociologie ? en fait le fondement explicite de la notion de configuration." },
+    ],
+  },
+  'dependance-fonctionnelle': {
+    detaille: [
+      "La dépendance fonctionnelle est la forme précise d'interdépendance que produit la division du travail : à mesure que les fonctions se spécialisent, chacun devient dépendant de chaînes toujours plus longues de personnes qui accomplissent des tâches qu'il ne sait plus faire lui-même.",
+      "Elias en tire un renversement du sens commun : la modernisation n'a pas rendu les individus plus indépendants, elle les a rendus dépendants de bien plus de monde à la fois, même si cette dépendance, diffuse et anonyme, se ressent moins directement qu'une dépendance personnelle envers un seigneur ou un maître.",
+      "Cette dépendance n'est pas symétrique : dans toute chaîne fonctionnelle, certains maillons pèsent plus que d'autres, ce qui distribue inégalement le pouvoir sans jamais l'abolir complètement, même chez ceux qui semblent en détenir le plus.",
+    ],
+    origine: {
+      oeuvre: 'La Dynamique de l\'Occident',
+      annee: '1939',
+      contexte:
+        "Elias développe cette idée en retraçant la formation des États européens, où la centralisation du pouvoir s'accompagne d'un allongement continu des chaînes fonctionnelles reliant les individus entre eux.",
+    },
+    exemples: [
+      "Un habitant de grande ville qui ne sait plus produire sa propre nourriture, entièrement dépendant d'une chaîne d'inconnus — agriculteurs, transporteurs, commerçants — pour se nourrir chaque jour.",
+      "Un cadre dont l'autonomie apparente masque une dépendance étroite envers des collègues, des fournisseurs et des clients qu'il ne maîtrise en réalité que très partiellement.",
+    ],
+    oeuvres: [
+      { y: '1939', t: "La Dynamique de l'Occident" },
+      { y: '1970', t: "Qu'est-ce que la sociologie ?" },
+    ],
+    associes: ['interdependance', 'configuration'],
+    opposes: ['individualisme'],
+    critiques: [
+      "Tocqueville objecterait que le sentiment d'indépendance individuelle, même illusoire au regard de la dépendance fonctionnelle réelle, a lui-même des effets politiques et sociaux bien concrets qu'on ne peut ignorer.",
+      "Le concept dit peu des mécanismes précis par lesquels certaines dépendances se transforment en rapports de domination durables plutôt qu'en simples échanges de service.",
+      "Il repose sur un récit européen de longue durée dont la transposition à d'autres histoires de division du travail reste à établir.",
+    ],
+    evolution: [
+      { p: '1939', f: "La Dynamique de l'Occident relie centralisation étatique et allongement des chaînes fonctionnelles." },
+      { p: '1970', f: "Qu'est-ce que la sociologie ? généralise le principe à toute société différenciée." },
+    ],
+  },
+  'autocontrole': {
+    detaille: [
+      "L'autocontrôle est la contrainte que chacun exerce sur soi-même, sans surveillance extérieure directe, pour retenir des pulsions et des conduites qu'une contrainte sociale imposait autrefois depuis l'extérieur — le mécanisme psychologique au cœur du processus de civilisation.",
+      "Il ne s'installe pas d'un coup ni par décret : il se construit progressivement, dès l'enfance, par une répétition de corrections dont la personne finit par ne plus avoir conscience comme telles — au point de ressentir une gêne spontanée là où, quelques siècles plus tôt, personne n'aurait rien trouvé à redire.",
+      "Elias insiste sur son coût psychique : cet autocontrôle constant, devenu automatique, n'est jamais entièrement acquis ; il demande une vigilance de tous les instants, qui peut elle-même se relâcher dans certaines circonstances — d'où les « poussées de décivilisation » qu'il observera plus tard.",
+    ],
+    origine: {
+      oeuvre: 'La Civilisation des mœurs',
+      annee: '1939',
+      contexte:
+        "Elias tire des traités de savoir-vivre européens, du Moyen Âge au XIXᵉ siècle, la trace d'une transformation psychologique de longue durée : des interdits d'abord imposés du dehors, devenus peu à peu des réflexes intériorisés.",
+    },
+    exemples: [
+      "Un bâillement retenu en public, sans qu'aucune règle explicite n'ait besoin d'être rappelée pour que le réflexe de le cacher s'impose de lui-même.",
+      "Une colère contenue en réunion, alors que rien ni personne n'empêcherait physiquement de l'exprimer librement.",
+    ],
+    oeuvres: [
+      { y: '1939', t: 'La Civilisation des mœurs' },
+    ],
+    associes: ['processus-de-civilisation', 'psychogenese'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Freud, dont Elias s'inspire, situe le refoulement dans une économie psychique universelle, quand Elias en fait un phénomène historiquement daté et variable selon les sociétés — la comparaison entre les deux reste discutée.",
+      "Le concept dit peu des inégalités sociales dans l'accès à cet autocontrôle : certains groupes en ont longtemps été jugés dépourvus, jugement qui a servi à justifier leur domination.",
+      "Il repose sur des sources — manuels de savoir-vivre — qui disent surtout ce qu'une élite prescrivait, non ce que chacun ressentait réellement.",
+    ],
+    evolution: [
+      { p: 'Moyen Âge–XIXᵉ s.', f: "Les traités de savoir-vivre européens documentent le déplacement progressif de la contrainte, de l'extérieur vers l'intérieur." },
+      { p: '1939', f: "Elias formalise l'autocontrôle comme pièce centrale du processus de civilisation." },
+      { p: '1980–2000', f: "Elias revient sur le concept pour expliquer les poussées de décivilisation, où cet autocontrôle se relâche brutalement." },
+    ],
+  },
+  'monopole-de-la-violence': {
+    detaille: [
+      "Le monopole de la violence est, chez Elias, le résultat d'un long processus de compétition entre pouvoirs rivaux — seigneurs, villes, princes — qui s'éliminent et s'absorbent les uns les autres jusqu'à ce qu'un seul centre concentre à la fois la force armée et l'impôt sur un territoire donné.",
+      "Il rejoint ainsi Weber sur le constat, mais en déplace la question : là où Weber définit l'État par ce monopole déjà constitué, Elias cherche à expliquer comment ce monopole s'est formé — par un mécanisme de concurrence et d'élimination qu'il appelle le « mécanisme monopolistique ».",
+      "Sa conséquence psychologique est décisive dans son œuvre : une fois la violence privée interdite et concentrée entre les mains d'un pouvoir central, les individus n'ont plus le droit de se faire justice eux-mêmes, ce qui les oblige à déplacer leurs conflits vers des formes plus contrôlées, plus différées — et pousse au développement de l'autocontrôle.",
+    ],
+    origine: {
+      oeuvre: 'La Dynamique de l\'Occident',
+      annee: '1939',
+      contexte:
+        "Elias retrace, sur plusieurs siècles, la compétition entre seigneurs féodaux qui aboutit, en France, à la concentration progressive du pouvoir armé et fiscal entre les mains de la monarchie, puis de l'État moderne.",
+    },
+    exemples: [
+      "Des duels privés autrefois tolérés, puis interdits par une autorité centrale de plus en plus seule habilitée à trancher les conflits par la force.",
+      "Une région autrefois parcourue de milices seigneuriales rivales, pacifiée une fois qu'un pouvoir central unique a réussi à désarmer les autres prétendants.",
+    ],
+    oeuvres: [
+      { y: '1939', t: "La Dynamique de l'Occident" },
+    ],
+    associes: ['processus-de-civilisation', 'autocontrole'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le récit reste centré sur la trajectoire européenne, en particulier française, et se transpose mal à des formations étatiques nées dans d'autres conditions historiques.",
+      "Il explique la concentration du pouvoir par un mécanisme presque automatique de compétition, ce qui laisse peu de place aux choix politiques délibérés des acteurs concernés.",
+      "Le monopole, une fois constitué, connaît lui-même des ruptures et des reculs que le modèle décrit moins bien que sa formation initiale.",
+    ],
+    evolution: [
+      { p: 'IXᵉ–XIIIᵉ s.', f: "La compétition féodale entre seigneurs rivaux prépare, sans le vouloir, la concentration future du pouvoir." },
+      { p: '1922', f: "Weber définit l'État moderne par ce monopole déjà constitué, sans en retracer la genèse historique." },
+      { p: '1939', f: "Elias en propose la genèse complète, à travers le mécanisme monopolistique." },
+    ],
+  },
+  'dynamique-des-relations': {
+    detaille: [
+      "La dynamique des relations est l'insistance d'Elias sur le fait qu'aucune configuration sociale n'est jamais figée : elle se transforme sans cesse, à mesure que chaque acteur, en poursuivant ses propres fins, modifie sans le vouloir la position de tous les autres.",
+      "Cette dynamique n'a ni chef d'orchestre ni finalité assignée d'avance : comme une partie d'échecs jouée à des milliers, chaque coup change l'équilibre général sans qu'aucun joueur, même le plus puissant, ne maîtrise entièrement la suite du jeu.",
+      "Elias en fait le fondement d'une véritable sociologie des processus, opposée à toute analyse qui traiterait la société comme une structure stable qu'il suffirait de décrire à un instant donné, sans se soucier de son mouvement propre.",
+    ],
+    origine: {
+      oeuvre: "Qu'est-ce que la sociologie ?",
+      annee: '1970',
+      contexte:
+        "Elias défend une sociologie processuelle contre les approches structuralistes ou fonctionnalistes de son temps, qu'il juge trop attachées à des états stables plutôt qu'au mouvement continu des relations sociales.",
+    },
+    exemples: [
+      "Un marché du travail dont l'équilibre se déplace en permanence à mesure que chaque recrutement modifie la position relative de tous les candidats encore en lice.",
+      "Une rivalité sportive dont chaque victoire redistribue les positions de tous les concurrents, sans qu'aucun classement ne reste jamais acquis.",
+    ],
+    oeuvres: [
+      { y: '1970', t: "Qu'est-ce que la sociologie ?" },
+      { y: '1969', t: 'La Société de cour' },
+    ],
+    associes: ['configuration', 'sociogenese'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Parsons objecterait qu'une société a besoin d'un minimum d'équilibre stable pour simplement se reproduire, ce qu'une insistance exclusive sur le mouvement risque de sous-estimer.",
+      "Le concept, très général, décrit une propriété de toute vie sociale plutôt qu'un mécanisme précis et testable.",
+      "Il dit peu des périodes de relative stabilité, pourtant observables historiquement, où le mouvement des relations ralentit sensiblement sans jamais s'arrêter tout à fait.",
+    ],
+    evolution: [
+      { p: '1939', f: "Le principe processuel travaille déjà La Dynamique de l'Occident, dans son titre même." },
+      { p: '1970', f: "Qu'est-ce que la sociologie ? en fait un principe méthodologique explicite, contre le structuralisme et le fonctionnalisme." },
+    ],
+  },
+  'sociogenese': {
+    detaille: [
+      "La sociogenèse est la méthode par laquelle Elias retrace, sur plusieurs siècles, la formation progressive des institutions sociales — l'État, la cour, les manières de table — pour comprendre non ce qu'elles sont figées à un instant, mais comment elles sont devenues ce qu'elles sont.",
+      "Elle s'oppose à toute analyse qui prendrait une institution comme une donnée déjà là, à décrire dans sa seule structure présente : pour Elias, comprendre un phénomène social suppose toujours de reconstituer le long processus historique qui l'a produit.",
+      "Elle va toujours de pair, dans son œuvre, avec la psychogenèse : les transformations sociales de longue durée et les transformations de la structure psychique des individus s'expliquent l'une par l'autre, jamais l'une sans l'autre.",
+    ],
+    origine: {
+      oeuvre: 'La Civilisation des mœurs',
+      annee: '1939',
+      contexte:
+        "Elias construit cette méthode pour expliquer, plutôt que simplement décrire, la formation des manières européennes modernes — en la reliant systématiquement à la formation parallèle des États centralisés.",
+    },
+    exemples: [
+      "L'histoire longue de la centralisation étatique française, reconstituée sur plusieurs siècles plutôt que décrite comme un fait acquis une fois pour toutes.",
+      "La formation progressive de l'étiquette de cour, dont chaque règle porte la trace d'une rivalité de pouvoir aujourd'hui oubliée.",
+    ],
+    oeuvres: [
+      { y: '1939', t: 'La Civilisation des mœurs' },
+      { y: '1969', t: 'La Société de cour' },
+    ],
+    associes: ['dynamique-des-relations', 'psychogenese', 'processus-de-civilisation'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'expliquer un fait social exige de le rattacher à d'autres faits sociaux présents, non de le dissoudre dans une généalogie historique toujours plus longue.",
+      "La méthode suppose des sources continues sur plusieurs siècles, rarement disponibles avec la même richesse pour toutes les sociétés et toutes les institutions.",
+      "Elle peut donner le sentiment d'un récit linéaire et orienté, alors même qu'Elias récuse toute idée de progrès nécessaire.",
+    ],
+    evolution: [
+      { p: '1939', f: "La Civilisation des mœurs applique la méthode sociogénétique aux manières européennes." },
+      { p: '1969', f: 'La Société de cour en fait la démonstration la plus aboutie, à propos de Versailles.' },
+      { p: '1970', f: "Qu'est-ce que la sociologie ? formalise la méthode et sa complémentarité avec la psychogenèse." },
+    ],
+  },
+  'psychogenese': {
+    detaille: [
+      "La psychogenèse est le versant individuel de la méthode d'Elias : retracer, sur la longue durée, comment la structure psychique des individus — leur économie des pulsions, leur seuil de honte, leur capacité d'autocontrôle — s'est elle-même transformée au fil des siècles.",
+      "Elle refuse de traiter la psychologie comme une donnée universelle et intemporelle, la même à toute époque : pour Elias, la sensibilité, la pudeur ou le seuil de tolérance à la violence ont une histoire, qui se lit dans les mêmes sources que l'histoire sociale.",
+      "Son originalité tient à ce lien constant avec la sociogenèse : la structure psychique d'un individu à une époque donnée n'est jamais indépendante de la configuration sociale — chaînes d'interdépendance, monopole de la violence — dans laquelle il grandit.",
+    ],
+    origine: {
+      oeuvre: 'La Civilisation des mœurs',
+      annee: '1939',
+      contexte:
+        "Elias s'inspire de la psychanalyse freudienne, mais en historicise les catégories : le refoulement et la formation du surmoi ne sont plus, chez lui, des invariants, mais des processus dont l'intensité varie selon les époques.",
+    },
+    exemples: [
+      "Un seuil de tolérance à la violence physique très différent selon les siècles, documenté par l'évolution des châtiments jugés acceptables ou scandaleux.",
+      "Une pudeur corporelle croissante, visible dans l'évolution des règles concernant la nudité et les fonctions corporelles au fil des traités de civilité.",
+    ],
+    oeuvres: [
+      { y: '1939', t: 'La Civilisation des mœurs' },
+    ],
+    associes: ['sociogenese', 'autocontrole', 'processus-de-civilisation'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Freud objecterait qu'une part de l'économie psychique qu'Elias historicise relève en réalité de structures universelles, communes à toutes les sociétés humaines.",
+      "Le concept repose sur des sources indirectes — traités de savoir-vivre — pour reconstituer des états psychiques qu'aucune source directe ne permet d'observer.",
+      "Il peine à rendre compte des variations psychiques à l'intérieur d'une même époque, entre classes sociales ou entre individus soumis à des configurations différentes.",
+    ],
+    evolution: [
+      { p: '1900–1930', f: "Freud élabore la théorie du refoulement et de la formation du surmoi, matrice dont Elias s'inspire." },
+      { p: '1939', f: "La Civilisation des mœurs historicise ces catégories dans une perspective sociogénétique." },
+      { p: '1970', f: "Qu'est-ce que la sociologie ? formalise le lien systématique entre psychogenèse et sociogenèse." },
+    ],
+  },
 
   /* — Robert K. Merton — */
   'fonction-latente': {
@@ -7348,6 +7573,265 @@ export const CONCEPTS = {
       { p: '1785', f: "Kant pose l'universalisme moral que Habermas retravaille, en le faisant reposer sur la discussion plutôt que sur la seule raison solitaire." },
       { p: '1983', f: "Habermas formule l'éthique de la discussion dans Morale et communication." },
       { p: '1991', f: "Apel développe en parallèle une fondation transcendantale voisine de l'éthique du discours." },
+    ],
+  },
+
+  /* — Anthony Giddens — */
+  'structuration': {
+    detaille: [
+      "La structuration est le processus par lequel les structures sociales — règles et ressources — sont à la fois le médium et le résultat des pratiques qu'elles organisent : un acteur puise dans des règles déjà là pour agir, et cet acte même reconduit, ou légèrement déplace, les règles dont il s'est servi.",
+      "Giddens rompt ainsi avec l'idée d'une structure figée, extérieure à l'action, qui existerait indépendamment du moment où elle est mobilisée : une structure qui ne serait jamais instanciée dans aucune pratique n'existe tout simplement pas, elle n'est qu'une possibilité.",
+      "Ce processus n'a ni auteur unique ni terme : chaque pratique quotidienne, aussi routinière soit-elle, participe à la structuration en cours, sans que personne n'en pilote l'ensemble ni n'en connaisse l'issue à l'avance.",
+    ],
+    origine: {
+      oeuvre: 'La Constitution de la société',
+      annee: '1984',
+      contexte:
+        "Giddens y systématise une théorie construite depuis une décennie, pour dépasser une opposition qu'il juge stérile entre sociologies de la structure et sociologies de l'action.",
+    },
+    exemples: [
+      "Une langue qui n'existe que parce qu'on la parle, et que chaque phrase prononcée reconduit ou fait légèrement évoluer.",
+      "Une file d'attente dont la règle implicite — respecter son tour — n'existe que parce que chacun continue de s'y plier, jour après jour.",
+    ],
+    oeuvres: [
+      { y: '1979', t: 'Central Problems in Social Theory' },
+      { y: '1984', t: 'La Constitution de la société' },
+    ],
+    associes: ['dualite-de-la-structure', 'agentivite'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Archer objecte que fondre à ce point structure et action empêche d'étudier empiriquement comment l'une pèse sur l'autre dans le temps : à force de dualité, on perd toute prise analytique.",
+      "Le concept reste très général et abstrait, ce qui rend difficile sa traduction en protocole d'enquête précis.",
+      "Il dit peu des situations où la structuration échoue franchement : une règle qui ne parvient jamais à s'instaurer, ou qui se défait brutalement.",
+    ],
+    evolution: [
+      { p: '1976', f: "New Rules of Sociological Method esquisse le programme d'une sociologie qui dépasse l'opposition structure/action." },
+      { p: '1979', f: 'Central Problems in Social Theory pose les premiers éléments de la théorie de la structuration.' },
+      { p: '1984', f: 'La Constitution de la société en donne l\'exposé systématique complet.' },
+    ],
+  },
+  'dualite-de-la-structure': {
+    detaille: [
+      "La dualité de la structure est la thèse centrale de Giddens : la structure n'est jamais seulement une contrainte extérieure à l'acteur, elle est aussi ce qui rend son action possible — son médium autant que son résultat, jamais l'un sans l'autre.",
+      "Giddens s'oppose ainsi à un dualisme classique en sociologie, qui traite structure et action comme deux ordres séparés, l'un contraignant l'autre de l'extérieur : dans sa théorie, il n'y a jamais de structure « en dehors » de l'action qui la mobilise à chaque instant.",
+      "Cette dualité change le sens même de la contrainte : une règle grammaticale limite ce qu'on peut dire, mais c'est cette même règle qui rend la parole intelligible — sans elle, aucune communication ne serait seulement possible.",
+    ],
+    origine: {
+      oeuvre: 'La Constitution de la société',
+      annee: '1984',
+      contexte:
+        "Giddens forge cette formule pour marquer sa différence avec toute théorie qui réduirait la structure à un simple obstacle extérieur à l'action, structuralisme comme fonctionnalisme.",
+    },
+    exemples: [
+      "Une règle de politesse qui limite ce qu'on peut dire, et sans laquelle on ne saurait même pas comment s'adresser à un inconnu.",
+      "Un code de la route qui contraint la conduite, tout en étant la condition même qui rend la circulation possible sans accident généralisé.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'La Constitution de la société' },
+    ],
+    associes: ['structuration', 'habitus'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'un fait social garde une extériorité et une contrainte propres, qu'une dualité trop symétrique entre structure et action risque de dissoudre.",
+      "Le concept ne dit pas toujours clairement à quel moment une structure cesse d'habiliter pour ne plus que contraindre, ni pour qui.",
+      "La comparaison avec l'habitus de Bourdieu reste débattue : les deux notions se recoupent largement, sans que Giddens ni Bourdieu n'aient vraiment tranché ce qui les distingue.",
+    ],
+    evolution: [
+      { p: '1972', f: "Bourdieu formule l'habitus, dont la dualité de la structure partage largement l'ambition théorique." },
+      { p: '1984', f: "Giddens formalise la dualité de la structure dans La Constitution de la société." },
+    ],
+  },
+  'agentivite': {
+    detaille: [
+      "L'agentivité est la capacité de tout acteur social à agir autrement qu'il ne le fait, à intervenir dans le cours des événements et à produire des effets — une capacité que Giddens tient pour irréductible, même dans les situations les plus contraintes.",
+      "Elle ne se confond pas avec un libre arbitre absolu : un acteur agentif reste toujours pris dans des structures qui l'habilitent autant qu'elles le limitent, mais il conserve, à l'intérieur même de cette contrainte, une marge réelle de manœuvre.",
+      "Giddens en tire ce qu'il appelle la dialectique du contrôle : même dans les rapports de domination les plus déséquilibrés, le dominé garde toujours quelques ressources pour peser, même modestement, sur la relation qui le contraint.",
+    ],
+    origine: {
+      oeuvre: 'La Constitution de la société',
+      annee: '1984',
+      contexte:
+        "Giddens développe ce concept pour éviter deux écueils symétriques : un acteur totalement libre, indépendant de toute structure, et un acteur totalement déterminé, simple exécutant de règles qui le dépasseraient entièrement.",
+    },
+    exemples: [
+      "Un salarié sans réel pouvoir de décision qui trouve, malgré tout, dans le rythme de son propre travail, une marge d'action bien réelle.",
+      "Un détenu qui, dans un cadre carcéral extrêmement contraint, conserve certaines marges — refuser un ordre secondaire, ralentir une tâche — que le règlement ne parvient jamais à éliminer complètement.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'La Constitution de la société' },
+    ],
+    associes: ['structuration', 'reflexivite'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Bourdieu objecterait que cette marge de manœuvre, souvent minime, ne suffit pas à contredire l'essentiel : la reproduction des rapports de domination bien plus que leur transformation.",
+      "Le concept, en insistant sur la capacité d'agir de tous, risque de minimiser des situations où cette capacité est en réalité réduite à presque rien.",
+      "Il dit peu de ce qui distingue une agentivité qui transforme réellement une structure d'une agentivité qui se contente, sans le savoir, de la reproduire à l'identique.",
+    ],
+    evolution: [
+      { p: '1979', f: "Central Problems in Social Theory pose les bases de la théorie de l'action de Giddens." },
+      { p: '1984', f: "La Constitution de la société formalise l'agentivité et la dialectique du contrôle." },
+    ],
+  },
+  'reflexivite': {
+    detaille: [
+      "La réflexivité est la surveillance constante que tout acteur exerce sur sa propre conduite, sur les raisons qui la motivent et sur les conditions dans lesquelles elle se déroule — une compétence ordinaire, exercée en continu, rarement portée à un niveau de conscience explicite.",
+      "Giddens en fait une propriété générale de l'action humaine, mais montre qu'elle s'intensifie fortement dans la modernité tardive : faute de tradition qui tranche à l'avance, chacun doit revoir en permanence ses propres pratiques à la lumière d'informations toujours renouvelées.",
+      "Cette réflexivité ne s'arrête pas à l'individu : les institutions elles-mêmes deviennent réflexives, révisant sans cesse leurs propres règles à mesure que de nouvelles connaissances remettent en cause celles qui les avaient jusque-là fondées.",
+    ],
+    origine: {
+      oeuvre: 'La Constitution de la société',
+      annee: '1984',
+      contexte:
+        "Giddens distingue la surveillance réflexive de l'action de deux autres dimensions — la rationalisation et la motivation — pour donner un compte rendu précis de ce que fait un acteur en agissant, au-delà de la seule intention.",
+    },
+    exemples: [
+      "Un parent qui réajuste en permanence sa manière d'éduquer à mesure que de nouveaux repères, souvent contradictoires, lui parviennent.",
+      "Une entreprise qui révise chaque année son organisation interne à la lumière des dernières études sur le travail, plutôt que de la fixer une fois pour toutes.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'La Constitution de la société' },
+      { y: '1991', t: 'Modernity and Self-Identity' },
+    ],
+    associes: ['agentivite', 'modernite-reflexive'],
+    opposes: ['moeurs'],
+    critiques: [
+      "Tocqueville objecterait que les mœurs, précisément parce qu'elles ne se discutent pas, offrent une stabilité que la réflexivité généralisée sacrifie sans toujours rien y gagner en retour.",
+      "Le concept suppose des ressources — temps, information, formation — pour exercer cette surveillance réflexive, inégalement réparties selon la position sociale.",
+      "Il dit peu des situations où la réflexivité elle-même devient source d'angoisse plutôt que de maîtrise, faute de repère stable auquel se rattacher.",
+    ],
+    evolution: [
+      { p: '1984', f: "La Constitution de la société pose la réflexivité comme dimension permanente de toute action." },
+      { p: '1991', f: "Modernity and Self-Identity en étend l'analyse à la construction réflexive de l'identité personnelle." },
+      { p: '1994', f: "Reflexive Modernization en généralise le principe à l'échelle des institutions et de la société entière." },
+    ],
+  },
+  'modernite-reflexive': {
+    detaille: [
+      "La modernité réflexive désigne une phase de la modernité où institutions et individus ne peuvent plus s'appuyer sur des certitudes transmises : ils doivent réviser en permanence leurs propres pratiques à la lumière de connaissances sans cesse renouvelées, elles-mêmes toujours provisoires.",
+      "Giddens, Beck et Lash la distinguent d'une première modernité, dite « simple », qui avait pu prendre ses propres fondements pour acquis — le progrès, la science, la nation — sans les remettre sans cesse en question.",
+      "Cette réflexivité généralisée produit un paradoxe : plus le savoir s'accumule, moins il offre de certitude définitive, chaque avancée ouvrant aussitôt de nouvelles questions plutôt que de clore le débat.",
+    ],
+    origine: {
+      oeuvre: 'Reflexive Modernization',
+      annee: '1994',
+      contexte:
+        "Giddens publie cet ouvrage collectif avec Ulrich Beck et Scott Lash pour formaliser une thèse déjà présente dans Les Conséquences de la modernité : la modernité avancée se caractérise par une réflexivité qui la retourne sans cesse sur elle-même.",
+    },
+    exemples: [
+      "Un protocole médical réécrit chaque année à la lumière des dernières études, plutôt que fixé une fois pour toutes.",
+      "Une politique climatique révisée en continu à mesure que de nouvelles données scientifiques en corrigent les hypothèses de départ.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Les Conséquences de la modernité' },
+      { y: '1994', t: 'Reflexive Modernization (avec U. Beck et S. Lash)' },
+    ],
+    associes: ['reflexivite', 'detraditionalisation', 'desencastrement'],
+    opposes: ['processus-de-civilisation'],
+    critiques: [
+      "Elias objecterait que les grandes transformations de longue durée qu'il décrit tiennent à des mécanismes largement non voulus et non maîtrisés, quand la réflexivité suppose au contraire une révision délibérée et consciente.",
+      "Le concept prête à tous une capacité de révision réflexive que les ressources — temps, information, éducation — distribuent en réalité très inégalement.",
+      "Certains critiques objectent que la thèse généralise à l'excès une expérience propre aux classes moyennes éduquées des pays riches.",
+    ],
+    evolution: [
+      { p: '1990', f: "Les Conséquences de la modernité pose les bases de la réflexivité institutionnelle généralisée." },
+      { p: '1994', f: "Reflexive Modernization en donne, avec Beck et Lash, la formulation la plus systématique." },
+      { p: '1986', f: "Beck avait, de son côté, déjà posé les bases de la société du risque, sur laquelle s'appuie la thèse commune." },
+    ],
+  },
+  'detraditionalisation': {
+    detaille: [
+      "La détraditionalisation est la perte progressive de l'autorité qu'exerçait la coutume sur la conduite : ce qui allait autrefois de soi, parce que « cela s'est toujours fait ainsi », doit désormais se justifier explicitement pour continuer d'exister.",
+      "Giddens insiste sur un paradoxe : la tradition ne disparaît pas nécessairement, mais elle change de statut — on peut continuer de la suivre, mais seulement après l'avoir choisie et justifiée, ce qui la transforme déjà profondément, même sans y toucher en apparence.",
+      "Cette érosion touche aussi bien les grandes institutions — religion, famille, nation — que les gestes les plus ordinaires, désormais soumis à un examen réflexif qu'aucune autorité transmise ne suffit plus à clore d'avance.",
+    ],
+    origine: {
+      oeuvre: 'Beyond Left and Right',
+      annee: '1994',
+      contexte:
+        "Giddens développe ce concept pour comprendre pourquoi les grands clivages politiques traditionnels, gauche et droite, perdent de leur évidence dans une société où la tradition elle-même a cessé de trancher les questions à l'avance.",
+    },
+    exemples: [
+      "Un choix de vie familial qui doit aujourd'hui s'expliquer, là où il aurait autrefois semblé n'appeler aucune justification.",
+      "Une pratique religieuse suivie non plus par simple héritage, mais après un examen personnel qui pourrait tout aussi bien conclure à l'abandonner.",
+    ],
+    oeuvres: [
+      { y: '1994', t: 'Beyond Left and Right' },
+      { y: '1994', t: 'Reflexive Modernization (avec U. Beck et S. Lash)' },
+    ],
+    associes: ['modernite-reflexive', 'reflexivite'],
+    opposes: ['moeurs'],
+    critiques: [
+      "Tocqueville objecterait qu'une société entièrement détraditionalisée priverait ses membres du socle de mœurs communes sur lequel il fait pourtant reposer la démocratie elle-même.",
+      "Le concept surestime peut-être l'ampleur réelle du phénomène : de nombreuses pratiques continuent d'être transmises sans jamais faire l'objet d'un véritable examen réflexif.",
+      "Il dit peu des mouvements inverses, bien réels, de retraditionalisation volontaire que connaissent aussi certaines sociétés contemporaines.",
+    ],
+    evolution: [
+      { p: '1990', f: "Les Conséquences de la modernité pose les bases de l'érosion de la tradition dans la modernité avancée." },
+      { p: '1994', f: "Beyond Left and Right nomme et développe la détraditionalisation comme concept autonome." },
+    ],
+  },
+  'distanciation-spatio-temporelle': {
+    detaille: [
+      "La distanciation spatio-temporelle est l'étirement des relations sociales au-delà de la coprésence locale : des techniques de coordination — l'horloge, la carte, l'imprimerie, puis les réseaux numériques — permettent de relier des personnes séparées par de grandes distances et de longs intervalles de temps.",
+      "Giddens en fait un trait distinctif de la modernité : les sociétés traditionnelles organisaient l'essentiel de la vie sociale dans le cadre étroit du face-à-face local, quand la modernité rend possibles des relations aussi solides entre inconnus séparés par des milliers de kilomètres.",
+      "Cette distanciation ne dissout pas le local, elle le recompose : chaque lieu reste habité par des relations directes, mais de plus en plus traversé, façonné et parfois bouleversé par des forces sociales qui prennent leur origine bien au-delà de lui.",
+    ],
+    origine: {
+      oeuvre: 'Les Conséquences de la modernité',
+      annee: '1990',
+      contexte:
+        "Giddens y systématise une réflexion déjà présente dans La Constitution de la société sur le rôle des techniques de coordination — horloge mécanique, imprimerie — dans l'étirement moderne des relations sociales.",
+    },
+    exemples: [
+      "Une réunion de travail qui rassemble, au même instant, des personnes situées sur trois continents différents.",
+      "Une correspondance entretenue sur plusieurs décennies entre deux personnes qui ne se rencontrent en personne que rarement, voire jamais.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'La Constitution de la société' },
+      { y: '1990', t: 'Les Conséquences de la modernité' },
+    ],
+    associes: ['desencastrement', 'modernite-reflexive'],
+    opposes: ['interaction-en-face-a-face'],
+    critiques: [
+      "Goffman objecterait qu'une part irréductible de la vie sociale continue de se jouer dans l'ordre de l'interaction en face-à-face, que la seule distanciation ne suffit pas à expliquer.",
+      "Le concept traite la distance comme un simple étirement technique, sans toujours dire ce qui se perd réellement dans le passage du face-à-face à la relation distante.",
+      "Il dit peu des inégalités d'accès aux techniques de distanciation, qui restent réparties de façon très inégale selon les régions et les revenus.",
+    ],
+    evolution: [
+      { p: 'XIVᵉ s.', f: "L'horloge mécanique introduit une mesure du temps détachée du rythme naturel des saisons et des jours." },
+      { p: 'XVᵉ s.', f: "L'imprimerie permet une diffusion de l'écrit indépendante de la présence de son auteur." },
+      { p: '1984–1990', f: "Giddens systématise le concept de distanciation spatio-temporelle comme trait central de la modernité." },
+    ],
+  },
+  'desencastrement': {
+    detaille: [
+      "Le désencastrement est le détachement des relations sociales de leur contexte local immédiat, et leur restructuration à travers des étendues indéfinies d'espace et de temps — ce que Giddens appelle, en anglais, le disembedding.",
+      "Il en identifie deux mécanismes principaux : les jetons symboliques, comme la monnaie, qui fonctionnent de façon identique quels que soient les individus concernés et le lieu de l'échange ; et les systèmes experts, ces savoirs techniques qui organisent une large part de notre environnement matériel et social sans que nous en maîtrisions nous-mêmes les principes.",
+      "Ce détachement n'élimine jamais tout à fait le contexte local : Giddens parle de « réencastrement » pour désigner les moments où ces mécanismes désencastrés doivent malgré tout se réancrer localement, par exemple dans la confiance accordée à un professionnel précis plutôt qu'au seul système abstrait qu'il représente.",
+    ],
+    origine: {
+      oeuvre: 'Les Conséquences de la modernité',
+      annee: '1990',
+      contexte:
+        "Giddens y développe ce concept pour expliquer comment la modernité rend possible une coordination sociale à très grande échelle, sans dépendre des relations de confiance personnelle qui suffisaient aux sociétés traditionnelles.",
+    },
+    exemples: [
+      "Un billet de banque qui vaut exactement la même chose, quel que soit l'inconnu qui le reçoit, sans qu'aucune relation personnelle ne l'ait garanti.",
+      "Un passager d'avion qui fait confiance à un système technique entier — pilotage, maintenance, contrôle aérien — sans en connaître ni en maîtriser aucun des rouages.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Les Conséquences de la modernité' },
+    ],
+    associes: ['distanciation-spatio-temporelle', 'modernite-reflexive'],
+    opposes: ['capital-economique'],
+    critiques: [
+      "Marx objecterait qu'un jeton symbolique comme la monnaie n'est jamais aussi neutre que le concept le suggère : elle reste porteuse de rapports de production et de classe bien concrets.",
+      "Le concept insiste sur la confiance envers les systèmes experts, mais dit peu de ce qui se passe quand cette confiance se rompt largement, comme lors d'une crise financière ou sanitaire.",
+      "Il repose sur une distinction entre local et désencastré qui reste parfois difficile à tracer précisément dans des situations concrètes très mêlées.",
+    ],
+    evolution: [
+      { p: '1900', f: "Simmel analyse déjà l'économie monétaire comme une force qui distend les rapports personnels traditionnels." },
+      { p: '1990', f: "Giddens formalise le désencastrement et ses deux mécanismes dans Les Conséquences de la modernité." },
     ],
   },
 };

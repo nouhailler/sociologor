@@ -404,7 +404,7 @@ export const THEORIES = [
     d: "Sur la longue durée, la violence interpersonnelle directe recule en Europe à mesure que les États centralisent le monopole de la force et que les individus intériorisent un contrôle de soi qu'une contrainte extérieure leur imposait auparavant.",
     detail:
       "Elias relie deux mouvements simultanés : la monopolisation de la violence légitime par des États de plus en plus centralisés retire aux particuliers le droit de se faire justice eux-mêmes, tandis que l'allongement des chaînes d'interdépendance sociale rend chacun plus attentif aux conséquences de ses propres emportements. Le résultat n'est pas une disparition de la violence, mais son déplacement — vers des formes plus indirectes, plus différées dans le temps, et plus honteuses lorsqu'elle éclate malgré tout au grand jour.",
-    concepts: ['processus-de-civilisation', 'configuration'],
+    concepts: ['processus-de-civilisation', 'configuration', 'monopole-de-la-violence', 'autocontrole'],
   },
   {
     id: 'loi-des-soins-inverses-tudor-hart',

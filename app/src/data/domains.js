@@ -152,7 +152,7 @@ export const DOMAINS_ADDED = [
     t: 'Mobilités',
     nom: 'Sociologie des mobilités',
     d: "Se déplacer n'est jamais neutre : les vitesses et les trajets ont leurs privilégiés.",
-    a: ['simmel'],
+    a: ['simmel', 'giddens'],
   },
   {
     id: 'environnement',

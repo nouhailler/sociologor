@@ -10,11 +10,11 @@ export const DOMAINS = [
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
   { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
-  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons'] },
+  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
   { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski'] },
   { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas'] },
-  { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte'] },
+  { id: 'methode', t: 'Méthode', d: "Traiter les faits sociaux comme des choses — ou comprendre le sens que les acteurs y mettent.", a: ['durkheim', 'weber', 'comte', 'giddens'] },
   { id: 'inegalites', t: 'Mobilité sociale', d: "Monter, descendre, rester : la circulation entre positions et ses illusions.", a: ['boudon', 'bourdieu', 'merton'] },
   { id: 'famille', t: 'Famille', d: "L'institution la plus intime est aussi la plus transmettrice.", a: ['durkheim', 'bourdieu', 'tocqueville', 'parsons'] },
 ];
@@ -215,8 +215,15 @@ export const AUTHORS = {
     concepts: [
       { id: 'processus-de-civilisation', t: 'Processus de civilisation', year: '1939', simple: "Les contraintes venues de l'extérieur deviennent peu à peu des contraintes qu'on s'impose soi-même.", ex: "Personne ne surveille plus votre manière de manger : c'est vous qui ne supporteriez pas de le faire autrement." },
       { id: 'configuration', t: 'Configuration', year: '1970', simple: "Ni individu ni société d'abord : un tissu de relations d'interdépendance où chacun tient les autres.", ex: "Une équipe où le retard d'une seule personne réorganise la journée de dix autres." },
+      { id: 'interdependance', t: 'Interdépendance', year: '1970', simple: "Le lien de base entre des êtres humains liés par le besoin, l'affect ou la fonction — l'unité première de toute sociologie selon Elias.", ex: "Un nourrisson et ses parents, liés par un besoin réciproque bien avant qu'aucun choix n'intervienne." },
+      { id: 'dependance-fonctionnelle', t: 'Dépendance fonctionnelle', year: '1939', simple: "Plus la division du travail se spécialise, plus chacun dépend de chaînes toujours plus longues de personnes qu'il ne connaît pas.", ex: "Un citadin qui ne sait plus rien produire lui-même, entièrement dépendant d'inconnus pour se nourrir chaque jour." },
+      { id: 'autocontrole', t: 'Autocontrôle', year: '1939', simple: "La contrainte que chacun exerce sur soi sans surveillance extérieure, cœur psychologique du processus de civilisation.", ex: "Une colère contenue en réunion, alors que rien ni personne n'empêcherait physiquement de l'exprimer." },
+      { id: 'monopole-de-la-violence', t: 'Monopole de la violence', year: '1939', simple: "Le résultat d'une longue compétition entre pouvoirs rivaux, jusqu'à ce qu'un seul centre concentre force armée et impôt.", ex: "Des milices seigneuriales rivales, désarmées une fois qu'un pouvoir central a fini par s'imposer seul." },
+      { id: 'dynamique-des-relations', t: 'Dynamique des relations', year: '1970', simple: "Aucune configuration sociale n'est figée : elle se transforme sans cesse, sans chef d'orchestre ni finalité assignée.", ex: "Un marché du travail dont l'équilibre se déplace à chaque recrutement, sans qu'aucun classement ne reste jamais acquis." },
+      { id: 'sociogenese', t: 'Sociogenèse', year: '1939', simple: "La méthode qui retrace, sur plusieurs siècles, comment une institution sociale est devenue ce qu'elle est.", ex: "L'étiquette de cour, dont chaque règle porte la trace d'une rivalité de pouvoir aujourd'hui oubliée." },
+      { id: 'psychogenese', t: 'Psychogenèse', year: '1939', simple: "Le versant individuel de la méthode d'Elias : comment la structure psychique elle-même s'est transformée dans l'histoire.", ex: "Un seuil de tolérance à la violence très différent selon les siècles, documenté par l'évolution des châtiments jugés acceptables." },
     ],
-    oeuvres: [{ y: '1939', t: 'La Civilisation des mœurs' }, { y: '1939', t: 'La Dynamique de l\'Occident' }, { y: '1970', t: "Qu'est-ce que la sociologie ?" }],
+    oeuvres: [{ y: '1939', t: 'La Civilisation des mœurs' }, { y: '1939', t: 'La Dynamique de l\'Occident' }, { y: '1969', t: 'La Société de cour' }, { y: '1970', t: "Qu'est-ce que la sociologie ?" }],
     citations: [{ t: "La société n'est ni un amas d'individus ni une entité au-dessus d'eux.", src: "Qu'est-ce que la sociologie ?, 1970" }],
     critiques: ["Un récit occidental, accusé de laisser entendre un progrès moral.", "Les sources — traités de savoir-vivre — reflètent l'élite plus que le peuple."],
     up: ['simmel'], down: ['bourdieu'], x: 250, y: 530,
@@ -458,6 +465,26 @@ export const AUTHORS = {
     critiques: ["Un idéal de discussion libre de toute contrainte jugé irréaliste dans des sociétés traversées d'inégalités de parole.", "Les post-structuralistes lui reprochent de vouloir sauver un universalisme des Lumières que le pouvoir traverse de part en part."],
     up: ['francfort', 'weber', 'parsons'], down: [], x: 470, y: 530,
   },
+  giddens: {
+    id: 'giddens', name: 'Anthony Giddens', initials: 'AG', dates: '1938–', nat: 'Royaume-Uni', periode: 'Contemporain',
+    courant: 'Théorie de la structuration',
+    hook: "Il refuse de choisir entre la structure qui contraint et l'acteur qui agit : chaque pratique fabrique l'une par l'autre.",
+    resume: "Giddens montre que les structures sociales ne sont ni des cages extérieures ni de simples habitudes : elles n'existent qu'à travers les pratiques qui, en les mobilisant, les reproduisent ou les transforment.",
+    concepts: [
+      { id: 'structuration', t: 'Structuration', year: '1984', simple: "Les structures sociales sont à la fois le moyen et le résultat des pratiques qu'elles organisent, reproduites ou transformées à chaque fois qu'on s'en sert.", ex: "Une coutume de bureau qui ne tient que parce que chacun continue, jour après jour, à s'y conformer sans y penser." },
+      { id: 'dualite-de-la-structure', t: 'Dualité de la structure', year: '1984', simple: "La structure n'est pas qu'une contrainte extérieure à l'action : elle est aussi ce qui la rend possible, son médium autant que son résultat.", ex: "Un rituel familial qui contraint chacun à sa place, tout en étant ce qui permet à la famille de se retrouver sans avoir à tout renégocier." },
+      { id: 'agentivite', t: 'Agentivité', year: '1984', simple: "La capacité d'un acteur à agir autrement, à peser sur le cours des choses, même dans les situations les plus contraintes.", ex: "Un salarié sans réel pouvoir de décision qui trouve malgré tout, dans le rythme de son propre travail, une marge d'action bien réelle." },
+      { id: 'reflexivite', t: 'Réflexivité', year: '1984', simple: "La surveillance constante que chacun exerce sur sa propre conduite et sur les raisons qui la justifient.", ex: "Un sportif qui revoit sans cesse sa technique à la lumière de chaque nouvelle performance, plutôt que de répéter un même geste appris une fois pour toutes." },
+      { id: 'modernite-reflexive', t: 'Modernité réflexive', year: '1994', simple: "Une modernité où institutions et individus révisent sans cesse leurs propres pratiques à la lumière de connaissances nouvelles, faute de tradition qui tranche à leur place.", ex: "Une entreprise qui révise chaque année sa charte interne à mesure que de nouvelles normes et de nouveaux usages s'imposent." },
+      { id: 'detraditionalisation', t: 'Détraditionalisation', year: '1994', simple: "La perte progressive de l'autorité qu'avait la coutume : ce qui allait de soi doit désormais se justifier plutôt que se répéter.", ex: "Un rite de passage autrefois transmis sans discussion, aujourd'hui choisi et justifié par ceux qui décident malgré tout de le perpétuer." },
+      { id: 'distanciation-spatio-temporelle', t: 'Distanciation spatio-temporelle', year: '1990', simple: "L'étirement des relations sociales au-delà du face-à-face local, rendu possible par des techniques de coordination à distance.", ex: "Un contrat signé entre deux entreprises qui ne se rencontreront jamais physiquement, coordonnées à distance sur plusieurs années." },
+      { id: 'desencastrement', t: 'Désencastrement', year: '1990', simple: "Le détachement des relations sociales de leur contexte local immédiat, via des jetons symboliques et des systèmes experts.", ex: "Un médicament pris en confiance, sans que son utilisateur ne comprenne rien à la chimie qui le rend efficace." },
+    ],
+    oeuvres: [{ y: '1976', t: 'New Rules of Sociological Method' }, { y: '1984', t: 'La Constitution de la société' }, { y: '1990', t: 'Les Conséquences de la modernité' }, { y: '1991', t: 'Modernity and Self-Identity' }, { y: '1994', t: 'Reflexive Modernization (avec U. Beck et S. Lash)' }],
+    citations: [{ t: "La structure n'est pas à confondre avec la contrainte : elle est toujours à la fois contraignante et habilitante.", src: "d'après La Constitution de la société, 1984" }],
+    critiques: ["Archer lui reproche une « conflation centrale » : fondre structure et agent au point de ne plus pouvoir observer empiriquement lequel agit sur l'autre.", "Une théorie jugée plus philosophique qu'opérationnelle, qui peine à se traduire en méthode d'enquête précise.", "La modernité réflexive suppose une capacité de révision permanente que tous n'ont pas également les moyens d'exercer."],
+    up: ['weber', 'durkheim', 'goffman'], down: [], x: 250, y: 690,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -631,7 +658,17 @@ export const EXTRA = {
       "Emmanuel Kant — l'universalisme moral, retravaillé en éthique de la discussion",
     ],
   },
+  giddens: {
+    prenom: 'Anthony', nom: 'Giddens', disc: ["Philosophie — l'héritage de Wittgenstein sur le suivi de règles", "Sciences politiques — conseiller de Tony Blair, théoricien de la « troisième voie »", 'Études sur le risque et l\'environnement — la modernité comme production de risques inédits'], biblio: ['P. Cabin (dir.), Anthony Giddens, sociologue de la modernité, Sciences Humaines, 2010', 'W. Outhwaite, Anthony Giddens, Polity, 2009'],
+    portrait: { kind: 'monogram', alt: 'Monogramme d’Anthony Giddens', credit: "Photographies sous droits : aucune image libre disponible (personnalité vivante)." },
+    horsCorpus: [
+      "Harold Garfinkel — l'ethnométhodologie et la conscience pratique des acteurs ordinaires",
+      "Ludwig Wittgenstein — suivre une règle sans avoir besoin de la formuler",
+      "Ulrich Beck — coauteur de la modernisation réflexive, sociologue de la société du risque",
+      "Karl Marx — dont Giddens retravaille et critique le matérialisme historique sans y souscrire entièrement",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0]];
 
