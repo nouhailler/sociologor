@@ -220,11 +220,10 @@ export const PROCESSUS = [
       "Une extension de l'instabilité au logement, à la santé ou au budget, au-delà du seul emploi",
       "Une normalisation de l'incertitude, vécue comme la condition ordinaire plutôt que comme une passe difficile",
     ],
-    concepts: ['nouvel-esprit-du-capitalisme', 'alienation'],
+    concepts: ['nouvel-esprit-du-capitalisme', 'alienation', 'precariat'],
     phenomenes: ['precarite-professionnelle', 'chomage', 'exclusion-sociale'],
     notions: [
       "Statut d'emploi — la variable la plus suivie pour mesurer la précarisation, du CDI à l'intérim",
-      "Précariat — un terme proposé pour désigner un groupe social défini par l'instabilité plutôt que par le métier",
       "Trappe à précarité — l'idée que certains dispositifs, censés aider, enferment plutôt dans l'instabilité",
       "Sécurisation des parcours — les politiques qui tentent, avec des résultats inégaux, de ralentir le processus",
     ],
@@ -244,7 +243,7 @@ export const PROCESSUS = [
       "Une zone de vulnérabilité, où l'instabilité touche à la fois le travail et les relations",
       "Une zone de désaffiliation, où l'absence de travail et l'absence de liens se renforcent l'une l'autre",
     ],
-    concepts: ['anomie', 'etiquetage'],
+    concepts: ['anomie', 'etiquetage', 'zone-de-vulnerabilite', 'zone-de-desaffiliation', 'fragilisation-du-salariat'],
     phenomenes: ['exclusion-sociale', 'pauvrete'],
     notions: [
       "Zones d'intégration — le schéma de Robert Castel, qui distingue intégration, vulnérabilité et désaffiliation",
@@ -267,10 +266,9 @@ export const PROCESSUS = [
       "Une responsabilisation accrue : la réussite ou l'échec du parcours se lisent comme un mérite ou une faute individuels, plus rarement comme un effet de structure",
       "Une recomposition de liens plus choisis, mais aussi plus fragiles, que les cadres collectifs qu'ils remplacent",
     ],
-    concepts: ['egalisation-des-conditions', 'individualisme-methodologique'],
+    concepts: ['egalisation-des-conditions', 'individualisme-methodologique', 'corps-intermediaires', 'individualisme', 'atomisation-sociale'],
     phenomenes: ['monoparentalite', 'homogamie-sociale'],
     notions: [
-      "Corps intermédiaires — les cadres collectifs (corporations, paroisses, familles élargies) dont l'affaiblissement libère et isole à la fois",
       "Réflexivité biographique — la nécessité de justifier et d'ajuster en permanence son propre parcours, faute de scénario tout tracé",
       "Individualisme négatif — l'expression de Robert Castel pour une individualisation subie plus que choisie, faute de protections collectives",
       "Recomposition familiale — une des formes les plus visibles de choix individualisé, là où le mariage à vie allait autrefois de soi",

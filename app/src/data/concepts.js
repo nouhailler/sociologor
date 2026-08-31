@@ -6372,6 +6372,420 @@ export const CONCEPTS = {
       { p: '1974', f: "Noelle-Neumann le retrouve en science des médias sous le nom de spirale du silence." },
     ],
   },
+  'individualisme': {
+    detaille: [
+      "Tocqueville forge le mot en français pour nommer un sentiment nouveau : un penchant calme et réfléchi qui pousse chacun à se replier sur le petit cercle de sa famille et de ses amis, et à abandonner volontiers la société plus large à elle-même.",
+      "Il le distingue soigneusement de l'égoïsme, vice ancien et passionné qui préfère soi à tout : l'individualisme est plus froid, il ne hait pas les autres, il s'en désintéresse simplement, sans y penser comme à un choix moral.",
+      "Ce sentiment n'a rien d'universel ni d'éternel : il naît précisément de l'égalisation des conditions, qui rompt les chaînes de dépendance aristocratiques reliant chaque homme à ses supérieurs, ses égaux et ses inférieurs, et le laisse seul, égal à tous, mais isolé de chacun.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome II',
+      annee: '1840',
+      contexte:
+        "Tocqueville consacre plusieurs chapitres du second tome aux effets de l'égalité sur les sentiments, et y introduit ce mot alors tout nouveau pour décrire un repli qu'aucune langue n'avait encore eu besoin de nommer précisément.",
+    },
+    exemples: [
+      "Un voisinage où chacun s'occupe scrupuleusement de son jardin et de ses proches, sans jamais chercher à savoir ce qui se décide au conseil municipal.",
+      "Une vie professionnelle et familiale bien remplie qui laisse, année après année, de moins en moins de place à l'engagement dans une cause commune.",
+    ],
+    oeuvres: [
+      { y: '1840', t: 'De la démocratie en Amérique, tome II' },
+    ],
+    associes: ['egalisation-des-conditions', 'atomisation-sociale', 'passion-du-bien-etre'],
+    opposes: ['esprit-civique'],
+    critiques: [
+      "Le mot, popularisé bien au-delà de son sens tocquevillien précis, en vient souvent à désigner n'importe quelle valorisation de l'individu, y compris des formes que Tocqueville aurait plutôt approuvées.",
+      "Durkheim objecterait qu'un individualisme bien compris peut aussi devenir, dans les sociétés à solidarité organique, un ciment collectif plutôt qu'un simple facteur de dissolution.",
+      "Le diagnostic reste daté sur une Amérique et une France du XIXᵉ siècle ; il transpose mal des sociétés dont l'histoire aristocratique n'est pas la même.",
+    ],
+    evolution: [
+      { p: '1835', f: "Le mot circule déjà, employé de façon péjorative par les penseurs contre-révolutionnaires français." },
+      { p: '1840', f: "Tocqueville lui donne sa définition sociologique précise, distincte de l'égoïsme." },
+      { p: '1893', f: "Durkheim en propose une lecture bien plus positive dans De la division du travail social." },
+    ],
+  },
+  'atomisation-sociale': {
+    detaille: [
+      "L'atomisation sociale est l'état vers lequel tend une société où les liens intermédiaires — corporations, ordres, communautés locales fortement structurées — ont disparu, laissant face à face des individus isolés et un pouvoir central qui n'a plus, entre lui et eux, aucun relais.",
+      "Tocqueville y voit moins un accident qu'une tendance de fond des sociétés démocratiques : l'égalité, en rendant chacun semblable et indépendant, dissout aussi les solidarités de rang qui, dans l'aristocratie, reliaient malgré tout les hommes entre eux.",
+      "Le paradoxe est cruel : ces individus atomisés, chacun trop faible seul pour résister au pouvoir central, se retrouvent paradoxalement plus exposés à lui qu'ils ne l'étaient sous l'aristocratie, où les corps intermédiaires faisaient écran.",
+    ],
+    origine: {
+      oeuvre: "L'Ancien Régime et la Révolution",
+      annee: '1856',
+      contexte:
+        "Tocqueville montre que la monarchie absolue avait déjà, avant même la Révolution, détruit méthodiquement les corps intermédiaires de l'Ancien Régime, préparant sans le savoir le terrain d'une société d'individus isolés face à l'État.",
+    },
+    exemples: [
+      "Un quartier neuf où personne ne connaît son voisin, et où toute décision commune passe directement par une administration lointaine.",
+      "Une profession dont l'ancien ordre professionnel a disparu, laissant chaque praticien seul face à une réglementation centrale sans relais local.",
+    ],
+    oeuvres: [
+      { y: '1856', t: "L'Ancien Régime et la Révolution" },
+      { y: '1840', t: 'De la démocratie en Amérique, tome II' },
+    ],
+    associes: ['individualisme', 'corps-intermediaires', 'centralisation'],
+    opposes: ['associations'],
+    critiques: [
+      "Le tableau, très sombre, sous-estime les nouvelles formes de lien — syndicats, partis, mouvements sociaux — que les sociétés démocratiques ont su inventer après Tocqueville.",
+      "Il idéalise rétrospectivement les corps intermédiaires de l'Ancien Régime, souvent eux-mêmes porteurs de privilèges peu enviables pour qui en était exclu.",
+      "Durkheim reprendra le diagnostic sous le nom d'anomie, mais en proposera un remède différent : des groupes professionnels recréés plutôt qu'un simple retour à l'association volontaire.",
+    ],
+    evolution: [
+      { p: '1789–1799', f: "La Révolution achève, plus qu'elle ne commence, la destruction des corps intermédiaires selon Tocqueville." },
+      { p: '1840', f: "De la démocratie en Amérique décrit déjà le risque d'isolement propre aux sociétés égalitaires." },
+      { p: '1856', f: "L'Ancien Régime en retrace la généalogie administrative sur trois siècles." },
+      { p: '1893', f: "Durkheim reformule le même diagnostic sous le concept d'anomie." },
+    ],
+  },
+  'centralisation': {
+    detaille: [
+      "La centralisation est la concentration progressive de toutes les décisions, même les plus locales, entre les mains d'une administration unique et lointaine — une tendance que Tocqueville observe non comme un produit de la Révolution française, mais comme l'héritage direct de la monarchie absolue qui l'a précédée.",
+      "Elle se distingue de la simple centralisation gouvernementale, qui concerne les grandes affaires de l'État, par son caractère administratif : elle s'étend jusqu'aux détails les plus ordinaires de la vie locale, qu'un pouvoir central prétend régler mieux que les intéressés eux-mêmes.",
+      "Tocqueville y voit une pente naturelle des sociétés démocratiques, non un simple choix politique : l'égalité, en effaçant les corps intermédiaires capables de gérer eux-mêmes leurs affaires, laisse le champ libre à un pouvoir central qui n'a plus, face à lui, que des individus isolés et trop faibles pour s'y opposer.",
+    ],
+    origine: {
+      oeuvre: "L'Ancien Régime et la Révolution",
+      annee: '1856',
+      contexte:
+        "Tocqueville dépouille les archives administratives de l'intendance pour montrer que l'État royal réglait déjà, avant 1789, les moindres détails de la vie provinciale — thèse qui contredit l'idée reçue d'une Révolution rompant avec l'absolutisme.",
+    },
+    exemples: [
+      "Une décision d'urbanisme locale qui doit remonter, pour être validée, jusqu'à une administration centrale à des centaines de kilomètres.",
+      "Un règlement uniforme appliqué sans distinction à des situations locales très différentes, faute d'autorité locale habilitée à l'adapter.",
+    ],
+    oeuvres: [
+      { y: '1856', t: "L'Ancien Régime et la Révolution" },
+    ],
+    associes: ['atomisation-sociale', 'despotisme-democratique'],
+    opposes: ['decentralisation'],
+    critiques: [
+      "La thèse de la continuité entre monarchie et Révolution a été discutée par des historiens qui insistent, à l'inverse, sur la rupture institutionnelle réelle de 1789.",
+      "Le tableau néglige les bénéfices réels de la centralisation — égalité de traitement, cohérence des politiques publiques — qu'une gestion purement locale ne garantit pas toujours.",
+      "Il repose largement sur le seul cas français, dont la centralisation administrative est particulièrement poussée par comparaison internationale.",
+    ],
+    evolution: [
+      { p: 'XVIIᵉ siècle', f: "La monarchie absolue développe l'intendance, matrice de l'administration centralisée française." },
+      { p: '1789–1799', f: "La Révolution reprend et systématise, selon Tocqueville, les instruments administratifs de la monarchie." },
+      { p: '1856', f: "L'Ancien Régime documente cette continuité à partir des archives royales." },
+    ],
+  },
+  'decentralisation': {
+    detaille: [
+      "La décentralisation est, pour Tocqueville, le principal antidote à la centralisation démocratique : confier aux communes et aux collectivités locales la gestion de leurs propres affaires, plutôt que de tout remonter vers un pouvoir central unique.",
+      "Il en admire le modèle américain, la township de Nouvelle-Angleterre, où les habitants gèrent eux-mêmes routes, écoles et assistance publique, sans attendre d'instruction venue de plus haut — une pratique qu'il juge décisive, bien plus que la seule Constitution fédérale.",
+      "Son efficacité tient à ce qu'elle rend visible, à l'échelle d'un village, le lien entre décision et conséquence : celui qui vote une dépense locale en ressent directement l'effet, ce qu'aucune décision prise à distance ne permet d'éprouver aussi clairement.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome I',
+      annee: '1835',
+      contexte:
+        "Tocqueville consacre les premiers chapitres du tome I à la commune américaine, qu'il présente comme le véritable berceau de la liberté politique, avant même d'aborder les institutions fédérales.",
+    },
+    exemples: [
+      "Un conseil municipal qui décide seul de l'entretien de sa voirie, sans validation d'une autorité régionale ou nationale.",
+      "Une école gérée par un comité de parents et d'habitants, plutôt que par une administration éloignée qui n'en connaît pas les besoins précis.",
+    ],
+    oeuvres: [
+      { y: '1835', t: 'De la démocratie en Amérique, tome I' },
+    ],
+    associes: ['participation-citoyenne', 'associations', 'esprit-civique'],
+    opposes: ['centralisation'],
+    critiques: [
+      "Le modèle de la commune américaine, très localisé, se transpose mal à des États dont l'histoire administrative est déjà fortement centralisée, comme la France.",
+      "Une gestion trop décentralisée peut reproduire, à l'échelle locale, des inégalités entre communes riches et communes pauvres qu'une politique centrale corrigerait mieux.",
+      "Tocqueville idéalise une Nouvelle-Angleterre homogène et puritaine, peu représentative de l'ensemble des États-Unis qu'il a traversés.",
+    ],
+    evolution: [
+      { p: '1620–1640', f: "Les colonies puritaines de Nouvelle-Angleterre développent une tradition d'autogouvernement communal." },
+      { p: '1835', f: "Tocqueville en fait le modèle décentralisé qui protège la liberté américaine de la centralisation." },
+      { p: '1982', f: "Les lois françaises de décentralisation invoquent explicitement, un siècle et demi plus tard, cet héritage tocquevillien." },
+    ],
+  },
+  'associations': {
+    detaille: [
+      "Les associations sont, pour Tocqueville, l'invention la plus originale des Américains : la capacité à se réunir librement, sans attendre l'initiative de l'État, pour poursuivre en commun n'importe quel but — commercial, moral, religieux ou politique.",
+      "Il en fait un contrepoids essentiel à l'individualisme démocratique : l'association apprend à des individus isolés à coopérer, à négocier, à faire confiance à d'autres qu'eux-mêmes — un apprentissage que rien, dans la vie privée, ne procure aussi efficacement.",
+      "Sa fonction dépasse le seul objet immédiat de chaque association : en s'associant pour une cause mineure, on acquiert « l'art de s'associer », transférable ensuite à des causes plus vastes, y compris proprement politiques.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome II',
+      annee: '1840',
+      contexte:
+        "Tocqueville est frappé par la profusion d'associations américaines de toute nature, qu'il met en rapport direct avec la vigueur de la vie politique locale, contrairement à une France où l'État a longtemps découragé ce type de regroupement.",
+    },
+    exemples: [
+      "Un club de quartier fondé pour organiser une fête, dont les membres se retrouvent ensuite naturellement pour porter une revendication municipale.",
+      "Une association de parents d'élèves qui, en apprenant à négocier avec une administration scolaire, se découvre capable d'interpeller d'autres pouvoirs publics.",
+    ],
+    oeuvres: [
+      { y: '1840', t: 'De la démocratie en Amérique, tome II' },
+    ],
+    associes: ['corps-intermediaires', 'esprit-civique', 'decentralisation'],
+    opposes: ['atomisation-sociale'],
+    critiques: [
+      "Toutes les associations ne servent pas la démocratie : certaines organisent au contraire l'exclusion ou la défense d'intérêts étroits et fermés.",
+      "Le tableau américain de 1835 décrit une société encore largement homogène ; il dit peu de la capacité des associations à intégrer une société profondément divisée.",
+      "Putnam, plus d'un siècle plus tard, documentera un net déclin de la vie associative américaine, contredisant l'optimisme initial de Tocqueville sur sa pérennité.",
+    ],
+    evolution: [
+      { p: '1835–1840', f: "Tocqueville documente la profusion des associations américaines et leur rôle politique." },
+      { p: '1893', f: "Durkheim, dans une veine proche, voit dans les groupements professionnels un remède possible à l'anomie." },
+      { p: '2000', f: "Putnam, dans Bowling Alone, documente un déclin du capital social associatif américain que Tocqueville n'avait pas anticipé." },
+    ],
+  },
+  'despotisme-democratique': {
+    detaille: [
+      "Le despotisme démocratique est une forme de pouvoir absolu propre aux sociétés d'égaux : non plus la tyrannie brutale d'un seul, mais une tutelle douce, prévoyante et détaillée, qui prend en charge le bonheur des citoyens au prix de leur autonomie.",
+      "Tocqueville le décrit comme un pouvoir « immense et tutélaire » qui ne brise pas les volontés, il les amollit : il ne persécute pas, il gêne, comprime, énerve, éteint, hébète, jusqu'à réduire chaque nation à « un troupeau d'animaux timides et industrieux dont le gouvernement est le berger ».",
+      "Ce despotisme trouve un terrain d'autant plus favorable que l'individualisme a déjà isolé les citoyens les uns des autres : chacun, trop occupé de son propre bien-être, en vient à accepter, voire à réclamer, une tutelle qui le dispense de s'occuper des affaires communes.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome II',
+      annee: '1840',
+      contexte:
+        "Tocqueville conclut le second tome par ce tableau saisissant, présenté comme un péril propre aux démocraties, distinct des despotismes anciens que l'histoire avait jusque-là connus.",
+    },
+    exemples: [
+      "Une administration qui réglemente jusqu'aux détails de la vie quotidienne « pour le bien » des administrés, sans plus attendre d'eux qu'une obéissance tranquille.",
+      "Une population qui en vient à préférer la sécurité offerte par une tutelle omniprésente à l'incertitude d'une liberté qu'il faudrait exercer soi-même.",
+    ],
+    oeuvres: [
+      { y: '1840', t: 'De la démocratie en Amérique, tome II, quatrième partie' },
+    ],
+    associes: ['tyrannie-de-la-majorite', 'centralisation', 'passion-du-bien-etre'],
+    opposes: ['corps-intermediaires'],
+    critiques: [
+      "Le tableau reste une anticipation spéculative en 1840 : Tocqueville ne peut l'illustrer par aucun régime réellement observé de son temps.",
+      "Certains lecteurs du XXᵉ siècle l'ont rapproché des totalitarismes, alors que Tocqueville décrit précisément un pouvoir doux et non violent, d'une tout autre nature.",
+      "Le concept explique mal les résistances et les mobilisations démocratiques bien réelles qui, depuis 1840, ont contredit ce scénario dans de nombreux pays.",
+    ],
+    evolution: [
+      { p: '1840', f: "Tocqueville décrit le despotisme démocratique comme péril propre aux sociétés égalitaires." },
+      { p: '1859', f: "Mill s'en inspire pour mettre en garde contre l'excès de réglementation étatique dans De la liberté." },
+      { p: '1970–2000', f: "Le concept nourrit les critiques de l'État-providence bureaucratique et de sa dimension infantilisante." },
+    ],
+  },
+  'passion-de-l-egalite': {
+    detaille: [
+      "La passion de l'égalité est, selon Tocqueville, le sentiment le plus puissant et le plus universel des sociétés démocratiques : plus fort encore que l'amour de la liberté, au point qu'un peuple peut renoncer à celle-ci sans jamais renoncer à celle-là.",
+      "Sa formule la plus célèbre le résume : les hommes préfèrent l'égalité dans la servitude à l'inégalité dans la liberté — ils tolèrent un maître commun plus aisément qu'un privilège que d'autres détiendraient et pas eux.",
+      "Cette passion ne s'apaise jamais tout à fait : plus l'égalité progresse, plus les inégalités qui subsistent, même minimes, deviennent insupportables — un mécanisme qui alimente une insatisfaction permanente au cœur même du progrès égalitaire.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome II',
+      annee: '1840',
+      contexte:
+        "Tocqueville ouvre le second tome par une analyse des passions démocratiques, pour expliquer pourquoi l'amour de l'égalité l'emporte si souvent, dans les choix politiques réels, sur l'amour de la liberté.",
+    },
+    exemples: [
+      "Un régime autoritaire mais également répressif pour tous, jugé plus supportable qu'une démocratie où subsisteraient des privilèges visibles pour quelques-uns.",
+      "Une réforme fiscale acceptée sans résistance dès lors qu'elle s'applique identiquement à tous, même si elle réduit la liberté de chacun d'en disposer.",
+    ],
+    oeuvres: [
+      { y: '1840', t: 'De la démocratie en Amérique, tome II' },
+    ],
+    associes: ['egalisation-des-conditions', 'passion-du-bien-etre'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "Marx objecterait qu'une telle « passion » n'est pas un sentiment psychologique autonome mais l'expression, dans la conscience, d'un rapport de classe bien réel qu'elle ne fait que traduire.",
+      "La formule, frappante, reste difficile à vérifier empiriquement : comment mesurer la préférence collective entre deux passions à ce point abstraites ?",
+      "Elle explique mal les révolutions et mouvements historiques où la revendication de liberté a précisément prévalu sur celle d'égalité, au moins temporairement.",
+    ],
+    evolution: [
+      { p: '1840', f: "Tocqueville formule la passion de l'égalité comme sentiment dominant des sociétés démocratiques." },
+      { p: '1966–1980', f: "Aron et Boudon en font une clé de lecture pour comprendre les révolutions et mouvements égalitaires du XXᵉ siècle." },
+    ],
+  },
+  'passion-du-bien-etre': {
+    detaille: [
+      "La passion du bien-être est le goût, propre aux sociétés démocratiques, pour le confort matériel et la sécurité tranquille — un goût que l'égalité rend particulièrement puissant, en mettant à portée de presque tous des jouissances autrefois réservées à quelques-uns.",
+      "Tocqueville n'y voit pas un vice en soi, mais un risque politique majeur : cette passion, si elle devient exclusive, détourne les citoyens des affaires publiques, jugées trop absorbantes ou trop incertaines au regard du confort tranquille qu'elles menaceraient.",
+      "Elle nourrit ainsi, sans intention hostile de personne, le terrain sur lequel un despotisme démocratique peut s'installer : un peuple occupé de son seul bien-être privé finit par accepter, voire par réclamer, qu'une puissance tutélaire le débarrasse du souci des affaires communes.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome II',
+      annee: '1840',
+      contexte:
+        "Tocqueville observe chez les Américains un attachement intense au bien-être matériel, qu'il met directement en relation avec le risque, à ses yeux le plus sérieux, d'un désintérêt progressif pour la vie publique.",
+    },
+    exemples: [
+      "Un citoyen qui renonce à assister à une réunion publique, jugée moins urgente qu'un projet domestique en cours.",
+      "Une génération qui préfère investir son énergie dans le confort du foyer plutôt que dans un engagement associatif ou politique incertain.",
+    ],
+    oeuvres: [
+      { y: '1840', t: 'De la démocratie en Amérique, tome II' },
+    ],
+    associes: ['individualisme', 'despotisme-democratique', 'passion-de-l-egalite'],
+    opposes: ['esprit-civique'],
+    critiques: [
+      "Le diagnostic prête aux classes populaires un attachement au confort matériel qui reflète surtout une observation faite depuis une position sociale déjà aisée.",
+      "Il néglige les cas, nombreux dans l'histoire, où la recherche du bien-être matériel a elle-même motivé un engagement politique actif, plutôt que son abandon.",
+      "L'opposition entre bien-être privé et vie publique paraît aujourd'hui trop tranchée, alors que beaucoup de mobilisations contemporaines portent justement sur les conditions matérielles de vie.",
+    ],
+    evolution: [
+      { p: '1840', f: "Tocqueville identifie la passion du bien-être comme moteur central des sociétés démocratiques modernes." },
+      { p: '1950–1970', f: "La société de consommation d'après-guerre est souvent relue à la lumière de ce diagnostic." },
+    ],
+  },
+  'moeurs': {
+    detaille: [
+      "Les mœurs désignent, chez Tocqueville, l'ensemble des habitudes, des croyances et des dispositions morales d'un peuple — ce que les lois écrites ne disent pas mais que la pratique quotidienne transmet, souvent sans que personne ne l'énonce comme une règle.",
+      "Il en fait le facteur le plus décisif de la réussite démocratique américaine, avant même les institutions et les circonstances géographiques : une constitution recopiée à l'identique échouerait ailleurs si les mœurs qui la font vivre n'existaient pas.",
+      "Les mœurs se transmettent lentement, par l'éducation, la religion et surtout la pratique répétée des affaires locales : c'est en participant, année après année, à la vie de sa commune qu'un citoyen finit par intérioriser des habitudes que nulle loi ne pourrait lui imposer de l'extérieur.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome I',
+      annee: '1835',
+      contexte:
+        "Tocqueville conclut le premier tome en classant, par ordre d'importance décroissante, les causes du maintien de la démocratie américaine : les circonstances physiques d'abord, les lois ensuite, et les mœurs enfin — mais c'est aux mœurs qu'il accorde le poids le plus déterminant.",
+    },
+    exemples: [
+      "Une même loi électorale qui produit des résultats très différents selon que la population est habituée, ou non, à en débattre et à en contester l'application.",
+      "Une tradition locale de bénévolat qui rend possible une gestion communale que des textes juridiques, seuls, ne suffiraient jamais à organiser.",
+    ],
+    oeuvres: [
+      { y: '1835', t: 'De la démocratie en Amérique, tome I' },
+    ],
+    associes: ['esprit-civique', 'associations'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'une explication par les mœurs, trop dépendante des dispositions individuelles intériorisées, manque la contrainte proprement collective et extérieure du fait social.",
+      "Le concept, très englobant, risque d'expliquer après coup n'importe quel succès ou échec institutionnel par des mœurs jugées, rétrospectivement, favorables ou défavorables.",
+      "Il repose sur une observation impressionniste des mœurs américaines, difficile à comparer systématiquement à celles d'autres pays.",
+    ],
+    evolution: [
+      { p: '1835', f: "Tocqueville classe les mœurs au premier rang des causes du succès démocratique américain." },
+      { p: '1893', f: "Durkheim déplace l'explication vers les faits sociaux, extérieurs et contraignants, plutôt que vers les mœurs intériorisées." },
+    ],
+  },
+  'esprit-civique': {
+    detaille: [
+      "L'esprit civique est la disposition à s'intéresser activement aux affaires communes, à s'y sentir concerné et responsable, au-delà du seul cercle des intérêts privés — l'exact contrepoids de l'individualisme démocratique.",
+      "Tocqueville insiste sur son origine pratique plutôt que morale : on ne l'enseigne pas d'abord par un discours sur le devoir civique, on l'acquiert en participant concrètement, dès l'échelle la plus locale, à une décision qui engage un collectif.",
+      "C'est cet apprentissage progressif, de la commune vers des enjeux plus vastes, que Tocqueville juge irremplaçable : un citoyen qui n'a jamais eu à décider de rien à petite échelle n'apprend pas soudainement, à l'échelle nationale, à se sentir responsable du bien commun.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome I',
+      annee: '1835',
+      contexte:
+        "Tocqueville observe, dans la commune américaine, un attachement des habitants à leurs affaires locales qu'il attribue directement à leur participation réelle à la décision, et non à un sentiment abstrait de patriotisme.",
+    },
+    exemples: [
+      "Un habitant qui suit de près une réunion de quartier sur un aménagement local, parce qu'il a lui-même contribué à la décision qui en a précédé le principe.",
+      "Un jeune qui découvre, en participant à une association étudiante, un intérêt pour des enjeux collectifs qu'aucun cours théorique ne lui avait suscité.",
+    ],
+    oeuvres: [
+      { y: '1835', t: 'De la démocratie en Amérique, tome I' },
+    ],
+    associes: ['participation-citoyenne', 'decentralisation', 'associations'],
+    opposes: ['individualisme'],
+    critiques: [
+      "Le lien entre participation locale et engagement national reste plus affirmé que démontré : rien ne garantit qu'une compétence acquise à petite échelle se transfère automatiquement à une plus grande.",
+      "Le concept néglige les obstacles matériels — temps, ressources, information — qui empêchent en pratique une part importante de la population de s'engager, quelle que soit sa bonne volonté civique.",
+      "Il suppose des affaires locales suffisamment substantielles pour susciter un intérêt réel, ce qui n'est pas garanti dans toutes les configurations administratives.",
+    ],
+    evolution: [
+      { p: '1835', f: "Tocqueville lie l'esprit civique à la pratique concrète des affaires locales, plus qu'à un sentiment abstrait." },
+      { p: '1963', f: "Almond et Verba en feront, sous le nom de culture civique, un objet central de la science politique comparée." },
+    ],
+  },
+  'participation-citoyenne': {
+    detaille: [
+      "La participation citoyenne est la pratique concrète par laquelle les habitants prennent eux-mêmes part aux affaires publiques locales — réunions communales, jurys, charges administratives bénévoles — plutôt que de simplement obéir à des décisions prises ailleurs.",
+      "Tocqueville en fait la véritable école de la démocratie : c'est en participant, souvent à des affaires modestes, que les citoyens américains acquièrent une compétence politique qu'aucun cours théorique ni aucune constitution, à eux seuls, ne pourraient transmettre.",
+      "Cette participation a un effet formateur qui dépasse son objet immédiat : elle apprend à négocier, à accepter une décision collective même défavorable, et à considérer les affaires communes comme siennes plutôt que comme celles d'une administration extérieure.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome I',
+      annee: '1835',
+      contexte:
+        "Tocqueville est frappé par l'ampleur des charges publiques exercées bénévolement par de simples citoyens américains — du jury au conseil municipal — et par l'apprentissage politique qu'elles procurent.",
+    },
+    exemples: [
+      "Un habitant qui accepte une charge municipale non rémunérée, et qui en retire une compréhension concrète des contraintes budgétaires locales.",
+      "Un juré qui, après avoir siégé une seule fois, s'intéresse durablement au fonctionnement de la justice qu'il ignorait jusque-là.",
+    ],
+    oeuvres: [
+      { y: '1835', t: 'De la démocratie en Amérique, tome I' },
+    ],
+    associes: ['esprit-civique', 'decentralisation', 'majorite'],
+    opposes: ['despotisme-democratique'],
+    critiques: [
+      "La participation bénévole aux affaires locales suppose un temps libre et des ressources que tous les citoyens ne possèdent pas également.",
+      "Elle peut aussi reproduire, à l'échelle locale, l'exclusion de certains groupes — Tocqueville lui-même observe une Amérique dont la participation citoyenne exclut alors femmes, esclaves et populations autochtones.",
+      "Le lien entre participation et compétence politique reste difficile à isoler d'autres facteurs — éducation, niveau de vie — qui favorisent également l'une et l'autre.",
+    ],
+    evolution: [
+      { p: '1835', f: "Tocqueville documente la participation citoyenne américaine comme école pratique de la démocratie." },
+      { p: '1963', f: "Almond et Verba mesurent empiriquement, dans The Civic Culture, ce que Tocqueville avait seulement observé." },
+      { p: '1990–2010', f: "Les dispositifs de démocratie participative locale se réclament explicitement de cet héritage." },
+    ],
+  },
+  'majorite': {
+    detaille: [
+      "La majorité est, dans une démocratie, la source ordinaire et légitime de la décision collective : ce que le plus grand nombre choisit l'emporte, faute d'un principe supérieur auquel en appeler pour trancher autrement.",
+      "Tocqueville ne conteste jamais ce principe en tant que tel — il le tient pour la règle nécessaire de tout régime démocratique — mais il en souligne la puissance particulière : une fois formée, la majorité démocratique ne rencontre plus, comme un roi autrefois, de corps intermédiaires capables de lui résister.",
+      "C'est cette absence de contre-pouvoir structurel, plus que le principe majoritaire lui-même, qui ouvre la voie à ses dérives possibles : la majorité, en démocratie, cumule à la fois la légitimité du nombre et une puissance qu'aucune force organisée n'égale plus face à elle.",
+    ],
+    origine: {
+      oeuvre: 'De la démocratie en Amérique, tome I',
+      annee: '1835',
+      contexte:
+        "Tocqueville analyse le principe majoritaire américain avant d'en tirer, dans le même volume, sa théorie de la tyrannie de la majorité — la majorité elle-même restant, à ses yeux, un principe nécessaire et légitime.",
+    },
+    exemples: [
+      "Un vote local qui tranche un projet contesté, accepté par tous comme légitime malgré le désaccord de la minorité.",
+      "Une décision d'assemblée qui engage l'ensemble d'un groupe, y compris ceux qui ont voté contre, au nom du principe majoritaire lui-même reconnu par tous.",
+    ],
+    oeuvres: [
+      { y: '1835', t: 'De la démocratie en Amérique, tome I' },
+    ],
+    associes: ['participation-citoyenne', 'tyrannie-de-la-majorite'],
+    opposes: ['corps-intermediaires'],
+    critiques: [
+      "Le principe majoritaire pose depuis Condorcet des difficultés logiques propres, que la seule légitimité procédurale ne suffit pas toujours à résoudre.",
+      "Tocqueville distingue peu, dans son exposé initial, entre une majorité électorale précise et une majorité d'opinion plus diffuse, ce qui brouille parfois son propre raisonnement ultérieur.",
+      "Le concept dit peu des mécanismes constitutionnels — Cour suprême, droits fondamentaux — que les démocraties ont depuis développés pour limiter le pouvoir de la majorité sans recréer de corps intermédiaires traditionnels.",
+    ],
+    evolution: [
+      { p: '1787', f: 'La Constitution américaine organise déjà des freins au pouvoir majoritaire — bicamérisme, contrôle de constitutionnalité en germe.' },
+      { p: '1835', f: "Tocqueville pose le principe majoritaire avant d'en tirer sa théorie de la tyrannie de la majorité." },
+    ],
+  },
+  'corps-intermediaires': {
+    detaille: [
+      "Les corps intermédiaires sont les institutions qui, sous l'Ancien Régime, se plaçaient entre l'individu et le pouvoir royal : noblesse, corporations de métier, parlements provinciaux, états provinciaux — chacun disposant de privilèges et de prérogatives propres qu'aucun pouvoir central ne pouvait effacer d'un trait.",
+      "Tocqueville leur reconnaît un mérite paradoxal : nés d'inégalités qu'il juge par ailleurs injustes, ils formaient malgré tout un rempart efficace contre l'arbitraire du pouvoir central, chaque corps défendant ses propres privilèges contre les empiétements de la monarchie.",
+      "Leur disparition progressive, entamée par la monarchie absolue et achevée par la Révolution, a laissé l'individu directement exposé à l'État central, sans aucun relais collectif capable de faire écran entre les deux — le prix payé pour l'égalité obtenue.",
+    ],
+    origine: {
+      oeuvre: "L'Ancien Régime et la Révolution",
+      annee: '1856',
+      contexte:
+        "Tocqueville dépouille les archives administratives royales pour montrer que la centralisation, loin d'être une invention révolutionnaire, avait déjà rongé méthodiquement les corps intermédiaires de la France d'Ancien Régime.",
+    },
+    exemples: [
+      "Une corporation de métier disparue, dont la disparition a laissé chaque artisan seul face à une réglementation nationale uniforme.",
+      "Un parlement provincial d'Ancien Régime, capable de résister ponctuellement à un édit royal, qu'aucune institution locale équivalente n'a remplacé après sa suppression.",
+    ],
+    oeuvres: [
+      { y: '1856', t: "L'Ancien Régime et la Révolution" },
+    ],
+    associes: ['associations', 'atomisation-sociale'],
+    opposes: ['centralisation'],
+    critiques: [
+      "Défendre les corps intermédiaires de l'Ancien Régime revient à défendre, du même geste, des institutions fondées sur des privilèges de naissance que Tocqueville lui-même juge par ailleurs profondément injustes.",
+      "Le tableau surestime peut-être l'efficacité réelle de ces corps face à une monarchie qui, dans les faits, avait déjà largement réussi à les contourner bien avant 1789.",
+      "Le concept dit peu de ce que pourraient être des corps intermédiaires légitimes dans une société d'égaux, où le privilège de naissance n'a plus cours.",
+    ],
+    evolution: [
+      { p: 'Moyen Âge–XVIIIᵉ s.', f: "Les corps intermédiaires — noblesse, corporations, parlements — structurent la société d'ordres de l'Ancien Régime." },
+      { p: '1661–1789', f: "La monarchie absolue affaiblit méthodiquement leurs prérogatives, selon la thèse de Tocqueville." },
+      { p: '1789–1791', f: "La Révolution supprime formellement corporations et privilèges provinciaux, achevant le mouvement." },
+      { p: '1856', f: "L'Ancien Régime en retrace la généalogie complète, contre l'idée d'une rupture révolutionnaire." },
+    ],
+  },
 
   /* — Robert Castel — */
   'societe-salariale': {
@@ -6437,6 +6851,296 @@ export const CONCEPTS = {
       { p: '1995', f: "Castel lui substitue une cartographie en zones, avec la vulnérabilité comme charnière centrale." },
       { p: '1988–1990', f: "Le RMI, puis le débat sur l'insertion, s'appuient implicitement sur cette distinction entre accompagner une vulnérabilité et traiter une désaffiliation déjà installée." },
       { p: 'Depuis les années 2000', f: "Le cadre est repris bien au-delà de la sociologie du travail, jusque dans l'analyse du logement, de la santé ou du grand âge." },
+    ],
+  },
+  'zone-de-vulnerabilite': {
+    detaille: [
+      "La zone de vulnérabilité est, dans la cartographie de Castel, la position intermédiaire où l'un des deux piliers de l'intégration — travail stable ou liens sociaux solides — s'est fragilisé, sans que l'autre ait encore cédé à son tour.",
+      "Elle a longtemps échappé aux politiques sociales, construites pour traiter séparément l'emploi et l'exclusion : un intérimaire bien entouré ou un salarié isolé n'ont besoin ni d'un simple accompagnement vers l'emploi, ni d'une aide d'urgence, mais d'une réponse à cette fragilité à deux visages.",
+      "Castel en fait la zone la plus peuplée des sociétés contemporaines, et la plus instable : on peut y entrer par une rupture professionnelle ou relationnelle, et il suffit d'une seconde rupture, sur l'autre pilier, pour glisser vers la désaffiliation.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel isole cette zone charnière pour corriger un débat public des années 1980-1990 qui traitait l'exclusion comme un bloc homogène, sans voir la position intermédiaire où se trouve la majorité des situations précaires.",
+    },
+    exemples: [
+      "Un salarié en contrat court, financièrement autonome mais sans réseau familial ni amical sur lequel s'appuyer en cas de coup dur.",
+      "Une personne bien entourée mais sans emploi stable depuis plusieurs années, dont les liens compensent, provisoirement, l'absence de revenu régulier.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+    ],
+    associes: ['zones-de-l-integration-sociale', 'zone-de-desaffiliation', 'precariat'],
+    opposes: ['meritocratie'],
+    critiques: [
+      "La frontière entre vulnérabilité et intégration reste difficile à tracer précisément : à partir de quel degré de fragilité bascule-t-on d'une zone à l'autre ?",
+      "Le concept dit peu de la durée : une vulnérabilité brève, vite résorbée, n'a pas les mêmes effets qu'une vulnérabilité qui s'installe sur plusieurs années.",
+      "Il a été repris de façon si large, au-delà du travail, qu'il risque de désigner presque toute situation de vie ordinaire comportant une part d'incertitude.",
+    ],
+    evolution: [
+      { p: '1995', f: "Castel nomme la zone de vulnérabilité et en fait la charnière de sa cartographie." },
+      { p: '2000–2020', f: "Le concept est repris dans l'analyse du logement, de la santé et du vieillissement, bien au-delà du seul emploi." },
+    ],
+  },
+  'zone-d-assistance': {
+    detaille: [
+      "La zone d'assistance regroupe ceux dont la subsistance dépend d'un secours extérieur — public ou privé — plutôt que d'un revenu du travail, sans pour autant relever de la désaffiliation la plus complète : des liens familiaux ou sociaux peuvent y subsister malgré l'absence d'emploi.",
+      "Castel la relie à une histoire longue, celle de l'assistance aux pauvres sous l'Ancien Régime, retracée dans son travail sur les métamorphoses de la question sociale : bien avant le salariat protecteur, une société devait déjà décider quoi faire de ceux qui ne pouvaient subvenir seuls à leurs besoins.",
+      "Il ne s'agit pas, chez Castel, d'une zone aussi centrale que la vulnérabilité ou la désaffiliation dans sa cartographie principale : elle apparaît surtout dans son analyse historique de l'assistance, puis dans sa lecture des minima sociaux contemporains comme un substitut incomplet à la protection par le travail.",
+    ],
+    origine: {
+      oeuvre: "Les Métamorphoses de la question sociale",
+      annee: '1995',
+      contexte:
+        "Castel retrace, sur plusieurs siècles, le passage d'une assistance discrétionnaire et souvent humiliante — l'aumône, la charité — à des droits sociaux universels attachés au statut de citoyen plutôt qu'à la seule pitié d'autrui.",
+    },
+    exemples: [
+      "Un allocataire d'un minimum social, dont les ressources dépendent d'un dispositif d'aide plutôt que d'un salaire, mais qui garde un logement stable et un entourage présent.",
+      "Une personne âgée sans pension suffisante, dont le maintien à domicile repose sur une aide sociale plutôt que sur des revenus d'activité.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+    ],
+    associes: ['zones-de-l-integration-sociale', 'protection-sociale'],
+    opposes: ['capital-social'],
+    critiques: [
+      "L'assistance, censée pallier l'absence de travail, a été critiquée pour son caractère parfois stigmatisant, plus proche de l'ancienne charité que d'un droit pleinement reconnu.",
+      "Le niveau des minima sociaux, souvent inférieur au seuil de pauvreté, questionne la capacité réelle de cette zone à garantir une intégration durable.",
+      "Castel lui-même insiste moins sur cette zone que sur le couple vulnérabilité/désaffiliation, ce qui en fait une catégorie secondaire de son propre modèle.",
+    ],
+    evolution: [
+      { p: 'Ancien Régime', f: "L'assistance aux pauvres relève de la charité chrétienne et de la famille, sans droit universel garanti." },
+      { p: '1945–1988', f: "La sécurité sociale généralise des droits attachés au travail, laissant l'assistance pure comme filet résiduel." },
+      { p: '1988', f: "Le RMI institutionnalise en France un minimum social non contributif, distinct des droits attachés à l'emploi." },
+    ],
+  },
+  'zone-de-desaffiliation': {
+    detaille: [
+      "La zone de désaffiliation cumule l'absence de travail et la rupture des liens sociaux et familiaux : les deux piliers qui, ailleurs, se compensent au moins partiellement, cèdent ici en même temps, et chacune des deux ruptures aggrave l'autre.",
+      "Castel insiste sur ce cumul plutôt que sur chaque manque pris isolément : un chômage de longue durée n'aboutit pas nécessairement à la désaffiliation tant que des liens tiennent encore ; c'est leur rupture conjointe, et non l'une ou l'autre seule, qui produit la situation la plus grave.",
+      "Cette zone n'est cependant jamais, pour Castel, un point d'arrivée figé : c'est la position la plus reculée d'une trajectoire, dont il reste toujours possible, en principe, de se rapprocher à nouveau — même si les dispositifs de réinsertion peinent, en pratique, à inverser durablement le mouvement.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel construit cette zone comme le pôle le plus radical de sa cartographie, pour donner un contenu précis à ce que le débat public appelait alors, sans le préciser, la grande exclusion.",
+    },
+    exemples: [
+      "Une personne sans domicile fixe, sans emploi et sans famille à contacter en cas de difficulté, cumulant les deux ruptures à la fois.",
+      "Un chômeur de très longue durée dont l'isolement progressif a fini par couper les derniers liens qui auraient pu faciliter un retour à l'emploi.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+      { y: '2003', t: "L'Insécurité sociale" },
+    ],
+    associes: ['zones-de-l-integration-sociale', 'zone-de-vulnerabilite', 'insecurite-sociale'],
+    opposes: ['societe-salariale'],
+    critiques: [
+      "Le terme a connu un succès si large qu'il risque, comme l'exclusion avant lui, de devenir un mot-valise appliqué à des situations très différentes.",
+      "Le modèle décrit bien l'état, mais moins bien les trajectoires de sortie, statistiquement rares une fois cette zone atteinte.",
+      "Il reste construit sur le cas français, où le salariat a longtemps concentré l'essentiel de la protection sociale, ce qui en limite la portée comparative directe.",
+    ],
+    evolution: [
+      { p: '1974', f: "Lenoir popularise l'exclusion comme catégorie globale, sans distinguer les situations qui la composent." },
+      { p: '1995', f: "Castel nomme la désaffiliation et la distingue de la vulnérabilité, moins avancée." },
+      { p: '2000–2020', f: "Le concept irrigue les politiques de lutte contre le sans-abrisme et la grande exclusion en France et en Europe." },
+    ],
+  },
+  'propriete-sociale': {
+    detaille: [
+      "La propriété sociale est le nom que Castel donne à l'ensemble des droits — retraite, assurance maladie, indemnités — qui se sont accumulés autour de l'emploi stable au cours du XXᵉ siècle, jusqu'à former une créance sur la collectivité aussi réelle qu'un patrimoine, sans en avoir la forme.",
+      "Il en fait un équivalent fonctionnel de la propriété privée classique : à défaut de posséder un bien transmissible, le salarié protégé possède un droit garanti, qui le met à l'abri des grands risques de l'existence — maladie, vieillesse, accident — presque autant qu'un patrimoine l'aurait fait pour les classes possédantes d'autrefois.",
+      "Cette propriété d'un genre nouveau explique, selon Castel, pourquoi perdre un emploi stable ébranle bien plus qu'un revenu mensuel : c'est tout un édifice de droits accumulés, souvent sur plusieurs décennies, qui se trouve fragilisé d'un coup.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel forge le concept pour nommer ce que le vocabulaire du seul contrat de travail ne permettait pas de saisir : une sécurité comparable à celle qu'offrait, historiquement, la seule propriété privée aux classes qui la détenaient.",
+    },
+    exemples: [
+      "Une pension de retraite constituée sur toute une carrière, qui vaut à son détenteur une sécurité comparable à celle d'un capital, sans qu'il en possède la forme.",
+      "Une couverture maladie attachée à l'emploi, dont la perte expose brutalement à des risques qu'un patrimoine aurait, ailleurs, permis d'absorber.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+    ],
+    associes: ['societe-salariale', 'protection-sociale'],
+    opposes: ['capital-economique'],
+    critiques: [
+      "L'analogie avec la propriété reste métaphorique : à la différence d'un bien réel, ces droits ne se transmettent pas et dépendent de décisions politiques toujours révisables.",
+      "Le concept a été élaboré sur le cas français, où la protection s'est historiquement adossée à l'emploi bien plus qu'ailleurs, ce qui en limite la portée comparative.",
+      "Il dit peu de ceux qui n'ont jamais accédé à cette propriété faute d'avoir occupé un emploi suffisamment stable pour l'accumuler.",
+    ],
+    evolution: [
+      { p: '1930–1975', f: "La sécurité sociale et le droit du travail construisent, en pratique, l'architecture de droits que Castel nommera ensuite." },
+      { p: '1995', f: "Castel forge le concept de propriété sociale dans Les Métamorphoses de la question sociale." },
+      { p: 'Depuis 1975', f: "La fragilisation du salariat érode progressivement cette propriété pour une part croissante des actifs." },
+    ],
+  },
+  'protection-sociale': {
+    detaille: [
+      "La protection sociale est, pour Castel, l'ensemble concret des dispositifs — assurances, prestations, services — par lesquels une société collectivise les grands risques de l'existence, plutôt que de les laisser peser sur le seul individu ou sur sa seule famille.",
+      "Il en fait moins un supplément de générosité qu'une condition de possibilité de l'individu moderne : être protégé, c'est pouvoir prendre des risques — changer d'emploi, s'installer ailleurs, fonder une famille — sans que le moindre incident menace aussitôt l'existence tout entière.",
+      "Cette protection s'est historiquement construite autour du travail salarié, ce qui explique sa fragilité actuelle : à mesure que l'emploi stable se raréfie, c'est tout le mode de collectivisation des risques hérité du XXᵉ siècle qui se trouve à son tour fragilisé.",
+    ],
+    origine: {
+      oeuvre: "L'Insécurité sociale : qu'est-ce qu'être protégé ?",
+      annee: '2003',
+      contexte:
+        "Castel prolonge, dans ce court essai, l'analyse des Métamorphoses de la question sociale pour poser directement la question de ce que signifie être protégé, et de ce que sa disparition partielle change concrètement à l'existence.",
+    },
+    exemples: [
+      "Une assurance chômage qui permet de changer d'emploi sans craindre la ruine immédiate en cas d'échec.",
+      "Un système de santé qui prend en charge une maladie grave sans faire peser son coût entier sur le seul patient.",
+    ],
+    oeuvres: [
+      { y: '2003', t: "L'Insécurité sociale : qu'est-ce qu'être protégé ?" },
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+    ],
+    associes: ['propriete-sociale', 'societe-salariale', 'insecurite-sociale'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le modèle reste centré sur la protection liée à l'emploi, et rend compte moins directement de sociétés où la protection passe davantage par la famille ou la communauté.",
+      "Il peut sous-estimer les effets pervers de certaines protections, qui découragent parfois la prise même de risque qu'elles étaient censées permettre.",
+      "Boudon objecterait qu'un système de protection, aussi généreux soit-il, produit ses propres effets de composition, parfois éloignés de ses intentions initiales.",
+    ],
+    evolution: [
+      { p: '1945', f: "La sécurité sociale française institutionnalise une protection collective attachée au statut de salarié." },
+      { p: '1995', f: "Castel relie explicitement cette protection à la propriété sociale et à la société salariale." },
+      { p: '2003', f: "L'Insécurité sociale interroge directement ce que sa fragilisation change à la condition individuelle." },
+    ],
+  },
+  'precariat': {
+    detaille: [
+      "Le précariat désigne une condition — et pour certains une classe sociale en formation — faite de travailleurs maintenus durablement hors de la stabilité de l'emploi : contrats courts, intérim, temps partiel subi, statut d'indépendant sans les protections du salariat.",
+      "Castel documente longuement, sans employer systématiquement ce terme précis, la fragilisation progressive du salariat qui produit cette situation : une part croissante des actifs occupe des positions professionnelles qui ne donnent plus accès à la propriété sociale que le salariat stable garantissait autrefois.",
+      "Le mot lui-même doit sa diffusion internationale à Guy Standing, qui en fait en 2011 le nom d'une nouvelle classe dangereuse, structurée par l'insécurité plutôt que par un rapport de production classique — une thèse qui prolonge, sans toujours le citer, le diagnostic de Castel sur la fragilisation du salariat.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel analyse, sans employer lui-même le mot précariat, le processus de fragilisation de l'emploi qui produit la condition que ce terme, popularisé plus tard, viendra désigner directement.",
+    },
+    exemples: [
+      "Un livreur indépendant, juridiquement son propre patron, sans les protections qu'un salariat classique lui aurait garanties pour la même activité.",
+      "Un enchaînement de contrats courts qui empêche toute projection à moyen terme — logement stable, crédit, projet familial.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+      { y: '2011', t: 'Guy Standing, The Precariat: The New Dangerous Class' },
+    ],
+    associes: ['zone-de-vulnerabilite', 'fragilisation-du-salariat'],
+    opposes: ['societe-salariale'],
+    critiques: [
+      "Standing forge le mot pour en faire une classe à part entière ; d'autres sociologues, dont Castel lui-même, préfèrent parler d'une zone ou d'un processus plutôt que d'une classe déjà constituée et consciente d'elle-même.",
+      "Le concept regroupe des situations très diverses — indépendants choisis, contrats courts subis, intérim de longue durée — dont les vécus et les intérêts ne sont pas nécessairement les mêmes.",
+      "Il dit peu des trajectoires de sortie, positives ou négatives, hors de cette condition, qu'il décrit surtout comme un état stabilisé.",
+    ],
+    evolution: [
+      { p: '1975–1995', f: "La montée du chômage et des contrats courts fragilise progressivement le salariat stable en France." },
+      { p: '1995', f: "Castel en documente le processus dans Les Métamorphoses de la question sociale, sans encore le nommer précariat." },
+      { p: '2011', f: "Standing popularise internationalement le terme et en fait le nom d'une classe sociale nouvelle." },
+    ],
+  },
+  'individu-par-defaut': {
+    detaille: [
+      "L'individu par défaut est, dans les travaux tardifs de Castel, celui que la dissolution des cadres collectifs a jeté dans l'autonomie individuelle sans lui en donner les moyens — ni patrimoine, ni réseau, ni qualification suffisamment reconnue pour transformer cette autonomie en véritable liberté.",
+      "Castel l'oppose à l'individu par excès, celui qui dispose au contraire d'assez de ressources pour vivre l'individualisation comme une émancipation réelle, choisie plutôt que subie : deux visages d'un même processus, vécus de façon radicalement inégale.",
+      "L'individu par défaut n'est donc pas moins autonome en droit que l'individu par excès : il l'est en principe tout autant, mais sans les ressources qui rendraient cette autonomie exerçable dans les faits — un individualisme qui isole sans jamais vraiment libérer.",
+    ],
+    origine: {
+      oeuvre: 'La Montée des incertitudes',
+      annee: '2009',
+      contexte:
+        "Castel prolonge, dans son dernier grand ouvrage, l'analyse de la fragilisation du salariat pour poser la question de ce que devient l'individu quand les protections collectives se retirent avant que de nouvelles ressources individuelles ne les remplacent.",
+    },
+    exemples: [
+      "Un jeune sans diplôme reconnu ni réseau familial mobilisable, sommé de « construire son parcours » avec les mêmes attentes qu'un jeune bien doté des deux.",
+      "Une personne isolée après une rupture professionnelle, censée rebondir seule faute de tout collectif — syndicat, entreprise, famille — sur lequel s'appuyer.",
+    ],
+    oeuvres: [
+      { y: '2009', t: 'La Montée des incertitudes' },
+    ],
+    associes: ['individualisme', 'precariat'],
+    opposes: ['ressources-sociales'],
+    critiques: [
+      "Le concept, très évocateur, reste peu opérationnalisé empiriquement : on manque d'indicateurs précis pour distinguer, dans une enquête, l'individu par défaut de l'individu par excès.",
+      "Boudon objecterait qu'un manque de ressources n'empêche pas des choix rationnels sous contrainte, ce qui nuance l'image d'un individu simplement livré à lui-même sans recours.",
+      "Il dit peu des trajectoires qui, sur la durée, permettent à certains individus par défaut d'acquérir progressivement les ressources qui leur manquaient.",
+    ],
+    evolution: [
+      { p: '1995', f: "Les Métamorphoses de la question sociale posent déjà les bases de l'inégalité devant l'individualisation." },
+      { p: '2009', f: "La Montée des incertitudes nomme explicitement l'individu par défaut et l'individu par excès." },
+    ],
+  },
+  'insecurite-sociale': {
+    detaille: [
+      "L'insécurité sociale est, pour Castel, l'exposition nouvelle aux grands risques de l'existence — maladie, vieillesse, perte d'emploi — que produit l'effritement des protections collectives, indépendamment de toute question de délinquance ou de violence physique.",
+      "Il la distingue explicitement de l'insécurité civile, celle des atteintes aux personnes et aux biens, qui occupe l'essentiel du débat public : la première touche potentiellement tout le monde, en silence, quand la seconde reste statistiquement concentrée et fait, elle, la une des journaux.",
+      "Cette distinction n'est pas neutre politiquement : en déplaçant l'attention vers la seule insécurité civile, le débat public laisse dans l'ombre une insécurité sociale bien plus large, dont les effets sont diffus mais réels pour une part croissante de la population.",
+    ],
+    origine: {
+      oeuvre: "L'Insécurité sociale : qu'est-ce qu'être protégé ?",
+      annee: '2003',
+      contexte:
+        "Castel écrit ce court essai en réaction directe à un débat public français dominé par la seule question sécuritaire, pour rappeler qu'être protégé concerne d'abord et avant tout la protection sociale, non la seule sécurité physique.",
+    },
+    exemples: [
+      "Une maladie grave qui, en l'absence de couverture suffisante, peut faire basculer une famille entière dans la précarité en quelques mois.",
+      "Une perte d'emploi qui expose brutalement à des risques — logement, santé — qu'une protection plus solide aurait absorbés sans drame.",
+    ],
+    oeuvres: [
+      { y: '2003', t: "L'Insécurité sociale : qu'est-ce qu'être protégé ?" },
+    ],
+    associes: ['protection-sociale', 'zone-de-desaffiliation', 'fragilisation-du-salariat'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "L'opposition entre insécurité sociale et insécurité civile, utile pour l'argumentation, tend à minorer les cas où les deux se cumulent et se renforcent réellement.",
+      "Le concept, très large, risque d'englober sous un même mot des risques de nature très différente — santé, emploi, logement — dont les remèdes ne sont pas nécessairement les mêmes.",
+      "Il dit peu des sociétés où la protection contre les risques sociaux n'a jamais reposé sur l'État, et où le concept se transpose donc plus difficilement.",
+    ],
+    evolution: [
+      { p: '1995', f: "Les Métamorphoses de la question sociale posent les bases de l'analyse de la protection sociale." },
+      { p: '2001–2002', f: "Le débat public français se polarise fortement sur la seule insécurité civile, dans un contexte électoral tendu." },
+      { p: '2003', f: "Castel publie L'Insécurité sociale pour recentrer le débat sur la protection sociale." },
+    ],
+  },
+  'fragilisation-du-salariat': {
+    detaille: [
+      "La fragilisation du salariat est le processus, engagé depuis le milieu des années 1970, par lequel l'emploi stable et protégé qui avait fait la société salariale du XXᵉ siècle se dérègle progressivement : chômage de masse, contrats courts, temps partiel subi, statut d'indépendant précaire.",
+      "Castel insiste sur la nouveauté du phénomène : il ne s'agit pas d'un simple retour à une précarité ancienne, mais d'une dégradation d'un modèle qui avait justement réussi, pendant les Trente Glorieuses, à faire du salariat un statut protecteur à part entière.",
+      "Cette fragilisation n'affecte pas uniformément l'ensemble des actifs : elle crée une ligne de fracture croissante entre ceux qui restent protégés par un emploi stable et ceux qui glissent, souvent durablement, vers des formes d'emploi qui ne donnent plus accès à la même propriété sociale.",
+    ],
+    origine: {
+      oeuvre: 'Les Métamorphoses de la question sociale',
+      annee: '1995',
+      contexte:
+        "Castel écrit en pleine montée du chômage de masse en France, et cherche à comprendre pourquoi cette dégradation de l'emploi ébranle bien plus qu'un simple indicateur économique parmi d'autres.",
+    },
+    exemples: [
+      "Une entreprise qui remplace progressivement des postes en contrat stable par des missions d'intérim renouvelées indéfiniment.",
+      "Un secteur entier où le contrat à durée indéterminée, la norme il y a une génération, devient l'exception plutôt que la règle.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'Les Métamorphoses de la question sociale' },
+      { y: '2009', t: 'La Montée des incertitudes' },
+    ],
+    associes: ['societe-salariale', 'precariat', 'zone-de-vulnerabilite'],
+    opposes: ['propriete-sociale'],
+    critiques: [
+      "Le diagnostic reste centré sur le cas français et européen ; il transpose moins directement à des économies où le salariat stable n'a jamais occupé la même place centrale.",
+      "Certains économistes objectent que la flexibilité accrue de l'emploi a aussi permis, pour une partie des actifs, un accès au marché du travail qu'une rigidité plus grande aurait empêché.",
+      "Le concept dit peu des politiques publiques qui ont pu, localement et partiellement, ralentir ou compenser ce mouvement plutôt que le simplement subir.",
+    ],
+    evolution: [
+      { p: '1945–1975', f: "Les Trente Glorieuses généralisent le salariat stable et la protection sociale qui lui est attachée." },
+      { p: 'Depuis 1975', f: "Le chômage de masse et la multiplication des contrats courts fragilisent progressivement ce modèle." },
+      { p: '1995', f: "Castel documente et nomme ce processus dans Les Métamorphoses de la question sociale." },
     ],
   },
 
