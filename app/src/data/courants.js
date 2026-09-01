@@ -364,11 +364,40 @@ export const COURANTS = [
     d: "Même dans l'organisation la plus rigide, chacun garde une carte à jouer — et le pouvoir appartient à qui sait la faire durer.",
     detail:
       "Crozier reprend la bureaucratie de Weber pour en faire, non plus un modèle d'efficacité rationnelle, mais un objet d'enquête empirique : les règles impersonnelles censées éliminer l'arbitraire produisent en réalité de nouvelles zones d'incertitude, autour desquelles se rejouent sans fin des rapports de pouvoir informels. L'organisation réelle n'est jamais tout à fait l'organigramme officiel : c'est un système d'action concret, fait de jeux et de stratégies que la seule structure formelle ne suffit jamais à expliquer.",
-    auteurs: ['crozier'],
+    auteurs: ['crozier', 'friedberg'],
     vientDe: ['sociologie-comprehensive', 'fonctionnalisme'],
     inspirateurs: [
-      "Erhard Friedberg — coauteur de L'Acteur et le système, 1977",
       "Herbert Simon — la rationalité limitée, socle du modèle de l'acteur stratégique",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'societe-informationnelle',
+    t: 'Société informationnelle',
+    periode: 'contemporain',
+    d: "Internet n'a pas aboli la géographie : il l'a redoublée d'un second espace, fait de flux plutôt que de lieux.",
+    detail:
+      "Castells montre que la révolution des technologies de l'information réorganise la société entière autour de réseaux : le pouvoir, l'économie et même l'identité s'y jouent désormais autant dans un espace de flux mondialisé que dans l'espace des lieux hérité de l'histoire. Le capitalisme n'a pas disparu, il s'est reconfiguré autour de cette nouvelle logique informationnelle, creusant un écart croissant entre ceux qui habitent les réseaux et ceux qui restent assignés à un lieu.",
+    auteurs: ['castells'],
+    vientDe: ['materialisme-historique', 'sociologie-comprehensive'],
+    inspirateurs: [
+      "Alain Touraine — la société post-industrielle et l'action des mouvements sociaux, dont Castells fut l'élève",
+      "Daniel Bell — la société de l'information comme rupture avec la société industrielle",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'sociologie-de-la-liquidite',
+    t: 'Sociologie de la liquidité',
+    periode: 'contemporain',
+    d: "Rien, dans le monde contemporain, n'a plus le temps de prendre une forme stable avant de déjà se transformer.",
+    detail:
+      "Bauman file la métaphore du solide et du liquide pour décrire un basculement : la modernité industrielle voulait construire des cadres durables — l'usine, la carrière, le mariage à vie — quand la modernité tardive dissout ces cadres plus vite qu'elle ne les remplace. Rien n'est fait pour durer, ni les institutions, ni les identités, ni les liens affectifs, dans un monde où la seule chose stable devient l'exigence de changement permanent.",
+    auteurs: ['bauman'],
+    vientDe: ['materialisme-historique', 'sociologie-des-formes'],
+    inspirateurs: [
+      "Georg Simmel — la sociologie des formes et de l'argent, dont Bauman prolonge la sensibilité à la fluidité du social",
+      "Jean-François Lyotard — la condition postmoderne, matrice du diagnostic d'une modernité qui doute d'elle-même",
     ],
     niveau: 'paradigme',
   },

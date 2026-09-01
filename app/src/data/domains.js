@@ -47,7 +47,7 @@ export const DOMAINS_ADDED = [
     t: 'Économique',
     nom: 'Sociologie économique',
     d: "Le marché n'est pas un état de nature : c'est une institution, avec ses règles et ses croyances.",
-    a: ['weber', 'marx', 'boltanski'],
+    a: ['weber', 'marx', 'boltanski', 'castells'],
   },
   {
     id: 'professions',
@@ -61,7 +61,7 @@ export const DOMAINS_ADDED = [
     t: 'Consommation',
     nom: 'Sociologie de la consommation',
     d: "Acheter, c'est se situer : le goût trie ceux qui l'affichent.",
-    a: ['bourdieu', 'simmel', 'francfort'],
+    a: ['bourdieu', 'simmel', 'francfort', 'bauman'],
   },
   {
     id: 'genre',
@@ -89,7 +89,7 @@ export const DOMAINS_ADDED = [
     t: 'Immigration',
     nom: "Sociologie de l'immigration",
     d: "Émigrer et immigrer sont un seul mouvement, que deux sociétés racontent différemment.",
-    a: ['simmel', 'elias'],
+    a: ['simmel', 'elias', 'bauman'],
   },
   {
     id: 'crime',
@@ -103,7 +103,7 @@ export const DOMAINS_ADDED = [
     t: 'Mouvements sociaux',
     nom: 'Sociologie des mouvements sociaux',
     d: "Se révolter ne suffit pas : il faut des ressources, des mots et un moment favorable.",
-    a: ['marx', 'tocqueville', 'boltanski'],
+    a: ['marx', 'tocqueville', 'boltanski', 'castells'],
   },
   {
     id: 'medias',
@@ -117,7 +117,7 @@ export const DOMAINS_ADDED = [
     t: 'Numérique',
     nom: 'Sociologie du numérique',
     d: "Les plateformes ne sont pas un décor : elles redistribuent l'attention, le travail et la surveillance.",
-    a: ['goffman', 'francfort'],
+    a: ['goffman', 'francfort', 'castells'],
   },
   {
     id: 'loisirs',

@@ -10,7 +10,7 @@ export const DOMAINS = [
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
   { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel', 'schutz'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
-  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens', 'crozier'] },
+  { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens', 'crozier', 'friedberg'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
   { id: 'corps', t: 'Corps', d: "Se tenir, se retenir, se laver : l'histoire longue de la contrainte de soi.", a: ['elias', 'goffman', 'bourdieu', 'boltanski', 'foucault'] },
   { id: 'politique', t: 'Politique', d: "Qui a le droit de commander, et au nom de quoi obéit-on ?", a: ['weber', 'marx', 'tocqueville', 'habermas', 'foucault'] },
@@ -573,6 +573,59 @@ export const AUTHORS = {
     critiques: ["Bourdieu objecterait qu'un acteur aussi calculateur sous-estime le poids des dispositions incorporées, qui orientent l'action bien avant tout calcul stratégique conscient.", "L'approche, centrée sur les jeux internes à l'organisation, laisse peu de place aux déterminants macrosociaux — classe, capital économique — qui pèsent pourtant sur ces mêmes jeux.", "Les enquêtes fondatrices portent sur l'administration française des années 1960 ; leur portée comparative à d'autres contextes reste à établir au cas par cas."],
     up: ['weber', 'merton'], down: [], x: 250, y: 850,
   },
+  friedberg: {
+    id: 'friedberg', name: 'Erhard Friedberg', initials: 'EF', dates: '1942–2023', nat: 'France', periode: 'Contemporain',
+    courant: 'Analyse stratégique',
+    hook: "Après Crozier, il fait de la règle elle-même un objet d'enquête : moins un garde-fou qu'on subit qu'une ressource dont on se sert.",
+    resume: "Coauteur avec Crozier du texte fondateur de l'analyse stratégique, Friedberg poursuit seul l'exploration du sujet après 1977 : la règle organisationnelle n'est jamais un simple cadre neutre, elle est elle-même une arme que les acteurs mobilisent dans leurs jeux de pouvoir.",
+    concepts: [
+      { id: 'regles', t: 'Règles', year: '1993', simple: "Une règle organisationnelle n'est jamais neutre : elle distribue toujours, de façon inégale, des atouts et des contraintes entre ceux qu'elle encadre.", ex: "Un barème de notation identique pour tous, dont certains connaissent assez les rouages pour en tirer un avantage que d'autres n'y voient jamais." },
+    ],
+    oeuvres: [{ y: '1977', t: "L'Acteur et le système (avec M. Crozier)" }, { y: '1988', t: "L'Analyse sociologique des organisations" }, { y: '1993', t: 'Le Pouvoir et la Règle' }],
+    citations: [{ t: "Une règle n'est jamais un simple garde-fou : elle est aussi une arme entre les mains de ceux qui savent s'en servir.", src: "d'après Le Pouvoir et la Règle, 1993" }],
+    critiques: ["Distinguer sa contribution propre du cadre élaboré à deux avec Crozier en 1977 reste difficile : l'essentiel de son vocabulaire prolonge l'ouvrage commun plutôt qu'il ne s'en écarte.", "L'idée d'une règle toujours mobilisable comme ressource stratégique minore les situations où elle fonctionne bel et bien comme une contrainte extérieure, sans marge de manœuvre réelle.", "Comme l'ensemble de l'analyse stratégique, l'approche est critiquée pour laisser peu de place aux rapports de classe et de capital qui pèsent pourtant sur ces mêmes jeux."],
+    up: ['crozier'], down: [], x: 470, y: 850,
+  },
+  castells: {
+    id: 'castells', name: 'Manuel Castells', initials: 'MC', dates: '1942–', nat: 'Espagne', periode: 'Contemporain',
+    courant: 'Société informationnelle',
+    hook: "Il montre qu'internet n'a pas aboli la géographie : il l'a redoublée d'un second espace, fait de flux plutôt que de lieux.",
+    resume: "Castells montre que la révolution informationnelle réorganise la société entière autour de réseaux : le pouvoir, l'économie et même l'identité s'y jouent désormais autant dans un espace de flux mondialisé que dans l'espace des lieux hérité de l'histoire.",
+    concepts: [
+      { id: 'societe-en-reseaux', t: 'Société en réseaux', year: '1996', simple: "La société contemporaine s'organise autour de réseaux portés par les technologies de l'information, plus décisifs que n'importe quelle organisation prise isolément.", ex: "Un festival culturel coordonné par des bénévoles dispersés dans dix pays, qui n'ont jamais partagé de bureau commun." },
+      { id: 'espace-des-flux', t: 'Espace des flux', year: '1996', simple: "La logique spatiale dominante n'est plus le lieu mais le flux : capitaux, informations et images circulent en réseau, indifférents à la distance physique.", ex: "Un fonds d'investissement piloté depuis un immeuble anonyme, dont les décisions redessinent en un clic l'activité de villes qu'il ne visitera jamais." },
+      { id: 'espace-des-lieux', t: 'Espace des lieux', year: '1996', simple: "L'expérience vécue de la majorité reste ancrée dans un lieu physique, alors même que les fonctions dominantes s'organisent désormais dans l'espace des flux.", ex: "Des ouvriers qui apprennent la fermeture de leur usine par voie de presse, la décision ayant été prise loin de leur ville." },
+      { id: 'pouvoir-des-reseaux', t: 'Pouvoir des réseaux', year: '2009', simple: "Le pouvoir, dans la société en réseaux, s'exerce en programmant les objectifs d'un réseau ou en connectant et déconnectant des réseaux entre eux.", ex: "Un fournisseur d'accès qui, sur ordre, coupe l'accès à un réseau social entier le jour d'une élection contestée." },
+      { id: 'identite-resistance', t: 'Identité-résistance', year: '1997', simple: "Une identité collective construite par des acteurs dévalorisés, pour résister aux institutions dominantes plutôt que pour s'y intégrer.", ex: "Un village qui relance son marché artisanal local face à l'arrivée d'une grande enseigne internationale." },
+      { id: 'identite-projet', t: 'Identité-projet', year: '1997', simple: "Une identité qui ne se contente plus de résister : elle redéfinit la position de ses porteurs et vise à transformer la structure sociale tout entière.", ex: "Un collectif de quartier qui ne se contente plus de protester contre un projet immobilier, mais propose son propre plan d'aménagement pour toute la ville." },
+      { id: 'identite-legitimante', t: 'Identité légitimante', year: '1997', simple: "L'identité introduite par les institutions dominantes pour étendre et rationaliser leur domination sur les acteurs sociaux.", ex: "Un hymne d'entreprise diffusé lors de chaque séminaire, présenté comme l'expression naturelle de valeurs partagées par tous." },
+      { id: 'economie-informationnelle', t: 'Économie informationnelle', year: '1996', simple: "Une économie où la productivité dépend fondamentalement de la capacité à générer, traiter et transmettre efficacement de l'information.", ex: "Un service de recommandation dont l'essentiel du travail consiste à croiser des données déjà existantes plutôt qu'à fabriquer quoi que ce soit." },
+      { id: 'capitalisme-informationnel', t: 'Capitalisme informationnel', year: '1996', simple: "Le capitalisme n'a pas disparu à l'ère numérique : il s'est restructuré autour de réseaux mondiaux et flexibles, plus décentralisés que l'usine industrielle.", ex: "Une marque de vêtements qui ne possède aucune usine, mais orchestre à distance des dizaines d'ateliers sous contrat changeant d'une saison à l'autre." },
+    ],
+    oeuvres: [{ y: '1996', t: 'La Société en réseaux' }, { y: '1997', t: "Le Pouvoir de l'identité" }, { y: '2009', t: 'Communication Power' }],
+    citations: [{ t: "Notre monde, et nos vies, sont façonnés par des tendances contradictoires : la mondialisation et l'identité.", src: "d'après La Société en réseaux, 1996" }],
+    critiques: ["La trilogie, très empirique et fondée sur des dizaines d'études de cas, offre un appareil théorique jugé parfois moins unifié que son ambition ne le laisse attendre.", "L'insistance sur les réseaux et les flux informationnels a été accusée de surestimer le poids de la technologie face à des inégalités matérielles et de classe qui restent, elles, bien tangibles.", "La typologie en trois identités, féconde, décrit mal les mouvements sociaux réels qui combinent souvent plusieurs de ces logiques à la fois."],
+    up: ['marx', 'weber'], down: [], x: 700, y: 850,
+  },
+  bauman: {
+    id: 'bauman', name: 'Zygmunt Bauman', initials: 'ZB', dates: '1925–2017', nat: 'Pologne / Royaume-Uni', periode: 'Contemporain',
+    courant: 'Sociologie de la liquidité',
+    hook: "Il montre que rien, dans la modernité tardive, n'a plus le temps de prendre une forme stable avant de déjà se transformer.",
+    resume: "Bauman décrit une modernité devenue liquide : les institutions, les identités et même les liens affectifs perdent la solidité qu'ils avaient promise, pris dans un mouvement de fluidification permanent qui ne laisse à rien le temps de se figer.",
+    concepts: [
+      { id: 'modernite-liquide', t: 'Modernité liquide', year: '2000', simple: "La phase actuelle de la modernité, où les formes sociales n'ont plus le temps de se solidifier avant d'être déjà remplacées par d'autres.", ex: "Un logiciel professionnel remplacé avant même que l'équipe n'ait fini de maîtriser le précédent." },
+      { id: 'liquidite-sociale', t: 'Liquidité sociale', year: '2000', simple: "La propriété générale des liens, des identités et des institutions contemporaines : fluides, instables, prompts à changer de forme sous la moindre pression.", ex: "Un groupe de collègues devenu proche le temps d'un projet, dissous dès le projet suivant sans que personne n'en garde rancune." },
+      { id: 'societe-de-consommateurs', t: 'Société de consommateurs', year: '2007', simple: "L'intégration sociale et la valeur de chacun passent désormais par les choix de consommation plutôt que par la place occupée dans la production.", ex: "Une vitrine de magasin renouvelée chaque semaine, pour que rien n'y paraisse jamais définitivement acquis." },
+      { id: 'etrangers', t: 'Étrangers', year: '1991', simple: "Celui qui échappe aux catégories établies — ni ami ni ennemi — trouble un ordre social qui a besoin de tout classer pour fonctionner.", ex: "Un enfant né de parents venus de deux pays différents, à qui l'on demande sans cesse de choisir un camp qui ne lui ressemble pas." },
+      { id: 'insecurite', t: 'Insécurité', year: '1999', simple: "Un sentiment diffus d'exposition permanente, qui dépasse largement le seul risque économique pour toucher l'identité et l'avenir eux-mêmes.", ex: "Un sentiment de fragilité qui persiste même chez quelqu'un dont l'emploi et le logement restent, sur le papier, parfaitement stables." },
+      { id: 'precarite-existentielle', t: 'Précarité existentielle', year: '2003', simple: "Dans la modernité liquide, la précarité déborde le seul emploi : les relations elles-mêmes se vivent désormais sur le mode du provisoire.", ex: "Un colocataire accueilli sans bail écrit, sur un accord oral qui peut être rediscuté à tout moment par l'une ou l'autre partie." },
+      { id: 'exclusion', t: 'Exclusion', year: '2004', simple: "La modernité produit structurellement un surplus de vies devenues inutiles à l'économie, sans plus pouvoir les réabsorber comme elle le faisait autrefois.", ex: "Un ancien ouvrier qualifié dont le savoir-faire, autrefois recherché, ne trouve plus preneur nulle part depuis la fermeture de son secteur." },
+    ],
+    oeuvres: [{ y: '2000', t: 'La Modernité liquide' }, { y: '2003', t: "L'Amour liquide" }, { y: '2004', t: 'Vies perdues' }, { y: '2007', t: 'Vie liquide' }],
+    citations: [{ t: "Rien, dans le monde liquide moderne, n'est fait pour durer.", src: "d'après La Modernité liquide, 2000" }],
+    critiques: ["Le style, très essayiste et métaphorique, est jugé par certains sociologues plus proche de l'aphorisme que de l'appareil conceptuel rigoureusement défini.", "La métaphore du solide et du liquide, étendue à presque tous les domaines de l'existence, risque de devenir un descripteur si général qu'il perd en capacité de distinction.", "Le diagnostic, centré sur l'expérience occidentale et européenne tardo-capitaliste, se transpose difficilement à des trajectoires de modernisation très différentes."],
+    up: ['marx', 'simmel'], down: [], x: 30, y: 1010,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -788,12 +841,37 @@ export const EXTRA = {
     prenom: 'Michel', nom: 'Crozier', disc: ["Science politique — l'analyse des politiques publiques et de l'administration", "Gestion — le management des organisations, largement irrigué par ses travaux", "Économie — la rationalité limitée, empruntée à Herbert Simon"], biblio: ['E. Friedberg, Le Pouvoir et la Règle, Seuil, 1993', 'P. Grémion, Michel Crozier, un sociologue en action, Vuibert, 2014'],
     portrait: { kind: 'monogram', alt: 'Monogramme de Michel Crozier', credit: "Photographies sous droits : aucune image libre disponible." },
     horsCorpus: [
-      "Erhard Friedberg — coauteur de L'Acteur et le système, 1977",
       "Herbert Simon — la rationalité limitée, socle du modèle de l'acteur stratégique",
       "Chester Barnard — la coopération dans les organisations, précurseur de l'analyse des jeux internes",
     ],
   },
+  friedberg: {
+    prenom: 'Erhard', nom: 'Friedberg', disc: ["Science politique — les politiques publiques et la régulation par les acteurs", "Gestion — la théorie des organisations, largement irriguée par ses travaux"], biblio: ['M. Crozier & E. Friedberg, L\'Acteur et le système, Seuil, 1977', 'P. Grémion, Michel Crozier, un sociologue en action, Vuibert, 2014'],
+    portrait: { kind: 'monogram', alt: 'Monogramme d’Erhard Friedberg', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Herbert Simon — la rationalité limitée, socle du modèle de l'acteur stratégique",
+      "Anthony Giddens — la dualité de la structure, thèse voisine formulée indépendamment à la même époque",
+    ],
+  },
+  castells: {
+    prenom: 'Manuel', nom: 'Castells', disc: ["Urbanisme — ses premiers travaux, sur la question urbaine et les mouvements sociaux", "Sciences de la communication — le pouvoir des réseaux de communication de masse", "Économie — l'informationnalisme comme mode de développement"], biblio: ['F. Barbosa (dir.), Manuel Castells, la théorie de la société en réseaux, PUL, 2011', 'A. Mattelart, Histoire de la société de l\'information, La Découverte, 2001'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Manuel Castells', credit: "Photographies sous droits : aucune image libre disponible (personnalité vivante)." },
+    horsCorpus: [
+      "Alain Touraine — la société post-industrielle et l'action des mouvements sociaux, dont Castells fut l'élève à Paris",
+      "Daniel Bell — la société de l'information comme rupture avec la société industrielle",
+      "Ithiel de Sola Pool — les technologies de communication comme objet sociologique à part entière",
+    ],
+  },
+  bauman: {
+    prenom: 'Zygmunt', nom: 'Bauman', disc: ["Philosophie — la postmodernité et l'éthique de l'incertitude", "Histoire — l'expérience de l'exil et de la Shoah, matrice de sa réflexion sur l'ambivalence", "Culture et médias — la consommation comme nouvelle forme d'intégration sociale"], biblio: ['C. Rosenmayr, Zygmunt Bauman : la vie liquide, Autrement, 2015', 'A. Jacobsen & K. Tester, Bauman before Postmodernity, McGill-Queen\'s, 2013'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Zygmunt Bauman', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Jean-François Lyotard — la condition postmoderne, matrice du diagnostic d'une modernité qui doute d'elle-même",
+      "Claude Lévi-Strauss — l'ambivalence entre classement et désordre, reprise dans l'analyse des étrangers",
+      "Antonio Gramsci — dont Bauman retravaille la notion d'hégémonie dans ses premiers travaux marxistes en Pologne",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0], ['weber', 'crozier', 0], ['merton', 'crozier', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0], ['weber', 'crozier', 0], ['merton', 'crozier', 0], ['marx', 'castells', 0], ['weber', 'castells', 0], ['marx', 'bauman', 0], ['simmel', 'bauman', 0]];
 

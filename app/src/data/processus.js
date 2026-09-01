@@ -259,14 +259,14 @@ export const PROCESSUS = [
     categorie: 'individualisation',
     d: "Le processus par lequel les trajectoires de vie se détachent des cadres collectifs — classe, religion, famille élargie — qui les scénarisaient autrefois d'avance.",
     detail:
-      "Tocqueville en identifie le ressort le plus ancien : l'égalisation des conditions dissout les corps intermédiaires qui organisaient autrefois la vie sociale, et laisse chacun davantage seul face à ses choix. Boudon ajoute une nuance méthodologique utile : l'individualisation ne signifie pas la disparition des déterminismes sociaux, mais leur reformulation en termes de choix individuels, dont les effets agrégés restent, eux, très prévisibles.",
+      "Tocqueville en identifie le ressort le plus ancien : l'égalisation des conditions dissout les corps intermédiaires qui organisaient autrefois la vie sociale, et laisse chacun davantage seul face à ses choix. Boudon ajoute une nuance méthodologique utile : l'individualisation ne signifie pas la disparition des déterminismes sociaux, mais leur reformulation en termes de choix individuels, dont les effets agrégés restent, eux, très prévisibles. Bauman en tire un diagnostic plus sombre : cette individualisation n'est pas seulement un affranchissement, elle est aussi une fragilisation, chacun devenant responsable de trouver seul des solutions biographiques à des problèmes qui restent, eux, entièrement collectifs.",
     etapes: [
       "Un affaiblissement des cadres collectifs traditionnels — appartenance de classe, pratique religieuse, autorité familiale — qui prescrivaient autrefois une grande partie du parcours",
       "Une multiplication des choix qu'il revient désormais à l'individu d'arbitrer seul — couple, carrière, lieu de vie",
       "Une responsabilisation accrue : la réussite ou l'échec du parcours se lisent comme un mérite ou une faute individuels, plus rarement comme un effet de structure",
       "Une recomposition de liens plus choisis, mais aussi plus fragiles, que les cadres collectifs qu'ils remplacent",
     ],
-    concepts: ['egalisation-des-conditions', 'individualisme-methodologique', 'corps-intermediaires', 'individualisme', 'atomisation-sociale'],
+    concepts: ['egalisation-des-conditions', 'individualisme-methodologique', 'corps-intermediaires', 'individualisme', 'atomisation-sociale', 'liquidite-sociale'],
     phenomenes: ['monoparentalite', 'homogamie-sociale'],
     notions: [
       "Réflexivité biographique — la nécessité de justifier et d'ajuster en permanence son propre parcours, faute de scénario tout tracé",

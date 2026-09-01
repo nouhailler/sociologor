@@ -9118,4 +9118,553 @@ export const CONCEPTS = {
       { p: '1977', f: "Crozier et Friedberg en proposent une version stratégique et organisationnelle, fondée sur l'ajustement des jeux d'acteurs." },
     ],
   },
+
+  /* — Erhard Friedberg — */
+  'regles': {
+    detaille: [
+      "Une règle organisationnelle n'est jamais le simple garde-fou neutre qu'elle prétend être : en distribuant des droits, des obligations et des marges d'appréciation, elle avantage toujours certains acteurs par rapport à d'autres, même quand elle s'énonce dans un vocabulaire parfaitement égalitaire.",
+      "Friedberg déplace ainsi l'accent du cadre fixé par Crozier et lui-même en 1977 : la règle n'est plus seulement ce qui limite le jeu de l'extérieur, elle en devient un enjeu à part entière — on se bat pour l'interpréter, l'invoquer au bon moment, ou au contraire la contourner sans jamais la violer ouvertement.",
+      "Cette relecture n'annule pas la contrainte réelle qu'exerce une règle : elle en fait plutôt une ressource inégalement répartie, que certains savent mobiliser bien mieux que d'autres, ce qui recrée à l'intérieur même de la règle les inégalités qu'elle prétendait précisément neutraliser.",
+    ],
+    origine: {
+      oeuvre: 'Le Pouvoir et la Règle',
+      annee: '1993',
+      contexte:
+        "Seize ans après L'Acteur et le système, Friedberg reprend seul le programme de l'analyse stratégique pour en approfondir un point resté secondaire dans l'ouvrage commun : le statut ambigu de la règle, à la fois contrainte et ressource.",
+    },
+    exemples: [
+      "Un règlement de priorité aux congés qui, en apparence égalitaire, favorise systématiquement ceux qui savent le moment exact où le déposer.",
+      "Une procédure d'évaluation identique pour tous, que certains connaissent assez pour la retourner à leur avantage sans jamais l'enfreindre.",
+    ],
+    oeuvres: [
+      { y: '1993', t: 'Le Pouvoir et la Règle' },
+      { y: '1977', t: "L'Acteur et le système (avec M. Crozier)" },
+    ],
+    associes: ['jeu', 'zone-d-incertitude', 'dualite-de-la-structure'],
+    opposes: ['domination-legale-rationnelle'],
+    critiques: [
+      "Weber objecterait qu'une règle rationnelle-légale, correctement appliquée, doit précisément éliminer ce genre de marge d'interprétation inégale, faute de quoi elle cesse d'être une règle au sens propre.",
+      "Le concept, très général, dit peu de ce qui distingue une règle encore largement contraignante d'une règle devenue presque entièrement négociable.",
+      "Certains lecteurs objectent que la thèse, développée seize ans après l'ouvrage fondateur, prolonge plus qu'elle ne renouvelle vraiment le cadre initial de 1977.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber pose la règle rationnelle-légale comme fondement impersonnel de la bureaucratie moderne." },
+      { p: '1977', f: "Crozier et Friedberg montrent, dans L'Acteur et le système, que la règle formelle laisse toujours place à des jeux informels." },
+      { p: '1993', f: "Le Pouvoir et la Règle fait de la règle elle-même, et non plus seulement de ses marges, un objet d'enquête à part entière." },
+    ],
+  },
+
+  /* — Manuel Castells — */
+  'societe-en-reseaux': {
+    detaille: [
+      "La société en réseaux est la thèse centrale de Castells : depuis la révolution des technologies de l'information, à partir des années 1970, les structures sociales décisives — économiques, politiques, culturelles — s'organisent autour de réseaux, plus déterminants que n'importe quelle organisation ou institution prise isolément.",
+      "Un réseau n'a ni centre unique ni sommet fixe : sa force tient à sa capacité à intégrer de nouveaux nœuds et à se reconfigurer en permanence, ce qui le rend à la fois d'une flexibilité inédite et difficile à cerner par les cadres institutionnels classiques, pensés pour des organisations plus stables et plus centralisées.",
+      "Castells insiste sur un paradoxe : cette logique en réseaux, mondialisée et flexible, ne profite pas également à tous — elle inclut certains nœuds, certaines personnes et certains lieux, et en exclut d'autres, créant une nouvelle ligne de partage entre connectés et déconnectés.",
+    ],
+    origine: {
+      oeuvre: 'La Société en réseaux',
+      annee: '1996',
+      contexte:
+        "Castells ouvre sa trilogie L'Ère de l'information par une comparaison internationale de la restructuration économique et sociale que permettent les nouvelles technologies de l'information et de la communication.",
+    },
+    exemples: [
+      "Une chaîne de production répartie sur quatre continents, coordonnée en temps réel, sans qu'aucun site n'en soit à lui seul le centre.",
+      "Une organisation militante internationale sans siège fixe, dont l'efficacité tient à sa capacité à connecter des groupes locaux très divers.",
+    ],
+    oeuvres: [
+      { y: '1996', t: 'La Société en réseaux' },
+      { y: '1997', t: "Le Pouvoir de l'identité" },
+    ],
+    associes: ['espace-des-flux', 'capitalisme-informationnel'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Parsons objecterait qu'une société sans centre ni frontière stable perd la capacité d'intégration fonctionnelle que le concept de système social est censé garantir.",
+      "Le concept, très englobant, décrit une tendance générale plus qu'il n'offre un protocole précis pour délimiter un réseau donné dans une enquête concrète.",
+      "L'insistance sur la flexibilité des réseaux peut masquer la persistance de hiérarchies et de rapports de domination bien réels, simplement recomposés sous une forme moins visible.",
+    ],
+    evolution: [
+      { p: '1973', f: "Bell annonce la venue d'une société post-industrielle fondée sur le savoir et l'information." },
+      { p: '1970–1980', f: "Castells, alors marxiste structuraliste, étudie la question urbaine avant de se tourner vers les technologies de l'information." },
+      { p: '1996', f: "La Société en réseaux formule la thèse complète, à partir d'une comparaison internationale." },
+    ],
+  },
+  'espace-des-flux': {
+    detaille: [
+      "L'espace des flux est, pour Castells, la nouvelle logique spatiale dominante de la société en réseaux : les fonctions décisives — capitaux, informations, images, décisions stratégiques — circulent en réseau, indifférentes à la distance physique qui séparait autrefois les lieux.",
+      "Cet espace n'est pas immatériel : il repose sur une infrastructure bien réelle — câbles, centres de données, nœuds technologiques — mais son principe organisateur n'est plus la contiguïté physique, c'est la connexion au réseau, qui rapproche des points géographiquement très éloignés et peut isoler des points pourtant physiquement proches.",
+      "Castells y voit un basculement historique majeur : pour la première fois, les fonctions dominantes d'une société peuvent s'organiser sans jamais avoir besoin de partager un même territoire.",
+    ],
+    origine: {
+      oeuvre: 'La Société en réseaux',
+      annee: '1996',
+      contexte:
+        "Castells développe ce concept en observant comment la finance mondialisée, les sièges d'entreprises transnationales et les grands médias s'organisent de plus en plus par connexion en réseau plutôt que par proximité territoriale.",
+    },
+    exemples: [
+      "Une salle de marché financier connectée en continu à des places boursières situées à l'autre bout du monde, plus proche d'elles que du quartier voisin.",
+      "Une équipe de développement informatique répartie sur trois fuseaux horaires, qui collabore en temps quasi réel sans jamais s'être physiquement rencontrée.",
+    ],
+    oeuvres: [
+      { y: '1996', t: 'La Société en réseaux' },
+    ],
+    associes: ['societe-en-reseaux', 'distanciation-spatio-temporelle'],
+    opposes: ['espace-des-lieux'],
+    critiques: [
+      "Le concept, pensé à partir des fonctions les plus mondialisées de l'économie, décrit mal l'expérience de la majorité de la population, qui reste largement ancrée dans l'espace des lieux.",
+      "Il tend à présenter la déterritorialisation comme un fait technologique, alors qu'elle reste le produit de choix économiques et politiques précis, eux-mêmes situés quelque part.",
+      "La frontière entre espace des flux et espace des lieux, utile analytiquement, se brouille dans nombre de pratiques quotidiennes qui mêlent sans cesse les deux logiques.",
+    ],
+    evolution: [
+      { p: '1990', f: "Giddens décrit, de son côté, la distanciation spatio-temporelle comme trait général de la modernité." },
+      { p: '1996', f: "Castells formalise l'espace des flux comme logique spatiale propre à la société en réseaux." },
+    ],
+  },
+  'espace-des-lieux': {
+    detaille: [
+      "L'espace des lieux est la logique spatiale traditionnelle, organisée autour de la contiguïté physique et de l'expérience partagée d'un même territoire — celle dans laquelle la majorité des individus continue de vivre, même quand les fonctions dominantes de la société se sont, elles, déplacées vers l'espace des flux.",
+      "Castells insiste sur le décalage que cela produit : les décisions qui affectent le plus un lieu — délocalisation, investissement, désinvestissement — se prennent de plus en plus souvent ailleurs, dans l'espace des flux, sans que les habitants du lieu concerné n'y aient directement accès ni prise.",
+      "Ce décalage nourrit, selon Castells, une part importante des tensions politiques contemporaines : entre une élite mobile, à l'aise dans l'espace des flux, et une majorité dont l'existence reste attachée à un lieu qu'elle ne maîtrise plus entièrement.",
+    ],
+    origine: {
+      oeuvre: 'La Société en réseaux',
+      annee: '1996',
+      contexte:
+        "Castells oppose l'espace des lieux à l'espace des flux pour rendre compte du sentiment, largement partagé, d'un décalage croissant entre la vie quotidienne locale et des décisions économiques prises à une échelle globale.",
+    },
+    exemples: [
+      "Un quartier dont les habitants continuent d'y vivre au quotidien, tandis que les décisions qui en changent le sort se prennent ailleurs, en réseau.",
+      "Une usine fermée sur décision prise dans un siège social à des milliers de kilomètres, sans qu'aucun habitant du lieu n'ait été consulté.",
+    ],
+    oeuvres: [
+      { y: '1996', t: 'La Société en réseaux' },
+    ],
+    associes: ['societe-en-reseaux', 'identite-resistance'],
+    opposes: ['espace-des-flux'],
+    critiques: [
+      "Le concept peut suggérer une opposition trop nette entre un espace des lieux passif et un espace des flux actif, alors que les habitants d'un lieu ne sont jamais totalement dépourvus de prise sur leur situation.",
+      "Il dit peu des lieux qui, au contraire, tirent un avantage réel de leur connexion privilégiée à l'espace des flux, comme certaines métropoles mondiales.",
+      "La distinction, utile à grande échelle, se prête mal à l'analyse fine de situations locales où les deux logiques s'entremêlent constamment.",
+    ],
+    evolution: [
+      { p: '1996', f: "Castells formule la distinction entre espace des lieux et espace des flux." },
+      { p: '1997', f: "Le Pouvoir de l'identité relie ce décalage à la montée d'identités de résistance ancrées dans le lieu." },
+    ],
+  },
+  'pouvoir-des-reseaux': {
+    detaille: [
+      "Le pouvoir des réseaux est, selon Castells, la forme que prend le pouvoir dans la société en réseaux : il ne s'exerce plus principalement par la contrainte directe, mais par deux mécanismes précis — programmer les objectifs et les règles d'un réseau, et connecter ou déconnecter des réseaux entre eux.",
+      "Programmer un réseau, c'est décider des valeurs, des critères et des priorités qui orientent son fonctionnement — ce que privilégie ou pénalise un algorithme, par exemple ; connecter ou déconnecter, c'est décider quels réseaux communiquent entre eux, et lesquels restent isolés les uns des autres.",
+      "Ce pouvoir reste concentré, même s'il change de forme : il appartient à ceux qui programment les réseaux les plus stratégiques, et à ceux qui décident des connexions entre réseaux — des positions qui échappent largement aux formes classiques de contrôle démocratique.",
+    ],
+    origine: {
+      oeuvre: 'Communication Power',
+      annee: '2009',
+      contexte:
+        "Castells développe ce concept en étudiant les réseaux de communication de masse et d'auto-communication de masse permis par internet, pour comprendre comment le pouvoir s'y exerce sans passer par les canaux institutionnels classiques.",
+    },
+    exemples: [
+      "Une plateforme qui modifie son algorithme et redéfinit, du jour au lendemain, ce qui devient visible ou invisible pour des millions d'utilisateurs.",
+      "Un opérateur de télécommunications qui coupe l'accès à certains réseaux sociaux, isolant d'un coup toute une population de l'espace des flux mondial.",
+    ],
+    oeuvres: [
+      { y: '2009', t: 'Communication Power' },
+      { y: '1996', t: 'La Société en réseaux' },
+    ],
+    associes: ['societe-en-reseaux', 'capitalisme-informationnel'],
+    opposes: ['relations-de-pouvoir'],
+    critiques: [
+      "Foucault objecterait qu'un pouvoir ramené à deux mécanismes précis — programmer, connecter — perd la dimension diffuse et capillaire que sa propre analyse s'efforçait de restituer.",
+      "Le concept, centré sur les réseaux numériques, dit peu des formes de pouvoir qui continuent de s'exercer en dehors de toute infrastructure de communication.",
+      "Il suppose une identification relativement claire de qui programme effectivement un réseau, alors que cette maîtrise reste souvent partagée, contestée ou opaque.",
+    ],
+    evolution: [
+      { p: '1975', f: "Foucault décrit un pouvoir diffus, exercé dans les pratiques quotidiennes plutôt que depuis un centre unique." },
+      { p: '1996', f: "Castells esquisse déjà, dans La Société en réseaux, l'idée d'un pouvoir attaché à la maîtrise des réseaux." },
+      { p: '2009', f: "Communication Power formalise les deux mécanismes de programmation et de connexion." },
+    ],
+  },
+  'identite-resistance': {
+    detaille: [
+      "L'identité-résistance est, dans la typologie de Castells, l'identité que construisent des acteurs placés en position dévalorisée ou stigmatisée par la logique dominante, à partir de principes explicitement opposés à ceux qui les dévalorisent — une identité de repli défensif, souvent enracinée dans un lieu, une religion ou une tradition menacés.",
+      "Cette identité ne cherche pas d'abord à transformer la société dans son ensemble : elle vise à préserver un « nous » distinct, à l'abri de la logique globale qui menace de l'absorber ou de l'effacer — une frontière tracée entre soi et un monde jugé hostile.",
+      "Castells y voit l'une des réponses les plus fréquentes à la mondialisation informationnelle : plus l'espace des flux s'impose, plus certains groupes se replient sur l'espace des lieux et sur ce qui les en distingue, quitte à durcir des identités qu'ils vivaient auparavant plus souplement.",
+    ],
+    origine: {
+      oeuvre: "Le Pouvoir de l'identité",
+      annee: '1997',
+      contexte:
+        "Castells étudie, dans ce second tome de sa trilogie, la montée simultanée de mouvements identitaires très divers — nationalistes, religieux, régionalistes — comme réaction à la mondialisation décrite dans le premier tome.",
+    },
+    exemples: [
+      "Une communauté qui réaffirme sa langue et ses traditions locales face à une uniformisation économique venue de l'extérieur.",
+      "Un mouvement religieux qui durcit ses pratiques identitaires en réaction à ce qu'il perçoit comme une menace culturelle globale.",
+    ],
+    oeuvres: [
+      { y: '1997', t: "Le Pouvoir de l'identité" },
+    ],
+    associes: ['identite-projet', 'espace-des-lieux'],
+    opposes: ['identite-legitimante'],
+    critiques: [
+      "Le concept regroupe sous un même terme des mouvements aux visées très différentes — défensifs pour certains, ouvertement offensifs pour d'autres — ce qui peut en aplanir les distinctions internes.",
+      "Il explique bien l'émergence de ces identités, mais moins précisément les conditions qui déterminent leur succès ou leur échec dans la durée.",
+      "Certains lecteurs objectent que la typologie, séduisante, reste difficile à appliquer strictement à des mouvements qui combinent souvent plusieurs logiques identitaires à la fois.",
+    ],
+    evolution: [
+      { p: '1979', f: "Tocqueville, avant Castells, décrit déjà un repli identitaire possible face à l'égalisation des conditions." },
+      { p: '1997', f: "Castells formalise l'identité-résistance comme catégorie propre à la société en réseaux." },
+    ],
+  },
+  'identite-projet': {
+    detaille: [
+      "L'identité-projet est, dans la typologie de Castells, l'identité que construisent des acteurs sociaux qui, à partir de matériaux culturels disponibles, redéfinissent leur position dans la société et visent, ce faisant, la transformation de la structure sociale tout entière.",
+      "Elle se distingue de l'identité-résistance par son ambition : là où résister vise d'abord à préserver un « nous » menacé, le projet vise à proposer un nouveau modèle de société, dépassant la seule défense pour porter une transformation collective plus large.",
+      "Castells observe que l'identité-projet naît souvent d'une identité-résistance qui évolue : un mouvement défensif, en se développant, finit parfois par formuler un projet de transformation qui dépasse la seule protection de ce qu'il cherchait d'abord à préserver.",
+    ],
+    origine: {
+      oeuvre: "Le Pouvoir de l'identité",
+      annee: '1997',
+      contexte:
+        "Castells prend le mouvement féministe comme exemple central de cette dynamique : né en partie d'une résistance à la domination masculine, il évolue vers un projet de redéfinition complète des rapports entre les sexes.",
+    },
+    exemples: [
+      "Un mouvement qui ne demande plus seulement à être toléré, mais propose une redéfinition complète des rapports entre les sexes.",
+      "Un mouvement écologiste qui ne se contente plus de dénoncer une pollution locale, mais propose un nouveau modèle global de développement.",
+    ],
+    oeuvres: [
+      { y: '1997', t: "Le Pouvoir de l'identité" },
+    ],
+    associes: ['identite-resistance', 'agentivite'],
+    opposes: ['identite-legitimante'],
+    critiques: [
+      "Le passage d'une identité-résistance à une identité-projet reste plus affirmé que précisément expliqué : à quelles conditions une résistance se transforme-t-elle en projet plutôt que de simplement s'épuiser ?",
+      "Le concept prête aux mouvements sociaux une cohérence stratégique que leurs trajectoires réelles, souvent hésitantes et divisées, ne confirment pas toujours.",
+      "Il dit peu des identités-projets qui échouent à transformer la structure sociale visée, et qui retombent alors en identités-résistances plus modestes.",
+    ],
+    evolution: [
+      { p: '1970', f: "Le mouvement féministe de la deuxième vague se développe d'abord comme résistance à la domination masculine." },
+      { p: '1997', f: "Castells en fait l'exemple paradigmatique du passage à une identité-projet." },
+    ],
+  },
+  'identite-legitimante': {
+    detaille: [
+      "L'identité légitimante est, dans la typologie de Castells, celle qu'introduisent les institutions dominantes d'une société pour étendre et rationaliser leur domination sur les acteurs sociaux — l'identité que la société dominante se donne à elle-même et cherche à faire partager par tous.",
+      "Elle se distingue nettement des deux autres identités de la typologie par son origine : elle ne naît pas d'en bas, chez des acteurs dévalorisés ou en quête de transformation, mais d'en haut, portée par les appareils — État, école, grandes organisations — qui ont intérêt à sa diffusion.",
+      "Castells la tient pour la matrice historique de ce que la sociologie classique appelait la société civile organisée : elle produit un sentiment d'appartenance commun, qui sert autant à intégrer qu'à légitimer l'ordre social existant.",
+    ],
+    origine: {
+      oeuvre: "Le Pouvoir de l'identité",
+      annee: '1997',
+      contexte:
+        "Castells s'appuie sur des exemples classiques — l'identité nationale forgée par l'école républicaine, l'identité d'entreprise diffusée par le management — pour définir ce premier pôle de sa typologie, avant de lui opposer les identités de résistance et de projet.",
+    },
+    exemples: [
+      "Un récit national enseigné à l'école, qui présente l'ordre social existant comme la suite naturelle et légitime de l'histoire du pays.",
+      "Une culture d'entreprise diffusée à tous les niveaux, qui présente les intérêts de la direction comme ceux de l'ensemble du personnel.",
+    ],
+    oeuvres: [
+      { y: '1997', t: "Le Pouvoir de l'identité" },
+    ],
+    associes: ['assujettissement', 'domination-legitime'],
+    opposes: ['identite-resistance', 'identite-projet'],
+    critiques: [
+      "Le concept reste très proche de la domination légitime de Weber, sans toujours préciser ce qu'il apporte de propre à cette notion déjà bien établie.",
+      "Il suppose une frontière nette entre identité venue d'en haut et identités venues d'en bas, alors que les institutions dominantes intègrent souvent des éléments empruntés aux résistances qu'elles cherchent à neutraliser.",
+      "Il dit peu des moments où une identité légitimante, mal reçue, échoue à produire l'adhésion qu'elle visait.",
+    ],
+    evolution: [
+      { p: '1922', f: "Weber pose la question de la légitimité de la domination, matrice partielle du concept." },
+      { p: '1997', f: "Castells en fait le premier pôle de sa typologie des identités, en vis-à-vis des identités de résistance et de projet." },
+    ],
+  },
+  'economie-informationnelle': {
+    detaille: [
+      "L'économie informationnelle est une économie où la productivité et la compétitivité dépendent fondamentalement de la capacité à générer, traiter et transmettre efficacement de l'information — une économie qui utilisait déjà l'information depuis longtemps, mais où celle-ci devient, pour la première fois, la source principale de la valeur produite.",
+      "Castells la distingue soigneusement d'une économie simplement informatisée : ce qui change n'est pas seulement l'outil, ce sont les rapports de production eux-mêmes, réorganisés autour du traitement de l'information plutôt que de la seule transformation de matières premières.",
+      "Cette économie ne remplace pas entièrement l'économie industrielle : elle la recompose, en réorganisant autour de l'information la manière dont le travail, le capital et les échanges se coordonnent à l'échelle mondiale.",
+    ],
+    origine: {
+      oeuvre: 'La Société en réseaux',
+      annee: '1996',
+      contexte:
+        "Castells développe ce concept en comparant les économies de plusieurs continents pour montrer qu'un même mode de développement informationnel se diffuse partout, bien au-delà des seuls secteurs technologiques.",
+    },
+    exemples: [
+      "Une entreprise dont la valeur tient moins à ses machines qu'à sa capacité à traiter et à exploiter les données qu'elle recueille.",
+      "Un cabinet de conseil dont le principal actif est la connaissance accumulée par ses employés, plus que tout bien matériel qu'il posséderait.",
+    ],
+    oeuvres: [
+      { y: '1996', t: 'La Société en réseaux' },
+    ],
+    associes: ['societe-en-reseaux', 'capitalisme-informationnel'],
+    opposes: ['capital-economique'],
+    critiques: [
+      "Le concept peine parfois à se distinguer nettement d'une simple économie de services, dont le traitement de l'information n'est qu'un aspect parmi d'autres.",
+      "Il dit peu des activités matérielles — extraction, logistique, entretien des infrastructures — qui restent indispensables au fonctionnement de l'économie informationnelle elle-même.",
+      "L'accent mis sur l'information comme source de valeur peut minorer le rôle persistant du capital économique classique dans la répartition réelle des richesses produites.",
+    ],
+    evolution: [
+      { p: '1973', f: "Bell décrit l'émergence d'une économie post-industrielle centrée sur les services et le savoir." },
+      { p: '1996', f: "Castells précise le concept d'économie informationnelle et le distingue de la simple informatisation." },
+    ],
+  },
+  'capitalisme-informationnel': {
+    detaille: [
+      "Le capitalisme informationnel est le nom que Castells donne à la forme historique prise par le capitalisme depuis la fin du XXᵉ siècle : un capitalisme restructuré et démultiplié par les technologies de l'information, organisé en réseaux mondiaux flexibles plutôt qu'autour de la grande usine industrielle intégrée.",
+      "Castells insiste sur un point de méthode : il ne s'agit pas d'un dépassement du capitalisme, mais de la rencontre entre un mode de production qui reste capitaliste — fondé sur le profit et la propriété privée — et un nouveau mode de développement, l'informationnalisme, qui en change radicalement l'organisation concrète.",
+      "Cette restructuration s'accompagne d'une flexibilité et d'une mondialisation inédites : le capital, le travail et la production peuvent se recomposer d'un pays à l'autre à une vitesse que l'ancien capitalisme industriel, plus rigide et plus territorialisé, ne permettait pas.",
+    ],
+    origine: {
+      oeuvre: 'La Société en réseaux',
+      annee: '1996',
+      contexte:
+        "Castells développe ce concept pour actualiser l'analyse marxiste du capitalisme sans en abandonner le principe : le mode de production reste capitaliste, mais son mode de développement devient informationnel.",
+    },
+    exemples: [
+      "Une multinationale sans usine propre, qui pilote à distance une chaîne de sous-traitants répartis sur plusieurs continents.",
+      "Un capital financier qui se déplace d'un marché à l'autre en quelques secondes, à une vitesse qu'aucune usine physique ne pourrait suivre.",
+    ],
+    oeuvres: [
+      { y: '1996', t: 'La Société en réseaux' },
+    ],
+    associes: ['economie-informationnelle', 'societe-en-reseaux'],
+    opposes: ['societe-salariale'],
+    critiques: [
+      "Marx objecterait qu'un capitalisme resté fidèle à sa logique de profit, quels que soient ses habits informationnels, reproduit les mêmes rapports d'exploitation qu'il a toujours produits.",
+      "Le concept, en insistant sur la flexibilité et la mondialisation, dit peu des poches de rigidité et de protection qui subsistent, inégalement, selon les pays et les secteurs.",
+      "Il repose sur une lecture assez optimiste de la capacité du capitalisme informationnel à se réformer, que la persistance des inégalités mondiales interroge directement.",
+    ],
+    evolution: [
+      { p: '1970–1975', f: "Castell mène ses premiers travaux marxistes sur la question urbaine, avant son tournant vers l'information." },
+      { p: '1996', f: "La Société en réseaux formule le capitalisme informationnel comme rencontre entre mode de production capitaliste et mode de développement informationnel." },
+      { p: 'Depuis 1975', f: "La fragilisation du salariat, décrite par ailleurs par Castel, accompagne concrètement cette même restructuration informationnelle du capitalisme." },
+    ],
+  },
+
+  /* — Zygmunt Bauman — */
+  'modernite-liquide': {
+    detaille: [
+      "La modernité liquide est, pour Bauman, la phase actuelle d'une modernité qui n'a plus le temps de solidifier ses formes avant qu'elles ne soient déjà remplacées par d'autres — succédant à une modernité « solide », industrielle et bureaucratique, qui cherchait au contraire à couler ses institutions dans des cadres stables et durables.",
+      "Cette liquéfaction touche tout ce que la modernité solide avait mis des générations à construire : le poste stable, le mariage à vie, l'appartenance de classe durable — autant de repères qui structuraient autrefois une existence entière, et qui se recomposent désormais à un rythme qu'aucune génération n'a le temps d'assimiler complètement.",
+      "Bauman insiste sur un renversement : ce n'est plus la solidité mais la légèreté et la vitesse qui deviennent des atouts dans ce nouveau monde — rester attaché à une forme trop longtemps devient un handicap plutôt qu'une sécurité.",
+    ],
+    origine: {
+      oeuvre: 'La Modernité liquide',
+      annee: '2000',
+      contexte:
+        "Bauman développe cette métaphore centrale pour caractériser les décennies qui suivent la fin des grandes structures industrielles et bureaucratiques du XXᵉ siècle, dans un monde où la flexibilité devient la nouvelle norme.",
+    },
+    exemples: [
+      "Un métier entier réorganisé trois fois en une carrière, là où une génération plus tôt il aurait suffi d'en apprendre les gestes une fois pour toutes.",
+      "Un contrat de travail renouvelé mois après mois, dans un secteur où le poste à vie constituait autrefois la norme.",
+    ],
+    oeuvres: [
+      { y: '2000', t: 'La Modernité liquide' },
+      { y: '2007', t: 'Vie liquide' },
+    ],
+    associes: ['liquidite-sociale', 'societe-de-consommateurs'],
+    opposes: ['modernite-reflexive'],
+    critiques: [
+      "Giddens objecterait que la modernité tardive se caractérise moins par une pure dissolution des formes que par une réflexivité accrue, capable de reconstruire sans cesse de nouveaux repères, même provisoires.",
+      "La métaphore, très évocatrice, reste peu opérationnalisée empiriquement : elle décrit une tendance générale plus qu'elle ne fournit un protocole d'enquête précis.",
+      "Le diagnostic, centré sur l'expérience occidentale, peine à rendre compte de régions où des formes très solides — étatiques, religieuses, familiales — restent au contraire en plein essor.",
+    ],
+    evolution: [
+      { p: '1979', f: "Lyotard décrit la fin des grands récits, matrice du diagnostic postmoderne dont Bauman s'inspire." },
+      { p: '1989', f: "Bauman publie Modernité et Holocauste, où la rationalisation bureaucratique de la modernité solide montre déjà sa face la plus sombre." },
+      { p: '2000', f: "La Modernité liquide formule la métaphore centrale et l'applique systématiquement à la vie contemporaine." },
+    ],
+  },
+  'liquidite-sociale': {
+    detaille: [
+      "La liquidité sociale est la propriété générale que la modernité liquide confère aux liens, aux identités et aux institutions contemporaines : fluides, instables, prompts à changer de forme sous la moindre pression, incapables de garder durablement le contour qu'on voudrait leur donner.",
+      "Bauman étend ainsi la métaphore du liquide bien au-delà de l'économie ou du travail : les relations amicales, les appartenances collectives, jusqu'au sentiment même d'identité personnelle, prennent la consistance d'un fluide qui épouse la forme du récipient plutôt que de la conserver.",
+      "Cette liquidité n'est pas vécue comme une simple libération : elle prive aussi les individus des points d'appui stables sur lesquels les générations précédentes pouvaient construire un projet de vie à long terme.",
+    ],
+    origine: {
+      oeuvre: 'La Modernité liquide',
+      annee: '2000',
+      contexte:
+        "Bauman généralise sa métaphore centrale à l'ensemble des liens sociaux, au-delà du seul travail déjà transformé par la flexibilité économique, pour décrire une fluidification qui touche jusqu'aux relations les plus intimes.",
+    },
+    exemples: [
+      "Un cercle amical reconfiguré au gré des déménagements, sans le noyau stable qu'aurait offert un même quartier habité toute une vie.",
+      "Une appartenance associative maintenue seulement tant qu'elle convient, sans l'engagement de longue durée qu'elle aurait autrefois supposé.",
+    ],
+    oeuvres: [
+      { y: '2000', t: 'La Modernité liquide' },
+    ],
+    associes: ['modernite-liquide', 'precarite-existentielle'],
+    opposes: ['habitus'],
+    critiques: [
+      "Bourdieu objecterait qu'un habitus, formé tôt et durablement incorporé, continue de structurer les conduites bien après que les cadres institutionnels environnants se sont eux-mêmes liquéfiés.",
+      "Le concept, très général, risque de désigner presque tout changement social comme une preuve supplémentaire de liquidité, ce qui le rend difficile à mettre en défaut.",
+      "Il dit peu des poches de solidité — patrimoine familial, réseaux hérités — qui continuent de protéger certains individus bien mieux que d'autres face à cette même liquéfaction.",
+    ],
+    evolution: [
+      { p: '2000', f: "La Modernité liquide généralise la métaphore aux liens sociaux dans leur ensemble." },
+      { p: '2003', f: "L'Amour liquide l'applique spécifiquement aux relations affectives et amoureuses." },
+    ],
+  },
+  'societe-de-consommateurs': {
+    detaille: [
+      "La société de consommateurs est, pour Bauman, celle où l'intégration sociale et la valeur même d'un individu se jouent désormais dans ses choix de consommation, plutôt que dans la place stable qu'il occupait autrefois dans la production — un basculement du travailleur vers le consommateur comme figure centrale de l'identité sociale.",
+      "Dans cette société, consommer n'est plus seulement satisfaire un besoin : c'est démontrer, sans cesse renouvelée, sa capacité à choisir, à se distinguer et à rester désirable sur un marché où les personnes elles-mêmes finissent par se penser et se présenter comme des produits à valoriser.",
+      "Bauman y voit une source d'insécurité permanente : puisque la valeur d'un consommateur tient à sa capacité à consommer encore, ne plus pouvoir le faire — faute de ressources ou de désir renouvelé — expose à un risque d'exclusion bien plus radical que la seule pauvreté matérielle.",
+    ],
+    origine: {
+      oeuvre: 'Consuming Life',
+      annee: '2007',
+      contexte:
+        "Bauman prolonge son diagnostic de la modernité liquide en l'appliquant spécifiquement à la consommation, qu'il présente comme le principal vecteur d'intégration sociale dans les économies développées contemporaines.",
+    },
+    exemples: [
+      "Un adolescent jugé, par ses pairs, moins à la marque de ses vêtements qu'à la rapidité avec laquelle il les renouvelle.",
+      "Un profil de réseau social entretenu comme une vitrine personnelle, mis à jour en continu pour rester visible et désirable.",
+    ],
+    oeuvres: [
+      { y: '2007', t: 'Consuming Life' },
+      { y: '2000', t: 'La Modernité liquide' },
+    ],
+    associes: ['modernite-liquide', 'nouvel-esprit-du-capitalisme'],
+    opposes: ['alienation'],
+    critiques: [
+      "Marx objecterait qu'une société pensée depuis la seule consommation masque le rapport de production et d'exploitation qui continue, en amont, à déterminer ce que chacun peut effectivement consommer.",
+      "Le concept, centré sur les sociétés développées, se transpose difficilement à des contextes où la consommation de masse reste hors de portée d'une grande partie de la population.",
+      "Il dit peu des formes de résistance à la logique consumériste, que certains groupes développent précisément pour s'en démarquer.",
+    ],
+    evolution: [
+      { p: '1899', f: "Veblen décrit déjà la consommation ostentatoire comme signe de position sociale." },
+      { p: '1979', f: "Bourdieu montre que le goût, y compris celui du consommateur, classe socialement celui qui l'affiche." },
+      { p: '2007', f: "Consuming Life fait de la consommation le principal vecteur d'intégration de la modernité liquide." },
+    ],
+  },
+  'etrangers': {
+    detaille: [
+      "L'étranger, pour Bauman, est d'abord celui qui échappe aux catégories établies : ni ami ni ennemi, ni tout à fait dedans ni tout à fait dehors, il trouble un ordre social dont le fonctionnement même repose sur la capacité à tout classer sans reste.",
+      "Cette ambivalence est, selon Bauman, ce que la modernité supporte le moins bien : son projet d'ordonner rationnellement le monde entier ne laisse aucune place légitime à ce qui résiste au classement — d'où la tentation récurrente d'éliminer ou d'assimiler de force ce qui demeure ambigu.",
+      "La mondialisation et les mouvements de population contemporains multiplient les occasions de rencontrer cette figure : des étrangers dont la présence prolongée interdit de les traiter comme un passage temporaire, sans pour autant qu'on les intègre pleinement aux catégories déjà là.",
+    ],
+    origine: {
+      oeuvre: 'Modernité et ambivalence',
+      annee: '1991',
+      contexte:
+        "Bauman prolonge, dans cet ouvrage, une réflexion entamée après son propre exil de Pologne, sur la manière dont les sociétés modernes gèrent — souvent mal — ce qui résiste à leurs catégories de classement.",
+    },
+    exemples: [
+      "Un nouvel arrivant dont on ne sait s'il faut l'accueillir ou s'en méfier, précisément parce qu'aucune catégorie déjà là ne lui convient tout à fait.",
+      "Une personne d'origine mixte, régulièrement sommée de choisir un camp identitaire net qui ne correspond à aucune de ses appartenances réelles.",
+    ],
+    oeuvres: [
+      { y: '1991', t: 'Modernité et ambivalence' },
+      { y: '2016', t: 'Étrangers à nos portes' },
+    ],
+    associes: ['etranger', 'stock-de-connaissances'],
+    opposes: ['intersubjectivite'],
+    critiques: [
+      "Schutz objecterait qu'un étranger, loin de rester à jamais inclassable, finit le plus souvent par reconstituer, avec le temps, un stock de connaissances suffisant pour rejoindre l'intersubjectivité ordinaire du groupe qu'il rejoint.",
+      "Le concept, très général, dit peu de ce qui distingue les étrangers effectivement intégrés à terme de ceux qui restent durablement tenus à l'écart.",
+      "Il prête à la modernité une intolérance systématique à l'ambiguïté que certaines sociétés contemporaines démentent, en cultivant au contraire l'hybridité comme une valeur.",
+    ],
+    evolution: [
+      { p: '1908', f: "Simmel décrit l'étranger comme une position sociale paradoxale, à la fois proche et distante." },
+      { p: '1944', f: "Schütz prolonge l'analyse pour penser la situation de l'immigrant récent." },
+      { p: '1991', f: "Bauman en fait une figure de l'ambivalence que la modernité ne sait pas tolérer." },
+    ],
+  },
+  'insecurite': {
+    detaille: [
+      "L'insécurité, chez Bauman, est un sentiment diffus d'exposition permanente qui déborde largement le seul risque économique : elle touche l'identité, les relations et l'avenir lui-même, dans un monde où plus aucun cadre stable ne garantit à l'avance ce que demain apportera.",
+      "Cette insécurité se distingue d'un danger précis et nommable : elle est plus ambiante que localisée, ce qui la rend d'autant plus difficile à combattre — on peut se prémunir contre une menace identifiée, beaucoup moins contre un sentiment général que rien de concret ne vient jamais totalement dissiper.",
+      "Bauman note un paradoxe politique : cette insécurité diffuse, souvent liée à des causes globales et lointaines, est fréquemment redirigée vers des cibles locales et immédiates — l'étranger, le voisin — plus faciles à désigner qu'un système économique mondialisé.",
+    ],
+    origine: {
+      oeuvre: 'In Search of Politics',
+      annee: '1999',
+      contexte:
+        "Bauman développe ce concept en observant comment l'incertitude économique et sociale de la mondialisation se traduit, dans le débat public, en une demande de sécurité souvent déplacée vers des enjeux plus étroits et plus immédiats.",
+    },
+    exemples: [
+      "Une appréhension continue face à l'avenir, sans qu'aucune menace précise et nommable ne puisse jamais l'expliquer entièrement.",
+      "Un vote porté par un sentiment général de vulnérabilité, capté par une cible désignée sans lien direct avec ses causes réelles.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'In Search of Politics' },
+      { y: '2006', t: 'Liquid Fear' },
+    ],
+    associes: ['modernite-liquide', 'insecurite-sociale'],
+    opposes: ['protection-sociale'],
+    critiques: [
+      "Castel objecterait que l'insécurité qu'il décrit reste largement mesurable — perte d'emploi, absence de couverture — quand celle de Bauman, plus diffuse, se prête moins à l'enquête empirique précise.",
+      "Le concept, très large, risque d'englober sous un même terme des peurs de nature très différente, dont les causes et les remèdes ne se ressemblent pas.",
+      "Il dit peu des dispositifs concrets — assurances, syndicats, protections locales — qui continuent, malgré tout, à atténuer cette insécurité pour une partie de la population.",
+    ],
+    evolution: [
+      { p: '1999', f: "In Search of Politics relie l'incertitude économique mondialisée à une demande de sécurité déplacée sur des enjeux locaux." },
+      { p: '2006', f: "Liquid Fear en généralise l'analyse à une peur devenue elle-même liquide, sans objet fixe." },
+    ],
+  },
+  'precarite-existentielle': {
+    detaille: [
+      "La précarité existentielle est, pour Bauman, l'extension de la précarité bien au-delà du seul emploi : dans la modernité liquide, les relations elles-mêmes — amicales, amoureuses, professionnelles — se vivent sur le mode du provisoire, susceptibles d'être rompues sans drame ni justification à donner.",
+      "Cette précarité touche jusqu'à l'identité personnelle : n'ayant plus de cadre stable où s'ancrer durablement, l'individu doit sans cesse retravailler qui il est, sans jamais pouvoir considérer cette construction comme définitivement achevée.",
+      "Bauman insiste sur son ambivalence : cette précarité généralisée est vendue comme une liberté — on peut toujours changer, toujours recommencer — alors qu'elle prive aussi les individus de la sécurité qu'offrait autrefois un engagement tenu pour irréversible.",
+    ],
+    origine: {
+      oeuvre: "L'Amour liquide",
+      annee: '2003',
+      contexte:
+        "Bauman étudie comment la logique de la consommation, faite de choix rapides et d'engagements révisables, s'étend jusqu'aux relations amoureuses, autrefois pensées comme les plus stables et les plus durables de toutes.",
+    },
+    exemples: [
+      "Une relation vécue avec l'arrière-pensée qu'elle pourrait, sans drame ni rupture formelle, s'arrêter à tout moment.",
+      "Un cercle professionnel maintenu tant qu'il reste utile, sans l'engagement de long terme qu'il aurait autrefois supposé.",
+    ],
+    oeuvres: [
+      { y: '2003', t: "L'Amour liquide" },
+      { y: '2000', t: 'La Modernité liquide' },
+    ],
+    associes: ['liquidite-sociale', 'precariat'],
+    opposes: ['societe-salariale'],
+    critiques: [
+      "Castel objecterait qu'assimiler la précarité relationnelle à la précarité de l'emploi risque de diluer un concept dont la force tenait justement à sa précision sociologique et économique.",
+      "Le concept, très général, prête à l'ensemble des relations contemporaines une fragilité que beaucoup d'entre elles démentent dans les faits.",
+      "Il dit peu des inégalités d'exposition à cette précarité existentielle, que les ressources économiques et sociales continuent d'atténuer très inégalement.",
+    ],
+    evolution: [
+      { p: '1995', f: "Castel documente la fragilisation du salariat et de la protection sociale qui l'accompagnait." },
+      { p: '2003', f: "L'Amour liquide étend le diagnostic de la précarité aux relations affectives elles-mêmes." },
+    ],
+  },
+  'exclusion': {
+    detaille: [
+      "L'exclusion, pour Bauman, n'est pas un accident réparable ni un problème temporaire que la croissance économique finirait par résorber : c'est un produit structurel de la modernité elle-même, qui fabrique nécessairement un surplus de vies devenues inutiles à ses propres critères de production et de consommation.",
+      "Bauman parle de « vies perdues » pour désigner ces populations rendues superflues par la modernisation et la mondialisation — trop nombreuses pour être réabsorbées comme la migration ou la colonisation le permettaient autrefois, et trop peu rentables pour intéresser un marché mondialisé en quête d'efficacité.",
+      "Ce qui distingue cette exclusion des formes de pauvreté plus anciennes, c'est son caractère permanent : là où un chômeur pouvait autrefois espérer un retour à l'emploi, l'exclu de la modernité liquide risque de rester classé, à long terme, hors de toute fonction sociale reconnue.",
+    ],
+    origine: {
+      oeuvre: 'Vies perdues',
+      annee: '2004',
+      contexte:
+        "Bauman développe ce concept en observant la mondialisation économique, qui produit dans certaines régions du monde des populations entières devenues excédentaires, sans qu'aucun mécanisme comparable à l'ancienne émigration coloniale ne permette plus de les absorber ailleurs.",
+    },
+    exemples: [
+      "Toute une région désindustrialisée dont la main-d'œuvre, plus rentable ailleurs, ne retrouve jamais d'emploi comparable sur place.",
+      "Un camp de réfugiés durablement installé, dont les habitants ne sont plus attendus nulle part comme une main-d'œuvre utile.",
+    ],
+    oeuvres: [
+      { y: '2004', t: 'Vies perdues' },
+    ],
+    associes: ['precarite-existentielle', 'zone-de-desaffiliation'],
+    opposes: ['fonction-latente'],
+    critiques: [
+      "Merton objecterait qu'une population apparemment exclue peut malgré tout remplir des fonctions latentes non voulues — main-d'œuvre de réserve, justification de politiques publiques — que le concept de vie perdue ne prend pas en compte.",
+      "Le tableau, très sombre, laisse peu de place aux stratégies de survie et de recomposition que documentent pourtant de nombreuses enquêtes de terrain sur les populations exclues.",
+      "Le concept, centré sur la mondialisation économique, dit peu des formes d'exclusion plus anciennes, qui préexistaient largement à la modernité liquide elle-même.",
+    ],
+    evolution: [
+      { p: '1974', f: "Lenoir popularise l'exclusion comme catégorie administrative en France." },
+      { p: '1995', f: "Castel cartographie les zones de vulnérabilité et de désaffiliation qui la précèdent." },
+      { p: '2004', f: "Vies perdues en propose une lecture structurelle, à l'échelle de la mondialisation économique." },
+    ],
+  },
 };
