@@ -679,7 +679,7 @@ export function conceptOfTheDay(date = new Date()) {
 export const NODE_W = 158;
 export const NODE_H = 78;
 export const GRAPH_W = 880;
-export const GRAPH_H = 1110;
+export const GRAPH_H = 1270;
 
 /**
  * Une arête par relation « a influencé », dédoublonnée. `soft` = influence

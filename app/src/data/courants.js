@@ -290,10 +290,9 @@ export const COURANTS = [
     detail:
       "Habermas reprend le programme de la théorie critique sans en partager le constat sans issue : là où Adorno et Horkheimer ne voyaient plus, dans la raison instrumentale généralisée, aucune ressource pour la critique, Habermas en trouve une dans la pragmatique du langage — chaque acte de communication authentique présuppose des conditions de validité qui, une fois explicitées, fondent une rationalité communicationnelle irréductible au seul calcul.",
     auteurs: ['habermas'],
-    vientDe: ['theorie-critique', 'sociologie-comprehensive', 'fonctionnalisme'],
+    vientDe: ['theorie-critique', 'sociologie-comprehensive', 'fonctionnalisme', 'theorie-des-systemes-sociaux'],
     inspirateurs: [
       "John Austin et John Searle — la théorie des actes de langage, socle de la pragmatique universelle",
-      "Niklas Luhmann — la théorie des systèmes, dont Habermas retient le concept en le limitant à l'argent et au pouvoir",
     ],
     niveau: 'paradigme',
   },
@@ -398,6 +397,67 @@ export const COURANTS = [
     inspirateurs: [
       "Georg Simmel — la sociologie des formes et de l'argent, dont Bauman prolonge la sensibilité à la fluidité du social",
       "Jean-François Lyotard — la condition postmoderne, matrice du diagnostic d'une modernité qui doute d'elle-même",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'sociologie-du-risque',
+    t: 'Sociologie du risque',
+    periode: 'contemporain',
+    d: "La modernité a résolu le problème de la répartition des richesses ; elle en a créé un nouveau, celui de la répartition des risques qu'elle fabrique elle-même.",
+    detail:
+      "Beck montre que la société industrielle avancée produit, comme effet secondaire de son propre développement technique, des risques globaux — nucléaires, chimiques, climatiques — qu'aucune frontière nationale ni aucune classe sociale ne suffit plus à contenir. Ce basculement force chacun à faire de sa propre biographie une gestion permanente de l'incertitude, et la sociologie elle-même à sortir du cadre national qui lui servait jusque-là d'unité d'analyse allant de soi.",
+    auteurs: ['beck'],
+    vientDe: ['sociologie-comprehensive', 'theorie-de-la-structuration'],
+    inspirateurs: [
+      "Mary Douglas — l'anthropologie du risque et de la pureté, socle anthropologique du concept",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'theorie-des-systemes-sociaux',
+    t: 'Théorie des systèmes sociaux',
+    periode: 'contemporain',
+    d: "Une société ne parle pas par la bouche de ses membres : elle n'existe que par les communications qui s'enchaînent, sans jamais avoir besoin d'un centre ni d'un sujet pour continuer.",
+    detail:
+      "Luhmann part de la théorie fonctionnaliste de Parsons, dont il fut l'élève à Harvard, pour s'en détacher radicalement : il n'y a plus d'équilibre ni de valeurs communes, mais des systèmes de communication qui se referment sur eux-mêmes, chacun réduisant à sa manière la complexité d'un monde qu'aucun ne peut jamais entièrement maîtriser. La société moderne n'est ainsi plus une pyramide de fonctions coordonnées, mais un ensemble de sous-systèmes fonctionnellement différenciés — économie, droit, science, politique — dont aucun n'occupe de position centrale.",
+    auteurs: ['luhmann'],
+    vientDe: ['fonctionnalisme'],
+    inspirateurs: [
+      "Humberto Maturana et Francisco Varela — l'autopoïèse, empruntée à la biologie du vivant",
+      "Norbert Wiener — la cybernétique, dont Luhmann hérite le vocabulaire de la complexité et de la régulation",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'theorie-critique-de-la-justice',
+    t: 'Théorie critique de la justice',
+    periode: 'contemporain',
+    d: "La justice n'est jamais une seule question : elle exige à la fois une part plus juste des richesses, une reconnaissance égale des identités, et une voix égale dans les décisions qui comptent.",
+    detail:
+      "Fraser prolonge la théorie critique en refusant de choisir entre deux camps qui s'opposent depuis les années 1990 : ceux qui réduisent l'injustice à la seule mauvaise répartition des richesses, et ceux qui la réduisent au seul mépris culturel des identités. Elle y ajoute une troisième dimension, la représentation politique — qui a le droit de faire valoir sa cause, et selon quelles règles —, pour répondre à une théorie critique et à une sphère publique habermassiennes jugées, l'une comme l'autre, trop silencieuses sur qui elles excluent d'emblée de la discussion.",
+    auteurs: ['fraser'],
+    vientDe: ['theorie-critique', 'theorie-de-l-agir-communicationnel'],
+    inspirateurs: [
+      "Axel Honneth — le débat direct sur la primauté de la reconnaissance ou de la redistribution",
+      "Iris Marion Young — la politique de la différence, et la critique d'un public unique et unifié",
+      "John Rawls — la théorie de la justice comme équité, que Fraser élargit au-delà de la seule répartition",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'theorie-queer',
+    t: 'Théorie queer',
+    periode: 'contemporain',
+    d: "Le genre n'est pas ce qu'on est, mais ce qu'on fait — et refait, sans relâche, sous la pression de normes qui ne se voient elles-mêmes qu'au moment où quelqu'un s'en écarte.",
+    detail:
+      "Butler prolonge la généalogie du pouvoir de Foucault jusque dans la fabrique du genre et du sexe eux-mêmes : ce ne sont pas des données naturelles que la culture viendrait seulement habiller, mais des effets produits par la répétition obligée de normes qui se donnent pour origine ce qu'elles ne cessent, en réalité, de fabriquer. Le sujet lui-même n'existe pleinement qu'une fois reconnu à l'intérieur de ces normes, ce qui fait de la reconnaissance et de la vulnérabilité partagée des questions proprement politiques, non seulement psychologiques.",
+    auteurs: ['butler'],
+    vientDe: ['genealogie-du-pouvoir'],
+    inspirateurs: [
+      "Sigmund Freud — la mélancolie, retravaillée pour penser comment le genre s'incorpore par un deuil interdit",
+      "Jacques Derrida — l'itérabilité, qui fonde la répétition jamais identique de la performativité",
+      "Monique Wittig — la catégorie de sexe comme catégorie politique, dont Butler prolonge et déplace la critique",
     ],
     niveau: 'paradigme',
   },

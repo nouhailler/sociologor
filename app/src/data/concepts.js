@@ -9667,4 +9667,915 @@ export const CONCEPTS = {
       { p: '2004', f: "Vies perdues en propose une lecture structurelle, à l'échelle de la mondialisation économique." },
     ],
   },
+
+  /* — Ulrich Beck — */
+  'societe-du-risque': {
+    detaille: [
+      "La société du risque est, pour Beck, la phase de la modernité où la question centrale n'est plus seulement de produire et de répartir des richesses, mais de gérer et de répartir des risques que cette production industrielle engendre elle-même, comme effet secondaire de son propre succès technique.",
+      "Ces risques nouveaux — nucléaires, chimiques, climatiques, génétiques — ont des propriétés inédites : souvent invisibles à l'œil nu, différés dans le temps, ils ne se laissent pas circonscrire par les frontières, les classes ou les générations comme pouvaient l'être les dangers plus anciens.",
+      "Beck y voit une modernisation qui se retourne sur elle-même : la science et la technique, chargées de maîtriser la nature, produisent désormais des effets si complexes que la science elle-même peine à les mesurer et à les contenir avec certitude.",
+    ],
+    origine: {
+      oeuvre: 'La Société du risque',
+      annee: '1986',
+      contexte:
+        "Beck publie cet ouvrage l'année même de la catastrophe de Tchernobyl, qui semble confirmer de façon spectaculaire sa thèse : un risque technologique invisible, capable de traverser les frontières sans se soucier des classes sociales ni des États.",
+    },
+    exemples: [
+      "Un site industriel qui, en produisant la prospérité d'une région, y installe aussi un risque de pollution que nul n'avait explicitement choisi.",
+      "Un pesticide agricole, autorisé pendant des décennies, dont les effets à long terme sur la santé ne se révèlent que bien après sa large diffusion.",
+    ],
+    oeuvres: [
+      { y: '1986', t: 'La Société du risque' },
+      { y: '1999', t: 'World Risk Society' },
+    ],
+    associes: ['risque-global', 'biographie-du-risque'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "Marx objecterait qu'un déplacement de l'attention vers le risque, aussi réel soit-il, ne doit pas faire oublier que la classe sociale continue de déterminer très largement qui produit, qui profite et qui subit ces mêmes risques.",
+      "Le concept, formulé au lendemain de Tchernobyl, reste marqué par les risques technologiques de grande ampleur, et se prête moins bien à des risques plus diffus et cumulatifs.",
+      "Il suppose une prise de conscience collective des risques qui reste, en pratique, très inégalement partagée selon l'accès à l'information scientifique.",
+    ],
+    evolution: [
+      { p: '1979', f: "Giddens pose déjà, dans Les Conséquences de la modernité, les bases d'une réflexion sur le risque et l'incertitude modernes." },
+      { p: '1986', f: "Beck formule la société du risque, publiée l'année de la catastrophe de Tchernobyl." },
+      { p: '1994', f: "Reflexive Modernization, coécrit avec Giddens et Lash, articule le risque à la modernisation réflexive." },
+    ],
+  },
+  'risque-global': {
+    detaille: [
+      "Le risque global est la forme que prennent, selon Beck, les grands risques contemporains — changement climatique, contamination nucléaire, crises financières, pandémies — qui ignorent par nature les frontières nationales censées autrefois circonscrire un danger à un territoire donné.",
+      "Cette dimension globale change la nature même du risque : il ne suffit plus qu'un pays se protège seul, puisque les effets d'un risque produit ailleurs peuvent le rattraper sans qu'aucune décision locale n'y change grand-chose — une interdépendance forcée, indépendante de toute volonté de coopération.",
+      "Beck en tire une conséquence politique majeure : ces risques globaux imposent une gestion qui dépasse le seul cadre de l'État-nation, alors même que les institutions politiques disponibles restent, pour l'essentiel, organisées à cette échelle nationale devenue insuffisante.",
+    ],
+    origine: {
+      oeuvre: 'World Risk Society',
+      annee: '1999',
+      contexte:
+        "Beck prolonge sa thèse initiale de 1986 pour l'appliquer explicitement à l'échelle mondiale, à mesure que des risques comme le changement climatique rendent de plus en plus visible l'insuffisance des seuls cadres nationaux de gestion du risque.",
+    },
+    exemples: [
+      "Un nuage radioactif qui traverse plusieurs pays sans se soucier des douanes ni des traités qui les séparent.",
+      "Une crise financière née dans un pays qui, en quelques jours, fait chuter des marchés situés à l'autre bout du monde.",
+    ],
+    oeuvres: [
+      { y: '1999', t: 'World Risk Society' },
+      { y: '1986', t: 'La Société du risque' },
+    ],
+    associes: ['societe-du-risque', 'cosmopolitisation'],
+    opposes: ['espace-des-lieux'],
+    critiques: [
+      "Castells objecterait qu'un risque aussi global reste malgré tout géré très inégalement selon que l'on habite l'espace des flux mondialisé ou l'espace des lieux qui en subit surtout les conséquences.",
+      "Le concept, très large, dit peu des risques qui restent au contraire fortement localisés, malgré la mondialisation économique et technologique.",
+      "Il suppose une prise de conscience globale des risques qui se heurte, en pratique, à des intérêts nationaux et économiques très divergents.",
+    ],
+    evolution: [
+      { p: '1986', f: "La Société du risque pose les bases du concept, encore centré sur le cas allemand et européen." },
+      { p: '1999', f: "World Risk Society généralise l'analyse à l'échelle mondiale." },
+      { p: 'Depuis 2000', f: "Les négociations climatiques internationales illustrent, année après année, la difficulté à gérer collectivement un risque par nature global." },
+    ],
+  },
+  'biographie-du-risque': {
+    detaille: [
+      "La biographie du risque est, pour Beck, ce que devient le parcours de vie une fois que les garanties institutionnelles qui l'encadraient — emploi stable, classe sociale héritée, mariage durable — se sont érodées : chacun doit désormais construire sa propre trajectoire comme un projet réflexif, où l'incertitude doit être gérée en continu plutôt que résolue une fois pour toutes.",
+      "Cette biographie n'a plus le tracé prévisible qu'offrait la société industrielle classique : elle se recompose sans cesse au fil de décisions — études, carrière, vie familiale — qu'aucun cadre institutionnel stable ne vient plus dicter à l'avance.",
+      "Beck insiste sur le paradoxe que cela produit : cette liberté biographique accrue s'accompagne d'une responsabilité individuelle qui pèse lourd, puisque chacun doit désormais trouver seul des réponses biographiques à des risques qui restent, eux, largement produits par des causes structurelles et collectives.",
+    ],
+    origine: {
+      oeuvre: 'La Société du risque',
+      annee: '1986',
+      contexte:
+        "Beck développe ce concept en observant l'érosion des trajectoires professionnelles stables dans l'Allemagne des années 1980, où la carrière linéaire d'une génération à l'autre cesse d'être la norme attendue.",
+    },
+    exemples: [
+      "Une carrière recomposée cinq fois par choix contraint, faute d'un seul emploi assez stable pour y bâtir un parcours linéaire.",
+      "Un parcours de vie familial réévalué à chaque étape, sans le modèle unique du mariage à vie qui l'aurait autrefois scénarisé d'avance.",
+    ],
+    oeuvres: [
+      { y: '1986', t: 'La Société du risque' },
+      { y: '2002', t: 'Individualization (avec E. Beck-Gernsheim)' },
+    ],
+    associes: ['societe-du-risque', 'agentivite'],
+    opposes: ['socialisation-primaire'],
+    critiques: [
+      "Berger et Luckmann objecteraient qu'aucune biographie, même réflexive, ne se construit jamais entièrement hors du monde stable installé par la socialisation primaire, qui continue d'en fixer les évidences les plus profondes.",
+      "Le concept prête à tous une capacité de réflexivité biographique que les ressources — temps, éducation, argent — distribuent en réalité très inégalement.",
+      "Il dit peu des biographies qui échouent à se recomposer, faute de ressources suffisantes pour transformer l'incertitude en projet plutôt qu'en simple subir.",
+    ],
+    evolution: [
+      { p: '1986', f: "La Société du risque introduit la biographie du risque comme conséquence de l'individualisation institutionnalisée." },
+      { p: '2002', f: "Individualization, coécrit avec Beck-Gernsheim, en approfondit l'analyse à l'échelle de la famille et du couple." },
+    ],
+  },
+  'inegalites-face-aux-risques': {
+    detaille: [
+      "Les inégalités face aux risques sont, pour Beck, d'une nature différente des inégalités de richesse classiques : un risque, à la différence d'un bien matériel, a tendance à revenir même sur ceux qui le produisent ou en profitent — d'où sa formule restée célèbre, la misère est hiérarchique, le smog est démocratique.",
+      "Cette logique de « retour de bâton » n'efface pourtant pas les inégalités : elle en crée de nouvelles, fondées cette fois sur la capacité inégale à se prémunir contre un risque une fois qu'il est identifié — par l'information, l'argent ou la mobilité — plutôt que sur la seule propriété des moyens de production.",
+      "Beck en tire une reformulation de la question sociale : à côté de la question classique de qui possède quoi, s'ajoute désormais celle de qui peut échapper à quoi, une question qui recoupe partiellement, sans s'y réduire, les inégalités de classe héritées.",
+    ],
+    origine: {
+      oeuvre: 'La Société du risque',
+      annee: '1986',
+      contexte:
+        "Beck construit cette thèse en observant que la pollution industrielle, contrairement à la pauvreté, touche potentiellement tout le monde dans une zone donnée, y compris les décideurs économiques qui en sont pourtant à l'origine.",
+    },
+    exemples: [
+      "Un même épisode de pollution atmosphérique respiré par tous, mais fui pour le week-end par les seuls habitants qui en ont les moyens.",
+      "Une contamination alimentaire qui touche l'ensemble d'un marché, sauf ceux qui peuvent se permettre de s'approvisionner ailleurs, à un prix plus élevé.",
+    ],
+    oeuvres: [
+      { y: '1986', t: 'La Société du risque' },
+    ],
+    associes: ['societe-du-risque', 'precarite-existentielle'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "Les enquêtes empiriques montrent une exposition réelle aux risques bien plus stratifiée par le revenu et le lieu de résidence que ne le suggère la formule du smog démocratique, restée à ce titre très discutée.",
+      "Le concept, en insistant sur le caractère partagé du risque, peut minorer le fait que ce sont souvent les mêmes populations qui cumulent risques de pollution et pauvreté matérielle.",
+      "Il dit peu des risques qui restent, eux, très nettement circonscrits à certains groupes sociaux, sans jamais vraiment atteindre ceux qui les produisent.",
+    ],
+    evolution: [
+      { p: '1867', f: "Marx pose la propriété des moyens de production comme axe premier de l'inégalité sociale." },
+      { p: '1986', f: "Beck y ajoute un second axe, celui de l'exposition inégale aux risques produits par la modernisation elle-même." },
+      { p: '1990–2010', f: "La sociologie environnementale documente empiriquement des inégalités écologiques qui recoupent, sans s'y réduire, les inégalités de classe." },
+    ],
+  },
+  'cosmopolitisation': {
+    detaille: [
+      "La cosmopolitisation est, pour Beck, un processus réel et déjà à l'œuvre — distinct du cosmopolitisme comme idéal politique choisi — par lequel les sociétés deviennent concrètement mêlées et interdépendantes sous la pression des risques globaux, indépendamment de toute volonté affichée de le devenir.",
+      "Ce processus force une révision méthodologique que Beck juge indispensable : la sociologie ne peut plus prendre la nation comme unité d'analyse allant de soi — ce qu'il appelle le nationalisme méthodologique — puisque les phénomènes qu'elle étudie débordent déjà, dans les faits, ce cadre national.",
+      "Beck insiste sur le caractère souvent banal, non spectaculaire, de cette cosmopolitisation : elle se joue autant dans l'alimentation quotidienne ou les chaînes d'approvisionnement ordinaires que dans les grands sommets internationaux consacrés au climat ou à la finance.",
+    ],
+    origine: {
+      oeuvre: "Qu'est-ce que le cosmopolitisme ?",
+      annee: '2004',
+      contexte:
+        "Beck développe ce concept pour prolonger sa thèse du risque global vers une critique méthodologique de la sociologie elle-même, encore largement structurée autour de l'étude de sociétés nationales prises isolément.",
+    },
+    exemples: [
+      "Une chaîne alimentaire si internationalisée qu'une contamination locale oblige, du jour au lendemain, des consommateurs de dix pays à s'en soucier ensemble.",
+      "Un marché du travail où des collègues de nationalités très différentes coordonnent, sans y penser, un même projet au quotidien.",
+    ],
+    oeuvres: [
+      { y: '2004', t: "Qu'est-ce que le cosmopolitisme ?" },
+      { y: '1999', t: 'World Risk Society' },
+    ],
+    associes: ['risque-global', 'societe-en-reseaux'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Durkheim objecterait qu'une sociologie sans unité nationale de référence perd le terrain empirique concret sur lequel elle a toujours construit la comparaison de ses faits sociaux.",
+      "Le concept, très englobant, dit peu de ce qui distingue une cosmopolitisation réellement vécue d'une simple interdépendance économique sans conscience partagée qui l'accompagne.",
+      "Il suppose une prise de conscience de l'interdépendance mondiale que les replis nationalistes contemporains démentent régulièrement dans les faits.",
+    ],
+    evolution: [
+      { p: '1999', f: "World Risk Society pose les bases de la critique du nationalisme méthodologique en sociologie." },
+      { p: '2004', f: "Qu'est-ce que le cosmopolitisme ? formalise la cosmopolitisation comme processus réel distinct de l'idéal cosmopolite." },
+    ],
+  },
+
+  /* — Niklas Luhmann — */
+  'systeme-social-autopoietique': {
+    detaille: [
+      "Pour Luhmann, une société n'est pas faite d'individus ni d'actions, mais de communications : ce sont elles, et elles seules, qui produisent d'autres communications, dans une boucle qui ne s'arrête jamais et ne dépend d'aucun acteur en particulier pour continuer.",
+      "Cette autoproduction fait du système social un système autopoïétique : il fabrique lui-même les éléments — les communications — dont il est composé, à partir de ses propres opérations passées, et non à partir d'une matière première empruntée à son environnement.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann rompt frontalement avec le fonctionnalisme de Parsons, dont il fut l'élève à Harvard : il ne s'agit plus de décrire les fonctions que remplissent des institutions pour la société, mais de comprendre comment la société se produit elle-même, communication après communication, sans jamais s'arrêter.",
+    },
+    exemples: [
+      "Une conversation qui se poursuit d'elle-même, chaque réplique appelant la suivante, indépendamment de la volonté initiale de chacun des interlocuteurs de la clore ou de la continuer.",
+      "Une administration qui continue de produire des décisions et des courriers longtemps après le départ de tous les agents qui l'avaient mise en place, portée par ses seules procédures.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+      { y: '1997', t: 'La Société de la société' },
+    ],
+    associes: ['autopoiese', 'communication', 'systeme-environnement'],
+    opposes: ['systeme-social', 'individualisme-methodologique'],
+    critiques: [
+      "Éliminer les individus comme éléments du système social heurte le sens commun sociologique : la plupart des théories continuent de vouloir expliquer la société à partir de ce que font ou pensent des personnes.",
+      "La théorie explique remarquablement bien comment un système se maintient, beaucoup moins bien pourquoi et comment il change réellement, ou disparaît.",
+      "Son vocabulaire très spécialisé — autopoïèse, autoréférence, clôture opérationnelle — reste un obstacle réel à la diffusion du système au-delà d'un cercle de spécialistes.",
+    ],
+    evolution: [
+      { p: '1960–1961', f: "Luhmann étudie à Harvard sous la direction de Talcott Parsons, dont il hérite d'abord le vocabulaire fonctionnaliste." },
+      { p: '1984', f: "Systèmes sociaux rompt avec Parsons : le système social n'est plus fait d'actions mais de communications, et se referme sur lui-même." },
+      { p: '1997', f: "La Société de la société applique la théorie à l'ensemble de la société mondiale, comme système unique et sans extérieur social." },
+    ],
+  },
+  'autopoiese': {
+    detaille: [
+      "Empruntée aux biologistes chiliens Maturana et Varela, qui décrivaient ainsi la cellule vivante, l'autopoïèse désigne la capacité d'un système à produire lui-même les éléments qui le composent, à partir de ses propres éléments antérieurs, en se distinguant continuellement d'un environnement qu'il ne cesse pourtant d'observer.",
+      "Un système autopoïétique ne reçoit rien de son environnement qu'il n'ait lui-même, au préalable, mis en forme selon ses propres opérations : l'environnement peut le perturber, jamais lui fournir directement un de ses éléments.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann généralise à tous les systèmes — vivants, psychiques, sociaux — un concept que la biologie avait forgé pour la seule cellule, pariant qu'une même logique d'autoproduction organise la vie, la conscience et la société.",
+    },
+    exemples: [
+      "Le système juridique qui ne reconnaît comme droit que ce qu'il a lui-même produit selon ses propres procédures — une opinion morale, aussi partagée soit-elle, n'y devient une règle qu'une fois traduite dans ses termes.",
+      "Une entreprise dont chaque décision s'appuie sur des décisions antérieures de la même entreprise, plutôt que sur un ordre extérieur qui s'imposerait directement à elle.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['systeme-social-autopoietique', 'reduction-de-la-complexite'],
+    opposes: ['construction-sociale-de-la-realite'],
+    critiques: [
+      "Le concept, pensé pour la cellule vivante, reste une métaphore lorsqu'il s'applique à des communications : rien ne garantit qu'un système social se referme sur lui-même de la même manière qu'une cellule biologique.",
+      "L'idée qu'un système ne reçoit jamais directement d'éléments de son environnement peine à expliquer certains emprunts massifs et rapides d'une sphère sociale à une autre, comme la diffusion soudaine d'une innovation technique.",
+    ],
+    evolution: [
+      { p: '1970', f: "Humberto Maturana et Francisco Varela forgent le concept d'autopoïèse pour décrire la cellule vivante, en biologie." },
+      { p: '1984', f: "Luhmann transpose le concept à la sociologie : le système social devient, lui aussi, autopoïétique." },
+    ],
+  },
+  'communication': {
+    detaille: [
+      "Luhmann appelle communication non un simple transfert d'information d'un émetteur vers un récepteur, mais la synthèse improbable de trois sélections distinctes : une information choisie parmi d'autres possibles, une manière de la communiquer, et une compréhension — qui peut inclure le malentendu — de la différence entre les deux.",
+      "Cette communication, et elle seule, est l'unité élémentaire du système social : les consciences individuelles, aussi indispensables soient-elles pour qu'une communication ait lieu, n'en font pas partie — elles restent son environnement, non ses éléments.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann cherche l'unité minimale qui permette de penser la société sans la ramener ni à des individus ni à leurs actions — contre Parsons, pour qui l'action restait l'élément de base du système social.",
+    },
+    exemples: [
+      "Un sourire ambigu, dont la portée — plaisanterie ou reproche — ne se fixe que dans la réaction de celui qui le reçoit, jamais dans l'intention seule de celui qui l'émet.",
+      "Un mot d'une langue étrangère mal traduit, qui produit malgré tout une communication — un malentendu reste une communication, pas son absence.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['systeme-social-autopoietique', 'autopoiese'],
+    opposes: ['agir-communicationnel'],
+    critiques: [
+      "Réduire la communication à une opération sans sujet ni intention, quand Habermas continue d'y voir un acte porté par des personnes capables de se justifier, revient à changer d'objet plus qu'à en donner une théorie plus exacte.",
+      "La distinction entre information, communication et compréhension, présentée comme une synthèse improbable, reste difficile à observer séparément dans le déroulement réel d'un échange.",
+    ],
+    evolution: [
+      { p: '1981', f: "Habermas fait de l'action orientée vers l'entente le fondement de sa propre théorie, contre le seul calcul stratégique." },
+      { p: '1984', f: "Luhmann lui oppose une communication sans sujet, dont les consciences individuelles ne sont que l'environnement." },
+    ],
+  },
+  'differenciation-fonctionnelle': {
+    detaille: [
+      "La société moderne ne se différencie plus par couches superposées (stratification) ni par segments juxtaposés et semblables (différenciation segmentaire), mais par fonctions : l'économie, le droit, la politique, la science, l'art ou l'éducation forment chacun un sous-système autonome, qu'aucun autre ne peut remplacer.",
+      "Chaque sous-système fonctionnel traite le monde à sa manière, avec son propre code binaire — payer/ne pas payer pour l'économie, légal/illégal pour le droit, vrai/faux pour la science — sans qu'aucun ne puisse revendiquer une position centrale ou surplombante sur les autres.",
+    ],
+    origine: {
+      oeuvre: 'La Société de la société',
+      annee: '1997',
+      contexte:
+        "Luhmann y remplace l'opposition marxiste entre infrastructure et superstructure, comme la pyramide des classes, par une image horizontale : des sous-systèmes égaux en dignité théorique, dont aucun ne domine structurellement les autres.",
+    },
+    exemples: [
+      "Un juge qui ne peut pas rendre un jugement en fonction de sa rentabilité économique, ni un chef d'entreprise décider d'un prix en fonction de sa légalité morale plutôt que de sa rentabilité — chaque logique reste, pour l'essentiel, imperméable à l'autre.",
+      "Une découverte scientifique qui doit convaincre par la preuve, quand bien même elle serait commercialement inintéressante ou politiquement gênante pour ceux qui la financent.",
+    ],
+    oeuvres: [
+      { y: '1997', t: 'La Société de la société' },
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['sous-systemes-sociaux', 'systeme-environnement'],
+    opposes: ['solidarite-organique'],
+    critiques: [
+      "La description reste très fonctionnaliste dans sa forme, même dépouillée de toute téléologie : elle peine à expliquer pourquoi certains sous-systèmes pèsent bien plus que d'autres dans les conflits concrets, malgré leur égale dignité théorique.",
+      "Les crises financières mondiales montrent que l'économie parvient, dans les faits, à peser sur le droit et la politique bien au-delà de ce que l'égalité formelle des sous-systèmes laisserait attendre.",
+      "Le modèle, pensé pour les sociétés occidentales les plus complexes, généralise mal à des sociétés où la différenciation fonctionnelle reste partielle ou concurrencée par d'autres logiques, ethniques ou religieuses.",
+    ],
+    evolution: [
+      { p: '1970', f: "Luhmann esquisse la thèse dans ses premiers travaux sur la différenciation, en dialogue critique avec Parsons." },
+      { p: '1984', f: "Systèmes sociaux pose le cadre général des systèmes autopoïétiques et de leurs codes." },
+      { p: '1997', f: "La Société de la société systématise la différenciation fonctionnelle comme forme dominante de la société moderne." },
+    ],
+  },
+  'complexite': {
+    detaille: [
+      "Luhmann appelle complexité le fait qu'un ensemble contient toujours plus d'éléments et de relations possibles entre eux que ce qu'un système ne peut effectivement actualiser ou prendre en compte à un moment donné : il faut alors sélectionner, au prix de laisser de côté tout le reste.",
+      "Le monde est, par principe, d'une complexité supérieure à celle de n'importe lequel des systèmes qui tentent de l'observer ou d'agir en lui — un écart qui ne se referme jamais complètement, et qui oblige chaque système à réduire, depuis son propre point de vue, ce qu'il traite comme pertinent.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann emprunte à la cybernétique la notion de complexité, pour en faire le point de départ de toute sa théorie : un système existe précisément parce que le monde est trop complexe pour être traité tel quel.",
+    },
+    exemples: [
+      "Un menu de restaurant qui limite arbitrairement les plats possibles à une vingtaine de lignes, alors que le nombre de plats réellement cuisinables reste, en toute rigueur, à peu près illimité.",
+      "Une bibliothèque qui classe ses ouvrages selon un nombre restreint de catégories, en acceptant de perdre au passage une part de ce que chaque livre pourrait aussi signifier.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['reduction-de-la-complexite', 'contingence'],
+    opposes: ['rationalisation'],
+    critiques: [
+      "Le concept, très général, s'applique presque à n'importe quel système, ce qui le rend difficile à mettre en défaut par une observation précise.",
+      "Il explique bien pourquoi un système sélectionne, beaucoup moins bien ce qui rend certaines sélections plus probables que d'autres à un moment donné.",
+    ],
+    evolution: [
+      { p: '1948', f: "La cybernétique de Norbert Wiener forge un premier vocabulaire de la complexité et de la régulation, hors sociologie." },
+      { p: '1984', f: "Luhmann en fait le point de départ de toute sa théorie des systèmes sociaux." },
+    ],
+  },
+  'contingence': {
+    detaille: [
+      "Est contingent, chez Luhmann, tout ce qui n'est ni nécessaire ni impossible : cela aurait pu être autrement, et pourrait encore changer — une qualité qu'il attribue à peu près à tout ce qu'une société moderne produit, de ses valeurs à ses institutions.",
+      "La double contingence — le fait qu'Ego ne sache jamais avec certitude comment Alter va se comporter, et réciproquement — est, pour Luhmann, le problème même que toute communication résout à chaque fois qu'elle a lieu, sans jamais le résoudre définitivement.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann reprend à Parsons le problème de la double contingence, pour en faire non plus un problème résolu une fois pour toutes par des normes partagées, mais la condition permanente et jamais éliminée de toute communication.",
+    },
+    exemples: [
+      "Deux inconnus qui se dévisagent un instant avant de se saluer, chacun ajustant son geste à ce qu'il anticipe du geste de l'autre, sans qu'aucun scénario ne leur garantisse à l'avance l'issue de l'échange.",
+      "Un menu de mariage pensé comme allant de soi dans une génération, et devenu un choix parmi d'autres — traiteur, buffet, cérémonie laïque — dans la suivante.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['complexite', 'communication'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Faire de la contingence la norme plutôt que l'exception rend plus difficile d'expliquer pourquoi certaines structures sociales se révèlent, dans les faits, remarquablement stables sur de longues périodes.",
+      "Le concept, très abstrait, ne dit pas grand-chose de ce qui rend certaines options plus probables que d'autres à un moment donné — une question que d'autres théories, plus attentives aux rapports de force, prennent davantage au sérieux.",
+    ],
+    evolution: [
+      { p: '1937', f: "Parsons pose le problème de la double contingence dans sa théorie de l'action." },
+      { p: '1984', f: "Luhmann en fait la condition permanente, jamais résolue, de toute communication." },
+    ],
+  },
+  'reduction-de-la-complexite': {
+    detaille: [
+      "Réduire la complexité, pour Luhmann, ne signifie pas la supprimer mais la remplacer par une complexité moindre et gérable, obtenue en sélectionnant certaines possibilités plutôt que d'autres — au prix de laisser le reste indéterminé ou simplement ignoré.",
+      "Chaque système social réduit la complexité du monde à sa manière propre : le droit ne retient que ce qui est juridiquement pertinent, l'économie que ce qui a un prix, la science que ce qui peut être vérifié — sans qu'aucune de ces réductions ne puisse prétendre épuiser la richesse de ce qu'elle laisse de côté.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann fait de la réduction de la complexité la fonction même de tout système social : un système existe parce qu'il rend gérable un monde qui, pris tel quel, resterait inextricable.",
+    },
+    exemples: [
+      "Une carte de métro qui simplifie radicalement la géographie réelle d'une ville, au point de désorienter quiconque tente de s'en servir pour marcher à la surface.",
+      "Un formulaire administratif qui ne retient de la situation d'une personne que quelques cases, en écartant tout le reste de sa vie comme non pertinent pour la demande en cours.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['complexite', 'systeme-environnement'],
+    opposes: ['verstehen'],
+    critiques: [
+      "Présenter la réduction de la complexité comme la fonction de tout système laisse ouverte la question de savoir qui décide, en pratique, de ce qui est retenu ou écarté — une question de pouvoir que le vocabulaire fonctionnel a tendance à estomper.",
+      "Le concept explique bien pourquoi un système simplifie, beaucoup moins bien pourquoi il simplifie de telle manière précise plutôt que d'une autre, également possible.",
+    ],
+    evolution: [
+      { p: '1968', f: "Luhmann formule une première version cybernétique de l'idée, dans ses travaux sur la rationalité des organisations." },
+      { p: '1984', f: "Systèmes sociaux en fait la fonction générale de tout système, social autant que psychique." },
+    ],
+  },
+  'systeme-environnement': {
+    detaille: [
+      "Pour Luhmann, la distinction la plus fondamentale n'est pas entre la société et ses parties, mais entre un système et son environnement : un système n'existe que par cette frontière, qu'il trace et retrace continuellement en observant ce qui lui est intérieur et ce qui lui reste extérieur.",
+      "L'environnement d'un système social comprend, entre autres, les individus eux-mêmes — leurs consciences, leurs corps, leurs besoins biologiques — qui ne sont donc pas des parties du système mais les conditions, toujours plus complexes que lui, sur lesquelles il ne peut jamais agir directement.",
+    ],
+    origine: {
+      oeuvre: 'Systèmes sociaux',
+      annee: '1984',
+      contexte:
+        "Luhmann reprend la théorie générale des systèmes, issue de la biologie et de la cybernétique, pour en faire l'armature de toute sa sociologie : penser un système, c'est toujours penser en même temps la frontière qui le sépare d'un environnement.",
+    },
+    exemples: [
+      "Un thermostat qui ne réagit qu'à la température qu'il est capable de mesurer, en ignorant tout le reste de ce qui se passe dans la pièce.",
+      "Un tribunal qui ne peut se saisir d'un fait que traduit en termes juridiques — une souffrance, aussi réelle soit-elle, n'existe pour lui qu'une fois requalifiée en préjudice.",
+    ],
+    oeuvres: [
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['systeme-social-autopoietique', 'autopoiese', 'differenciation-fonctionnelle'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "Traiter les individus comme un simple environnement du système social choque nombre de sociologues, pour qui une théorie de la société qui exclut les personnes de son objet manque quelque chose d'essentiel.",
+      "La frontière entre système et environnement, présentée comme observée par le système lui-même, reste difficile à repérer empiriquement de l'extérieur, pour un chercheur qui voudrait la vérifier.",
+    ],
+    evolution: [
+      { p: '1950–1960', f: "La théorie générale des systèmes et la cybernétique forment le socle sur lequel Luhmann bâtit sa distinction." },
+      { p: '1984', f: "Systèmes sociaux généralise la distinction système/environnement à la société tout entière." },
+    ],
+  },
+  'sous-systemes-sociaux': {
+    detaille: [
+      "Chaque sous-système social — l'économie, le droit, la politique, la science, la religion, l'éducation, les médias de masse — traite le monde entier depuis son seul point de vue, à travers un code binaire qui lui est propre, et qui ne se traduit jamais complètement dans celui d'un autre sous-système.",
+      "Aucun sous-système n'occupe de position centrale : la politique ne dirige pas plus la société que l'économie ou la religion, contrairement à ce que suggéraient les théories qui plaçaient l'État, ou les rapports de production, au sommet d'une hiérarchie.",
+    ],
+    origine: {
+      oeuvre: 'La Société de la société',
+      annee: '1997',
+      contexte:
+        "Luhmann y détaille, sous-système par sous-système, la théorie esquissée dans Systèmes sociaux — chacun est traité avec son propre code et sa propre histoire de différenciation, sans qu'aucun ne serve de clé de lecture pour tous les autres.",
+    },
+    exemples: [
+      "Une chaîne d'information continue qui retient un événement moins pour sa gravité réelle que pour sa capacité à rester une information nouvelle d'une heure sur l'autre.",
+      "Un parti politique qui doit traduire une inquiétude scientifique — climatique, sanitaire — dans le seul langage qui lui soit propre, celui de la majorité et de l'opposition, au risque de la déformer.",
+    ],
+    oeuvres: [
+      { y: '1997', t: 'La Société de la société' },
+      { y: '1984', t: 'Systèmes sociaux' },
+    ],
+    associes: ['differenciation-fonctionnelle', 'systeme-environnement'],
+    opposes: ['agil'],
+    critiques: [
+      "Le découpage entre sous-systèmes reste, dans les faits, moins étanche que la théorie ne le prétend : la justice, l'école ou la santé s'entremêlent constamment dans des cas concrets.",
+      "L'égale dignité théorique des sous-systèmes masque des rapports de force réels, où certains — l'économie en tête — pèsent structurellement plus lourd que d'autres sur les décisions communes.",
+    ],
+    evolution: [
+      { p: '1953', f: "Parsons assigne à des sous-systèmes spécialisés une fonction pour l'ensemble — le schéma AGIL." },
+      { p: '1997', f: "Luhmann décrit au contraire des sous-systèmes fonctionnellement différenciés, sans fonction commune ni centre qui les coordonnerait." },
+    ],
+  },
+
+  /* — Nancy Fraser — */
+  'redistribution': {
+    detaille: [
+      "La redistribution est, pour Fraser, le remède approprié à une injustice enracinée dans la structure politico-économique de la société : elle consiste à réorganiser la répartition des revenus, à réorganiser la division du travail, ou plus radicalement à transformer les rapports de propriété eux-mêmes.",
+      "Fraser distingue des remèdes affirmatifs, qui corrigent après coup les effets inégaux d'une structure sans y toucher — une politique sociale classique —, et des remèdes transformatifs, plus rares et plus profonds, qui restructurent le mode de production ou de répartition lui-même plutôt que d'en compenser les effets.",
+    ],
+    origine: {
+      oeuvre: 'From Redistribution to Recognition ?',
+      annee: '1995',
+      contexte:
+        "Fraser répond aux mouvements de la fin du XXe siècle qui semblent déplacer la revendication de justice de la classe vers l'identité, sans vouloir choisir entre les deux registres.",
+    },
+    exemples: [
+      "Une convention collective qui relève le salaire minimum d'une branche entière, sans rien changer par ailleurs à l'organisation du travail qui produit l'écart.",
+      "Une réforme agraire qui redistribue la terre elle-même, plutôt que de se contenter de subventionner après coup les exploitants les plus pauvres.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'From Redistribution to Recognition ?' },
+      { y: '1997', t: 'Justice Interruptus' },
+    ],
+    associes: ['reconnaissance', 'representation', 'injustice-economique'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Honneth objecte que même la redistribution répond, au fond, à un besoin de reconnaissance — être reconnu comme un pair digne d'une part égale —, ce qui rendrait la distinction entre les deux remèdes moins nette que Fraser ne le soutient.",
+      "La distinction entre remèdes affirmatifs et transformatifs reste, dans la pratique, difficile à trancher : la plupart des politiques réelles mêlent les deux à des degrés variables.",
+    ],
+    evolution: [
+      { p: '1995', f: "From Redistribution to Recognition ? pose la question comme un dilemme, sans trancher entre les deux registres." },
+      { p: '1997', f: "Justice Interruptus distingue remèdes affirmatifs et remèdes transformatifs de la redistribution." },
+    ],
+  },
+  'reconnaissance': {
+    detaille: [
+      "La reconnaissance est le remède à une injustice enracinée non dans l'économie mais dans les modèles sociaux de représentation, d'interprétation et de communication : elle consiste à transformer la culture, le langage ou les images qui dévalorisent certains groupes.",
+      "Fraser refuse explicitement de faire de la reconnaissance une question psychologique — restaurer l'estime de soi d'un individu — pour en faire une question de statut : un tort de reconnaissance, c'est un tort qui empêche quelqu'un de participer aux échanges sociaux sur un pied d'égalité avec les autres.",
+    ],
+    origine: {
+      oeuvre: 'From Redistribution to Recognition ?',
+      annee: '1995',
+      contexte:
+        "Fraser s'oppose au tournant qu'elle observe chez d'autres théoriciens de la reconnaissance, tentés de la fonder sur l'identité ou l'estime de soi plutôt que sur le statut social.",
+    },
+    exemples: [
+      "Un couple de même sexe dont l'union, longtemps sans existence légale, obtient le même régime matrimonial que n'importe quel autre couple.",
+      "Un plat traditionnel autrefois moqué dans les cantines scolaires, aujourd'hui proposé au menu au même titre que les autres.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'From Redistribution to Recognition ?' },
+      { y: '2003', t: 'Redistribution or Recognition?' },
+    ],
+    associes: ['redistribution', 'representation', 'injustice-culturelle', 'stigmate'],
+    opposes: ['lutte-des-classes'],
+    critiques: [
+      "Des critiques marxistes objectent que la reconnaissance culturelle, prise isolément, ne fait que traiter les symptômes d'inégalités qui restent, en dernière instance, produites par la structure économique elle-même.",
+      "En insistant sur le statut plutôt que sur la psychologie, le modèle laisse de côté ce que le mépris fait réellement à ceux qui le subissent — une dimension qu'Honneth et d'autres jugent irréductible à la seule question institutionnelle.",
+    ],
+    evolution: [
+      { p: '1990', f: "Les théories de la reconnaissance se multiplient, souvent fondées sur l'estime de soi individuelle plutôt que sur le statut." },
+      { p: '1995', f: "Fraser propose un modèle de statut, non psychologique, de la reconnaissance." },
+    ],
+  },
+  'representation': {
+    detaille: [
+      "La représentation est, pour Fraser, la troisième dimension de la justice, à côté de la redistribution et de la reconnaissance : une dimension proprement politique, qui porte sur les règles de décision et sur la question de savoir qui compte comme membre légitime de la communauté appelée à trancher.",
+      "Un tort de représentation se produit à deux niveaux distincts : un tort ordinaire, quand les règles de décision excluent injustement certains membres reconnus de la communauté politique ; un tort de cadrage (misframing), plus radical, quand la frontière même de la communauté est tracée de manière à exclure d'emblée certains de ceux que la décision affecte pourtant directement.",
+    ],
+    origine: {
+      oeuvre: 'Scales of Justice',
+      annee: '2008',
+      contexte:
+        "Fraser constate que sa théorie bidimensionnelle de la redistribution et de la reconnaissance présupposait toujours, sans jamais l'interroger, le cadre national de l'État-nation comme unité naturelle de la justice.",
+    },
+    exemples: [
+      "Un référendum local dont le résultat engage aussi les habitants d'une commune voisine, jamais consultés parce qu'ils vivent de l'autre côté d'une frontière administrative.",
+      "Un accord commercial négocié entre gouvernements, dont les clauses affectent directement des travailleurs qu'aucune des deux délégations ne représente à la table des négociations.",
+    ],
+    oeuvres: [
+      { y: '2005', t: 'Reframing Justice in a Globalizing World' },
+      { y: '2008', t: 'Scales of Justice' },
+    ],
+    associes: ['redistribution', 'reconnaissance', 'justice-transnationale', 'sphere-publique-subalterne', 'parite-de-participation'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "La notion de tort de cadrage, si elle dénonce bien l'exclusion silencieuse de certains intérêts, ne dit pas grand-chose de la procédure concrète par laquelle tracer, en pratique, une frontière plus juste.",
+      "Ajouter une troisième dimension distincte, après la redistribution et la reconnaissance, fait courir le risque d'une multiplication sans fin des dimensions de la justice, chacune réclamant à son tour son propre statut irréductible.",
+    ],
+    evolution: [
+      { p: '1995', f: "La théorie bidimensionnelle de la redistribution et de la reconnaissance laisse la question du cadre politique implicite." },
+      { p: '2005', f: "Reframing Justice in a Globalizing World introduit la représentation et le tort de cadrage." },
+      { p: '2008', f: "Scales of Justice systématise les trois dimensions de la justice." },
+    ],
+  },
+  'injustice-economique': {
+    detaille: [
+      "L'injustice économique est, pour Fraser, un tort enraciné dans la structure politico-économique de la société, qu'elle décompose en trois figures distinctes : l'exploitation, quand le fruit du travail d'un groupe profite à un autre ; la marginalisation économique, quand un groupe se voit cantonné à des emplois indésirables ou en est exclu ; la privation, quand un groupe se voit refuser un niveau de vie matériel suffisant.",
+      "Ce tort appelle un remède de redistribution : il ne se corrige pas en changeant le regard porté sur un groupe, mais en réorganisant effectivement qui produit, qui possède et qui reçoit.",
+    ],
+    origine: {
+      oeuvre: 'From Redistribution to Recognition ?',
+      annee: '1995',
+      contexte:
+        "Fraser reprend et précise, contre des usages plus vagues du terme, ce qu'elle entend exactement par une injustice de nature économique, pour la distinguer clairement de l'injustice culturelle.",
+    },
+    exemples: [
+      "Un travailleur détaché employé légalement dans un pays, mais rémunéré selon la grille salariale, bien plus basse, de son pays d'origine.",
+      "Un quartier entier privé d'accès à des emplois stables depuis la fermeture de son unique employeur industriel, une génération plus tôt.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'From Redistribution to Recognition ?' },
+    ],
+    associes: ['redistribution', 'classe-sociale'],
+    opposes: ['violence-symbolique'],
+    critiques: [
+      "Le découpage en trois figures — exploitation, marginalisation, privation — se recoupe largement dans les situations réelles, où les trois se cumulent presque toujours plutôt que de se présenter séparément.",
+      "En traitant l'injustice économique comme un registre autonome, le modèle risque de minorer ce que la sociologie de la domination symbolique a montré : une bonne part de la domination économique se joue déjà dans des catégories de perception héritées, non seulement dans la structure.",
+    ],
+    evolution: [
+      { p: '1995', f: "Fraser distingue exploitation, marginalisation économique et privation comme trois figures de l'injustice économique." },
+    ],
+  },
+  'injustice-culturelle': {
+    detaille: [
+      "L'injustice culturelle est un tort enraciné dans des modèles sociaux de représentation, d'interprétation et de communication, que Fraser décompose en trois figures : la domination culturelle, quand les modèles d'un groupe sont imposés comme la norme ; la non-reconnaissance, quand un groupe est rendu invisible par les pratiques représentatives dominantes ; le mépris, quand un groupe est couramment déprécié dans les représentations publiques et la vie quotidienne.",
+      "Ce tort appelle un remède de reconnaissance : il ne se corrige pas en redistribuant des ressources, mais en transformant effectivement les modèles culturels, le langage et les images qui dévalorisent le groupe concerné.",
+    ],
+    origine: {
+      oeuvre: 'From Redistribution to Recognition ?',
+      annee: '1995',
+      contexte:
+        "Fraser construit ce concept en miroir exact de l'injustice économique, pour insister sur le fait qu'aucun des deux registres ne se ramène entièrement à l'autre.",
+    },
+    exemples: [
+      "Un candidat systématiquement écarté d'un entretien d'embauche dès que son nom laisse deviner une origine, avant même l'examen de ses compétences.",
+      "Une langue des signes longtemps traitée comme un pis-aller plutôt que comme une langue à part entière, au point d'en retarder l'enseignement précoce aux enfants sourds.",
+    ],
+    oeuvres: [
+      { y: '1995', t: 'From Redistribution to Recognition ?' },
+    ],
+    associes: ['reconnaissance', 'stigmate'],
+    opposes: ['classe-sociale'],
+    critiques: [
+      "Le découpage en trois figures — domination, non-reconnaissance, mépris — reste difficile à observer séparément, ces trois formes se renforçant en pratique les unes les autres.",
+      "Traiter l'injustice culturelle comme un registre indépendant de l'économie sous-estime, selon certains critiques marxistes, à quel point les hiérarchies de prestige culturel restent elles-mêmes largement façonnées par la position de classe.",
+    ],
+    evolution: [
+      { p: '1995', f: "Fraser distingue domination culturelle, non-reconnaissance et mépris comme trois figures de l'injustice culturelle." },
+    ],
+  },
+  'parite-de-participation': {
+    detaille: [
+      "La parité de participation est, pour Fraser, l'unique critère normatif de la justice : des arrangements sociaux sont justes si, et seulement si, ils permettent à tous les membres adultes de la société d'interagir les uns avec les autres comme des pairs, sur un pied d'égalité.",
+      "Ce critère unique permet de juger aussi bien les torts de redistribution que les torts de reconnaissance ou de représentation, sans avoir à les hiérarchiser au préalable : est injuste tout arrangement — économique, culturel ou politique — qui empêche quiconque de participer pleinement à la vie sociale comme un pair parmi d'autres.",
+    ],
+    origine: {
+      oeuvre: 'Social Justice in the Age of Identity Politics',
+      annee: '2000',
+      contexte:
+        "Fraser cherche un critère commun aux deux registres qu'elle a distingués, pour éviter que sa théorie bidimensionnelle ne se réduise à deux exigences juxtaposées sans mesure commune.",
+    },
+    exemples: [
+      "Un conseil municipal où la traduction en langue des signes est systématiquement assurée, permettant à une élue sourde de suivre et de peser sur les débats au même rythme que ses collègues.",
+      "Une assemblée d'actionnaires où le droit de vote reste, en pratique, proportionnel aux parts détenues, quel que soit par ailleurs le respect formel affiché envers chaque petit porteur.",
+    ],
+    oeuvres: [
+      { y: '2000', t: 'Social Justice in the Age of Identity Politics' },
+      { y: '1997', t: 'Justice Interruptus' },
+    ],
+    associes: ['redistribution', 'reconnaissance', 'representation'],
+    opposes: ['domination-legitime'],
+    critiques: [
+      "Le critère, présenté comme unique et commun, reste très général : il dit ce qu'est l'injustice en principe, beaucoup moins ce qui compte, concrètement, comme une participation suffisamment égale dans une situation donnée.",
+      "Fonder la justice sur la seule capacité à participer comme un pair laisse de côté certains torts — envers les générations futures, envers les non-humains — que ce cadre peine à seulement formuler.",
+    ],
+    evolution: [
+      { p: '1997', f: "Justice Interruptus esquisse le besoin d'un critère commun aux deux dimensions de la justice." },
+      { p: '2000', f: "Social Justice in the Age of Identity Politics formule la parité de participation comme critère normatif unique." },
+    ],
+  },
+  'justice-transnationale': {
+    detaille: [
+      "La justice transnationale est, pour Fraser, l'exigence de poser la question du cadre de la justice au-delà du seul État-nation, dans un monde où les processus qui produisent l'injustice — marchés financiers, migrations, changement climatique — débordent constamment les frontières nationales.",
+      "Fraser appelle post-westphalienne cette conception : elle refuse de tenir pour acquis que la communauté politique pertinente pour juger d'un tort coïncide toujours avec les frontières d'un État, et demande, à chaque situation, à quelle échelle une injustice doit réellement se juger.",
+    ],
+    origine: {
+      oeuvre: 'Reframing Justice in a Globalizing World',
+      annee: '2005',
+      contexte:
+        "Fraser tire les conséquences de la mondialisation pour sa propre théorie de la justice, jusque-là centrée, comme la plupart des théories politiques contemporaines, sur le cadre implicite de la société nationale.",
+    },
+    exemples: [
+      "Des travailleurs d'une plateforme numérique, dispersés dans des dizaines de pays, dont aucune législation nationale du travail ne couvre entièrement l'activité.",
+      "Un accord de pêche qui épuise un stock partagé par plusieurs pays côtiers, alors qu'aucune instance commune ne peut trancher entre leurs intérêts respectifs.",
+    ],
+    oeuvres: [
+      { y: '2005', t: 'Reframing Justice in a Globalizing World' },
+      { y: '2008', t: 'Scales of Justice' },
+    ],
+    associes: ['representation', 'cosmopolitisation'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept dit bien qu'il faut parfois changer d'échelle, beaucoup moins qui doit avoir l'autorité de trancher, en pratique, quelle échelle retenir dans un cas contesté.",
+      "En l'absence d'institutions transnationales dotées d'un pouvoir de contrainte comparable à celui de l'État, la justice transnationale reste, pour l'essentiel, un horizon normatif plus qu'un cadre effectivement opérant.",
+    ],
+    evolution: [
+      { p: '1995', f: "La théorie bidimensionnelle de Fraser reste implicitement centrée sur le cadre national." },
+      { p: '2005', f: "Reframing Justice in a Globalizing World pose la justice transnationale et le cadre post-westphalien." },
+    ],
+  },
+  'sphere-publique-subalterne': {
+    detaille: [
+      "Une sphère publique subalterne est, pour Fraser, un espace discursif parallèle où les membres de groupes sociaux subordonnés élaborent et font circuler des interprétations concurrentes de leurs identités, de leurs intérêts et de leurs besoins, avant de les porter, ou non, dans l'arène publique plus large.",
+      "Ces contre-publics jouent un double rôle : ils offrent un répit où se retirer des logiques dominantes pour s'organiser entre pairs, et servent en même temps de base d'agitation d'où porter, vers un public plus large, des revendications d'abord formulées à l'écart.",
+    ],
+    origine: {
+      oeuvre: 'Rethinking the Public Sphere',
+      annee: '1990',
+      contexte:
+        "Fraser répond directement à Habermas : son modèle d'une sphère publique bourgeoise, unique et unifiée, occulte selon elle l'existence historique de plusieurs publics concurrents, et la manière dont certains groupes en ont toujours été exclus de fait.",
+    },
+    exemples: [
+      "Un réseau associatif de quartier où des habitantes rodent, entre elles, des arguments sur le partage des tâches ménagères, avant que le sujet ne devienne un débat public plus large.",
+      "Une réunion syndicale où des ouvriers d'une même usine élaborent, loin de la direction, une lecture commune d'un conflit qu'ils porteront ensuite en négociation.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Rethinking the Public Sphere' },
+    ],
+    associes: ['representation', 'reconnaissance'],
+    opposes: ['espace-public'],
+    critiques: [
+      "Multiplier les publics concurrents, si cela décrit mieux la réalité empirique, rend plus difficile de penser ce qui reste commun à une société démocratique au-delà de la juxtaposition de ses contre-publics.",
+      "Rien ne garantit qu'une sphère publique subalterne, une fois constituée, échappe elle-même aux hiérarchies internes qu'elle dénonce dans la sphère publique dominante.",
+    ],
+    evolution: [
+      { p: '1962', f: "Habermas décrit une sphère publique bourgeoise unique, fondée sur la mise entre parenthèses des inégalités de statut." },
+      { p: '1990', f: "Fraser lui oppose une pluralité de publics concurrents, dont des contre-publics subalternes." },
+    ],
+  },
+
+  /* — Judith Butler — */
+  'performativite-du-genre': {
+    detaille: [
+      "Butler renverse l'ordre habituel : on croit qu'il existe d'abord un genre intérieur, ensuite exprimé par des actes, des gestes, des vêtements. Elle soutient l'inverse — il n'y a pas de genre avant ces actes : c'est leur répétition contrainte, depuis la naissance, qui produit rétroactivement l'illusion d'une identité stable qui les aurait précédés.",
+      "Cette performativité n'est en rien un choix théâtral qu'un sujet déjà formé déciderait de jouer un jour plutôt qu'un autre : elle est obligatoire, elle commence avant même que l'enfant ne parle — dans la manière dont on l'habille, dont on lui parle, dont on nomme son corps — et continue de s'imposer, jour après jour, sous peine de sanction sociale.",
+    ],
+    origine: {
+      oeuvre: 'Trouble dans le genre',
+      annee: '1990',
+      contexte:
+        "Butler s'inscrit dans le prolongement critique du féminisme des années 1980, qu'elle juge encore trop attaché à une catégorie de « femmes » supposée stable et universelle avant toute construction sociale.",
+    },
+    exemples: [
+      "Un nourrisson habillé en rose avant même de savoir marcher, dont l'entourage ajuste sans y penser le ton de voix, les jouets offerts et jusqu'aux compliments adressés selon le sexe annoncé à la naissance.",
+      "Une candidate à un poste de direction dont chaque intonation, chaque façon de couper la parole ou de s'excuser, est scrutée à l'aune d'attentes de genre que personne n'énonce jamais à voix haute.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Trouble dans le genre' },
+      { y: '1993', t: 'Ces corps qui comptent' },
+    ],
+    associes: ['norme-de-genre', 'subversion', 'intelligibilite'],
+    opposes: ['mise-en-scene-de-soi'],
+    critiques: [
+      "La formule a été largement mal comprise comme une invitation à « choisir » son genre à volonté, alors que Butler insiste au contraire sur son caractère contraint, non délibéré, et rarement maîtrisé par qui le performe.",
+      "Des critiques matérialistes objectent qu'insister sur la répétition discursive des normes risque de perdre de vue les rapports de production et de travail, bien réels, qui structurent aussi la division entre les sexes.",
+    ],
+    evolution: [
+      { p: '1949', f: "Beauvoir pose que « on ne naît pas femme, on le devient », matrice dont Butler part." },
+      { p: '1990', f: "Trouble dans le genre radicalise la formule : devenir ne suffit pas, il faut refaire sans cesse." },
+      { p: '1993', f: "Ces corps qui comptent précise que cette répétition n'est ni libre ni volontaire, contre une lecture trop théâtrale du concept." },
+    ],
+  },
+  'norme-de-genre': {
+    detaille: [
+      "Une norme de genre est, pour Butler, un idéal régulateur qui définit d'avance ce que doit être un homme ou une femme pour rester intelligible socialement — un idéal que personne, jamais, n'incarne à la perfection, mais dont chacun subit la pression constante à s'en approcher.",
+      "Ces normes ne se contentent pas de décrire des différences déjà là : elles les produisent, en sanctionnant — par le ridicule, l'exclusion ou parfois la violence — quiconque s'en écarte trop visiblement.",
+    ],
+    origine: {
+      oeuvre: 'Trouble dans le genre',
+      annee: '1990',
+      contexte:
+        "Butler emprunte à Foucault l'idée que la norme fonctionne moins par interdiction explicite que par production silencieuse de ce qu'elle prétend seulement réguler.",
+    },
+    exemples: [
+      "Un rayon de jouets où les kits de construction et les figurines d'action occupent presque exclusivement l'allée bleue, sans qu'aucun règlement n'ait jamais imposé cette répartition.",
+      "Un vestiaire d'équipe sportive dont l'organisation binaire ne prévoit aucune place pour qui ne s'y retrouve dans aucune des deux colonnes.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Trouble dans le genre' },
+    ],
+    associes: ['performativite-du-genre', 'heteronormativite'],
+    opposes: ['pattern-variables'],
+    critiques: [
+      "Le concept dit bien que les normes pèsent, moins bien pourquoi certaines finissent par changer plus vite que d'autres, ni ce qui rend un changement possible à un moment précis plutôt qu'à un autre.",
+      "En insistant sur la contrainte normative, le modèle risque de minorer le plaisir ou l'attachement que beaucoup éprouvent, sans contrainte apparente, à des rôles de genre pourtant conventionnels.",
+    ],
+    evolution: [
+      { p: '1975', f: "Foucault décrit la norme comme productrice, non seulement répressive, des conduites qu'elle régule." },
+      { p: '1990', f: "Butler applique ce schéma foucaldien aux normes de genre elles-mêmes." },
+    ],
+  },
+  'heteronormativite': {
+    detaille: [
+      "L'hétéronormativité désigne le système par lequel l'hétérosexualité, présentée comme le prolongement naturel et cohérent d'un sexe et d'un genre eux-mêmes donnés d'avance, sert de norme implicite à partir de laquelle toute autre orientation ou identité se trouve jugée dérivée, déviante ou incomplète.",
+      "Butler nomme matrice hétérosexuelle cette grille : elle exige un alignement strict entre sexe assigné, genre exprimé et désir déclaré, un alignement que rien, ni la biologie ni la nécessité logique, n'impose réellement.",
+    ],
+    origine: {
+      oeuvre: 'Trouble dans le genre',
+      annee: '1990',
+      contexte:
+        "Butler formalise ce que le mouvement gay et lesbien des années 1980 nommait déjà, de façon plus militante, l'hétérosexualité obligatoire — reprenant elle-même une expression d'Adrienne Rich.",
+    },
+    exemples: [
+      "Un bail de location qui ne prévoit qu'une case « époux / épouse », rendant toute autre configuration de couple administrativement invisible avant même d'être jugée.",
+      "Un manuel scolaire de biologie où la reproduction hétérosexuelle sert d'unique porte d'entrée pour expliquer la sexualité humaine dans son ensemble.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Trouble dans le genre' },
+    ],
+    associes: ['norme-de-genre', 'subversion'],
+    opposes: ['role-et-attentes'],
+    critiques: [
+      "Le concept, très englobant, décrit bien une structure générale mais dit peu des formes très variées que prend, historiquement et selon les cultures, la régulation de la sexualité.",
+      "Certains lui reprochent de traiter l'hétérosexualité vécue comme si elle n'était jamais qu'une contrainte subie, sans laisser de place à un désir hétérosexuel qui ne serait pas simplement le produit de la norme.",
+    ],
+    evolution: [
+      { p: '1980', f: "Adrienne Rich nomme l'hétérosexualité obligatoire comme institution politique, non comme orientation neutre." },
+      { p: '1990', f: "Butler formalise la matrice hétérosexuelle comme grille d'intelligibilité du genre." },
+    ],
+  },
+  'subversion': {
+    detaille: [
+      "La subversion n'est pas, pour Butler, un acte de rupture frontale contre les normes de genre — aucun sujet ne se tient jamais assez à l'extérieur d'elles pour cela —, mais une possibilité qui loge dans la répétition même de ces normes : chaque citation d'un rôle de genre risque de le rejouer légèrement autrement, jusqu'à en exposer le caractère construit.",
+      "Cette faille n'est jamais garantie ni maîtrisable à l'avance : une même répétition peut tout aussi bien reconduire la norme qu'elle prétend citer, ce qui rend la portée politique de tout geste subversif toujours incertaine par avance.",
+    ],
+    origine: {
+      oeuvre: 'Trouble dans le genre',
+      annee: '1990',
+      contexte:
+        "Butler cherche une théorie de l'agency qui n'ait pas besoin d'un sujet libre et souverain préexistant aux normes, contre l'humanisme implicite de certaines théories féministes de l'émancipation.",
+    },
+    exemples: [
+      "Une performance de drag-king qui, en exagérant les codes du masculin jusqu'à la caricature, donne à voir que la virilité la plus ordinaire est, elle aussi, une répétition apprise plutôt qu'un fait de nature.",
+      "Un couple de mariés qui échange les rôles traditionnellement associés à chaque conjoint pendant la cérémonie, rendant soudain visible le scénario que chacun suit d'habitude sans y songer.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Trouble dans le genre' },
+    ],
+    associes: ['performativite-du-genre', 'heteronormativite'],
+    opposes: ['controle-social'],
+    critiques: [
+      "Rien, dans la théorie, ne permet de distinguer à l'avance une répétition qui subvertit d'une répétition qui ne fait que reconduire la norme — la distinction ne s'observe, au mieux, qu'après coup.",
+      "Miser la politique sur des gestes de style et de représentation fait courir le risque, selon certaines critiques matérialistes, de substituer une politique du symbole à une transformation plus large des institutions.",
+    ],
+    evolution: [
+      { p: '1990', f: "Trouble dans le genre fait de la parodie de genre, notamment du drag, l'illustration de cette subversion possible." },
+      { p: '1993', f: "Ces corps qui comptent précise que la subversion n'est ni garantie ni entièrement contrôlable par qui la tente." },
+    ],
+  },
+  'intelligibilite': {
+    detaille: [
+      "Est intelligible, pour Butler, tout sujet dont le genre, le sexe et le désir s'alignent de façon suffisamment reconnaissable pour qu'une culture donnée puisse même le percevoir comme un sujet cohérent — en deçà de ce seuil, une existence risque de rester littéralement impensable pour les catégories disponibles.",
+      "L'intelligibilité n'est donc pas une simple question de tolérance sociale accordée après coup à une identité déjà là : elle conditionne la possibilité même d'apparaître comme quelqu'un, avant toute question de savoir si cette apparition sera bien ou mal reçue.",
+    ],
+    origine: {
+      oeuvre: 'Trouble dans le genre',
+      annee: '1990',
+      contexte:
+        "Butler s'appuie sur l'idée foucaldienne d'épistémè pour montrer que certaines vies échappent non pas au jugement, mais à la catégorisation elle-même, faute de cases disponibles pour les accueillir.",
+    },
+    exemples: [
+      "Un dossier médical qui, faute de case adaptée, contraint le personnel soignant à choisir arbitrairement entre deux catégories dont aucune ne correspond à la personne suivie.",
+      "Une psychiatrie du XIXe siècle qui ne dispose d'aucun vocabulaire pour décrire certains désirs autrement que comme un symptôme à traiter.",
+    ],
+    oeuvres: [
+      { y: '1990', t: 'Trouble dans le genre' },
+    ],
+    associes: ['normes-de-reconnaissance', 'stigmate'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept dit bien qu'une existence peut rester impensable pour une culture donnée, moins bien comment certaines de ces existences parviennent malgré tout, historiquement, à forcer les catégories à s'élargir.",
+      "Faire de l'intelligibilité une condition de l'apparition du sujet laisse ouverte la question de ce qu'il reste de quelqu'un que sa propre culture ne parvient pas à seulement catégoriser.",
+    ],
+    evolution: [
+      { p: '1969', f: "Foucault décrit, dans L'Archéologie du savoir, les conditions historiques qui rendent un énoncé pensable ou non à une époque donnée." },
+      { p: '1990', f: "Butler applique ce schéma à l'intelligibilité même des sujets de genre." },
+    ],
+  },
+  'normes-de-reconnaissance': {
+    detaille: [
+      "Les normes de reconnaissance sont, pour Butler, les cadres sociaux antérieurs à tout individu qui déterminent d'avance quelles vies peuvent être vues, nommées et donc reconnues comme des vies humaines à part entière — être reconnu suppose déjà d'apparaître à l'intérieur de ces cadres, jamais en dehors d'eux.",
+      "Reprenant et déplaçant Hegel, Butler soutient qu'aucun sujet n'existe pleinement avant d'être reconnu : la reconnaissance n'est donc pas ce qu'on accorde après coup à un sujet déjà formé, elle participe à sa constitution même.",
+    ],
+    origine: {
+      oeuvre: 'Défaire le genre',
+      annee: '2004',
+      contexte:
+        "Butler prolonge sa théorie de la performativité vers une réflexion plus explicitement éthique et politique sur ce qui rend une vie reconnaissable, et donc vivable, aux yeux des autres.",
+    },
+    exemples: [
+      "Un couple homoparental dont la filiation légale de l'enfant reste, selon le pays traversé, tantôt pleinement reconnue, tantôt juridiquement invisible pour l'un des deux parents.",
+      "Un prénom d'usage, différent de celui de l'état civil, que certaines administrations refusent encore de faire figurer sur les documents officiels.",
+    ],
+    oeuvres: [
+      { y: '2004', t: 'Défaire le genre' },
+      { y: '2005', t: 'Le Récit de soi' },
+    ],
+    associes: ['reconnaissance', 'vulnerabilite', 'intelligibilite'],
+    opposes: ['habitus'],
+    critiques: [
+      "Honneth objecte que Butler, en insistant sur la dimension discursive et normative de la reconnaissance, perd de vue la dimension plus directement psychologique et affective que la tradition hégélienne, dont elle se réclame pourtant, mettait au premier plan.",
+      "Faire dépendre l'existence même du sujet de normes de reconnaissance extérieures à lui peut sembler laisser peu de place à une résistance qui ne passerait pas, elle-même, par ces mêmes normes.",
+    ],
+    evolution: [
+      { p: '1807', f: "Hegel fait de la reconnaissance mutuelle la condition de la conscience de soi, dans la dialectique du maître et de l'esclave." },
+      { p: '2004', f: "Butler reprend cette exigence hégélienne pour en faire une condition de toute vie socialement viable." },
+    ],
+  },
+  'vulnerabilite': {
+    detaille: [
+      "La vulnérabilité est, pour Butler, une exposition corporelle fondamentale à autrui et à la perte, commune à toute vie humaine avant même toute appartenance sociale particulière : naître, c'est déjà dépendre de mains qu'on n'a pas choisies.",
+      "Cette vulnérabilité partagée n'efface pourtant aucune inégalité : elle fonde au contraire, pour Butler, une exigence éthique — puisque nul ne s'en affranchit jamais tout à fait, aucune vie ne devrait pouvoir être traitée comme si sa perte importait moins qu'une autre.",
+    ],
+    origine: {
+      oeuvre: 'Vie précaire',
+      annee: '2004',
+      contexte:
+        "Butler écrit dans le sillage des attentats du 11 septembre 2001 et de la guerre en Irak, pour interroger quels deuils une société rend publiquement possibles, et lesquels elle passe sous silence.",
+    },
+    exemples: [
+      "Un randonneur isolé qui ne survit à sa chute que parce qu'un promeneur inconnu, passé par hasard au bon moment, alerte les secours.",
+      "Un immeuble entier suspendu, pendant une panne de courant prolongée, à la solidarité imprévue de voisins qui ne s'étaient jamais adressé la parole.",
+    ],
+    oeuvres: [
+      { y: '2004', t: 'Vie précaire' },
+      { y: '2009', t: 'Ce qui fait une vie' },
+    ],
+    associes: ['normes-de-reconnaissance', 'zone-de-vulnerabilite', 'precarite-differentielle'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Fonder une éthique sur une vulnérabilité partagée par tous risque d'estomper les rapports de pouvoir bien réels qui distribuent, très inégalement, qui protège et qui reste exposé.",
+      "Le concept reste très général : il dit bien que la vulnérabilité est partout, beaucoup moins ce qui devrait concrètement en découler, en pratique, dans une politique donnée.",
+    ],
+    evolution: [
+      { p: '2001', f: "Les attentats du 11 septembre et leurs suites relancent, aux États-Unis, la question de qui peut être pleurable publiquement." },
+      { p: '2004', f: "Vie précaire fait de la vulnérabilité partagée le socle d'une éthique politique." },
+    ],
+  },
+  'precarite-differentielle': {
+    detaille: [
+      "Butler distingue la précarité, condition ontologique partagée par toute vie exposée à la perte et à la dépendance, de ce qu'elle nomme la précarité différentielle : la manière dont des arrangements politiques précis répartissent très inégalement cette exposition, rendant certaines populations bien plus exposées que d'autres à la violence, à la maladie ou à l'oubli.",
+      "Cette distribution inégale se lit, selon elle, jusque dans le deuil public : certaines morts font l'objet de rites collectifs et de couverture médiatique, quand d'autres, statistiquement bien plus nombreuses, ne laissent presque aucune trace publique — ce qu'elle appelle des vies non pleurables.",
+    ],
+    origine: {
+      oeuvre: 'Ce qui fait une vie',
+      annee: '2009',
+      contexte:
+        "Butler prolonge Vie précaire vers une analyse plus systématique des cadres — médiatiques, militaires, juridiques — qui décident, en amont de tout événement, quelles pertes seront reconnues comme des pertes.",
+    },
+    exemples: [
+      "Un naufrage de migrants qui ne fait l'objet d'aucun bilan officiel de victimes, quand un accident comparable, ailleurs, mobilise pendant des semaines la une des journaux.",
+      "Un quartier régulièrement survolé par des hélicoptères de sécurité, dont les habitants savent d'expérience qu'un appel au secours n'y produit pas la même réponse qu'ailleurs dans la même ville.",
+    ],
+    oeuvres: [
+      { y: '2009', t: 'Ce qui fait une vie' },
+      { y: '2004', t: 'Vie précaire' },
+    ],
+    associes: ['vulnerabilite', 'justice-transnationale'],
+    opposes: ['precarite-existentielle'],
+    critiques: [
+      "Le concept nomme bien une inégalité réelle, mais reste plus efficace comme dénonciation morale que comme outil permettant d'en mesurer précisément l'ampleur ou les mécanismes.",
+      "Certains lui reprochent de rester centré sur le registre de la visibilité médiatique et du deuil symbolique, au risque de sous-estimer les mécanismes économiques plus directement responsables de cette distribution inégale.",
+    ],
+    evolution: [
+      { p: '2004', f: "Vie précaire pose la vulnérabilité comme condition ontologique commune." },
+      { p: '2009', f: "Ce qui fait une vie distingue cette précarité partagée de sa distribution différentielle et politique." },
+    ],
+  },
 };

@@ -40,7 +40,7 @@ export const DOMAINS_ADDED = [
     t: 'Générale',
     nom: 'Sociologie générale',
     d: "Avant de découper la société en objets, savoir ce qui la tient ensemble.",
-    a: ['comte', 'durkheim', 'weber', 'giddens', 'schutz'],
+    a: ['comte', 'durkheim', 'weber', 'giddens', 'schutz', 'luhmann'],
   },
   {
     id: 'economique',
@@ -68,7 +68,7 @@ export const DOMAINS_ADDED = [
     t: 'Genre',
     nom: 'Sociologie du genre',
     d: "Ce que le masculin et le féminin doivent à la nature, et ce qu'ils doivent à l'ordre social.",
-    a: ['bourdieu', 'goffman'],
+    a: ['bourdieu', 'goffman', 'fraser', 'butler'],
   },
   {
     id: 'jeunesse',
@@ -103,14 +103,14 @@ export const DOMAINS_ADDED = [
     t: 'Mouvements sociaux',
     nom: 'Sociologie des mouvements sociaux',
     d: "Se révolter ne suffit pas : il faut des ressources, des mots et un moment favorable.",
-    a: ['marx', 'tocqueville', 'boltanski', 'castells'],
+    a: ['marx', 'tocqueville', 'boltanski', 'castells', 'fraser'],
   },
   {
     id: 'medias',
     t: 'Médias',
     nom: 'Sociologie des médias',
     d: "Ce que les médias font aux publics, et ce que les publics font des médias.",
-    a: ['francfort', 'bourdieu', 'merton'],
+    a: ['francfort', 'bourdieu', 'merton', 'luhmann'],
   },
   {
     id: 'numerique',
@@ -152,14 +152,14 @@ export const DOMAINS_ADDED = [
     t: 'Mobilités',
     nom: 'Sociologie des mobilités',
     d: "Se déplacer n'est jamais neutre : les vitesses et les trajets ont leurs privilégiés.",
-    a: ['simmel', 'giddens'],
+    a: ['simmel', 'giddens', 'beck'],
   },
   {
     id: 'environnement',
     t: 'Environnement',
     nom: "Sociologie de l'environnement",
     d: "La nature comme problème social : qui subit les dégâts, qui décide des risques.",
-    a: ['francfort', 'boltanski'],
+    a: ['francfort', 'boltanski', 'beck'],
   },
 ];
 
@@ -172,7 +172,7 @@ export const DOMAIN_EXTRA = {
   generale: {
     famille: 'fondations',
     detail:
-      "Comte fonde le mot et le projet ; avant que Durkheim et Weber ne lui donnent chacun sa méthode, la discipline devait d'abord prouver qu'un fait social s'explique par d'autres faits sociaux, non par la psychologie individuelle ou la providence. La sociologie générale porte cette question fondatrice — qu'est-ce qui fait tenir une société ensemble, malgré la diversité des intérêts et des croyances qui la traversent ? Elle est aussi le terrain de la grande querelle de méthode entre expliquer de l'extérieur, comme une chose, et comprendre de l'intérieur, par le sens que les acteurs y mettent — une querelle que Giddens tentera plus tard de dépasser plutôt que de trancher, en montrant que structure et action se fabriquent l'une l'autre.",
+      "Comte fonde le mot et le projet ; avant que Durkheim et Weber ne lui donnent chacun sa méthode, la discipline devait d'abord prouver qu'un fait social s'explique par d'autres faits sociaux, non par la psychologie individuelle ou la providence. La sociologie générale porte cette question fondatrice — qu'est-ce qui fait tenir une société ensemble, malgré la diversité des intérêts et des croyances qui la traversent ? Elle est aussi le terrain de la grande querelle de méthode entre expliquer de l'extérieur, comme une chose, et comprendre de l'intérieur, par le sens que les acteurs y mettent — une querelle que Giddens tentera plus tard de dépasser plutôt que de trancher, en montrant que structure et action se fabriquent l'une l'autre. Luhmann répond autrement à la même question fondatrice : ce qui tient une société ensemble n'est ni un système de valeurs partagées ni le sens que lui donnent ses membres, mais la seule continuité des communications qui s'enchaînent, indépendamment de qui les porte.",
     inspirateurs: [
       "Herbert Spencer — la société lue comme un organisme qui se différencie en grandissant",
       "Raymond Aron — la mise en ordre du canon, et l'idée que la discipline se raconte par ses querelles",
@@ -238,7 +238,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie politique',
     famille: 'institutions',
     detail:
-      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom. Habermas, plus récemment, déplace la légitimité de la seule croyance des dominés vers la discussion elle-même : une norme n'est pleinement légitime que si elle pourrait recueillir l'accord de tous ceux qu'elle engage. Foucault, enfin, renverse la question de départ : plutôt que de chercher qui détient le pouvoir et pourquoi on lui obéit, il demande comment le pouvoir s'exerce concrètement, dans des techniques diffuses bien en deçà de l'État.",
+      "Weber pose la question la plus simple et la plus difficile : pourquoi obéit-on ? Sa typologie de la domination — traditionnelle, charismatique, légale-rationnelle — reste l'outil de référence pour comprendre pourquoi un ordre est suivi sans qu'il faille sans cesse recourir à la force. Marx déplace la question vers les intérêts de classe qu'un pouvoir politique sert ou dissimule, et Tocqueville vers le risque inverse — qu'une majorité démocratique, légitime par construction, écrase les minorités en son nom. Habermas, plus récemment, déplace la légitimité de la seule croyance des dominés vers la discussion elle-même : une norme n'est pleinement légitime que si elle pourrait recueillir l'accord de tous ceux qu'elle engage. Foucault, enfin, renverse la question de départ : plutôt que de chercher qui détient le pouvoir et pourquoi on lui obéit, il demande comment le pouvoir s'exerce concrètement, dans des techniques diffuses bien en deçà de l'État. Fraser ajoute une question que la discussion habermassienne laisse ouverte : qui a seulement le droit d'y participer, et selon quelles frontières se décide, au préalable, la communauté politique appelée à trancher.",
     inspirateurs: [
       "Robert Michels — la loi d'airain de l'oligarchie : même un parti démocratique se donne des chefs",
       "Vilfredo Pareto — la circulation des élites, qui remplace une domination par une autre",
@@ -326,11 +326,10 @@ export const DOMAIN_EXTRA = {
   genre: {
     famille: 'inegalites',
     detail:
-      "Bourdieu décrit une domination masculine si bien incorporée qu'elle ne se vit pas comme une contrainte, y compris par celles qui la subissent. Goffman montre, à une autre échelle, comment le masculin et le féminin se jouent et se rejouent dans chaque interaction, par des gestes et des postures apprises plus que décidées. Le domaine interroge ainsi ce que la biologie explique réellement des différences observées, et ce que l'ordre social y ajoute — ou y invente.",
+      "Bourdieu décrit une domination masculine si bien incorporée qu'elle ne se vit pas comme une contrainte, y compris par celles qui la subissent. Goffman montre, à une autre échelle, comment le masculin et le féminin se jouent et se rejouent dans chaque interaction, par des gestes et des postures apprises plus que décidées. Fraser refuse d'y voir une seule sorte de tort : l'injustice de genre est pour elle à la fois économique — l'écart de salaire, le travail domestique non rémunéré — et culturelle — le mépris ou l'invisibilisation —, si bien qu'aucun remède, redistributif seul ou symbolique seul, ne suffit à la réparer entièrement. Butler va plus loin encore : le genre lui-même n'est pas une propriété qu'on aurait, mais une performance qu'on répète sous contrainte, ce qui déplace la question de savoir ce qu'on est vers celle de savoir ce que la répétition d'une norme peut, ou non, laisser espérer d'autre. Le domaine interroge ainsi ce que la biologie explique réellement des différences observées, et ce que l'ordre social y ajoute — ou y invente.",
     inspirateurs: [
       "Ann Oakley — la distinction du sexe et du genre, qui ouvre le domaine",
       "Christine Delphy — le travail domestique comme rapport de production, non comme don d'amour",
-      "Judith Butler — le genre comme performance répétée plutôt que comme propriété",
     ],
   },
   jeunesse: {
@@ -412,7 +411,7 @@ export const DOMAIN_EXTRA = {
   medias: {
     famille: 'cultures',
     detail:
-      "L'École de Francfort ouvre le débat avec l'industrie culturelle : des contenus produits en série, pensés pour vendre du consentement plus que pour informer ou émanciper. Bourdieu prolonge l'inquiétude du côté du champ journalistique, pris entre logique commerciale et exigence d'indépendance. Merton, plus mesuré, rappelle qu'un média a toujours des effets qu'il n'affiche pas — ses fonctions latentes comptent parfois plus que sa mission déclarée.",
+      "L'École de Francfort ouvre le débat avec l'industrie culturelle : des contenus produits en série, pensés pour vendre du consentement plus que pour informer ou émanciper. Bourdieu prolonge l'inquiétude du côté du champ journalistique, pris entre logique commerciale et exigence d'indépendance. Merton, plus mesuré, rappelle qu'un média a toujours des effets qu'il n'affiche pas — ses fonctions latentes comptent parfois plus que sa mission déclarée. Luhmann déplace entièrement la question : les médias de masse ne sont, pour lui, ni un instrument de manipulation ni un simple canal, mais un sous-système autopoïétique de plus, qui décide seul de ce qui compte comme information selon son propre code — nouveau ou déjà connu — sans jamais avoir besoin d'être vrai pour continuer de fonctionner.",
     inspirateurs: [
       "Paul Lazarsfeld — l'influence en deux étapes : les médias passent par des relais humains",
       "Elihu Katz — les usages et gratifications, le public actif plutôt que la cible",
@@ -445,7 +444,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie du corps',
     famille: 'corps',
     detail:
-      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot. Foucault déplace encore la question : le corps discipliné ne l'est pas seulement par les autres ou par soi, il l'est par des techniques précises — l'emploi du temps, l'exercice, le rang — qui le dressent sans jamais avoir besoin d'invoquer la loi.",
+      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot. Foucault déplace encore la question : le corps discipliné ne l'est pas seulement par les autres ou par soi, il l'est par des techniques précises — l'emploi du temps, l'exercice, le rang — qui le dressent sans jamais avoir besoin d'invoquer la loi. Butler radicalise encore ce déplacement : le corps genré lui-même n'est jamais un support neutre sur lequel viendrait s'inscrire une discipline extérieure, il est déjà, dans son moindre geste, la répétition d'une norme qu'aucun corps n'a jamais choisie librement.",
     inspirateurs: [
       "Marcel Mauss — les techniques du corps : marcher, nager, s'asseoir s'apprennent",
       "David Le Breton — la sociologie du corps constituée en domaine",
