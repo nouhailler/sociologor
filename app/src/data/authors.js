@@ -8,7 +8,7 @@ export const DOMAINS = [
   { id: 'travail', t: 'Travail', d: "Diviser les tâches lie les individus autant que cela les épuise.", a: ['durkheim', 'marx', 'becker', 'castel', 'crozier'] },
   { id: 'religion', t: 'Religion', d: "Le sacré comme ciment collectif — et comme moteur inattendu du capitalisme.", a: ['durkheim', 'weber', 'berger-luckmann'] },
   { id: 'deviance', t: 'Déviance', d: "Personne n'est déviant tout seul : il faut un public, une règle et un étiquetage.", a: ['becker', 'goffman', 'merton'] },
-  { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel', 'schutz'] },
+  { id: 'interactions', t: 'Interactions', d: "La vie sociale se joue en face à face, dans des micro-scènes très codées.", a: ['goffman', 'simmel', 'schutz', 'mead', 'blumer'] },
   { id: 'culture', t: 'Culture', d: "Les goûts ne sont jamais purement personnels : ils classent celui qui les affiche.", a: ['bourdieu', 'simmel'] },
   { id: 'organisations', t: 'Organisations', d: "Règles, hiérarchies et bureaucratie : la machine froide de la modernité.", a: ['weber', 'merton', 'parsons', 'giddens', 'crozier', 'friedberg', 'luhmann'] },
   { id: 'urbaine', t: 'Urbaine', d: "La ville fabrique une manière d'être ensemble : dense, anonyme, nerveuse.", a: ['simmel', 'becker'] },
@@ -253,7 +253,7 @@ export const AUTHORS = {
     oeuvres: [{ y: '1936', t: "The Unanticipated Consequences of Purposive Social Action" }, { y: '1938', t: 'Social Structure and Anomie' }, { y: '1949', t: 'Éléments de théorie et de méthode sociologiques' }, { y: '1968', t: 'The Matthew Effect in Science' }],
     citations: [{ t: "Une définition fausse d'une situation en engendre les conséquences qui la rendent vraie.", src: 'The Self-Fulfilling Prophecy, 1948' }],
     critiques: ["Reste dans le cadre fonctionnaliste qu'il critique.", "La notion de fonction latente est difficile à prouver empiriquement."],
-    up: ['parsons', 'durkheim'], down: ['becker'], x: 470, y: 60,
+    up: ['parsons', 'durkheim', 'thomas'], down: ['becker'], x: 470, y: 60,
   },
   bourdieu: {
     id: 'bourdieu', name: 'Pierre Bourdieu', initials: 'PB', dates: '1930–2002', nat: 'France', periode: 'XXᵉ siècle',
@@ -297,7 +297,7 @@ export const AUTHORS = {
   },
   goffman: {
     id: 'goffman', name: 'Erving Goffman', initials: 'EG', dates: '1922–1982', nat: 'Canada / É.-U.', periode: 'XXᵉ siècle',
-    courant: 'Interactionnisme',
+    courant: 'Interactionnisme symbolique',
     hook: "Il traite la vie quotidienne comme une scène de théâtre très sérieuse.",
     resume: "Goffman démontre qu'un simple échange de politesses est un travail minutieux pour sauver la face de chacun.",
     concepts: [
@@ -320,7 +320,7 @@ export const AUTHORS = {
     oeuvres: [{ y: '1959', t: 'La Mise en scène de la vie quotidienne' }, { y: '1961', t: 'Asiles' }, { y: '1963', t: 'Stigmate' }, { y: '1967', t: "Les Rites d'interaction" }, { y: '1971', t: 'Relations in Public' }, { y: '1974', t: 'Les Cadres de l\'expérience' }],
     citations: [{ t: "Le monde est un mariage.", src: 'La Mise en scène de la vie quotidienne, 1959' }],
     critiques: ["Une focale micro qui laisse les inégalités structurelles hors champ.", "Des matériaux hétéroclites, difficiles à répliquer."],
-    up: ['simmel', 'weber'], down: ['becker'], x: 470, y: 375,
+    up: ['simmel', 'weber', 'mead'], down: ['becker'], x: 470, y: 375,
   },
   becker: {
     id: 'becker', name: 'Howard S. Becker', initials: 'HB', dates: '1928–2023', nat: 'États-Unis', periode: 'XXᵉ–XXIᵉ',
@@ -343,7 +343,7 @@ export const AUTHORS = {
     oeuvres: [{ y: '1963', t: 'Outsiders' }, { y: '1982', t: 'Les Mondes de l\'art' }, { y: '1998', t: 'Les Ficelles du métier' }],
     citations: [{ t: "La déviance n'est pas une qualité de l'acte, mais la conséquence de la réaction des autres.", src: 'Outsiders, 1963' }],
     critiques: ["L'étiquetage explique la réaction, moins le passage à l'acte initial.", "Une sympathie pour les étiquetés qui a valu à Becker le reproche de parti pris."],
-    up: ['goffman', 'merton'], down: [], x: 700, y: 375,
+    up: ['goffman', 'merton', 'blumer'], down: [], x: 700, y: 375,
   },
   boudon: {
     id: 'boudon', name: 'Raymond Boudon', initials: 'RB', dates: '1934–2013', nat: 'France', periode: 'XXᵉ siècle',
@@ -551,7 +551,7 @@ export const AUTHORS = {
     oeuvres: [{ y: '1966', t: 'La Construction sociale de la réalité' }, { y: '1967', t: 'The Sacred Canopy (P. Berger)' }, { y: '1967', t: 'The Invisible Religion (T. Luckmann)' }],
     citations: [{ t: "La société est un produit humain. La société est une réalité objective. L'homme est un produit social.", src: 'La Construction sociale de la réalité, 1966' }],
     critiques: ["Des critiques marxistes leur reprochent de décrire comment une institution se maintient sans jamais dire pourquoi ce sont certaines constructions, plutôt que d'autres, qui l'emportent.", "L'idée d'une réalité entièrement construite a été accusée d'ouvrir la voie à un relativisme qui peine à rendre compte des contraintes matérielles et biologiques les moins négociables.", "La théorie, très générale, offre peu d'outils d'enquête concrets pour observer sur le terrain les processus qu'elle décrit."],
-    up: ['schutz', 'weber', 'durkheim'], down: [], x: 30, y: 850,
+    up: ['schutz', 'weber', 'durkheim', 'mead'], down: [], x: 30, y: 850,
   },
   crozier: {
     id: 'crozier', name: 'Michel Crozier', initials: 'MC', dates: '1922–2013', nat: 'France', periode: 'XXᵉ siècle',
@@ -733,6 +733,53 @@ export const AUTHORS = {
     critiques: ["Des critiques marxistes plus classiques objectent que la figure du cyborg, très centrée sur l'imaginaire occidental des hautes technologies, dit peu des rapports de production bien réels qui fabriquent ces mêmes technologies, souvent au prix d'un travail invisibilisé dans les pays du Sud.", "Le style volontairement associatif et poétique de ses derniers textes, revendiqué comme méthode de pensée à part entière, reste d'un abord difficile pour qui cherche une thèse formulée de façon linéaire."],
     up: ['foucault', 'marx'], down: [], x: 250, y: 1170,
   },
+  mead: {
+    id: 'mead', name: 'George Herbert Mead', initials: 'GM', dates: '1863–1931', nat: 'États-Unis', periode: 'Tournant du XXᵉ',
+    courant: 'Interactionnisme symbolique',
+    hook: "Le soi n'existe pas avant la société qui le regarde : on ne devient quelqu'un qu'en apprenant, par le jeu et le langage, à se voir depuis la place des autres.",
+    resume: "Mead montre que l'esprit et le soi ne sont pas donnés à la naissance, mais émergent d'un même processus social : en prenant le rôle des autres, d'abord dans le jeu puis dans des activités organisées, l'enfant apprend à se voir de l'extérieur et devient, ce faisant, un sujet social à part entière.",
+    concepts: [
+      { id: 'soi', t: 'Soi', year: '1934', simple: "Le soi n'est pas une donnée biologique mais un produit social : on ne devient un sujet qu'en apprenant à se voir depuis le point de vue des autres.", ex: "Un enfant qui, avant d'apprendre à parler, réagit aux objets sans jamais se percevoir lui-même comme un objet parmi d'autres dans la pièce." },
+      { id: 'i-me', t: 'I / Me', year: '1934', simple: "Le soi se compose de deux moments : le Je, impulsion spontanée et imprévisible, et le Moi, l'ensemble des attitudes d'autrui que l'on a intériorisées et qui nous regarde agir.", ex: "Un orateur qui sent monter une repartie spontanée, puis se retient aussitôt en anticipant la réaction choquée de son public." },
+      { id: 'autrui-generalise', t: 'Autrui généralisé', year: '1934', simple: "L'ensemble organisé des attitudes de la communauté, intériorisé comme un tout, qui permet de se voir non plus depuis un seul regard particulier mais depuis la perspective générale du groupe.", ex: "Un pilote de ligne qui respecte scrupuleusement une checklist de sécurité même lors d'un vol de routine, sans aucun contrôleur à proximité pour vérifier son geste." },
+      { id: 'prise-de-role', t: 'Prise de rôle', year: '1934', simple: "La capacité à se représenter imaginairement le point de vue d'autrui, condition de toute communication et matrice du développement du soi chez l'enfant.", ex: "Un enfant qui, en jouant au docteur, apprend à anticiper ce qu'un vrai patient ressentirait avant même de savoir ce qu'est réellement la médecine." },
+      { id: 'interaction-symbolique', t: 'Interaction symbolique', year: '1934', simple: "La vie sociale se joue par l'échange de symboles partagés — surtout le langage — dont le sens est le même pour celui qui l'émet et celui qui le reçoit, et non par un simple réflexe mécanique.", ex: "Un chef d'orchestre dont le geste ne déclenche pas une réaction automatique chez les musiciens, mais évoque en chacun d'eux la même intention musicale qu'il cherche lui-même à exprimer." },
+    ],
+    oeuvres: [{ y: '1932', t: 'The Philosophy of the Present' }, { y: '1934', t: 'Mind, Self, and Society' }],
+    citations: [{ t: "Le soi n'est pas là dès la naissance : il naît du processus même de l'expérience et de l'activité sociales.", src: "d'après Mind, Self, and Society, 1934 (publication posthume)" }],
+    critiques: ["Le corpus n'est connu que par des notes de cours et des manuscrits assemblés après sa mort par ses étudiants, ce qui laisse planer un doute sur la part de systématisation qui revient à Mead lui-même plutôt qu'à ses éditeurs.", "La théorie explique bien comment le soi se forme, beaucoup moins comment il peut ensuite s'écarter des attentes collectives qu'il a pourtant intériorisées."],
+    up: [], down: [], x: 470, y: 1170,
+  },
+  blumer: {
+    id: 'blumer', name: 'Herbert Blumer', initials: 'HB', dates: '1900–1987', nat: 'États-Unis', periode: 'XXᵉ siècle',
+    courant: 'Interactionnisme symbolique',
+    hook: "Il ne suffit pas d'observer un comportement pour le comprendre : il faut d'abord entrer dans la manière dont ceux qu'on étudie donnent sens à ce qu'ils font.",
+    resume: "Blumer systématise et nomme l'héritage de Mead en trois principes simples : on agit envers les choses selon le sens qu'on leur donne, ce sens naît de l'interaction avec autrui, et il se retravaille sans cesse dans un processus d'interprétation — ce qui exige, pour l'étudier, une enquête au plus près du monde vécu plutôt qu'une mesure de variables abstraites.",
+    concepts: [
+      { id: 'enquete-naturaliste', t: 'Enquête naturaliste', year: '1969', simple: "Une méthode qui examine directement le monde social empirique par une observation flexible et exploratoire, plutôt que de tester des variables fixées à l'avance.", ex: "Un sociologue qui s'installe plusieurs semaines dans un atelier de réparation automobile avant de savoir ce qu'il y cherchera précisément à comprendre." },
+      { id: 'signification', t: 'Signification', year: '1969', simple: "On agit envers les choses — objets, personnes, situations — non selon leurs propriétés intrinsèques, mais selon le sens qu'elles ont pour soi.", ex: "Une même bague, simple bijou pour l'un, preuve d'un engagement pour l'autre, qui n'inspire pas du tout la même conduite selon celui qui la porte." },
+      { id: 'interpretation', t: 'Interprétation', year: '1969', simple: "Le sens des choses n'est jamais fixé une fois pour toutes : il est sans cesse manié, vérifié et retravaillé par celui qui doit y faire face dans une situation donnée.", ex: "Un même geste d'un collègue, d'abord pris pour de l'indifférence, réinterprété comme de la discrétion une fois qu'on apprend qu'il traverse une période difficile." },
+      { id: 'action-collective', t: 'Action collective', year: '1939', simple: "Les mouvements de foule, les modes ou les mouvements sociaux naissent d'un processus d'interprétation et d'ajustement mutuel entre participants, non de l'application d'une norme déjà là.", ex: "Une file d'attente qui se précipite soudainement vers une caisse censée fermer plus tôt, chacun accélérant le pas en voyant les autres accélérer le leur." },
+    ],
+    oeuvres: [{ y: '1937', t: 'Social Psychology, in Man and Society' }, { y: '1969', t: 'Symbolic Interactionism: Perspective and Method' }],
+    citations: [{ t: "Les êtres humains agissent à l'égard des choses en fonction du sens que ces choses ont pour eux.", src: "d'après Symbolic Interactionism: Perspective and Method, 1969" }],
+    critiques: ["L'enquête naturaliste, très ouverte, laisse peu de critères explicites pour juger si une interprétation proposée par le chercheur est la bonne, plutôt qu'une autre également plausible.", "En insistant sur l'interprétation individuelle et l'ajustement mutuel, la théorie dit peu des structures de pouvoir et des inégalités qui pèsent, en amont, sur qui peut imposer sa définition de la situation aux autres."],
+    up: ['mead', 'thomas'], down: [], x: 700, y: 1170,
+  },
+  thomas: {
+    id: 'thomas', name: 'William Isaac Thomas', initials: 'WT', dates: '1863–1947', nat: 'États-Unis', periode: 'Tournant du XXᵉ',
+    courant: 'École de Chicago',
+    hook: "Une situation vécue comme réelle produit des conséquences bien réelles, que la situation initiale ait été, ou non, fondée.",
+    resume: "Thomas fonde une bonne part de la méthode de l'École de Chicago sur un principe simple et radical : ce ne sont pas les faits objectifs seuls qui déterminent la conduite, mais la manière dont les acteurs définissent d'abord leur situation — une définition qui, une fois posée, produit des effets bien concrets, vraie ou fausse à l'origine.",
+    concepts: [
+      { id: 'definition-de-la-situation', t: 'Définition de la situation', year: '1923', simple: "Avant d'agir, tout individu doit d'abord interpréter et définir la situation à laquelle il fait face — une définition qui oriente sa conduite bien plus que les faits objectifs seuls.", ex: "Un même bruit dans une maison, défini comme un cambrioleur par l'un des habitants et comme un volet mal fermé par l'autre, qui ne réagiront donc pas du tout de la même façon." },
+      { id: 'theoreme-de-thomas', t: 'Théorème de Thomas', year: '1928', simple: "Si les hommes définissent des situations comme réelles, elles sont réelles dans leurs conséquences — une définition, même fausse à l'origine, produit des effets bien concrets.", ex: "Une entreprise jugée, à tort, en difficulté financière, dont les fournisseurs cessent aussitôt de livrer à crédit — précipitant une vraie crise de trésorerie que rien, au départ, ne justifiait." },
+    ],
+    oeuvres: [{ y: '1918', t: 'The Polish Peasant in Europe and America' }, { y: '1923', t: 'The Unadjusted Girl' }, { y: '1928', t: 'The Child in America' }],
+    citations: [{ t: "Si les hommes définissent des situations comme réelles, elles sont réelles dans leurs conséquences.", src: "d'après The Child in America, 1928 (avec Dorothy Swaine Thomas)" }],
+    critiques: ["Le principe, très général, dit peu de ce qui détermine la définition initiale elle-même — pourquoi tel groupe définit une situation de telle manière plutôt que d'une autre.", "Merton objectera plus tard qu'une définition fausse ne devient pas vraie en elle-même : ce sont les conduites qu'elle déclenche, et elles seules, qui en produisent les conséquences réelles."],
+    up: [], down: [], x: 30, y: 1330,
+  },
 };
 
 // Champs complémentaires : état civil séparé, ponts disciplinaires, bibliographie
@@ -847,7 +894,6 @@ export const EXTRA = {
     prenom: 'Erving', nom: 'Goffman', disc: ['Théâtre et dramaturgie — la métaphore centrale', 'Ethnologie — observation directe à Shetland', 'Linguistique — analyse de conversation'], biblio: ['Y. Winkin, Erving Goffman : les moments et leurs hommes, Seuil, 1988', 'D. Cefaï & L. Perreau (dir.), Erving Goffman et l\'ordre de l\'interaction, CURAPP, 2012'],
     portrait: { kind: 'monogram', alt: 'Monogramme d’Erving Goffman', credit: "Photographies sous droits : aucune image libre disponible." },
     horsCorpus: [
-      "George Herbert Mead — le soi qui se construit dans le regard d'autrui",
       "W. Lloyd Warner — son directeur à Chicago, et l'ethnographie des communautés",
       "Kenneth Burke — la dramaturgie comme grille d'analyse de l'action"
     ],
@@ -857,7 +903,6 @@ export const EXTRA = {
     portrait: { kind: 'monogram', alt: 'Monogramme de Howard S. Becker', credit: "Photographies sous droits : aucune image libre disponible." },
     horsCorpus: [
       "Everett C. Hughes — son maître à Chicago, d'où vient la notion de carrière appliquée au travail",
-      "Herbert Blumer — l'interactionnisme symbolique et le refus des variables abstraites",
       "Robert E. Park — la première école de Chicago et son terrain urbain"
     ],
   },
@@ -1021,7 +1066,33 @@ export const EXTRA = {
       "Lynn Margulis — la symbiose comme moteur de l'évolution, matrice biologique de la sympoïèse",
     ],
   },
+  mead: {
+    prenom: 'George Herbert', nom: 'Mead', disc: ["Philosophie — le pragmatisme américain de James et Dewey, dont Mead est une figure majeure", "Psychologie sociale — la genèse sociale de l'esprit et de la conscience de soi", "Biologie — le behaviorisme social, une réponse au behaviorisme strict de Watson"], biblio: ['H. Joas, G. H. Mead : une réévaluation contemporaine de sa pensée, CNRS Éditions, 2007', 'D. Cefaï (dir.), L\'École de Chicago : naissance de l\'écologie urbaine, Flammarion, 2004'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de George Herbert Mead', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "William James et John Dewey — le pragmatisme américain, matrice philosophique du behaviorisme social",
+      "Charles Horton Cooley — le « looking-glass self », le soi comme reflet du regard d'autrui",
+      "John B. Watson — le behaviorisme strict, dont Mead retravaille et complexifie le programme",
+    ],
+  },
+  blumer: {
+    prenom: 'Herbert', nom: 'Blumer', disc: ["Sociologie du travail — ses premières enquêtes portent sur les relations industrielles et la négociation collective", "Méthodologie — la critique de l'analyse par variables et la défense d'une sociologie qualitative", "Psychologie sociale — le prolongement et la systématisation de l'héritage de Mead"], biblio: ['N. K. Denzin, Symbolic Interactionism and Cultural Studies, Blackwell, 1992', 'D. Cefaï (dir.), L\'École de Chicago : naissance de l\'écologie urbaine, Flammarion, 2004'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de Herbert Blumer', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Charles Horton Cooley — le « looking-glass self », relu par Blumer comme antécédent de l'interactionnisme",
+      "Anselm Strauss — élève de Blumer à Chicago, cofondateur de la théorie ancrée (grounded theory)",
+    ],
+  },
+  thomas: {
+    prenom: 'William Isaac', nom: 'Thomas', disc: ["Psychologie sociale — les « quatre désirs » (sécurité, réponse, reconnaissance, expérience nouvelle) qui orientent la conduite", "Travail social — ses enquêtes nourrissent directement les politiques d'assistance à l'enfance et à la jeunesse", "Démographie — les grandes migrations polonaises vers les États-Unis, terrain de son enquête fondatrice"], biblio: ['N. Herpin, Les Sociologues américains et le siècle, PUF, 1973', 'D. Cefaï (dir.), L\'École de Chicago : naissance de l\'écologie urbaine, Flammarion, 2004'],
+    portrait: { kind: 'monogram', alt: 'Monogramme de William Isaac Thomas', credit: "Photographies sous droits : aucune image libre disponible." },
+    horsCorpus: [
+      "Florian Znaniecki — coauteur du Paysan polonais, qui en tire une théorie sociologique plus systématique",
+      "Dorothy Swaine Thomas — sa coautrice sur le théorème de Thomas, démographe et statisticienne",
+      "Robert Park — collègue à Chicago, avec qui Thomas partage le souci de l'enquête de terrain",
+    ],
+  },
 };
 
-export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0], ['weber', 'crozier', 0], ['merton', 'crozier', 0], ['marx', 'castells', 0], ['weber', 'castells', 0], ['marx', 'bauman', 0], ['simmel', 'bauman', 0], ['weber', 'beck', 0], ['francfort', 'fraser', 0], ['habermas', 'fraser', 0], ['foucault', 'haraway', 0], ['marx', 'haraway', 0]];
+export const EXTRA_EDGES = [['weber', 'bourdieu', 0], ['durkheim', 'merton', 0], ['merton', 'becker', 1], ['elias', 'bourdieu', 0], ['francfort', 'bourdieu', 0], ['weber', 'boudon', 0], ['durkheim', 'castel', 0], ['weber', 'habermas', 0], ['parsons', 'habermas', 0], ['weber', 'giddens', 0], ['durkheim', 'giddens', 0], ['goffman', 'giddens', 0], ['marx', 'foucault', 0], ['weber', 'foucault', 0], ['foucault', 'castel', 0], ['weber', 'schutz', 0], ['simmel', 'schutz', 0], ['schutz', 'berger-luckmann', 0], ['weber', 'berger-luckmann', 0], ['durkheim', 'berger-luckmann', 0], ['weber', 'crozier', 0], ['merton', 'crozier', 0], ['marx', 'castells', 0], ['weber', 'castells', 0], ['marx', 'bauman', 0], ['simmel', 'bauman', 0], ['weber', 'beck', 0], ['francfort', 'fraser', 0], ['habermas', 'fraser', 0], ['foucault', 'haraway', 0], ['marx', 'haraway', 0], ['mead', 'goffman', 0], ['mead', 'berger-luckmann', 0], ['blumer', 'becker', 0], ['thomas', 'merton', 0]];
 

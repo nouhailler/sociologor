@@ -324,15 +324,15 @@ test.describe('Parcours principal', () => {
 
     // Une arête par relation, réciproques comprises.
     await page.goto('/graphe');
-    await expect(page.locator('svg[width="880"] path')).toHaveCount(51);
+    await expect(page.locator('svg[width="880"] path')).toHaveCount(57);
   });
 
   test('graphe des concepts : sous le graphe des filiations, un nœud par concept', async ({ page }) => {
     await enter(page, '/graphe');
     const concepts = page.locator('[aria-label="Graphe des concepts, défilement horizontal et vertical"]');
-    await expect(concepts.getByRole('link')).toHaveCount(353);
-    // Une arête par paire associée ou opposée, dédoublonnée : 614 + 330.
-    await expect(concepts.locator('svg path')).toHaveCount(944);
+    await expect(concepts.getByRole('link')).toHaveCount(364);
+    // Une arête par paire associée ou opposée, dédoublonnée : 632 + 341.
+    await expect(concepts.locator('svg path')).toHaveCount(973);
     await concepts.getByRole('link', { name: /Habitus/ }).click();
     await expect(page).toHaveURL(/\/c\/habitus/);
     await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();
@@ -372,10 +372,10 @@ test.describe('Parcours principal', () => {
     await expect(holisme.getByRole('link', { name: /Structuralisme génétique/ })).toBeVisible();
   });
 
-  test('courant sans fiche du corpus : le dit au lieu de paraître vide', async ({ page }) => {
+  test('courant : les inspirateurs hors corpus restent du texte, jamais des liens', async ({ page }) => {
     await enter(page, '/courants');
     const chicago = page.locator('#courant-ecole-de-chicago');
-    await expect(chicago.getByText("Aucune fiche n'incarne ce courant dans le corpus")).toBeVisible();
+    await expect(chicago.getByRole('link', { name: /William Isaac Thomas/ })).toBeVisible();
     await expect(chicago.getByText(/Robert Park — /)).toBeVisible();
     await expect(chicago.getByText(/Robert Park — /).locator('a')).toHaveCount(0);
   });
@@ -423,7 +423,7 @@ test.describe('Parcours principal', () => {
 
   test('phénomène sans concept du corpus : le dit au lieu de paraître vide', async ({ page }) => {
     await enter(page, '/p/etalement-urbain');
-    await expect(page.getByText(/Aucun concept des trente fiches/)).toBeVisible();
+    await expect(page.getByText(/Aucun concept des trente-trois fiches/)).toBeVisible();
     await expect(page.getByText("l'installation en dehors des villes", { exact: false })).toBeVisible();
   });
 

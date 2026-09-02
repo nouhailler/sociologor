@@ -3471,7 +3471,7 @@ export const CONCEPTS = {
       { y: '1948', t: 'The Self-Fulfilling Prophecy' },
       { y: '1949', t: 'Éléments de théorie et de méthode sociologiques' },
     ],
-    associes: ['etiquetage', 'fonction-latente', 'stigmate'],
+    associes: ['etiquetage', 'fonction-latente', 'stigmate', 'theoreme-de-thomas'],
     opposes: ['physique-sociale'],
     critiques: [
       "Le mécanisme est rarement isolé : dans les cas réels, la croyance n'est jamais seule à agir.",
@@ -8660,7 +8660,7 @@ export const CONCEPTS = {
     oeuvres: [
       { y: '1966', t: 'La Construction sociale de la réalité' },
     ],
-    associes: ['objectivation', 'socialisation-primaire', 'habitus'],
+    associes: ['objectivation', 'socialisation-primaire', 'habitus', 'autrui-generalise'],
     opposes: ['agentivite'],
     critiques: [
       "Giddens objecterait qu'un individu n'internalise jamais aussi passivement le monde social : il garde, même dans la socialisation la plus poussée, une capacité d'agir autrement.",
@@ -11077,6 +11077,336 @@ export const CONCEPTS = {
     evolution: [
       { p: '2003', f: "Le Manifeste des espèces compagnes de Haraway fournit la matrice théorique du courant à venir." },
       { p: '2010', f: "Kirksey et Helmreich nomment le champ de l'ethnographie multispecies dans Cultural Anthropology." },
+    ],
+  },
+
+  /* — George Herbert Mead — */
+  'soi': {
+    detaille: [
+      "Pour Mead, le soi n'est pas une donnée biologique présente dès la naissance : il émerge d'un processus social, celui par lequel un individu devient capable de se prendre lui-même pour objet, de se voir depuis l'extérieur comme les autres le voient.",
+      "Cette capacité réflexive se construit par étapes, du simple jeu imitatif de l'enfant (play) jusqu'aux jeux organisés à plusieurs rôles (game), où il faut anticiper simultanément la position de tous les autres joueurs pour tenir la sienne.",
+    ],
+    origine: {
+      oeuvre: 'Mind, Self, and Society',
+      annee: '1934',
+      contexte:
+        "Mead enseigne la psychologie sociale à l'université de Chicago pendant près de quarante ans sans jamais publier de grand livre ; ses étudiants assemblent Mind, Self, and Society après sa mort, à partir de leurs notes de cours.",
+    },
+    exemples: [
+      "Un jeune enfant qui, en se regardant dans un miroir pour la première fois, met un temps surprenant à comprendre que le reflet qu'il voit est bien le sien.",
+      "Un adolescent qui commence à se soucier de l'image qu'il donne dans une photo de groupe, alors que ce souci n'existait pas quelques années plus tôt.",
+    ],
+    oeuvres: [
+      { y: '1934', t: 'Mind, Self, and Society' },
+    ],
+    associes: ['i-me', 'autrui-generalise', 'prise-de-role'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "La théorie explique bien la genèse sociale du soi, beaucoup moins ce qui fait qu'un individu donné se distingue malgré tout nettement d'un autre ayant traversé une socialisation très similaire.",
+      "Le vocabulaire, très général, dit peu de ce qui se passe quand la formation du soi échoue ou reste incomplète, un cas que Mead n'aborde qu'en marge.",
+    ],
+    evolution: [
+      { p: '1890', f: "Charles Horton Cooley propose le looking-glass self, le soi comme reflet imaginé du regard d'autrui." },
+      { p: '1934', f: "Mind, Self, and Society systématise la genèse sociale du soi à travers le jeu et le langage." },
+    ],
+  },
+  'i-me': {
+    detaille: [
+      "Le soi se compose, pour Mead, de deux phases indissociables mais distinctes : le Je (I), la réaction spontanée et jamais entièrement prévisible de l'organisme à une situation, et le Moi (Me), l'ensemble organisé des attitudes d'autrui que l'individu a intériorisées et depuis lesquelles il s'observe agir.",
+      "Le Moi rend l'action socialement responsable et prévisible ; le Je y introduit une part d'imprévu qui rend, à l'inverse, tout changement social possible — sans lui, la reproduction sociale serait parfaite et rien ne pourrait jamais évoluer.",
+    ],
+    origine: {
+      oeuvre: 'Mind, Self, and Society',
+      annee: '1934',
+      contexte:
+        "Mead cherche à concilier deux exigences qui semblent s'opposer : rendre compte de la conformité sociale sans réduire l'individu à un pur automate social, ni le penser comme un agent totalement libre de toute détermination collective.",
+    },
+    exemples: [
+      "Un musicien de jazz qui improvise un passage inattendu, tout en restant capable, l'instant d'après, de juger si cette improvisation fonctionnait vraiment avec le reste du morceau.",
+      "Une personne qui, sous le coup de la colère, dit une parole blessante, puis se surprend elle-même à en mesurer aussitôt les conséquences sur son entourage.",
+    ],
+    oeuvres: [
+      { y: '1934', t: 'Mind, Self, and Society' },
+    ],
+    associes: ['soi', 'autrui-generalise'],
+    opposes: ['action-sociale'],
+    critiques: [
+      "La distinction, très évocatrice, reste difficile à observer empiriquement : rien ne permet de tracer avec certitude la frontière entre ce qui relève du Je et ce qui relève déjà du Moi dans une conduite donnée.",
+      "Certains y voient une manière habile de réintroduire, par la porte de derrière, la liberté individuelle qu'une théorie aussi sociale du soi semblait pourtant vouloir écarter.",
+    ],
+    evolution: [
+      { p: '1902', f: "Cooley pose déjà l'idée d'un soi qui se voit par les yeux d'autrui, sans la double structure du Je et du Moi." },
+      { p: '1934', f: "Mead formalise la distinction entre le Je spontané et le Moi socialement formé." },
+    ],
+  },
+  'autrui-generalise': {
+    detaille: [
+      "L'autrui généralisé désigne l'ensemble organisé des attitudes de toute une communauté, intériorisé comme un tout cohérent, qui permet à un individu de répondre non plus au seul regard d'une personne particulière, mais à celui, plus abstrait, du groupe dans son ensemble.",
+      "Mead l'illustre par le passage du simple jeu (play), où l'enfant prend tour à tour le rôle d'une seule personne à la fois, au jeu organisé (game), où il doit tenir compte simultanément des règles et des attentes de tous les joueurs pour occuper convenablement sa propre place.",
+    ],
+    origine: {
+      oeuvre: 'Mind, Self, and Society',
+      annee: '1934',
+      contexte:
+        "Mead observe le jeu enfantin comme un laboratoire naturel du développement social, où l'on peut suivre, étape par étape, la formation d'une capacité qui restera ensuite invisible une fois acquise à l'âge adulte.",
+    },
+    exemples: [
+      "Un employé qui respecte une procédure interne même seul dans son bureau, sans que personne ne puisse le voir ni le sanctionner sur le moment.",
+      "Un supporter qui, sans connaître aucun autre spectateur du stade, sait immédiatement ce que « le public » attend de lui à tel moment du match.",
+    ],
+    oeuvres: [
+      { y: '1934', t: 'Mind, Self, and Society' },
+    ],
+    associes: ['soi', 'i-me', 'prise-de-role'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept suppose une communauté suffisamment homogène pour produire un ensemble cohérent d'attentes ; il dit moins ce qui se passe quand un individu appartient à plusieurs groupes aux attentes contradictoires.",
+      "Rien ne garantit qu'un « autrui généralisé » unique existe réellement dans des sociétés complexes et fragmentées, plutôt qu'une pluralité d'autruis généralisés concurrents.",
+    ],
+    evolution: [
+      { p: '1902', f: "Cooley décrit un soi formé par le regard d'autrui, sans distinguer autrui particulier et autrui généralisé." },
+      { p: '1934', f: "Mead distingue le stade du jeu simple et celui du jeu organisé, où émerge l'autrui généralisé." },
+    ],
+  },
+  'prise-de-role': {
+    detaille: [
+      "La prise de rôle est la capacité à se représenter imaginairement la perspective d'autrui — à anticiper ce qu'il perçoit, attend ou ressent — pour ajuster en conséquence sa propre conduite. Mead en fait la condition même de toute communication véritable, et non une simple compétence sociale parmi d'autres.",
+      "Cette capacité se développe par degrés dans l'enfance, du jeu de rôle le plus simple (jouer au docteur, au maître d'école) jusqu'à la capacité, bien plus exigeante, de tenir compte simultanément de plusieurs rôles à la fois dans un jeu collectif organisé.",
+    ],
+    origine: {
+      oeuvre: 'Mind, Self, and Society',
+      annee: '1934',
+      contexte:
+        "Mead s'oppose au behaviorisme strict de son collègue John B. Watson, pour qui l'esprit n'est qu'un ensemble de réflexes conditionnés : la prise de rôle suppose au contraire une activité mentale authentiquement anticipatrice.",
+    },
+    exemples: [
+      "Un vendeur qui ajuste son discours en anticipant, avant même qu'il ne parle, les objections probables d'un client précis.",
+      "Un metteur en scène qui répète seul une réplique en essayant d'entendre, par avance, comment le public la recevra.",
+    ],
+    oeuvres: [
+      { y: '1934', t: 'Mind, Self, and Society' },
+    ],
+    associes: ['soi', 'autrui-generalise', 'interaction-symbolique'],
+    opposes: ['habitus'],
+    critiques: [
+      "Le concept, très cognitif, dit peu de la part largement automatique et non réfléchie de la plupart des interactions sociales ordinaires.",
+      "Il suppose une capacité d'anticipation dont on comprend mal les conditions concrètes d'acquisition, en dehors du seul exemple du jeu enfantin.",
+    ],
+    evolution: [
+      { p: '1902', f: "Cooley suggère déjà qu'imaginer le jugement d'autrui façonne la conduite, sans en faire un mécanisme aussi central." },
+      { p: '1934', f: "Mead fait de la prise de rôle le mécanisme génétique central de la formation du soi et de la communication." },
+    ],
+  },
+  'interaction-symbolique': {
+    detaille: [
+      "Pour Mead, la vie sociale ne se réduit pas à des réflexes déclenchés mécaniquement par des stimuli : elle se joue par l'échange de symboles significatifs — au premier rang desquels le langage —, dont le sens est partagé et suscite chez celui qui l'émet la même réponse anticipée que chez celui qui le reçoit.",
+      "Un geste devient un symbole significatif seulement lorsqu'il évoque, chez celui qui le fait comme chez celui qui le perçoit, à peu près la même signification — c'est cette réciprocité du sens, et non le geste lui-même, qui rend possible une véritable communication plutôt qu'un simple échange de signaux.",
+    ],
+    origine: {
+      oeuvre: 'Mind, Self, and Society',
+      annee: '1934',
+      contexte:
+        "Mead développe cette théorie en dialogue critique avec le behaviorisme, pour montrer qu'un geste humain n'est jamais un simple stimulus déclenchant une réponse automatique, mais toujours déjà chargé de sens partagé.",
+    },
+    exemples: [
+      "Un mot de passe familial qui ne veut strictement rien dire pour un étranger, mais déclenche immédiatement le même sens précis chez tous les membres de la famille qui l'emploient.",
+      "Une sirène d'alerte dont le sens — évacuer, se mettre à l'abri — doit avoir été appris collectivement pour produire l'effet voulu, à la différence d'un simple bruit fort qui ferait sursauter sans indiquer que faire.",
+    ],
+    oeuvres: [
+      { y: '1934', t: 'Mind, Self, and Society' },
+    ],
+    associes: ['prise-de-role', 'signification', 'interpretation'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "La théorie dit bien comment un symbole devient partagé, beaucoup moins pourquoi certains groupes imposent plus facilement que d'autres le sens qu'ils donnent à un même symbole.",
+      "Elle reste centrée sur l'échange en face à face, et généralise mal à des formes de communication de masse où émetteur et récepteur ne se rencontrent jamais directement.",
+    ],
+    evolution: [
+      { p: '1913', f: "Mead publie The Social Self, où il esquisse déjà l'idée d'un soi qui se forme dans l'interaction communicative." },
+      { p: '1934', f: "Mind, Self, and Society systématise l'interaction symbolique comme fondement de la vie sociale." },
+      { p: '1937', f: "Blumer nomme « interactionnisme symbolique » le courant qui en découle." },
+    ],
+  },
+
+  /* — Herbert Blumer — */
+  'enquete-naturaliste': {
+    detaille: [
+      "L'enquête naturaliste consiste à examiner directement le monde social empirique, tel qu'il se donne réellement à voir sur le terrain, plutôt que de le faire entrer de force dans des catégories et des variables fixées avant même l'observation.",
+      "Blumer y oppose des concepts sensibilisateurs (sensitizing concepts), qui orientent le regard du chercheur sans jamais prétendre l'enfermer d'avance, à des concepts définitifs (definitive concepts), aux critères fixes, qu'il juge impropres à saisir un monde social toujours en train de se refaire.",
+    ],
+    origine: {
+      oeuvre: 'Symbolic Interactionism: Perspective and Method',
+      annee: '1969',
+      contexte:
+        "Blumer publie ce texte en pleine domination de la sociologie quantitative américaine d'après-guerre, structurée autour de l'analyse par variables popularisée par Paul Lazarsfeld.",
+    },
+    exemples: [
+      "Un ethnographe qui passe plusieurs mois dans un service d'urgences avant même de savoir quelle question précise il cherchera finalement à traiter.",
+      "Un chercheur qui révise sa grille d'entretien après les dix premières rencontres, parce que le terrain a fait apparaître une dimension qu'aucune hypothèse de départ n'avait anticipée.",
+    ],
+    oeuvres: [
+      { y: '1969', t: 'Symbolic Interactionism: Perspective and Method' },
+    ],
+    associes: ['signification', 'interpretation', 'action-collective'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "La méthode, très ouverte, laisse peu de critères explicites pour distinguer une interprétation rigoureuse d'une lecture simplement plausible du même terrain.",
+      "Sa flexibilité revendiquée rend la comparaison entre plusieurs enquêtes naturalistes difficile, chaque chercheur ajustant ses propres catégories au fil de son propre terrain.",
+    ],
+    evolution: [
+      { p: '1937', f: "Blumer nomme l'interactionnisme symbolique dans un article destiné à un manuel de psychologie sociale." },
+      { p: '1969', f: "Symbolic Interactionism: Perspective and Method formalise l'enquête naturaliste comme méthode propre au courant." },
+    ],
+  },
+  'signification': {
+    detaille: [
+      "Premier des trois principes que Blumer pose comme fondement de l'interactionnisme symbolique : les êtres humains agissent envers les choses — objets, personnes, institutions, situations — non selon des propriétés qui leur seraient intrinsèques, mais selon le sens que ces choses ont pour eux.",
+      "Ce principe déplace l'explication sociologique : comprendre une conduite suppose de reconstituer la signification que l'acteur attribue à ce vers quoi elle se dirige, avant même de s'interroger sur les causes objectives qui, de l'extérieur, sembleraient l'expliquer.",
+    ],
+    origine: {
+      oeuvre: 'Symbolic Interactionism: Perspective and Method',
+      annee: '1969',
+      contexte:
+        "Blumer reprend et formalise une intuition déjà présente chez Mead et chez Thomas, pour en faire le premier des trois piliers explicites de sa théorie de l'interaction.",
+    },
+    exemples: [
+      "Un vieux vélo sans valeur marchande réelle, mais que son propriétaire refuse de vendre parce qu'il l'associe à un souvenir précis de son adolescence.",
+      "Un même costume perçu comme un déguisement amusant par un enfant et comme une tenue professionnelle sérieuse par un adulte qui le porte au travail.",
+    ],
+    oeuvres: [
+      { y: '1969', t: 'Symbolic Interactionism: Perspective and Method' },
+    ],
+    associes: ['interaction-symbolique', 'interpretation'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le principe, très général, dit peu de ce qui explique pourquoi certaines significations s'imposent plus facilement que d'autres à un grand nombre de personnes.",
+      "Il risque de sous-estimer le poids de contraintes matérielles bien réelles, qui pèsent sur la conduite indépendamment du sens que l'acteur veut bien leur donner.",
+    ],
+    evolution: [
+      { p: '1918', f: "Thomas et Znaniecki étudient déjà les attitudes subjectives des immigrants polonais face à leur nouvelle situation." },
+      { p: '1969', f: "Blumer en fait le premier principe explicite de l'interactionnisme symbolique." },
+    ],
+  },
+  'interpretation': {
+    detaille: [
+      "Troisième principe de Blumer : le sens des choses n'est jamais définitivement fixé une fois pour toutes. Il est manié, vérifié, confirmé ou révisé par la personne elle-même, au fil d'un processus interprétatif qu'elle mobilise pour faire face à ce qu'elle rencontre.",
+      "Ce processus n'est pas un simple déclencheur automatique de conduite : il suppose un dialogue intérieur, où l'acteur indique des choses à lui-même, évalue plusieurs significations possibles, avant de retenir celle qui orientera finalement son action.",
+    ],
+    origine: {
+      oeuvre: 'Symbolic Interactionism: Perspective and Method',
+      annee: '1969',
+      contexte:
+        "Blumer insiste sur ce troisième principe pour éviter que les deux premiers — signification, interaction — ne soient compris comme une simple application mécanique de significations déjà fixées d'avance.",
+    },
+    exemples: [
+      "Un silence prolongé au téléphone, d'abord interprété comme un signe de désintérêt, puis reconsidéré comme un simple problème de réseau une fois l'appel rétabli.",
+      "Un vote électoral surprenant, réinterprété après coup par les commentateurs à la lumière d'informations qu'ils ignoraient au moment du scrutin.",
+    ],
+    oeuvres: [
+      { y: '1969', t: 'Symbolic Interactionism: Perspective and Method' },
+    ],
+    associes: ['signification', 'enquete-naturaliste'],
+    opposes: ['normes-sociales'],
+    critiques: [
+      "Le principe dit bien qu'une interprétation peut changer, beaucoup moins ce qui déclenche précisément sa révision plutôt que son maintien face à une information nouvelle.",
+      "Il suppose chez l'acteur ordinaire une disponibilité réflexive dont on comprend mal si elle s'exerce réellement à chaque instant de la vie quotidienne, ou seulement dans les situations les plus incertaines.",
+    ],
+    evolution: [
+      { p: '1934', f: "Mead pose déjà la réflexivité — la capacité à se prendre soi-même pour objet — comme condition de toute pensée." },
+      { p: '1969', f: "Blumer en fait le troisième principe explicite de l'interactionnisme symbolique." },
+    ],
+  },
+  'action-collective': {
+    detaille: [
+      "Bien avant de nommer l'interactionnisme symbolique, Blumer étudie le comportement collectif — foules, émeutes, modes, mouvements sociaux, opinion publique — comme un domaine à part entière, où des lignes d'action conjointes émergent d'un processus d'interprétation et d'ajustement mutuel entre participants, plutôt que de l'application d'une norme ou d'une organisation préexistante.",
+      "Il décrit notamment la réaction circulaire, où l'excitation ou l'inquiétude d'un individu, perçue et reprise par un autre, s'amplifie de proche en proche jusqu'à produire un mouvement collectif qu'aucun des participants n'avait, seul, ni prévu ni décidé.",
+    ],
+    origine: {
+      oeuvre: 'Social Psychology, in Man and Society',
+      annee: '1939',
+      contexte:
+        "Blumer écrit dans le sillage de Robert Park, dont il reprend et systématise l'intérêt pour les phénomènes de foule et d'opinion, encore peu théorisés par la sociologie américaine de son époque.",
+    },
+    exemples: [
+      "Une mode vestimentaire qui se répand sans qu'aucune autorité centrale ne l'ait décidée, chacun ajustant son propre choix à ce qu'il perçoit déjà chez les autres.",
+      "Un mouvement de panique dans une salle de spectacle, où l'inquiétude de quelques spectateurs, remarquée par leurs voisins, se propage en quelques secondes à l'ensemble de la salle.",
+    ],
+    oeuvres: [
+      { y: '1939', t: 'Social Psychology, in Man and Society' },
+      { y: '1951', t: 'Collective Behavior' },
+    ],
+    associes: ['enquete-naturaliste', 'interpretation'],
+    opposes: ['lutte-des-classes'],
+    critiques: [
+      "Le concept explique bien l'émergence d'un mouvement collectif, beaucoup moins pourquoi certains groupes disposent, dès le départ, de ressources bien plus importantes que d'autres pour transformer une simple agitation en mouvement organisé et durable.",
+      "Le vocabulaire de la réaction circulaire, très descriptif, peine à prédire à l'avance quels épisodes d'agitation collective se transformeront réellement en mouvement social plutôt que de retomber sans suite.",
+    ],
+    evolution: [
+      { p: '1921', f: "Robert Park pose les premiers jalons de l'étude du comportement collectif à Chicago." },
+      { p: '1939', f: "Blumer systématise l'étude de l'action collective comme domaine sociologique à part entière." },
+      { p: '1951', f: "Collective Behavior distingue plus précisément foules, publics et mouvements sociaux." },
+    ],
+  },
+
+  /* — William Isaac Thomas — */
+  'definition-de-la-situation': {
+    detaille: [
+      "Avant d'agir, tout individu doit d'abord percevoir et interpréter la situation à laquelle il fait face : quels sont les objets en présence, qui sont les autres personnes, que signifient leurs conduites. Cette définition de la situation, subjective par nature, oriente la conduite bien davantage que les faits objectifs pris isolément.",
+      "Thomas insiste : deux personnes placées dans des conditions matérielles identiques peuvent définir leur situation de façon radicalement différente, et donc agir de façon radicalement différente — la définition n'est jamais un simple décalque neutre de la réalité extérieure.",
+    ],
+    origine: {
+      oeuvre: 'The Unadjusted Girl',
+      annee: '1923',
+      contexte:
+        "Thomas étudie les jeunes femmes marginalisées par le système judiciaire américain, pour montrer que leur conduite, souvent jugée simplement déviante, répond en réalité à une définition cohérente de leur propre situation, différente de celle que la société leur impose.",
+    },
+    exemples: [
+      "Deux salariés recevant la même remarque de leur supérieur, l'un la définissant comme un encouragement à progresser, l'autre comme une humiliation méritant de démissionner.",
+      "Un voyageur qui, ignorant une coutume locale, définit un geste d'hospitalité comme une intrusion et réagit avec une méfiance que rien, dans l'intention réelle de son hôte, ne justifiait.",
+    ],
+    oeuvres: [
+      { y: '1923', t: 'The Unadjusted Girl' },
+      { y: '1918', t: 'The Polish Peasant in Europe and America' },
+    ],
+    associes: ['theoreme-de-thomas', 'interaction-en-face-a-face', 'signification'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept dit bien que la définition oriente la conduite, beaucoup moins ce qui détermine cette définition elle-même — pourquoi tel individu ou tel groupe définit une situation d'une manière plutôt que d'une autre.",
+      "Il risque de sous-estimer les cas où la réalité objective résiste à toute définition subjective, quelle qu'elle soit, et s'impose finalement à l'acteur malgré lui.",
+    ],
+    evolution: [
+      { p: '1918', f: "The Polish Peasant in Europe and America étudie déjà comment des immigrants polonais redéfinissent leur situation face à l'Amérique." },
+      { p: '1923', f: "The Unadjusted Girl formule explicitement le concept de définition de la situation." },
+    ],
+  },
+  'theoreme-de-thomas': {
+    detaille: [
+      "Le théorème de Thomas formalise en une seule phrase le principe de la définition de la situation : si les hommes définissent des situations comme réelles, elles sont réelles dans leurs conséquences. Une définition, même fausse à son origine, produit des effets bien concrets une fois qu'elle oriente la conduite de ceux qui y croient.",
+      "Ce principe ne dit pas que la réalité objective n'existe pas : il dit que ce sont les conduites déclenchées par une définition — vraie ou fausse — qui produisent, elles, des conséquences bien réelles, indépendamment de la validité initiale de cette définition.",
+    ],
+    origine: {
+      oeuvre: 'The Child in America',
+      annee: '1928',
+      contexte:
+        "William Isaac Thomas rédige cet ouvrage avec sa femme, la démographe Dorothy Swaine Thomas, pour étudier comment les définitions que les enfants et leur entourage se font d'une situation façonnent durablement leur trajectoire.",
+    },
+    exemples: [
+      "Une école réputée, à tort, plus dangereuse qu'une autre, dont les familles se détournent aussitôt — vidant progressivement l'établissement et y dégradant réellement, à terme, les conditions d'apprentissage.",
+      "Un employé convaincu, par erreur, qu'un licenciement collectif se prépare, qui commence à chercher un autre poste et finit par démissionner avant même qu'aucune décision réelle n'ait été prise.",
+    ],
+    oeuvres: [
+      { y: '1928', t: 'The Child in America' },
+    ],
+    associes: ['definition-de-la-situation', 'prophetie-autorealisatrice'],
+    opposes: ['mode-de-production'],
+    critiques: [
+      "Merton objectera que la formule reste incomplète : une définition fausse ne devient jamais vraie en elle-même, ce sont les conduites qu'elle déclenche, et elles seules, qui produisent des conséquences réelles.",
+      "Le théorème, très cité, est aussi très souvent simplifié à l'excès, au point de laisser croire que croire suffirait à lui seul à transformer n'importe quelle situation, ce que Thomas n'a jamais soutenu.",
+    ],
+    evolution: [
+      { p: '1923', f: "The Unadjusted Girl pose la définition de la situation comme principe général." },
+      { p: '1928', f: "The Child in America formule, avec Dorothy Swaine Thomas, l'énoncé qui deviendra le théorème de Thomas." },
+      { p: '1948', f: "Merton nomme le théorème et l'étend en prophétie autoréalisatrice." },
     ],
   },
 };

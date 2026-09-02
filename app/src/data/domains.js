@@ -89,7 +89,7 @@ export const DOMAINS_ADDED = [
     t: 'Immigration',
     nom: "Sociologie de l'immigration",
     d: "Émigrer et immigrer sont un seul mouvement, que deux sociétés racontent différemment.",
-    a: ['simmel', 'elias', 'bauman'],
+    a: ['simmel', 'elias', 'bauman', 'thomas'],
   },
   {
     id: 'crime',
@@ -192,10 +192,8 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie des interactions',
     famille: 'fondations',
     detail:
-      "Goffman et Simmel partagent une conviction : l'ordre social ne se décide pas seulement en haut, dans les institutions, il se joue aussi en bas, dans chaque échange de regards, chaque salutation, chaque silence gênant. Une file d'attente, un ascenseur, une salle d'attente sont déjà des scènes sociales complètes, avec leurs règles tacites et leurs sanctions immédiates. Étudier les interactions, c'est parier que le détail le plus microscopique révèle une grammaire aussi contraignante que la loi.",
+      "Goffman et Simmel partagent une conviction : l'ordre social ne se décide pas seulement en haut, dans les institutions, il se joue aussi en bas, dans chaque échange de regards, chaque salutation, chaque silence gênant. Une file d'attente, un ascenseur, une salle d'attente sont déjà des scènes sociales complètes, avec leurs règles tacites et leurs sanctions immédiates. Mead pose la matrice théorique la plus profonde : le soi lui-même n'est pas un point de départ mais un produit de ces échanges, formé par la capacité à se voir depuis le regard d'autrui. Blumer en tire le nom et le programme méthodologique — interactionnisme symbolique — qui restera attaché au courant. Étudier les interactions, c'est parier que le détail le plus microscopique révèle une grammaire aussi contraignante que la loi.",
     inspirateurs: [
-      "George Herbert Mead — le soi comme produit du regard d'autrui, non comme point de départ",
-      "Herbert Blumer — l'interactionnisme symbolique, et le nom qui lui reste",
       "Harold Garfinkel — l'ethnométhodologie : les règles se voient mieux quand on les rompt",
     ],
   },
@@ -355,9 +353,9 @@ export const DOMAIN_EXTRA = {
   immigration: {
     famille: 'inegalites',
     detail:
-      "Simmel, avec sa figure de l'étranger, pose l'intuition centrale : migrer, ce n'est pas seulement traverser une frontière, c'est occuper une position sociale particulière, ni tout à fait dedans ni tout à fait dehors. Elias montre comment cette position se stabilise ou se transforme selon les configurations de pouvoir entre groupes établis et nouveaux arrivants. Le domaine touche autant à l'intégration économique et scolaire qu'aux discriminations qui la freinent, et à ce qu'un pays d'arrivée doit, sans toujours le reconnaître, à ceux qui y sont venus.",
+      "Simmel, avec sa figure de l'étranger, pose l'intuition centrale : migrer, ce n'est pas seulement traverser une frontière, c'est occuper une position sociale particulière, ni tout à fait dedans ni tout à fait dehors. Elias montre comment cette position se stabilise ou se transforme selon les configurations de pouvoir entre groupes établis et nouveaux arrivants. Thomas fournit au domaine sa première grande enquête empirique : suivre, à travers les lettres que s'échangent des paysans polonais immigrés et leur famille restée au pays, comment un monde ancien se recompose plutôt que ne se perd purement et simplement. Le domaine touche autant à l'intégration économique et scolaire qu'aux discriminations qui la freinent, et à ce qu'un pays d'arrivée doit, sans toujours le reconnaître, à ceux qui y sont venus.",
     inspirateurs: [
-      "William Thomas et Florian Znaniecki — « Le Paysan polonais », l'enquête fondatrice par les lettres",
+      "Florian Znaniecki — coauteur du Paysan polonais, qui en tire une théorie sociologique plus systématique que Thomas",
       "Abdelmalek Sayad — la double absence : absent de là-bas, jamais tout à fait présent ici",
       "Alejandro Portes — les enclaves ethniques, ressource autant qu'assignation",
     ],

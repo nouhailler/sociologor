@@ -48,7 +48,7 @@ export default function Home() {
           <span style={{ color: 'var(--color-accent)' }}>reliée.</span>
         </p>
         <p className="soc-lede" style={{ maxWidth: '52ch' }}>
-          Trente fiches — auteurs, binôme et école de pensée — leurs concepts et leur filiation. Entrez par un
+          Trente-trois fiches — auteurs, binôme et école de pensée — leurs concepts et leur filiation. Entrez par un
           domaine, ou suivez les fils du graphe : chaque fiche pointe vers les suivantes.
         </p>
 

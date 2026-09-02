@@ -33,7 +33,7 @@ function Thumb({ a }) {
 }
 
 /**
- * Liste des trente fiches — vingt-huit auteurs, le binôme Berger & Luckmann
+ * Liste des trente-trois fiches — trente et un auteurs, le binôme Berger & Luckmann
  * et l'École de Francfort — chacune
  * accessible par sa miniature. Le pendant, côté personnes, des listes
  * thématiques (`/phenomenes`, `/processus`, `/concepts`) : celles-ci entrent

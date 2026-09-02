@@ -153,12 +153,12 @@ export const COURANTS = [
     periode: 'premiere-moitie',
     d: "La ville comme laboratoire : on enquête à pied, carnet en main.",
     detail:
-      "Aucune des quinze fiches n'appartient à la première École de Chicago, mais elle fournit à Goffman comme à Becker leur méthode : l'observation directe, la monographie de quartier, l'attention aux marges.",
-    auteurs: [],
+      "Thomas y pose, dès les années 1920, la méthode qui fera l'école : partir de l'expérience subjective des acteurs — journaux intimes, lettres, entretiens — plutôt que des seules statistiques officielles. Cette enquête de terrain fournira aussi à Goffman comme à Becker, une génération plus tard, leur propre méthode : l'observation directe, la monographie de quartier, l'attention aux marges.",
+    auteurs: ['thomas'],
     vientDe: [],
     inspirateurs: [
       "Robert Park — la ville comme écologie humaine, arpentée quartier par quartier",
-      "William Thomas et Florian Znaniecki — « Le Paysan polonais », l'enquête par les documents personnels",
+      "Florian Znaniecki — coauteur du Paysan polonais, qui en tire une théorie sociologique plus systématique que Thomas",
       "Everett Hughes — le métier saisi par son sale boulot, professeur de Becker et de Goffman",
     ],
     niveau: 'ecole',
@@ -210,12 +210,9 @@ export const COURANTS = [
     d: "L'ordre social se joue en face à face, dans des scènes très codées.",
     detail:
       "Goffman décrit la vie quotidienne comme une mise en scène où chacun tient un rôle, protège sa face et celle des autres. Le microscopique n'y est pas un détail : c'est le lieu où l'ordre se fabrique.",
-    auteurs: ['goffman'],
+    auteurs: ['goffman', 'mead', 'blumer'],
     vientDe: ['sociologie-des-formes', 'sociologie-comprehensive', 'ecole-de-chicago'],
-    inspirateurs: [
-      "George Herbert Mead — le soi comme produit du regard d'autrui",
-      "Herbert Blumer — le nom du courant, et son programme méthodologique",
-    ],
+    inspirateurs: [],
     niveau: 'paradigme',
   },
   {
