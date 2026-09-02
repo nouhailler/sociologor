@@ -46,7 +46,7 @@ export default function Concept() {
     <Shell
       title={c.t}
       subtitle={`${c.year} · ${c.auteur.name}`}
-      back
+      canBack
       actions={
         <button
           type="button"

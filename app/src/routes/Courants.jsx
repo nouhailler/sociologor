@@ -31,7 +31,7 @@ export default function Courants() {
   }, [focus]);
 
   return (
-    <Shell title="Carte des courants" subtitle={`${COURANT_COUNT} courants, du positivisme au pragmatisme`}>
+    <Shell title="Carte des courants" subtitle={`${COURANT_COUNT} courants, du positivisme au pragmatisme`} canBack>
       <div className="soc-enter" style={{ maxWidth: 760 }}>
         <h2 className="soc-h2">Carte des courants</h2>
         <p className="soc-lede" style={{ marginBottom: 6 }}>

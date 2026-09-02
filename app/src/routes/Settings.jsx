@@ -14,7 +14,7 @@ export default function Settings() {
   const [confirming, setConfirming] = useState(false);
 
   return (
-    <Shell title="Paramètres" subtitle="Affichage, données, à propos">
+    <Shell title="Paramètres" subtitle="Affichage, données, à propos" canBack>
       <div style={{ maxWidth: 640 }}>
         <h2 className="soc-h2" style={{ marginBottom: 20 }}>
           Paramètres
