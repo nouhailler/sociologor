@@ -11409,4 +11409,530 @@ export const CONCEPTS = {
       { p: '1948', f: "Merton nomme le théorème et l'étend en prophétie autoréalisatrice." },
     ],
   },
+
+  /* — Alain Touraine — */
+  'sociologie-actionnaliste': {
+    detaille: [
+      "La sociologie actionnaliste refuse de faire dépendre l'explication du social des seules structures — économiques, institutionnelles ou culturelles — qui s'imposeraient aux individus de l'extérieur. Pour Touraine, une société est avant tout ce que ses acteurs en font : elle se produit et se transforme par leur action, non par le seul jeu de déterminismes qui la traverseraient à leur insu.",
+      "Cette approche ne nie pas l'existence de contraintes structurelles, mais refuse d'en faire le dernier mot de l'analyse : le sociologue doit chercher, derrière les régularités observables, les conflits et les orientations culturelles à travers lesquels des acteurs se disputent le sens même de la vie collective.",
+    ],
+    origine: {
+      oeuvre: "Sociologie de l'action",
+      annee: '1965',
+      contexte:
+        "Touraine publie ce texte fondateur en réaction à la fois au marxisme le plus mécaniste, qui réduit l'action à un simple reflet des rapports de production, et au fonctionnalisme parsonien, qui la dissout dans les impératifs de maintien du système.",
+    },
+    exemples: [
+      "Une grève étudiée non comme le simple symptôme d'un rapport de force économique déjà donné, mais comme le moment où des salariés élaborent, en la menant, une définition nouvelle de qui ils sont et de ce qu'ils veulent.",
+      "Un même règlement d'entreprise, contourné différemment selon les ateliers, révélant que les salariés n'exécutent jamais une règle sans se l'approprier et parfois la transformer.",
+    ],
+    oeuvres: [
+      { y: '1965', t: "Sociologie de l'action" },
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['acteur-social', 'intervention-sociologique', 'historicite'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Ses détracteurs, notamment proches de Bourdieu, lui reprochent de surestimer la liberté réelle des acteurs, en sous-estimant le poids des dispositions et des positions sociales héritées.",
+      "L'insistance sur le conflit et l'action collective dit peu des situations, très fréquentes, où rien ne se passe : ni conflit ouvert, ni mobilisation, ni transformation visible.",
+    ],
+    evolution: [
+      { p: '1965', f: "Sociologie de l'action pose les bases théoriques et méthodologiques du programme actionnaliste." },
+      { p: '1973', f: "Production de la société systématise l'appareil conceptuel de l'historicité et des systèmes d'action historiques." },
+    ],
+  },
+  'intervention-sociologique': {
+    detaille: [
+      "L'intervention sociologique est une méthode où le chercheur ne se contente pas d'observer de l'extérieur un mouvement social : il réunit ses membres en groupe, les accompagne dans l'analyse de leur propre action, et les confronte à des interlocuteurs — adversaires, alliés, experts — pour faire émerger le sens le plus élevé, le plus général, de ce qu'ils font.",
+      "Cette méthode suppose que les acteurs eux-mêmes ne connaissent jamais d'emblée la signification complète de leur action : c'est le travail collectif de la recherche, mené avec eux et non simplement sur eux, qui permet de la faire apparaître.",
+    ],
+    origine: {
+      oeuvre: 'La Voix et le regard',
+      annee: '1978',
+      contexte:
+        "Touraine développe cette méthode à l'occasion d'enquêtes sur des mouvements sociaux contemporains — étudiant, régionaliste, antinucléaire — pour lesquels l'observation distante lui semble incapable de saisir ce qui s'y joue réellement.",
+    },
+    exemples: [
+      "Un groupe de militants associatifs, réunis plusieurs mois durant par une équipe de recherche, amenés à préciser progressivement si leur combat vise une réforme ponctuelle ou une transformation plus large de la société.",
+      "Une rencontre organisée entre des représentants d'un mouvement et un responsable de l'administration qu'ils contestent, où le désaccord oblige chacun à formuler plus précisément ce qu'il défend.",
+    ],
+    oeuvres: [
+      { y: '1978', t: 'La Voix et le regard' },
+    ],
+    associes: ['sociologie-actionnaliste', 'mouvement-social'],
+    opposes: ['fait-social'],
+    critiques: [
+      "La méthode implique le chercheur si étroitement dans le groupe étudié qu'elle rend difficile toute prétention à une observation neutre, au sens le plus classique du terme.",
+      "Son coût en temps et en engagement personnel du chercheur la rend difficile à généraliser à grande échelle, ou à reproduire de façon strictement comparable d'une enquête à l'autre.",
+    ],
+    evolution: [
+      { p: '1978', f: "La Voix et le regard formule la méthode à partir de l'étude du mouvement antinucléaire." },
+      { p: '1980–1982', f: "La méthode est appliquée à la prophétie antinucléaire, au mouvement régionaliste occitan, puis à Solidarność en Pologne." },
+    ],
+  },
+  'acteur-social': {
+    detaille: [
+      "L'acteur social est, pour Touraine, un individu ou un groupe capable de se constituer en sujet de son action plutôt que de se réduire à l'exécution d'un rôle ou à la simple réaction à des contraintes extérieures — capable, autrement dit, de peser sur son propre environnement social plutôt que de le seulement subir.",
+      "Cette capacité n'est jamais garantie d'avance : elle se construit, se perd et se reconquiert, en particulier dans les conflits où un groupe doit élaborer une définition de lui-même, de son adversaire et de l'enjeu qui les oppose.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine y développe le vocabulaire complet de sa sociologie de l'action, où l'acteur devient l'unité d'analyse centrale, à la place du système ou de la seule structure de classe.",
+    },
+    exemples: [
+      "Un collectif de riverains qui, en s'organisant contre un projet d'aménagement, découvre et formule des intérêts communs qu'aucun de ses membres n'avait clairement identifiés avant de s'y engager.",
+      "Un syndicat qui refuse de négocier seulement les termes d'un accord salarial pour exiger d'être associé aux décisions stratégiques de l'entreprise.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['sujet', 'historicite', 'mouvement-social'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept reste flou sur le seuil à partir duquel un simple groupe d'intérêt devient réellement un acteur social au sens fort du terme.",
+      "Boudon objecterait qu'il n'est jamais nécessaire de postuler une telle capacité collective irréductible : les bonnes raisons des individus suffisent à expliquer l'action, sans recourir à un acteur qui les dépasserait.",
+    ],
+    evolution: [
+      { p: '1965', f: "Sociologie de l'action esquisse déjà l'acteur comme unité centrale de l'analyse." },
+      { p: '1973', f: "Production de la société en fait le concept organisateur de toute la théorie." },
+    ],
+  },
+  'sujet': {
+    detaille: [
+      "Le sujet est, pour Touraine, l'instance par laquelle un individu résiste à sa réduction à un rôle, une fonction ou une catégorie imposée, et travaille à se construire lui-même comme auteur de sa propre existence. Loin d'être donné d'avance, il se conquiert contre les logiques de domination et de massification qui menacent de l'effacer.",
+      "Ce sujet n'est pas seulement individuel : il peut aussi se former collectivement, quand un groupe s'organise pour défendre, ensemble, la même exigence de reconnaissance et de liberté — un mouvement social devient alors la forme collective par laquelle des sujets personnels se rassemblent sans se dissoudre les uns dans les autres.",
+    ],
+    origine: {
+      oeuvre: 'Critique de la modernité',
+      annee: '1992',
+      contexte:
+        "Touraine cherche une issue au constat, largement partagé dans les années 1980, d'un affaiblissement des grands acteurs collectifs — la classe ouvrière en tête — sans pour autant renoncer à l'idée d'une capacité de résistance et de transformation.",
+    },
+    exemples: [
+      "Un salarié qui refuse de se laisser réduire à sa seule fiche de poste, et revendique d'être reconnu pour ce qu'il apporte au-delà des tâches strictement prescrites.",
+      "Un groupe de patients atteints d'une même maladie chronique, qui s'organise pour peser sur les choix thérapeutiques qui les concernent, plutôt que de les subir passivement.",
+    ],
+    oeuvres: [
+      { y: '1992', t: 'Critique de la modernité' },
+      { y: '1997', t: 'Pourrons-nous vivre ensemble ?' },
+    ],
+    associes: ['acteur-social', 'critique-de-la-modernite', 'democratie'],
+    opposes: ['habitus'],
+    critiques: [
+      "Bourdieu objecterait qu'invoquer un sujet capable de se construire librement contre les déterminismes sociaux revient à sous-estimer combien ces déterminismes façonnent jusqu'au désir même de leur résister.",
+      "Le concept, très général, peine parfois à distinguer une authentique affirmation de soi d'un simple repli individualiste sur des préoccupations privées.",
+    ],
+    evolution: [
+      { p: '1984', f: "Le Retour de l'acteur annonce le déplacement de l'analyse vers la capacité d'action des sujets." },
+      { p: '1992', f: "Critique de la modernité fait du sujet le pôle central, face au système, de toute l'expérience moderne." },
+    ],
+  },
+  'historicite': {
+    detaille: [
+      "L'historicité désigne la capacité d'une société à agir sur elle-même : à se donner des représentations de ce qu'elle peut faire de son propre fonctionnement, et à transformer, à travers ses conflits, les orientations culturelles qui la dirigent. Une société à forte historicité est une société qui se sait capable de se produire elle-même, plutôt que de simplement reproduire des traditions reçues.",
+      "Ce concept déplace la question centrale de la sociologie : il ne s'agit plus seulement de savoir comment une société se maintient, mais comment elle se donne, à travers le travail et la connaissance qu'elle a d'elle-même, les moyens de son propre changement.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine élabore ce concept pour donner un nom précis à ce que le marxisme désignait vaguement comme le mouvement de l'histoire, sans jamais l'attribuer clairement à l'action de groupes sociaux identifiables.",
+    },
+    exemples: [
+      "Une société industrielle qui invente, avec la planification économique, des outils inédits pour orienter délibérément sa propre croissance plutôt que de la subir.",
+      "Un pays qui, à travers un débat public sur la transition écologique, se donne collectivement les moyens de discuter et d'orienter son propre modèle de développement.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['systeme-d-action-historique', 'champ-d-historicite', 'rapports-de-classe'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept, très abstrait, reste difficile à opérationnaliser empiriquement : rien ne dit précisément comment mesurer le degré d'historicité d'une société donnée.",
+      "Certains y voient une manière optimiste de surestimer la capacité réelle des sociétés contemporaines à orienter délibérément leur propre devenir, plutôt qu'à le subir.",
+    ],
+    evolution: [
+      { p: '1965', f: "Sociologie de l'action esquisse l'idée d'une société capable d'agir sur elle-même." },
+      { p: '1973', f: "Production de la société formalise l'historicité comme concept central de toute la théorie." },
+    ],
+  },
+  'systeme-d-action-historique': {
+    detaille: [
+      "Le système d'action historique est l'ensemble concret des orientations culturelles, des rapports sociaux et des conflits par lesquels une société donnée reproduit et transforme son historicité. Il ne s'agit pas d'un système au sens fonctionnaliste — un ensemble stable de rôles complémentaires — mais d'un espace toujours traversé par des conflits sur son orientation même.",
+      "Chaque type de société — industrielle, post-industrielle — se caractérise par un système d'action historique distinct, dont le contenu précis se lit dans la nature du conflit central qui l'organise et des acteurs qui s'y affrontent.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine cherche un concept capable de décrire, pour chaque grand type de société, l'agencement précis des forces qui en orientent le devenir, sans réduire cet agencement au seul mode de production économique.",
+    },
+    exemples: [
+      "Une même revendication salariale qui, selon le système d'action historique dans lequel elle s'inscrit — capitalisme industriel classique ou économie de la connaissance — ne vise pas du tout le même adversaire ni le même enjeu final.",
+      "Un système éducatif dont l'organisation, les programmes et les querelles qu'il traverse renvoient toujours, en dernière analyse, au type de société qu'il contribue à produire.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['historicite', 'champ-d-historicite'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le concept, très englobant, dit mal ce qui distingue précisément un système d'action historique d'un simple synonyme plus abstrait de « société ».",
+      "Son vocabulaire spécialisé, hérité d'une théorie très systématique, reste d'un abord difficile en dehors du cercle des lecteurs déjà familiers de l'œuvre de Touraine.",
+    ],
+    evolution: [
+      { p: '1973', f: "Production de la société introduit le concept pour décrire l'agencement propre à chaque type de société." },
+    ],
+  },
+  'champ-d-historicite': {
+    detaille: [
+      "Le champ d'historicité est l'espace symbolique où se définissent les enjeux centraux d'une société : son modèle culturel — l'image qu'elle se fait de sa propre créativité —, le mode d'investissement qui oriente ses ressources, et le type d'organisation sociale qui en résulte.",
+      "C'est dans ce champ que se joue, pour Touraine, la définition même de ce qui compte comme progrès, comme richesse ou comme savoir légitime pour une société donnée — une définition toujours disputée, jamais fixée une fois pour toutes.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine complète son système conceptuel en précisant l'espace symbolique précis où se noue le conflit central de chaque système d'action historique, plutôt que de le laisser à l'état de notion vague.",
+    },
+    exemples: [
+      "Un débat public sur la place de l'intelligence artificielle, où se dispute moins une question technique qu'une définition concurrente de ce qu'une société entend, désormais, par créativité et par travail légitime.",
+      "Une controverse sur l'évaluation des chercheurs, qui porte en réalité sur la définition même de ce qui compte comme savoir digne d'être produit et financé.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['historicite', 'systeme-d-action-historique', 'rapports-de-classe'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Le concept, très abstrait, se laisse difficilement traduire en indicateurs observables sur un terrain d'enquête concret.",
+      "D'inspiration marxiste plus classique, certains critiques y voient une manière de dissoudre dans le seul symbolique des rapports de domination qui restent, eux, très matériels.",
+    ],
+    evolution: [
+      { p: '1973', f: "Production de la société introduit le champ d'historicité comme espace symbolique des enjeux centraux d'une société." },
+    ],
+  },
+  'rapports-de-classe': {
+    detaille: [
+      "Les rapports de classe désignent, chez Touraine, des rapports conflictuels qui ne portent plus directement sur la propriété des moyens de production, comme chez Marx, mais sur le contrôle de l'historicité elle-même — la capacité à orienter le devenir de la société tout entière.",
+      "Cette redéfinition permet d'étendre le vocabulaire de classe au-delà de la seule société industrielle : dans une société post-industrielle, les rapports de classe portent sur le contrôle de l'information, de la connaissance et des grands choix culturels, non plus seulement sur celui des usines.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine retravaille le vocabulaire marxiste de classe pour l'appliquer à des conflits sociaux — étudiants, mouvements urbains, régionalismes — qui ne se laissent plus décrire par la seule opposition entre capital et travail.",
+    },
+    exemples: [
+      "Un conflit entre plateformes numériques et travailleurs indépendants, qui porte moins sur le partage d'un profit déjà défini que sur qui décide des règles mêmes de l'algorithme qui organise le travail.",
+      "Une contestation autour de l'usage des données personnelles, où l'enjeu réel est de savoir qui contrôle les orientations d'une société de l'information tout entière.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['historicite', 'conscience-du-conflit-central', 'mouvement-social'],
+    opposes: ['rapports-de-production'],
+    critiques: [
+      "Élargir le vocabulaire de classe à des enjeux aussi divers que la culture ou l'information risque de lui faire perdre la précision analytique qu'il avait chez Marx, centré sur la seule propriété des moyens de production.",
+      "Le concept peine à dire pourquoi certains groupes, en position de contrôler l'historicité, parviennent à transformer cette position en pouvoir durable, quand d'autres n'y parviennent pas.",
+    ],
+    evolution: [
+      { p: '1848', f: "Marx fonde les rapports de classe sur la propriété des moyens de production." },
+      { p: '1973', f: "Touraine les redéfinit autour du contrôle de l'historicité, au-delà de la seule société industrielle." },
+    ],
+  },
+  'mouvement-social': {
+    detaille: [
+      "Un mouvement social est, pour Touraine, une action collective organisée qui combine trois principes indissociables : un principe d'identité, qui définit qui est l'acteur ; un principe d'opposition, qui désigne un adversaire précis ; et un principe de totalité, qui porte l'enjeu du conflit au niveau du contrôle de l'historicité ou du modèle culturel dans son ensemble.",
+      "Un mouvement qui ne remplirait que les deux premiers principes — une identité affirmée contre un adversaire désigné — sans porter l'enjeu au niveau de la société tout entière resterait, pour Touraine, un simple conflit d'intérêts plutôt qu'un mouvement social au sens fort.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine cherche un critère précis pour distinguer les mouvements sociaux véritables des simples groupes de pression ou des révoltes ponctuelles, dans une période marquée par la multiplication des mobilisations collectives.",
+    },
+    exemples: [
+      "Un syndicat qui revendique non seulement de meilleurs salaires face à la direction, mais une autre manière d'organiser la production tout entière, jugée plus juste.",
+      "Un collectif féministe qui ne se contente pas de dénoncer un employeur précis, mais met en cause l'ensemble des rapports entre les sexes dans la société.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['acteur-social', 'conscience-du-conflit-central', 'nouveaux-mouvements-sociaux'],
+    opposes: ['action-collective'],
+    critiques: [
+      "Le critère des trois principes reste d'application délicate : peu de mobilisations réelles les remplissent tous les trois aussi nettement que le modèle théorique le suppose.",
+      "En réservant le nom de mouvement social aux seules actions qui portent sur le contrôle de l'historicité tout entière, la définition risque d'écarter comme secondaires des mobilisations bien réelles, mais aux ambitions plus limitées.",
+    ],
+    evolution: [
+      { p: '1973', f: "Production de la société formule les trois principes d'identité, d'opposition et de totalité." },
+      { p: '1978', f: "La Voix et le regard applique le modèle à l'étude empirique de mouvements sociaux contemporains." },
+    ],
+  },
+  'conscience-du-conflit-central': {
+    detaille: [
+      "La conscience du conflit central est, pour un acteur collectif, la conscience de participer à l'affrontement qui porte sur le contrôle de l'historicité d'une société — et non plus seulement, comme chez Marx, sur la propriété des moyens de production.",
+      "Touraine reprend ainsi le geste marxiste qui distinguait une position objective et sa prise de conscience subjective, mais il en déplace l'objet : ce qui doit devenir conscient, ce n'est plus une position dans les rapports de production, mais une participation à l'enjeu le plus général qui organise une société donnée.",
+    ],
+    origine: {
+      oeuvre: 'Production de la société',
+      annee: '1973',
+      contexte:
+        "Touraine retravaille la distinction marxiste entre classe en soi et classe pour soi, pour l'étendre à des conflits sociaux — urbains, étudiants, culturels — que le seul vocabulaire de la conscience de classe économique ne permettait plus de penser.",
+    },
+    exemples: [
+      "Un mouvement de chercheurs qui prend conscience que sa lutte contre une réforme de l'évaluation scientifique engage, plus largement, la définition de ce qu'une société reconnaît comme savoir légitime.",
+      "Des habitants d'un quartier qui comprennent que leur mobilisation contre un projet urbain porte, au-delà de leur seul cas, sur qui a le droit de décider de l'avenir de la ville.",
+    ],
+    oeuvres: [
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['rapports-de-classe', 'mouvement-social'],
+    opposes: ['conscience-de-classe'],
+    critiques: [
+      "Élargir la conscience de classe à n'importe quel enjeu sociétal risque de lui faire perdre la précision qu'elle avait chez Marx, où elle restait ancrée dans une position économique observable.",
+      "Rien ne garantit qu'un acteur qui se dit conscient du conflit central en propose une lecture juste, plutôt qu'une lecture qui sert d'abord ses propres intérêts immédiats.",
+    ],
+    evolution: [
+      { p: '1848', f: "Marx pose la distinction entre classe en soi et classe pour soi, centrée sur la position économique." },
+      { p: '1973', f: "Touraine généralise cette conscience au contrôle de l'historicité, au-delà du seul rapport de production." },
+    ],
+  },
+  'nouveaux-mouvements-sociaux': {
+    detaille: [
+      "Les nouveaux mouvements sociaux désignent, chez Touraine, les mobilisations apparues après le déclin du mouvement ouvrier classique — féministes, écologistes, régionalistes, antinucléaires — qui portent des enjeux culturels et identitaires plutôt que strictement économiques.",
+      "Ces mouvements ne visent plus d'abord une meilleure répartition des richesses produites par l'industrie, mais la définition même des orientations culturelles d'une société — son rapport à la nature, au corps, à l'identité collective — typique d'une société où le conflit central s'est déplacé de la production matérielle vers l'information et la culture.",
+    ],
+    origine: {
+      oeuvre: 'La Voix et le regard',
+      annee: '1978',
+      contexte:
+        "Touraine observe, à partir des mobilisations des années 1970, un déplacement des conflits sociaux hors du seul terrain industriel, qu'il documente notamment par l'étude du mouvement antinucléaire français.",
+    },
+    exemples: [
+      "Un mouvement écologiste qui met en cause, au-delà d'une seule usine polluante, le modèle entier de développement fondé sur la croissance matérielle indéfinie.",
+      "Un mouvement régionaliste qui revendique, au-delà d'une autonomie administrative, la reconnaissance d'une identité culturelle propre au sein de l'État national.",
+    ],
+    oeuvres: [
+      { y: '1978', t: 'La Voix et le regard' },
+      { y: '1980', t: 'La Prophétie anti-nucléaire' },
+    ],
+    associes: ['mouvement-social', 'societe-post-industrielle'],
+    opposes: ['lutte-des-classes'],
+    critiques: [
+      "La notion de « nouveaux » mouvements sociaux vieillit mal : cinquante ans après leur apparition, ils ne sont plus vraiment nouveaux, sans que le terme ait été remplacé par un consensus clair.",
+      "L'opposition entre enjeux économiques et enjeux culturels reste souvent artificielle : les mouvements écologistes ou féministes portent aussi, très directement, des revendications matérielles et redistributives.",
+    ],
+    evolution: [
+      { p: '1968', f: "Mai 68 marque, pour beaucoup d'observateurs, l'émergence de conflits sociaux qui débordent le seul cadre ouvrier." },
+      { p: '1978–1982', f: "Touraine documente empiriquement les mouvements antinucléaire, régionaliste et polonais comme nouveaux mouvements sociaux." },
+    ],
+  },
+  'societe-industrielle': {
+    detaille: [
+      "La société industrielle est, dans la périodisation de Touraine, le type de société dont le conflit central oppose le capital et le travail autour du contrôle de la production matérielle — qui décide de l'organisation du travail, du rythme des machines, de la répartition des gains de productivité.",
+      "Ce type de société connaît son propre système d'action historique, ses acteurs propres — patronat industriel, mouvement ouvrier organisé — et son propre modèle culturel, centré sur le progrès technique et la croissance de la production comme horizons partagés, même contestés.",
+    ],
+    origine: {
+      oeuvre: 'La Société post-industrielle',
+      annee: '1969',
+      contexte:
+        "Touraine définit précisément la société industrielle pour mieux faire ressortir, par contraste, les traits du nouveau type de société qu'il voit déjà émerger dans les économies les plus avancées.",
+    },
+    exemples: [
+      "Un conflit dans une usine automobile portant sur la cadence des chaînes de montage, typique d'un affrontement centré sur le contrôle direct du processus de production matérielle.",
+      "Une négociation salariale nationale entre syndicats et organisations patronales, qui suppose deux acteurs collectifs clairement identifiés autour d'un même enjeu productif.",
+    ],
+    oeuvres: [
+      { y: '1969', t: 'La Société post-industrielle' },
+      { y: '1973', t: 'Production de la société' },
+    ],
+    associes: ['societe-post-industrielle', 'rapports-de-classe'],
+    opposes: ['mode-de-production'],
+    critiques: [
+      "Le modèle, centré sur le seul conflit capital-travail, dit peu des sociétés industrielles où d'autres lignes de conflit — ethniques, religieuses, régionales — ont compté au moins autant.",
+      "La périodisation en grands types successifs de société risque de figer en étapes nettement séparées des processus qui, dans les faits, se chevauchent et coexistent longtemps.",
+    ],
+    evolution: [
+      { p: '1848', f: "Marx décrit déjà l'affrontement entre capital et travail comme moteur de la société industrielle naissante." },
+      { p: '1969', f: "Touraine formalise la société industrielle comme un type historique parmi d'autres, appelé à être dépassé." },
+    ],
+  },
+  'societe-post-industrielle': {
+    detaille: [
+      "La société post-industrielle — ou société programmée — est, pour Touraine, le type de société où l'enjeu central n'est plus la production matérielle mais la production d'information, de connaissance et de subjectivité elle-même : le pouvoir n'y porte plus seulement sur les machines, mais sur la gestion des besoins, des conduites et des représentations.",
+      "Touraine préfère à terme le nom de société programmée, plus neutre que « post-industrielle » — qui ne fait que définir le type par ce qu'il n'est plus — pour désigner une société où la programmation de la consommation, de l'information et même de la santé devient l'enjeu central du pouvoir.",
+    ],
+    origine: {
+      oeuvre: 'La Société post-industrielle',
+      annee: '1969',
+      contexte:
+        "Touraine publie ce texte presque simultanément aux analyses américaines de Daniel Bell sur la société post-industrielle, mais en fait un usage bien plus centré sur les conflits sociaux qu'elle rend possibles que sur ses seules transformations techniques.",
+    },
+    exemples: [
+      "Une plateforme numérique dont la ressource principale n'est ni une usine ni une matière première, mais les données de comportement de ses utilisateurs, activement collectées et orientées.",
+      "Une campagne de santé publique qui vise moins à produire un bien matériel qu'à orienter, à grande échelle, les conduites alimentaires ou sportives d'une population entière.",
+    ],
+    oeuvres: [
+      { y: '1969', t: 'La Société post-industrielle' },
+    ],
+    associes: ['societe-industrielle', 'nouveaux-mouvements-sociaux', 'historicite'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Le concept, formulé dès 1969, a été abondamment repris et parfois vidé de sa précision d'origine, au point de désigner presque n'importe quelle économie tertiarisée.",
+      "L'accent mis sur l'information et la connaissance dit peu des inégalités matérielles bien réelles qui subsistent, et parfois s'aggravent, dans les sociétés qu'il décrit.",
+    ],
+    evolution: [
+      { p: '1969', f: "La Société post-industrielle formule le concept, en dialogue avec les analyses contemporaines de Daniel Bell." },
+      { p: '1973', f: "Production de la société lui préfère le terme de société programmée, jugé plus précis." },
+    ],
+  },
+  'modernite': {
+    detaille: [
+      "La modernité est, pour Touraine, le processus par lequel une société cesse de fonder son ordre sur une tradition reçue pour se penser et se produire elle-même — un processus qui sépare de plus en plus nettement deux pôles : le système, où s'exerce la rationalisation instrumentale, et le sujet, où s'affirme la liberté de l'individu.",
+      "Cette séparation croissante entre système et sujet est, pour Touraine, ce qui distingue la modernité de toute autre forme d'organisation sociale : une société traditionnelle tient système et sujet unis dans un même ordre sacré, quand la modernité les sépare et les met en tension permanente.",
+    ],
+    origine: {
+      oeuvre: 'Critique de la modernité',
+      annee: '1992',
+      contexte:
+        "Touraine écrit après des décennies de débats sur la fin ou la crise de la modernité, pour proposer une définition qui ne la réduise ni à son seul versant rationalisateur ni à son seul versant émancipateur.",
+    },
+    exemples: [
+      "Une réforme administrative qui gagne en efficacité rationnelle — moins de délais, plus de traçabilité — tout en générant, chez ceux qui la vivent, un sentiment croissant de déni de leur singularité.",
+      "Un mariage choisi librement par les deux époux, plutôt qu'arrangé par les familles, qui illustre l'affirmation croissante du sujet individuel dans une sphère autrefois entièrement réglée par la tradition.",
+    ],
+    oeuvres: [
+      { y: '1992', t: 'Critique de la modernité' },
+    ],
+    associes: ['critique-de-la-modernite', 'sujet'],
+    opposes: ['rationalisation'],
+    critiques: [
+      "Réduire la modernité à la seule tension entre système et sujet risque de sous-estimer la diversité des trajectoires historiques réellement empruntées par les sociétés dites modernes.",
+      "Le concept, très général, peine à dire à partir de quel seuil précis une société peut être dite pleinement moderne plutôt qu'encore partiellement traditionnelle.",
+    ],
+    evolution: [
+      { p: '1904', f: "Weber décrit déjà la rationalisation comme processus central des sociétés occidentales modernes." },
+      { p: '1992', f: "Touraine y ajoute le pôle du sujet, séparé et tendu contre celui du système." },
+    ],
+  },
+  'critique-de-la-modernite': {
+    detaille: [
+      "La critique de la modernité consiste, pour Touraine, à refuser deux attitudes également insuffisantes : célébrer sans réserve la rationalisation comme seul horizon du progrès, ou n'y voir qu'une pure logique de domination à dénoncer en bloc. Il s'agit plutôt d'analyser la tension entre rationalisation instrumentale et affirmation du sujet comme le cœur même de l'expérience moderne.",
+      "Cette critique reproche aussi bien aux tenants d'une modernisation triomphante qu'aux penseurs de la seule domination — dont il juge la posture parfois trop uniformément pessimiste — d'avoir perdu de vue la possibilité d'un sujet qui résiste, des deux côtés, à sa réduction complète.",
+    ],
+    origine: {
+      oeuvre: 'Critique de la modernité',
+      annee: '1992',
+      contexte:
+        "Touraine écrit dans le sillage des débats postmodernes des années 1980, qu'il juge trop enclins à annoncer purement et simplement la fin de la modernité plutôt qu'à en repenser les tensions internes.",
+    },
+    exemples: [
+      "Un débat sur l'intelligence artificielle qui oppose un discours purement technophile, centré sur l'efficacité, à un discours purement technophobe, centré sur la seule domination — sans que ni l'un ni l'autre ne fasse place à la question de ce que les individus concernés peuvent encore décider.",
+      "Une réforme hospitalière qui gagne en efficacité gestionnaire tout en suscitant, chez le personnel soignant, une résistance qui porte précisément sur la place laissée à leur jugement professionnel.",
+    ],
+    oeuvres: [
+      { y: '1992', t: 'Critique de la modernité' },
+    ],
+    associes: ['modernite', 'sujet'],
+    opposes: ['theorie-critique-et-traditionnelle'],
+    critiques: [
+      "Certains lecteurs proches de l'École de Francfort objectent que Touraine sous-estime la profondeur de la domination que la rationalisation instrumentale exerce déjà sur la formation même des désirs du sujet.",
+      "La solution proposée — tenir ensemble système et sujet plutôt que choisir entre eux — reste d'un maniement difficile pour trancher des cas concrets où les deux logiques entrent frontalement en conflit.",
+    ],
+    evolution: [
+      { p: '1944', f: "Horkheimer et Adorno dénoncent la raison instrumentale comme logique de domination généralisée." },
+      { p: '1992', f: "Touraine leur oppose une critique qui maintient la possibilité d'un sujet résistant, des deux côtés de la modernité." },
+    ],
+  },
+  'democratie': {
+    detaille: [
+      "La démocratie est, pour Touraine, un régime qui ne se réduit pas à la seule représentation politique — élections, partis, parlements — mais qui protège et favorise la capacité des individus à se constituer en sujets, c'est-à-dire à résister à toute réduction totale par un pouvoir, fût-il issu du vote de la majorité.",
+      "Une démocratie authentique suppose ainsi trois conditions tenues ensemble : le respect des droits fondamentaux qui protègent le sujet, la représentation qui traduit la diversité des intérêts en décisions collectives, et la citoyenneté qui permet à chacun de participer activement à la vie publique.",
+    ],
+    origine: {
+      oeuvre: "Qu'est-ce que la démocratie ?",
+      annee: '1994',
+      contexte:
+        "Touraine écrit après la chute du bloc communiste et l'espoir, vite déçu dans certains pays, d'une démocratisation univoque, pour préciser ce qu'une démocratie doit protéger au-delà de la seule tenue d'élections libres.",
+    },
+    exemples: [
+      "Un régime qui organise des élections régulières et disputées, mais où une minorité religieuse ou ethnique reste, dans les faits, privée de toute reconnaissance comme sujet à part entière.",
+      "Une charte d'entreprise qui garantit formellement une représentation des salariés, sans pour autant leur laisser aucune prise réelle sur les décisions stratégiques qui les concernent.",
+    ],
+    oeuvres: [
+      { y: '1994', t: "Qu'est-ce que la démocratie ?" },
+    ],
+    associes: ['sujet', 'acteur-social'],
+    opposes: ['domination-legale-rationnelle'],
+    critiques: [
+      "Le critère du sujet, très exigeant, risque de disqualifier comme insuffisamment démocratiques des régimes que la plupart des observateurs continuent pourtant de considérer comme tels.",
+      "Le concept dit peu des conditions économiques et sociales concrètes — inégalités, pauvreté — qui peuvent vider de leur portée réelle des droits pourtant formellement garantis.",
+    ],
+    evolution: [
+      { p: '1920', f: "Weber définit la démocratie légale-rationnelle par la procédure et la représentation, sans référence au sujet." },
+      { p: '1994', f: "Touraine y ajoute la protection du sujet comme condition propre, irréductible à la seule procédure." },
+    ],
+  },
+  'mouvements-societaux': {
+    detaille: [
+      "Les mouvements sociétaux désignent des actions collectives qui visent, au-delà d'un enjeu sectoriel précis, à transformer les orientations culturelles globales d'une société tout entière — sa manière de définir la nature, la connaissance légitime, ou les rapports entre les sexes.",
+      "Touraine les distingue des mouvements sociaux plus classiques, centrés sur un conflit défini entre deux acteurs identifiables, par l'ampleur de leur ambition : un mouvement sociétal ne demande pas seulement une meilleure part dans l'ordre existant, il conteste l'ordre culturel lui-même.",
+    ],
+    origine: {
+      oeuvre: "Le Retour de l'acteur",
+      annee: '1984',
+      contexte:
+        "Touraine observe, au tournant des années 1980, des mobilisations dont l'ambition dépasse largement le cadre d'un conflit sectoriel classique, pour viser directement les orientations culturelles les plus générales d'une société.",
+    },
+    exemples: [
+      "Un mouvement féministe qui ne réclame pas seulement l'égalité salariale, mais une refonte complète de la manière dont une société pense et organise les rapports entre les sexes.",
+      "Un mouvement écologiste qui ne vise pas seulement la fermeture d'une centrale précise, mais une transformation du modèle entier de développement d'une société.",
+    ],
+    oeuvres: [
+      { y: '1984', t: "Le Retour de l'acteur" },
+    ],
+    associes: ['nouveaux-mouvements-sociaux', 'historicite', 'champ-d-historicite'],
+    opposes: ['lutte-des-classes'],
+    critiques: [
+      "La distinction avec les mouvements sociaux classiques reste parfois floue : beaucoup de mobilisations sectorielles finissent, dans les faits, par porter aussi des enjeux culturels plus larges.",
+      "L'ambition très générale prêtée à ces mouvements peut surestimer leur cohérence réelle, souvent traversée de tensions internes entre courants aux objectifs bien plus limités.",
+    ],
+    evolution: [
+      { p: '1978', f: "La Voix et le regard étudie déjà des mouvements aux ambitions dépassant le seul cadre sectoriel." },
+      { p: '1984', f: "Le Retour de l'acteur nomme et systématise la notion de mouvement sociétal." },
+    ],
+  },
+  'eclatement-du-social': {
+    detaille: [
+      "L'éclatement du social désigne, dans les derniers travaux de Touraine, le constat d'un affaiblissement des institutions qui organisaient autrefois la vie collective — l'État, l'école, la famille, la religion — et qui perdent, les unes après les autres, leur capacité à intégrer les individus dans un même ordre partagé.",
+      "Ce constat ne signifie pas la fin du social au sens absolu : il annonce plutôt un basculement vers une société faite d'individus-sujets et de réseaux, où l'intégration ne passe plus principalement par de grandes institutions communes mais par des liens plus choisis, plus fragmentés, et parfois plus fragiles.",
+    ],
+    origine: {
+      oeuvre: 'La Fin des sociétés',
+      annee: '2013',
+      contexte:
+        "Touraine publie ce texte, l'un de ses derniers grands ouvrages, pour tirer les conséquences ultimes de décennies d'observation d'un affaiblissement continu des grandes institutions intégratrices des sociétés occidentales.",
+    },
+    exemples: [
+      "Une paroisse autrefois centrale dans la vie d'un village, désormais fréquentée par une poignée de fidèles, quand les mêmes habitants restent pourtant très actifs dans des réseaux associatifs ou numériques choisis.",
+      "Une carrière professionnelle qui ne se déroule plus dans une seule entreprise fidélisante, mais à travers une succession de contrats et de réseaux professionnels que chacun doit désormais entretenir soi-même.",
+    ],
+    oeuvres: [
+      { y: '2013', t: 'La Fin des sociétés' },
+    ],
+    associes: ['sujet', 'democratie', 'societe-post-industrielle'],
+    opposes: ['solidarite-organique'],
+    critiques: [
+      "Le diagnostic, très large, risque de généraliser à l'ensemble des sociétés occidentales une évolution qui reste, dans les faits, très inégale selon les pays et les milieux sociaux.",
+      "Certains objectent que les institutions traditionnelles ne disparaissent pas tant qu'elles ne se transforment, prenant des formes nouvelles plutôt que de s'effacer purement et simplement.",
+    ],
+    evolution: [
+      { p: '1893', f: "Durkheim décrit déjà, avec l'anomie, un premier affaiblissement de la régulation collective par les institutions traditionnelles." },
+      { p: '2013', f: "Touraine radicalise le constat en un véritable éclatement du social, au profit d'individus-sujets et de réseaux." },
+    ],
+  },
 };

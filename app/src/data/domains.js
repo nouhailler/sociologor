@@ -103,7 +103,7 @@ export const DOMAINS_ADDED = [
     t: 'Mouvements sociaux',
     nom: 'Sociologie des mouvements sociaux',
     d: "Se révolter ne suffit pas : il faut des ressources, des mots et un moment favorable.",
-    a: ['marx', 'tocqueville', 'boltanski', 'castells', 'fraser'],
+    a: ['marx', 'tocqueville', 'boltanski', 'castells', 'fraser', 'touraine'],
   },
   {
     id: 'medias',
@@ -386,10 +386,9 @@ export const DOMAIN_EXTRA = {
   'mouvements-sociaux': {
     famille: 'normes',
     detail:
-      "Se révolter ne suffit jamais : Tocqueville notait déjà qu'une société se soulève rarement au pire moment de sa condition, mais souvent quand une amélioration récente rend l'injustice restante plus insupportable. Marx fournit le moteur de classe — des intérêts communs, une conscience qui se forme, un rapport de force qui se cherche. Boltanski, plus contemporain, s'intéresse à la manière dont les acteurs eux-mêmes justifient leur cause, mobilisent des principes de grandeur concurrents, et voient parfois leur critique absorbée par ce qu'elle combattait.",
+      "Se révolter ne suffit jamais : Tocqueville notait déjà qu'une société se soulève rarement au pire moment de sa condition, mais souvent quand une amélioration récente rend l'injustice restante plus insupportable. Marx fournit le moteur de classe — des intérêts communs, une conscience qui se forme, un rapport de force qui se cherche. Touraine en fait le cœur même de sa sociologie : un mouvement social digne de ce nom ne défend pas seulement un intérêt sectoriel, il porte l'enjeu du contrôle de l'historicité, la capacité d'une société à orienter son propre devenir. Boltanski, plus contemporain, s'intéresse à la manière dont les acteurs eux-mêmes justifient leur cause, mobilisent des principes de grandeur concurrents, et voient parfois leur critique absorbée par ce qu'elle combattait.",
     inspirateurs: [
       "Charles Tilly — les répertoires d'action, qui changent lentement et se transmettent",
-      "Alain Touraine — le mouvement social comme conflit central d'un type de société",
       "Doug McAdam — les opportunités politiques : le moment compte autant que la colère",
     ],
   },

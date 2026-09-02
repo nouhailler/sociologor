@@ -324,15 +324,15 @@ test.describe('Parcours principal', () => {
 
     // Une arête par relation, réciproques comprises.
     await page.goto('/graphe');
-    await expect(page.locator('svg[width="880"] path')).toHaveCount(57);
+    await expect(page.locator('svg[width="880"] path')).toHaveCount(60);
   });
 
   test('graphe des concepts : sous le graphe des filiations, un nœud par concept', async ({ page }) => {
     await enter(page, '/graphe');
     const concepts = page.locator('[aria-label="Graphe des concepts, défilement horizontal et vertical"]');
-    await expect(concepts.getByRole('link')).toHaveCount(364);
-    // Une arête par paire associée ou opposée, dédoublonnée : 632 + 341.
-    await expect(concepts.locator('svg path')).toHaveCount(973);
+    await expect(concepts.getByRole('link')).toHaveCount(382);
+    // Une arête par paire associée ou opposée, dédoublonnée : 663 + 359.
+    await expect(concepts.locator('svg path')).toHaveCount(1022);
     await concepts.getByRole('link', { name: /Habitus/ }).click();
     await expect(page).toHaveURL(/\/c\/habitus/);
     await expect(content(page).getByRole('heading', { name: 'Habitus', exact: true })).toBeVisible();
@@ -423,7 +423,7 @@ test.describe('Parcours principal', () => {
 
   test('phénomène sans concept du corpus : le dit au lieu de paraître vide', async ({ page }) => {
     await enter(page, '/p/etalement-urbain');
-    await expect(page.getByText(/Aucun concept des trente-trois fiches/)).toBeVisible();
+    await expect(page.getByText(/Aucun concept des trente-quatre fiches/)).toBeVisible();
     await expect(page.getByText("l'installation en dehors des villes", { exact: false })).toBeVisible();
   });
 

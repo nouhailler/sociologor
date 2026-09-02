@@ -38,8 +38,13 @@ export default defineConfig({
       workbox: {
         // Tout le contenu (fiches, documentation, styles, portraits) est statique
         // et embarqué : le précache suffit à un fonctionnement hors ligne complet.
-        // `webp` couvre les six portraits en domaine public (~60 Ko au total).
+        // `webp` couvre les portraits libres de droits du corpus.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,webmanifest,woff2}'],
+        // Relevé à mesure que le corpus grossit : le bundle JS (fiches, concepts,
+        // graphes) dépasse la limite Workbox par défaut de 2 Mio. Une marge est
+        // gardée au-delà de la taille actuelle pour absorber les prochains ajouts
+        // sans avoir à revenir sur ce réglage à chaque fois.
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: '/index.html',
         cleanupOutdatedCaches: true,
         runtimeCaching: [

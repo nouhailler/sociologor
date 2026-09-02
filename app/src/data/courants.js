@@ -375,9 +375,8 @@ export const COURANTS = [
     detail:
       "Castells montre que la révolution des technologies de l'information réorganise la société entière autour de réseaux : le pouvoir, l'économie et même l'identité s'y jouent désormais autant dans un espace de flux mondialisé que dans l'espace des lieux hérité de l'histoire. Le capitalisme n'a pas disparu, il s'est reconfiguré autour de cette nouvelle logique informationnelle, creusant un écart croissant entre ceux qui habitent les réseaux et ceux qui restent assignés à un lieu.",
     auteurs: ['castells'],
-    vientDe: ['materialisme-historique', 'sociologie-comprehensive'],
+    vientDe: ['materialisme-historique', 'sociologie-comprehensive', 'sociologie-de-l-action'],
     inspirateurs: [
-      "Alain Touraine — la société post-industrielle et l'action des mouvements sociaux, dont Castells fut l'élève",
       "Daniel Bell — la société de l'information comme rupture avec la société industrielle",
     ],
     niveau: 'paradigme',
@@ -471,6 +470,21 @@ export const COURANTS = [
       "Bruno Latour — la coproduction des faits scientifiques et de leurs réseaux d'acteurs, humains et non-humains",
       "Sandra Harding — l'objectivité forte, qui part des marges plutôt que du centre pour mieux voir",
       "Lynn Margulis — la symbiose comme moteur de l'évolution, matrice biologique de la sympoïèse",
+    ],
+    niveau: 'paradigme',
+  },
+  {
+    id: 'sociologie-de-l-action',
+    t: "Sociologie de l'action",
+    periode: 'contemporain',
+    d: "Une société ne subit pas son histoire : elle la fait, à travers les acteurs qui s'affrontent pour en contrôler le sens.",
+    detail:
+      "Touraine rompt avec le marxisme qu'il retravaille et avec le fonctionnalisme parsonien qu'il rejette frontalement : une société n'est ni un système en équilibre ni le simple résultat de rapports de production, mais ce que ses acteurs en font, à travers les conflits qui portent sur le contrôle de son historicité — sa capacité à agir sur elle-même. Cette conviction le conduit à une méthode originale, l'intervention sociologique, où le chercheur ne se contente plus d'observer les mouvements sociaux mais participe directement à leur travail de définition d'eux-mêmes.",
+    auteurs: ['touraine'],
+    vientDe: ['materialisme-historique', 'sociologie-comprehensive'],
+    inspirateurs: [
+      "Georges Friedmann — son prédécesseur au CNRS sur la sociologie du travail, dont Touraine reprend et déplace l'héritage",
+      "Michel Wieviorka — son plus proche collaborateur, qui prolonge la méthode de l'intervention sociologique",
     ],
     niveau: 'paradigme',
   },
