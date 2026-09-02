@@ -854,7 +854,7 @@ export const EXTRA = {
   },
   parsons: {
     prenom: 'Talcott', nom: 'Parsons', disc: ['Biologie — le vocabulaire systémique et fonctionnel', 'Économie — reprise de Marshall et Pareto', 'Psychanalyse — l\'intériorisation des normes'], biblio: ['F. Bourricaud, L\'Individualisme institutionnel, PUF, 1977', 'B. Valade, Introduction aux sciences sociales, PUF, 1996'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Talcott Parsons', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'parsons', alt: 'Talcott Parsons, photographie de promotion à Amherst College, 1924', credit: "Photographie du trombinoscope de l'Amherst College, 1924 — Wikimedia Commons, domaine public" },
     horsCorpus: [
       "Vilfredo Pareto — le système social pensé comme un équilibre entre forces",
       "Alfred Marshall — l'économie néoclassique, dont il discute les présupposés sur l'action",
@@ -864,7 +864,7 @@ export const EXTRA = {
   },
   elias: {
     prenom: 'Norbert', nom: 'Elias', disc: ['Histoire — cinq siècles de traités de civilité', 'Psychologie — la formation de l\'économie psychique', 'Science politique — monopole fiscal et monopole de la violence'], biblio: ['R. Chartier, préface à La Civilisation des mœurs, Pocket, 1973', 'N. Heinich, La Sociologie de Norbert Elias, La Découverte, 1997'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Norbert Elias', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'elias', alt: 'Norbert Elias décoré par le ministre Deetman à Amsterdam, 1987', credit: 'Photographie de Rob Bogaerts / Anefo, 1987 — Wikimedia Commons, CC0' },
     horsCorpus: [
       "Sigmund Freud — l'économie psychique et le refoulement, replacés dans une histoire longue",
       "Karl Mannheim — dont il fut l'assistant à Francfort, et la sociologie de la connaissance",
@@ -873,7 +873,7 @@ export const EXTRA = {
   },
   merton: {
     prenom: 'Robert King', nom: 'Merton', disc: ['Histoire des sciences — le fondateur de la sociologie des sciences', 'Statistique — méthodes d\'enquête avec Lazarsfeld', 'Criminologie'], biblio: ['P. Sztompka, Robert K. Merton, Macmillan, 1986', 'M. Cherkaoui, Naissance d\'une science sociale, Droz, 1998'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Robert K. Merton', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'merton', alt: 'Robert K. Merton en toge universitaire, 1965', credit: 'Photographie d’Eric Koch / Anefo, 1965 — Wikimedia Commons, CC0' },
     horsCorpus: [
       "Pitirim Sorokin — son directeur à Harvard, contre l'ambition systématique duquel il se règle",
       "Paul Lazarsfeld — le compagnonnage méthodologique de Columbia, qui ancre la théorie dans l'enquête",
@@ -882,7 +882,7 @@ export const EXTRA = {
   },
   bourdieu: {
     prenom: 'Pierre', nom: 'Bourdieu', disc: ['Anthropologie — le terrain kabyle est sa matrice', 'Linguistique — critique de Saussure et Austin', 'Histoire de l\'art et esthétique', 'Statistique — analyse des correspondances'], biblio: ['P. Mounier, Pierre Bourdieu, une introduction, Pocket, 2001', 'L. Pinto, Pierre Bourdieu et la théorie du monde social, Albin Michel, 1998', 'B. Lahire (dir.), Le Travail sociologique de Pierre Bourdieu, La Découverte, 1999'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Pierre Bourdieu', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'bourdieu', alt: 'Pierre Bourdieu, portrait de 1996', credit: 'Photographie de Bernard Lambert, 1996 — Wikimedia Commons, CC BY-SA 4.0' },
     horsCorpus: [
       "Claude Lévi-Strauss — le structuralisme, matrice de départ puis cible de la critique de la règle",
       "Maurice Merleau-Ponty — le corps et l'habitude incorporée, socle phénoménologique de l'habitus",
@@ -892,7 +892,7 @@ export const EXTRA = {
   },
   goffman: {
     prenom: 'Erving', nom: 'Goffman', disc: ['Théâtre et dramaturgie — la métaphore centrale', 'Ethnologie — observation directe à Shetland', 'Linguistique — analyse de conversation'], biblio: ['Y. Winkin, Erving Goffman : les moments et leurs hommes, Seuil, 1988', 'D. Cefaï & L. Perreau (dir.), Erving Goffman et l\'ordre de l\'interaction, CURAPP, 2012'],
-    portrait: { kind: 'monogram', alt: 'Monogramme d’Erving Goffman', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'goffman', alt: 'Erving Goffman, photographie vers 1940', credit: 'Photographe inconnu, v. 1940 — Wikimedia Commons, domaine public' },
     horsCorpus: [
       "W. Lloyd Warner — son directeur à Chicago, et l'ethnographie des communautés",
       "Kenneth Burke — la dramaturgie comme grille d'analyse de l'action"
@@ -900,7 +900,7 @@ export const EXTRA = {
   },
   becker: {
     prenom: 'Howard Saul', nom: 'Becker', disc: ['Musique — musicien de jazz avant d\'être sociologue', 'Criminologie — refondation par l\'étiquetage', 'Histoire de l\'art — les mondes de l\'art comme travail collectif'], biblio: ['A. Blanc & A. Pessin (dir.), L\'Art du terrain, L\'Harmattan, 2004', 'H. Peretz, Les Méthodes en sociologie : l\'observation, La Découverte, 2004'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Howard S. Becker', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'becker', alt: "Howard S. Becker à l'EHESS, 2012", credit: 'Photographie de Thierry Caro, 2012 — Wikimedia Commons, CC BY-SA 3.0' },
     horsCorpus: [
       "Everett C. Hughes — son maître à Chicago, d'où vient la notion de carrière appliquée au travail",
       "Robert E. Park — la première école de Chicago et son terrain urbain"
@@ -917,7 +917,7 @@ export const EXTRA = {
   },
   boltanski: {
     prenom: 'Luc', nom: 'Boltanski', disc: ['Philosophie morale — les grammaires du juste', 'Sciences de gestion — la littérature managériale comme corpus', 'Sciences politiques — critique et institutions'], biblio: ['B. Frère, Le Tournant de la théorie critique, Desclée de Brouwer, 2015', 'M. Nachi, Introduction à la sociologie pragmatique, Armand Colin, 2006'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Luc Boltanski', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'monogram', alt: 'Monogramme de Luc Boltanski', credit: "Photographies sous droits : aucune image libre disponible (personnalité vivante)." },
     horsCorpus: [
       "Paul Ricœur — l'herméneutique et la question du juste, contre une critique surplombante",
       "Harold Garfinkel et l'ethnométhodologie — les compétences ordinaires des acteurs prises au sérieux",
@@ -961,7 +961,7 @@ export const EXTRA = {
   },
   foucault: {
     prenom: 'Michel', nom: 'Foucault', disc: ["Philosophie — l'archéologie du savoir et l'histoire des systèmes de pensée", "Histoire — les institutions psychiatriques, médicales et pénales", "Science politique — le pouvoir comme objet d'analyse concret"], biblio: ['D. Eribon, Michel Foucault, Flammarion, 1989', 'F. Gros, Michel Foucault, PUF, 1996'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Michel Foucault', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'foucault', alt: 'Michel Foucault lors d’un cycle de conférences à Rio de Janeiro, 1974', credit: "Photographie de l'Arquivo Nacional (Brésil), 1974 — Wikimedia Commons, domaine public" },
     horsCorpus: [
       "Friedrich Nietzsche — la généalogie comme méthode, contre l'idée d'une origine pure des institutions",
       "Georges Canguilhem — le normal et le pathologique, matrice de la normalisation",
@@ -971,7 +971,7 @@ export const EXTRA = {
   },
   schutz: {
     prenom: 'Alfred', nom: 'Schutz', disc: ["Philosophie — la phénoménologie de Husserl, importée en sociologie", "Économie — banquier de profession toute sa vie, sociologue en dehors des heures de bureau", "Droit — sa formation initiale, à Vienne"], biblio: ['T. Luckmann, Alfred Schutz, Circé, 2012', 'M. Barber, The Participating Citizen: A Biography of Alfred Schutz, SUNY Press, 2004'],
-    portrait: { kind: 'monogram', alt: 'Monogramme d’Alfred Schutz', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'schutz', alt: 'Alfred Schütz, photographie d’archive', credit: 'Photographe inconnu, archive du Center for Advanced Research in Phenomenology — Wikimedia Commons, domaine public' },
     horsCorpus: [
       "Edmund Husserl — la phénoménologie, dont Schutz importe les outils en sociologie",
       "Henri Bergson — la durée vécue, matrice de l'expérience du temps chez Schutz",
@@ -1015,7 +1015,7 @@ export const EXTRA = {
   },
   bauman: {
     prenom: 'Zygmunt', nom: 'Bauman', disc: ["Philosophie — la postmodernité et l'éthique de l'incertitude", "Histoire — l'expérience de l'exil et de la Shoah, matrice de sa réflexion sur l'ambivalence", "Culture et médias — la consommation comme nouvelle forme d'intégration sociale"], biblio: ['C. Rosenmayr, Zygmunt Bauman : la vie liquide, Autrement, 2015', 'A. Jacobsen & K. Tester, Bauman before Postmodernity, McGill-Queen\'s, 2013'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Zygmunt Bauman', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'bauman', alt: 'Zygmunt Bauman à Varsovie, 2005', credit: 'Photographie de Mariusz Kubik, 2005 — Wikimedia Commons, CC BY 2.5' },
     horsCorpus: [
       "Jean-François Lyotard — la condition postmoderne, matrice du diagnostic d'une modernité qui doute d'elle-même",
       "Claude Lévi-Strauss — l'ambivalence entre classement et désordre, reprise dans l'analyse des étrangers",
@@ -1024,7 +1024,7 @@ export const EXTRA = {
   },
   beck: {
     prenom: 'Ulrich', nom: 'Beck', disc: ["Science politique — la mondialisation et le cosmopolitisme comme objets politiques", "Écologie politique — le risque environnemental comme fait social total", "Sciences de la communication — la perception publique et médiatique du risque"], biblio: ['A. Elliott, Ulrich Beck, Routledge, 2016', "L. Sciolla, Ulrich Beck : une pensée en mouvement, Sociologies, 2016"],
-    portrait: { kind: 'monogram', alt: 'Monogramme d’Ulrich Beck', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'beck', alt: 'Ulrich Beck au St. Gallen Symposium, 2012', credit: "Photographie de l'International Students' Committee, 2012 — Wikimedia Commons, CC BY-SA 3.0" },
     horsCorpus: [
       "Mary Douglas — l'anthropologie du risque et de la pureté, socle anthropologique du concept",
       "Elisabeth Beck-Gernsheim — coautrice de plusieurs ouvrages sur l'individualisation et la famille",
@@ -1032,7 +1032,7 @@ export const EXTRA = {
   },
   luhmann: {
     prenom: 'Niklas', nom: 'Luhmann', disc: ["Droit — la théorie des systèmes appliquée à l'autonomie du système juridique", "Biologie — le concept d'autopoïèse, emprunté à Maturana et Varela", "Sciences de la communication — la théorie des médias de masse comme système autopoïétique"], biblio: ['J. Clam, Droit et société chez Niklas Luhmann : la contingence des normes, PUF, 1997', 'A.-J. Arnaud, P. Guibentif (dir.), Niklas Luhmann observateur du droit, LGDJ, 1993'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de Niklas Luhmann', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'luhmann', alt: 'Niklas Luhmann en 1989', credit: 'Photographie de l’Universitätsarchiv St. Gallen (HSG), 1989 — Wikimedia Commons, CC BY-SA 4.0' },
     horsCorpus: [
       "Humberto Maturana et Francisco Varela — l'autopoïèse, empruntée à la biologie du vivant",
       "Norbert Wiener — la cybernétique, dont Luhmann hérite le vocabulaire de la complexité et de la régulation",
@@ -1068,7 +1068,7 @@ export const EXTRA = {
   },
   mead: {
     prenom: 'George Herbert', nom: 'Mead', disc: ["Philosophie — le pragmatisme américain de James et Dewey, dont Mead est une figure majeure", "Psychologie sociale — la genèse sociale de l'esprit et de la conscience de soi", "Biologie — le behaviorisme social, une réponse au behaviorisme strict de Watson"], biblio: ['H. Joas, G. H. Mead : une réévaluation contemporaine de sa pensée, CNRS Éditions, 2007', 'D. Cefaï (dir.), L\'École de Chicago : naissance de l\'écologie urbaine, Flammarion, 2004'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de George Herbert Mead', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'mead', alt: 'George Herbert Mead, portrait', credit: 'Photographe inconnu, avant 1931 — Wikimedia Commons, domaine public' },
     horsCorpus: [
       "William James et John Dewey — le pragmatisme américain, matrice philosophique du behaviorisme social",
       "Charles Horton Cooley — le « looking-glass self », le soi comme reflet du regard d'autrui",
@@ -1085,7 +1085,7 @@ export const EXTRA = {
   },
   thomas: {
     prenom: 'William Isaac', nom: 'Thomas', disc: ["Psychologie sociale — les « quatre désirs » (sécurité, réponse, reconnaissance, expérience nouvelle) qui orientent la conduite", "Travail social — ses enquêtes nourrissent directement les politiques d'assistance à l'enfance et à la jeunesse", "Démographie — les grandes migrations polonaises vers les États-Unis, terrain de son enquête fondatrice"], biblio: ['N. Herpin, Les Sociologues américains et le siècle, PUF, 1973', 'D. Cefaï (dir.), L\'École de Chicago : naissance de l\'écologie urbaine, Flammarion, 2004'],
-    portrait: { kind: 'monogram', alt: 'Monogramme de William Isaac Thomas', credit: "Photographies sous droits : aucune image libre disponible." },
+    portrait: { kind: 'photo', file: 'thomas', alt: 'William Isaac Thomas, portrait avant 1907', credit: 'Photographe inconnu, au plus tard 1907 — Wikimedia Commons, domaine public' },
     horsCorpus: [
       "Florian Znaniecki — coauteur du Paysan polonais, qui en tire une théorie sociologique plus systématique",
       "Dorothy Swaine Thomas — sa coautrice sur le théorème de Thomas, démographe et statisticienne",

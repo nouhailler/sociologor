@@ -422,9 +422,12 @@ const PORTRAIT_BOX = { width: 92, height: 112, borderRadius: 'var(--radius-lg)' 
 /**
  * Portrait de la fiche. Photo libre de droits quand il en existe une, sinon le
  * monogramme d'initiales — assumé comme tel, et non comme un placeholder en
- * attente : les quatorze auteurs du XXᵉ siècle n'ont pas d'image réutilisable.
- * Le crédit s'affiche sous la photo ; les sources complètes sont dans
- * Documentation → Informations légales → Licences et crédits.
+ * attente : plusieurs auteurs du corpus n'ont pas d'image réutilisable.
+ * Le crédit affiché sous la photo reprend la mention de licence déclarée dans
+ * `portrait.credit` (domaine public, CC0, CC BY, CC BY-SA…) plutôt qu'un
+ * intitulé fixe : toutes les photos du corpus ne sont pas dans le domaine
+ * public. Les sources complètes sont dans Documentation → Informations
+ * légales → Licences et crédits.
  */
 function Portrait({ author }) {
   if (!author.portraitSrc) {
@@ -434,6 +437,9 @@ function Portrait({ author }) {
       </span>
     );
   }
+  const credit = author.portrait.credit || '';
+  const source = credit.includes('—') ? credit.split('—').pop().trim() : credit;
+  const licence = source.includes(',') ? source.split(',').pop().trim() : source;
   return (
     <figure style={{ flex: 'none', margin: 0, width: 92 }}>
       <img
@@ -459,7 +465,7 @@ function Portrait({ author }) {
           textWrap: 'pretty',
         }}
       >
-        Domaine public
+        {licence.charAt(0).toUpperCase() + licence.slice(1)}
       </figcaption>
     </figure>
   );

@@ -113,9 +113,9 @@ test.describe('Parcours principal', () => {
   });
 
   test('fiche : monogramme assumé quand aucune image libre n’existe', async ({ page }) => {
-    await enter(page, '/a/bourdieu');
-    await expect(content(page).getByRole('img', { name: /Bourdieu/ })).toHaveCount(0);
-    await expect(content(page).getByText('PB', { exact: true })).toBeVisible();
+    await enter(page, '/a/crozier');
+    await expect(content(page).getByRole('img', { name: /Crozier/ })).toHaveCount(0);
+    await expect(content(page).getByText('MC', { exact: true })).toBeVisible();
   });
 
   test('fiche : influences hors corpus, en texte et non cliquables', async ({ page }) => {
