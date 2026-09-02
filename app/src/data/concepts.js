@@ -10578,4 +10578,505 @@ export const CONCEPTS = {
       { p: '2009', f: "Ce qui fait une vie distingue cette précarité partagée de sa distribution différentielle et politique." },
     ],
   },
+
+  /* — Donna Haraway — */
+  'savoirs-situes': {
+    detaille: [
+      "Tout savoir, y compris le savoir scientifique le plus rigoureux, est produit depuis un lieu précis : un corps sexué, une histoire, une position sociale, des instruments concrets. Il n'existe aucun point de vue transcendant, aucun regard qui verrait le monde de nulle part et donc de partout à la fois.",
+      "Cette situation n'invalide pas le savoir : elle en est la condition. Reconnaître explicitement d'où l'on parle, plutôt que de le taire sous une neutralité de façade, est précisément ce qui rend un savoir vérifiable, discutable et donc, pour Haraway, objectif.",
+    ],
+    origine: {
+      oeuvre: 'Savoirs situés',
+      annee: '1988',
+      contexte:
+        "Haraway répond à un double refus qu'elle observe dans les débats féministes des années 1980 : d'un côté un relativisme radical, où tout savoir se vaudrait, de l'autre l'espoir naïf d'une science enfin purement neutre, débarrassée de toute position.",
+    },
+    exemples: [
+      "Une enquête sur le chômage menée par des chercheurs qui ont eux-mêmes connu la précarité, et qui posent d'emblée des questions qu'un enquêteur jamais confronté à la question n'aurait pas pensé à poser.",
+      "Un atlas anatomique du XIXe siècle, dessiné exclusivement à partir de corps masculins blancs, longtemps présenté comme une description neutre du corps humain en général.",
+    ],
+    oeuvres: [
+      { y: '1988', t: 'Savoirs situés' },
+      { y: '1991', t: 'Simians, Cyborgs, and Women' },
+    ],
+    associes: ['tour-de-dieu', 'objectivite-situee', 'materiel-semiotique'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Insister sur la position de chaque savoir peut, poussé à l'extrême, faire retomber dans le relativisme même que Haraway prétend éviter, si plus rien ne permet de trancher entre deux savoirs également situés.",
+      "Le concept dit bien qu'un savoir vient toujours de quelque part, beaucoup moins comment, en pratique, mettre en relation des savoirs situés à des endroits très éloignés les uns des autres.",
+    ],
+    evolution: [
+      { p: '1970', f: "Les épistémologies féministes du point de vue (standpoint theory) posent que la position sociale des dominés éclaire des aspects du réel invisibles aux dominants." },
+      { p: '1988', f: "Haraway déplace la question vers une objectivité faite de perspectives partielles, plutôt que d'un seul point de vue privilégié." },
+    ],
+  },
+  'tour-de-dieu': {
+    detaille: [
+      "Le tour de Dieu est, pour Haraway, le fantasme central des sciences modernes : celui d'un regard désincarné, capable de voir le monde entier sans lui-même être vu, sans corps, sans lieu, sans histoire — un œil qui verrait tout de nulle part.",
+      "Ce tour n'est pas seulement une erreur philosophique : c'est une technique de pouvoir, qui permet à celui qui l'exerce de s'absenter de sa propre description du monde, et donc d'échapper à toute responsabilité quant à ce qu'il en dit.",
+    ],
+    origine: {
+      oeuvre: 'Savoirs situés',
+      annee: '1988',
+      contexte:
+        "Haraway forge l'expression en observant la rhétorique de la science occidentale moderne, qui revendique une vision totale et transcendante tout en dissimulant les instruments, les choix de cadrage et les corps qui la rendent possible.",
+    },
+    exemples: [
+      "Un rapport d'expert qui présente ses conclusions comme allant de soi, sans jamais mentionner qui l'a commandé, ni selon quels critères les données ont été choisies plutôt que d'autres.",
+      "Une photographie satellite de la Terre entière, souvent utilisée pour suggérer un point de vue neutre sur la planète, alors qu'elle résulte elle-même d'un assemblage technique très situé.",
+    ],
+    oeuvres: [
+      { y: '1988', t: 'Savoirs situés' },
+    ],
+    associes: ['savoirs-situes', 'objectivite-situee'],
+    opposes: ['fait-social'],
+    critiques: [
+      "La critique, très efficace contre les prétentions les plus naïves à la neutralité, dit moins ce qu'il faudrait faire concrètement d'un savoir scientifique une fois son caractère situé reconnu.",
+      "Certains scientifiques y voient une attaque contre la méthode elle-même, alors que Haraway insiste n'avoir jamais visé la rigueur scientifique, mais seulement le déni de sa propre position.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg critique déjà la prétention des sciences à un regard désincarné et universel." },
+      { p: '1988', f: "Savoirs situés nomme précisément ce fantasme et lui oppose une objectivité assumée comme partielle." },
+    ],
+  },
+  'objectivite-situee': {
+    detaille: [
+      "L'objectivité située remplace deux tentations opposées : le relativisme, où aucun savoir ne vaudrait mieux qu'un autre, et le tour de Dieu, où un seul savoir prétendrait embrasser le tout depuis nulle part. Entre les deux, Haraway propose une objectivité obtenue par la mise en réseau explicite de perspectives partielles, chacune assumant sa propre position.",
+      "Cette objectivité n'est jamais complète ni achevée : elle se construit en connectant des points de vue situés, dont la somme reste toujours partielle, révisable, et ouverte à l'ajout d'un point de vue qui manquait encore.",
+    ],
+    origine: {
+      oeuvre: 'Savoirs situés',
+      annee: '1988',
+      contexte:
+        "Haraway écrit en réponse directe aux critiques féministes de la science, pour leur offrir un critère de vérité qui ne renonce ni à l'exigence scientifique ni à la reconnaissance des rapports de pouvoir qui la traversent.",
+    },
+    exemples: [
+      "Un procès qui recoupe le témoignage de la victime, l'expertise médico-légale et les enregistrements de vidéosurveillance, sans qu'aucune de ces trois sources ne suffise seule à établir les faits.",
+      "Une carte climatique mondiale bâtie à partir de milliers de stations de mesure locales, plus fiable que n'importe quelle mesure isolée, sans pour autant prétendre à un point de vue surplombant unique.",
+    ],
+    oeuvres: [
+      { y: '1988', t: 'Savoirs situés' },
+    ],
+    associes: ['savoirs-situes', 'tour-de-dieu'],
+    opposes: ['physique-sociale'],
+    critiques: [
+      "Le critère reste difficile à appliquer concrètement : rien ne dit combien de perspectives partielles suffisent, ni comment arbitrer entre deux perspectives situées qui se contredisent frontalement.",
+      "Des philosophes des sciences plus classiques objectent que parler d'objectivité « partielle » revient à vider le mot de son sens usuel, au risque d'entretenir une confusion plus qu'elle ne la résout.",
+    ],
+    evolution: [
+      { p: '1986', f: "Sandra Harding formule l'objectivité forte, qui part des positions marginales pour mieux voir ce que le centre ne voit pas." },
+      { p: '1988', f: "Haraway systématise l'objectivité comme réseau de perspectives partielles connectées." },
+    ],
+  },
+  'cyborg': {
+    detaille: [
+      "Le cyborg est une figure hybride, mi-organisme mi-machine, qui a cessé de croire à la pureté des frontières entre l'humain et l'animal, entre l'organisme et la machine, entre le physique et le non-physique. Haraway ne le décrit pas comme une menace, mais comme une réalité déjà largement advenue de la vie contemporaine.",
+      "Le cyborg n'a pas d'origine mythique à retrouver, pas d'unité perdue à réparer, pas de jardin d'Éden auquel revenir : il assume d'être partiel, composite et sans innocence, ce qui en fait pour Haraway une ressource politique plutôt qu'une menace à conjurer.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste cyborg',
+      annee: '1985',
+      contexte:
+        "Haraway écrit en pleine guerre froide, alors que les technologies militaires, informatiques et biomédicales brouillent chaque jour davantage les frontières que la pensée occidentale tenait pour évidentes.",
+    },
+    exemples: [
+      "Une personne dont le quotidien dépend d'une pompe à insuline reliée en continu à son organisme, ajustant ses doses sans intervention humaine directe.",
+      "Un agriculteur guidé, dans son tracteur, par un GPS et des capteurs de sol qui décident avec lui, minute par minute, où semer et où épandre.",
+    ],
+    oeuvres: [
+      { y: '1985', t: 'Manifeste cyborg' },
+      { y: '1991', t: 'Simians, Cyborgs, and Women' },
+    ],
+    associes: ['manifeste-cyborg', 'naturecultures', 'materiel-semiotique'],
+    opposes: ['alienation'],
+    critiques: [
+      "La figure, née dans un contexte occidental de haute technologie, décrit mal l'expérience de populations pour qui la technologie reste synonyme d'exploitation plus que d'émancipation hybride.",
+      "Son caractère volontairement ironique et poétique la rend difficile à mobiliser comme catégorie d'analyse rigoureuse, en dehors du texte fondateur lui-même.",
+    ],
+    evolution: [
+      { p: '1960', f: "Manfred Clynes et Nathan Kline forgent le mot cyborg pour l'exploration spatiale, un organisme augmenté pour survivre hors de la Terre." },
+      { p: '1985', f: "Haraway en fait une figure politique et philosophique, bien au-delà de la seule science-fiction." },
+    ],
+  },
+  'manifeste-cyborg': {
+    detaille: [
+      "Le Manifeste cyborg n'est pas seulement l'exposé d'une figure : c'est une proposition politique. Haraway y appelle à fonder la solidarité non plus sur une identité supposée commune et pure — « femme », « ouvrier » — mais sur des affinités choisies entre positions elles-mêmes hybrides et partielles.",
+      "Cette politique de l'affinité renonce à l'espoir d'une communauté fondée sur une origine ou une nature partagée : elle mise sur des coalitions provisoires, construites au fil de luttes concrètes, entre des sujets qui n'ont pas besoin de se ressembler pour agir ensemble.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste cyborg',
+      annee: '1985',
+      contexte:
+        "Haraway écrit en dialogue critique avec le féminisme socialiste de son époque, qu'elle juge encore trop attaché à une catégorie unifiée de « femme » censée fonder, à elle seule, la solidarité politique.",
+    },
+    exemples: [
+      "Une manifestation qui réunit des associations de quartier, des syndicats et des collectifs très différents, unis pour une seule cause précise sans prétendre partager par ailleurs la même vision du monde.",
+      "Un réseau de soutien en ligne qui rassemble des personnes aux diagnostics médicaux différents, liées par l'expérience commune d'un système de santé qu'elles jugent toutes insuffisant.",
+    ],
+    oeuvres: [
+      { y: '1985', t: 'Manifeste cyborg' },
+    ],
+    associes: ['cyborg', 'sympoiese'],
+    opposes: ['conscience-de-classe'],
+    critiques: [
+      "Une politique fondée sur l'affinité plutôt que sur l'identité peine parfois à produire la mobilisation durable et le sentiment d'appartenance qu'une identité collective plus stable peut offrir.",
+      "Des critiques marxistes objectent que renoncer à toute catégorie unifiée — classe, genre — prive le mouvement social d'un adversaire structurel clairement nommé, au profit de coalitions plus fragiles.",
+    ],
+    evolution: [
+      { p: '1848', f: "Marx fonde la solidarité politique sur la position commune dans les rapports de production." },
+      { p: '1985', f: "Haraway lui substitue une politique d'affinité entre positions hybrides, sans identité commune présupposée." },
+    ],
+  },
+  'naturecultures': {
+    detaille: [
+      "Haraway refuse de traiter la nature et la culture comme deux ordres séparés, l'un donné et l'autre construit : elles se fabriquent toujours ensemble, dans des assemblages concrets qu'elle nomme naturecultures — un seul mot, sans trait d'union, pour dire qu'aucun des deux termes ne précède l'autre.",
+      "Un chien domestique, une tomate génétiquement modifiée ou un vaccin ne sont ni purement naturels ni purement culturels : ce sont des naturecultures, façonnées par une longue histoire commune d'élevage, de sélection, de soin et de manipulation technique.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste des espèces compagnes',
+      annee: '2003',
+      contexte:
+        "Haraway prolonge la critique du dualisme nature/culture déjà présente dans le Manifeste cyborg, en l'ancrant cette fois dans l'histoire concrète des relations entre humains et animaux domestiques.",
+    },
+    exemples: [
+      "Un fromage au lait cru dont le goût dépend à la fois de la géologie du terroir, des bactéries locales et de savoir-faire fromagers transmis depuis des générations.",
+      "Une forêt urbaine plantée il y a un siècle, aujourd'hui perçue comme un espace naturel alors qu'elle résulte entièrement d'un choix d'aménagement humain.",
+    ],
+    oeuvres: [
+      { y: '2003', t: 'Manifeste des espèces compagnes' },
+      { y: '1985', t: 'Manifeste cyborg' },
+    ],
+    associes: ['cyborg', 'materiel-semiotique', 'especes-compagnes'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept, très général, décrit bien que nature et culture se mêlent toujours, moins précisément comment étudier empiriquement un cas donné sans se contenter de répéter que « tout est mélangé ».",
+      "Certains lui reprochent de rendre plus difficile toute politique de protection de la nature, si la distinction même entre naturel et artificiel perd sa pertinence analytique.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg brouille déjà la frontière entre organisme et machine." },
+      { p: '2003', f: "Le Manifeste des espèces compagnes étend le geste à la relation historique entre humains et animaux domestiques." },
+    ],
+  },
+  'materiel-semiotique': {
+    detaille: [
+      "Un acteur matériel-sémiotique n'est ni un simple objet physique, muet et passif, ni un pur discours sans prise sur le monde : c'est une entité qui agit à la fois comme matière et comme signe, et dont l'existence sociale dépend indissociablement des deux registres à la fois.",
+      "Un gène, par exemple, n'existe pleinement ni comme molécule d'ADN isolée ni comme simple mot dans un discours scientifique : c'est un objet produit par leur articulation constante, dans des laboratoires, des bases de données et des récits qui circulent entre eux.",
+    ],
+    origine: {
+      oeuvre: 'Savoirs situés',
+      annee: '1988',
+      contexte:
+        "Haraway forge le terme pour dépasser une opposition qu'elle juge stérile entre un matérialisme qui ignorerait le langage et un constructivisme qui ne verrait que du discours.",
+    },
+    exemples: [
+      "Un test de grossesse dont le résultat n'existe socialement qu'une fois la réaction chimique traduite en un signe binaire, immédiatement chargé de sens bien au-delà de la seule réaction elle-même.",
+      "Une frontière nationale, tracée un jour sur une carte, devenue une réalité matérielle — postes de contrôle, clôtures, patrouilles — qu'aucun discours ne suffit plus, seul, à défaire.",
+    ],
+    oeuvres: [
+      { y: '1988', t: 'Savoirs situés' },
+    ],
+    associes: ['savoirs-situes', 'naturecultures'],
+    opposes: ['ideologie'],
+    critiques: [
+      "Le concept, très abstrait, reste d'un maniement difficile pour qui cherche un protocole d'enquête précis plutôt qu'une posture théorique générale.",
+      "En refusant de trancher entre matière et discours, certains lui reprochent de perdre la capacité à dire, dans un cas donné, ce qui relève vraiment de contraintes physiques incontournables.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg traite déjà les objets techniques comme porteurs de sens autant que de matière." },
+      { p: '1988', f: "Savoirs situés nomme précisément cette double nature sous le terme d'acteur matériel-sémiotique." },
+    ],
+  },
+  'especes-compagnes': {
+    detaille: [
+      "Les espèces compagnes sont les espèces — chiens, chevaux, bactéries intestinales, cultures agricoles — avec lesquelles les humains ont coévolué au point de ne plus pouvoir se raconter séparément d'elles. Haraway insiste : ces relations ne sont ni de pure domination ni de pure innocence, mais un enchevêtrement historique de dépendances réciproques.",
+      "Le mot compagne, dérivé du latin cum panis, celui avec qui l'on partage le pain, rappelle que ces relations se sont nouées dans des pratiques matérielles très concrètes — nourrir, élever, dresser, manger — et non dans une pure proximité affective.",
+    ],
+    origine: {
+      oeuvre: 'Manifeste des espèces compagnes',
+      annee: '2003',
+      contexte:
+        "Haraway, elle-même dresseuse de chiens de compétition, part de sa propre relation avec son chien Cayenne pour reconstruire une théorie des relations interspécifiques loin du sentimentalisme comme du seul déterminisme biologique.",
+    },
+    exemples: [
+      "Un chien-guide et la personne aveugle qu'il accompagne, dont chacun apprend à lire les intentions de l'autre au point de former, sur le trottoir, une seule unité de décision.",
+      "Une exploitation viticole où les levures locales, sélectionnées sans le savoir depuis des générations, sont devenues aussi indispensables au vin que le geste du vigneron.",
+    ],
+    oeuvres: [
+      { y: '2003', t: 'Manifeste des espèces compagnes' },
+      { y: '2008', t: 'When Species Meet' },
+    ],
+    associes: ['devenir-avec', 'naturecultures', 'sympoiese'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Le concept, construit à partir d'espèces domestiquées de longue date, dit moins des relations plus récentes ou plus conflictuelles entre humains et espèces sauvages ou nuisibles.",
+      "Certains y voient une manière, malgré les précautions de Haraway, de rendre acceptables des rapports de domination bien réels sur les animaux, en les requalifiant en relation partagée.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg brouille la frontière entre humain et animal en théorie." },
+      { p: '2003', f: "Le Manifeste des espèces compagnes l'ancre dans une histoire concrète et incarnée de coévolution." },
+    ],
+  },
+  'devenir-avec': {
+    detaille: [
+      "Devenir-avec désigne, pour Haraway, le processus par lequel aucun être ne se développe isolément : il se transforme continuellement au contact d'autres êtres, qui le façonnent autant qu'il les façonne en retour — une transformation réciproque, jamais achevée.",
+      "Ce devenir n'a pas de point final : il n'y a jamais de forme stable et définitive à atteindre, seulement une série continue d'ajustements mutuels, dont Haraway tire une leçon plus générale sur ce que signifie exister en relation.",
+    ],
+    origine: {
+      oeuvre: 'When Species Meet',
+      annee: '2008',
+      contexte:
+        "Haraway développe le concept à partir de l'observation minutieuse de l'entraînement d'agilité avec son propre chien, où aucun des deux partenaires ne dirige jamais entièrement l'autre.",
+    },
+    exemples: [
+      "Un professeur dont la manière d'enseigner se transforme, année après année, au contact de classes très différentes, sans qu'on puisse dire s'il a formé ses élèves ou si ce sont eux qui l'ont formé en retour.",
+      "Un jardinier et son sol, dont les pratiques s'ajustent année après année à ce que la terre, en retour, laisse pousser ou refuse.",
+    ],
+    oeuvres: [
+      { y: '2008', t: 'When Species Meet' },
+    ],
+    associes: ['especes-compagnes', 'sympoiese', 'capacite-a-repondre'],
+    opposes: ['habitus'],
+    critiques: [
+      "Le concept dit bien qu'une transformation est toujours réciproque, moins précisément comment mesurer, dans une relation donnée, le poids respectif de chacune des parties.",
+      "Insister sur la réciprocité de toute relation risque de minimiser des rapports de force très inégaux, où l'un des deux partenaires garde, dans les faits, l'essentiel du pouvoir de décision.",
+    ],
+    evolution: [
+      { p: '2003', f: "Le Manifeste des espèces compagnes pose la coévolution historique entre humains et animaux domestiques." },
+      { p: '2008', f: "When Species Meet généralise l'idée en un processus continu de devenir-avec, au-delà du seul cas des espèces compagnes." },
+    ],
+  },
+  'sympoiese': {
+    detaille: [
+      "La sympoïèse — littéralement, faire-avec — désigne des systèmes qui ne se produisent jamais eux-mêmes seuls : ils sont toujours le résultat d'une collaboration entre plusieurs parties, aucune n'étant suffisante à elle seule pour engendrer le tout.",
+      "Haraway l'oppose explicitement à l'autopoïèse, qui décrit des systèmes clos capables de s'autoproduire de l'intérieur : pour elle, rien de vivant n'est jamais véritablement autopoïétique — c'est, dit-elle, de la sympoïèse tout du long.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway emprunte le terme à la biologiste M. Beth Dempster, qui l'avait forgé pour décrire des écosystèmes sans limite claire ni contrôle centralisé, par opposition aux systèmes autopoïétiques théorisés en biologie et en sociologie.",
+    },
+    exemples: [
+      "Un lichen, qui n'existe comme organisme reconnaissable que par l'association intime et permanente d'un champignon et d'une algue, incapables l'un comme l'autre de le produire seuls.",
+      "Un marché de producteurs qui ne fonctionne que par l'ajustement continu entre les cultures, la météo, les habitudes des clients et les choix des maraîchers, sans qu'aucun acteur ne le pilote seul.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['devenir-avec', 'especes-compagnes', 'naturecultures'],
+    opposes: ['autopoiese'],
+    critiques: [
+      "Le concept, en insistant sur la collaboration, dit peu des situations où la coopération entre parties d'un système reste fortement inégale ou même conflictuelle.",
+      "Opposer terme à terme sympoïèse et autopoïèse simplifie peut-être à l'excès une théorie des systèmes, chez Luhmann, plus nuancée qu'une pure clôture sur soi.",
+    ],
+    evolution: [
+      { p: '1980', f: "M. Beth Dempster forge le terme sympoïèse en écologie pour décrire des systèmes sans limite ni contrôle centralisés." },
+      { p: '2016', f: "Haraway en fait un concept central de Rester avec le trouble, en réponse explicite à l'autopoïèse." },
+    ],
+  },
+  'capacite-a-repondre': {
+    detaille: [
+      "La capacité à répondre (response-ability) est, pour Haraway, ce qui naît directement du fait d'être en relation : être lié à d'autres — humains, animaux, milieux — engendre une obligation de leur répondre, qui ne dépend d'aucun choix moral préalable mais du lien lui-même.",
+      "Répondre suppose de rester réellement attentif, disponible, capable de percevoir ce que l'autre exprime dans sa propre langue — un aboiement, un silence, une absence — plutôt que de projeter sur lui des intentions déjà toutes faites.",
+    ],
+    origine: {
+      oeuvre: 'When Species Meet',
+      annee: '2008',
+      contexte:
+        "Haraway construit le concept en dialogue avec la philosophe Vinciane Despret et le philosophe Jacques Derrida, tous deux attentifs à ce que le regard d'un animal exige, en retour, de celui qui le regarde.",
+    },
+    exemples: [
+      "Un vétérinaire qui ajuste chaque geste à la réaction immédiate de l'animal soigné, plutôt que d'appliquer mécaniquement un protocole identique à tous les cas.",
+      "Une équipe de secours en montagne qui adapte sa stratégie en temps réel à ce que le terrain, la météo et les appels de la personne recherchée lui font comprendre, minute après minute.",
+    ],
+    oeuvres: [
+      { y: '2008', t: 'When Species Meet' },
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['devenir-avec', 'faire-parente', 'rester-avec-le-trouble'],
+    opposes: ['individualisme-methodologique'],
+    critiques: [
+      "Le concept, très exigeant, dit peu de ce qui se passe quand deux relations auxquelles on doit répondre entrent en conflit direct l'une avec l'autre.",
+      "Certains y voient une éthique séduisante mais peu opératoire pour trancher, en pratique, une décision politique ou économique concrète.",
+    ],
+    evolution: [
+      { p: '2004', f: "Jacques Derrida interroge ce que le regard d'un chat exige de lui, dans L'Animal que donc je suis." },
+      { p: '2008', f: "Haraway en fait la capacité à répondre, condition de toute relation véritablement éthique." },
+    ],
+  },
+  'faire-parente': {
+    detaille: [
+      "Faire parenté, c'est étendre la notion de parenté au-delà du seul lien du sang ou de la famille nucléaire, pour y inclure des relations choisies, y compris avec des espèces non humaines — un geste que Haraway résume dans le slogan volontairement provocateur « faire de la parenté, pas des bébés ».",
+      "Cette parenté élargie ne remplace pas la famille biologique : elle en relativise le monopole, en rappelant que l'histoire humaine regorge déjà de formes de parenté choisie — adoption, alliance, voisinage durable — que la seule filiation biologique a longtemps fait passer pour secondaires.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway écrit dans un contexte de croissance démographique et de crise écologique, pour proposer une réponse qui ne soit ni nataliste ni malthusienne, centrée sur la qualité des liens plutôt que sur leur seule quantité.",
+    },
+    exemples: [
+      "Une colocation de longue durée dont les membres, sans lien de sang, se rendent mutuellement les services qu'on attend d'habitude d'une famille — garde, soin, transmission.",
+      "Un programme de conservation qui confie l'élevage de jeunes animaux menacés à des familles d'accueil bénévoles, créant des attachements que rien, biologiquement, n'imposait.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['especes-compagnes', 'devenir-avec', 'chthulucene'],
+    opposes: ['socialisation-primaire'],
+    critiques: [
+      "Le slogan, volontairement provocateur, a été lu par certains comme une invitation antinataliste plus radicale que ce que Haraway revendique réellement dans le détail de son propos.",
+      "Étendre la parenté à presque toute relation choisie risque, selon certains critiques, de vider le mot de la spécificité qui faisait sa force descriptive.",
+    ],
+    evolution: [
+      { p: '1949', f: "Lévi-Strauss fonde l'anthropologie de la parenté sur l'échange des femmes entre groupes, une parenté d'abord biologique et alliancielle." },
+      { p: '2016', f: "Haraway élargit la parenté à des liens choisis, y compris trans-espèces, indépendants de toute filiation biologique." },
+    ],
+  },
+  'rester-avec-le-trouble': {
+    detaille: [
+      "Rester avec le trouble, c'est refuser les deux échappatoires les plus tentantes face aux crises écologiques et sociales contemporaines : le déni, qui fait comme si de rien n'était, et le fantasme d'une solution technique miracle qui dispenserait de rien changer par ailleurs.",
+      "Il s'agit, pour Haraway, d'apprendre à habiter des problèmes qui ne se résoudront pas d'un coup, en restant pleinement présent à leur complexité plutôt qu'en cherchant une sortie qui permettrait de ne plus y penser.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway écrit à un moment où le débat public oscille, selon elle, entre un optimisme technologique béat et un catastrophisme qui paralyse toute action, sans offrir de troisième voie.",
+    },
+    exemples: [
+      "Un collectif de quartier qui continue d'organiser des jardins partagés malgré la certitude que le changement climatique rendra, à terme, certaines cultures impossibles sur place.",
+      "Une équipe de recherche qui publie des résultats partiels et incertains sur une maladie complexe, plutôt que d'attendre une solution complète qui ne viendra peut-être jamais.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['chthulucene', 'pensee-tentaculaire', 'capacite-a-repondre'],
+    opposes: ['rationalisation'],
+    critiques: [
+      "L'injonction à « rester » avec le trouble, sans horizon de résolution promis, peut sembler démobilisatrice pour des mouvements qui ont besoin d'objectifs concrets pour tenir dans la durée.",
+      "Certains y voient une posture confortable pour qui n'est pas directement exposé aux conséquences les plus dures des crises en question, plus difficile à tenir pour qui les subit de plein fouet.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg refuse déjà toute nostalgie d'un état originel à retrouver." },
+      { p: '2016', f: "Rester avec le trouble en fait une posture générale face aux crises écologiques et sociales contemporaines." },
+    ],
+  },
+  'chthulucene': {
+    detaille: [
+      "Le chthulucène est le nom que propose Haraway pour notre époque, en alternative à l'anthropocène — qui place l'espèce humaine seule au centre du récit — et au capitalocène — qui pointe le seul capitalisme. Elle y insiste sur l'enchevêtrement de multiples espèces, forces terrestres et processus qui excèdent largement la seule action humaine.",
+      "Le mot, forgé à partir d'un terme grec ancien signifiant chthonien (souterrain, de la terre) plutôt que d'une référence à l'écrivain Lovecraft, désigne des puissances terrestres tentaculaires, anciennes et multiples, dont l'humanité n'est jamais qu'une des voix parmi d'autres.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway répond au débat scientifique et public sur le nom à donner à l'époque géologique actuelle, jugeant les termes anthropocène et capitalocène trop centrés sur un seul acteur — l'espèce humaine ou le capital — pour rendre justice à la complexité écologique en jeu.",
+    },
+    exemples: [
+      "Un sol agricole dont la fertilité dépend d'un réseau souterrain de champignons et de bactéries plus ancien et plus déterminant, à long terme, que n'importe quelle décision humaine prise en une seule saison.",
+      "Une mégapole dont l'avenir dépend autant des nappes phréatiques et des espèces invasives qui la colonisent que des plans d'urbanisme votés par ses habitants.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['rester-avec-le-trouble', 'pensee-tentaculaire', 'risque-global'],
+    opposes: ['systeme-social'],
+    critiques: [
+      "Le néologisme, volontairement poétique, reste d'un maniement difficile comme catégorie d'analyse rigoureuse hors du texte qui l'a créé.",
+      "Certains lui reprochent de diluer la responsabilité historique propre du capitalisme industriel dans un récit plus large de puissances terrestres, au risque d'affaiblir la charge critique du concept d'anthropocène qu'il entend remplacer.",
+    ],
+    evolution: [
+      { p: '2000', f: "Paul Crutzen popularise le terme anthropocène pour désigner une époque géologique façonnée par l'action humaine." },
+      { p: '2016', f: "Haraway lui oppose le chthulucène, centré sur l'enchevêtrement multispécifique plutôt que sur la seule action humaine." },
+    ],
+  },
+  'pensee-tentaculaire': {
+    detaille: [
+      "La pensée tentaculaire est une manière de penser attentive aux connexions multiples, ramifiées et souvent invisibles entre des êtres très différents, plutôt qu'aux seules chaînes linéaires de cause à effet que privilégie la pensée occidentale classique.",
+      "Comme un tentacule qui palpe et se ramifie dans plusieurs directions à la fois, cette pensée refuse de choisir un seul fil explicatif : elle tient ensemble plusieurs échelles, plusieurs espèces et plusieurs temporalités, sans les réduire à une seule ligne.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway s'inspire des invertébrés marins à tentacules pour proposer une image de la pensée qui rompt avec la figure de l'arbre généalogique et de sa racine unique, trop linéaire pour rendre compte des enchevêtrements qu'elle décrit.",
+    },
+    exemples: [
+      "Une pandémie qui ne s'explique pleinement qu'en tenant ensemble les routes aériennes, les élevages industriels, la déforestation et les inégalités d'accès aux soins, sans qu'un seul facteur suffise à l'expliquer.",
+      "Une rivière polluée dont l'état ne se comprend qu'en suivant à la fois l'amont agricole, les rejets industriels en aval et les usages domestiques tout au long de son cours.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['rester-avec-le-trouble', 'chthulucene', 'figures-de-ficelle'],
+    opposes: ['action-sociale'],
+    critiques: [
+      "Le style volontairement métaphorique du concept le rend difficile à traduire en méthode d'enquête précise et reproductible.",
+      "Tenir ensemble un très grand nombre de fils explicatifs risque, à l'inverse d'une simplification excessive, de rendre toute conclusion pratique presque impossible à formuler.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg critique déjà la figure de l'arbre généalogique unique comme modèle de filiation." },
+      { p: '2016', f: "Rester avec le trouble en fait une méthode générale de pensée relationnelle." },
+    ],
+  },
+  'figures-de-ficelle': {
+    detaille: [
+      "Les figures de ficelle désignent, pour Haraway, à la fois le jeu enfantin où un motif de fil passe de mains en mains, chaque joueur le recevant et le transformant à son tour, et une métaphore de la manière dont un savoir se construit collectivement, sans auteur unique ni propriétaire final.",
+      "Haraway en fait aussi un principe de méthode : jouer aux figures de ficelle, c'est accepter de recevoir une pensée façonnée par d'autres, de la transformer légèrement et de la transmettre à son tour, plutôt que de prétendre la créer seul de toutes pièces.",
+    ],
+    origine: {
+      oeuvre: 'Rester avec le trouble',
+      annee: '2016',
+      contexte:
+        "Haraway s'appuie sur le jeu traditionnel du cat's cradle, pratiqué dans de nombreuses cultures, pour illustrer une pratique collective de la pensée qu'elle oppose à l'image romantique du chercheur solitaire.",
+    },
+    exemples: [
+      "Un air traditionnel transmis d'un musicien à l'autre sur plusieurs générations, chacun y ajoutant une variation sans qu'on puisse identifier un auteur unique de la version finale.",
+      "Un protocole de recherche médicale amélioré, d'un laboratoire à l'autre, par des équipes qui ne se rencontrent jamais mais se transmettent leurs résultats par publications successives.",
+    ],
+    oeuvres: [
+      { y: '2016', t: 'Rester avec le trouble' },
+    ],
+    associes: ['pensee-tentaculaire', 'savoirs-situes'],
+    opposes: ['capital-culturel'],
+    critiques: [
+      "La métaphore, très évocatrice, reste difficile à traduire en critère précis pour distinguer une véritable collaboration d'une simple accumulation d'apports individuels juxtaposés.",
+      "Certains y voient une manière esthétisée de décrire des rapports de collaboration scientifique qui restent, dans les faits, très hiérarchisés selon la notoriété de chacun.",
+    ],
+    evolution: [
+      { p: '1985', f: "Le Manifeste cyborg évoque déjà l'écriture comme technologie de cyborgs, faite de fragments recombinés plutôt que d'une voix unique." },
+      { p: '2016', f: "Rester avec le trouble formalise les figures de ficelle comme pratique et méthode de pensée collective." },
+    ],
+  },
+  'ethnographie-multispecies': {
+    detaille: [
+      "L'ethnographie multispecies étudie les mondes sociaux en y incluant, à part entière et non comme simple décor, les relations entre humains et autres espèces vivantes — animaux, plantes, champignons, micro-organismes — qui les traversent.",
+      "Cette approche refuse de traiter les non-humains comme un simple environnement extérieur au fait social : elle les considère comme des participants actifs des mondes qu'elle décrit, au même titre que les personnes habituellement seules retenues par l'enquête de terrain.",
+    ],
+    origine: {
+      oeuvre: 'Multispecies Ethnography',
+      annee: '2010',
+      contexte:
+        "Les anthropologues Eben Kirksey et Stefan Helmreich nomment ce champ émergent dans un numéro spécial de la revue Cultural Anthropology, en s'appuyant explicitement sur les travaux de Haraway sur les espèces compagnes comme matrice théorique du courant.",
+    },
+    exemples: [
+      "Une étude sur une plantation de café qui suit autant les caféiers, les champignons parasites et les oiseaux prédateurs d'insectes que les ouvriers agricoles qui l'entretiennent.",
+      "Une enquête sur un hôpital qui prend au sérieux le rôle des bactéries résistantes aux antibiotiques dans l'organisation même des soins et des protocoles d'hygiène.",
+    ],
+    oeuvres: [
+      { y: '2010', t: 'Multispecies Ethnography' },
+      { y: '2008', t: 'When Species Meet' },
+    ],
+    associes: ['especes-compagnes', 'devenir-avec'],
+    opposes: ['fait-social'],
+    critiques: [
+      "Élargir l'enquête à un nombre potentiellement illimité d'espèces impliquées rend plus difficile de délimiter clairement l'objet d'une étude de terrain donnée.",
+      "Certains anthropologues plus classiques objectent que prêter aux non-humains un statut de participants à part entière repose sur une interprétation qui reste, en dernière instance, entièrement humaine.",
+    ],
+    evolution: [
+      { p: '2003', f: "Le Manifeste des espèces compagnes de Haraway fournit la matrice théorique du courant à venir." },
+      { p: '2010', f: "Kirksey et Helmreich nomment le champ de l'ethnographie multispecies dans Cultural Anthropology." },
+    ],
+  },
 };

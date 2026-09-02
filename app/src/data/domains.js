@@ -68,7 +68,7 @@ export const DOMAINS_ADDED = [
     t: 'Genre',
     nom: 'Sociologie du genre',
     d: "Ce que le masculin et le féminin doivent à la nature, et ce qu'ils doivent à l'ordre social.",
-    a: ['bourdieu', 'goffman', 'fraser', 'butler'],
+    a: ['bourdieu', 'goffman', 'fraser', 'butler', 'haraway'],
   },
   {
     id: 'jeunesse',
@@ -159,7 +159,7 @@ export const DOMAINS_ADDED = [
     t: 'Environnement',
     nom: "Sociologie de l'environnement",
     d: "La nature comme problème social : qui subit les dégâts, qui décide des risques.",
-    a: ['francfort', 'boltanski', 'beck'],
+    a: ['francfort', 'boltanski', 'beck', 'haraway'],
   },
 ];
 
@@ -444,7 +444,7 @@ export const DOMAIN_EXTRA = {
     nom: 'Sociologie du corps',
     famille: 'corps',
     detail:
-      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot. Foucault déplace encore la question : le corps discipliné ne l'est pas seulement par les autres ou par soi, il l'est par des techniques précises — l'emploi du temps, l'exercice, le rang — qui le dressent sans jamais avoir besoin d'invoquer la loi. Butler radicalise encore ce déplacement : le corps genré lui-même n'est jamais un support neutre sur lequel viendrait s'inscrire une discipline extérieure, il est déjà, dans son moindre geste, la répétition d'une norme qu'aucun corps n'a jamais choisie librement.",
+      "Elias montre que la maîtrise du corps a une histoire longue : des gestes autrefois publics — cracher, se moucher, manger avec les mains — sont devenus des interdits qu'on s'impose à soi-même, sans plus avoir besoin de surveillance extérieure. Goffman ajoute que le corps se gère aussi en temps réel, dans chaque interaction, comme une façade qu'il faut tenir. Bourdieu, enfin, rappelle que cette maîtrise n'est pas répartie également : la façon de se tenir, de parler, d'occuper l'espace trahit un habitus de classe avant même qu'on ait prononcé un mot. Foucault déplace encore la question : le corps discipliné ne l'est pas seulement par les autres ou par soi, il l'est par des techniques précises — l'emploi du temps, l'exercice, le rang — qui le dressent sans jamais avoir besoin d'invoquer la loi. Butler radicalise encore ce déplacement : le corps genré lui-même n'est jamais un support neutre sur lequel viendrait s'inscrire une discipline extérieure, il est déjà, dans son moindre geste, la répétition d'une norme qu'aucun corps n'a jamais choisie librement. Haraway déplace la frontière une dernière fois, hors du seul social : le corps contemporain n'est déjà plus seulement organique, mais un composé de chair, de prothèses et de dispositifs techniques dont on ne peut plus dire où l'un finit et où l'autre commence.",
     inspirateurs: [
       "Marcel Mauss — les techniques du corps : marcher, nager, s'asseoir s'apprennent",
       "David Le Breton — la sociologie du corps constituée en domaine",
@@ -506,9 +506,8 @@ export const DOMAIN_EXTRA = {
   environnement: {
     famille: 'territoires',
     detail:
-      "Longtemps traitée comme une question purement technique ou naturelle, la crise écologique est aussi un fait social : qui décide des risques à courir, qui en subit les dégâts, et selon quelles inégalités ces deux positions se distribuent. Beck, sans figurer dans les quinze fiches du corpus, a donné au domaine son concept le plus cité — la société du risque, où les dangers que l'on produit soi-même remplacent peu à peu ceux que l'on subissait de la nature. Boltanski y ajoute une dimension politique : les controverses environnementales sont aussi des lieux où des principes de justification concurrents s'affrontent, entre croissance, précaution et responsabilité.",
+      "Longtemps traitée comme une question purement technique ou naturelle, la crise écologique est aussi un fait social : qui décide des risques à courir, qui en subit les dégâts, et selon quelles inégalités ces deux positions se distribuent. Beck a donné au domaine son concept le plus cité — la société du risque, où les dangers que l'on produit soi-même remplacent peu à peu ceux que l'on subissait de la nature. Boltanski y ajoute une dimension politique : les controverses environnementales sont aussi des lieux où des principes de justification concurrents s'affrontent, entre croissance, précaution et responsabilité. Haraway va plus loin encore : elle refuse jusqu'à la distinction entre nature et société qui organise ce domaine depuis son origine, pour décrire des mondes déjà toujours faits d'humains, d'animaux et de techniques mêlés.",
     inspirateurs: [
-      "Ulrich Beck — la société du risque, où les dangers produits remplacent les dangers subis",
       "Bruno Latour — la coupure nature/société tenue pour un artefact à défaire",
       "Michel Callon — les controverses techniques, où profanes et experts négocient le vrai",
     ],

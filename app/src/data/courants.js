@@ -461,4 +461,20 @@ export const COURANTS = [
     ],
     niveau: 'paradigme',
   },
+  {
+    id: 'etudes-feministes-des-sciences',
+    t: 'Études féministes des sciences',
+    periode: 'contemporain',
+    d: "Aucun savoir ne tombe de nulle part : il est toujours vu depuis un corps, un lieu, une histoire — et c'est cette situation même, non son effacement, qui rend une objectivité possible.",
+    detail:
+      "Haraway hérite du socialisme féministe qu'elle entend renouveler, et de la généalogie foucaldienne du pouvoir qu'elle applique aux sciences elles-mêmes : la science n'observe pas la nature de l'extérieur, elle la fabrique en même temps qu'elle la décrit, depuis des laboratoires, des instruments et des corps situés. Formée en biologie avant de devenir historienne des sciences, elle refuse aussi bien le relativisme, qui rendrait tous les savoirs également valables, que le rêve d'un point de vue absolu qui ne serait vu de nulle part — pariant sur des objectivités partielles, connectées les unes aux autres plutôt que fondues en une seule vérité.",
+    auteurs: ['haraway'],
+    vientDe: ['genealogie-du-pouvoir', 'materialisme-historique'],
+    inspirateurs: [
+      "Bruno Latour — la coproduction des faits scientifiques et de leurs réseaux d'acteurs, humains et non-humains",
+      "Sandra Harding — l'objectivité forte, qui part des marges plutôt que du centre pour mieux voir",
+      "Lynn Margulis — la symbiose comme moteur de l'évolution, matrice biologique de la sympoïèse",
+    ],
+    niveau: 'paradigme',
+  },
 ];
