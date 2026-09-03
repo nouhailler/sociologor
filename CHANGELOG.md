@@ -4,6 +4,22 @@ Toutes les évolutions notables du projet sont documentées ici. Format
 inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) ;
 versionnage inspiré de [SemVer](https://semver.org/lang/fr/).
 
+## [1.15.0] - 2026-09-03
+
+### Ajouté
+- **Méthodes sociologiques** : nouvelle rubrique, 27 méthodes d'enquête en
+  9 catégories (observation, entretien, enquête, analyse statistique,
+  ethnographie, analyse de discours, sources d'archives, méthodes mixtes…).
+  Gabarit fixe en huit blocs — objectif, quand l'utiliser, données produites,
+  avantages, limites, exemple célèbre, auteurs associés — pour répondre à la
+  question que Sociologor ne couvrait pas encore : comment les sociologues
+  savent ce qu'ils savent, pas seulement ce qu'ils en pensent (`/methodes`,
+  `/me/:id`).
+- Chaque méthode cite au moins un auteur du corpus (ex. Becker et Thomas pour
+  l'observation participante) ou une figure hors corpus au même format que
+  les domaines et les courants (Malinowski, Whyte, Milgram, Bertaux, Gallup,
+  Kozinets, Sacks, Lawrence Stone…).
+
 ## [1.14.0] - 2026-09-03
 
 Le numéro de version n'avait plus été relevé depuis la 1.13.0, alors que le

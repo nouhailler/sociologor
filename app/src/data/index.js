@@ -6,6 +6,7 @@ import { CONCEPTS } from './concepts.js';
 import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
 import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
 import { CATEGORIES_FONDAMENTAUX, FONDAMENTAUX } from './fondamentaux.js';
+import { CATEGORIES_METHODES, METHODES } from './methodes.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
 import { THEORIES } from './theories.js';
@@ -364,6 +365,36 @@ export function getFondamental(id) {
   };
 }
 
+/* — Méthodes sociologiques — */
+// Comment les sociologues savent ce qu'ils savent, indépendant d'un auteur
+// unique. `auteurs` ne cite que des fiches du corpus, `inspirateurs` que des
+// figures qui n'en ont pas — même convention que les domaines et les
+// courants.
+
+export { CATEGORIES_METHODES };
+export const METHODE_COUNT = METHODES.length;
+
+/** Les méthodes groupées par catégorie, dans l'ordre de la liste. */
+export const METHODE_CATEGORIES = CATEGORIES_METHODES.map((cat) => ({
+  ...cat,
+  methodes: METHODES.filter((m) => m.categorie === cat.id),
+}));
+
+/** Fiche complète : auteurs du corpus résolus en liens cliquables, inspirateurs tels quels. */
+export function getMethode(id) {
+  const m = METHODES.find((x) => x.id === id);
+  if (!m) return null;
+  const categorie = CATEGORIES_METHODES.find((c) => c.id === m.categorie);
+  return {
+    ...m,
+    categorieT: categorie?.t || '',
+    auteursLinks: (m.auteurs || [])
+      .filter((a) => AUTHORS[a])
+      .map((a) => ({ id: a, name: AUTHORS[a].name })),
+    inspirateurs: m.inspirateurs || [],
+  };
+}
+
 /* — Mécanismes sociaux — */
 
 export { CATEGORIES_MECANISMES };
@@ -643,6 +674,9 @@ export const SEARCH_INDEX = (() => {
   FONDAMENTAUX.forEach((f) =>
     items.push({ kind: 'Concept fondamental', title: f.t, sub: f.d, id: f.id, to: `/f/${f.id}` }),
   );
+  METHODES.forEach((m) =>
+    items.push({ kind: 'Méthode', title: m.t, sub: m.objectif, id: m.id, to: `/me/${m.id}` }),
+  );
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
@@ -672,6 +706,7 @@ export const SEARCH_FILTERS = [
   'Phénomènes',
   'Processus',
   'Concepts fondamentaux',
+  'Méthodes',
   'Mécanismes',
   'Problématiques',
   'Théories',
@@ -686,6 +721,7 @@ const KIND_BY_FILTER = {
   Phénomènes: 'Phénomène',
   Processus: 'Processus',
   'Concepts fondamentaux': 'Concept fondamental',
+  Méthodes: 'Méthode',
   Mécanismes: 'Mécanisme',
   Problématiques: 'Problématique',
   Théories: 'Théorie',

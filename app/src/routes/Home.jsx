@@ -7,6 +7,7 @@ import {
   DOMAIN_COUNT,
   DOMAIN_FAMILIES,
   FONDAMENTAL_COUNT,
+  METHODE_COUNT,
   PHENOMENE_COUNT,
   PROCESSUS_COUNT,
   conceptOfTheDay,
@@ -62,6 +63,9 @@ export default function Home() {
           </Link>
           <Link to="/fondamentaux" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
             {FONDAMENTAL_COUNT} concepts fondamentaux — le vocabulaire de base →
+          </Link>
+          <Link to="/methodes" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {METHODE_COUNT} méthodes sociologiques — comment on le sait →
           </Link>
         </div>
 

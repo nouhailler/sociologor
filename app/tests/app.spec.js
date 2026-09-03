@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(18);
+    await expect(dialog.getByRole('link')).toHaveCount(19);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -420,6 +420,24 @@ test.describe('Parcours principal', () => {
     await page.getByRole('link', { name: /^Pouvoir · Max Weber/ }).click();
     await expect(page).toHaveURL(/\/c\/pouvoir$/);
     await expect(content(page).getByRole('heading', { name: 'Pouvoir', exact: true })).toBeVisible();
+  });
+
+  test('méthodes sociologiques : accueil → liste → fiche → auteur du corpus, inspirateur hors corpus non cliquable', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /méthodes sociologiques/ }).click();
+    await expect(page).toHaveURL(/\/methodes$/);
+    await expect(content(page).getByRole('heading', { name: 'Méthodes sociologiques' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Observation participante/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Observation participante/ }).click();
+    await expect(page).toHaveURL(/\/me\/observation-participante$/);
+    await expect(content(page).getByRole('heading', { name: 'Observation participante', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Howard S. Becker' })).toBeVisible();
+    await expect(page.getByText(/Malinowski — /)).toBeVisible();
+    await expect(page.getByText(/Malinowski — /).locator('a')).toHaveCount(0);
+
+    await page.getByRole('link', { name: 'Howard S. Becker' }).click();
+    await expect(page).toHaveURL(/\/a\/becker$/);
   });
 
   test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {

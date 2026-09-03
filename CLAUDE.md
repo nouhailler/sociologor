@@ -3,7 +3,8 @@
 PWA de consultation de 34 fiches de sociologie (auteurs, binôme et école de
 pensée), leurs concepts, leurs œuvres et leur graphe de filiations — plus les
 phénomènes, processus, mécanismes et problématiques sociales qui s'y
-rattachent, et un glossaire de concepts fondamentaux indépendant des auteurs.
+rattachent, un glossaire de concepts fondamentaux indépendant des auteurs, et
+les méthodes d'enquête par lesquelles ce savoir est produit.
 Français, hors connexion, sans compte ni collecte de données.
 
 ## Structure du dépôt
@@ -57,6 +58,7 @@ plutôt que l'inverse).
 | `phenomenes.js`, `processus.js` | rien (autonome) | concepts, notions libres |
 | `mecanismes.js` | rien (autonome) | concepts, processus, phénomènes |
 | `fondamentaux.js` | rien (autonome) | concepts, processus — définitions courtes uniquement |
+| `methodes.js` | rien (autonome) | auteurs du corpus + inspirateurs hors corpus, à parts égales |
 | `problematiques.js` | rien (autonome) | tout le reste, plus théories/études/statistiques/politiques publiques |
 
 `fondamentaux.js` porte le vocabulaire de base de la discipline (Action
@@ -64,6 +66,15 @@ sociale, Pouvoir, Institution…) : contrairement aux concepts du corpus, une
 entrée n'est jamais signée par un auteur unique. Quand un terme recoupe une
 fiche concept ou processus déjà écrite, l'entrée reste courte et renvoie vers
 elle plutôt que de la dupliquer.
+
+`methodes.js` porte le gabarit le plus contraint du modèle : huit rubriques
+nommées (`objectif`, `quand`, `donnees`, `avantages`, `limites`,
+`exempleCelebre`, puis `auteurs`/`inspirateurs`) plutôt qu'un simple
+`d`/`detail`. `objectif` joue le rôle de `d` ailleurs — carte de liste,
+recherche, bandeau « En une phrase ». `auteurs` (ids de `authors.js`,
+cliquables) et `inspirateurs` (texte libre « Nom — apport ») suivent la
+convention déjà en place dans `domains.js`/`courants.js` ; une entrée doit
+toujours porter l'un des deux, jamais aucun.
 
 ### Documentation
 

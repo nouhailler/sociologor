@@ -30,6 +30,9 @@
  *     (aucune problématique ne la cite).
  * 17. chaque concept fondamental a une catégorie valide, et ses éventuels
  *     concepts ou processus liés existent bien parmi les fiches déjà décrites.
+ * 18. chaque méthode sociologique a une catégorie valide, ses rubriques
+ *     obligatoires remplies, et porte au moins un auteur du corpus ou un
+ *     inspirateur hors corpus — jamais aucun des deux.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -70,7 +73,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -642,6 +645,40 @@ for (const cat of CATEGORIES_FONDAMENTAUX) {
   if (!FONDAMENTAUX.some((f) => f.categorie === cat.id)) fail(`Catégorie de concepts fondamentaux vide : ${cat.id}`);
 }
 
+/* — 18. intégrité des méthodes sociologiques — */
+// Comment les sociologues savent, indépendant d'un auteur unique. `auteurs`
+// ne cite que des fiches du corpus, `inspirateurs` que des figures qui n'en
+// ont pas — même convention que les domaines et les courants (checks 10-11) :
+// au moins l'un des deux doit être renseigné, sinon la fiche s'afficherait
+// sans section « Auteurs associés » exploitable.
+const { CATEGORIES_METHODES, METHODES } = await import('../src/data/methodes.js');
+
+const methCatIds = new Set(CATEGORIES_METHODES.map((c) => c.id));
+const methIds = new Set();
+
+for (const m of METHODES) {
+  if (methIds.has(m.id)) fail(`Méthode en double : ${m.id}`);
+  methIds.add(m.id);
+  for (const field of ['t', 'objectif', 'quand', 'donnees', 'exempleCelebre']) {
+    if (!m[field]) fail(`Méthode ${m.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!methCatIds.has(m.categorie)) fail(`Méthode ${m.id} : catégorie inconnue « ${m.categorie} ».`);
+  if ((m.avantages || []).length === 0) fail(`Méthode ${m.id} : aucun avantage listé.`);
+  if ((m.limites || []).length === 0) fail(`Méthode ${m.id} : aucune limite listée.`);
+  for (const a of m.auteurs || []) {
+    if (!AUTHORS[a]) fail(`Méthode ${m.id} : auteur inconnu « ${a} ».`);
+  }
+  for (const i of m.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Méthode ${m.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+  if ((m.auteurs || []).length === 0 && (m.inspirateurs || []).length === 0) {
+    fail(`Méthode ${m.id} : ni auteur du corpus ni inspirateur — la section « Auteurs associés » serait vide.`);
+  }
+}
+for (const cat of CATEGORIES_METHODES) {
+  if (!METHODES.some((m) => m.categorie === cat.id)) fail(`Catégorie de méthodes vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -682,6 +719,12 @@ console.log(
   line(
     'Fondamentaux',
     `${FONDAMENTAUX.length} en ${CATEGORIES_FONDAMENTAUX.length} catégories, ${FONDAMENTAUX.reduce((n, f) => n + (f.concepts || []).length, 0)} liens vers des concepts, ${FONDAMENTAUX.reduce((n, f) => n + (f.processus || []).length, 0)} liens vers des processus`,
+  ),
+);
+console.log(
+  line(
+    'Méthodes',
+    `${METHODES.length} en ${CATEGORIES_METHODES.length} catégories, ${METHODES.reduce((n, m) => n + (m.auteurs || []).length, 0)} auteurs du corpus, ${METHODES.reduce((n, m) => n + (m.inspirateurs || []).length, 0)} inspirateurs hors corpus`,
   ),
 );
 console.log(

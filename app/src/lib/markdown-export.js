@@ -213,6 +213,41 @@ export function fondamentalToMarkdown(f) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche méthode en Markdown — les huit rubriques du gabarit. */
+export function methodeToMarkdown(m) {
+  const L = [];
+  L.push(`# ${m.t}`, '');
+  L.push(`*${m.categorieT}*`, '');
+  L.push(`> ${m.objectif}`, '');
+
+  L.push("## Quand l'utiliser ?", '');
+  L.push(m.quand, '');
+
+  L.push('## Données produites', '');
+  L.push(m.donnees, '');
+
+  L.push('## Avantages', '');
+  m.avantages.forEach((a) => L.push(`- ${a}`));
+  L.push('');
+
+  L.push('## Limites', '');
+  m.limites.forEach((l) => L.push(`- ${l}`));
+  L.push('');
+
+  L.push('## Exemple célèbre', '');
+  L.push(m.exempleCelebre, '');
+
+  L.push('## Auteurs associés', '');
+  L.push(`- **Auteurs du corpus** : ${m.auteursLinks.length ? m.auteursLinks.map((a) => a.name).join(', ') : '—'}`);
+  if (m.inspirateurs.length) {
+    L.push(`- **Hors corpus** : ${m.inspirateurs.join(' ; ')}`);
+  }
+  L.push('');
+
+  L.push('---', '', `Méthode exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Sérialise une fiche mécanisme en Markdown — les mêmes rubriques que l'écran. */
 export function mecanismeToMarkdown(m) {
   const L = [];
