@@ -7,6 +7,7 @@ import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phen
 import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
 import { CATEGORIES_FONDAMENTAUX, FONDAMENTAUX } from './fondamentaux.js';
 import { CATEGORIES_METHODES, METHODES } from './methodes.js';
+import { CATEGORIES_ETUDES_FONDATRICES, ETUDES_FONDATRICES } from './etudes-fondatrices.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
 import { THEORIES } from './theories.js';
@@ -230,6 +231,13 @@ export function getConcept(id) {
       id: p.id,
       label: p.t,
     })),
+    // Dérivé par lecture inverse de etudes-fondatrices.js : une étude déclare
+    // les concepts qu'elle mobilise, jamais l'inverse — la relation
+    // « concepts → études » que la rubrique doit rendre possible.
+    etudesLinks: ETUDES_FONDATRICES.filter((e) => (e.concepts || []).includes(id)).map((e) => ({
+      id: e.id,
+      label: e.t,
+    })),
   };
 }
 
@@ -392,6 +400,54 @@ export function getMethode(id) {
       .filter((a) => AUTHORS[a])
       .map((a) => ({ id: a, name: AUTHORS[a].name })),
     inspirateurs: m.inspirateurs || [],
+    // Dérivé par lecture inverse de etudes-fondatrices.js, comme les
+    // concepts : une étude déclare les méthodes qu'elle emploie.
+    etudesLinks: ETUDES_FONDATRICES.filter((e) => (e.methodes || []).includes(id)).map((e) => ({
+      id: e.id,
+      label: e.t,
+    })),
+  };
+}
+
+/* — Études fondatrices — */
+// Les grandes enquêtes qui ont fait la sociologie, indépendantes d'une
+// problématique — à la différence de `ETUDES` (etudes.js), plus courtes et
+// citées uniquement comme ressources d'une problématique sociale. `auteurs`/
+// `inspirateurs` suivent la même convention que les méthodes ; `concepts`
+// n'est jamais vide, `methodes`/`processus` sont optionnels.
+
+export { CATEGORIES_ETUDES_FONDATRICES };
+export const ETUDE_FONDATRICE_COUNT = ETUDES_FONDATRICES.length;
+
+/** Les études fondatrices groupées par catégorie, dans l'ordre de la liste. */
+export const ETUDE_FONDATRICE_CATEGORIES = CATEGORIES_ETUDES_FONDATRICES.map((cat) => ({
+  ...cat,
+  etudes: ETUDES_FONDATRICES.filter((e) => e.categorie === cat.id),
+}));
+
+/** Fiche complète : concepts, méthodes et processus résolus en liens cliquables, auteurs corpus/hors corpus. */
+export function getEtudeFondatrice(id) {
+  const e = ETUDES_FONDATRICES.find((x) => x.id === id);
+  if (!e) return null;
+  const categorie = CATEGORIES_ETUDES_FONDATRICES.find((c) => c.id === e.categorie);
+  return {
+    ...e,
+    categorieT: categorie?.t || '',
+    auteursLinks: (e.auteurs || [])
+      .filter((a) => AUTHORS[a])
+      .map((a) => ({ id: a, name: AUTHORS[a].name })),
+    inspirateurs: e.inspirateurs || [],
+    conceptsLinks: (e.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    methodesLinks: (e.methodes || [])
+      .map((m) => METHODES.find((x) => x.id === m))
+      .filter(Boolean)
+      .map((m) => ({ id: m.id, label: m.t })),
+    processusLinks: (e.processus || [])
+      .map((p) => PROCESSUS.find((x) => x.id === p))
+      .filter(Boolean)
+      .map((p) => ({ id: p.id, label: p.t })),
   };
 }
 
@@ -677,6 +733,9 @@ export const SEARCH_INDEX = (() => {
   METHODES.forEach((m) =>
     items.push({ kind: 'Méthode', title: m.t, sub: m.objectif, id: m.id, to: `/me/${m.id}` }),
   );
+  ETUDES_FONDATRICES.forEach((e) =>
+    items.push({ kind: 'Étude fondatrice', title: e.t, sub: e.question, id: e.id, to: `/ef/${e.id}` }),
+  );
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
@@ -707,6 +766,7 @@ export const SEARCH_FILTERS = [
   'Processus',
   'Concepts fondamentaux',
   'Méthodes',
+  'Études fondatrices',
   'Mécanismes',
   'Problématiques',
   'Théories',
@@ -722,6 +782,7 @@ const KIND_BY_FILTER = {
   Processus: 'Processus',
   'Concepts fondamentaux': 'Concept fondamental',
   Méthodes: 'Méthode',
+  'Études fondatrices': 'Étude fondatrice',
   Mécanismes: 'Mécanisme',
   Problématiques: 'Problématique',
   Théories: 'Théorie',

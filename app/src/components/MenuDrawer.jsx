@@ -25,6 +25,7 @@ const CATEGORIES = [
       { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
       { to: '/problematiques', label: 'Problématiques sociales', hint: 'Les enjeux qui font débat, avec leur graphe de liens' },
       { to: '/methodes', label: 'Méthodes sociologiques', hint: "Comment les sociologues savent ce qu'ils savent" },
+      { to: '/etudes-fondatrices', label: 'Études fondatrices', hint: 'Les grandes enquêtes qui ont fait la sociologie' },
     ],
   },
   {
@@ -66,6 +67,7 @@ function activeTo(pathname) {
   if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
   if (pathname.startsWith('/problematiques') || pathname.startsWith('/pb/')) return '/problematiques';
   if (pathname.startsWith('/methodes') || pathname.startsWith('/me/')) return '/methodes';
+  if (pathname.startsWith('/etudes-fondatrices') || pathname.startsWith('/ef/')) return '/etudes-fondatrices';
   if (pathname.startsWith('/theories') || pathname.startsWith('/th/')) return '/theories';
   if (pathname.startsWith('/etudes') || pathname.startsWith('/et/')) return '/etudes';
   if (pathname.startsWith('/statistiques') || pathname.startsWith('/st/')) return '/statistiques';

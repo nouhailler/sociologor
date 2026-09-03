@@ -6,6 +6,7 @@ import {
   AUTHORS,
   DOMAIN_COUNT,
   DOMAIN_FAMILIES,
+  ETUDE_FONDATRICE_COUNT,
   FONDAMENTAL_COUNT,
   METHODE_COUNT,
   PHENOMENE_COUNT,
@@ -66,6 +67,9 @@ export default function Home() {
           </Link>
           <Link to="/methodes" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
             {METHODE_COUNT} méthodes sociologiques — comment on le sait →
+          </Link>
+          <Link to="/etudes-fondatrices" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {ETUDE_FONDATRICE_COUNT} études fondatrices — de Hawthorne à La Distinction →
           </Link>
         </div>
 

@@ -3,8 +3,9 @@
 PWA de consultation de 34 fiches de sociologie (auteurs, binôme et école de
 pensée), leurs concepts, leurs œuvres et leur graphe de filiations — plus les
 phénomènes, processus, mécanismes et problématiques sociales qui s'y
-rattachent, un glossaire de concepts fondamentaux indépendant des auteurs, et
-les méthodes d'enquête par lesquelles ce savoir est produit.
+rattachent, un glossaire de concepts fondamentaux indépendant des auteurs,
+les méthodes d'enquête par lesquelles ce savoir est produit, et les grandes
+études qui l'ont fondé.
 Français, hors connexion, sans compte ni collecte de données.
 
 ## Structure du dépôt
@@ -59,6 +60,7 @@ plutôt que l'inverse).
 | `mecanismes.js` | rien (autonome) | concepts, processus, phénomènes |
 | `fondamentaux.js` | rien (autonome) | concepts, processus — définitions courtes uniquement |
 | `methodes.js` | rien (autonome) | auteurs du corpus + inspirateurs hors corpus, à parts égales |
+| `etudes-fondatrices.js` | rien (autonome) | concepts (jamais vide), méthodes, processus, auteurs/inspirateurs |
 | `problematiques.js` | rien (autonome) | tout le reste, plus théories/études/statistiques/politiques publiques |
 
 `fondamentaux.js` porte le vocabulaire de base de la discipline (Action
@@ -75,6 +77,15 @@ recherche, bandeau « En une phrase ». `auteurs` (ids de `authors.js`,
 cliquables) et `inspirateurs` (texte libre « Nom — apport ») suivent la
 convention déjà en place dans `domains.js`/`courants.js` ; une entrée doit
 toujours porter l'un des deux, jamais aucun.
+
+`etudes-fondatrices.js` (Hawthorne, Milgram, Asylums…) ne pas confondre avec
+`etudes.js` : ce dernier ne sert que de ressource aux fiches problématique
+(schéma `{ t, auteur, annee, methode, d, detail, theories }`, jamais de lien
+vers les concepts), tandis qu'`etudes-fondatrices.js` est une rubrique à
+part entière, jamais rattachée à une problématique, dont `concepts` ne doit
+jamais être vide — `getConcept()` en déduit `etudesLinks` par lecture
+inverse, exactement comme `problematiquesLinks`, pour rendre possible la
+relation concepts → études.
 
 ### Documentation
 

@@ -315,6 +315,23 @@ export default function Concept() {
         </div>
 
         <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
+          Études qui le mobilisent
+        </h3>
+        {c.etudesLinks.length === 0 ? (
+          <p style={{ fontSize: 12.5, color: 'color-mix(in srgb, var(--color-text) 40%, transparent)', margin: '0 0 24px' }}>
+            Aucune étude fondatrice déjà décrite ne mobilise directement ce concept.
+          </p>
+        ) : (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, margin: '0 0 24px' }}>
+            {c.etudesLinks.map((e) => (
+              <Link key={e.id} to={`/ef/${e.id}`} className="soc-link-chip">
+                {e.label}
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <h3 className="soc-kicker" style={{ margin: '0 0 6px' }}>
           Problématiques qui le mobilisent
         </h3>
         {c.problematiquesLinks.length === 0 ? (

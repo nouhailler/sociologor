@@ -94,6 +94,12 @@ export function conceptToMarkdown(c) {
   L.push(`- **Concepts opposés** : ${names(c.opposesLinks)}`);
   L.push('');
 
+  if (c.etudesLinks.length) {
+    L.push('## Études qui le mobilisent', '');
+    L.push(c.etudesLinks.map((e) => e.label).join(', '));
+    L.push('');
+  }
+
   if (c.problematiquesLinks.length) {
     L.push('## Problématiques qui le mobilisent', '');
     L.push(c.problematiquesLinks.map((p) => p.label).join(', '));
@@ -245,6 +251,57 @@ export function methodeToMarkdown(m) {
   L.push('');
 
   L.push('---', '', `Méthode exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
+/** Sérialise une fiche étude fondatrice en Markdown — les onze rubriques du gabarit. */
+export function etudeFondatriceToMarkdown(e) {
+  const L = [];
+  L.push(`# ${e.t}`, '');
+  L.push(`*${e.categorieT}*`, '');
+  L.push(`> ${e.question}`, '');
+
+  L.push('## Repères', '');
+  L.push(`- **Date** : ${e.date}`);
+  L.push(`- **Lieu** : ${e.lieu}`);
+  L.push(`- **Population** : ${e.population}`);
+  L.push('');
+
+  L.push('## Méthode', '');
+  L.push(e.methode, '');
+  if (e.methodesLinks.length) {
+    L.push(e.methodesLinks.map((m) => m.label).join(', '), '');
+  }
+
+  L.push('## Résultats', '');
+  L.push(e.resultats, '');
+
+  L.push('## Concepts mobilisés', '');
+  L.push(e.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', '), '');
+  if (e.processusLinks.length) {
+    L.push('## Processus liés', '');
+    L.push(e.processusLinks.map((p) => p.label).join(', '), '');
+  }
+
+  L.push('## Limites', '');
+  e.limites.forEach((l) => L.push(`- ${l}`));
+  L.push('');
+
+  L.push('## Critiques', '');
+  e.critiques.forEach((c) => L.push(`- ${c}`));
+  L.push('');
+
+  L.push('## Postérité', '');
+  L.push(e.posterite, '');
+
+  L.push('## Auteurs associés', '');
+  L.push(`- **Auteurs du corpus** : ${e.auteursLinks.length ? e.auteursLinks.map((a) => a.name).join(', ') : '—'}`);
+  if (e.inspirateurs.length) {
+    L.push(`- **Hors corpus** : ${e.inspirateurs.join(' ; ')}`);
+  }
+  L.push('');
+
+  L.push('---', '', `Étude fondatrice exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
   return L.join('\n');
 }
 

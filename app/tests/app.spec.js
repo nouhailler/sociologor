@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(19);
+    await expect(dialog.getByRole('link')).toHaveCount(20);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -438,6 +438,32 @@ test.describe('Parcours principal', () => {
 
     await page.getByRole('link', { name: 'Howard S. Becker' }).click();
     await expect(page).toHaveURL(/\/a\/becker$/);
+  });
+
+  test('études fondatrices : accueil → liste → fiche → auteur du corpus et concept mobilisé', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /études fondatrices/ }).click();
+    await expect(page).toHaveURL(/\/etudes-fondatrices$/);
+    await expect(content(page).getByRole('heading', { name: 'Études fondatrices' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Asylums/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Asylums/ }).click();
+    await expect(page).toHaveURL(/\/ef\/asylums$/);
+    await expect(content(page).getByRole('heading', { name: 'Asylums', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Erving Goffman', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Institution totale/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Institution totale/ }).click();
+    await expect(page).toHaveURL(/\/c\/institution-totale$/);
+  });
+
+  test('études fondatrices : la relation concept → études fonctionne dans les deux sens', async ({ page }) => {
+    await enter(page, '/c/institution-totale');
+    await expect(content(page).getByRole('heading', { name: 'Institution totale', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Asylums' })).toBeVisible();
+
+    await page.getByRole('link', { name: 'Asylums' }).click();
+    await expect(page).toHaveURL(/\/ef\/asylums$/);
   });
 
   test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {

@@ -33,6 +33,9 @@
  * 18. chaque méthode sociologique a une catégorie valide, ses rubriques
  *     obligatoires remplies, et porte au moins un auteur du corpus ou un
  *     inspirateur hors corpus — jamais aucun des deux.
+ * 19. chaque étude fondatrice a une catégorie valide, ses rubriques
+ *     obligatoires remplies, au moins un concept mobilisé, et porte au
+ *     moins un auteur du corpus ou un inspirateur hors corpus.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -73,7 +76,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/etudes-fondatrices$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/ef\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -679,6 +682,50 @@ for (const cat of CATEGORIES_METHODES) {
   if (!METHODES.some((m) => m.categorie === cat.id)) fail(`Catégorie de méthodes vide : ${cat.id}`);
 }
 
+/* — 19. intégrité des études fondatrices — */
+// Les grandes enquêtes qui ont fait la sociologie, indépendantes d'une
+// problématique — à ne pas confondre avec `ETUDES` (etudes.js), plus courtes
+// et citées uniquement comme ressources d'une problématique. `concepts` ne
+// doit jamais être vide : c'est le cœur de la rubrique, contrairement à
+// `methodes`/`processus` qui restent optionnels.
+const { CATEGORIES_ETUDES_FONDATRICES, ETUDES_FONDATRICES } = await import('../src/data/etudes-fondatrices.js');
+
+const efCatIds = new Set(CATEGORIES_ETUDES_FONDATRICES.map((c) => c.id));
+const efIds = new Set();
+
+for (const e of ETUDES_FONDATRICES) {
+  if (efIds.has(e.id)) fail(`Étude fondatrice en double : ${e.id}`);
+  efIds.add(e.id);
+  for (const field of ['t', 'date', 'lieu', 'population', 'question', 'methode', 'resultats', 'posterite']) {
+    if (!e[field]) fail(`Étude fondatrice ${e.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!efCatIds.has(e.categorie)) fail(`Étude fondatrice ${e.id} : catégorie inconnue « ${e.categorie} ».`);
+  if ((e.limites || []).length === 0) fail(`Étude fondatrice ${e.id} : aucune limite listée.`);
+  if ((e.critiques || []).length === 0) fail(`Étude fondatrice ${e.id} : aucune critique listée.`);
+  if ((e.concepts || []).length === 0) fail(`Étude fondatrice ${e.id} : aucun concept mobilisé — c'est le cœur de la rubrique.`);
+  for (const c of e.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Étude fondatrice ${e.id} : concept inconnu « ${c} ».`);
+  }
+  for (const m of e.methodes || []) {
+    if (!methIds.has(m)) fail(`Étude fondatrice ${e.id} : méthode inconnue « ${m} ».`);
+  }
+  for (const p of e.processus || []) {
+    if (!procIds.has(p)) fail(`Étude fondatrice ${e.id} : processus inconnu « ${p} ».`);
+  }
+  for (const a of e.auteurs || []) {
+    if (!AUTHORS[a]) fail(`Étude fondatrice ${e.id} : auteur inconnu « ${a} ».`);
+  }
+  for (const i of e.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Étude fondatrice ${e.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+  if ((e.auteurs || []).length === 0 && (e.inspirateurs || []).length === 0) {
+    fail(`Étude fondatrice ${e.id} : ni auteur du corpus ni inspirateur — la section « Auteurs associés » serait vide.`);
+  }
+}
+for (const cat of CATEGORIES_ETUDES_FONDATRICES) {
+  if (!ETUDES_FONDATRICES.some((e) => e.categorie === cat.id)) fail(`Catégorie d'études fondatrices vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -725,6 +772,12 @@ console.log(
   line(
     'Méthodes',
     `${METHODES.length} en ${CATEGORIES_METHODES.length} catégories, ${METHODES.reduce((n, m) => n + (m.auteurs || []).length, 0)} auteurs du corpus, ${METHODES.reduce((n, m) => n + (m.inspirateurs || []).length, 0)} inspirateurs hors corpus`,
+  ),
+);
+console.log(
+  line(
+    'Études fondatrices',
+    `${ETUDES_FONDATRICES.length} en ${CATEGORIES_ETUDES_FONDATRICES.length} catégories, ${ETUDES_FONDATRICES.reduce((n, e) => n + (e.concepts || []).length, 0)} liens vers des concepts, ${ETUDES_FONDATRICES.reduce((n, e) => n + (e.methodes || []).length, 0)} liens vers des méthodes`,
   ),
 );
 console.log(

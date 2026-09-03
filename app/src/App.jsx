@@ -17,6 +17,8 @@ import Fondamentaux from './routes/Fondamentaux.jsx';
 import FondamentalFiche from './routes/FondamentalFiche.jsx';
 import Methodes from './routes/Methodes.jsx';
 import MethodeFiche from './routes/MethodeFiche.jsx';
+import EtudesFondatrices from './routes/EtudesFondatrices.jsx';
+import EtudeFondatriceFiche from './routes/EtudeFondatriceFiche.jsx';
 import Problematiques from './routes/Problematiques.jsx';
 import ProblematiqueFiche from './routes/ProblematiqueFiche.jsx';
 import GrapheProblematique from './routes/GrapheProblematique.jsx';
@@ -63,6 +65,8 @@ export default function App() {
       <Route path="/f/:id" element={<FondamentalFiche />} />
       <Route path="/methodes" element={<Methodes />} />
       <Route path="/me/:id" element={<MethodeFiche />} />
+      <Route path="/etudes-fondatrices" element={<EtudesFondatrices />} />
+      <Route path="/ef/:id" element={<EtudeFondatriceFiche />} />
       <Route path="/problematiques" element={<Problematiques />} />
       <Route path="/pb/:id" element={<ProblematiqueFiche />} />
       <Route path="/pb/:id/graphe" element={<GrapheProblematique />} />

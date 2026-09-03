@@ -9,10 +9,10 @@ leurs filiations. Application web progressive, consultable hors connexion.
 Une PWA React + Vite, sans compte, sans serveur applicatif et sans collecte de
 données. Tout le contenu — 34 fiches, 32 domaines, 382 concepts, 37 concepts
 fondamentaux, 30 courants, 39 phénomènes sociaux, 10 processus sociaux,
-27 méthodes sociologiques, 54 mécanismes sociaux, 12 problématiques sociales
-(avec leurs théories, études, statistiques et politiques publiques), et la
-documentation utilisateur — est embarqué dans le bundle et mis en cache par
-un service worker.
+27 méthodes sociologiques, 15 études fondatrices, 54 mécanismes sociaux,
+12 problématiques sociales (avec leurs théories, études, statistiques et
+politiques publiques), et la documentation utilisateur — est embarqué dans
+le bundle et mis en cache par un service worker.
 
 | Écran | Contenu |
 |---|---|
@@ -26,9 +26,10 @@ un service worker.
 | Phénomènes sociaux | 39 faits sociaux concrets, chacun relié aux concepts du corpus qui l'éclairent |
 | Processus sociaux | 10 trajectoires en étapes, reliées aux phénomènes qu'elles produisent |
 | Méthodes sociologiques | 27 méthodes d'enquête, en 9 catégories — objectif, quand l'utiliser, données produites, avantages, limites, exemple célèbre, auteurs associés |
+| Études fondatrices | 15 grandes enquêtes (Hawthorne, Milgram, Asylums, La Distinction…), en 6 catégories, reliées aux concepts qu'elles mobilisent — et réciproquement, depuis la fiche concept |
 | Mécanismes sociaux | 54 rouages qui expliquent comment un phénomène se produit |
 | Problématiques sociales | 12 enjeux qui font débat, avec leur graphe de liens vers théories, études, statistiques et politiques publiques |
-| Recherche | Plus de 850 entrées, insensible aux accents, filtrable par type |
+| Recherche | Plus de 880 entrées, insensible aux accents, filtrable par type |
 | Mes fiches | Les fiches épinglées, conservées sur l'appareil |
 | Paramètres | Affichage, données locales, mise à jour forcée, à propos |
 | Documentation | 53 pages, sommaire en accordéon, recherche plein texte |

@@ -4,6 +4,26 @@ Toutes les évolutions notables du projet sont documentées ici. Format
 inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) ;
 versionnage inspiré de [SemVer](https://semver.org/lang/fr/).
 
+## [1.16.0] - 2026-09-03
+
+### Ajouté
+- **Études fondatrices** : nouvelle rubrique, 15 grandes enquêtes qui ont
+  fait la sociologie (Hawthorne Studies, Expérience de Milgram, Expérience
+  de Stanford, Étude de Middletown, *The Polish Peasant*, *Street Corner
+  Society*, *Asylums*, *The Presentation of Self in Everyday Life*, *The
+  Managed Heart*, études de mobilité sociale, enquêtes de Lazarsfeld,
+  *The Hobo*, *La Reproduction*, *L'École capitaliste en France*, *La
+  Distinction*), en 6 catégories. Gabarit fixe en onze points — auteur(s),
+  date, lieu, population, question, méthode, résultats, concepts mobilisés,
+  limites, critiques, postérité (`/etudes-fondatrices`, `/ef/:id`).
+- La relation concepts → études fonctionne dans les deux sens : chaque étude
+  déclare les concepts qu'elle mobilise, et la fiche concept affiche
+  désormais les études qui la mobilisent (nouvelle section sur `Concept.jsx`).
+  La même relation existe en bonus avec les méthodes.
+- Distincte de l'entité « Études » déjà existante (`etudes.js`, 30 fiches),
+  réservée aux problématiques sociales et à un schéma plus léger — les deux
+  coexistent sans doublon.
+
 ## [1.15.0] - 2026-09-03
 
 ### Ajouté
