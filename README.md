@@ -1,34 +1,41 @@
 # Sociologor
 
-**La sociologie, reliée.** Quinze fiches — quatorze auteurs et l'École de
-Francfort — leurs concepts expliqués simplement, leurs œuvres, et le graphe de
+**La sociologie, reliée.** Trente-quatre fiches — auteurs, binôme et école de
+pensée — leurs concepts expliqués simplement, leurs œuvres, et le graphe de
 leurs filiations. Application web progressive, consultable hors connexion.
 
 ## Ce que c'est
 
 Une PWA React + Vite, sans compte, sans serveur applicatif et sans collecte de
-données. Tout le contenu — 15 fiches, 32 domaines, 38 concepts, 15 courants,
-39 phénomènes sociaux, 10 processus sociaux, 43 œuvres, et la documentation
+données. Tout le contenu — 34 fiches, 32 domaines, 382 concepts, 37 concepts
+fondamentaux, 30 courants, 39 phénomènes sociaux, 10 processus sociaux,
+54 mécanismes sociaux, 12 problématiques sociales (avec leurs théories,
+études, statistiques et politiques publiques), et la documentation
 utilisateur — est embarqué dans le bundle et mis en cache par un service
 worker.
 
 | Écran | Contenu |
 |---|---|
-| Accueil | Notion du jour (rotation sur les 38 concepts) et les 32 domaines, en 8 familles |
+| Accueil | Notion du jour (rotation sur les 382 concepts) et les 32 domaines, en 8 familles |
 | Domaine | Les auteurs de référence d'un thème, avec un paragraphe de contexte |
 | Fiche auteur | Repères, concepts, filiation, œuvres, citations, critiques, bibliographie |
-| Graphe | Filiations entre les 15 fiches, et réseau des 38 concepts |
-| Carte des courants | 15 courants — paradigme, courant, école, variante — reliés par leurs filiations |
+| Graphe | Filiations entre les 34 fiches, et réseau des 382 concepts |
+| Carte des courants | 30 courants — paradigme, courant, école, variante — reliés par leurs filiations |
+| Concepts sociaux | Les 382 concepts du corpus, groupés par auteur |
+| Concepts fondamentaux | 37 termes de base de la discipline (action, norme, pouvoir…), en 6 catégories, renvoyant vers les fiches concepts et processus qui les développent |
 | Phénomènes sociaux | 39 faits sociaux concrets, chacun relié aux concepts du corpus qui l'éclairent |
 | Processus sociaux | 10 trajectoires en étapes, reliées aux phénomènes qu'elles produisent |
-| Recherche | 145 entrées, insensible aux accents, filtrable par type |
+| Mécanismes sociaux | 54 rouages qui expliquent comment un phénomène se produit |
+| Problématiques sociales | 12 enjeux qui font débat, avec leur graphe de liens vers théories, études, statistiques et politiques publiques |
+| Recherche | Plus de 800 entrées, insensible aux accents, filtrable par type |
 | Mes fiches | Les fiches épinglées, conservées sur l'appareil |
 | Paramètres | Affichage, données locales, mise à jour forcée, à propos |
 | Documentation | 53 pages, sommaire en accordéon, recherche plein texte |
 | Menu ☰ | Toutes les fonctionnalités, classées par catégorie |
 
-Export Markdown d'une fiche, partage de son lien, bandeaux d'état réseau et de
-mise à jour, avertissement légal au premier lancement.
+Export Markdown d'une fiche, partage de son lien, bouton retour sur chaque
+écran secondaire, bandeaux d'état réseau et de mise à jour, avertissement
+légal au premier lancement.
 
 ## Aperçu
 

@@ -13,6 +13,8 @@ import Mecanismes from './routes/Mecanismes.jsx';
 import MecanismeFiche from './routes/MecanismeFiche.jsx';
 import Processus from './routes/Processus.jsx';
 import ProcessusFiche from './routes/ProcessusFiche.jsx';
+import Fondamentaux from './routes/Fondamentaux.jsx';
+import FondamentalFiche from './routes/FondamentalFiche.jsx';
 import Problematiques from './routes/Problematiques.jsx';
 import ProblematiqueFiche from './routes/ProblematiqueFiche.jsx';
 import GrapheProblematique from './routes/GrapheProblematique.jsx';
@@ -55,6 +57,8 @@ export default function App() {
       <Route path="/m/:id" element={<MecanismeFiche />} />
       <Route path="/processus" element={<Processus />} />
       <Route path="/pr/:id" element={<ProcessusFiche />} />
+      <Route path="/fondamentaux" element={<Fondamentaux />} />
+      <Route path="/f/:id" element={<FondamentalFiche />} />
       <Route path="/problematiques" element={<Problematiques />} />
       <Route path="/pb/:id" element={<ProblematiqueFiche />} />
       <Route path="/pb/:id/graphe" element={<GrapheProblematique />} />

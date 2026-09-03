@@ -28,6 +28,8 @@
  *     facteurs, conséquences, dynamiques ou manifestations vide — et aucune
  *     théorie, étude, statistique ou politique publique n'est orpheline
  *     (aucune problématique ne la cite).
+ * 17. chaque concept fondamental a une catégorie valide, et ses éventuels
+ *     concepts ou processus liés existent bien parmi les fiches déjà décrites.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -68,7 +70,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -613,6 +615,33 @@ for (const pp of POLITIQUES_PUBLIQUES) {
   if (!usedPolitiques.has(pp.id)) fail(`Politique publique orpheline (aucune problématique ne la cite) : ${pp.id}`);
 }
 
+/* — 17. intégrité des concepts fondamentaux — */
+// Vocabulaire de base de la discipline, indépendant d'un auteur : pas de
+// notions ici, chaque entrée fait sens seule. `concepts` et `processus`
+// pointent vers des fiches déjà décrites, jamais vers un identifiant inconnu.
+const { CATEGORIES_FONDAMENTAUX, FONDAMENTAUX } = await import('../src/data/fondamentaux.js');
+
+const fondaCatIds = new Set(CATEGORIES_FONDAMENTAUX.map((c) => c.id));
+const fondaIds = new Set();
+
+for (const f of FONDAMENTAUX) {
+  if (fondaIds.has(f.id)) fail(`Concept fondamental en double : ${f.id}`);
+  fondaIds.add(f.id);
+  for (const field of ['t', 'd', 'detail']) {
+    if (!f[field]) fail(`Concept fondamental ${f.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!fondaCatIds.has(f.categorie)) fail(`Concept fondamental ${f.id} : catégorie inconnue « ${f.categorie} ».`);
+  for (const c of f.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Concept fondamental ${f.id} : concept inconnu « ${c} ».`);
+  }
+  for (const pr of f.processus || []) {
+    if (!procIds.has(pr)) fail(`Concept fondamental ${f.id} : processus inconnu « ${pr} ».`);
+  }
+}
+for (const cat of CATEGORIES_FONDAMENTAUX) {
+  if (!FONDAMENTAUX.some((f) => f.categorie === cat.id)) fail(`Catégorie de concepts fondamentaux vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -647,6 +676,12 @@ console.log(
   line(
     'Processus',
     `${PROCESSUS.length} en ${CATEGORIES_PROCESSUS.length} catégories, ${PROCESSUS.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PROCESSUS.reduce((n, p) => n + (p.phenomenes || []).length, 0)} liens vers des phénomènes, ${PROCESSUS.reduce((n, p) => n + (p.notions || []).length, 0)} notions`,
+  ),
+);
+console.log(
+  line(
+    'Fondamentaux',
+    `${FONDAMENTAUX.length} en ${CATEGORIES_FONDAMENTAUX.length} catégories, ${FONDAMENTAUX.reduce((n, f) => n + (f.concepts || []).length, 0)} liens vers des concepts, ${FONDAMENTAUX.reduce((n, f) => n + (f.processus || []).length, 0)} liens vers des processus`,
   ),
 );
 console.log(

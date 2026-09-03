@@ -194,6 +194,25 @@ export function processusToMarkdown(p) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche de concept fondamental en Markdown — les mêmes rubriques que l'écran. */
+export function fondamentalToMarkdown(f) {
+  const L = [];
+  L.push(`# ${f.t}`, '');
+  L.push(`*${f.categorieT}*`, '');
+  L.push(`> ${f.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(f.detail, '');
+
+  const liens = [...f.conceptsLinks, ...f.processusLinks];
+  L.push('## Fiches du corpus liées', '');
+  L.push(liens.length ? liens.map((l) => `${l.label} (${l.authorName})`).join(', ') : 'Aucune.');
+  L.push('');
+
+  L.push('---', '', `Concept fondamental exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Sérialise une fiche mécanisme en Markdown — les mêmes rubriques que l'écran. */
 export function mecanismeToMarkdown(m) {
   const L = [];

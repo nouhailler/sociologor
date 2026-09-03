@@ -5,6 +5,7 @@ import { portraitUrl } from './portraits.js';
 import { CONCEPTS } from './concepts.js';
 import { CATEGORIES_PHENOMENES, DIMENSIONS_PHENOMENES, PHENOMENES } from './phenomenes.js';
 import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
+import { CATEGORIES_FONDAMENTAUX, FONDAMENTAUX } from './fondamentaux.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
 import { THEORIES } from './theories.js';
@@ -325,6 +326,44 @@ export function getProcessus(id) {
   };
 }
 
+/* — Concepts fondamentaux — */
+// Le vocabulaire de base de la discipline, indépendant d'un auteur unique —
+// à la différence de `CONCEPT_BASE`, jamais rattaché à `AUTHORS`. Le lien
+// reste à sens unique vers les concepts et processus du corpus, comme pour
+// les phénomènes et les mécanismes.
+
+export { CATEGORIES_FONDAMENTAUX };
+export const FONDAMENTAL_COUNT = FONDAMENTAUX.length;
+
+/** Les concepts fondamentaux groupés par catégorie, dans l'ordre de la liste. */
+export const FONDAMENTAL_CATEGORIES = CATEGORIES_FONDAMENTAUX.map((cat) => ({
+  ...cat,
+  termes: FONDAMENTAUX.filter((f) => f.categorie === cat.id),
+}));
+
+/** Fiche complète : concepts et processus du corpus résolus en liens cliquables. */
+export function getFondamental(id) {
+  const f = FONDAMENTAUX.find((x) => x.id === id);
+  if (!f) return null;
+  const categorie = CATEGORIES_FONDAMENTAUX.find((c) => c.id === f.categorie);
+  return {
+    ...f,
+    categorieT: categorie?.t || '',
+    conceptsLinks: (f.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName, to: `/c/${c}` })),
+    processusLinks: (f.processus || [])
+      .map((pr) => PROCESSUS.find((x) => x.id === pr))
+      .filter(Boolean)
+      .map((pr) => ({
+        id: pr.id,
+        label: pr.t,
+        authorName: CATEGORIES_PROCESSUS.find((c) => c.id === pr.categorie)?.t || '',
+        to: `/pr/${pr.id}`,
+      })),
+  };
+}
+
 /* — Mécanismes sociaux — */
 
 export { CATEGORIES_MECANISMES };
@@ -601,6 +640,9 @@ export const SEARCH_INDEX = (() => {
   PROCESSUS.forEach((p) =>
     items.push({ kind: 'Processus', title: p.t, sub: p.d, id: p.id, to: `/pr/${p.id}` }),
   );
+  FONDAMENTAUX.forEach((f) =>
+    items.push({ kind: 'Concept fondamental', title: f.t, sub: f.d, id: f.id, to: `/f/${f.id}` }),
+  );
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
@@ -629,6 +671,7 @@ export const SEARCH_FILTERS = [
   'Œuvres',
   'Phénomènes',
   'Processus',
+  'Concepts fondamentaux',
   'Mécanismes',
   'Problématiques',
   'Théories',
@@ -642,6 +685,7 @@ const KIND_BY_FILTER = {
   Œuvres: 'Œuvre',
   Phénomènes: 'Phénomène',
   Processus: 'Processus',
+  'Concepts fondamentaux': 'Concept fondamental',
   Mécanismes: 'Mécanisme',
   Problématiques: 'Problématique',
   Théories: 'Théorie',

@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(17);
+    await expect(dialog.getByRole('link')).toHaveCount(18);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -284,7 +284,7 @@ test.describe('Parcours principal', () => {
     await page.getByLabel('Rechercher dans les fiches').fill('emile');
     await expect(page.getByRole('link', { name: /Émile Durkheim/ }).first()).toBeVisible();
     await page.getByLabel('Rechercher dans les fiches').fill('habitus');
-    await page.getByRole('button', { name: 'Concepts' }).click();
+    await page.getByRole('button', { name: 'Concepts', exact: true }).click();
     await expect(page.getByText('Habitus').first()).toBeVisible();
     await expect(page).toHaveURL(/q=habitus/);
     // Le filtre Phénomènes exclut un concept homonyme absent des phénomènes.
@@ -403,6 +403,23 @@ test.describe('Parcours principal', () => {
     await page.getByRole('link', { name: /Classe sociale/ }).click();
     await expect(page).toHaveURL(/\/c\/classe-sociale$/);
     await expect(content(page).getByRole('heading', { name: 'Classe sociale', exact: true })).toBeVisible();
+  });
+
+  test('concepts fondamentaux : accueil → liste → fiche → concept du corpus', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /concepts fondamentaux/ }).click();
+    await expect(page).toHaveURL(/\/fondamentaux$/);
+    await expect(content(page).getByRole('heading', { name: 'Concepts fondamentaux' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Pouvoir/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Pouvoir/ }).click();
+    await expect(page).toHaveURL(/\/f\/pouvoir$/);
+    await expect(content(page).getByRole('heading', { name: 'Pouvoir', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Pouvoir · Max Weber/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Pouvoir · Max Weber/ }).click();
+    await expect(page).toHaveURL(/\/c\/pouvoir$/);
+    await expect(content(page).getByRole('heading', { name: 'Pouvoir', exact: true })).toBeVisible();
   });
 
   test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {

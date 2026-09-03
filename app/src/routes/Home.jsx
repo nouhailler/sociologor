@@ -6,6 +6,7 @@ import {
   AUTHORS,
   DOMAIN_COUNT,
   DOMAIN_FAMILIES,
+  FONDAMENTAL_COUNT,
   PHENOMENE_COUNT,
   PROCESSUS_COUNT,
   conceptOfTheDay,
@@ -58,6 +59,9 @@ export default function Home() {
           </Link>
           <Link to="/processus" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
             {PROCESSUS_COUNT} processus sociaux — de la précarisation au déclassement →
+          </Link>
+          <Link to="/fondamentaux" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {FONDAMENTAL_COUNT} concepts fondamentaux — le vocabulaire de base →
           </Link>
         </div>
 

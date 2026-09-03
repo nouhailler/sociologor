@@ -1,7 +1,9 @@
 # Sociologor — contexte projet
 
-PWA de consultation de 15 fiches de sociologie (14 auteurs + l'École de
-Francfort), leurs concepts, leurs œuvres et leur graphe de filiations.
+PWA de consultation de 34 fiches de sociologie (auteurs, binôme et école de
+pensée), leurs concepts, leurs œuvres et leur graphe de filiations — plus les
+phénomènes, processus, mécanismes et problématiques sociales qui s'y
+rattachent, et un glossaire de concepts fondamentaux indépendant des auteurs.
 Français, hors connexion, sans compte ni collecte de données.
 
 ## Structure du dépôt
@@ -40,6 +42,28 @@ hors connexion avec `npm run build && npm run preview`.
 `app/src/data/authors.js` a été **extrait mécaniquement** du prototype, sans
 retranscription. Toute correction de contenu se fait dans ce fichier, puis se
 répercute dans `app/docs/reference/contenu.md` si les chiffres changent.
+
+### Modèle de données
+
+Chaque type de fiche a son fichier dans `app/src/data/`, résolu et croisé
+dans `app/src/data/index.js` — jamais en écrivant les deux sens d'un lien à la
+main : le sens inverse se déduit toujours par lecture, sur le modèle déjà en
+place (`getPhenomene` déduit `mecanismesLinks` en filtrant `mecanismes.js`
+plutôt que l'inverse).
+
+| Fichier | Rattaché à | Renvoie vers |
+|---|---|---|
+| `concepts.js` | un auteur (`authors.js`) | associés/opposés, problématiques |
+| `phenomenes.js`, `processus.js` | rien (autonome) | concepts, notions libres |
+| `mecanismes.js` | rien (autonome) | concepts, processus, phénomènes |
+| `fondamentaux.js` | rien (autonome) | concepts, processus — définitions courtes uniquement |
+| `problematiques.js` | rien (autonome) | tout le reste, plus théories/études/statistiques/politiques publiques |
+
+`fondamentaux.js` porte le vocabulaire de base de la discipline (Action
+sociale, Pouvoir, Institution…) : contrairement aux concepts du corpus, une
+entrée n'est jamais signée par un auteur unique. Quand un terme recoupe une
+fiche concept ou processus déjà écrite, l'entrée reste courte et renvoie vers
+elle plutôt que de la dupliquer.
 
 ### Documentation
 

@@ -19,6 +19,7 @@ const CATEGORIES = [
       { to: '/courants', label: 'Carte des courants', hint: "D'où vient une manière de faire de la sociologie" },
       { to: '/sociologues', label: 'Sociologues', hint: 'Les trente-quatre fiches, par leur portrait' },
       { to: '/concepts', label: 'Concepts sociaux', hint: 'Les outils théoriques, par auteur' },
+      { to: '/fondamentaux', label: 'Concepts fondamentaux', hint: 'Le vocabulaire de base de la discipline' },
       { to: '/phenomenes', label: 'Phénomènes sociaux', hint: 'Faits concrets, éclairés par les concepts' },
       { to: '/mecanismes', label: 'Mécanismes sociaux', hint: "Les rouages qui expliquent comment un phénomène se produit" },
       { to: '/processus', label: 'Processus sociaux', hint: 'Les trajectoires qui mènent à ces faits' },
@@ -58,6 +59,7 @@ function activeTo(pathname) {
   if (pathname === '/' || pathname === '/accueil') return '/';
   if (pathname.startsWith('/sociologues') || pathname.startsWith('/a/')) return '/sociologues';
   if (pathname.startsWith('/concepts') || pathname.startsWith('/c/')) return '/concepts';
+  if (pathname.startsWith('/fondamentaux') || pathname.startsWith('/f/')) return '/fondamentaux';
   if (pathname.startsWith('/phenomenes') || pathname.startsWith('/p/')) return '/phenomenes';
   if (pathname.startsWith('/mecanismes') || pathname.startsWith('/m/')) return '/mecanismes';
   if (pathname.startsWith('/processus') || pathname.startsWith('/pr/')) return '/processus';
