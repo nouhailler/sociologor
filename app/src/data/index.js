@@ -8,6 +8,8 @@ import { CATEGORIES_PROCESSUS, PROCESSUS } from './processus.js';
 import { CATEGORIES_FONDAMENTAUX, FONDAMENTAUX } from './fondamentaux.js';
 import { CATEGORIES_METHODES, METHODES } from './methodes.js';
 import { CATEGORIES_ETUDES_FONDATRICES, ETUDES_FONDATRICES } from './etudes-fondatrices.js';
+import { CATEGORIES_INSTITUTIONS, INSTITUTIONS } from './institutions.js';
+import { CATEGORIES_GROUPES_SOCIAUX, GROUPES_SOCIAUX } from './groupes-sociaux.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
 import { THEORIES } from './theories.js';
@@ -451,6 +453,81 @@ export function getEtudeFondatrice(id) {
   };
 }
 
+/* — Institutions sociales — */
+// Comment un cadre concret (famille, école, État, prison…) produit des
+// normes, des rôles, des statuts et des comportements — relié à
+// `fondamentaux.js`, où ces mécanismes sont déjà décrits, plutôt que de les
+// redéfinir. `domaine` reste un lien optionnel vers `domains.js`, quand un
+// domaine existant recoupe directement l'institution.
+
+export { CATEGORIES_INSTITUTIONS };
+export const INSTITUTION_COUNT = INSTITUTIONS.length;
+
+/** Les institutions groupées par catégorie, dans l'ordre de la liste. */
+export const INSTITUTION_CATEGORIES = CATEGORIES_INSTITUTIONS.map((cat) => ({
+  ...cat,
+  institutions: INSTITUTIONS.filter((i) => i.categorie === cat.id),
+}));
+
+/** Fiche complète : fondamentaux, concepts et domaine résolus en liens cliquables. */
+export function getInstitution(id) {
+  const i = INSTITUTIONS.find((x) => x.id === id);
+  if (!i) return null;
+  const categorie = CATEGORIES_INSTITUTIONS.find((c) => c.id === i.categorie);
+  const domaine = i.domaine ? DOMAINS.find((d) => d.id === i.domaine) : null;
+  return {
+    ...i,
+    categorieT: categorie?.t || '',
+    fondamentauxLinks: (i.fondamentaux || [])
+      .map((f) => FONDAMENTAUX.find((x) => x.id === f))
+      .filter(Boolean)
+      .map((f) => ({ id: f.id, label: f.t })),
+    conceptsLinks: (i.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    domaineLink: domaine ? { id: domaine.id, t: domaine.t } : null,
+  };
+}
+
+/* — Groupes sociaux — */
+// Les grandes formes que prend un collectif — groupe primaire, classe
+// sociale, réseau — reliées à `fondamentaux.js` et `concepts.js`, sur le
+// modèle exact d'`institutions.js`, avec en plus `auteurs`/`inspirateurs`
+// (motif `methodes.js`).
+
+export { CATEGORIES_GROUPES_SOCIAUX };
+export const GROUPE_SOCIAL_COUNT = GROUPES_SOCIAUX.length;
+
+/** Les groupes sociaux groupés par catégorie, dans l'ordre de la liste. */
+export const GROUPE_SOCIAL_CATEGORIES = CATEGORIES_GROUPES_SOCIAUX.map((cat) => ({
+  ...cat,
+  groupes: GROUPES_SOCIAUX.filter((g) => g.categorie === cat.id),
+}));
+
+/** Fiche complète : fondamentaux, concepts, domaine et auteurs résolus en liens cliquables. */
+export function getGroupeSocial(id) {
+  const g = GROUPES_SOCIAUX.find((x) => x.id === id);
+  if (!g) return null;
+  const categorie = CATEGORIES_GROUPES_SOCIAUX.find((c) => c.id === g.categorie);
+  const domaine = g.domaine ? DOMAINS.find((d) => d.id === g.domaine) : null;
+  return {
+    ...g,
+    categorieT: categorie?.t || '',
+    fondamentauxLinks: (g.fondamentaux || [])
+      .map((f) => FONDAMENTAUX.find((x) => x.id === f))
+      .filter(Boolean)
+      .map((f) => ({ id: f.id, label: f.t })),
+    conceptsLinks: (g.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    domaineLink: domaine ? { id: domaine.id, t: domaine.t } : null,
+    auteursLinks: (g.auteurs || [])
+      .filter((a) => AUTHORS[a])
+      .map((a) => ({ id: a, name: AUTHORS[a].name })),
+    inspirateurs: g.inspirateurs || [],
+  };
+}
+
 /* — Mécanismes sociaux — */
 
 export { CATEGORIES_MECANISMES };
@@ -736,6 +813,12 @@ export const SEARCH_INDEX = (() => {
   ETUDES_FONDATRICES.forEach((e) =>
     items.push({ kind: 'Étude fondatrice', title: e.t, sub: e.question, id: e.id, to: `/ef/${e.id}` }),
   );
+  INSTITUTIONS.forEach((i) =>
+    items.push({ kind: 'Institution', title: i.t, sub: i.d, id: i.id, to: `/in/${i.id}` }),
+  );
+  GROUPES_SOCIAUX.forEach((g) =>
+    items.push({ kind: 'Groupe social', title: g.t, sub: g.d, id: g.id, to: `/gs/${g.id}` }),
+  );
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
@@ -767,6 +850,8 @@ export const SEARCH_FILTERS = [
   'Concepts fondamentaux',
   'Méthodes',
   'Études fondatrices',
+  'Institutions',
+  'Groupes sociaux',
   'Mécanismes',
   'Problématiques',
   'Théories',
@@ -783,6 +868,8 @@ const KIND_BY_FILTER = {
   'Concepts fondamentaux': 'Concept fondamental',
   Méthodes: 'Méthode',
   'Études fondatrices': 'Étude fondatrice',
+  Institutions: 'Institution',
+  'Groupes sociaux': 'Groupe social',
   Mécanismes: 'Mécanisme',
   Problématiques: 'Problématique',
   Théories: 'Théorie',

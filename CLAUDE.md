@@ -4,8 +4,9 @@ PWA de consultation de 34 fiches de sociologie (auteurs, binôme et école de
 pensée), leurs concepts, leurs œuvres et leur graphe de filiations — plus les
 phénomènes, processus, mécanismes et problématiques sociales qui s'y
 rattachent, un glossaire de concepts fondamentaux indépendant des auteurs,
-les méthodes d'enquête par lesquelles ce savoir est produit, et les grandes
-études qui l'ont fondé.
+les méthodes d'enquête par lesquelles ce savoir est produit, les grandes
+études qui l'ont fondé, et les institutions et groupes sociaux concrets où
+ce savoir s'applique.
 Français, hors connexion, sans compte ni collecte de données.
 
 ## Structure du dépôt
@@ -61,6 +62,8 @@ plutôt que l'inverse).
 | `fondamentaux.js` | rien (autonome) | concepts, processus — définitions courtes uniquement |
 | `methodes.js` | rien (autonome) | auteurs du corpus + inspirateurs hors corpus, à parts égales |
 | `etudes-fondatrices.js` | rien (autonome) | concepts (jamais vide), méthodes, processus, auteurs/inspirateurs |
+| `institutions.js` | rien (autonome) | fondamentaux + concepts (jamais vides), domaine optionnel |
+| `groupes-sociaux.js` | rien (autonome) | fondamentaux + concepts (jamais vides), domaine optionnel, auteurs/inspirateurs |
 | `problematiques.js` | rien (autonome) | tout le reste, plus théories/études/statistiques/politiques publiques |
 
 `fondamentaux.js` porte le vocabulaire de base de la discipline (Action
@@ -86,6 +89,23 @@ part entière, jamais rattachée à une problématique, dont `concepts` ne doit
 jamais être vide — `getConcept()` en déduit `etudesLinks` par lecture
 inverse, exactement comme `problematiquesLinks`, pour rendre possible la
 relation concepts → études.
+
+`institutions.js` (Famille, École, Prison…) relie chaque institution
+concrète aux mécanismes déjà décrits dans `fondamentaux.js` — norme sociale,
+rôle social, socialisation, pouvoir, contrôle social, reproduction sociale,
+déviance : elle ne les redéfinit pas, elle montre laquelle chaque
+institution mobilise et comment. Six des dix-neuf recoupent un domaine déjà
+décrit dans `domains.js` (Famille, École/Éducation, Religion, État/
+Politique…) : le champ optionnel `domaine` renvoie alors vers ce domaine
+plutôt que de dupliquer son contenu — `domains.js` reste un point d'entrée
+vers les auteurs, cette rubrique porte le mécanisme.
+
+`groupes-sociaux.js` (Groupe primaire, Classe sociale, Réseau social…) suit
+le même principe, avec en plus `auteurs`/`inspirateurs` comme `methodes.js`.
+Deux entrées — `communaute` et `organisation` — recoupent des fiches déjà
+décrites au même niveau d'abstraction dans `fondamentaux.js` : elles restent
+en version courte, renvoyant vers la fiche complète plutôt que de la
+dupliquer.
 
 ### Documentation
 

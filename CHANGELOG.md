@@ -4,6 +4,31 @@ Toutes les évolutions notables du projet sont documentées ici. Format
 inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) ;
 versionnage inspiré de [SemVer](https://semver.org/lang/fr/).
 
+## [1.17.0] - 2026-09-03
+
+### Ajouté
+- **Institutions sociales** : nouvelle rubrique, 19 institutions (Famille,
+  École, État, Justice, Police, Armée, Religion, Entreprise, Marché,
+  Médias, Science, Médecine, Université, Travail, Administration, Prison,
+  Hôpital, Parti politique, Syndicat), en 6 catégories, répondant à la
+  question : comment une institution produit-elle des normes, des rôles,
+  des statuts et des comportements ? Chaque fiche relie l'institution aux
+  concepts fondamentaux déjà décrits (norme sociale, rôle social,
+  socialisation, pouvoir, contrôle social, reproduction sociale, déviance)
+  et aux concepts du corpus, avec un renvoi optionnel vers le domaine
+  correspondant quand il existe déjà (`/institutions`, `/in/:id`).
+- **Groupes sociaux** : nouvelle rubrique, 20 formes de collectif (Groupe
+  primaire, Groupe secondaire, Groupe de référence, Groupe d'appartenance,
+  Groupe professionnel, Classe sociale, Groupe ethnique, Groupe
+  générationnel, Groupe religieux, Groupe militant, Groupe minoritaire,
+  Groupe majoritaire, Communauté, Foule, Organisation, Réseau social,
+  Diaspora, Élites, Professionnels, Classes populaires), en 6 catégories,
+  reliées aux concepts fondamentaux et aux concepts du corpus, avec auteurs
+  du corpus et figures hors corpus (`/groupes-sociaux`, `/gs/:id`).
+  Communauté et Organisation, déjà décrites au même niveau d'abstraction
+  dans les concepts fondamentaux, restent dans la liste en version courte,
+  renvoyant vers la fiche complète plutôt que de la dupliquer.
+
 ## [1.16.0] - 2026-09-03
 
 ### Ajouté

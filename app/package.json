@@ -1,7 +1,7 @@
 {
   "name": "sociologor",
   "private": true,
-  "version": "1.16.0",
+  "version": "1.17.0",
   "type": "module",
   "description": "Sociologor — 34 fiches de sociologie, leurs concepts et leurs filiations, disponibles hors connexion.",
   "scripts": {

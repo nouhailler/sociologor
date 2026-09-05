@@ -8,6 +8,8 @@ import {
   DOMAIN_FAMILIES,
   ETUDE_FONDATRICE_COUNT,
   FONDAMENTAL_COUNT,
+  GROUPE_SOCIAL_COUNT,
+  INSTITUTION_COUNT,
   METHODE_COUNT,
   PHENOMENE_COUNT,
   PROCESSUS_COUNT,
@@ -70,6 +72,12 @@ export default function Home() {
           </Link>
           <Link to="/etudes-fondatrices" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
             {ETUDE_FONDATRICE_COUNT} études fondatrices — de Hawthorne à La Distinction →
+          </Link>
+          <Link to="/institutions" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {INSTITUTION_COUNT} institutions sociales — de la famille à la prison →
+          </Link>
+          <Link to="/groupes-sociaux" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {GROUPE_SOCIAL_COUNT} groupes sociaux — du groupe primaire au réseau →
           </Link>
         </div>
 

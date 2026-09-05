@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(20);
+    await expect(dialog.getByRole('link')).toHaveCount(22);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -464,6 +464,50 @@ test.describe('Parcours principal', () => {
 
     await page.getByRole('link', { name: 'Asylums' }).click();
     await expect(page).toHaveURL(/\/ef\/asylums$/);
+  });
+
+  test('institutions sociales : accueil → liste → fiche → fondamental, concept et domaine', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /institutions sociales/ }).click();
+    await expect(page).toHaveURL(/\/institutions$/);
+    await expect(content(page).getByRole('heading', { name: 'Institutions sociales' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^École/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^École/ }).click();
+    await expect(page).toHaveURL(/\/in\/ecole$/);
+    await expect(content(page).getByRole('heading', { name: 'École', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Socialisation', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Capital culturel/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /Approfondir via le domaine/ }).click();
+    await expect(page).toHaveURL(/\/d\/education$/);
+  });
+
+  test('groupes sociaux : accueil → liste → fiche → fondamental, concept, domaine et auteur', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /groupes sociaux/ }).click();
+    await expect(page).toHaveURL(/\/groupes-sociaux$/);
+    await expect(content(page).getByRole('heading', { name: 'Groupes sociaux' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Groupe professionnel/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Groupe professionnel/ }).click();
+    await expect(page).toHaveURL(/\/gs\/groupe-professionnel$/);
+    await expect(content(page).getByRole('heading', { name: 'Groupe professionnel', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Statut social', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Ordres sociaux/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Max Weber', exact: true })).toBeVisible();
+
+    await page.getByRole('link', { name: /Approfondir via le domaine/ }).click();
+    await expect(page).toHaveURL(/\/d\/professions$/);
+  });
+
+  test('groupes sociaux : une entrée courte (Communauté) renvoie vers le concept fondamental existant', async ({ page }) => {
+    await enter(page, '/gs/communaute');
+    await expect(content(page).getByRole('heading', { name: 'Communauté', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Communauté', exact: true })).toBeVisible();
+
+    await page.getByRole('link', { name: 'Communauté', exact: true }).click();
+    await expect(page).toHaveURL(/\/f\/communaute$/);
   });
 
   test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {

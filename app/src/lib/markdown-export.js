@@ -305,6 +305,69 @@ export function etudeFondatriceToMarkdown(e) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche institution en Markdown — les mêmes rubriques que l'écran. */
+export function institutionToMarkdown(i) {
+  const L = [];
+  L.push(`# ${i.t}`, '');
+  L.push(`*${i.categorieT}*`, '');
+  L.push(`> ${i.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(i.detail, '');
+
+  L.push('## Comment elle produit normes, rôles et comportements', '');
+  L.push(i.mecanismeSocial, '');
+
+  L.push('## Concepts fondamentaux mobilisés', '');
+  L.push(i.fondamentauxLinks.map((f) => f.label).join(', '), '');
+
+  L.push('## Concepts du corpus', '');
+  L.push(i.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', '), '');
+
+  if (i.domaineLink) {
+    L.push('## Domaine associé', '');
+    L.push(i.domaineLink.t, '');
+  }
+
+  L.push('---', '', `Institution exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
+/** Sérialise une fiche groupe social en Markdown — les mêmes rubriques que l'écran. */
+export function groupeSocialToMarkdown(g) {
+  const L = [];
+  L.push(`# ${g.t}`, '');
+  L.push(`*${g.categorieT}*`, '');
+  L.push(`> ${g.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(g.detail, '');
+
+  L.push('## Ce qui le définit et le distingue', '');
+  L.push(g.dynamiqueSociale, '');
+
+  L.push('## Concepts fondamentaux mobilisés', '');
+  L.push(g.fondamentauxLinks.map((f) => f.label).join(', '), '');
+
+  L.push('## Concepts du corpus', '');
+  L.push(g.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', '), '');
+
+  if (g.domaineLink) {
+    L.push('## Domaine associé', '');
+    L.push(g.domaineLink.t, '');
+  }
+
+  L.push('## Auteurs associés', '');
+  L.push(`- **Auteurs du corpus** : ${g.auteursLinks.length ? g.auteursLinks.map((a) => a.name).join(', ') : '—'}`);
+  if (g.inspirateurs.length) {
+    L.push(`- **Hors corpus** : ${g.inspirateurs.join(' ; ')}`);
+  }
+  L.push('');
+
+  L.push('---', '', `Groupe social exporté depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Sérialise une fiche mécanisme en Markdown — les mêmes rubriques que l'écran. */
 export function mecanismeToMarkdown(m) {
   const L = [];

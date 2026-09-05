@@ -36,6 +36,13 @@
  * 19. chaque étude fondatrice a une catégorie valide, ses rubriques
  *     obligatoires remplies, au moins un concept mobilisé, et porte au
  *     moins un auteur du corpus ou un inspirateur hors corpus.
+ * 20. chaque institution sociale a une catégorie valide, ses rubriques
+ *     obligatoires remplies, au moins un concept fondamental et un concept
+ *     du corpus mobilisés, et un domaine valide si renseigné.
+ * 21. chaque groupe social a une catégorie valide, ses rubriques
+ *     obligatoires remplies, au moins un concept fondamental et un concept
+ *     du corpus mobilisés, un domaine valide si renseigné, et porte au
+ *     moins un auteur du corpus ou un inspirateur hors corpus.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -76,7 +83,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/etudes-fondatrices$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/ef\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/etudes-fondatrices$/, /^\/institutions$/, /^\/groupes-sociaux$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/ef\/[a-z-]+$/, /^\/in\/[a-z-]+$/, /^\/gs\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -726,6 +733,82 @@ for (const cat of CATEGORIES_ETUDES_FONDATRICES) {
   if (!ETUDES_FONDATRICES.some((e) => e.categorie === cat.id)) fail(`Catégorie d'études fondatrices vide : ${cat.id}`);
 }
 
+/* — 20. intégrité des institutions sociales — */
+// Comment un cadre concret produit des normes, des rôles, des statuts et des
+// comportements — relié à `fondamentaux.js` (la chaîne théorique déjà
+// décrite) et à `concepts.js` (son ancrage dans le corpus), jamais vides
+// l'un ni l'autre. `domaine`, s'il est renseigné, doit exister dans
+// `domains.js`.
+const { CATEGORIES_INSTITUTIONS, INSTITUTIONS } = await import('../src/data/institutions.js');
+
+const instCatIds = new Set(CATEGORIES_INSTITUTIONS.map((c) => c.id));
+const instIds = new Set();
+
+for (const i of INSTITUTIONS) {
+  if (instIds.has(i.id)) fail(`Institution en double : ${i.id}`);
+  instIds.add(i.id);
+  for (const field of ['t', 'd', 'detail', 'mecanismeSocial']) {
+    if (!i[field]) fail(`Institution ${i.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!instCatIds.has(i.categorie)) fail(`Institution ${i.id} : catégorie inconnue « ${i.categorie} ».`);
+  if ((i.fondamentaux || []).length === 0) fail(`Institution ${i.id} : aucun concept fondamental mobilisé.`);
+  for (const f of i.fondamentaux || []) {
+    if (!fondaIds.has(f)) fail(`Institution ${i.id} : concept fondamental inconnu « ${f} ».`);
+  }
+  if ((i.concepts || []).length === 0) fail(`Institution ${i.id} : aucun concept du corpus mobilisé.`);
+  for (const c of i.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Institution ${i.id} : concept inconnu « ${c} ».`);
+  }
+  if (i.domaine && !seenDomain.has(i.domaine)) {
+    fail(`Institution ${i.id} : domaine inconnu « ${i.domaine} ».`);
+  }
+}
+for (const cat of CATEGORIES_INSTITUTIONS) {
+  if (!INSTITUTIONS.some((i) => i.categorie === cat.id)) fail(`Catégorie d'institutions vide : ${cat.id}`);
+}
+
+/* — 21. intégrité des groupes sociaux — */
+// Les grandes formes que prend un collectif, sur le même modèle
+// qu'`institutions.js` (fondamentaux/concepts jamais vides, domaine
+// optionnel), plus la convention auteurs/inspirateurs de `methodes.js`
+// (au moins l'un des deux).
+const { CATEGORIES_GROUPES_SOCIAUX, GROUPES_SOCIAUX } = await import('../src/data/groupes-sociaux.js');
+
+const gsCatIds = new Set(CATEGORIES_GROUPES_SOCIAUX.map((c) => c.id));
+const gsIds = new Set();
+
+for (const g of GROUPES_SOCIAUX) {
+  if (gsIds.has(g.id)) fail(`Groupe social en double : ${g.id}`);
+  gsIds.add(g.id);
+  for (const field of ['t', 'd', 'detail', 'dynamiqueSociale']) {
+    if (!g[field]) fail(`Groupe social ${g.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!gsCatIds.has(g.categorie)) fail(`Groupe social ${g.id} : catégorie inconnue « ${g.categorie} ».`);
+  if ((g.fondamentaux || []).length === 0) fail(`Groupe social ${g.id} : aucun concept fondamental mobilisé.`);
+  for (const f of g.fondamentaux || []) {
+    if (!fondaIds.has(f)) fail(`Groupe social ${g.id} : concept fondamental inconnu « ${f} ».`);
+  }
+  if ((g.concepts || []).length === 0) fail(`Groupe social ${g.id} : aucun concept du corpus mobilisé.`);
+  for (const c of g.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Groupe social ${g.id} : concept inconnu « ${c} ».`);
+  }
+  if (g.domaine && !seenDomain.has(g.domaine)) {
+    fail(`Groupe social ${g.id} : domaine inconnu « ${g.domaine} ».`);
+  }
+  for (const a of g.auteurs || []) {
+    if (!AUTHORS[a]) fail(`Groupe social ${g.id} : auteur inconnu « ${a} ».`);
+  }
+  for (const i of g.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Groupe social ${g.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+  if ((g.auteurs || []).length === 0 && (g.inspirateurs || []).length === 0) {
+    fail(`Groupe social ${g.id} : ni auteur du corpus ni inspirateur — la section « Auteurs associés » serait vide.`);
+  }
+}
+for (const cat of CATEGORIES_GROUPES_SOCIAUX) {
+  if (!GROUPES_SOCIAUX.some((g) => g.categorie === cat.id)) fail(`Catégorie de groupes sociaux vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -778,6 +861,18 @@ console.log(
   line(
     'Études fondatrices',
     `${ETUDES_FONDATRICES.length} en ${CATEGORIES_ETUDES_FONDATRICES.length} catégories, ${ETUDES_FONDATRICES.reduce((n, e) => n + (e.concepts || []).length, 0)} liens vers des concepts, ${ETUDES_FONDATRICES.reduce((n, e) => n + (e.methodes || []).length, 0)} liens vers des méthodes`,
+  ),
+);
+console.log(
+  line(
+    'Institutions',
+    `${INSTITUTIONS.length} en ${CATEGORIES_INSTITUTIONS.length} catégories, ${INSTITUTIONS.reduce((n, i) => n + (i.fondamentaux || []).length, 0)} liens vers des fondamentaux, ${INSTITUTIONS.reduce((n, i) => n + (i.concepts || []).length, 0)} liens vers des concepts, ${INSTITUTIONS.filter((i) => i.domaine).length} liens vers un domaine`,
+  ),
+);
+console.log(
+  line(
+    'Groupes sociaux',
+    `${GROUPES_SOCIAUX.length} en ${CATEGORIES_GROUPES_SOCIAUX.length} catégories, ${GROUPES_SOCIAUX.reduce((n, g) => n + (g.fondamentaux || []).length, 0)} liens vers des fondamentaux, ${GROUPES_SOCIAUX.reduce((n, g) => n + (g.concepts || []).length, 0)} liens vers des concepts, ${GROUPES_SOCIAUX.filter((g) => g.domaine).length} liens vers un domaine`,
   ),
 );
 console.log(
