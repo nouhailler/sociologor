@@ -4,6 +4,27 @@ Toutes les évolutions notables du projet sont documentées ici. Format
 inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/) ;
 versionnage inspiré de [SemVer](https://semver.org/lang/fr/).
 
+## [1.18.0] - 2026-09-07
+
+### Ajouté
+- **Pratiques sociales** : nouvelle rubrique, 21 pratiques concrètes
+  (Consommation, Travail, Vote, Abstention, Lecture, Pratiques culturelles,
+  sportives, religieuses et alimentaires, Mobilité quotidienne, Usage du
+  numérique, Usages des réseaux sociaux, Loisirs, Sociabilité, Mariage,
+  Parentalité, Éducation des enfants, Pratiques professionnelles,
+  Engagement associatif, Engagement militant, Participation politique), en
+  6 catégories. Chaque fiche explique laquelle des variables classe
+  sociale, genre, âge, territoire, capital culturel, habitus et
+  socialisation la fait varier — jamais les sept mécaniquement à chaque
+  fois — reliée aux concepts fondamentaux et du corpus, avec un renvoi
+  optionnel vers un groupe social (rendant cliquable l'étape « classe
+  sociale » ou « génération » de cette chaîne) et vers un domaine
+  (`/pratiques`, `/pra/:id`).
+- Distincte de `phenomenes.js` : un phénomène (Chômage, Abstention
+  électorale…) regarde un fait social agrégé et souvent problématique ;
+  cette rubrique regarde le geste individuel lui-même — le même terrain,
+  un autre angle.
+
 ## [1.17.0] - 2026-09-03
 
 ### Ajouté

@@ -23,6 +23,8 @@ import Institutions from './routes/Institutions.jsx';
 import InstitutionFiche from './routes/InstitutionFiche.jsx';
 import GroupesSociaux from './routes/GroupesSociaux.jsx';
 import GroupeSocialFiche from './routes/GroupeSocialFiche.jsx';
+import Pratiques from './routes/Pratiques.jsx';
+import PratiqueFiche from './routes/PratiqueFiche.jsx';
 import Problematiques from './routes/Problematiques.jsx';
 import ProblematiqueFiche from './routes/ProblematiqueFiche.jsx';
 import GrapheProblematique from './routes/GrapheProblematique.jsx';
@@ -75,6 +77,8 @@ export default function App() {
       <Route path="/in/:id" element={<InstitutionFiche />} />
       <Route path="/groupes-sociaux" element={<GroupesSociaux />} />
       <Route path="/gs/:id" element={<GroupeSocialFiche />} />
+      <Route path="/pratiques" element={<Pratiques />} />
+      <Route path="/pra/:id" element={<PratiqueFiche />} />
       <Route path="/problematiques" element={<Problematiques />} />
       <Route path="/pb/:id" element={<ProblematiqueFiche />} />
       <Route path="/pb/:id/graphe" element={<GrapheProblematique />} />

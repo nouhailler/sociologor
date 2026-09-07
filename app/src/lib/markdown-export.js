@@ -368,6 +368,46 @@ export function groupeSocialToMarkdown(g) {
   return L.join('\n');
 }
 
+/** Sérialise une fiche pratique sociale en Markdown — les mêmes rubriques que l'écran. */
+export function pratiqueToMarkdown(p) {
+  const L = [];
+  L.push(`# ${p.t}`, '');
+  L.push(`*${p.categorieT}*`, '');
+  L.push(`> ${p.d}`, '');
+
+  L.push('## Ce que la sociologie en dit', '');
+  L.push(p.detail, '');
+
+  L.push('## Ce qui la fait varier', '');
+  L.push(p.variablesSociales, '');
+
+  L.push('## Concepts fondamentaux mobilisés', '');
+  L.push(p.fondamentauxLinks.map((f) => f.label).join(', '), '');
+
+  L.push('## Concepts du corpus', '');
+  L.push(p.conceptsLinks.map((c) => `${c.label} (${c.authorName})`).join(', '), '');
+
+  if (p.groupesSociauxLinks.length) {
+    L.push('## Groupes sociaux liés', '');
+    L.push(p.groupesSociauxLinks.map((g) => g.label).join(', '), '');
+  }
+
+  if (p.domaineLink) {
+    L.push('## Domaine associé', '');
+    L.push(p.domaineLink.t, '');
+  }
+
+  L.push('## Auteurs associés', '');
+  L.push(`- **Auteurs du corpus** : ${p.auteursLinks.length ? p.auteursLinks.map((a) => a.name).join(', ') : '—'}`);
+  if (p.inspirateurs.length) {
+    L.push(`- **Hors corpus** : ${p.inspirateurs.join(' ; ')}`);
+  }
+  L.push('');
+
+  L.push('---', '', `Pratique sociale exportée depuis Sociologor — ${new Date().toLocaleDateString('fr-FR')}.`);
+  return L.join('\n');
+}
+
 /** Sérialise une fiche mécanisme en Markdown — les mêmes rubriques que l'écran. */
 export function mecanismeToMarkdown(m) {
   const L = [];

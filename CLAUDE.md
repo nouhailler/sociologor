@@ -5,8 +5,8 @@ pensée), leurs concepts, leurs œuvres et leur graphe de filiations — plus le
 phénomènes, processus, mécanismes et problématiques sociales qui s'y
 rattachent, un glossaire de concepts fondamentaux indépendant des auteurs,
 les méthodes d'enquête par lesquelles ce savoir est produit, les grandes
-études qui l'ont fondé, et les institutions et groupes sociaux concrets où
-ce savoir s'applique.
+études qui l'ont fondé, les institutions et groupes sociaux concrets où ce
+savoir s'applique, et les pratiques sociales qu'il permet d'expliquer.
 Français, hors connexion, sans compte ni collecte de données.
 
 ## Structure du dépôt
@@ -64,6 +64,7 @@ plutôt que l'inverse).
 | `etudes-fondatrices.js` | rien (autonome) | concepts (jamais vide), méthodes, processus, auteurs/inspirateurs |
 | `institutions.js` | rien (autonome) | fondamentaux + concepts (jamais vides), domaine optionnel |
 | `groupes-sociaux.js` | rien (autonome) | fondamentaux + concepts (jamais vides), domaine optionnel, auteurs/inspirateurs |
+| `pratiques.js` | rien (autonome) | fondamentaux + concepts (jamais vides), groupes sociaux + domaine optionnels, auteurs/inspirateurs |
 | `problematiques.js` | rien (autonome) | tout le reste, plus théories/études/statistiques/politiques publiques |
 
 `fondamentaux.js` porte le vocabulaire de base de la discipline (Action
@@ -106,6 +107,17 @@ Deux entrées — `communaute` et `organisation` — recoupent des fiches déjà
 décrites au même niveau d'abstraction dans `fondamentaux.js` : elles restent
 en version courte, renvoyant vers la fiche complète plutôt que de la
 dupliquer.
+
+`pratiques.js` (Consommation, Vote, Lecture, Pratiques sportives…) porte ce
+que les individus font concrètement, par opposition aux structures qui les
+entourent — distinct de `phenomenes.js`, qui regarde le même terrain comme
+fait social agrégé (Abstention électorale, par exemple) plutôt que comme
+geste individuel. Chaque pratique explique, au cas par cas, laquelle des
+variables classe sociale/genre/âge/territoire/capital culturel/habitus/
+socialisation la fait varier — jamais les sept mécaniquement à chaque fois.
+Un champ propre à cette rubrique, `groupesSociaux` (optionnel, ids de
+`groupes-sociaux.js`), rend cliquable l'étape « classe sociale » ou
+« génération » de cette chaîne quand elle est pertinente.
 
 ### Documentation
 

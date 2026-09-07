@@ -43,6 +43,11 @@
  *     obligatoires remplies, au moins un concept fondamental et un concept
  *     du corpus mobilisés, un domaine valide si renseigné, et porte au
  *     moins un auteur du corpus ou un inspirateur hors corpus.
+ * 22. chaque pratique sociale a une catégorie valide, ses rubriques
+ *     obligatoires remplies, au moins un concept fondamental et un concept
+ *     du corpus mobilisés, des groupes sociaux et un domaine valides si
+ *     renseignés, et porte au moins un auteur du corpus ou un inspirateur
+ *     hors corpus.
  *
  * Sort en code 1 si un contrôle échoue : le build doit s'arrêter.
  */
@@ -83,7 +88,7 @@ orphans.forEach((f) => fail(`Fichier présent mais absent du sommaire : docs/${f
 
 /* — 2. liens internes — */
 const validPaths = new Set(FLAT_PAGES.map((p) => p.path));
-const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/etudes-fondatrices$/, /^\/institutions$/, /^\/groupes-sociaux$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/ef\/[a-z-]+$/, /^\/in\/[a-z-]+$/, /^\/gs\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
+const APP_ROUTES = [/^\/$/, /^\/accueil$/, /^\/graphe$/, /^\/courants$/, /^\/sociologues$/, /^\/concepts$/, /^\/fondamentaux$/, /^\/methodes$/, /^\/etudes-fondatrices$/, /^\/institutions$/, /^\/groupes-sociaux$/, /^\/pratiques$/, /^\/phenomenes$/, /^\/mecanismes$/, /^\/processus$/, /^\/problematiques$/, /^\/theories$/, /^\/etudes$/, /^\/statistiques$/, /^\/politiques-publiques$/, /^\/recherche$/, /^\/mes-fiches$/, /^\/parametres$/, /^\/documentation$/, /^\/a\/[a-z]+$/, /^\/d\/[a-z]+$/, /^\/c\/[a-z-]+$/, /^\/f\/[a-z-]+$/, /^\/me\/[a-z-]+$/, /^\/ef\/[a-z-]+$/, /^\/in\/[a-z-]+$/, /^\/gs\/[a-z-]+$/, /^\/pra\/[a-z-]+$/, /^\/p\/[a-z-]+$/, /^\/m\/[a-z-]+$/, /^\/pr\/[a-z-]+$/, /^\/pb\/[a-z-]+$/, /^\/pb\/[a-z-]+\/graphe$/, /^\/th\/[a-z-]+$/, /^\/et\/[a-z-]+$/, /^\/st\/[a-z-]+$/, /^\/pp\/[a-z-]+$/];
 let linkCount = 0;
 for (const rel of mdFiles) {
   const body = readFileSync(join(DOCS, rel), 'utf8');
@@ -809,6 +814,51 @@ for (const cat of CATEGORIES_GROUPES_SOCIAUX) {
   if (!GROUPES_SOCIAUX.some((g) => g.categorie === cat.id)) fail(`Catégorie de groupes sociaux vide : ${cat.id}`);
 }
 
+/* — 22. intégrité des pratiques sociales — */
+// Ce que les individus font concrètement, sur le même modèle qu'`institutions.js`/
+// `groupes-sociaux.js` (fondamentaux/concepts jamais vides, domaine optionnel,
+// auteurs/inspirateurs avec l'un des deux toujours renseigné), plus un lien
+// optionnel vers les groupes sociaux déjà validés au bloc 21.
+const { CATEGORIES_PRATIQUES, PRATIQUES } = await import('../src/data/pratiques.js');
+
+const praCatIds = new Set(CATEGORIES_PRATIQUES.map((c) => c.id));
+const praIds = new Set();
+
+for (const p of PRATIQUES) {
+  if (praIds.has(p.id)) fail(`Pratique sociale en double : ${p.id}`);
+  praIds.add(p.id);
+  for (const field of ['t', 'd', 'detail', 'variablesSociales']) {
+    if (!p[field]) fail(`Pratique sociale ${p.id} : rubrique « ${field} » vide ou absente.`);
+  }
+  if (!praCatIds.has(p.categorie)) fail(`Pratique sociale ${p.id} : catégorie inconnue « ${p.categorie} ».`);
+  if ((p.fondamentaux || []).length === 0) fail(`Pratique sociale ${p.id} : aucun concept fondamental mobilisé.`);
+  for (const f of p.fondamentaux || []) {
+    if (!fondaIds.has(f)) fail(`Pratique sociale ${p.id} : concept fondamental inconnu « ${f} ».`);
+  }
+  if ((p.concepts || []).length === 0) fail(`Pratique sociale ${p.id} : aucun concept du corpus mobilisé.`);
+  for (const c of p.concepts || []) {
+    if (!conceptBase.has(c)) fail(`Pratique sociale ${p.id} : concept inconnu « ${c} ».`);
+  }
+  for (const g of p.groupesSociaux || []) {
+    if (!gsIds.has(g)) fail(`Pratique sociale ${p.id} : groupe social inconnu « ${g} ».`);
+  }
+  if (p.domaine && !seenDomain.has(p.domaine)) {
+    fail(`Pratique sociale ${p.id} : domaine inconnu « ${p.domaine} ».`);
+  }
+  for (const a of p.auteurs || []) {
+    if (!AUTHORS[a]) fail(`Pratique sociale ${p.id} : auteur inconnu « ${a} ».`);
+  }
+  for (const i of p.inspirateurs || []) {
+    if (!i.includes(' — ')) fail(`Pratique sociale ${p.id} : inspirateur sans apport « ${i.slice(0, 40)}… ».`);
+  }
+  if ((p.auteurs || []).length === 0 && (p.inspirateurs || []).length === 0) {
+    fail(`Pratique sociale ${p.id} : ni auteur du corpus ni inspirateur — la section « Auteurs associés » serait vide.`);
+  }
+}
+for (const cat of CATEGORIES_PRATIQUES) {
+  if (!PRATIQUES.some((p) => p.categorie === cat.id)) fail(`Catégorie de pratiques sociales vide : ${cat.id}`);
+}
+
 /* — rapport — */
 const line = (l, v) => `${l.padEnd(16)}: ${v}`;
 console.log('\nDOCUMENTATION AUDIT\n');
@@ -873,6 +923,12 @@ console.log(
   line(
     'Groupes sociaux',
     `${GROUPES_SOCIAUX.length} en ${CATEGORIES_GROUPES_SOCIAUX.length} catégories, ${GROUPES_SOCIAUX.reduce((n, g) => n + (g.fondamentaux || []).length, 0)} liens vers des fondamentaux, ${GROUPES_SOCIAUX.reduce((n, g) => n + (g.concepts || []).length, 0)} liens vers des concepts, ${GROUPES_SOCIAUX.filter((g) => g.domaine).length} liens vers un domaine`,
+  ),
+);
+console.log(
+  line(
+    'Pratiques sociales',
+    `${PRATIQUES.length} en ${CATEGORIES_PRATIQUES.length} catégories, ${PRATIQUES.reduce((n, p) => n + (p.fondamentaux || []).length, 0)} liens vers des fondamentaux, ${PRATIQUES.reduce((n, p) => n + (p.concepts || []).length, 0)} liens vers des concepts, ${PRATIQUES.reduce((n, p) => n + (p.groupesSociaux || []).length, 0)} liens vers des groupes sociaux, ${PRATIQUES.filter((p) => p.domaine).length} liens vers un domaine`,
   ),
 );
 console.log(

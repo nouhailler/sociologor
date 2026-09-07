@@ -32,7 +32,7 @@ test.describe('Parcours principal', () => {
     for (const cat of ['Explorer le corpus', 'Ressources des problématiques', 'Retrouver', 'Aide et réglages']) {
       await expect(dialog.getByText(cat, { exact: true })).toBeVisible();
     }
-    await expect(dialog.getByRole('link')).toHaveCount(22);
+    await expect(dialog.getByRole('link')).toHaveCount(23);
 
     // Un item mène à l'écran attendu, et referme le menu.
     await dialog.getByRole('link', { name: /Carte des courants/ }).click();
@@ -508,6 +508,25 @@ test.describe('Parcours principal', () => {
 
     await page.getByRole('link', { name: 'Communauté', exact: true }).click();
     await expect(page).toHaveURL(/\/f\/communaute$/);
+  });
+
+  test('pratiques sociales : accueil → liste → fiche → fondamental, concept, groupe social et domaine', async ({ page }) => {
+    await enter(page, '/');
+    await page.getByRole('link', { name: /pratiques sociales/ }).click();
+    await expect(page).toHaveURL(/\/pratiques$/);
+    await expect(content(page).getByRole('heading', { name: 'Pratiques sociales' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Consommation/ })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Consommation/ }).click();
+    await expect(page).toHaveURL(/\/pra\/consommation$/);
+    await expect(content(page).getByRole('heading', { name: 'Consommation', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Position sociale', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Habitus/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Classe sociale', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Pierre Bourdieu', exact: true })).toBeVisible();
+
+    await page.getByRole('link', { name: /Approfondir via le domaine/ }).click();
+    await expect(page).toHaveURL(/\/d\/consommation$/);
   });
 
   test('phénomènes sociaux : le lot « inégalités » ne double pas les fiches existantes', async ({ page }) => {

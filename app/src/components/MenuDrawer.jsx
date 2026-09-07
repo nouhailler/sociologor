@@ -28,6 +28,7 @@ const CATEGORIES = [
       { to: '/etudes-fondatrices', label: 'Études fondatrices', hint: 'Les grandes enquêtes qui ont fait la sociologie' },
       { to: '/institutions', label: 'Institutions sociales', hint: 'Comment une institution produit des normes, des rôles et des comportements' },
       { to: '/groupes-sociaux', label: 'Groupes sociaux', hint: 'Du groupe primaire à la diaspora, les grandes formes du collectif' },
+      { to: '/pratiques', label: 'Pratiques sociales', hint: 'Ce que les individus font concrètement — consommer, voter, lire' },
     ],
   },
   {
@@ -72,6 +73,7 @@ function activeTo(pathname) {
   if (pathname.startsWith('/etudes-fondatrices') || pathname.startsWith('/ef/')) return '/etudes-fondatrices';
   if (pathname.startsWith('/institutions') || pathname.startsWith('/in/')) return '/institutions';
   if (pathname.startsWith('/groupes-sociaux') || pathname.startsWith('/gs/')) return '/groupes-sociaux';
+  if (pathname.startsWith('/pratiques') || pathname.startsWith('/pra/')) return '/pratiques';
   if (pathname.startsWith('/theories') || pathname.startsWith('/th/')) return '/theories';
   if (pathname.startsWith('/etudes') || pathname.startsWith('/et/')) return '/etudes';
   if (pathname.startsWith('/statistiques') || pathname.startsWith('/st/')) return '/statistiques';

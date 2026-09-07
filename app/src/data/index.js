@@ -10,6 +10,7 @@ import { CATEGORIES_METHODES, METHODES } from './methodes.js';
 import { CATEGORIES_ETUDES_FONDATRICES, ETUDES_FONDATRICES } from './etudes-fondatrices.js';
 import { CATEGORIES_INSTITUTIONS, INSTITUTIONS } from './institutions.js';
 import { CATEGORIES_GROUPES_SOCIAUX, GROUPES_SOCIAUX } from './groupes-sociaux.js';
+import { CATEGORIES_PRATIQUES, PRATIQUES } from './pratiques.js';
 import { CATEGORIES_MECANISMES, MECANISMES } from './mecanismes.js';
 import { CATEGORIES_PROBLEMATIQUES, PROBLEMATIQUES } from './problematiques.js';
 import { THEORIES } from './theories.js';
@@ -528,6 +529,50 @@ export function getGroupeSocial(id) {
   };
 }
 
+/* — Pratiques sociales — */
+// Ce que les individus font concrètement — consommer, voter, lire — sur le
+// même modèle qu'`institutions.js`/`groupes-sociaux.js` (fondamentaux et
+// concepts jamais vides, domaine optionnel, auteurs/inspirateurs avec l'un
+// des deux toujours renseigné), plus un lien optionnel vers `groupes-sociaux.js`
+// qui rend cliquable l'étape « classe sociale »/« génération » de la chaîne.
+
+export { CATEGORIES_PRATIQUES };
+export const PRATIQUE_COUNT = PRATIQUES.length;
+
+/** Les pratiques groupées par catégorie, dans l'ordre de la liste. */
+export const PRATIQUE_CATEGORIES = CATEGORIES_PRATIQUES.map((cat) => ({
+  ...cat,
+  pratiques: PRATIQUES.filter((p) => p.categorie === cat.id),
+}));
+
+/** Fiche complète : fondamentaux, concepts, groupes sociaux, domaine et auteurs résolus en liens cliquables. */
+export function getPratique(id) {
+  const p = PRATIQUES.find((x) => x.id === id);
+  if (!p) return null;
+  const categorie = CATEGORIES_PRATIQUES.find((c) => c.id === p.categorie);
+  const domaine = p.domaine ? DOMAINS.find((d) => d.id === p.domaine) : null;
+  return {
+    ...p,
+    categorieT: categorie?.t || '',
+    fondamentauxLinks: (p.fondamentaux || [])
+      .map((f) => FONDAMENTAUX.find((x) => x.id === f))
+      .filter(Boolean)
+      .map((f) => ({ id: f.id, label: f.t })),
+    conceptsLinks: (p.concepts || [])
+      .filter((c) => CONCEPT_BASE[c])
+      .map((c) => ({ id: c, label: CONCEPT_BASE[c].t, authorName: CONCEPT_BASE[c].authorName })),
+    groupesSociauxLinks: (p.groupesSociaux || [])
+      .map((g) => GROUPES_SOCIAUX.find((x) => x.id === g))
+      .filter(Boolean)
+      .map((g) => ({ id: g.id, label: g.t })),
+    domaineLink: domaine ? { id: domaine.id, t: domaine.t } : null,
+    auteursLinks: (p.auteurs || [])
+      .filter((a) => AUTHORS[a])
+      .map((a) => ({ id: a, name: AUTHORS[a].name })),
+    inspirateurs: p.inspirateurs || [],
+  };
+}
+
 /* — Mécanismes sociaux — */
 
 export { CATEGORIES_MECANISMES };
@@ -819,6 +864,9 @@ export const SEARCH_INDEX = (() => {
   GROUPES_SOCIAUX.forEach((g) =>
     items.push({ kind: 'Groupe social', title: g.t, sub: g.d, id: g.id, to: `/gs/${g.id}` }),
   );
+  PRATIQUES.forEach((p) =>
+    items.push({ kind: 'Pratique sociale', title: p.t, sub: p.d, id: p.id, to: `/pra/${p.id}` }),
+  );
   MECANISMES.forEach((m) =>
     items.push({ kind: 'Mécanisme', title: m.t, sub: m.d, id: m.id, to: `/m/${m.id}` }),
   );
@@ -852,6 +900,7 @@ export const SEARCH_FILTERS = [
   'Études fondatrices',
   'Institutions',
   'Groupes sociaux',
+  'Pratiques sociales',
   'Mécanismes',
   'Problématiques',
   'Théories',
@@ -870,6 +919,7 @@ const KIND_BY_FILTER = {
   'Études fondatrices': 'Étude fondatrice',
   Institutions: 'Institution',
   'Groupes sociaux': 'Groupe social',
+  'Pratiques sociales': 'Pratique sociale',
   Mécanismes: 'Mécanisme',
   Problématiques: 'Problématique',
   Théories: 'Théorie',

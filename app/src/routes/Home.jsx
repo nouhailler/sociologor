@@ -12,6 +12,7 @@ import {
   INSTITUTION_COUNT,
   METHODE_COUNT,
   PHENOMENE_COUNT,
+  PRATIQUE_COUNT,
   PROCESSUS_COUNT,
   conceptOfTheDay,
 } from '../data/index.js';
@@ -78,6 +79,9 @@ export default function Home() {
           </Link>
           <Link to="/groupes-sociaux" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
             {GROUPE_SOCIAL_COUNT} groupes sociaux — du groupe primaire au réseau →
+          </Link>
+          <Link to="/pratiques" className="btn btn-ghost" style={{ fontSize: 12.5 }}>
+            {PRATIQUE_COUNT} pratiques sociales — ce que les individus font concrètement →
           </Link>
         </div>
 
