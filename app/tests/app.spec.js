@@ -214,7 +214,9 @@ test.describe('Parcours principal', () => {
   test('recherche : un phénomène mène à sa fiche', async ({ page }) => {
     await enter(page, '/recherche?q=gentrification');
     await expect(page.getByText('Phénomène', { exact: true })).toBeVisible();
-    await page.getByRole('link', { name: /Gentrification/ }).click();
+    // « Gentrification » existe aussi comme processus (même terme, deux angles) :
+    // on cible ici précisément le résultat de type Phénomène.
+    await page.getByRole('link', { name: /^Phénomène/ }).filter({ hasText: 'Gentrification' }).click();
     await expect(page).toHaveURL(/\/p\/gentrification$/);
     await expect(content(page).getByRole('heading', { name: 'Gentrification', exact: true })).toBeVisible();
   });
@@ -598,6 +600,25 @@ test.describe('Parcours principal', () => {
 
     await enter(page, '/p/declassement-social');
     await expect(content(page).getByRole('heading', { name: 'Déclassement social', exact: true })).toBeVisible();
+  });
+
+  test('processus sociaux : « Gentrification » (processus) mène au phénomène du même nom', async ({ page }) => {
+    await enter(page, '/pr/gentrification');
+    await expect(content(page).getByRole('heading', { name: 'Gentrification', exact: true })).toBeVisible();
+    await expect(page.getByText("une première vague d'artistes", { exact: false })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Gentrification/ }).click();
+    await expect(page).toHaveURL(/\/p\/gentrification$/);
+    await expect(content(page).getByRole('heading', { name: 'Gentrification', exact: true })).toBeVisible();
+  });
+
+  test('processus sociaux : « Socialisation » (processus) et « Socialisation » (concept fondamental) coexistent', async ({ page }) => {
+    await enter(page, '/pr/socialisation');
+    await expect(content(page).getByRole('heading', { name: 'Socialisation', exact: true })).toBeVisible();
+    await expect(page.getByText('Processus', { exact: true }).first()).toBeVisible();
+
+    await enter(page, '/f/socialisation');
+    await expect(content(page).getByRole('heading', { name: 'Socialisation', exact: true })).toBeVisible();
   });
 
   test('processus inconnu : écran Introuvable', async ({ page }) => {
