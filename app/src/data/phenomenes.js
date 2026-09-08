@@ -20,8 +20,8 @@
  *   contemporains — l'étalement urbain, l'éco-anxiété, la migration
  *   climatique — ne trouvent pas d'outil direct dans les quinze fiches. Les
  *   forcer aurait été plus malhonnête que de les laisser sans.
- * - Cette liste est délibérément sélective : 28 phénomènes, pas la centaine
- *   qu'un inventaire exhaustif de la discipline pourrait couvrir. Voir la
+ * - Cette liste reste une sélection, pas un inventaire exhaustif de la
+ *   discipline : 66 phénomènes, répartis en 14 catégories. Voir la
  *   documentation pour ce choix.
  */
 
@@ -59,6 +59,12 @@ export const CATEGORIES_PHENOMENES = [
     d: "Voter, se taire ou descendre dans la rue : trois manières de peser.",
   },
   { id: 'environnement', t: 'Environnement', d: "La crise écologique comme fait social, pas seulement climatique." },
+  { id: 'culture', t: 'Culture et goût', d: "Ce qui se porte, s'écoute et se regarde n'est jamais qu'une affaire de goût individuel." },
+  {
+    id: 'religion',
+    t: 'Religion et croyance',
+    d: "Ce qu'une société croit collectivement, et comment cette croyance s'organise ou se défait.",
+  },
 ];
 
 /** Dimensions transversales : les angles sous lesquels un phénomène se lit. */
@@ -766,6 +772,434 @@ export const PHENOMENES = [
       "Migration interne — un déplacement à l'intérieur d'un même pays, plus fréquent que la migration internationale",
       "Justice climatique — l'idée que les responsables du dérèglement ne sont pas ceux qui en subissent le plus les effets",
       "Adaptation — les mesures qui visent à vivre avec un climat déjà transformé, plutôt qu'à l'éviter",
+    ],
+  },
+
+  /* — Politique et mobilisations (suite) — */
+  {
+    id: 'vote',
+    t: 'Vote',
+    categorie: 'politique-mobilisations',
+    d: "Voter agrège un jugement politique et une appartenance sociale : la position occupée dans la société oriente, statistiquement, le sens du bulletin.",
+    detail:
+      "Weber distingue la légitimité de l'autorité politique elle-même de l'acte électoral qui, en démocratie, en renouvelle périodiquement la reconnaissance. Bourdieu ajoute que la compétence politique perçue comme légitime reste inégalement répartie selon le capital culturel, ce qui pèse sur la manière dont chacun s'approprie l'acte de voter.",
+    dimensions: ['politique', 'sociale', 'demographique'],
+    concepts: ['domination-legitime', 'capital-culturel'],
+    notions: [
+      "Vote de classe — la corrélation, plus ténue qu'autrefois, entre position sociale et choix électoral",
+      "Vote utile — voter non pour son préféré mais pour empêcher un autre résultat",
+      "Sociologie électorale — le champ qui relie composition sociale d'un territoire et résultats du scrutin",
+      "Volatilité électorale — l'instabilité croissante du choix d'un scrutin à l'autre chez un même électorat",
+    ],
+  },
+  {
+    id: 'mobilisation-collective',
+    t: 'Mobilisation collective',
+    categorie: 'politique-mobilisations',
+    d: "Se rassembler pour peser sur une décision suppose de transformer un mécontentement diffus en action coordonnée — un passage qui ne va jamais de soi.",
+    detail:
+      "Charles Tilly montre que la mobilisation dépend moins de l'intensité du grief que des ressources et du répertoire d'action disponibles à un moment donné — pétition, grève, manifestation, occupation. Blumer y ajoute la dimension interactionniste : une définition partagée de la situation doit émerger et se stabiliser avant qu'un rassemblement ne devienne une action coordonnée. Distincte des « Mouvements sociaux contemporains » (voir cette fiche), plus spécifiquement centrés sur les formes numériques et horizontales récentes.",
+    dimensions: ['politique', 'sociale'],
+    concepts: ['action-collective'],
+    notions: [
+      "Manifestation — la forme la plus visible de mobilisation collective, un cortège dans l'espace public",
+      "Protestation — l'expression publique d'un désaccord, avec ou sans rassemblement physique",
+      "Répertoire d'action — l'ensemble des formes de protestation disponibles à une époque donnée",
+      "Théorie de la mobilisation des ressources — l'idée que le succès d'une cause dépend d'abord des moyens organisationnels réunis",
+      "Cadrage — la manière de présenter une cause pour la rendre mobilisatrice, plus que le grief lui-même",
+    ],
+  },
+  {
+    id: 'greve',
+    t: 'Grève',
+    categorie: 'politique-mobilisations',
+    d: "Cesser le travail collectivement reste l'arme la plus ancienne du monde ouvrier — mais son usage et son efficacité se sont profondément transformés.",
+    detail:
+      "Marx voit dans la grève l'expression la plus directe du conflit entre travail et capital, le seul levier dont dispose le travailleur qui ne possède rien d'autre que sa force de travail à retirer. Durkheim, plus mesuré, y lit aussi un signe de vitalité du lien social au travail — l'absence totale de conflit signalant parfois une anomie plus inquiétante qu'un désaccord organisé.",
+    dimensions: ['travail', 'politique', 'economique'],
+    concepts: ['lutte-des-classes', 'exploitation'],
+    notions: [
+      "Taux de syndicalisation — un indicateur en recul dans la plupart des pays développés, qui pèse sur le rapport de force",
+      "Grève générale — l'arrêt de travail étendu à plusieurs secteurs à la fois",
+      "Service minimum — un encadrement légal du droit de grève dans certains secteurs jugés essentiels",
+      "Grève des services — une forme récente, moins visible qu'un arrêt de production industrielle",
+    ],
+  },
+  {
+    id: 'participation-politique',
+    t: 'Participation politique',
+    categorie: 'politique-mobilisations',
+    d: "Au-delà du seul vote, participer à la vie politique suppose des ressources — temps, langage, réseau — inégalement réparties dans la population.",
+    detail:
+      "Habermas voit dans l'espace public le lieu où des citoyens informés débattent des affaires communes — un idéal que l'accès inégal au temps libre et au langage légitime rend, en pratique, plus accessible à certains milieux qu'à d'autres. Tocqueville faisait déjà de la participation associative et politique l'apprentissage concret de la démocratie, non un supplément facultatif à celle-ci.",
+    dimensions: ['politique', 'sociale', 'educative'],
+    concepts: ['capital-culturel', 'capital-social', 'espace-public'],
+    notions: [
+      "Compétence politique — la capacité perçue à comprendre et à peser sur les enjeux publics, inégalement distribuée",
+      "Engagement associatif — une forme de participation souvent plus accessible que la participation partisane",
+      "Démocratie participative — les dispositifs (budgets participatifs, conventions citoyennes) censés élargir la participation au-delà du vote",
+    ],
+  },
+  {
+    id: 'polarisation-politique',
+    t: 'Polarisation politique',
+    categorie: 'politique-mobilisations',
+    d: "Le débat public se réorganise de plus en plus autour de deux camps opposés, au détriment des positions médianes et des espaces de désaccord partagé.",
+    detail:
+      "Le phénomène se distingue de la « Polarisation sociale » (voir cette fiche), qui décrit un éloignement d'abord économique et social : ici, c'est la structuration même du débat, des partis et des médias qui se radicalise, parfois indépendamment de l'évolution des positions sociales réelles. La fragmentation des sources d'information et les logiques de recommandation des plateformes numériques sont régulièrement citées parmi les moteurs du phénomène.",
+    dimensions: ['politique', 'numerique', 'culturelle'],
+    concepts: [],
+    notions: [
+      "Tri partisan — le fait de faire coïncider de plus en plus étroitement identité politique et identité sociale ou culturelle",
+      "Polarisation affective — l'hostilité croissante envers le camp opposé, plus que le seul désaccord sur les idées",
+      "Chambre d'écho — un environnement informationnel qui expose surtout à des opinions déjà partagées",
+      "Compromis politique — une pratique de plus en plus difficile à justifier publiquement dans un climat polarisé",
+    ],
+  },
+
+  /* — Culture et goût — */
+  {
+    id: 'modes',
+    t: 'Modes',
+    categorie: 'culture',
+    d: "Un vêtement, une expression ou une musique se répand puis se démode selon un rythme social plus que purement esthétique.",
+    detail:
+      "Simmel analyse la mode comme un mécanisme social à deux temps : les catégories supérieures adoptent un signe distinctif, les catégories qui les imitent le diffusent, ce qui pousse les premières à en changer pour se distinguer de nouveau — une course sans fin entre imitation et distinction. Bourdieu ajoute que le rythme même de renouvellement des modes favorise ceux qui disposent du temps et du capital culturel nécessaires pour rester à jour.",
+    dimensions: ['culturelle', 'sociale', 'economique'],
+    concepts: ['distinction'],
+    notions: [
+      "Cycle de la mode — la succession d'adoption puis d'abandon d'un signe distinctif par les catégories dominantes",
+      "Diffusion culturelle — la propagation d'une pratique ou d'un goût au-delà de son milieu d'origine",
+      "Fast fashion — l'accélération industrielle du renouvellement vestimentaire, aux coûts sociaux et environnementaux disputés",
+      "Prescripteurs de tendance — les figures ou institutions qui légitiment un goût avant qu'il ne se diffuse",
+    ],
+  },
+  {
+    id: 'consommation-culturelle',
+    t: 'Consommation culturelle',
+    categorie: 'culture',
+    d: "Ce qu'on lit, regarde ou écoute a profondément changé de support sans que les écarts sociaux qui l'organisaient ne se soient refermés pour autant.",
+    detail:
+      "Le passage du disque au streaming, du cinéma à la plateforme, a démultiplié l'offre disponible sans uniformiser les usages : Bourdieu y verrait la persistance d'un capital culturel qui continue de trier, dans une offre abondante, ce que chacun choisit de consommer et comment il en parle. Une thèse plus récente, l'omnivorité culturelle, nuance ce constat : les catégories les plus dotées cumuleraient désormais goûts savants et populaires plutôt que de se limiter aux seuls premiers.",
+    dimensions: ['culturelle', 'numerique', 'sociale'],
+    concepts: ['capital-culturel'],
+    notions: [
+      "Streaming — le basculement d'une consommation de possession à une consommation d'accès",
+      "Omnivorité culturelle — la thèse selon laquelle les plus favorisés cumulent des goûts savants et populaires",
+      "Algorithme de recommandation — un acteur non humain qui oriente désormais une part croissante des choix culturels",
+      "Pratiques culturelles — la fréquentation des musées, la lecture ou les spectacles, des indicateurs suivis depuis les années 1970",
+    ],
+  },
+  {
+    id: 'culture-populaire',
+    t: 'Culture populaire',
+    categorie: 'culture',
+    d: "Ce que les classes populaires produisent et apprécient elles-mêmes n'est pas un simple manque de culture légitime : c'est une culture à part entière, avec ses codes propres.",
+    detail:
+      "Richard Hoggart a montré, contre l'idée d'une culture populaire définie par le seul manque, qu'elle possède ses propres richesses et sa propre dignité, trop souvent lues depuis l'extérieur comme une privation plutôt que comme une culture en soi. Le terme se distingue de la « Culture de masse » (voir cette fiche) : la culture populaire naît des milieux populaires eux-mêmes, quand la culture de masse leur est diffusée depuis l'extérieur par une industrie culturelle centralisée.",
+    dimensions: ['culturelle', 'sociale'],
+    concepts: [],
+    notions: [
+      "Culture ouvrière — les codes, les loisirs et la sociabilité propres aux milieux populaires industriels",
+      "Culture de la débrouille — les savoir-faire pratiques valorisés dans les milieux populaires, peu reconnus ailleurs",
+      "Réappropriation culturelle — la manière dont un public populaire détourne et réinvestit une culture qui ne lui était pas destinée",
+    ],
+  },
+  {
+    id: 'culture-de-masse',
+    t: 'Culture de masse',
+    categorie: 'culture',
+    d: "Une culture produite industriellement et diffusée à une échelle inédite, qui standardise autant qu'elle divertit.",
+    detail:
+      "L'École de Francfort y voit une industrie culturelle au sens fort : des produits calibrés pour l'audience la plus large possible, qui neutralisent la critique en la transformant elle-même en produit consommable. Le diagnostic reste disputé : d'autres sociologues insistent sur la capacité des publics à réinterpréter, détourner et resignifier ce qui leur est proposé, plutôt qu'à le recevoir passivement.",
+    dimensions: ['culturelle', 'economique', 'numerique'],
+    concepts: ['industrie-culturelle', 'raison-instrumentale'],
+    notions: [
+      "Standardisation culturelle — la production de contenus culturels selon des formats reproductibles à grande échelle",
+      "Blockbuster — la logique du succès massif qui organise une part croissante de la production culturelle",
+      "Réception active — la thèse selon laquelle le public réinterprète les contenus de masse plutôt que de les subir",
+      "Concentration des médias — la propriété d'une large part de l'industrie culturelle par un petit nombre de groupes",
+    ],
+  },
+  {
+    id: 'distinction-culturelle',
+    t: 'Distinction culturelle',
+    categorie: 'culture',
+    d: "Le goût — pour un plat, un vêtement, une musique — n'est jamais un jugement neutre : il classe celui qui l'affiche autant que ce qu'il désigne.",
+    detail:
+      "Dans *La Distinction* (1979), Bourdieu montre que le goût culturel recoupe presque parfaitement la position sociale : chaque catégorie s'approprie les pratiques qui lui correspondent, et affiche ce goût comme une sensibilité personnelle plutôt que comme un habitus de classe. À la différence des « Inégalités culturelles » (voir cette fiche), centrées sur l'école et l'accès aux institutions culturelles, cette entrée regarde le mécanisme plus général par lequel le goût, dans toute la vie quotidienne, sert de marqueur social.",
+    dimensions: ['culturelle', 'sociale'],
+    concepts: ['distinction', 'habitus', 'capital-culturel', 'capital-culturel-incorpore'],
+    notions: [
+      "Goût légitime — les pratiques culturelles reconnues et valorisées par les institutions dominantes",
+      "Snobisme inversé — l'affichage revendiqué de goûts populaires par des catégories favorisées",
+    ],
+  },
+
+  /* — Famille et parcours de vie (suite) — */
+  {
+    id: 'mariage',
+    t: 'Mariage',
+    categorie: 'famille-parcours',
+    d: "Se marier reste un acte à la fois intime et statistiquement très prévisible : le futur conjoint se trouve, le plus souvent, dans un périmètre social proche du sien.",
+    detail:
+      "Bourdieu montre que l'homogamie sociale — épouser quelqu'un de position proche — n'a rien d'un hasard : les lieux de rencontre eux-mêmes (études, milieu professionnel) sont déjà socialement triés (voir « Homogamie sociale »). Le mariage a par ailleurs profondément changé de statut : d'une institution quasi obligatoire, il est devenu un choix parmi d'autres formes d'union, sans disparaître pour autant.",
+    dimensions: ['famille', 'sociale', 'juridique'],
+    concepts: ['classe-sociale'],
+    notions: [
+      "Taux de nuptialité — un indicateur en recul régulier dans la plupart des pays développés",
+      "Union libre — une forme de conjugalité sans mariage, de plus en plus répandue avant ou à la place de celui-ci",
+      "Mariage pour tous — une extension récente du droit au mariage aux couples de même sexe",
+      "Contrat de mariage — un choix juridique qui reflète, entre autres, le patrimoine et la prudence économique des conjoints",
+    ],
+  },
+  {
+    id: 'divorce',
+    t: 'Divorce',
+    categorie: 'famille-parcours',
+    d: "La rupture d'un mariage n'est plus un accident rare ni un échec unilatéralement imputé à l'un des conjoints : c'est devenu une issue statistiquement ordinaire.",
+    detail:
+      "Bauman relie la fragilité croissante du couple à une modernité liquide, où les engagements eux-mêmes se pensent de plus en plus comme révisables plutôt que définitifs. Le divorce reste néanmoins socialement inégal dans ses conséquences : il expose davantage les femmes à la précarité économique, en particulier lorsqu'elles se sont éloignées de l'emploi pendant la vie commune.",
+    dimensions: ['famille', 'juridique', 'genre', 'sociale'],
+    concepts: ['modernite-liquide'],
+    notions: [
+      "Divorce par consentement mutuel — la procédure la plus rapide, devenue majoritaire dans plusieurs pays",
+      "Garde alternée — un arrangement de plus en plus fréquent pour les enfants après une séparation",
+      "Appauvrissement post-divorce — un risque nettement plus marqué pour les femmes que pour les hommes",
+      "Remariage — une issue fréquente après un divorce, qui a donné naissance à la notion de famille recomposée",
+    ],
+  },
+  {
+    id: 'celibat',
+    t: 'Célibat',
+    categorie: 'famille-parcours',
+    d: "Vivre seul, par choix ou par défaut, n'est plus une situation transitoire ou marginale : c'est une configuration de vie stable pour une part croissante des adultes.",
+    detail:
+      "Tocqueville reliait déjà l'individualisation moderne à un affaiblissement des cadres collectifs qui organisaient autrefois la vie conjugale ; le célibat contemporain, choisi ou subi, en est l'une des expressions les plus visibles. Le phénomène ne recouvre pas une seule réalité : le célibat choisi d'une partie des catégories aisées et urbaines n'a ni les mêmes causes ni les mêmes conséquences que l'isolement subi par des catégories plus précaires ou plus âgées.",
+    dimensions: ['famille', 'sociale', 'demographique'],
+    concepts: ['individualisme'],
+    notions: [
+      "Solo — une identité revendiquée, distincte de l'isolement subi, pour désigner un célibat choisi",
+      "Isolement relationnel — la forme la plus problématique du célibat, associée à des risques de santé documentés",
+      "Applications de rencontre — un nouveau mode d'accès au couple, dont l'effet sur la durée du célibat reste débattu",
+      "Ménage d'une personne — la catégorie statistique qui mesure la progression du vivre seul",
+    ],
+  },
+  {
+    id: 'famille-recomposee',
+    t: 'Famille recomposée',
+    categorie: 'famille-parcours',
+    d: "Après une séparation, une nouvelle union recompose le foyer sans effacer les liens antérieurs : beaux-parents, demi-frères et fratries élargies redessinent la famille.",
+    detail:
+      "Cette configuration, devenue courante, ne se substitue pas simplement à la famille dite traditionnelle : elle multiplie les rôles et les attentes que chacun doit apprendre à négocier — un enfant peut avoir deux foyers, plusieurs figures parentales, sans modèle de rôle aussi stabilisé que dans la famille nucléaire que Parsons décrivait. Voir aussi « Monoparentalité », étape fréquente qui précède souvent la recomposition.",
+    dimensions: ['famille', 'sociale', 'juridique'],
+    concepts: ['role-et-attentes'],
+    notions: [
+      "Beau-parent — un rôle familial sans statut juridique stabilisé dans la plupart des pays",
+      "Demi-fratrie — les liens entre enfants issus d'unions différentes au sein d'une même famille recomposée",
+      "Garde partagée — l'organisation matérielle qui structure souvent la vie de l'enfant entre deux foyers recomposés",
+    ],
+  },
+  {
+    id: 'fecondite',
+    t: 'Fécondité',
+    categorie: 'famille-parcours',
+    d: "Le nombre d'enfants par femme recule dans la plupart des pays développés, sans que l'explication se réduise à un seul facteur économique ou culturel.",
+    detail:
+      "Boudon relit la baisse de la fécondité à travers l'individualisme méthodologique : chaque décision d'avoir ou non un enfant, prise rationnellement à partir de contraintes individuelles (coût, carrière, logement), produit à l'échelle agrégée une baisse que personne n'a délibérément choisie collectivement. Le report de l'âge à la première naissance, lié à l'allongement des études et à l'instabilité professionnelle des débuts de carrière, est l'un des facteurs les plus documentés.",
+    dimensions: ['famille', 'demographique', 'economique'],
+    concepts: ['individualisme-methodologique'],
+    notions: [
+      "Indice conjoncturel de fécondité — la mesure statistique la plus suivie du nombre moyen d'enfants par femme",
+      "Âge à la première naissance — un indicateur en hausse continue dans la plupart des pays développés",
+      "Politique familiale — les dispositifs publics censés soutenir la natalité, aux effets mesurés modestes",
+      "Infertilité — une part croissante et documentée des naissances reportées ou renoncées",
+    ],
+  },
+
+  /* — Religion et croyance — */
+  {
+    id: 'secularisation',
+    t: 'Sécularisation',
+    categorie: 'religion',
+    d: "La religion perd son emprise sur l'organisation de la vie sociale, sans que la croyance individuelle ne disparaisse au même rythme qu'elle.",
+    detail:
+      "Weber relie la sécularisation à un désenchantement plus large du monde : la nature et la société cessent d'être expliquées par une volonté divine, au profit d'explications rationnelles et calculables. Le processus qui y mène est décrit dans la fiche « Sécularisation » des Processus sociaux ; cette entrée en regarde l'état atteint — la place, aujourd'hui réduite, que le religieux occupe dans le droit, l'école et la politique.",
+    dimensions: ['culturelle', 'sociale', 'demographique'],
+    concepts: ['desenchantement-du-monde'],
+    notions: [
+      "Pratique religieuse déclarée — un indicateur en recul régulier dans la plupart des pays européens",
+      "Croire sans appartenir — la formule qui décrit une religiosité privée détachée de l'institution",
+      "Laïcité — le principe juridique français qui organise la séparation entre la sphère religieuse et l'État",
+    ],
+  },
+  {
+    id: 'conversion',
+    t: 'Conversion',
+    categorie: 'religion',
+    d: "Changer de religion n'est presque jamais un basculement instantané : c'est un processus social, souvent porté par une rencontre et un réseau plus que par un seul raisonnement.",
+    detail:
+      "La sociologie de la conversion insiste sur le rôle du réseau relationnel : on se convertit rarement seul, la plupart des conversions suivant un lien affectif ou amical préexistant avec des membres du groupe religieux rejoint, plus qu'une adhésion théologique isolée.",
+    dimensions: ['culturelle', 'sociale'],
+    concepts: [],
+    notions: [
+      "Réseau de conversion — les liens personnels qui précèdent, le plus souvent, l'adhésion religieuse elle-même",
+      "Carrière religieuse — la succession d'étapes, parfois longue, qui mène d'un premier contact à l'engagement complet",
+      "Nouveaux mouvements religieux — les groupes récents, hors des grandes traditions établies, qui recrutent une part de ces conversions",
+    ],
+  },
+  {
+    id: 'deconversion',
+    t: 'Déconversion',
+    categorie: 'religion',
+    d: "Quitter une religion à laquelle on a adhéré peut être aussi progressif et coûteux, socialement, que l'y être entré.",
+    detail:
+      "Le processus retourne souvent le même mécanisme qu'une conversion — rupture des liens affectifs, reconstruction d'une identité, réinterprétation du passé — mais dans le sens inverse : la personne doit désormais justifier a posteriori un engagement qu'elle ne partage plus, parfois au prix de la rupture avec sa communauté ou sa famille d'origine.",
+    dimensions: ['culturelle', 'sociale'],
+    concepts: [],
+    notions: [
+      "Apostasie — le terme religieux pour désigner l'abandon formel d'une foi",
+      "Reconstruction identitaire — le travail biographique nécessaire pour donner sens à une vie après la sortie d'une religion",
+      "Sortie de groupe sectaire — la forme la plus étudiée et la plus difficile de déconversion, quand la rupture des liens sociaux est totale",
+    ],
+  },
+  {
+    id: 'pratiques-religieuses',
+    t: 'Pratiques religieuses',
+    categorie: 'religion',
+    d: "Le nombre de croyants recule moins vite que celui des pratiquants réguliers : la croyance et la pratique se dissocient de plus en plus.",
+    detail:
+      "Durkheim traitait le rite comme un fait social qui resserre le lien collectif bien plus qu'il ne s'adresse à un dieu particulier — la pratique compte alors autant, sinon plus, que la croyance elle-même. Cette dissociation croissante entre croire et pratiquer, observée dans la plupart des pays européens, questionne directement cette centralité du rite collectif.",
+    dimensions: ['culturelle', 'sociale', 'demographique'],
+    concepts: ['religion-comme-fait-social'],
+    notions: [
+      "Pratique régulière — la fréquentation d'un culte à intervalle rapproché, en net recul statistique",
+      "Pratique occasionnelle — une fréquentation limitée aux grandes fêtes ou aux rites de passage",
+      "Rite de passage — naissance, mariage, mort : les moments où la pratique religieuse reste la plus sollicitée, même chez les peu pratiquants",
+    ],
+  },
+  {
+    id: 'pluralisme-religieux',
+    t: 'Pluralisme religieux',
+    categorie: 'religion',
+    d: "Une même société abrite désormais plusieurs traditions religieuses côte à côte, sans qu'aucune ne puisse plus prétendre organiser seule la vie collective.",
+    detail:
+      "Le pluralisme religieux transforme la position même de chaque religion : d'un cadre englobant et allant de soi, elle devient une option parmi d'autres, à justifier et à distinguer des concurrentes — un marché religieux, selon l'expression discutée de certains sociologues américains, plutôt qu'une évidence héritée.",
+    dimensions: ['culturelle', 'sociale', 'politique'],
+    concepts: [],
+    notions: [
+      "Marché religieux — la métaphore, disputée, qui décrit la coexistence de plusieurs offres religieuses en concurrence",
+      "Diversité confessionnelle — la coexistence, sur un même territoire, de plusieurs traditions religieuses distinctes",
+      "Accommodement raisonnable — les ajustements juridiques ou institutionnels pensés pour concilier pluralisme religieux et règles communes",
+    ],
+  },
+
+  /* — Numérique et médias (suite) — */
+  {
+    id: 'viralite',
+    t: 'Viralité',
+    categorie: 'numerique-medias',
+    d: "Un contenu peut atteindre des millions de personnes en quelques heures, porté moins par sa qualité intrinsèque que par la mécanique de partage qui l'amplifie.",
+    detail:
+      "L'économie de l'attention explique une partie du phénomène : les plateformes optimisent la diffusion des contenus qui suscitent le plus de réaction émotionnelle, vraie ou fausse, plus que ceux jugés les plus exacts ou les plus utiles. La viralité n'est jamais un pur effet de contenu : elle dépend aussi de l'architecture technique — algorithme de recommandation, bouton de partage — qui la rend possible.",
+    dimensions: ['numerique', 'culturelle', 'sociale'],
+    concepts: ['industrie-culturelle'],
+    notions: [
+      "Économie de l'attention — un marché où le temps de cerveau disponible se vend aux annonceurs",
+      "Effet de réseau — la valeur d'un contenu qui augmente avec le nombre de personnes qui le partagent déjà",
+      "Meme — l'unité culturelle la plus étudiée de la viralité numérique, reproduite et modifiée à grande échelle",
+    ],
+  },
+  {
+    id: 'bulles-informationnelles',
+    t: 'Bulles informationnelles',
+    categorie: 'numerique-medias',
+    d: "Les algorithmes de recommandation exposent chacun à un flux d'informations de plus en plus filtré par ses propres préférences passées.",
+    detail:
+      "Le terme désigne un environnement où l'utilisateur, sans le décider explicitement, ne croise plus que des contenus qui confirment ses opinions déjà formées — un mécanisme distinct de la simple homophilie sociale (fréquenter des semblables), puisqu'il est ici produit par un algorithme plutôt que par un choix conscient. L'ampleur réelle du phénomène reste disputée parmi les chercheurs, certains soulignant que les usagers restent exposés à davantage de diversité qu'on ne le suppose souvent.",
+    dimensions: ['numerique', 'culturelle', 'politique'],
+    concepts: [],
+    notions: [
+      "Chambre d'écho — un environnement, notamment social, qui expose surtout à des opinions déjà partagées",
+      "Filtre algorithmique — le tri automatisé des contenus qui façonne, sans le dire, ce que chacun voit en premier",
+      "Personnalisation — la promesse d'un contenu adapté à chacun, qui a pour effet secondaire de le restreindre",
+    ],
+  },
+  {
+    id: 'influence-numerique',
+    t: 'Influence numérique',
+    categorie: 'numerique-medias',
+    d: "Une nouvelle économie s'est constituée autour de personnes qui monétisent, sur les plateformes numériques, l'attention et la confiance d'une audience qu'elles ont construites.",
+    detail:
+      "Goffman fournit une part de l'explication : l'influenceur professionnalise la mise en scène de soi, transformant une présentation quotidienne en produit publicitaire continu. Le phénomène recompose aussi les hiérarchies de légitimité culturelle traditionnelles — la reconnaissance ne passe plus nécessairement par les institutions établies (presse, critique), mais par un nombre d'abonnés et un taux d'engagement.",
+    dimensions: ['numerique', 'economique', 'culturelle'],
+    concepts: ['mise-en-scene-de-soi'],
+    notions: [
+      "Placement de produit — la promotion rémunérée d'un bien ou d'un service intégrée au contenu d'un créateur",
+      "Micro-influenceur — une figure à l'audience plus restreinte mais jugée plus proche et plus crédible par ses abonnés",
+      "Authenticité mise en scène — le paradoxe d'une image spontanée qui est en réalité soigneusement construite",
+    ],
+  },
+  {
+    id: 'travail-numerique',
+    t: 'Travail numérique',
+    categorie: 'numerique-medias',
+    d: "Une part croissante du travail est désormais coordonnée par une plateforme et un algorithme plutôt que par un contrat de travail classique et une hiérarchie visible.",
+    detail:
+      "Castells montre que le pouvoir, dans une société en réseaux, s'exerce moins en dirigeant directement qu'en programmant les objectifs d'un réseau — une description qui s'applique presque littéralement au travail de plateforme, où l'algorithme fixe les règles sans jamais apparaître comme un employeur. Le statut d'indépendant, souvent obligatoire pour accéder à ces plateformes, déplace vers le travailleur des risques auparavant partagés par l'employeur.",
+    dimensions: ['numerique', 'travail', 'economique', 'juridique'],
+    concepts: ['pouvoir-des-reseaux', 'precariat'],
+    notions: [
+      "Micro-tâches — un travail fragmenté en unités minimales, rémunérées à la pièce sur des plateformes numériques",
+      "Auto-entrepreneuriat subi — un statut d'indépendant choisi moins pour la liberté qu'il promet que par nécessité d'accès à une plateforme",
+      "Notation algorithmique — l'évaluation continue du travailleur par ses clients, qui conditionne son accès futur à l'activité",
+    ],
+  },
+
+  /* — Ville et logement (suite) — */
+  {
+    id: 'urbanisation',
+    t: 'Urbanisation',
+    categorie: 'ville',
+    d: "Une part toujours croissante de la population mondiale vit désormais en ville — un basculement démographique majeur, achevé dans certains pays, en cours dans beaucoup d'autres.",
+    detail:
+      "Simmel décrit l'expérience urbaine comme un afflux permanent de stimuli, auquel le citadin répond par une attitude blasée — une distance affective protectrice qui permet de vivre entouré d'inconnus sans en être submergé. Le processus qui y mène est décrit dans la fiche « Urbanisation » des Processus sociaux ; cette entrée regarde l'état atteint — la répartition de la population entre ville et campagne, et ce qu'elle change aux liens sociaux.",
+    dimensions: ['urbaine', 'demographique', 'sociale'],
+    concepts: ['blasement-urbain'],
+    notions: [
+      "Taux d'urbanisation — la part de la population vivant en zone urbaine, suivie pays par pays",
+      "Mégapole — une agglomération dépassant plusieurs millions d'habitants, forme la plus extrême de l'urbanisation",
+      "Exode rural — le mouvement historique de départ des campagnes qui a alimenté l'urbanisation",
+    ],
+  },
+  {
+    id: 'periurbanisation',
+    t: 'Périurbanisation',
+    categorie: 'ville',
+    d: "Entre la ville dense et la campagne, une troisième zone s'est installée : ni tout à fait urbaine ni tout à fait rurale, organisée autour de la maison individuelle et de la voiture.",
+    detail:
+      "Le phénomène, déjà nommé comme facteur dans la fiche « Étalement urbain » (voir cette fiche), mérite sa propre entrée tant il a recomposé, en quelques décennies, le mode de vie d'une large part de la population : un éloignement des centres motivé par le prix du logement, payé en temps de trajet et en dépendance à l'automobile.",
+    dimensions: ['urbaine', 'economique', 'demographique'],
+    concepts: [],
+    notions: [
+      "Lotissement pavillonnaire — la forme urbanistique la plus caractéristique de la périurbanisation",
+      "Dépendance automobile — la voiture individuelle comme condition d'accès à l'emploi et aux services en zone périurbaine",
+      "Vote périurbain — l'hypothèse, disputée, d'un lien entre ce mode de vie et certains choix électoraux",
+    ],
+  },
+  {
+    id: 'desertification',
+    t: 'Désertification',
+    categorie: 'ville',
+    d: "Un territoire peut se vider de ses commerces, de ses services et de ses habitants sans qu'aucune catastrophe visible ne l'explique — juste une accumulation de départs, jamais suivis d'un retour.",
+    detail:
+      "Le phénomène touche aussi bien certains centres-villes moyens, désertés au profit des zones commerciales périphériques, que des zones rurales entières, où la fermeture d'une école ou d'un commerce en entraîne souvent d'autres. Il se distingue des « Inégalités territoriales » (voir cette fiche) par sa dynamique propre : ce n'est pas seulement un déficit initial de services, mais un processus cumulatif de départ qui s'auto-entretient.",
+    dimensions: ['urbaine', 'economique', 'demographique'],
+    concepts: [],
+    notions: [
+      "Désertification commerciale — la fermeture en chaîne des commerces de centre-ville au profit des zones périphériques",
+      "Désert médical — un territoire où l'offre de soins ne suit plus la demande",
+      "Cercle vicieux du déclin local — chaque fermeture de service rend la suivante plus probable",
     ],
   },
 ];

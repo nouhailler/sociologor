@@ -407,6 +407,17 @@ test.describe('Parcours principal', () => {
     await expect(content(page).getByRole('heading', { name: 'Classe sociale', exact: true })).toBeVisible();
   });
 
+  test('phénomènes sociaux : nouvelles catégories Culture et goût, Religion et croyance', async ({ page }) => {
+    await enter(page, '/phenomenes');
+    await expect(content(page).getByRole('heading', { name: 'Culture et goût' })).toBeVisible();
+    await expect(content(page).getByRole('heading', { name: 'Religion et croyance' })).toBeVisible();
+
+    await page.getByRole('link', { name: /^Distinction culturelle/ }).click();
+    await expect(page).toHaveURL(/\/p\/distinction-culturelle$/);
+    await expect(content(page).getByRole('heading', { name: 'Distinction culturelle', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: /^Capital culturel incorporé/ })).toBeVisible();
+  });
+
   test('concepts fondamentaux : accueil → liste → fiche → concept du corpus', async ({ page }) => {
     await enter(page, '/');
     await page.getByRole('link', { name: /concepts fondamentaux/ }).click();
